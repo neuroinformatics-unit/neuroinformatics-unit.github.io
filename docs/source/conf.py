@@ -117,5 +117,6 @@ html_theme_options = {
         "text": "NIU",
         "image_light": "logo_light.png",
         "image_dark": "logo_dark.png",
-    }
+    },
+    "footer_items": [""copyright", "sphinx-version", "theme-version", "sponsors""]
 }
