@@ -3,8 +3,10 @@
 Tempor exercitation aute quis commodo et mollit adipisicing labore anim velit proident. Ea occaecat proident proident nisi excepteur. Anim enim aute ex adipisicing proident. Elit tempor adipisicing ex magna ipsum in sit voluptate. Pariatur cupidatat officia nostrud enim id magna dolore eu. Fugiat minim nostrud deserunt culpa occaecat dolore consequat. Irure veniam ut veniam mollit dolor.
 
 ```{toctree}
-:maxdepth: 2
+:maxdepth: 1
+:hidden:
 
+projects/index
 people
 funding
 ```

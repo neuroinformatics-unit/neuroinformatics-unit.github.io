@@ -6,4 +6,4 @@ to your software problems.
 
 ## Want to Contribute?
 
-To contribute, please visit the troubleshooting [GitHub page]((https://troubleshooting.neuroinformatics.dev/))
+To contribute, please visit the troubleshooting [GitHub page](https://troubleshooting.neuroinformatics.dev/)
