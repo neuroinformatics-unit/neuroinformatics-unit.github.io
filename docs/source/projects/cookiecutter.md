@@ -1,4 +1,4 @@
-# SWC Cookiecutter
+# SWC Python Cookiecutter
 
 The Python packaging ecosystem is complex and difficult to set up from scratch. This makes it hard to organise new projects in 
 order to take advantage of the many python tools for formatting, testing, packing and releasing your code.
