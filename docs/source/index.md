@@ -1,10 +1,8 @@
 
 (NIU_homepage)=
-# Neuroinformatics_unit
+# Neuroinformatics unit
 
-```{include} ../README.md
-:parser: myst_parser.sphinx_
-```
+Tempor exercitation aute quis commodo et mollit adipisicing labore anim velit proident. Ea occaecat proident proident nisi excepteur. Anim enim aute ex adipisicing proident. Elit tempor adipisicing ex magna ipsum in sit voluptate. Pariatur cupidatat officia nostrud enim id magna dolore eu. Fugiat minim nostrud deserunt culpa occaecat dolore consequat. Irure veniam ut veniam mollit dolor.
 
 ## Explore our projects
 
@@ -41,20 +39,20 @@ Learn more {fas}`arrow-right`
 
 ::::
 
+## See all projects
+
 ```{toctree}
 :maxdepth: 2
-:caption: Projects
 
 projects/brainglobe
 projects/datashuttle
 projects/troubleshooting
 ```
 
-## More info
+## Some more info about us
 
 ```{toctree}
 :maxdepth: 2
-:caption: About us
 
 people
 funding
