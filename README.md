@@ -1,4 +1,6 @@
 # Neuroinformatics Unit Website
+[![Website shields.io](https://img.shields.io/website-up-down-green-red/https/neuroinformatics.dev.svg)](https://neuroinformatics.dev)
+[![made-with-sphinx-doc](https://img.shields.io/badge/Made%20with-Sphinx-1f425f.svg)](https://www.sphinx-doc.org/)
 
 The main website of the [SWC](https://www.sainsburywellcome.org/web/)/[GCNU](https://www.ucl.ac.uk/gatsby/gatsby-computational-neuroscience-unit) Neuroinformatics Unit.
 
