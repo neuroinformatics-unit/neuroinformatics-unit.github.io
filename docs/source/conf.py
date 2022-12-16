@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'neuroinformatics-unit landing page'
+neuroinformatics-unit homepage
 copyright = '2022, Neuroinformatics Unit'
 author = 'Neuroinformatics Unit'
 
