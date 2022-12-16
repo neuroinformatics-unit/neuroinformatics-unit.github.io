@@ -32,6 +32,7 @@ root of the repository:
 # only need to do this once
 pip install -r docs/requirements.txt
 # do this every time you want to refresh the build
-sphinx-build docs/source docs/build
+rm -rf docs/build # remove existing local build
+sphinx-build docs/source docs/build # make new build
 ```
 You can view the local build at `docs/build/index.html`
