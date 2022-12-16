@@ -21,7 +21,7 @@ funding
 An ecosystem of interoperable Python-based tools for computational neuroanatomy.
 :::
 
-:::{grid-item-card} {fas}`python;sd-text-warning` SWC Python Cookiecutter
+:::{grid-item-card} {fab}`python;sd-text-warning` SWC Python Cookiecutter
 :link: projects/cookiecutter
 :link-type: doc
 
