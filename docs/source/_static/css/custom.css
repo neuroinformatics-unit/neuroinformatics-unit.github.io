@@ -26,3 +26,11 @@ html[data-theme=light] {
   flex: 0 0 50%;
   max-width: 50%;
 }
+
+.img-sponsor {
+  height: 100px;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+}
