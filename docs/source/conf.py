@@ -107,7 +107,7 @@ html_theme_options = {
             # Label for this link
             "name": "GitHub",
             # URL where the link will redirect
-            "url": "https://github.com/neuroinformatics-unit/troubleshooting",  # required
+            "url": "https://github.com/neuroinformatics-unit/",  # required
             # Icon class (if "type": "fontawesome"), or path to local image (if "type": "local")
             "icon": "fa-brands fa-github",
             # The type of image to be used (see below for details)
