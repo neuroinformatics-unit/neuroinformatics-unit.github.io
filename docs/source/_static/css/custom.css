@@ -9,6 +9,20 @@ html[data-theme=light] {
   --pst-color-link: var(--pst-color-primary);
 }
 
-.footer-item {
-  display: inline-block;
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.container{
+  padding-bottom: 0.5rem!important;
+  padding-top: 0.5rem!important;
+  max-width: 720px;
+}
+
+.col {
+  flex: 0 0 50%;
+  max-width: 50%;
 }
