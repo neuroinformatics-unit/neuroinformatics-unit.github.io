@@ -7,7 +7,7 @@ The main website of the [SWC](https://www.sainsburywellcome.org/web/)/[GCNU](htt
 ## Website structure
 
 The website is built using [Sphinx](https://www.sphinx-doc.org/en/master/) and the [PyData Sphinx Theme](https://pydata-sphinx-theme.readthedocs.io/en/latest/).
-* Build requriements are listed in `docs/requirements.txt`.
+* Build requirements are listed in `docs/requirements.txt`.
 * The source files are located in `docs/source` and include:
   * `conf.py`: Sphinx configuration file
   * `index.md`: landing page linking to all other pages
@@ -24,7 +24,7 @@ The website is built using [Sphinx](https://www.sphinx-doc.org/en/master/) and t
 * Check the deployed build at [neuroinformatics.dev](https://neuroinformatics.dev)
 
 ## Local build
-If you wish to view the website locally, before you push it,
+If you wish to view the website locally before you push it,
 you can do so by running the following commands from the
 root of the repository:
 
