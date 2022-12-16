@@ -1,3 +1,9 @@
 # Troubleshooting
 
-Sint sit sint officia mollit tempor sint duis velit officia aliquip excepteur nisi. Quis id excepteur laboris reprehenderit duis id exercitation esse. Sint adipisicing sint ullamco sit pariatur voluptate ut qui sit exercitation cupidatat. Cillum adipisicing exercitation veniam officia labore aliqua excepteur mollit qui Lorem cupidatat consequat proident. Esse nisi proident elit tempor dolor id labore fugiat nisi consectetur Lorem exercitation.
+The Neuroinformatics Unit troubleshooting website contains solutions to problems we have previously 
+come across and solved at the SWC. [Visit the website](https://troubleshooting.neuroinformatics.dev/) to check out possible solutions
+to your software problems.
+
+## Want to Contribute?
+
+To contribute, please visit the troubleshooting [GitHub page]((https://troubleshooting.neuroinformatics.dev/))
