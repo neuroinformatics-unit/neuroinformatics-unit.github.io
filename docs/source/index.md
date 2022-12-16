@@ -19,8 +19,6 @@ funding
 :link-type: doc
 
 An ecosystem of interoperable Python-based tools for computational neuroanatomy.
-+++
-Learn more {fas}`arrow-right`
 :::
 
 :::{grid-item-card} {fas}`python;sd-text-warning` SWC Python Cookiecutter
@@ -28,8 +26,6 @@ Learn more {fas}`arrow-right`
 :link-type: doc
 
 A Python package template allowing quick and easy setup of new projects.
-+++
-Learn more {fas}`arrow-right`
 :::
 
 :::{grid-item-card} {fas}`server;sd-text-primary` Datashuttle
@@ -37,8 +33,6 @@ Learn more {fas}`arrow-right`
 :link-type: doc
 
 Datashuttle is a neuroscience-project manager tool that makes folder management and data transfer simple. 
-+++
-Learn more {fas}`arrow-right`
 :::
 
 :::{grid-item-card} {fas}`database;sd-text-primary` SWC-BIDS
@@ -46,8 +40,6 @@ Learn more {fas}`arrow-right`
 :link-type: doc
 
 SWC-BIDS is a neuroscience project folder structure specification for use in the SWC.
-+++
-Learn more {fas}`arrow-right`
 :::
 
 :::{grid-item-card} {fas}`bug;sd-text-danger` Troubleshooting
@@ -56,8 +48,6 @@ Learn more {fas}`arrow-right`
 
 Website containing solutions to problems we have previously 
 come across and solved at the SWC.
-+++
-Learn more {fas}`arrow-right`
 :::
 
 ::::
