@@ -6,7 +6,7 @@ SWC-BIDS is a neuroscience-project folder structure specification for use in the
 The BIDS specification is a set of rules and guidelines for project folder organisation that ensures consistent data management within and between labs. 
 This standardisation makes data-sharing and collaboration much simpler, and allows sharing of analysis tools that can operate on predictable folder structures.
 
-At the Neuroinformatics Unit, all tools we produce will interoperate seamlessly with projects organised according to the SWC-BIDS specification.
+Analysis tools developed at the Neuroinformatics Unit will prioritise interoperability with projects organised according to the SWC-BIDS specification.
 
 [**Read the SWC-BIDS  specification here**]( https://swc-bids.neuroinformatics.dev/)
 
