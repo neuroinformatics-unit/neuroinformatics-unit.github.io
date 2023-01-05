@@ -1,6 +1,6 @@
 # Projects
 
-At the NIU we udertake several projects, listed below.
+At the NIU we undertake several projects, listed below.
 
 ```{toctree}
 :maxdepth: 2
