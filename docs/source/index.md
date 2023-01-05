@@ -1,6 +1,9 @@
-# Neuroinformatics unit
+# Neuroinformatics Unit
 
-Tempor exercitation aute quis commodo et mollit adipisicing labore anim velit proident. Ea occaecat proident proident nisi excepteur. Anim enim aute ex adipisicing proident. Elit tempor adipisicing ex magna ipsum in sit voluptate. Pariatur cupidatat officia nostrud enim id magna dolore eu. Fugiat minim nostrud deserunt culpa occaecat dolore consequat. Irure veniam ut veniam mollit dolor.
+The Neuroinformatics Unit (NIU) is a [Research Software Engineering](https://society-rse.org/) team based at the [Sainsbury Wellcome Centre](https://www.sainsburywellcome.org/web/) and the [Gatsby Computational Neuroscience Unit](https://www.ucl.ac.uk/gatsby/gatsby-computational-neuroscience-unit). 
+
+The NIU is dedicated to the development of high quality, accurate, robust, easy to use and maintainable open-source software for neuroscience and machine learning. We collaborate with researchers and other software engineers to advance research in the two research centres and make new algorithms and tools available to the global community.
+
 
 ```{toctree}
 :maxdepth: 1
