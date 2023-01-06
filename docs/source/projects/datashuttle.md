@@ -4,8 +4,8 @@ Datashuttle is a neuroscience-project manager tool that makes folder management 
 
 Datashuttle includes tools for automated generation of new project folders formatted to the SWC-BIDS specification. 
 It also contains features to assist in data transfer, including:
-* Manage files across multiple data-collection computers by synchronising all data to with a centrally stored project. 
-* Simplify data transfers for processing and analysis by selecting only a sub-set of data to move.
+* Manage files across multiple data-collection computers by synchronising all data with a centrally stored project. 
+* Simplify data transfers for processing and analysis by selecting only a sub-set of data to move (e.g. specific subjects, sessions or data types).
 
 To get started with Datashuttle, visit the [GitHub Page](https://github.com/neuroinformatics-unit/datashuttle).
 
