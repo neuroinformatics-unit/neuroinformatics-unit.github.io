@@ -1,30 +1,27 @@
-<div class="footer">
-    <div class="container row">
-        <div class="col">
-            <p class="copyright">
-                {% if hasdoc('copyright') %}
-                    {% trans path=pathto('copyright'), copyright=copyright|e %}©; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
-                    <br/>
-                {% else %}
-                    {% trans copyright=copyright|e %}©; Copyright {{ copyright }}.{% endtrans %}
-                    <br/>
-                {% endif %}
-            </p>
-            <p class="sphinx-version">
-            {% trans sphinx_version=sphinx_version|e %}Created using <a href="https://sphinx-doc.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}
-            <br/>
-            </p>
-            <p class="theme-version">
-            {{ _("Built with the") }}
-            <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a>
-            {{ theme_version }}.
-            </p>
-        </div>
-        <div class="row ">
-            <img src="_static/light-logo-swc.png" alt="Sponsors" class="only-light img-sponsor"/>
-            <img src="_static/dark-logo-swc.png" alt="Sponsors" class="only-dark img-sponsor"/>
-            <img src="_static/logo_gatsby.jpeg" alt="Sponsors" class="img-sponsor"/>
-        </div>
+<div class="things-in-a-row">
+    <div class="col">
+        <p class="copyright">
+            {% if hasdoc('copyright') %}
+                {% trans path=pathto('copyright'), copyright=copyright|e %}©; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
+                <br/>
+            {% else %}
+                {% trans copyright=copyright|e %}©; Copyright {{ copyright }}.{% endtrans %}
+                <br/>
+            {% endif %}
+        </p>
+        <p class="sphinx-version">
+        {% trans sphinx_version=sphinx_version|e %}Created using <a href="https://sphinx-doc.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}
+        <br/>
+        </p>
+        <p class="theme-version">
+        {{ _("Built with the") }}
+        <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a>
+        {{ theme_version }}.
+        </p>
     </div>
-    
+    <div class="things-in-a-row">
+        <img src="_static/light-logo-swc.png" alt="Sponsors" class="only-light img-sponsor"/>
+        <img src="_static/dark-logo-swc.png" alt="Sponsors" class="only-dark img-sponsor"/>
+        <img src="_static/logo_gatsby.jpeg" alt="Sponsors" class="img-sponsor"/>
+    </div>
 </div>
