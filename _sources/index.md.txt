@@ -20,6 +20,7 @@ funding
 :gutter: 3
 
 :::{grid-item-card} {fas}`brain;sd-text-warning` BrainGlobe
+:img-top: _static/brainglobe_card.png
 :link: projects/brainglobe
 :link-type: doc
 
