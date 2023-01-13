@@ -1,3 +1,34 @@
 # People
 
-Ea tempor fugiat laboris amet dolor amet duis dolore officia consequat. Esse reprehenderit sunt exercitation Lorem dolor cillum adipisicing aute cupidatat excepteur quis non in cillum. Anim nostrud quis adipisicing minim dolore id velit pariatur cupidatat exercitation duis laboris. Ea officia amet amet tempor adipisicing cillum ea sit quis laboris commodo fugiat. Quis irure est nisi ipsum eu aliqua laborum enim ad amet veniam magna eiusmod. Eiusmod dolor occaecat deserunt velit minim nostrud ad esse ipsum et irure sit. Ad consectetur et eiusmod ad magna culpa ipsum ad.
+Current members of the Neuroinformatics Unit:
+
+::::{grid} 1 2 2 3
+:gutter: 3
+
+:::{grid-item-card} Adam Tyson
+:img-top: _static/adam_tyson.jpg
+:link: https://www.sainsburywellcome.org/web/people/adam-tyson-0
+
+Head Research Engineer
+:::
+
+:::{grid-item-card} Joe Ziminski
+:img-top: _static/joe_ziminski.png
+:link: https://www.sainsburywellcome.org/web/people/joe-ziminski
+
+Research Software Engineer
+:::
+
+:::{grid-item-card} Niko Sirmpilatze
+:img-top: _static/niko_sirmpilatze.png
+:link: https://www.sainsburywellcome.org/web/people/niko-sirmpilatze
+
+Research Software Engineer
+:::
+
+:::{grid-item-card} Laura Porta
+:img-top: _static/laura_porta.png
+:link: https://www.sainsburywellcome.org/web/people/laura-porta
+
+Research Software Engineer
+:::
