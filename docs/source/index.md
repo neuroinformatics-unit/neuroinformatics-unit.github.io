@@ -20,21 +20,21 @@ funding
 :gutter: 3
 
 :::{grid-item-card} {fas}`brain;sd-text-warning` BrainGlobe
-:link: projects/new/brainglobe
+:link: projects/brainglobe
 :link-type: doc
 
 An ecosystem of interoperable Python-based tools for computational neuroanatomy.
 :::
 
 :::{grid-item-card} {fab}`python;sd-text-warning` SWC Developer Tools
-:link: projects/new/developer_tools
+:link: projects/developer_tools
 :link-type: doc
 
 A Python package template allowing quick and easy setup of new projects.
 :::
 
 :::{grid-item-card} {fas}`server;sd-text-primary` Data Management
-:link: projects/new/data_management
+:link: projects/data_management
 :link-type: doc
 
 Datashuttle is a neuroscience-project manager tool that makes folder management and data transfer simple. 
