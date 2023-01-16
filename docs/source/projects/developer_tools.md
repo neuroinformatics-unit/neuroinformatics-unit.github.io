@@ -25,7 +25,7 @@ GitHub   {fab}`github`
 
 :::{grid-item}
 :columns: auto
-```{button-link} https://github.com/SainsburyWellcomeCentre/python-cookiecutter
+```{button-link} https://sainsburywellcomecentre.github.io/software-skills/events/release_dec_2022.html
 :color: primary
 :shadow:
 :align: left 
