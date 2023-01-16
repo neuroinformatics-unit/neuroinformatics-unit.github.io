@@ -29,7 +29,7 @@ Website   {fa}`globe`
 :shadow:
 :align: left 
 
-Course Materials   {fa}`graduation-cap`
+GitHub   {fab}`github`
 ```
 :::
 
