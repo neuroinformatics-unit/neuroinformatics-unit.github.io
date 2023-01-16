@@ -48,7 +48,7 @@ Datashuttle includes tools for automated generation and transfer of project fold
 It also contains features to assist in data transfer, including:
 * Manage files across multiple data-collection computers by synchronising 
 all data to with a centrally stored project. 
-* Simply data transfers for processing and analysis by selecting only a sub-set of data to move (e.g. specific subjects, sessions or data types (e.g. behaviour))
+* Easily manage data transfers for processing and analysis by selecting only a sub-set of data to move (e.g. specific subjects, sessions or data types).
 
 ::::{grid} 2
 
