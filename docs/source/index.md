@@ -19,6 +19,7 @@ An ecosystem of interoperable Python-based tools for computational neuroanatomy.
 :::
 
 :::{grid-item-card} {fas}`database;sd-text-primary` Data Management
+:img-top: _static/SWC-BIDS_card.png
 :link: projects/data_management
 :link-type: doc
 
@@ -26,6 +27,7 @@ Tools to help with structuring project folders and transfering data between comp
 :::
 
 :::{grid-item-card} {fas}`code;sd-text-danger` Developer Tools
+:img-top: _static/dev-tools_card.png
 :link: projects/developer_tools
 :link-type: doc
 
