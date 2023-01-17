@@ -15,7 +15,7 @@ The NIU is dedicated to the development of high quality, accurate, robust, easy 
 :link: projects/neuroanatomy
 :link-type: doc
 
-An ecosystem of interoperable Python-based tools for computational neuroanatomy.
+Tools for analysing neuroanatomical data.
 :::
 
 :::{grid-item-card} {fas}`database;sd-text-primary` Data Management
@@ -31,7 +31,7 @@ Tools to help with structuring project folders and transfering data between comp
 :link: projects/developer_tools
 :link-type: doc
 
-Nifty tools to help with software development.
+Tools to help with software development.
 :::
 
 ::::
