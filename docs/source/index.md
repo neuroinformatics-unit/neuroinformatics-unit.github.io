@@ -10,7 +10,7 @@ The NIU is dedicated to the development of high quality, accurate, robust, easy 
 ::::{grid} 1 2 2 3
 :gutter: 3
 
-:::{grid-item-card} {fas}`brain;sd-text-warning` Neuroanatomy
+:::{grid-item-card} {fas}`brain;sd-text-danger` Neuroanatomy
 :img-top: _static/brainglobe_card.png
 :link: projects/neuroanatomy
 :link-type: doc
@@ -18,7 +18,7 @@ The NIU is dedicated to the development of high quality, accurate, robust, easy 
 Tools for analysing neuroanatomical data.
 :::
 
-:::{grid-item-card} {fas}`database;sd-text-primary` Data Management
+:::{grid-item-card} {fas}`database;sd-text-warning` Data Management
 :img-top: _static/SWC-BIDS_card.png
 :link: projects/data_management
 :link-type: doc
@@ -26,7 +26,7 @@ Tools for analysing neuroanatomical data.
 Tools to help with structuring project folders and transfering data between computers.
 :::
 
-:::{grid-item-card} {fas}`code;sd-text-danger` Developer Tools
+:::{grid-item-card} {fas}`code;sd-text-primary` Developer Tools
 :img-top: _static/dev-tools_card.png
 :link: projects/developer_tools
 :link-type: doc
