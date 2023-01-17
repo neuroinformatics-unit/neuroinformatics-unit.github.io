@@ -11,7 +11,7 @@ The NIU is dedicated to the development of high quality, accurate, robust, easy 
 :gutter: 3
 
 :::{grid-item-card} {fas}`brain;sd-text-danger` Neuroanatomy
-:img-top: _static/brainglobe_card.png
+:img-top: _static/neuroanatomy_card.png
 :link: projects/neuroanatomy
 :link-type: doc
 
