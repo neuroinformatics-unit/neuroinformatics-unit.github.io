@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Troubleshooting &#8212; NIU</title>
+    <title>Data Management &#8212; NIU</title>
   
   
   
@@ -42,13 +42,14 @@
     <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/design-tabs.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'projects/troubleshooting';</script>
-    <link rel="canonical" href="https://neuroinformatics.dev/projects/troubleshooting.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'projects/data_management';</script>
+    <link rel="canonical" href="https://neuroinformatics.dev/projects/data_management.html" />
     <link rel="shortcut icon" href="../_static/logo_light.png"/>
+    <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="People" href="../people.html" />
-    <link rel="prev" title="SWC-BIDS" href="swc-bids.html" />
+    <link rel="next" title="Developer Tools" href="developer_tools.html" />
+    <link rel="prev" title="Neuroanatomy" href="neuroanatomy.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="docsearch:language" content="en">
   </head>
@@ -124,9 +125,9 @@
     </p>
     <ul id="navbar-main-elements" class="navbar-nav">
         
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="index.html">
-                        Projects
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../about.html">
+                        About us
                       </a>
                     </li>
                 
@@ -138,9 +139,9 @@
                     </li>
                 
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../funding.html">
-                        Funding
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        Projects
                       </a>
                     </li>
                 
@@ -225,9 +226,9 @@
     </p>
     <ul id="navbar-main-elements" class="navbar-nav">
         
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="index.html">
-                        Projects
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../about.html">
+                        About us
                       </a>
                     </li>
                 
@@ -239,9 +240,9 @@
                     </li>
                 
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../funding.html">
-                        Funding
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        Projects
                       </a>
                     </li>
                 
@@ -291,16 +292,10 @@
     Section Navigation
   </p>
   <div class="bd-toc-item navbar-nav">
-    <p aria-level="2" class="caption" role="heading"><span class="caption-text">Mature projects</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="brainglobe.html">BrainGlobe</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cookiecutter.html">SWC Python Cookiecutter</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Under development</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="datashuttle.html">Datashuttle</a></li>
-<li class="toctree-l1"><a class="reference internal" href="swc-bids.html">SWC-BIDS</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Troubleshooting</a></li>
+    <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="neuroanatomy.html">Neuroanatomy</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Data Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developer_tools.html">Developer Tools</a></li>
 </ul>
 
   </div>
@@ -332,14 +327,47 @@
             
             <article class="bd-article" role="main">
               
-  <section class="tex2jax_ignore mathjax_ignore" id="troubleshooting">
-<h1>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this heading">#</a></h1>
-<p>The Neuroinformatics Unit troubleshooting website contains solutions to problems we have previously
-come across and solved at the SWC. <a class="reference external" href="https://troubleshooting.neuroinformatics.dev/">Visit the website</a> to check out possible solutions
-to your software problems.</p>
-<section id="want-to-contribute">
-<h2>Want to Contribute?<a class="headerlink" href="#want-to-contribute" title="Permalink to this heading">#</a></h2>
-<p>To contribute, please visit the troubleshooting <a class="reference external" href="https://troubleshooting.neuroinformatics.dev/">GitHub page</a></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="data-management">
+<h1>Data Management<a class="headerlink" href="#data-management" title="Permalink to this heading">#</a></h1>
+<p>At the Neuroinformatics Unit we build tools to help maintain well-structured project folders, and simplify transfer
+data between computing systems during data collection and analysis.</p>
+<section id="swc-bids">
+<h2>SWC Bids<a class="headerlink" href="#swc-bids" title="Permalink to this heading">#</a></h2>
+<p>SWC-BIDS is a neuroscience-project folder structure specification for use in the SWC, based on the BIDS specification widely used in human neuroimaging.</p>
+<p>The BIDS specification is a set of rules and guidelines for project folder organisation that ensures consistent data management within and between labs.
+This standardisation makes data-sharing and collaboration much simpler, and allows sharing of analysis tools that can operate on predictable folder structures.</p>
+<p>Read the specification on the website, or discuss and contribute and GitHub.</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
+<div class="sd-col sd-d-flex-column sd-col-auto sd-col-xs-auto sd-col-sm-auto sd-col-md-auto sd-col-lg-auto docutils">
+<p class="sd-text-left"><a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-primary sd-shadow-sm reference external" href="https://swc-bids.neuroinformatics.dev"><span>Website   <span class="fa fa-globe"></span></span></a></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-auto sd-col-xs-auto sd-col-sm-auto sd-col-md-auto sd-col-lg-auto docutils">
+<p class="sd-text-left"><a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-primary sd-shadow-sm reference external" href="https://github.com/neuroinformatics-unit/SWC-BIDS"><span>GitHub   <span class="fab fa-github"></span></span></a></p>
+</div>
+</div>
+</div>
+</section>
+<section id="datashuttle">
+<h2>DataShuttle<a class="headerlink" href="#datashuttle" title="Permalink to this heading">#</a></h2>
+<p>Datashuttle is a neuroscience-project manager tool that simplifies building project folders and transferring data.</p>
+<p>Datashuttle includes tools for automated generation and transfer of project folders formatted to the SWC-BIDS specification.</p>
+<p>It also contains features to assist in data transfer, including:</p>
+<ul class="simple">
+<li><p>Manage files across multiple data-collection computers by synchronising
+all data to with a centrally stored project.</p></li>
+<li><p>Easily manage data transfers for processing and analysis by selecting only a sub-set of data to move (e.g. specific subjects, sessions or data types).</p></li>
+</ul>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
+<div class="sd-col sd-d-flex-column sd-col-auto sd-col-xs-auto sd-col-sm-auto sd-col-md-auto sd-col-lg-auto docutils">
+<p class="sd-text-left"><a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-primary sd-shadow-sm reference external" href="https://datashuttle.neuroinformatics.dev"><span>Website   <span class="fa fa-globe"></span></span></a></p>
+</div>
+<div class="sd-col sd-d-flex-column sd-col-auto sd-col-xs-auto sd-col-sm-auto sd-col-md-auto sd-col-lg-auto docutils">
+<p class="sd-text-left"><a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-primary sd-shadow-sm reference external" href="https://github.com/neuroinformatics-unit/datashuttle"><span>GitHub   <span class="fab fa-github"></span></span></a></p>
+</div>
+</div>
+</div>
 </section>
 </section>
 
@@ -351,17 +379,17 @@ to your software problems.</p>
             <footer class="bd-footer-article">
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-  <a class='left-prev' id="prev-link" href="swc-bids.html" title="previous page">
+  <a class='left-prev' id="prev-link" href="neuroanatomy.html" title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
           <p class="prev-next-subtitle">previous</p>
-          <p class="prev-next-title">SWC-BIDS</p>
+          <p class="prev-next-title">Neuroanatomy</p>
       </div>
   </a>
-  <a class='right-next' id="next-link" href="../people.html" title="next page">
+  <a class='right-next' id="next-link" href="developer_tools.html" title="next page">
   <div class="prev-next-info">
       <p class="prev-next-subtitle">next</p>
-      <p class="prev-next-title">People</p>
+      <p class="prev-next-title">Developer Tools</p>
   </div>
   <i class="fa-solid fa-angle-right"></i>
   </a>
@@ -382,8 +410,13 @@ to your software problems.</p>
 <nav id="bd-toc-nav" class="page-toc">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#want-to-contribute">
-   Want to Contribute?
+  <a class="reference internal nav-link" href="#swc-bids">
+   SWC Bids
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#datashuttle">
+   DataShuttle
   </a>
  </li>
 </ul>
@@ -403,7 +436,7 @@ to your software problems.</p>
 <div class="toc-item">
   
 <div class="tocsection sourcelink">
-    <a href="../_sources/projects/troubleshooting.md.txt">
+    <a href="../_sources/projects/data_management.md.txt">
         <i class="fa-solid fa-file-lines"></i> Show Source
     </a>
 </div>
