@@ -9,9 +9,61 @@ We have three aims:
 * Build a community of neuroscientists and developers to share knowledge, build software and engage with the scientific, and open-source community (e.g. by organising hackathons).
 
 
-## Further information:
-* [Website](https://brainglobe.info/)
-* [Github organisation](https://github.com/brainglobe)
-* [Documentation](https://docs.brainglobe.info/)
-* [Help forum](https://forum.image.sc/tag/brainglobe)
-* [Publications](https://brainglobe.info/publications)
+::::{grid} 5
+
+:::{grid-item}
+:columns: auto
+```{button-link} https://brainglobe.info/
+:color: primary
+:shadow:
+:align: left 
+
+Website   {fa}`globe`
+```
+:::
+
+:::{grid-item}
+:columns: auto
+```{button-link} https://github.com/brainglobe
+:color: primary
+:shadow:
+:align: left 
+
+GitHub   {fab}`github`
+```
+:::
+
+:::{grid-item}
+:columns: auto
+```{button-link} https://docs.brainglobe.info/
+:color: primary
+:shadow:
+:align: left 
+
+Documentation   {fa}`book-open`
+```
+:::
+
+:::{grid-item}
+:columns: auto
+```{button-link} https://forum.image.sc/tag/brainglobe
+:color: primary
+:shadow:
+:align: left 
+
+Help Forum   {fa}`messages`
+```
+:::
+
+:::{grid-item}
+:columns: auto
+```{button-link} https://brainglobe.info/publications
+:color: primary
+:shadow:
+:align: left 
+
+Publications   {fa}`newspaper`
+```
+:::
+
+::::

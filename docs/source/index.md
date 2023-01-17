@@ -27,15 +27,15 @@ funding
 An ecosystem of interoperable Python-based tools for computational neuroanatomy.
 :::
 
-:::{grid-item-card} {fab}`python;sd-text-warning` SWC Python Cookiecutter
-:link: projects/cookiecutter
+:::{grid-item-card} {fab}`python;sd-text-warning` SWC Developer Tools
+:link: projects/developer_tools
 :link-type: doc
 
 A Python package template allowing quick and easy setup of new projects.
 :::
 
-:::{grid-item-card} {fas}`server;sd-text-primary` Datashuttle
-:link: projects/datashuttle
+:::{grid-item-card} {fas}`server;sd-text-primary` Data Management
+:link: projects/data_management
 :link-type: doc
 
 Datashuttle is a neuroscience-project manager tool that makes folder management and data transfer simple. 
