@@ -39,7 +39,7 @@ Nifty tools to help with software development.
 :caption: Projects index
 :hidden:
 
-projects/index
+about
 people
-funding
+projects/index
 ```
