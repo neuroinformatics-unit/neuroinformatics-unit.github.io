@@ -5,54 +5,43 @@ The Neuroinformatics Unit (NIU) is a [Research Software Engineering](https://soc
 The NIU is dedicated to the development of high quality, accurate, robust, easy to use and maintainable open-source software for neuroscience and machine learning. We collaborate with researchers and other software engineers to advance research in the two research centres and make new algorithms and tools available to the global community.
 
 
-```{toctree}
-:maxdepth: 1
-:hidden:
-
-projects/index
-people
-funding
-```
-
 ## Explore our projects
 
 ::::{grid} 1 2 2 3
 :gutter: 3
 
-:::{grid-item-card} {fas}`brain;sd-text-warning` BrainGlobe
-:link: projects/brainglobe
+:::{grid-item-card} {fas}`brain;sd-text-danger` Neuroanatomy
+:img-top: _static/neuroanatomy_card.png
+:link: projects/neuroanatomy
 :link-type: doc
 
-An ecosystem of interoperable Python-based tools for computational neuroanatomy.
+Tools for analysing neuroanatomical data.
 :::
 
-:::{grid-item-card} {fab}`python;sd-text-warning` SWC Python Cookiecutter
-:link: projects/cookiecutter
+:::{grid-item-card} {fas}`database;sd-text-warning` Data Management
+:img-top: _static/SWC-BIDS_card.png
+:link: projects/data_management
 :link-type: doc
 
-A Python package template allowing quick and easy setup of new projects.
+Tools to help with structuring project folders and transfering data between computers.
 :::
 
-:::{grid-item-card} {fas}`server;sd-text-primary` Datashuttle
-:link: projects/datashuttle
+:::{grid-item-card} {fas}`code;sd-text-primary` Developer Tools
+:img-top: _static/dev-tools_card.png
+:link: projects/developer_tools
 :link-type: doc
 
-Datashuttle is a neuroscience-project manager tool that makes folder management and data transfer simple. 
-:::
-
-:::{grid-item-card} {fas}`database;sd-text-primary` SWC-BIDS
-:link: projects/swc-bids
-:link-type: doc
-
-SWC-BIDS is a neuroscience project folder structure specification for use in the SWC.
-:::
-
-:::{grid-item-card} {fas}`bug;sd-text-danger` Troubleshooting
-:link: projects/troubleshooting
-:link-type: doc
-
-Website containing solutions to problems we have previously 
-come across and solved at the SWC.
+Tools to help with software development.
 :::
 
 ::::
+
+```{toctree}
+:maxdepth: 2
+:caption: Projects index
+:hidden:
+
+about
+people
+projects/index
+```
