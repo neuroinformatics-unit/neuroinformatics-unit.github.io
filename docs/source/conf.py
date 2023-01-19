@@ -118,5 +118,6 @@ html_theme_options = {
         "text": "NIU",
         "image_light": "logo_light.png",
         "image_dark": "logo_dark.png",
-    }
+    },
+    "footer_items": ["custom_footer"],
 }

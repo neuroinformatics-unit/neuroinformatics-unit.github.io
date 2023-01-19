@@ -1,0 +1,27 @@
+<div class="things-in-a-row">
+    <div class="col">
+        <p class="sphinx-version">
+        {% trans sphinx_version=sphinx_version|e %}Created using <a href="https://sphinx-doc.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}
+        <br/>
+        </p>
+        <p class="theme-version">
+        {{ _("Built with the") }}
+        <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a>
+        {{ theme_version }}.
+        </p>
+    </div>
+    <div class="things-in-a-row">
+        <a href="https://www.sainsburywellcome.org/web/">
+            <img src="{{ pathto('_static/light-logo-swc.png', 1) }}" alt="Sponsors" class="only-light img-sponsor"/>
+            <img src="{{ pathto('_static/dark-logo-swc.png', 1) }}" alt="Sponsors" class="only-dark img-sponsor"/>
+        </a>
+        <a href="https://www.ucl.ac.uk/">
+            <img src="{{ pathto('_static/light-logo-gatsby.png', 1) }}" alt="Sponsors" class="only-light img-sponsor"/>
+            <img src="{{ pathto('_static/dark-logo-gatsby.png', 1) }}" alt="Sponsors" class="only-dark img-sponsor"/>
+        </a>
+        <a href="https://www.ucl.ac.uk/gatsby/gatsby-computational-neuroscience-unit">
+            <img src="{{ pathto('_static/light-logo-ucl.png', 1) }}" alt="Sponsors" class="only-light img-sponsor"/>
+            <img src="{{ pathto('_static/dark-logo-ucl.png', 1) }}" alt="Sponsors" class="only-dark img-sponsor"/>
+        </a>
+    </div>
+</div>
