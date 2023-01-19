@@ -6,7 +6,7 @@ The NIU is based at the [Sainsbury Wellcome Centre](https://www.sainsburywellcom
 
 
 ## Contact
-Email [Adam Tyson](adam.tyson@ucl.ac.uk).
+Email <a href="mailto:adam.tyson@ucl.ac.uk?subject=Neuroinformatics Unit">Adam Tyson</a>
 
 ## Location
 
