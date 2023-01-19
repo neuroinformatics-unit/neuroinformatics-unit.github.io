@@ -4,8 +4,20 @@ html[data-theme=dark] {
     --pst-color-link: var(--pst-color-primary);
   }
   
-  html[data-theme=light] {
-    --pst-color-primary: #03A062;
-    --pst-color-link: var(--pst-color-primary);
-  }
-  
+html[data-theme=light] {
+  --pst-color-primary: #03A062;
+  --pst-color-link: var(--pst-color-primary);
+}
+
+.sponsor {
+  height: 50px;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+}
+
+.things-in-a-row-sponsor {
+  display: flex;
+  flex-wrap: wrap;
+}

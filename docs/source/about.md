@@ -14,9 +14,12 @@ Email <a href="mailto:adam.tyson@ucl.ac.uk?subject=Neuroinformatics Unit">Adam T
 
 ## Funding
 
-<div>
-    <img src="_static/czi_logo.png" alt="Wellcome Trust" width="300">
-    <img src="_static/wellcome_logo.png" alt="Wellcome Trust" width="300">
-    <img src="_static/light-logo-gatsby.png" alt="Gatsby" width="300">
-</div>
 
+<div class="things-in-a-row-sponsor">
+    <img src="_static/light-wellcome-logo.png" alt="Sponsors" class="only-light sponsor"/>
+    <img src="_static/dark-wellcome-logo.png" alt="Sponsors" class="only-dark sponsor"/>
+    <img src="_static/light-logo-gatsby.png" alt="Sponsors" class="only-light sponsor"/>
+    <img src="_static/dark-logo-gatsby.png" alt="Sponsors" class="only-dark sponsor"/>
+    <img src="_static/light-czi-logo.png" alt="Sponsors" class="only-light sponsor"/>
+    <img src="_static/dark-czi-logo.png" alt="Sponsors" class="only-dark sponsor"/>
+</div>
