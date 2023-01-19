@@ -10,31 +10,33 @@ automated testing (pytest, both locally and through GitHub Actions), versioning 
 
 See the Cookiecutter GitHub page to get started, and our course “Turning your Python scripts into reusable, general-purpose software” materials for more details.
 
-::::{grid} 2
 
-:::{grid-item}
-:columns: auto
-```{button-link} https://github.com/SainsburyWellcomeCentre/python-cookiecutter
-:color: primary
-:shadow:
-:align: left 
-
-GitHub   {fab}`github`
-```
-:::
-
-:::{grid-item}
-:columns: auto
-```{button-link} https://sainsburywellcomecentre.github.io/software-skills/events/release_dec_2022.html
-:color: primary
-:shadow:
-:align: left 
-
-Course Materials   {fa}`graduation-cap`
-```
-:::
-
-::::
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+    <div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
+        <div class="sd-col sd-d-flex-column sd-col-auto sd-col-xs-auto sd-col-sm-auto sd-col-md-auto sd-col-lg-auto docutils">
+            <p class="sd-text-left">
+                <a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-primary sd-shadow-sm reference external" href="https://github.com/SainsburyWellcomeCentre/python-cookiecutter" target="_blank">
+                    <span>
+                        GitHub   
+                        <span class="fab fa-github">
+                        </span>
+                    </span>
+                </a>
+            </p>
+        </div>
+        <div class="sd-col sd-d-flex-column sd-col-auto sd-col-xs-auto sd-col-sm-auto sd-col-md-auto sd-col-lg-auto docutils">
+            <p class="sd-text-left">
+                <a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-primary sd-shadow-sm reference external" href="https://sainsburywellcomecentre.github.io/software-skills/events/release_dec_2022.html" target="_blank">
+                    <span>
+                        Course Materials   
+                        <span class="fa fa-graduation-cap">
+                        </span>
+                    </span>
+                </a>
+            </p>
+        </div>
+    </div>
+</div>
 
 ## Fancylog
 
@@ -42,17 +44,18 @@ Fancylog is a tool that provides a convenient interface for python logging opera
 when multiprocessing, logging information about the git environment, command-line arguments and object attributes.
 
 
-::::{grid} 1
-
-:::{grid-item}
-:columns: auto
-```{button-link} https://github.com/adamltyson/fancylog
-:color: primary
-:shadow:
-:align: left 
-
-GitHub   {fab}`github`
-```
-:::
-
-::::
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+    <div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
+        <div class="sd-col sd-d-flex-column sd-col-auto sd-col-xs-auto sd-col-sm-auto sd-col-md-auto sd-col-lg-auto docutils">
+            <p class="sd-text-left">
+                <a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-primary sd-shadow-sm reference external" href="https://github.com/adamltyson/fancylog" target="_blank">
+                    <span>
+                        GitHub   
+                        <span class="fab fa-github">
+                        </span>
+                    </span>
+                </a>
+            </p>
+        </div>
+    </div>
+</div>
