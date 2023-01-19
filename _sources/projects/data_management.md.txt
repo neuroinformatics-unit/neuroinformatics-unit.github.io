@@ -11,32 +11,34 @@ The BIDS specification is a set of rules and guidelines for project folder organ
 This standardisation makes data-sharing and collaboration much simpler, and allows sharing of analysis tools that can operate on predictable folder structures.
 
 Read the specification on the website, or discuss and contribute and GitHub.
-::::{grid} 2
-
-:::{grid-item}
-:columns: auto
-```{button-link} https://swc-bids.neuroinformatics.dev
-:color: primary
-:shadow:
-:align: left 
-
-Website   {fa}`globe`
-```
-:::
 
 
-:::{grid-item}
-:columns: auto
-```{button-link} https://github.com/neuroinformatics-unit/SWC-BIDS
-:color: primary
-:shadow:
-:align: left 
-
-GitHub   {fab}`github`
-```
-:::
-
-::::
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+    <div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
+        <div class="sd-col sd-d-flex-column sd-col-auto sd-col-xs-auto sd-col-sm-auto sd-col-md-auto sd-col-lg-auto docutils">
+            <p class="sd-text-left">
+                <a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-primary sd-shadow-sm reference external" href="https://swc-bids.neuroinformatics.dev" target="_blank">
+                    <span>
+                        Website   
+                        <span class="fa fa-globe">
+                        </span>
+                    </span>
+                </a>
+            </p>
+        </div>
+        <div class="sd-col sd-d-flex-column sd-col-auto sd-col-xs-auto sd-col-sm-auto sd-col-md-auto sd-col-lg-auto docutils">
+            <p class="sd-text-left">
+                <a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-primary sd-shadow-sm reference external" href="https://github.com/neuroinformatics-unit/SWC-BIDS" target="_blank">
+                    <span>
+                        GitHub   
+                        <span class="fab fa-github">
+                        </span>
+                    </span>
+                </a>
+            </p>
+        </div>
+    </div>
+</div>
 
 
 ## DataShuttle
@@ -50,30 +52,30 @@ It also contains features to assist in data transfer, including:
 all data to with a centrally stored project. 
 * Easily manage data transfers for processing and analysis by selecting only a sub-set of data to move (e.g. specific subjects, sessions or data types).
 
-::::{grid} 2
 
-:::{grid-item}
-:columns: auto
-```{button-link} https://datashuttle.neuroinformatics.dev
-:color: primary
-:shadow:
-:align: left 
-
-Website   {fa}`globe`
-```
-:::
-
-:::{grid-item}
-:columns: auto
-```{button-link} https://github.com/neuroinformatics-unit/datashuttle
-:color: primary
-:shadow:
-:align: left 
-
-GitHub   {fab}`github`
-```
-:::
-
-::::
-
-
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+    <div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
+        <div class="sd-col sd-d-flex-column sd-col-auto sd-col-xs-auto sd-col-sm-auto sd-col-md-auto sd-col-lg-auto docutils">
+            <p class="sd-text-left">
+                <a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-primary sd-shadow-sm reference external" href="https://datashuttle.neuroinformatics.dev" target="_blank">
+                    <span>
+                        Website   
+                        <span class="fa fa-globe">
+                        </span>
+                    </span>
+                </a>
+            </p>
+        </div>
+        <div class="sd-col sd-d-flex-column sd-col-auto sd-col-xs-auto sd-col-sm-auto sd-col-md-auto sd-col-lg-auto docutils">
+            <p class="sd-text-left">
+                <a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-primary sd-shadow-sm reference external" href="https://github.com/neuroinformatics-unit/datashuttle" target="_blank">
+                    <span>
+                        GitHub   
+                        <span class="fab fa-github">
+                        </span>
+                    </span>
+                </a>
+            </p>
+        </div>
+    </div>
+</div>
