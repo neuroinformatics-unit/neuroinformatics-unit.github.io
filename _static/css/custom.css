@@ -8,6 +8,14 @@ html[data-theme=light] {
   --pst-color-link: var(--pst-color-primary);
 }
 
+.sponsor {
+  height: 100px;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+}
+
 .col {
   flex: 0 0 50%;
   max-width: 50%;
@@ -19,6 +27,11 @@ html[data-theme=light] {
   padding-right: 5px;
   padding-bottom: 5px;
   padding-left: 5px;
+}
+
+.things-in-a-row-sponsor {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .things-in-a-row {
