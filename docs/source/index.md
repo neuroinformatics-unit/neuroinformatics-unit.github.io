@@ -23,7 +23,7 @@ Tools for analysing neuroanatomical data.
 :link: projects/data_management
 :link-type: doc
 
-Tools to help with structuring project folders and transfering data between computers.
+Tools to help with structuring project folders and transferring data between computers.
 :::
 
 :::{grid-item-card} {fas}`code;sd-text-primary` Developer Tools
