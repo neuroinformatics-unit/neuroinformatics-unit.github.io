@@ -41,6 +41,7 @@ extensions = [
     'myst_parser',
     'numpydoc',
     'nbsphinx',
+    'ablog',
 ]
 
 # Configure the myst parser to enable cool markdown features
