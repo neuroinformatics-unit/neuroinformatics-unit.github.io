@@ -120,4 +120,9 @@ html_theme_options = {
         "image_dark": "logo_dark.png",
     },
     "footer_items": ["custom_footer"],
+    "analytics": {
+        "google_analytics_id": "G-6260TGM7TY",
+    }
+
 }
+
