@@ -5,3 +5,4 @@ sphinx-design
 numpydoc
 nbsphinx
 linkify-it-py
+ablog
