@@ -8,7 +8,7 @@ The Neuroinformatics Unit runs the Software Skills program at SWC & GCNU, coveri
     <div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
         <div class="sd-col sd-d-flex-column sd-col-auto sd-col-xs-auto sd-col-sm-auto sd-col-md-auto sd-col-lg-auto docutils">
             <p class="sd-text-left">
-                <a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-primary sd-shadow-sm reference external" href="https://software-skills.neuroinformatics.dev/" target="_blank">
+                <a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-primary sd-shadow-sm reference external" href="https://software-skills.neuroinformatics.dev" target="_blank">
                     <span>
                         Software Skills website   
                         <span class="fa fa-gear">
