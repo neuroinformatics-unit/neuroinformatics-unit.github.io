@@ -2,6 +2,8 @@
 
 The Neuroinformatics Unit (NIU) is dedicated to advancing neuroscience research through the development of innovative software and computational tools. We work together to create user-friendly and efficient software for data analysis and management, modelling, and visualization. Our goal is to empower scientists with the tools they need to gain new insights into the complexities of the nervous system and to facilitate collaboration among researchers in the field.
 
+We also develop [training courses](https://troubleshooting.neuroinformatics.dev/) in using and developing software for neuroscience.
+
 The NIU is based at the [Sainsbury Wellcome Centre](https://www.sainsburywellcome.org/web/) and the [Gatsby Computational Neuroscience Unit](https://www.ucl.ac.uk/gatsby/gatsby-computational-neuroscience-unit) at [University College London](https://www.ucl.ac.uk/).
 
 
