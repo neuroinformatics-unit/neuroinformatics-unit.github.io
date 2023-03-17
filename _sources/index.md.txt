@@ -44,4 +44,5 @@ Tools to help with software development.
 about
 people
 projects/index
+resources
 ```
