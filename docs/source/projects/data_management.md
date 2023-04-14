@@ -11,7 +11,7 @@ It is inspired by, and based on the BIDS specification, widely used in human neu
 The SWC-Blueprint specification provides a set of rules and guidelines for project folder organisation, ensuring consistent data management within and between labs.
 This standardisation makes data-sharing and collaboration much simpler, and allows sharing of analysis tools that can operate on predictable folder structures.
 
-Read the specification on the website, or discuss and contribute and GitHub.
+Read the specification on the website, or discuss and contribute at GitHub.
 
 
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
