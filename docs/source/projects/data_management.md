@@ -3,11 +3,12 @@
 At the Neuroinformatics Unit we build tools to help maintain well-structured project folders, and simplify transfer
 data between computing systems during data collection and analysis.
 
-## SWC Bids
+## SWC-Blueprint
 
-SWC-BIDS is a neuroscience-project folder structure specification for use in the SWC, based on the BIDS specification widely used in human neuroimaging.
+SWC-Blueprint is a project folder structure specification designed for the Sainsbury Wellcome Centre (SWC) for Neural Circuits and Behaviour. 
+It is inspired by, and based on the BIDS specification, widely used in human neuroimaging.
 
-The BIDS specification is a set of rules and guidelines for project folder organisation that ensures consistent data management within and between labs. 
+The SWC-Blueprint specification provides a set of rules and guidelines for project folder organisation, ensuring consistent data management within and between labs.
 This standardisation makes data-sharing and collaboration much simpler, and allows sharing of analysis tools that can operate on predictable folder structures.
 
 Read the specification on the website, or discuss and contribute and GitHub.
