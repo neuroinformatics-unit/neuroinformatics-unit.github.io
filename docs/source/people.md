@@ -33,4 +33,11 @@ Research Software Engineer
 Research Software Engineer
 :::
 
+:::{grid-item-card} Chang Huan Lo
+:img-top: _static/chang_huan_lo.png
+:link: https://github.com/lochhh
+
+Research Software Engineer
+:::
+
 ::::
