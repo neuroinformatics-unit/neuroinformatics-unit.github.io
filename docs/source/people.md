@@ -40,4 +40,11 @@ Research Software Engineer
 Research Software Engineer
 :::
 
+:::{grid-item-card} Alessandro Felder
+:img-top: _static/alessandro_felder.png
+:link: https://github.com/alessandrofelder
+
+Research Software Engineer
+:::
+
 ::::
