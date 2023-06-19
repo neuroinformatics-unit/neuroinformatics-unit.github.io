@@ -37,17 +37,6 @@ We have three aims:
         </div>
         <div class="sd-col sd-d-flex-column sd-col-auto sd-col-xs-auto sd-col-sm-auto sd-col-md-auto sd-col-lg-auto docutils">
             <p class="sd-text-left">
-                <a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-primary sd-shadow-sm reference external" href="https://docs.brainglobe.info/" target="_blank">
-                    <span>
-                        Documentation   
-                        <span class="fa fa-book-open">
-                        </span>
-                    </span>
-                </a>
-            </p>
-        </div>
-        <div class="sd-col sd-d-flex-column sd-col-auto sd-col-xs-auto sd-col-sm-auto sd-col-md-auto sd-col-lg-auto docutils">
-            <p class="sd-text-left">
                 <a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-primary sd-shadow-sm reference external" href="https://forum.image.sc/tag/brainglobe" target="_blank">
                     <span>
                         Help Forum   
@@ -61,7 +50,7 @@ We have three aims:
             <p class="sd-text-left">
                 <a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-primary sd-shadow-sm reference external" href="https://brainglobe.info/publications" target="_blank">
                     <span>
-                        Pubblications   
+                        Publications   
                         <span class="fa fa-newspaper">
                         </span>
                     </span>
