@@ -1,9 +1,9 @@
 ---
 blogpost: true
-date: Jan 01, 2023
-author: Neuroinformatics Unit
-location: World
-category: Manual
+date: 23 June 2023
+author: Laura Porta
+location: Lodnon, UK
+category: Blog
 language: English
 ---
 
@@ -52,7 +52,6 @@ Python's extensive ecosystem offers ample opportunities for performance optimiza
 Remember, translating MATLAB scripts verbatim might be tempting, but Python's strength lies in its flexibility and its extensive library ecosystem. Embrace Python’s strengths by looking for opportunities to optimize and streamline your code. 
 
 Finally, ensure the validity and efficiency of your Python script by performing comparative testing with the MATLAB version. Libraries like MATLAB Engine API for Python can facilitate this by calling MATLAB functions directly from Python, providing a valuable benchmark for your Python code.
-
 
 ## Conclusion
 
