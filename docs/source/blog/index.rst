@@ -4,6 +4,9 @@ Blog
 Recent blog posts:
 
 .. postlist:: 5
-   :excerpts:
+   :list-style: circle
+   :category: Manual
+   :format: {title}
+   :sort:
 
 
