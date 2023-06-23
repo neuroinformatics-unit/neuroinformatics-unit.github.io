@@ -7,7 +7,10 @@ category: Manual
 language: English
 ---
 
-# Why and How to Translate Scientific Script from MATLAB to Python: A Comprehensive Guide
+# Why and How to Translate Scientific code from MATLAB to Python: A Comprehensive Guide
+*Author: Laura Porta*
+
+<img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1631&q=80" width="100%"/>
 
 ## Rationale
 In the realm of scientific project development, researchers often find themselves grappling with computational challenges that require quick and succinct scripts. These scripts, vital for tasks such as experimental setups and complex data analysis, necessitate a programming language that is both versatile and accessible. For years, MATLAB has been the trusted choice due to its ability to facilitate script creation and its user-friendly interfaces.
@@ -23,10 +26,14 @@ When attempting such a translation, you may encounter two main types of MATLAB c
 
 Regardless of the code type, it's crucial first to understand the objectives of the original MATLAB script. Sketch out how Python tools might achieve the same results given identical inputs and goals. Drafting a schema or flowchart can prove incredibly helpful in visualizing this translation process.
 
+This is an example schematic that I wrote at the beginning to help me understand how to organize my Python code:
+<img src="../_static/blog_images/matlab_to_python/flowchart.png" width="100%"/>
+
 ## Navigating the original codebase
 
 ### Using the debugger
 Next, delve into the original MATLAB codebase to grasp its real implementation. A debugger can assist in this exploration, helping you follow the sequence of method calls, inspect parameter inputs, and evaluate their outputs. 
+<img src="../_static/blog_images/matlab_to_python/debugger.png" width="100%"/>
 
 ### Static analysis
 You may encounter scenarios where the code you aim to rewrite relies heavily on custom scripts or specific combinations of outdated packages. These dependencies might restrict the execution of the code to the original developer's machine. In such cases, static code analysis becomes an invaluable tool, coupled with a thorough exploration of method documentation and dialogue with the original code's developers and users when possible.
@@ -34,6 +41,8 @@ You may encounter scenarios where the code you aim to rewrite relies heavily on 
 ### Dependency analyser
 For sprawling codebases, a dependency analyzer can elucidate the connections between different files and functions, helping you chart a course through the complexity.
 
+An example of a dependency analyzer is the MATLAB Dependency Analyzer, which can be accessed from the MATLAB IDE. This tool can help you visualize the dependencies between different files and functions, as shown in the image below.
+<img src="../_static/blog_images/matlab_to_python/dependency_analyser.png" width="100%"/>
 
 ## Plan and write your code
 As you undertake the translation from MATLAB to Python, your initial focus should be on designing the overall architecture, identifying key input-output relationships, and planning how to develop these in Python. This process is less about replicating individual methods and more about maintaining functionality at a higher level. Therefore, although it will be useful to use AI assistants such as GitHub Copilot to understand individual lines of code, it won't be sufficient to structure the architecture of your Python codebase.
