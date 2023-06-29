@@ -6,8 +6,8 @@ The BrainGlobe Initiative exists to facilitate the development of interoperable 
 
 We have three aims:
 
-* Develop specialist software for specific analysis and visualisation needs, such as [cellfinder](https://brainglobe.info/cellfinder) and [brainrender](https://docs.brainrender.info/).
-* Develop core tools to help others to build interoperable tools in Python, e.g. the [BrainGlobe Atlas API](https://brainglobe.info/atlas-api).
+* Develop specialist software for specific analysis and visualisation needs, such as [cellfinder](https://brainglobe.info/documentation/cellfinder/index.html) and [brainrender](https://brainglobe.info/documentation/brainrender/index.html).
+* Develop core tools to help others to build interoperable tools in Python, e.g. the [BrainGlobe Atlas API](https://brainglobe.info/documentation/bg-atlasapi/index.html).
 * Build a community of neuroscientists and developers to share knowledge, build software and engage with the scientific, and open-source community (e.g. by organising hackathons).
 
 
