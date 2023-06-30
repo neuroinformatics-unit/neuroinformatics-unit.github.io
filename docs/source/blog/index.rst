@@ -3,10 +3,12 @@ Blog
 
 Recent blog posts:
 
+
 .. postlist:: 5
    :list-style: circle
-   :category: Manual
+   :category: Blog
    :format: {title}
+   :excerpts: 
    :sort:
 
 

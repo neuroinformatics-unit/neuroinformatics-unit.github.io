@@ -5,12 +5,13 @@ author: Laura Porta
 location: Lodnon, UK
 category: Blog
 language: English
+image: 1
 ---
 
 # Why and How to Translate Scientific code from MATLAB to Python: A Comprehensive Guide
 *Author: Laura Porta*
 
-<img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1631&q=80" width="100%"/>
+<img src="../_static/blog_images/matlab_to_python/confused_girl.png" width="100%"/>
 
 ## Rationale
 In the realm of scientific project development, researchers often find themselves grappling with computational challenges that require quick and succinct scripts. These scripts, vital for tasks such as experimental setups and complex data analysis, necessitate a programming language that is both versatile and accessible. For years, MATLAB has been the trusted choice due to its ability to facilitate script creation and its user-friendly interfaces.
