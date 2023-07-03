@@ -8,7 +8,7 @@ language: English
 image: 1
 ---
 
-# Why and How to Translate Scientific code from MATLAB to Python: A Comprehensive Guide
+# Why and How to Translate Scientific code from MATLAB to Python: A Guide for Researchers
 *Author: Laura Porta*
 
 <img src="../_static/blog_images/matlab_to_python/confused_girl.png" width="100%"/>
