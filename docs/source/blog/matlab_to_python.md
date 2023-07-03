@@ -2,7 +2,7 @@
 blogpost: true
 date: 23 June 2023
 author: Laura Porta
-location: Lodnon, UK
+location: London, UK
 category: Blog
 language: English
 image: 1
