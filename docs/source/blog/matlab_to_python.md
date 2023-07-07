@@ -29,7 +29,7 @@ Regardless of the code type, it's crucial first to understand the objectives of 
 
 This is an example schematic that I wrote at the beginning to help me understand how to organize my Python code:
 <img src="../_static/blog_images/matlab_to_python/flowchart.png" width="100%"/>
-It is quite top-level, but it helped me understand how I wanted to structure my code. The next step was to delve into the original MATLAB codebase to grasp its real implementation in a way to define which classes and methods I needed to create in Python.
+It is quite high-level, but it helped me understand how I wanted to structure my code. The next step was to delve into the original MATLAB codebase to understand its implementation to define which classes and methods I needed to create in Python.
 ## Navigating the original codebase
 
 ### Using the debugger
