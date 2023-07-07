@@ -93,7 +93,7 @@ By drafting your code in this way you will also have a clear view of the amount 
 ### Write the implementation
 Ideally, at this point, you will know what should be the job for each of your methods. You can start writing the implementations by "thinking directly in Python", and use the original MATLAB code just to compare the results.
 
-You will find that for some algorithms, Pythons offers a more concise and elegant solution. For instance, in MATLAB, you might have a `for` loop to iterate over a list of numbers, while in Python you can use a list comprehension.
+You will find that for some algorithms, Python offers a more concise and elegant solution. For instance, in MATLAB, you might have a `for` loop to iterate over a list of numbers, while in Python you can use a list comprehension.
 
 Matlab iteration
 ```matlab
