@@ -53,7 +53,7 @@ Now that you have fully understood the original codebase, it's time to start des
 ### Cookiecutter
 Before you start writing your code, it's essential to set up a robust and efficient project structure. Cookiecutter is a command-line utility that helps you create a project template for your Python codebase. It can be used to generate a project skeleton, including the directory structure, files, and boilerplate code.
 
-In the Neuroinformatics-unit, we have designed our cookiecutter template, which you can find [here](https://github.com/neuroinformatics-unit/python-cookiecutter).
+In the Neuroinformatics Unit, we have designed a cookiecutter template, which you can find [here](https://github.com/neuroinformatics-unit/python-cookiecutter).
 To use it, you need to install cookiecutter and then run the following command:
 ```bash
 pip install cookiecutter
