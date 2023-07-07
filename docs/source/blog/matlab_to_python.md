@@ -40,7 +40,7 @@ Next, delve into the original MATLAB codebase to grasp its real implementation. 
 You may encounter scenarios where the code you aim to rewrite relies heavily on custom scripts or specific combinations of outdated packages. These dependencies might restrict the execution of the code to the original developer's machine. In such cases, static code analysis becomes an invaluable tool, coupled with a thorough exploration of method documentation and dialogue with the original code's developers and users when possible.
 
 ### Dependency analyser
-For sprawling codebases, a dependency analyzer can elucidate the connections between different files and functions, helping you chart a course through the complexity.
+For complex codebases, a dependency analyzer can highlight the connections between different files and functions, helping you chart a course through the complexity.
 
 An example of a dependency analyzer is the MATLAB Dependency Analyzer, which can be accessed from the MATLAB IDE. This tool can help you visualize the dependencies between different files and functions, as shown in the image below.
 <img src="../_static/blog_images/matlab_to_python/dependency_analyser.png" width="100%"/>
