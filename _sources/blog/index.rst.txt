@@ -3,7 +3,12 @@ Blog
 
 Recent blog posts:
 
+
 .. postlist:: 5
-   :excerpts:
+   :list-style: circle
+   :category: Blog
+   :format: {title}
+   :excerpts: 
+   :sort:
 
 
