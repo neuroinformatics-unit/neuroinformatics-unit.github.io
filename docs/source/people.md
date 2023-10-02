@@ -47,4 +47,10 @@ Research Software Engineer
 Research Software Engineer
 :::
 
+:::{grid-item-card} Igor Tatarnikov
+:img-top: _static/igor_tatarnikov.jpg
+:link: https://github.com/IgorTatarnikov
+
+Research Software Engineer
+
 ::::
