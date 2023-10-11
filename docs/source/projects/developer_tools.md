@@ -4,8 +4,8 @@ Below is a selection of the development tools we use and maintain in the Neuroin
 
 ## Python Cookiecutter
 
-The SWC Cookiecutter allows quick and easy setup of new python projects. 
-The cookiecutter template project contains pre-set configurations for code quality checks, formatting, 
+The Python Cookiecutter template allows quick and easy setup of new python projects. 
+Projects built using this template contain pre-set configurations for code quality checks, formatting, 
 automated testing (pytest, both locally and through GitHub Actions), versioning and release on PyPi.
 
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
