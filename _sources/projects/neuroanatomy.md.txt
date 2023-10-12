@@ -48,6 +48,17 @@ We have three aims:
         </div>
         <div class="sd-col sd-d-flex-column sd-col-auto sd-col-xs-auto sd-col-sm-auto sd-col-md-auto sd-col-lg-auto docutils">
             <p class="sd-text-left">
+                <a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-primary sd-shadow-sm reference external" href="https://brainglobe.zulipchat.com" target="_blank">
+                    <span>
+                        Developer discussion forum 
+                        <span class="fa fa-comment">
+                        </span>
+                    </span>
+                </a>
+            </p>
+        </div>
+        <div class="sd-col sd-d-flex-column sd-col-auto sd-col-xs-auto sd-col-sm-auto sd-col-md-auto sd-col-lg-auto docutils">
+            <p class="sd-text-left">
                 <a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-primary sd-shadow-sm reference external" href="https://brainglobe.info/publications" target="_blank">
                     <span>
                         Publications   
