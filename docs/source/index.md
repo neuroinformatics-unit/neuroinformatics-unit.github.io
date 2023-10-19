@@ -18,7 +18,7 @@ The NIU is dedicated to the development of high quality, accurate, robust, easy 
 
 :::{grid-item-card} {fas}`video;sd-text-primary` Behaviour
 :img-top: _static/blank_card.png
-:link: projects/electrophysiology
+:link: projects/behaviour
 :link-type: doc
 :::
 
@@ -42,7 +42,7 @@ The NIU is dedicated to the development of high quality, accurate, robust, easy 
 
 :::{grid-item-card} {fas}`handshake;sd-text-primary` Collaborations
 :img-top: _static/blank_card.png
-:link: projects/developer_tools
+:link: projects/collaborations
 :link-type: doc
 :::
 
