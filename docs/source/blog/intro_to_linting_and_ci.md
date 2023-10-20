@@ -21,7 +21,7 @@ If you've ever followed a complex recipe, you'll understand the need for careful
 CI stands for Continuous Integration. Think of it as a kitchen assistant who keeps tasting the soup at every stage, ensuring it's always delicious.
 
 ### How does CI work?
-CI is a process that **runs** automatically every time you make a change to your code. It checks that your code is working as expected, and alerts you if there are any problems. Every time you push a change to your codebase on GitHub, CI (your cooking assistant) can install your package, run your tests, and check your code for errors as if it were a user interacting with your software.
+CI is a process that **runs** automatically every time you make a change to your code. It checks that your code is working as expected, and alerts you if there are any problems. Every time you push a change to your codebase on GitHub, CI (your cooking assistant) can install your package, test it, and check your code for errors as if it were a user interacting with your software.
 
 ### If I don't use CI, what could go wrong?
 Imagine baking a cake. If you don't taste-test as you go, you might end up with a salty dessert. Without CI, small errors in code can create big problems later. 
