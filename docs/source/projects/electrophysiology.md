@@ -4,4 +4,4 @@
 
 Under the hood Spikewrap utilises the power of SpikeInterface, an open-source tool with many contributors in the electrophysiology analysis feild. Spikewrap aims to abstract away the implementation details to allow researchers to test different pipeline configurations at the click of a button. 
 
-We actively contribute to the developerment of SpikeInterface, ensuring that our efforts benefit existing community projects. 
+We actively contribute to the development of SpikeInterface, ensuring that our efforts benefit existing community projects. 
