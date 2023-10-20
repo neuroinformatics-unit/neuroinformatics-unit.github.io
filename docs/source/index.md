@@ -17,7 +17,7 @@ The NIU is dedicated to the development of high quality, accurate, robust, easy 
 :::
 
 :::{grid-item-card} {fas}`video;sd-text-primary` Behaviour
-:img-top: _static/blank_card.png
+:img-top: _static/behaviour_card.png
 :link: projects/behaviour
 :link-type: doc
 :::
@@ -29,7 +29,7 @@ The NIU is dedicated to the development of high quality, accurate, robust, easy 
 :::
 
 :::{grid-item-card} {fas}`database;sd-text-primary` Data Management
-:img-top: _static/SWC-BIDS_card.png
+:img-top: _static/data-management_card.png
 :link: projects/data_management
 :link-type: doc
 :::
