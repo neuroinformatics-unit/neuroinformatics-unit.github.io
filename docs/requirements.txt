@@ -6,3 +6,4 @@ numpydoc
 nbsphinx
 linkify-it-py
 ablog
+sphinx-sitemap
