@@ -49,7 +49,7 @@ when multiprocessing, logging information about the git environment, command-lin
 ## Actions
 
 The actions repository hosts reliable, maintained and versioned [GitHub Actions](https://github.com/features/actions) 
-workflows for common tasks such as linting, testing and releasing Python projects to PyPI.
+workflows for common tasks such as linting, testing, and releasing Python projects to PyPI.
 
 
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
