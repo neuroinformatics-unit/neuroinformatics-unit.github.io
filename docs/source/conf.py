@@ -38,6 +38,7 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.napoleon',
     'sphinx_design',
+    'sphinx_sitemap',
     'myst_parser',
     'numpydoc',
     'nbsphinx',
