@@ -23,7 +23,7 @@ The NIU is dedicated to the development of high quality, accurate, robust, easy 
 :::
 
 :::{grid-item-card} {fas}`bolt;sd-text-primary` Electrophysiology
-:img-top: _static/blank_card.png
+:img-top: _static/electrophysiology_card.png
 :link: projects/electrophysiology
 :link-type: doc
 :::
