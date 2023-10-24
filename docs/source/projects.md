@@ -1,4 +1,6 @@
 # Projects
+
+(projects-neuroanatomy)=
 ## Neuroanatomy
 ::::{grid} 1 1 1 1
 
@@ -15,6 +17,7 @@ and open-source community (e.g., by organising hackathons).
 :::
 ::::
 
+(projects-behaviour)=
 ## Behaviour
 ::::{grid} 1 1 1 1
 
@@ -31,6 +34,7 @@ tracking of single or multiple animals.
 :::
 ::::
 
+(projects-electrophysiology)=
 ## Electrophysiology
 ::::{grid} 1 1 1 1
 :::{grid-item-card} {fas}`bolt;sd-text-primary` SpikeWrap
@@ -45,6 +49,7 @@ test different pipeline configurations.
 :::
 ::::
 
+(projects-data-management)=
 ## Data Management
 ::::{grid} 1 1 1 1
 :gutter: 3
@@ -67,6 +72,7 @@ It also allows these folders to be easily synchronised between computers.
 :::
 ::::
 
+(projects-developer-tools)=
 ## Developer Tools
 ::::{grid} 1 1 1 1
 :gutter: 3

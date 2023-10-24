@@ -12,27 +12,32 @@ The NIU is dedicated to the development of high quality, accurate, robust, easy 
 
 :::{grid-item-card} {fas}`brain;sd-text-primary` Neuroanatomy
 :img-top: _static/neuroanatomy_card.png
-:link: projects.html#neuroanatomy
+:link: projects-neuroanatomy
+:link-type: ref
 :::
 
 :::{grid-item-card} {fas}`video;sd-text-primary` Behaviour
 :img-top: _static/behaviour_card.png
-:link: projects.html#behaviour
+:link: projects-behaviour
+:link-type: ref
 :::
 
 :::{grid-item-card} {fas}`bolt;sd-text-primary` Electrophysiology
 :img-top: _static/electrophysiology_card.png
-:link: projects.html#electrophysiology
+:link: projects-electrophysiology
+:link-type: ref
 :::
 
 :::{grid-item-card} {fas}`database;sd-text-primary` Data Management
 :img-top: _static/data-management_card.png
-:link: projects.html#data-management
+:link: projects-data-management
+:link-type: ref
 :::
 
 :::{grid-item-card} {fas}`code;sd-text-primary` Developer Tools
 :img-top: _static/dev-tools_card.png
-:link: projects.html#developer-tools
+:link: projects-developer-tools
+:link-type: ref
 :::
 
 [//]: # (:::{grid-item-card} {fas}`handshake;sd-text-primary` Collaborations)
