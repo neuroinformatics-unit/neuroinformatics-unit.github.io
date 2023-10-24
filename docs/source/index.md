@@ -12,42 +12,33 @@ The NIU is dedicated to the development of high quality, accurate, robust, easy 
 
 :::{grid-item-card} {fas}`brain;sd-text-primary` Neuroanatomy
 :img-top: _static/neuroanatomy_card.png
-:link: projects/neuroanatomy
-:link-type: doc
+:link: projects.html#neuroanatomy
 :::
 
 :::{grid-item-card} {fas}`video;sd-text-primary` Behaviour
 :img-top: _static/behaviour_card.png
-:link: projects/behaviour
-:link-type: doc
+:link: projects.html#behaviour
 :::
 
 :::{grid-item-card} {fas}`bolt;sd-text-primary` Electrophysiology
 :img-top: _static/electrophysiology_card.png
-:link: projects/electrophysiology
-:link-type: doc
+:link: projects.html#electrophysiology
 :::
 
 :::{grid-item-card} {fas}`database;sd-text-primary` Data Management
 :img-top: _static/data-management_card.png
-:link: projects/data_management
-:link-type: doc
+:link: projects.html#data-management
 :::
 
 :::{grid-item-card} {fas}`code;sd-text-primary` Developer Tools
 :img-top: _static/dev-tools_card.png
-:link: projects/developer_tools
-:link-type: doc
+:link: projects.html#developer-tools
 :::
 
 [//]: # (:::{grid-item-card} {fas}`handshake;sd-text-primary` Collaborations)
-
 [//]: # (:img-top: _static/collaborations_card.png)
-
-[//]: # (:link: projects/collaborations)
-
+[//]: # (:link: projects.html#collaborations)
 [//]: # (:link-type: doc)
-
 [//]: # (:::)
 
 ::::
@@ -59,7 +50,7 @@ The NIU is dedicated to the development of high quality, accurate, robust, easy 
 
 about
 people
-projects/index
+projects
 blog/index
 resources
 ```
