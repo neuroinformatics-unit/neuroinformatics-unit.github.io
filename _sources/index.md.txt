@@ -10,29 +10,45 @@ The NIU is dedicated to the development of high quality, accurate, robust, easy 
 ::::{grid} 1 2 2 3
 :gutter: 3
 
-:::{grid-item-card} {fas}`brain;sd-text-danger` Neuroanatomy
+:::{grid-item-card} {fas}`brain;sd-text-primary` Neuroanatomy
 :img-top: _static/neuroanatomy_card.png
 :link: projects/neuroanatomy
 :link-type: doc
-
-Tools for analysing neuroanatomical data.
 :::
 
-:::{grid-item-card} {fas}`database;sd-text-warning` Data Management
-:img-top: _static/SWC-BIDS_card.png
+:::{grid-item-card} {fas}`video;sd-text-primary` Behaviour
+:img-top: _static/behaviour_card.png
+:link: projects/behaviour
+:link-type: doc
+:::
+
+:::{grid-item-card} {fas}`bolt;sd-text-primary` Electrophysiology
+:img-top: _static/electrophysiology_card.png
+:link: projects/electrophysiology
+:link-type: doc
+:::
+
+:::{grid-item-card} {fas}`database;sd-text-primary` Data Management
+:img-top: _static/data-management_card.png
 :link: projects/data_management
 :link-type: doc
-
-Tools to help with structuring project folders and transferring data between computers.
 :::
 
 :::{grid-item-card} {fas}`code;sd-text-primary` Developer Tools
 :img-top: _static/dev-tools_card.png
 :link: projects/developer_tools
 :link-type: doc
-
-Tools to help with software development.
 :::
+
+[//]: # (:::{grid-item-card} {fas}`handshake;sd-text-primary` Collaborations)
+
+[//]: # (:img-top: _static/collaborations_card.png)
+
+[//]: # (:link: projects/collaborations)
+
+[//]: # (:link-type: doc)
+
+[//]: # (:::)
 
 ::::
 
