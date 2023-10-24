@@ -2,7 +2,7 @@
 ## Neuroanatomy
 ::::{grid} 1 1 1 1
 
-:::{grid-item-card} BrainGlobe
+:::{grid-item-card} {fas}`brain;sd-text-primary` BrainGlobe
 :link: https://brainglobe.info/
 
 The BrainGlobe Initiative exists to facilitate the development of interoperable Python-based tools for computational 
@@ -18,7 +18,7 @@ and open-source community (e.g., by organising hackathons).
 ## Behaviour
 ::::{grid} 1 1 1 1
 
-:::{grid-item-card} movement
+:::{grid-item-card} {fas}`video;sd-text-primary` movement
 :link: https://movement.neuroinformatics.dev/
 
 Pose estimation tools (such as DeepLabCut and SLEAP) are now commonplace when processing video data of animal 
@@ -33,7 +33,7 @@ tracking of single or multiple animals.
 
 ## Electrophysiology
 ::::{grid} 1 1 1 1
-:::{grid-item-card} SpikeWrap
+:::{grid-item-card} {fas}`bolt;sd-text-primary` SpikeWrap
 :link: https://github.com/neuroinformatics-unit/spikewrap
 Spikewrap simplifies the execution and visualisation of extracellular electrophysiology pre-processing and 
 spike-sorting pipelines. Taking input organised to our NeuroBlueprint standard, it provides an easy and flexible way to 
@@ -49,7 +49,7 @@ test different pipeline configurations.
 ::::{grid} 1 1 1 1
 :gutter: 3
 
-:::{grid-item-card} NeuroBlueprint
+:::{grid-item-card} {fas}`database;sd-text-primary` NeuroBlueprint
 :link: https://neuroblueprint.neuroinformatics.dev
 NeuroBlueprint is a project folder structure specification designed for systems neuroscience in animal models.
 It is inspired by, and based on the BIDS specification, widely used in human neuroimaging.
@@ -60,7 +60,7 @@ This standardisation makes data-sharing and collaboration much simpler, and allo
 can operate on predictable folder structures.
 :::
 
-:::{grid-item-card} DataShuttle
+:::{grid-item-card} {fas}`database;sd-text-primary` DataShuttle
 :link: https://datashuttle.neuroinformatics.dev
 DataShuttle is a tool for automated generation of project folders formatted to the NeuroBlueprint specification. 
 It also allows these folders to be easily synchronised between computers.
@@ -71,14 +71,14 @@ It also allows these folders to be easily synchronised between computers.
 ::::{grid} 1 1 1 1
 :gutter: 3
 
-:::{grid-item-card} Python Cookiecutter
+:::{grid-item-card} {fas}`code;sd-text-primary` Python Cookiecutter
 :link: https://github.com/neuroinformatics-unit/python-cookiecutter
 The Python Cookiecutter template allows quick and easy setup of new python projects.
 Projects built using this template contain pre-set configurations for code quality checks, formatting,
 automated testing (pytest, both locally and through GitHub Actions), versioning and release on PyPI.
 :::
 
-:::{grid-item-card} Actions
+:::{grid-item-card} {fas}`code;sd-text-primary` Actions
 :link: https://github.com/neuroinformatics-unit/actions
 The actions repository hosts reliable, maintained and versioned GitHub Actions
 workflows for common tasks such as linting, testing, and releasing Python projects to PyPI.
