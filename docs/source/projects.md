@@ -15,7 +15,7 @@ We have three aims:
 :::
 ::::
 
-# Behaviour
+## Behaviour
 ::::{grid} 1 1 1 1
 
 :::{grid-item-card} movement
@@ -31,7 +31,7 @@ While movement isn't designed for behaviour classification or action segmentatio
 :::
 ::::
 
-# Electrophysiology
+## Electrophysiology
 ::::{grid} 1 1 1 1
 :::{grid-item-card} SpikeWrap
 :link: https://github.com/neuroinformatics-unit/spikewrap
@@ -43,7 +43,7 @@ We actively contribute to the development of SpikeInterface, ensuring that our e
 :::
 ::::
 
-# Data Management
+## Data Management
 ::::{grid} 1 1 1 1
 :gutter: 3
 
@@ -72,7 +72,7 @@ It also contains features to assist in data transfer, including:
 
 ::::
 
-# Developer Tools
+## Developer Tools
 ::::{grid} 1 1 1 1
 :gutter: 3
 
