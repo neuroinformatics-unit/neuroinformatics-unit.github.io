@@ -8,7 +8,9 @@ The NIU is based at the [Sainsbury Wellcome Centre](https://www.sainsburywellcom
 
 
 ## Contact
-<a href="mailto:hello@neuroinformatics.dev ?subject=Neuroinformatics Unit">Email us</a>
+For help and support with individual tools, or just to get in touch, please use our [Zulip](https://neuroinformatics.zulipchat.com/).
+
+Alternatively, please <a href="mailto:adam.tyson@ucl.ac.uk ?subject=Neuroinformatics Unit">email Adam Tyson</a>.
 
 ## Location
 

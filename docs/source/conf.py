@@ -38,6 +38,7 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.napoleon',
     'sphinx_design',
+    'sphinx_sitemap',
     'myst_parser',
     'numpydoc',
     'nbsphinx',
@@ -89,6 +90,7 @@ html_title = 'NIU'
 # Sphinx will create the appropriate CNAME file in the build directory
 # https://www.sphinx-doc.org/en/master/usage/extensions/githubpages.html
 html_baseurl = 'https://neuroinformatics.dev/'
+sitemap_url_scheme = "{link}"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -111,6 +113,16 @@ html_theme_options = {
             "url": "https://github.com/neuroinformatics-unit/",  # required
             # Icon class (if "type": "fontawesome"), or path to local image (if "type": "local")
             "icon": "fa-brands fa-github",
+            # The type of image to be used (see below for details)
+            "type": "fontawesome",
+        },
+        {
+            # Label for this link
+            "name": "Zulip (chat)",
+            # URL where the link will redirect
+            "url": "https://neuroinformatics.zulipchat.com/",  # required
+            # Icon class (if "type": "fontawesome"), or path to local image (if "type": "local")
+            "icon": "fa-solid fa-comments",
             # The type of image to be used (see below for details)
             "type": "fontawesome",
         }
