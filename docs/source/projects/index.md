@@ -10,5 +10,4 @@ behaviour
 electrophysiology
 data_management
 developer_tools
-collaborations
 ```
