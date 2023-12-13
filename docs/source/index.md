@@ -58,4 +58,5 @@ people
 projects
 blog/index
 resources
+guidelines/index
 ```
