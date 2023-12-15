@@ -52,5 +52,11 @@ Research Software Engineer
 :link: https://github.com/IgorTatarnikov
 
 Research Software Engineer
+:::
 
+:::{grid-item-card} Sofía Miñano
+:img-top: _static/sofia_minano.png
+:link: https://github.com/sfmig
+
+Research Software Engineer
 ::::
