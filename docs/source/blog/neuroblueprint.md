@@ -1,265 +1,155 @@
-# NIU behavioural dev meetings
+# NeuroBlueprint DataShuttle blogpost
 
-- scheduled for evey 2nd Friday 11:00-12:00
-- [movement project board](https://github.com/orgs/neuroinformatics-unit/projects/5/views/2)
+Deadline for first draft: 2024-01-29
 
-## 2024-02-09
-- In attendance:
-  - x 
-- Discuss:
-    - Sofia: thoughts about a 'computer-vision utils package'? Initially mainly focusing on detection. To include utils such as frame extraction (probs this would be the place to start), video cropping, clipping, reencoding. A similar role of what movement is to WAZP dashboard, but going towards a [Spike Interface](https://github.com/SpikeInterface/spikeinterface) model --> moved to next meeting
-    - conference senses in motion, Brandon may present a pitch / concept / roadmap on movement: can we recycle Niko's material from previous conference?
-    - Sofía: poses clustering in movement (something like [this](https://deeplabcut.github.io/DeepLabCut/docs/recipes/ClusteringNapari.html#clustering-in-the-napari-deeplabcut-gui))?
-    - Niko: possible chance to hack togother with NWB folks for integration with ndx-pose
-    - Niko: some feedback on napari widget
-    - Niko: positive response from the [napari-video](https://github.com/janclemenslab/napari-video) developer
-        - they're willing to maintain it and welcome external contributions
-        - they'd like to chat next week
-        - they also have [xarray-behave](https://github.com/janclemenslab/xarray-behave) which has some similarities to movement
-    - Niko: Meet with Timothy Dunn ([DANNCE](https://github.com/spoonsso/dannce) developer)
-    - CH: [PR #106](https://github.com/neuroinformatics-unit/movement/pull/106) `compute_norm`, `compute_theta`
+reading time: 5 minutes (we could edit it down until readable in 5 minutes? I think actually it is close to 5 minutes now)
 
-## 2024-01-26
+## The problem of unstandardized neuroscience data
 
-- In attendance:
-    - CH
-    - Niko
-    - Brandon
-    - Sofia
-- discuss:
-    - proposed [feature](https://github.com/neuroinformatics-unit/movement/issues/102): pose to bounding boxes annotations
-    - implementing the 3 unsupervised losses from [LightningPose](https://github.com/danbider/lightning-pose) - temporal smoothness, multi-view consistency, and pose plausibility - as outlier detection methods during pose filtering. See details on [Zulip](https://neuroinformatics.zulipchat.com/#narrow/stream/406001-Movement/topic/LightningPoses.20losses.20for.20outlier.20detection).
-    - Niko: report on movement packaging progresss (pip and conda-forge)
-    - Niko: demo of reading pose tracks into napari
-    - Sofia: thoughts about a 'computer-vision utils package'? Initially mainly focusing on detection. To include utils such as frame extraction (probs this would be the place to start). A similar role of what movement is to WAZP dashboard. **--> moved to next meeting**
-    - Kinematic features: 
-        - updates
-        - output shapes np.diff (e.g. displacement,distance) vs. np.gradient (e.g. velocity, acceleration)
-    - Dunn seminar ([DANNCE](https://www.nature.com/articles/s41592-021-01106-6))
+Every year an overwhelming array of valuable neuroscience data is published in scientific journals, expanding our understanding of the brain.  As co-publication of experimental data becomes increasingly common, it is an exciting time for researchers to leverage the powerful resource of open-access data on an unprecedented scale for both replication and discovery.
 
-- Deriving bounding boxes annotations from keypoint labels
-    - [sleap](https://github.com/talmolab/sleap/blob/60a441fc1d4fc60533ddb0296cab56165cd3e664/sleap/instance.py#L878) has a function like this (computing min/max)
-    - start with rectangle (easy to derive ellipse or others from there)
-    - why would this be interesting?
-        - defining the ROI around an animal can be useful for analysis (in the future we can explore deriving segmentation masks with [SAM](https://segment-anything.com/) or equivalent from the crops?)
-        - derive detection datasets from pose estimation ones
-    - we suggest dealing with it next term, just after v0.1
-    - Converting between DLC and SLEAP formats
-        - DLC to SLEAP somewhat flaky (the first frame is identified as the input video?)? Check sleap discussions maybe for help.
-- Brandon's update on outlier detection based on confidence
-    - checking how xarray works 
-        - Niko says learning about xarray is time well spent!
-        - good material online
-    - what are reasonable default values for confidence outliers?
-        - DLC uses 0.4 default for viz, papers usually 0.8 to 0.9
-        - decision for default being 0.6 seems alright as starting point (users will be able to define it anyways)
-        - neither LP (Lightning pose) nor SLEAP have a recommended threshold
-            - SLEAP is not bounded between 0 and 1 and also has a few confidence metrics
-        - we chat about the issue of confidence not really being comparable across pose estim packages
-            - maybe this is interesting to explore as a blogpost? E.g., how the distribution of confidence values varies for different packages trained on the same data 
-    - plan for detecting outliers 
-        - start of with confidence values and printout how many % of the points have been removed (we think this would be very useful for users)
-        - next based on percentiles, next based on temporal smoothness, next use multiview consistency and pose consistency metrics from Lightning pose
-        - after movement v0.1 we can think of a nicer object-oriented structure and an `outlier` class that has different methods for detection
-        - going forward: we can implement more outlier detection methods, and find a way to combine them (chatting with Matt Whiteway would be useful for this)
-- Niko's update on visualising predictions in napari
-    - we can now import movement/csv/sleap files to napari (drag and drop :star:)
-    - 2 layers: 
-        - points layer: keypoints
-        - tracks: adds a tail to each keypoint
-    - many options for customising visualisation (color based on different variables, length of tails...)
-    - current blockers:
-        - napari's handling of nans in tracks layer
-        - we have 3 functions for reading files depending on pose estimation package --> we want to have one function that then calls the correct one under the hood
-    - next steps
-        - display video rather than a static frame (probably for v1)
-        - there is a plugin for playing videos, not actively maintained but Niko knows the main developer -- Niko can chat to him and ask him if he'd be happy for us to take over. The plugin reads from opencv into a 3D napari array. In the future: potentially use dask?
-- Niko's update on movement package
-    - before we had to install pytables from conda-forge, then install movement
-    - Will G (ARC) came to the rescue and using `pandas[hdf5]` version did the trick, now it's completely pip-installable
-    - working towards getting it in conda-forge: we only need `sleap-io` to be in conda-forge, which only needs one more dependency (`ndxpose`) in conda-forge --- seems feasible and people are keen to collaborate
-    - CH: there is another config for `pandas` which references `xarray` - maybe worth checking? Yes, we can explore this.
-- CH's update on kinematics
-    - added vectorised functions to compute derivatives (veloc and accel) and a separate function for displacement
-    - they all output an xarray Dataset with magnitude and direction DataArrays
-        - e.g. vel = kinematics.velocity(pos) --> vel.magnitude gives speed; vel.direction gives direction
-    - Question: what is the difference between xarray, dataset and data array?
-        - data array: a numpy array with strings along axes that we can use for indexing (panda-like)
-        - dataset: collection of data arrays, if they share axes (even some of them) xarray aligns them. E.g.: confidence and trajectories are data arrays of the same dataset. So we can use conditionals across them to access the relevant data
-    - Is it better to have derivatives in the same dataset along with the trajectories, or to have them in a separate one?
-        - for now go for the easiest for the developer 
-    - Velocity (or accel) as polar (magnitude and angle) or as cartesian (vx, vy components)?
-        - maybe some preference to save vx, vy, and magnitude and angle as an extra data that probably users want (understanding magnitude and angle as somewhat derived from cartesian format)
-    - Displacement
-        - diff(pos) is defined for n-1 frames, ideally for consistency with vel and other metrics we have n frames
-        - we suggest setting the first frame to displacement = 0, rather than nan, since it makes more intuitive sense (at t=0, we have no displacement relative to the initial position).
-        
-- Conference [senses in motion](https://sensesinmotion.org/)
-    - Brandon may present a pitch / concept / roadmap on movement
-    - we will continue chatting about it next meeting
-    
-## 2024-01-24: Chat with Matt Whiteway
-- what we do
-	- RSEs for SWC
-	- subgroup specialised in behaviour
-- projects we are working on/have lined up
-	- movement
-		- thoughts on error correction methods?
-		- we could implement some of their spatiotemporal losses (the ones that correlate with error more strongly) for post-hoc anomaly/outliers detection, or for comparing the quality of predictions from various pose estimation networks.
-		- maybe the spatiotemporal losses are also interesting for active learning? shameless promo [here](https://deeplabcut.medium.com/exploring-active-learning-with-deeplabcut-an-ai-residents-journey-e441bbd5a71c)
-	- a similar package with detection tools
-	    - detecting and tracking crabs in the field
-    - data management and viz with dashboards
-	- video encoding
-- questions
-    - what is next for him?
-    - about lightning pose
-        - thoughts about using video streams of compressed videos?
-        - anything we can beta-test?
-        - anything we could contribute to?
-        - thoughts for multi-animal approach? ID tracking? ([roadmap](https://github.com/danbider/lightning-pose/blob/main/docs/roadmap.md))
-        - thoughts about unsupervised kpt discovery? (in the paper they mention potentially using unsupervised predicted kpts as labels in the future - cool)
-        - thoughts for 3D approach?
-        - online inference?
-        - thoughts about integrating models of pose dynamics?
-        - thoughts on using [FiftyOne](https://docs.voxel51.com/) as a GUI for reviewing predictions?
+However the seemingly simple problem of non-standard data organisation between researchers creates significant barriers to collaboration, blunting the effectiveness of the open-access revolution.
 
-## 2024-01-12
-- In attendance:
-    - Niko
-    - CH
-    - Adam
-    - Sofia
-    - Brandon
-- PR #86, which overhauled the datasets.py module, has now been merged.
-- CH briefly updated us on current work towards adding velocity and acceleration to movement (Issue #3).
-    - We discussed whether to add movement magnitude and direction to the Dataset as new variables, or to map these to the existing x and y coordinates. We ultimately decided (if I followed correctly) to start by storing these (and other derivatives more broadly) as separate variables for now, and to make a more definitive decision at a later point. Niko proposed that we add an additional variable, "dataset.speed", and to implement a heading direction method in a later PR.
-    - After a brief aside about memory constraints, Adam also proposed that we ultimately implement a method that computes derivates such as velocity under the hood when the user calls on e.g. the dataset.velocity variable for the first time.
-    - We also agreed to rename the pose_tracks variable to position for clarity.
-    - (I'm not sure if I managed to follow everything during this discussion so please feel free to comment here if I've missed something)
-- We also discussed ongoing progress on Issue #97, which proposes that we implement functions for dropping position values based on their confidence scores and interpolating over them
-    - We agreed to keep functions for dropping/filtering values and interpolation separated.
-    - We debated whether to use separate, hard-coded threshold values for different pose estimation tools, or whether to use a single approach that generalizes to all (e.g. one that detects outliers based on percentile). No real conclusion was reached before the end of the meeting, and it was suggested that we continue this discussion in writing (either here on Zulip or under the issue itself on github).
-    - Later down the line we may consider implementing a helper function to help users decide on what threshold makes sense.
+On the ground, research within and between labs is often frustrated by the lack of a widely-adopted data organisation scheme in systems neuroscience. This wastes researchers time, prohibits effective collaboration and at worst  leads to mistakes in analysis and reporting.
+
+To address these problems, the [Neuroinformatics Unit](https://neuroinformatics.dev/) at the SWC have developed an easy-to-use data standardisation framework, [NeuroBlueprint](https://neuroblueprint.neuroinformatics.dev/). This blog post provides an introduction to [NeuroBlueprint](https://neuroblueprint.neuroinformatics.dev/), motivating the need for a standardised data framework at the SWC and highlighting the place of [NeuroBlueprint](https://neuroblueprint.neuroinformatics.dev/) within the current data-standardisation landscape.
+
+In a companion post, we introduce [DataShuttle](datashuttle.neuroinformatics.dev), a tool to seamlessly automate the implementation of the [NeuroBlueprint](https://neuroblueprint.neuroinformatics.dev/) standard during data collection and onward.
 
 
-## 2023-12-15
+## Organising data is hard
 
-- In attendance:
-    - Niko
-    - CH
-    - Adam
-    - Sofia
-    - Brandon
-- Welcome Sofia + introductions
-- Movement: [abstract for Measuring Behavior conference](https://docs.google.com/document/d/1-joTcRZL-ubyaUbxow3MF609w_KP5yy1zpRNI-4sLX4/edit?usp=sharing)
-    - Feedback for figure:
-        - separate individuals as 3D blocks with some distance
-        - assing small xarray dataset icons to kinematic variables
-    - Authorship: poster authorship will include everyone who has contributed by the time of the conference
-    - Acknowledge ChatGPT for editing
-- Movement: progress on currently open PRs:
-    - Hosting and fetching of sample data (Brandon)
-        - rename functions to contain "sample"
-        - use `source_software` yaml field to choose the appropriate function
-    - Importing data from LightningPose
-    - Any blockers?
-- Movement: next priorities
-    - Threshold data based on confidence values (Brandon)
-    - Kinematics: motion derivatives (CH implementes, Sofia will provide references)
-    - Write a "metaloader" function that can load any pose tracks, by having `source_software` as keyword argument.
-- Aeon:
-    - Sofia and CH discussed how sparse RFID ground truth data can be used to retro-actively correct for identity switches
-    - Future ideas for movement: assist with stitching tracks (Sofia may tackle it after a few months)
-- How to structure future behavioural meetings
-    - assign a scribe per meeting
+If you've ever received data to analyse from a colleague or downloaded an open-access dataset, you probably know the pain of navigating an unfamiliar territory.
 
-## 2023-11-17
+I distinctly remember the first time I received a dataset from collaborators—I was eager to dive in and analyse the rare recordings we had been sent. However my enthusiasm soon gave way to perplexion, followed by frustration and despair. Was "subject1" the same as "Subject01"? Why were some sessions labelled as "EXCLUDED"? What was this never-seen-before file format and which software should I open it with?  It took several weeks of back and forth emails between me and my collaborators to arrive at a coherent consensus on how this dataset was organised. 
 
-- In attendance:
-    - Niko
-    - Brandon
-    - Chang Huan
-- Hosting and fetching of [test data from GIN](https://gin.g-node.org/neuroinformatics/movement-test-data)
-    - We decided to keep hosting the metadata.yaml file on GIN
-    - This can be fetched by pooch and based the file's contained info, we can create the data registry containing video file names and hashes
-    - The hash of the metadata file itself will not be checked
-    - The goal is to avoid updating the code repo every time we update the data repo
-    - Brandon will work on this, making sure to test the behaviour of pooch when either the metadata or the data itself updates on GIN
-    - Niko will add Lightning pose data to GIN
-    - Niko will also [add sample video frames to GIN](https://github.com/neuroinformatics-unit/movement/issues/38) (one frame per poses dataset for now)
-- We discussed the recently merged-PRs, so that we're all up-to-date with the changes
-    - [SLEAP read user labels](https://github.com/neuroinformatics-unit/movement/pull/79)
-        - user-labeled instances have a NaN point confidence score, keep this in mind for filtering
-        - confidences reported by vairous pose estimation packages [are not the same](https://github.com/talmolab/sleap/discussions/1268)
-    - [Ability to save multi-animal pose tracks to single-animal files](https://github.com/neuroinformatics-unit/movement/pull/83)
-- Next issues to tackle?
-    - [Import data from Lightning Pose](https://github.com/neuroinformatics-unit/movement/issues/74), Niko will ask Dhruv if he's happy to take this on
-    - Chang Huan will look at [exporting data to SLEAP analysis files](https://github.com/neuroinformatics-unit/movement/issues/46)
-- [Measuring behaviour](https://www.measuringbehavior.org/call-for-papers/) conference?
-    - We will discuss during the next meeting
-- Long term working directions
-    - Brandon is happy to work on pose data cleaning/filtering problems, [this issue](https://github.com/neuroinformatics-unit/movement/issues/55) could be a good starting point
-    - Niko will focus on the napari frontend in December
-    - Chang Huan may tackle converting SLEAP labels into a DeepLabCut project
+This problem is not restricted to sharing data across labs but also manifests within a research group. People sitting in the same room often find each others' folders uninformative, and group leaders may struggle to find that plot they need for tomorrow's presentation amidst the chaos.
 
-## 2023-11-03
+![credit: ErrantScience.com](https://hackmd.io/_uploads/r1-kjrTtT.jpg)
 
-### Agenda
-- Welcome Brandon!
-- Niko/Adam - [scivision](https://sci.vision/) meeting update
-- Niko - update on collaboration with [AIND](https://alleninstitute.org/division/neural-dynamics/)
-- Discuss ongoing PRs
-- Next issues to tackle - see [movement project board](https://github.com/orgs/neuroinformatics-unit/projects/5/views/2)
-- Discuss Brandon's onboarding and first tasks.
+Such stories are by no means unique and illustrate that *effective data management is hard*. Often, the problem is not that one researchers organisation system is better than another, but meerly the fact that they are *different* causes problems and confusion.
 
-### Meeting minutes
-- In attendance:
-    - Niko
-    - Brandon
-    - Adam
-    - Chang Huan (CH)
-- Welcomed Brandon to the project, made introductions
-- Showed [Community](https://movement.neuroinformatics.dev/) section of website to Brandon
-- [Scivision](https://sci.vision/) - cool idea and nice people to work with, but not immediately relevant to movement. We may consider it for future behaviour-related projects that involve computer vision models.
-- Make [projects board](https://github.com/orgs/neuroinformatics-unit/projects/5/views/2) public :tada:
-- Adam suggedted we should publicly share the meeting minutes on our Zulip, Niko will do it.
-- Niko gave an update on the ongoing collaboration with the AIND. They have shared some [LightningPose](https://github.com/danbider/lightning-pose) prediction results with us, and we think loading them into movement should be [easy](https://github.com/orgs/neuroinformatics-unit/projects/5/views/2?query=is%3Aopen+sort%3Aupdated-desc&pane=issue&itemId=42799886)
-- Ongoing PRs:
-    - [Docs Link check](https://github.com/neuroinformatics-unit/movement/pull/80) by CH. This has been reviewed by Niko and we will merge it soon. CH to add some note to the conteributing guide
-    - [SLEAP read user labels](https://github.com/neuroinformatics-unit/movement/pull/79) by CH, who gave as a short intro into what it does. Niko to review it next week.
-    - [(DRAFT) Save multi-animal data to single-animal DLC files](https://github.com/neuroinformatics-unit/movement/pull/71) by Dhruv. This is a useful feature to have, we will go through some more rounds of review before it's ready to merge.
-- Next issues to tackle
-    - [Load data from Lightning Pose](https://github.com/orgs/neuroinformatics-unit/projects/5/views/2?query=is%3Aopen+sort%3Aupdated-desc&pane=issue&itemId=42799886) - Niko within November
-    - [Start procedure for first conda release?](https://github.com/orgs/neuroinformatics-unit/projects/5/views/2?query=is%3Aopen+sort%3Aupdated-desc&pane=issue&itemId=41677709) - Niko within November
-- First things for Brandon TODO:
-    - Go through the docs and try to follow tutorials + examples
-    - Identify bugs from the user's perspective (stress testing)
-    - Read CONTRIBUTING guide and identify unclear sections
-    - Maybe tackle [this issue](https://github.com/neuroinformatics-unit/movement/issues/67) if there is time (there is no time constraint on it)
+Standardisation between researchers takes time and capacity away from major project goals in a already busy working enviorment. Scientists are often highly conscientious and make an effort to organise data according to a *system* that makes sense, especially at the start of a project. However as the demands of the project increase, timelines become tighter and without a clear specification to follow, the system mutates over time and eventually entropy wins over. Things are lost in translation and memories fade, despite our best hopes and efforts. 
+
+![credit: ErrantScience.com](https://hackmd.io/_uploads/ryreaP6Ya.jpg)
+
+Nonetheless, the benefits of good data management are enourmous, and not only for the obvious utility in facilitating collaboration.  The person who uses a dataset most heavily is our future self—who is desperate to get that paper submitted. The confusion generaterated by suboptimal data organisation is not only frustrating and time-consuming, but also threatens the validity and reproducibility of our results. 
+
+:::info
+### Why should you care about standardizing your data?
+It will save **YOU** significant amounts of **PAIN!**.
+:::
 
 
-## 2023-10-16
+## Data specifications as a solution
 
-### Agenda
-- Review [document](https://hackmd.io/@niksirbi/HJuQgOcWa/edit) movement mission, scope, and roadmap
-- Celebrate merging of [PR #63](https://github.com/neuroinformatics-unit/movement/pull/63)
-- Discuss [draft PR](https://github.com/neuroinformatics-unit/movement/pull/68) opened by Dhruv
-- Next features for Niko and Chang Huan
+A data specification provides a well-defined file-system organisation schema as a solution to the problem of effective data management. Consisting of a clear set of rules on how data should be organised, it reduces overhead for researchers and facilitates collaboration by ensuring standardised data organisation across projects. 
 
-### Meeting minutes
-- Niko and Chang Huan in attendance
-- movement Mission Statement: make shorter?
-- CH fine with the rest of the document, we did some minor rewordings.
-- Maybe define a glossary of terms to link to (with schematics)
-- Niko will have a pair-programming session with Drhuv to clarify the PR
-- Will movement docs adopt [diataxis](https://diataxis.fr/)?
-    - probably yes, but gradually
+:::info
+### Data Specification: 
+A system that describes how a dataset is organised (**spec** for short) and consists of a set of rules that directly *specify* how a dataset should be organised.
+:::
 
-### Action items
-- [ ] Niko plays with mission statement 
-- [ ] Niko should update the docs with the mission/scope/roadmap
-- [x] Niko opens issue re Glossary 
-    - opened [issue #69](https://github.com/neuroinformatics-unit/movement/issues/69)
-- [ ] CH takes on [issue #44](https://github.com/orgs/neuroinformatics-unit/projects/5/views/2?query=is%3Aopen+sort%3Aupdated-desc&pane=issue&itemId=39040657)
-- [ ] Niko helps Dhruv with [PR](https://github.com/neuroinformatics-unit/movement/pull/68)
+So what makes for a good specification?
+
+- **On the record**. Specs must be written down and made available to the relevant data producers and consumers.
+- **Explicit**. The rules included in the spec should be clear and leave little room for ambiguity. 
+- **Widely accepted**. Ideally, you should not come up with your own system, but adopt an already existing one used by your group, department, institute or even field. 
+
+
+Let's look at two concrete specifications that have been most successful in neuroscience—[Brain Imaging Data Structure (BIDS)](https://bids.neuroimaging.io/) and [NeuroData Without Borders (NWB)](https://www.nwb.org/)—and explore the role of [NeuroBlueprint]() within the current data-specification landscape.
+
+### Brain Imaging Data Structure (BIDS)
+
+BIDS is a data specification widely used in human neuroimaging, with recent extensions to systems neuroscience (e.g. [electrophysiology](https://github.com/bids-standard/bep021)). It has intutive and considered design, developed by hundreds of researchers to ensure consensus. BIDS is comprehensive and detailed specification, albiet with some strict requirements (e.g. use of certain file formats, metadata requirements).
+
+However, BIDS has a level of detail that can be intimidating and complex to new users and make full complaince difficult, especially during data collection. BIDS is considered the gold-standard of standardisation for data-sharing, but widespread adoption is hampered by it's complexity.
+
+### NeuroData Without Borders (NWB)
+
+In contrast to BIDS, NWB has a focus not on folder-system organisation but on providing unified open-access file format that can, in theory, contain an entire project and metadata within it. This is a welcome introduction in the land of neuroscience populated by an unweidly array of complex, often closed file formats pose a significant hurdle to data-sharing.
+
+NWB is the primary open-access file format for data-sharing in systems neuroscience. However, it can be difficult to adopt, especially for users with lack of programming experience and if the format of your raw data is not yet supported for conversion to NWB. Additionally during the data-collection stage, storage of all data in a single file can be prohibitively inflexible. 
+
+## The [NeuroBlueprint](https://neuroblueprint.neuroinformatics.dev/) specification
+
+[NeuroBlueprint](https://neuroblueprint.neuroinformatics.dev/) has been developed for use in the SWC as an easy-to-use specification with a low barrier for entry (you should be able to read the [full specification](https://neuroblueprint.neuroinformatics.dev/specification.html) in less than 5-10 mins?? CHECK minutes). Acutely aware of profilerating yet another standard, [NeuroBlueprint](https://neuroblueprint.neuroinformatics.dev/) aims to couple as tightly as possible to BIDS, allowing it to act as a stepping stone to more comprehensive data-organisation schemes following data collection.
+
+[NeuroBlueprint](https://neuroblueprint.neuroinformatics.dev/) specifies that data should be organised in a particular folder structure, with nested subject, session and datatype (e.g. electrophysiology, behaviour) levels. The naming of these folders should adhere to a certain style, as exemplified below:
+
+![NeuroBlueprint_project_tree_light](https://hackmd.io/_uploads/Sys4pvpF6.png)
+
+While the full specification is available to read [here](https://neuroblueprint.neuroinformatics.dev/specification.html), we provide a breif summary of it's main features below:
+
+- A top-level distinction splitting raw data, ("rawdata"), and any data derived from processing the raw data ("derivatives").
+- Heirchical subject-session-datatype organisation, capturing a model where individual subjects may undergo repeated experimental sessions.
+- Requirement for unique subject and session IDs with filenames structures as key-value pairs.
+- No hard specification on filenames, but recommended structure provided.
+
+
+#### Limitations 
+
+Currently, [NeuroBlueprint](https://neuroblueprint.neuroinformatics.dev/) is not designed for multi-animal or group experiments where sessions may include interactions between multiple subjects. However, such an extension is in development.
+
+### Getting Started
+
+Getting started with [NeuroBlueprint](https://neuroblueprint.neuroinformatics.dev/) is as easy as reading the [specification](https://neuroblueprint.neuroinformatics.dev/specification.html), and organising your experimental folders according to the standard. You can also read more about it [here]. 
+
+It's recommended to get started by using [NeuroBlueprint](https://neuroblueprint.neuroinformatics.dev/) with your next experiment, rather than trying to re-organisise existing folders and analysis code, which is always tricky. However, it may be a useful template for anyone struggling with re-organising their data for open-access publicaiton.
+
+We are very keen for feedback on the [NeuroBlueprint](https://neuroblueprint.neuroinformatics.dev/) specification and happy to make adjustments where required. Please don't hesitate to get in contact with us XXXX.
+
+
+### Why not just promote an existing standard?
+[This is a super important section, but I wonder if this is motivated enough by the above secetion and could be removed, to keep focus on the benefits of [NeuroBlueprint](https://neuroblueprint.neuroinformatics.dev/) at this stage in the post. That been said this is very important to address so if it is not sufficiently covered by the above we should keep.]
+
+We are acutely aware of the dangers of creating a new standard:
+
+![source: xkcd.com/927](https://imgs.xkcd.com/comics/standards.png)
+
+
+The aim of [NeuroBlueprint](https://neuroblueprint.neuroinformatics.dev/) is to fill a gap in the specification scheme, for a low-barrier to entry and easy-to-use specification, that researchers can get started with immediately. While BIDS and Neurodata without borders are gold-standard sceheme for data publlication, their emphasis is on consumers of open-access data sharing which can be difficult to maintainduring data acquisition.
+
+[NeuroBlueprint](https://neuroblueprint.neuroinformatics.dev/) specification is closely tied to the BIDS specification whevever possible, and further extends to systems neuroscience. This means for researchers wanting to convert their data to full BIDS compliance, the [NeuroBlueprint](https://neuroblueprint.neuroinformatics.dev/) specification will be an excellent starting step. 
+
+To incentivise data producers to get started, the entry requirements should be minimal. Introduce tha idea of an on-ramp and a virtuous cycle. Some standard is better than none.
+
+We still (partly) follow the BIDS logic [wherever possible] and file formats can still be NWB.
+
+Talk about the specific need systems neuro and justify our departures from BIDS.
+
+
+<br><br><br><br><br><br><br><br>
+
+
+
+
+
+
+
+
+
+
+### What's next for NeuroBlueprint?
+[Maybe remove this section and put something on the website?]
+- easy-to-use graphical interface (almost there)
+- multi-subject session support?
+- metadata specs
+- recommendations for good file formats per datatype
+- NB will keep evolving, tell us what you think!
+
+## Problem 2: implementing a spec by hand is hard
+- illustrate with examples (error-prone, laborious)
+- motivate need for automated tools
+- specific for systems neuro: acquiring multi-modal data from multiple computers
+
+## Solution 2: datashuttle
+- show show what is it capable of
+- automation of folder naming
+- syncing from multiple remotes to central
+
+## Outlook and Call-to-Action
+- Both NeuroBlueprint adn DataShuttle living projects
+- TUI coming!
+- We will keep updating based on feedback
+- Test it and let us know what you need
