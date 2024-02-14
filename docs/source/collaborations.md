@@ -16,11 +16,14 @@ a software framework enabling comparison between hippocampus and entorhinal cort
 - Data processing pipelines with the 
 [SWC Advanced Microscopy Facility](https://www.sainsburywellcome.org/web/content/advanced-microscopy), e.g. 
 [brainglobe-stitch](https://github.com/brainglobe/brainglobe-stitch)
-- Multiphoton microscopy preprocessing and analysis tools with the 
+- Data preprocessing and analysis tools with the 
 [Margrie](https://www.sainsburywellcome.org/web/groups/margrie-lab) lab (e.g. 
-[rsp-vision](https://github.com/neuroinformatics-unit/rsp-vision) and 
-[derotation](https://github.com/neuroinformatics-unit/derotation))
-- BrainGlobe atlas building and validation with the [Akrami lab](https://www.sainsburywellcome.org/web/groups/akrami-lab). 
+[rsp-vision](https://github.com/neuroinformatics-unit/rsp-vision), 
+[derotation](https://github.com/neuroinformatics-unit/derotation) and [rc2_analysis](https://github.com/SainsburyWellcomeCentre/rc2_analysis))
+- BrainGlobe atlas building and validation with the [Akrami lab](https://www.sainsburywellcome.org/web/groups/akrami-lab)
+- Extracellular electrophysiology analysis pipelines ([SpikeWrap](https://github.com/neuroinformatics-unit/spikewrap)) with 
+[Stephen Lenzi](https://www.sainsburywellcome.org/web/people/stephen-lenzi)
+
 
 ## UCL
 We have an ongoing collaboration with many members of the 
