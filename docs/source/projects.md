@@ -1,4 +1,6 @@
 # Projects
+A summary of some of the projects lead by the Neuroinformatics Unit. Please also see our 
+[collaborations](/collaborations) page for details of other work we do. 
 
 (projects-neuroanatomy)=
 ## Neuroanatomy

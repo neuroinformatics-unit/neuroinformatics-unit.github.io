@@ -5,7 +5,7 @@ The Neuroinformatics Unit (NIU) is a [Research Software Engineering](https://soc
 The NIU is dedicated to the development of high quality, accurate, robust, easy to use and maintainable open-source software for neuroscience and machine learning. We collaborate with researchers and other software engineers to advance research in the two research centres and make new algorithms and tools available to the global community.
 
 
-## Explore our projects
+## Explore some of our projects:
 
 ::::{grid} 1 2 2 3
 :gutter: 3
@@ -40,22 +40,17 @@ The NIU is dedicated to the development of high quality, accurate, robust, easy 
 :link-type: ref
 :::
 
-[//]: # (:::{grid-item-card} {fas}`handshake;sd-text-primary` Collaborations)
-[//]: # (:img-top: _static/collaborations_card.png)
-[//]: # (:link: projects.html#collaborations)
-[//]: # (:link-type: doc)
-[//]: # (:::)
-
 ::::
 
 ```{toctree}
 :maxdepth: 2
-:caption: Projects index
+:caption: Index
 :hidden:
 
 about
 people
 projects
+collaborations
 blog/index
 resources
 guidelines/index
