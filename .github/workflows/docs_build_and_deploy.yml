@@ -15,7 +15,15 @@ on:
   workflow_dispatch:
 
 jobs:
+  linting:
+    # scheduled workflows should not run on forks
+    if: (${{ github.event_name == 'schedule' }} && ${{ github.repository_owner == 'neuroinformatics-unit' }} && ${{ github.ref == 'refs/heads/main' }}) || (${{ github.event_name != 'schedule' }})
+    runs-on: ubuntu-latest
+    steps:
+      - uses: neuroinformatics-unit/actions/lint@v1
+
   build_sphinx_docs:
+    needs: linting
     name: Build Sphinx Docs
     runs-on: ubuntu-latest
     steps:

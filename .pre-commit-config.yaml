@@ -1,0 +1,11 @@
+# Configuring https://pre-commit.ci/
+ci:
+  autoupdate_schedule: monthly
+
+exclude: "conf.py"
+
+repos:
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.2.6
+    hooks:
+      - id: codespell
