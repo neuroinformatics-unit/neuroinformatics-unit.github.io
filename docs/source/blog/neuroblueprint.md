@@ -1,75 +1,63 @@
 # NeuroBlueprint DataShuttle blogpost
 
-Deadline for first draft: 2024-01-29
-
 reading time: 5 minutes (we could edit it down until readable in 5 minutes? I think actually it is close to 5 minutes now)
 
 ## The problem of unstandardized neuroscience data
 
-Every year an overwhelming array of valuable neuroscience data is published in scientific journals, expanding our understanding of the brain.  As co-publication of experimental data becomes increasingly common, it is an exciting time for researchers to leverage the powerful resource of open-access data on an unprecedented scale for both replication and discovery.
+Every year an overwhelming array of valuable neuroscience data is published in scientific journals, expanding our understanding of the brain. As co-publication of experimental data becomes increasingly common, it is an exciting time for researchers to leverage the powerful resource of open-access data on an unprecedented scale for both replication and discovery.
 
-However the seemingly simple problem of non-standard data organisation between researchers creates significant barriers to collaboration, blunting the effectiveness of the open-access revolution.
+However the seemingly simple problem of non-standard data organisation between researchers creates significant barriers to collaboration, blunting the effectiveness of the open-access revolution. On the ground, research within and between labs is often frustrated by the lack of a widely-adopted data organisation scheme in systems neuroscience. This wastes researchers' time, prohibits effective collaboration and at worst  leads to mistakes in analysis and reporting.
 
-On the ground, research within and between labs is often frustrated by the lack of a widely-adopted data organisation scheme in systems neuroscience. This wastes researchers time, prohibits effective collaboration and at worst  leads to mistakes in analysis and reporting.
-
-To address these problems, the [Neuroinformatics Unit](https://neuroinformatics.dev/) at the SWC have developed an easy-to-use data standardisation framework, [NeuroBlueprint](https://neuroblueprint.neuroinformatics.dev/). This blog post provides an introduction to [NeuroBlueprint](https://neuroblueprint.neuroinformatics.dev/), motivating the need for a standardised data framework at the SWC and highlighting the place of [NeuroBlueprint](https://neuroblueprint.neuroinformatics.dev/) within the current data-standardisation landscape.
+To address these problems, the [Neuroinformatics Unit](https://neuroinformatics.dev/) at the SWC have developed an easy-to-use data standardisation framework, [NeuroBlueprint](https://neuroblueprint.neuroinformatics.dev/). This blog post provides an introduction to [NeuroBlueprint](https://neuroblueprint.neuroinformatics.dev/), motivating the need for a standardised data framework at the SWC and highlighting [NeuroBlueprint](https://neuroblueprint.neuroinformatics.dev/)'s place within the current data standardisation landscape.
 
 In a companion post, we introduce [DataShuttle](datashuttle.neuroinformatics.dev), a tool to seamlessly automate the implementation of the [NeuroBlueprint](https://neuroblueprint.neuroinformatics.dev/) standard during data collection and onward.
 
 
-## Organising data is hard
+## Why should you care?
 
-If you've ever received data to analyse from a colleague or downloaded an open-access dataset, you probably know the pain of navigating an unfamiliar territory.
+Making sense of someone else's data can often feel like navigating a maze. The initial excitement for analysing a fresh dataset can quickly turn into confusion and frustration. Questions about inconsistent naming conventions ("Is `subject1` the same as `Subject01`?"), unclear labels ("Why are some sessions marked as `EXCLUDED`?"), and unfamiliar file formats may trigger weeks of back-and-forth emails and sap all enthusiasm.
 
-I distinctly remember the first time I received a dataset from collaborators—I was eager to dive in and analyse the rare recordings we had been sent. However my enthusiasm soon gave way to perplexion, followed by frustration and despair. Was "subject1" the same as "Subject01"? Why were some sessions labelled as "EXCLUDED"? What was this never-seen-before file format and which software should I open it with?  It took several weeks of back and forth emails between me and my collaborators to arrive at a coherent consensus on how this dataset was organised. 
-
-This problem is not restricted to sharing data across labs but also manifests within a research group. People sitting in the same room often find each others' folders uninformative, and group leaders may struggle to find that plot they need for tomorrow's presentation amidst the chaos.
+This issue doesn't just concern collaborations with external partners; it's prevalent within research teams too. It's common to find colleagues puzzled by each other's filing systems or a group leader scrambling to locate a crucial graph for an upcoming presentation. The main issue isn't that one person's system is superior to another's; rather, it's their differences that lead to confusion.
 
 ![credit: ErrantScience.com](https://hackmd.io/_uploads/r1-kjrTtT.jpg)
 
-Such stories are by no means unique and illustrate that *effective data management is hard*. Often, the problem is not that one researchers organisation system is better than another, but meerly the fact that they are *different* causes problems and confusion.
-
-Standardisation between researchers takes time and capacity away from major project goals in a already busy working enviorment. Scientists are often highly conscientious and make an effort to organise data according to a *system* that makes sense, especially at the start of a project. However as the demands of the project increase, timelines become tighter and without a clear specification to follow, the system mutates over time and eventually entropy wins over. Things are lost in translation and memories fade, despite our best hopes and efforts. 
+In general, **good data management is hard**.  Trying to get everyone on the same page takes time and effort away from the big-picture goals, especially in the non-stop world of research. Scientists tend to be diligent folks and usually kick off a project with a neat system for keeping their data in order. But as the project picks up speed, deadlines get tighter, and without a clear plan to stick to, that neat system begins to fray at the edges. Before you know it, things get messy, stuff gets misplaced, and what was once clear is now a fog.
 
 ![credit: ErrantScience.com](https://hackmd.io/_uploads/ryreaP6Ya.jpg)
 
-Nonetheless, the benefits of good data management are enourmous, and not only for the obvious utility in facilitating collaboration.  The person who uses a dataset most heavily is our future self—who is desperate to get that paper submitted. The confusion generaterated by suboptimal data organisation is not only frustrating and time-consuming, but also threatens the validity and reproducibility of our results. 
+However, the **payoff for good data management is huge**, not just for teamwork but also for your future self who's racing to submit a paper. The headaches and time lost to disorganised data aren't just frustrating; they can undermine the integrity and reproducibility of your work. In other words:
 
 :::info
-### Why should you care about standardizing your data?
-It will save **YOU** significant amounts of **PAIN!**.
+### Standardising your data will save *YOU* significant amounts of *PAIN*!
 :::
 
 
 ## Data specifications as a solution
 
-A data specification provides a well-defined file-system organisation schema as a solution to the problem of effective data management. Consisting of a clear set of rules on how data should be organised, it reduces overhead for researchers and facilitates collaboration by ensuring standardised data organisation across projects. 
+**Data specifications**, or **specs** for short, tackle the aforementioned challenges by establishing explicit rules for the naming and organisation of files and folders. They simplify the process for researchers and enhance collaboration through standardised data organization practices across projects.
 
-:::info
-### Data Specification: 
-A system that describes how a dataset is organised (**spec** for short) and consists of a set of rules that directly *specify* how a dataset should be organised.
-:::
+In other words, specs serve as a way for people (and machines) to agree on using the same data organisation scheme.
 
-So what makes for a good specification?
+Key elements of an effective data spec include:
 
-- **On the record**. Specs must be written down and made available to the relevant data producers and consumers.
-- **Explicit**. The rules included in the spec should be clear and leave little room for ambiguity. 
-- **Widely accepted**. Ideally, you should not come up with your own system, but adopt an already existing one used by your group, department, institute or even field. 
+- **Documentation:** Specs should be thoroughly documented and accessible to all relevant parties involved in data handling.
+- **Clarity:** The guidelines within the spec need to be precise, minimising any chance for confusion.
+- **Adoption:** Rather than creating a bespoke system, it's preferable to use a widely recognised spec already in use by your group, department, institute, or research field.
 
 
-Let's look at two concrete specifications that have been most successful in neuroscience—[Brain Imaging Data Structure (BIDS)](https://bids.neuroimaging.io/) and [NeuroData Without Borders (NWB)](https://www.nwb.org/)—and explore the role of [NeuroBlueprint]() within the current data-specification landscape.
+Let's look at two concrete specifications that have been most successful in neuroscience—[Brain Imaging Data Structure (BIDS)](https://bids.neuroimaging.io/) and [NeuroData Without Borders (NWB)](https://www.nwb.org/)—and explore the role of [NeuroBlueprint]() within the current data specification landscape.
 
 ### Brain Imaging Data Structure (BIDS)
 
-BIDS is a data specification widely used in human neuroimaging, with recent extensions to systems neuroscience (e.g. [electrophysiology](https://github.com/bids-standard/bep021)). It has intutive and considered design, developed by hundreds of researchers to ensure consensus. BIDS is comprehensive and detailed specification, albiet with some strict requirements (e.g. use of certain file formats, metadata requirements).
+The [Brain Imaging Data Structure (BIDS)](https://bids.neuroimaging.io/) is a widely adopted data specification in the field of human neuroimaging. Developed through the collaborative efforts of hundreds of researchers, BIDS is known for its intuitive design and comprehensive guidelines. It offers explicit rules for folder and file naming, file formats, and metadata, and is supported by a broad [ecosystem of software tools and data repositories](https://bids.neuroimaging.io/benefits.html).
 
-However, BIDS has a level of detail that can be intimidating and complex to new users and make full complaince difficult, especially during data collection. BIDS is considered the gold-standard of standardisation for data-sharing, but widespread adoption is hampered by it's complexity.
+However, BIDS has a level of detail that can be intimidating to new users and make full compliance difficult, especially during data collection. Originally built for human neuroimaging (MRI), BIDS has been expanded to include other modalities but it currently falls short of fully accommodating the varied experimental techniques and data prevalent in systems neuroscience. Efforts are underway to bridge this gap, such as the extension proposal for [animal electrophysiology](https://bids.neuroimaging.io/bep032). Yet, the need for legacy support, backward compatibility, and broad consensus slows down these extensions, understandably so for maintaining the integrity and broad utility of the specification.
 
 ### NeuroData Without Borders (NWB)
 
-In contrast to BIDS, NWB has a focus not on folder-system organisation but on providing unified open-access file format that can, in theory, contain an entire project and metadata within it. This is a welcome introduction in the land of neuroscience populated by an unweidly array of complex, often closed file formats pose a significant hurdle to data-sharing.
+[NeuroData Without Borders (NWB)](https://www.nwb.org/) takes a different approach compared to BIDS. Rather than focusing on how folders and files are organized, NWB provides a unified, open-access file format able to encapsulate an entire project and its metadata in one file. This approach is particularly valuable in neuroscience, where diverse and often proprietary file formats pose a significant hurdle to data sharing.
 
-NWB is the primary open-access file format for data-sharing in systems neuroscience. However, it can be difficult to adopt, especially for users with lack of programming experience and if the format of your raw data is not yet supported for conversion to NWB. Additionally during the data-collection stage, storage of all data in a single file can be prohibitively inflexible. 
+NWB has established itself as the primary open-access file format for data-sharing in systems neuroscience. However, it can be difficult to adopt, especially for those without programming experience or when the raw data format is not yet supported for conversion to NWB. Moreover, consolidating all data into a single file might not always be practical, especially during the data collection phase where flexibility is crucial.
 
 ## The [NeuroBlueprint](https://neuroblueprint.neuroinformatics.dev/) specification
 
@@ -79,11 +67,11 @@ NWB is the primary open-access file format for data-sharing in systems neuroscie
 
 ![NeuroBlueprint_project_tree_light](https://hackmd.io/_uploads/Sys4pvpF6.png)
 
-While the full specification is available to read [here](https://neuroblueprint.neuroinformatics.dev/specification.html), we provide a breif summary of it's main features below:
+While the full specification is available to read [here](https://neuroblueprint.neuroinformatics.dev/specification.html), we provide a brief summary of its main features below:
 
 - A top-level distinction splitting raw data, ("rawdata"), and any data derived from processing the raw data ("derivatives").
 - Heirchical subject-session-datatype organisation, capturing a model where individual subjects may undergo repeated experimental sessions.
-- Requirement for unique subject and session IDs with filenames structures as key-value pairs.
+- Requirement for su
 - No hard specification on filenames, but recommended structure provided.
 
 
@@ -120,9 +108,6 @@ Talk about the specific need systems neuro and justify our departures from BIDS.
 
 
 <br><br><br><br><br><br><br><br>
-
-
-
 
 
 
