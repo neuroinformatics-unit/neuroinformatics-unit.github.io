@@ -79,5 +79,5 @@ User-editable configuration files should use the YAML format. As far as possible
 
 ### Release
 * All Python software should be released on PyPI to enable a simple `pip install`. At a minimum, each project should 
-* Have two owners - [Adam (adamltyson)](https://github.com/adamltyson) and the lead developer. Others can be added as owners/maintainers as appropriate.
+have two owners — [Adam (adamltyson)](https://github.com/adamltyson) and the lead developer. Others can be added as owners/maintainers as appropriate.
 * We will also aim to release projects on [conda-forge](https://conda-forge.org/), especially for packages with non-Python dependencies.
