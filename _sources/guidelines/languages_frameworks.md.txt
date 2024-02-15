@@ -30,7 +30,7 @@ code style.
 ### Continuous integration
 * All pushes and pull requests will be built by [GitHub actions](https://docs.github.com/en/actions). This will usually include linting, testing and deployment.
 * As a rule, actions will run on all operating systems (Linux, macOS, Windows) and on all Python versions that are supported by the project.
-* GitHub actions workflows should be contributed to the [NIU actions repository](https://github.com/neuroinformatics-unit/actions) to aid re-use.
+* GitHub actions workflows should be contributed to the [NIU actions repository](https://github.com/neuroinformatics-unit/actions) to aid reuse.
 
 ### Automated versioning
 We use [`setuptools_scm`](https://github.com/pypa/setuptools_scm) to automatically version packages. It should be 
@@ -79,5 +79,5 @@ User-editable configuration files should use the YAML format. As far as possible
 
 ### Release
 * All Python software should be released on PyPI to enable a simple `pip install`. At a minimum, each project should 
-* have two owners - [Adam (adamltyson)](https://github.com/adamltyson) and the lead developer. Others can be added as owners/maintainers as appropriate.
+have two owners — [Adam (adamltyson)](https://github.com/adamltyson) and the lead developer. Others can be added as owners/maintainers as appropriate.
 * We will also aim to release projects on [conda-forge](https://conda-forge.org/), especially for packages with non-Python dependencies.
