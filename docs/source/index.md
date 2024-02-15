@@ -40,6 +40,11 @@ The NIU is dedicated to the development of high quality, accurate, robust, easy 
 :link-type: ref
 :::
 
+:::{grid-item-card} {fas}`handshake;sd-text-primary` Collaborations
+:img-top: _static/collaborations_card.png
+:link: collaborations
+:link-type: doc
+:::
 ::::
 
 ```{toctree}
