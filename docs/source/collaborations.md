@@ -37,3 +37,5 @@ to develop computational neuroanatomy ([BrainGlobe](https://brainglobe.info/)) a
 of Cambridge to build multiple tools, including [movement](https://movement.neuroinformatics.dev/) and 
 [DataShuttle](https://datashuttle.neuroinformatics.dev/)
 - We contribute to multiple open source projects, including [SpikeInterface](https://spikeinterface.readthedocs.io/en/latest/)
+- We collaborate with the [Allen Institute for Neural Dynamics](https://alleninstitute.org/division/neural-dynamics/)
+on [movement](https://movement.neuroinformatics.dev/).
