@@ -16,47 +16,47 @@ Head Research Engineer
 :img-top: _static/joe_ziminski.png
 :link: https://github.com/JoeZiminski
 
-Research Software Engineer
+Senior Research Software Engineer
 :::
 
 :::{grid-item-card} Niko Sirmpilatze
 :img-top: _static/niko_sirmpilatze.png
 :link: https://github.com/niksirbi
 
-Research Software Engineer
+Senior Research Software Engineer
 :::
 
 :::{grid-item-card} Laura Porta
 :img-top: _static/laura_porta.png
 :link: https://github.com/lauraporta
 
-Research Software Engineer
+Senior Research Software Engineer
 :::
 
 :::{grid-item-card} Chang Huan Lo
 :img-top: _static/chang_huan_lo.png
 :link: https://github.com/lochhh
 
-Research Software Engineer
+Senior Research Software Engineer
 :::
 
 :::{grid-item-card} Alessandro Felder
 :img-top: _static/alessandro_felder.png
 :link: https://github.com/alessandrofelder
 
-Research Software Engineer
+Senior Research Software Engineer
 :::
 
 :::{grid-item-card} Igor Tatarnikov
 :img-top: _static/igor_tatarnikov.jpg
 :link: https://github.com/IgorTatarnikov
 
-Research Software Engineer
+Senior Research Software Engineer
 :::
 
 :::{grid-item-card} Sofía Miñano
 :img-top: _static/sofia_minano.png
 :link: https://github.com/sfmig
 
-Research Software Engineer
+Senior Research Software Engineer
 ::::
