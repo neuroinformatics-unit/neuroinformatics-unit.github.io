@@ -57,6 +57,6 @@ people
 projects
 collaborations
 blog/index
+get-involved/index
 resources
-guidelines/index
 ```

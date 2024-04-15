@@ -1,10 +1,10 @@
-# Development guidelines
+# General development guidelines
 
 All our software is built as a team, and this means we must agree on some development conventions. This page 
 covers our internal development guidelines, which we hope are also useful to external contributors.
 
 
-## General guidelines
+## General principles
 
 * All projects will use [Git](https://git-scm.com/) for version control and [GitHub](https://github.com/) for hosting.
 
@@ -95,9 +95,3 @@ help standardise how we categorise issues. As a general rule, `critical` issues 
 | good first issue      | Good for newcomers                     |
 | question              | Further information is requested       |
 | wontfix               | This will not be worked on             |
-
-## Further details
-```{toctree}
-:maxdepth: 2
-languages_frameworks
-```

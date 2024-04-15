@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Development guidelines for specific languages and frameworks &#8212; NIU</title>
+    <title>General development guidelines &#8212; NIU</title>
   
   
   
@@ -55,13 +55,14 @@
                 gtag('js', new Date());
                 gtag('config', 'G-6260TGM7TY');
             </script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'guidelines/languages_frameworks';</script>
-    <link rel="canonical" href="https://neuroinformatics.dev/guidelines/languages_frameworks.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'get-involved/development_guidelines';</script>
+    <link rel="canonical" href="https://neuroinformatics.dev/get-involved/development_guidelines.html" />
     <link rel="icon" href="../_static/logo_light.png"/>
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Development guidelines" href="index.html" />
+    <link rel="next" title="Development guidelines for specific languages and frameworks" href="languages_frameworks.html" />
+    <link rel="prev" title="Get involved" href="index.html" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -200,16 +201,16 @@
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
                     
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../resources.html">
-                        Resources
+                    <li class="nav-item current active">
+                      <a class="nav-link dropdown-item nav-internal" href="index.html">
+                        Get involved
                       </a>
                     </li>
                 
 
-                    <li class="nav-item current active">
-                      <a class="nav-link dropdown-item nav-internal" href="index.html">
-                        Development guidelines
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../resources.html">
+                        Resources
                       </a>
                     </li>
                 
@@ -402,16 +403,16 @@ document.write(`
                 </button>
                 <ul id="pst-nav-more-links-2" class="dropdown-menu">
                     
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../resources.html">
-                        Resources
+                    <li class="nav-item current active">
+                      <a class="nav-link dropdown-item nav-internal" href="index.html">
+                        Get involved
                       </a>
                     </li>
                 
 
-                    <li class="nav-item current active">
-                      <a class="nav-link dropdown-item nav-internal" href="index.html">
-                        Development guidelines
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../resources.html">
+                        Resources
                       </a>
                     </li>
                 
@@ -513,7 +514,9 @@ document.write(`
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Development guidelines for specific languages and frameworks</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">General development guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="languages_frameworks.html">Development guidelines for specific languages and frameworks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mentoring.html">Mentored open-source contributions</a></li>
 </ul>
 </div>
 </nav></div>
@@ -552,9 +555,9 @@ document.write(`
       </a>
     </li>
     
-    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Development guidelines</a></li>
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Get involved</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Development...</li>
+    <li class="breadcrumb-item active" aria-current="page">General...</li>
   </ul>
 </nav>
 </div>
@@ -571,116 +574,118 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-<section class="tex2jax_ignore mathjax_ignore" id="development-guidelines-for-specific-languages-and-frameworks">
-<h1>Development guidelines for specific languages and frameworks<a class="headerlink" href="#development-guidelines-for-specific-languages-and-frameworks" title="Link to this heading">#</a></h1>
-<section id="python">
-<h2>Python<a class="headerlink" href="#python" title="Link to this heading">#</a></h2>
-<section id="setting-up-a-project">
-<h3>Setting up a project<a class="headerlink" href="#setting-up-a-project" title="Link to this heading">#</a></h3>
+<section class="tex2jax_ignore mathjax_ignore" id="general-development-guidelines">
+<h1>General development guidelines<a class="headerlink" href="#general-development-guidelines" title="Link to this heading">#</a></h1>
+<p>All our software is built as a team, and this means we must agree on some development conventions. This page
+covers our internal development guidelines, which we hope are also useful to external contributors.</p>
+<section id="general-principles">
+<h2>General principles<a class="headerlink" href="#general-principles" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>To set up a new Python project, use the <a class="reference external" href="https://github.com/neuroinformatics-unit/python-cookiecutter">NIU cookiecutter</a>
-repository. This ensures that the required tooling is in place (e.g. CI) and also that we are all using a familiar
-project structure. Part of using this cookiecutter is keeping it updated (e.g. Python versions, best practices) and
-communicating those changes to all users.</p></li>
-<li><p>Whenever possible, we will use <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> as the main configuration file for the project. Support for
-<code class="docutils literal notranslate"><span class="pre">setup.cfg</span></code> and <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> will be deprecated in future python versions. This will also be the default option for the SWC cookiecutter.</p></li>
+<li><p>All projects will use <a class="reference external" href="https://git-scm.com/">Git</a> for version control and <a class="reference external" href="https://github.com/">GitHub</a> for hosting.</p></li>
+<li><p>By default we will use the <a class="reference external" href="https://github.com/neuroinformatics-unit">neuroinformatics-unit</a> organisation for new projects.
+Otherwise we may use other organisations, e.g. the <a class="reference external" href="https://github.com/SainsburyWellcomeCentre">SWC organisation</a> when
+working with SWC researchers, or when releasing software to the community. Often we will use a project-specific organisation (e.g. <a class="reference external" href="https://github.com/brainglobe">BrainGlobe</a>).</p></li>
+<li><p>Unless there is a specific reason not to, we will develop all software in the open (i.e. public).
+This facilitates collaboration and encourages good software development practices.</p></li>
+<li><p>All changes to a codebase must be via a
+<a class="reference external" href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests">Pull Request (PR)</a> approved by another member of the team.
+How detailed the review should be will depend depends on the changes made, and the current status of the project. E.g.
+a brand new, exploratory project may not need every line of code checked in detail, but a heavily used community project may do.</p></li>
+<li><p>All software is developed in branches. When developing a new feature, or planning to make substantive changes
+(e.g. not a quick bug fix which could go straight to a ready to review PR), make a new branch as well as a draft
+PR detailing the purpose of the new code. Then, new commits can be easily tracked and commented on in-progress,
+and extended periods of coding in isolation avoided. When the code is ready to be merged, the PR can be changed to
+“ready to review” for full review. All code must be reviewed by at least one other team member
+(or collaborator) before merging.</p></li>
+<li><p>Code should be reviewed often, in as small a block as is practical. There should be no “magic unveiling” of code
+developed in secret over a long time. Commits should be pushed to GitHub as often as practical, and feedback from
+others (code review, and informal conversation) solicited as often as possible.</p></li>
+<li><p>We will use the best tool (language, framework etc.) for the job. This depends on many factors such as the
+computation itself, relevant other packages and collaborators. We will always prefer to work in open-source languages.
+Python is likely to often be the most appropriate language due to the level of adoption in the community (we want
+researchers to contribute to the code).
+Guidelines specific to each language or framework can be found in
+<a class="reference internal" href="languages_frameworks.html"><span class="doc std std-doc">Development guidelines for specific languages and frameworks</span></a>.</p></li>
+<li><p>We aim that software can be used across operating systems, by novice users and using anything from a standard laptop
+to HPC.</p></li>
+<li><p>All software will be fully documented. Our understanding of documentation is guided by the systematic
+<a class="reference external" href="https://diataxis.fr/">diataxis</a> framework. We will strive to standardise the documentation structure across projects
+by <a class="reference external" href="https://diataxis.fr/how-to-use-diataxis/#">gradually adopting the diataxis approach</a>.</p></li>
+<li><p>All software will have (close to) 100% test coverage. This applies at all stages, i.e. tests shouldn’t be added
+“later” (later often doesn’t come). <strong>All code should be fully tested (and passing those tests) before submitting for
+review</strong>. If the code cannot be fully tested, or is failing the tests, the PR should be marked as “draft” to enable discussion.</p></li>
+<li><p>All tests should run automatically on GitHub actions on macOS, Windows and Linux where appropriate. Other testing
+permutations will depend on the language, e.g. for Python, all supported Python versions should be tested on at least
+one operating system.</p></li>
+<li><p>As far as possible, we should follow <a class="reference external" href="https://en.wikipedia.org/wiki/Test-driven_development">Test Driven Development</a> practices.</p></li>
+<li><p>We will use <a class="reference external" href="https://semver.org/">semantic versioning</a> for all projects.</p></li>
 </ul>
 </section>
-<section id="virtual-environments">
-<h3>Virtual environments<a class="headerlink" href="#virtual-environments" title="Link to this heading">#</a></h3>
+<section id="pull-requests">
+<h2>Pull requests<a class="headerlink" href="#pull-requests" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>We will use <a class="reference external" href="https://docs.conda.io/en/latest/">conda</a> environments for all Python projects.</p></li>
-<li><p>Package installations will be handled by either <code class="docutils literal notranslate"><span class="pre">conda</span></code> or <code class="docutils literal notranslate"><span class="pre">pip</span></code>.</p></li>
+<li><p>Please submit <em>draft</em> pull requests as early as possible (you can still push to the branch once submitted) to
+allow for discussion.</p></li>
+<li><p>One approval of a PR is enough for it to be merged.</p></li>
+<li><p>Unless someone approves the PR with optional comments, the PR can be immediately merged by the approving reviewer.</p></li>
+<li><p>Please merge via “Squash and Merge” on GitHub to maintain a clean commit history.</p></li>
+<li><p>Ask for a review from someone specific if you think they would be a particularly suited reviewer (possibly noting
+why they are suited on the PR description)</p></li>
 </ul>
 </section>
-<section id="testing-and-coverage">
-<h3>Testing and coverage<a class="headerlink" href="#testing-and-coverage" title="Link to this heading">#</a></h3>
+<section id="starting-a-new-project">
+<h2>Starting a new project<a class="headerlink" href="#starting-a-new-project" title="Link to this heading">#</a></h2>
+<p>When beginning a new project, the above guidelines can be relaxed until the basic structure of the code is established.
+In particular, rather than waiting for a series of small PRs to be merged, one model could be:</p>
 <ul class="simple">
-<li><p>All Python software should have automated tests written using <a class="reference external" href="https://docs.pytest.org">pytest</a> that run quickly on
-all operating systems. Tests that take many minutes on low-powered systems (e.g. GitHub actions) are often ignored.</p></li>
-<li><p>We will use <a class="reference external" href="https://about.codecov.io/">codecov</a> as the coverage reporting tool. This is free for open-source
-projects and integrates with GitHub actions.</p></li>
+<li><p>Start the project in a <code class="docutils literal notranslate"><span class="pre">dev</span></code> branch</p></li>
+<li><p>Open a draft PR, and assign someone as a reviewer (for another set of eyes, not necessarily a proper review)</p></li>
+<li><p>Keep committing to <code class="docutils literal notranslate"><span class="pre">dev</span></code> until a good initial project structure is defined</p></li>
+<li><p>Merge <code class="docutils literal notranslate"><span class="pre">dev</span></code> into <code class="docutils literal notranslate"><span class="pre">main</span></code></p></li>
+<li><p>Move to feature branch/PR workflow (branching from <code class="docutils literal notranslate"><span class="pre">dev</span></code> if necessary while waiting for <code class="docutils literal notranslate"><span class="pre">dev</span></code> to be merged)</p></li>
 </ul>
 </section>
-<section id="formatting-and-qc">
-<h3>Formatting and QC<a class="headerlink" href="#formatting-and-qc" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>We use <a class="reference external" href="https://black.readthedocs.io/en/stable/">Black</a>, <a class="reference external" href="https://beta.ruff.rs/docs/">ruff</a>, and <a class="reference external" href="https://mypy.readthedocs.io/en/stable/">mypy</a> to ensure a consistent
-code style.</p></li>
-<li><p>Currently, the above tools are automated in the SWC cookiecutter using <a class="reference external" href="https://pre-commit.com/">pre-commit</a>. Running
-<code class="docutils literal notranslate"><span class="pre">pre-commit</span> <span class="pre">install</span></code> once locally will set up the pre-commit hooks to be executed automatically before each commit.</p></li>
-</ul>
-</section>
-<section id="continuous-integration">
-<h3>Continuous integration<a class="headerlink" href="#continuous-integration" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>All pushes and pull requests will be built by <a class="reference external" href="https://docs.github.com/en/actions">GitHub actions</a>. This will usually include linting, testing and deployment.</p></li>
-<li><p>As a rule, actions will run on all operating systems (Linux, macOS, Windows) and on all Python versions that are supported by the project.</p></li>
-<li><p>GitHub actions workflows should be contributed to the <a class="reference external" href="https://github.com/neuroinformatics-unit/actions">NIU actions repository</a> to aid reuse.</p></li>
-</ul>
-</section>
-<section id="automated-versioning">
-<h3>Automated versioning<a class="headerlink" href="#automated-versioning" title="Link to this heading">#</a></h3>
-<p>We use <a class="reference external" href="https://github.com/pypa/setuptools_scm"><code class="docutils literal notranslate"><span class="pre">setuptools_scm</span></code></a> to automatically version packages. It should be
-configured in the <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> file (as per the <a class="reference external" href="https://github.com/neuroinformatics-unit/python-cookiecutter">cookiecutter template</a>).
-<code class="docutils literal notranslate"><span class="pre">setuptools_scm</span></code> will automatically infer the version using git.
-To manually set a new semantic version, create a tag and make sure the tag is pushed to GitHub. Make sure you commit
-any changes you wish to be included in this version. E.g. to bump the version to <code class="docutils literal notranslate"><span class="pre">1.0.0</span></code>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>add<span class="w"> </span>.
-git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Add new changes&quot;</span>
-git<span class="w"> </span>tag<span class="w"> </span>-a<span class="w"> </span>v1.0.0<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Bump to version 1.0.0&quot;</span>
-git<span class="w"> </span>push<span class="w"> </span>--follow-tags
-</pre></div>
-</div>
-</section>
-<section id="dependency-support">
-<h3>Dependency support<a class="headerlink" href="#dependency-support" title="Link to this heading">#</a></h3>
-<p>Packages have to choose which versions of dependencies they officially support, with minimum supported versions of each
-dependency used in continuous integration testing. All NIU projects should follow
-<a class="reference external" href="https://numpy.org/neps/nep-0029-deprecation_policy.html">NEP 29 — Recommend Python and NumPy version support as a community policy standard</a>
-to determine the <strong>minimum</strong> set of supported package versions:</p>
-<ul class="simple">
-<li><p>The last 42 months of Python releases</p></li>
-<li><p>The last 24 months of NumPy releases</p></li>
-</ul>
-<p>In addition to this, the last 24 months of other dependencies should also be supported.</p>
-</section>
-<section id="licensing">
-<h3>Licensing<a class="headerlink" href="#licensing" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>Unless the software has commercial potential or depends upon other software with a restrictive license, we will default to using
-<a class="reference external" href="https://opensource.org/licenses/BSD-3-Clause">The 3-Clause BSD License</a> (BSD-3-Clause).</p></li>
-<li><p>A <code class="docutils literal notranslate"><span class="pre">LICENSE</span></code> file should be included in the root of the repository (already present in the SWC cookiecutter).</p></li>
-<li><p>To learn more about our licensing policies, see <a class="reference external" href="https://howto.neuroinformatics.dev/open_science/Licensing.html">our licensing guide</a>.</p></li>
-</ul>
-</section>
-<section id="documentation">
-<h3>Documentation<a class="headerlink" href="#documentation" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>We will use <a class="reference external" href="https://www.sphinx-doc.org/en/master/">Sphinx</a> to generate documentation for Python projects.
-We will build the documentation websites with the <a class="reference external" href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a>.</p></li>
-<li><p>Docstrings should be written in <a class="reference external" href="https://numpydoc.readthedocs.io/en/latest/format.html">numpydoc</a> format.</p></li>
-<li><p>The documentation structure should be informed by the <a class="reference external" href="https://diataxis.fr">diataxis</a> framework.</p></li>
-</ul>
-</section>
-<section id="logging">
-<h3>Logging<a class="headerlink" href="#logging" title="Link to this heading">#</a></h3>
-<p>All Python software should use the inbuilt Python logging module, rather than e.g. print statements. To standardise
-this, we will use <a class="reference external" href="https://github.com/neuroinformatics-unit/fancylog">fancylog</a>. This tool should be updated
-regularly to reflect best practices and ensure it is suitable for use with all projects.</p>
-</section>
-<section id="configuration-files">
-<h3>Configuration files<a class="headerlink" href="#configuration-files" title="Link to this heading">#</a></h3>
-<p>User-editable configuration files should use the YAML format. As far as possible, machine-readable outputs from software should also use this format.</p>
-</section>
-<section id="release">
-<h3>Release<a class="headerlink" href="#release" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>All Python software should be released on PyPI to enable a simple <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span></code>. At a minimum, each project should
-have two owners — <a class="reference external" href="https://github.com/adamltyson">Adam (adamltyson)</a> and the lead developer. Others can be added as owners/maintainers as appropriate.</p></li>
-<li><p>We will also aim to release projects on <a class="reference external" href="https://conda-forge.org/">conda-forge</a>, especially for packages with non-Python dependencies.</p></li>
-</ul>
-</section>
+<section id="issue-tags">
+<h2>Issue tags<a class="headerlink" href="#issue-tags" title="Link to this heading">#</a></h2>
+<p>All new repositories in the NIU organisation will have the following tags. These can be added to existing projects to
+help standardise how we categorise issues. As a general rule, <code class="docutils literal notranslate"><span class="pre">critical</span></code> issues should be tackled ASAP and
+<code class="docutils literal notranslate"><span class="pre">priority</span></code> issues should be tackled before any others.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Label</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>critical</p></td>
+<td><p>To be addressed first</p></td>
+</tr>
+<tr class="row-odd"><td><p>priority</p></td>
+<td><p>More important than other issues</p></td>
+</tr>
+<tr class="row-even"><td><p>documentation</p></td>
+<td><p>Improvements or additions to documentation</p></td>
+</tr>
+<tr class="row-odd"><td><p>bug</p></td>
+<td><p>Something isn’t working</p></td>
+</tr>
+<tr class="row-even"><td><p>enhancement</p></td>
+<td><p>New feature or request</p></td>
+</tr>
+<tr class="row-odd"><td><p>duplicate</p></td>
+<td><p>This issue or pull request already exists</p></td>
+</tr>
+<tr class="row-even"><td><p>good first issue</p></td>
+<td><p>Good for newcomers</p></td>
+</tr>
+<tr class="row-odd"><td><p>question</p></td>
+<td><p>Further information is requested</p></td>
+</tr>
+<tr class="row-even"><td><p>wontfix</p></td>
+<td><p>This will not be worked on</p></td>
+</tr>
+</tbody>
+</table>
 </section>
 </section>
 
@@ -704,8 +709,17 @@ have two owners — <a class="reference external" href="https://github.com/adaml
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Development guidelines</p>
+        <p class="prev-next-title">Get involved</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="languages_frameworks.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Development guidelines for specific languages and frameworks</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -725,28 +739,17 @@ have two owners — <a class="reference external" href="https://github.com/adaml
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python">Python</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-a-project">Setting up a project</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#virtual-environments">Virtual environments</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#testing-and-coverage">Testing and coverage</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#formatting-and-qc">Formatting and QC</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-integration">Continuous integration</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#automated-versioning">Automated versioning</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dependency-support">Dependency support</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#licensing">Licensing</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation">Documentation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#logging">Logging</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration-files">Configuration files</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#release">Release</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-principles">General principles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pull-requests">Pull requests</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-a-new-project">Starting a new project</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#issue-tags">Issue tags</a></li>
 </ul>
   </nav></div>
 
   <div class="sidebar-secondary-item">
 
   <div class="tocsection sourcelink">
-    <a href="../_sources/guidelines/languages_frameworks.md.txt">
+    <a href="../_sources/get-involved/development_guidelines.md.txt">
       <i class="fa-solid fa-file-lines"></i> Show Source
     </a>
   </div>
