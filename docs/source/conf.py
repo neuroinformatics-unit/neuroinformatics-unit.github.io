@@ -67,6 +67,12 @@ myst_heading_anchors = 3
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
+# Ignore links that do not work with github actions link checking
+# https://github.com/neuroinformatics-unit/actions/pull/24#issue-1978966182
+linkcheck_anchors_ignore_for_url = [
+    "https://neuroinformatics.zulipchat.com/"
+]
+
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
