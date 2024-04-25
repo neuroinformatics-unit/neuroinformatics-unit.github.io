@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :blogpost: true
 :date: May 02, 2024
 :author: Niko Sirmpilatze, Joe Ziminski
@@ -5,6 +6,17 @@
 :category: Blog
 :language: English
 :image: 1
+=======
+---
+blogpost: true
+date: 25 April 2024
+author: Joe Ziminski, Niko Sirmpilatze
+location: London, UK
+category: Blog
+language: English
+image: 1
+---
+>>>>>>> f180f9d (Fix blog header, minor title changes.)
 
 # Data organisation with NeuroBlueprint
 *The challenge of unstandardised data in systems neuroscience*
