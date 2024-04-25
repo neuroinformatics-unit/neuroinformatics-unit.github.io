@@ -43,7 +43,7 @@ to **NeuroBlueprint**,
 highlighting its
 place within the current data standardisation landscape.
 
-In a companion posts, we introduce [**datashuttle**](datashuttle.neuroinformatics.dev), a tool to 
+In a companion posts, we introduce [**datashuttle**](https://datashuttle.neuroinformatics.dev), a tool to 
 automate the implementation of **NeuroBlueprint**.
 
 ## Why should you care about standardisation?
@@ -161,7 +161,7 @@ repeated experimental sessions
 - Datatype folders with fixed names (e.g. "ephys")
 - No hard specification on filenames, but recommended structure provided.
 
-#### Limitations 
+### Limitations 
 
 Currently, **NeuroBlueprint** is not designed for multi-animal or 
 group experiments where sessions may include interactions between multiple subjects. 
