@@ -1,7 +1,7 @@
 ---
 blogpost: true
-date: 23 June 2023
-author: Laura Porta
+date: 25 April 2024
+author: Joe Ziminski, Niko Sirmpilatze
 location: London, UK
 category: Blog
 language: English
@@ -9,9 +9,9 @@ image: 1
 ---
 
 # Data organisation with NeuroBlueprint
-*The challenge of unstandardised data in neuroscience*
+*The challenge of unstandardised data in systems neuroscience*
 
-**reading time: 10 minutes**
+**estimated reading time: 10 minutes**
 
 ```{image} /_static/blog_images/neuroblueprint/errant-science-data-organisation.jpg
 :align: center
