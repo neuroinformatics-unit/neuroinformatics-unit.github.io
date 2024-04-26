@@ -96,25 +96,25 @@ downstream applications.
 To create folders manually through the graphical interface with **datashuttle**, 
 it is as simple as entering the subject and session name in the folder and clicking 'create'.
 
-[IMAGE]
+
+
+
 
 There are a number of convenience shortcuts to ensure you only need to enter 
 critical information. Double-clicking will fill the next subject or session 
 number while key tags (@DATE@, @TIME@, @DATETIME@) will auto-fill date and time. 
-
-[IMAGE]
 
 Live validation occurs, meaning it is impossible to make a typographical error
 
 ```{image} /_static/blog_images/datashuttle/validation-bad-dark.png
 :align: center
 :class: only-dark
-:width: 400px
+:width: 500px
 ```
 ```{image} /_static/blog_images/datashuttle/validation-bad-light.png
 :align: center
 :class: only-light
-:width: 400px
+:width: 500px
 ```
 <br>
 
