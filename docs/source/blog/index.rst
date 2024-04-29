@@ -5,7 +5,7 @@ Blog
    :list-style: circle
    :category: Blog
    :date: %B %d, %Y
-   :format: {title}, {date}
+   :format: {title} by {author}, {date}
    :excerpts:
 
 

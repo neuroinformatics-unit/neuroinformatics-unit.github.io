@@ -25,7 +25,7 @@ data into community pipelines for common preprocessing and analysis steps.
 Unfortunately this is typically not the case, with researchers 
 often re-coding pipelines from scratch and in isolation.
 
-A lack of standardised data formats for systems neuroscience
+The lack of data standardisation in systems neuroscience
 is a major obstacle to realising the benefits of automation.
 Have you ever borrowed a colleagues' analysis script, only to spend
 the next few hours changing the code structure to fit your data?
@@ -65,7 +65,7 @@ you know it, things get messy, things gets misplaced, and what was once clear is
 :align: center
 :width: 100%
 ```
-credit: [ErrantScience](https://errantscience.com/blog/2014/08/06/how-not-to-organise-data/)
+*credit:* [*ErrantScience*](https://errantscience.com/blog/2014/08/06/how-not-to-organise-data/)
 <br>
 
 However, the **payoff for good data management is huge**, not just for teamwork but also for your future self who's 
