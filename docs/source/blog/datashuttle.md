@@ -8,7 +8,9 @@ language: English
 image: 1
 ---
 
-# Managing systems neuroscience projects with **datashuttle**
+ADD ESTIMATED READING TIME
+
+# Managing neuroscience projects with **datashuttle**
 *Create, validate and transfer standardised project folders*
 
 ```{image} /_static/blog_images/datashuttle/datashuttle-overview-dark.png
@@ -65,33 +67,36 @@ the **NeuroBlueprint** standard.
 ```
 <br>
 
+Imagine that you are starting a new experiment and have the first
+acquisition session, or behaviour ('behav') and electrophysiological ('ephys')
+data. 
+
+The first thing you need to do is create the folders that the acquired 
+data will go. **datashuttle** is used there, either through the graphical 
+interface (manual) or python API (automated) to ensure folders are free
+of typographical errors and formatted to NeuroBlueprint standard.
+
+Then, acquisition data is saved to these folders while the experiment runs.
+At the end of the session, **datashuttle** transfers the newly acquired data 
+to a central storage machine to be backed up.
+
+Later on in the experiment, you may want to transfer only a subset
+of data from the central machine to an analysis machine—for example,
+to pilot some behavioural data you will grab the 'test' session for
+the first 5 subjects. **datashuttle** allows flexible custom transfers
+easily, meaning you don't have to drag and drop these data manually or
+write a custom script.
+
 **datashuttle** performs three key functions during an experimental workflow:
 
-1) Creation and live-validation of folders named to the NeuroBlueprint standard
-2)	Transfer of data between acquisition or analysis computers and a central storage machine
-3)	Logging of all actions for complete project provenance
+1) Creation and live-validation of folders in the 
+[NeuroBlueprint](https://neuroblueprint.neuroinformatics.dev/) standard
+2)	Transfer of data between acquisition (or analysis) computers and a central storage machine
+3)	Logging of all actions for full project provenance
 
-**datashuttle** revolves around the concept of multiple *local* machines and one
-*central* machine. The central machine is where the project data is collated,
-stored and backed up. Local machines are data acquisition or analysis machines
-between which data is transferred with the central machine.
-
-**datashuttle** can be run through a graphical
-interface or in python code, select the tab to switch between both examples 
-below.
+Below we will give a brief tour of the key **datashuttle** features.
 
 ## Creating folders with live-validation
-
-Creating and validating NeuroBlueprint project folders
-5) 
-At the start of an acquisition session when there is a lot to juggle, 
-the last thing you want to be thinking about is creating a standardised 
-project folder. If setting up your project manually, you would ideally 
-enter only the key custom unique information required for the subject and 
-session, with everything else created on the fly and live-validation to check 
-any possible manual errors. If you are running an automated acquisition, you 
-want a simple API to build standardised project folders and get the path for 
-downstream applications.
 
 To create folders manually through the graphical interface with **datashuttle**, 
 it is as simple as entering the subject and session name in the folder and clicking 'create'.
@@ -110,10 +115,12 @@ it is as simple as entering the subject and session name in the folder and click
 <br>
 
 There are a number of convenience shortcuts to ensure you only need to enter 
-critical information. Double-clicking will fill the next subject or session 
-number while key tags (@DATE@, @TIME@, @DATETIME@) will auto-fill date and time. 
+your custom information. For example, the convenience tags 
+(`@DATE@`, `@TIME@`, `@DATETIME@`) will fill the created folder 
+with the date / time / datetime.
 
-Live validation occurs, meaning any 
+**datashuttle** performs live-validation of inputs, ensuring 
+formatting errors cannot creep into the project:
 
 ```{image} /_static/blog_images/datashuttle/validation-bad-dark.png
 :align: center
@@ -127,122 +134,80 @@ Live validation occurs, meaning any
 ```
 <br>
 
-With customisation against defined 'name templates' possible (e.g. if you 
-want to specify longer names that might include ids, etc.)
+Through the Python API, folders can be suggested and created through this 
+simple API and slot into acquisition pipelines:
 
-In code, folders can be suggested and created through this simple API:
-(example)
-Creating standardised project folders should not be something you spend time on. 
-Datashuttle aims to make this process as smooth as possible.
+```python
+from datashuttle import DataShuttle
+
+project = DataShuttle("my_first_project")
+
+created_folder_paths = project.create_folders(
+    "sub-001", "ses-001_@DATE@", ["behav", "funcimg"]
+)
+```
 
 ## Data transfers
 
-After data is acquired, it can be 'uploaded' to a central storage machine. 
-By default, datashuttle will not overwrite existing files, so newly acquired data 
-can be quickly transferred by 'uploading entire project'. 
-Only the new file will be transferred. Or in code.
+It is the end of an experimental acquisition session, and time to 
+store your data on the central server for backup. **datashuttle**
+allows you to transfer all new data to the central machine
+at the click of a 'Transfer' button.
 
-However, the real power comes from customisable transfers. This is particularly 
-useful when downloading subsets of data from the central storage machine to an 
-analysis machine FOR ANALYSIS.
-Datashuttle has a rich set of keyword argumetns to allow download of custom 
-subsets of data. Say you wanted toget XXX. Then you just run XXX
-<code vs. graphical interface>
+However, the real power comes from customisable transfers, for example
+or downloading a subset of data to an analysis machine. Say you wanted
+to transfer only the first behavioural session from all subjects
+to an analysis PC. 
+
+In the graphical interface, you could fill in the `Custom Transfer` screen
+as below and click 'Transfer':
+
+```{image} /_static/blog_images/datashuttle/how-to-transfer-custom-dark.png
+:align: center
+:class: only-dark
+:width: 650px
+```
+```{image} /_static/blog_images/datashuttle/how-to-transfer-custom-light.png
+:align: center
+:class: only-light
+:width: 650px
+```
+<br>
+
+and in code, it looks similar:
+
+```python
+from datashuttle import DataShuttle
+
+project = DataShuttle("my_first_project")
+
+project.transfer_custom(
+    "rawdata", "all_sub", "ses-001_@*@", "behav"
+)
+```
+
 
 ## Logging
 A final feature of datashuttle is logging. Makes it easy. Simple photo
 
-Looking forward 
-<last parahraph>
-Standardisation is incredibly useful, but it should not come with at the 
-expensive of in running day-to-day projects less easily than you currently 
-are. Datashuttle aims to make managing your project easier than it currently 
-is – if it is not, we want to hear why so it can be improved. 
-Please get in contact XXX
+***TODO ADD AN IMAGE OF LOGS IN GRAPHICAL INTERFACE**
 
+## Getting started with **datashuttle**
 
+We have given a whistlestop tour of **datashuttle**'s key features here,
+but full details on getting started can be found at our 
+[website](https://datashuttle.neuroinformatics.dev/) and
+[getting started tutorial](https://datashuttle.neuroinformatics.dev/pages/tutorials/getting_started.html).
 
-OLD 
+We are very keen to get feedback on **datashuttle**. 
+Standardisation is incredibly useful, but it should not come at the 
+expense of in running day-to-day projects less easily than you currently 
+are. **datashuttle** aims to make managing your project easier than 
+it currently is – if it is not, we want to hear how it can be improved. 
 
-**estimated reading time: 10 minutes**
-
-Standardised data is important for XXX. Specifications are a way to
-handle this. In a previous blogpost, we motivate NeuroBlueprint, XXX.
-
-You are now convinced for the critical importance of standardisation and 
-want to get started. Now, to simply follow it for your next experiment 
-and problem solved! If only real life was so easy. 
-
-While following any specification is better than no specification, to
-get the most out of a standardised project, it needs to be *standardised*.
-That means every formatting rule obeyed, structure broken or XXX.  
-But real life is full of errors. Typos. Forget what the spec is – no time to look up. 
-One error means there is no longer standardisation – the goal is lost!
-
-The solution to this problem is to automate as much as possible the 
-creation of standardised project folders. This includes filling in
-ann non-critical information and performing live-validation of the 
-project as we go.
-
-Datashuttle performs this role. It has two ways of using, a Python API to 
-integrate into automated pipelines, or a graphical-interface for use in manual 
-acquisition pipelines. 
-
-Affords a lot of benefits e.g. data transfer.
-
-Below we’ll do a whistle-stop tour of datashuttle features 
-so you can see how it might fit into your analysis pipelines. For a comprehensive 
-overview and guides, please see the datashuttle documentation.
-Mention neuroblueprint. 
-
-## Introduction to Datashuttle
-
-[THE IMAGE!]
-
-Datashuttle is to be used in the situation when XXX.
-
-
-## Creating folders with live validation
-
-The first step when making a project is to create project folders. 
-You may automate this as part of an acquisition pipeline before saving 
-acquired data (e.g. behavioural XX, ephys XX) there. Alternatively you may 
-make these by hand prior to setting the output their through an acquisition 
-software's graphical user interface.
-
-They key thing at this stage is to ensure no typographical errors slip in, 
-and as much detail on formatting and folder structure can be abstracted away.
-Through the datashuttle graphical interface, creating new output folders 
-is as easy as:
-
-Live validation
-
-Convenience tags - philosophy any non-custom input should be automated.
-
-When creating through the python API, all features are the same. Can get next 
-subject or session. The live validation ensures that no problems can slip 
-through the next.
-
-
-## Data Transfer
-
-Data transfer leverages the power of standardised data format to
-make convenient transfers. By default, everything is uploaded
-with different overwrite options.
-
-However, true power in custom. Let's say.
-
-Download a subset of the data.
-
-
-## Other benefits and future additions
-
-Logging. 
-
-
-What is whistlestop tour. Get in contact XXX.
-
-
-
+You can get in contact with get in contact through our
+[GitHub Issues](https://github.com/neuroinformatics-unit/datashuttle/issues)
+or
+[Zulip Chat.](https://neuroinformatics.zulipchat.com/#narrow/stream/405999-DataShuttle)
 
 
