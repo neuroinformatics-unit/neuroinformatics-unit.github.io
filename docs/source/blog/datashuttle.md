@@ -8,7 +8,7 @@ language: English
 image: 1
 ---
 
-ADD ESTIMATED READING TIME
+
 
 # Managing neuroscience projects with **datashuttle**
 *Create, validate and transfer standardised project folders*
@@ -26,9 +26,13 @@ ADD ESTIMATED READING TIME
 <br>
 
 Maintaining a well-organised neuroscience project is hard. 
-Despite the best intentions, folder organisation is low on the priority 
-list during hectic data acquisition sessions spent managing complex 
-systems and experimental animals. 
+
+Although everyone can appreciate the benefits of a tidy project
+folder, the practicalities of running an experiment often gets 
+in the way. Folder organisation 
+is low on the list of priorities when it
+comes to acquisition sessions spent managing complex systems 
+and experimental animals.
 
 However, the cost of small mistakes during data acquisition can be high.
 One misplaced character may mean sessions are missed by analysis 
@@ -39,19 +43,27 @@ managing the naming and transfer of folders—a task entirely
 unrelated to the central research goals.
 
 In our previous blog, we highlighted the benefits of data standardisation 
-for systems neuroscience and introduced the 
+for systems neuroscience, introducing the 
 [NeuroBlueprint](https://neuroblueprint.neuroinformatics.dev/) 
 specification. 
 An immediate benefit of a widely-used standard is that the entire community
 can contribute to shared tools for project management.
 This means individual researchers don't waste time
-duplicating data-management code. 
+writing data-management code. 
 
 In this blog post we introduce 
 [**datashuttle**](https://datashuttle.neuroinformatics.dev/)—a 
 tool for the automated creation, 
 validation and transfer of projects organised to 
-the **NeuroBlueprint** standard. 
+the **NeuroBlueprint** standard. **datashutte** aims to
+drop into existing acquisition pipelines, reducing errors
+associated with manual folder creation and removing the need
+to write your down data-management code.
+
+Below we give a whistlestop tour of **datashuttles** and it's key
+features. More information is available at the 
+[datashutte](https://datashuttle.neuroinformatics.dev/) 
+website.
 
 ## How **datashuttle** is used in an experiment
 
@@ -68,33 +80,31 @@ the **NeuroBlueprint** standard.
 <br>
 
 Imagine that you are starting a new experiment and have the first
-acquisition session, or behaviour ('behav') and electrophysiological ('ephys')
-data. 
+acquisition session, or behaviour (`behav`) 
+and electrophysiological (`ephys`) data. 
 
-The first thing you need to do is create the folders that the acquired 
-data will go. **datashuttle** is used there, either through the graphical 
-interface (manual) or python API (automated) to ensure folders are free
-of typographical errors and formatted to NeuroBlueprint standard.
+The first thing typically done prior to acquiring data is to
+create the folders that the data will be stored. 
+**datashuttle** can be used to quickly create the standardised
+project folders in which to store the acquired data. 
+Using **datashuttle** as apposed to manual creation or using custom
+scripts is that it ensures no formatting errors creep in.
 
-Then, acquisition data is saved to these folders while the experiment runs.
-At the end of the session, **datashuttle** transfers the newly acquired data 
+At the end of the session once data is acquired, 
+**datashuttle** transfers the newly acquired data 
 to a central storage machine to be backed up.
 
 Later on in the experiment, you may want to transfer only a subset
-of data from the central machine to an analysis machine—for example,
-to pilot some behavioural data you will grab the 'test' session for
+of data from the central machine to an analysis machine. You may 
+want to pilot a behavioural data analysis, and grab
+for example only the behavioural 'test' session for
 the first 5 subjects. **datashuttle** allows flexible custom transfers
 easily, meaning you don't have to drag and drop these data manually or
 write a custom script.
 
-**datashuttle** performs three key functions during an experimental workflow:
-
-1) Creation and live-validation of folders in the 
-[NeuroBlueprint](https://neuroblueprint.neuroinformatics.dev/) standard
-2)	Transfer of data between acquisition (or analysis) computers and a central storage machine
-3)	Logging of all actions for full project provenance
-
-Below we will give a brief tour of the key **datashuttle** features.
+And that really is all there is to **datashuttle**, a tool to drop into acquisition
+workflows to make folder creation and transfer more convenient and ensure standardisation.
+Below we will give a brief tour of these key **datashuttle** features.
 
 ## Creating folders with live-validation
 
@@ -134,8 +144,7 @@ formatting errors cannot creep into the project:
 ```
 <br>
 
-Through the Python API, folders can be suggested and created through this 
-simple API and slot into acquisition pipelines:
+and folders can be created in an equivalent way through the Python API:
 
 ```python
 from datashuttle import DataShuttle
@@ -147,20 +156,19 @@ created_folder_paths = project.create_folders(
 )
 ```
 
-## Data transfers
+## Data Transfer
 
-It is the end of an experimental acquisition session, and time to 
-store your data on the central server for backup. **datashuttle**
+At the end of an acquisition session, **datashuttle**
 allows you to transfer all new data to the central machine
-at the click of a 'Transfer' button.
+at the click of a `Transfer` button.
 
-However, the real power comes from customisable transfers, for example
-or downloading a subset of data to an analysis machine. Say you wanted
+However, the real power comes from customisable transfers, for 
+example downloading a subset of data to an analysis machine. Say you wanted
 to transfer only the first behavioural session from all subjects
 to an analysis PC. 
 
 In the graphical interface, you could fill in the `Custom Transfer` screen
-as below and click 'Transfer':
+as below and click `Transfer`:
 
 ```{image} /_static/blog_images/datashuttle/how-to-transfer-custom-dark.png
 :align: center
@@ -186,25 +194,24 @@ project.transfer_custom(
 )
 ```
 
-
 ## Logging
-A final feature of datashuttle is logging. Makes it easy. Simple photo
+A final feature of **datashuttle** is logging—whenever a folder is created or
+data transferred, full details are saved in the logs. This ensures
+a full history of the project is available at any time
 
 ***TODO ADD AN IMAGE OF LOGS IN GRAPHICAL INTERFACE**
 
 ## Getting started with **datashuttle**
 
-We have given a whistlestop tour of **datashuttle**'s key features here,
+We have given a brief tour of **datashuttle**'s key features,
 but full details on getting started can be found at our 
 [website](https://datashuttle.neuroinformatics.dev/) and
 [getting started tutorial](https://datashuttle.neuroinformatics.dev/pages/tutorials/getting_started.html).
 
 We are very keen to get feedback on **datashuttle**. 
 Standardisation is incredibly useful, but it should not come at the 
-expense of in running day-to-day projects less easily than you currently 
-are. **datashuttle** aims to make managing your project easier than 
-it currently is – if it is not, we want to hear how it can be improved. 
-
+expense of convenience. **datashuttle** aims to make managing your project easier than 
+it currently is—if it is not, we want to hear how it can be improved. 
 You can get in contact with get in contact through our
 [GitHub Issues](https://github.com/neuroinformatics-unit/datashuttle/issues)
 or
