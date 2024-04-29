@@ -161,3 +161,9 @@ html_theme_options = {
 
 }
 
+html_sidebars = {
+   'blog/index': [
+       # Ablog sidebars (https://ablog.readthedocs.io/en/stable/manual/ablog-configuration-options.html#sidebars)
+       'ablog/recentposts.html'],  # 'ablog/archives.html << we may want to use archives when we have more posts.
+    "**": [],
+}

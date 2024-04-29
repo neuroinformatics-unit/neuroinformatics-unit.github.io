@@ -1,12 +1,10 @@
----
-blogpost: true
-date: 25 April 2024
-author: Joe Ziminski, Niko Sirmpilatze
-location: London, UK
-category: Blog
-language: English
-image: 1
----
+:blogpost: true
+:date: Apr 25, 2024
+:author: Joe Ziminski, Niko Sirmpilatze
+:location: London, UK
+:category: Blog
+:language: English
+:image: 1
 
 # Data organisation with NeuroBlueprint
 *The challenge of unstandardised data in systems neuroscience*
@@ -17,6 +15,7 @@ image: 1
 :align: center
 :width: 75%
 ```
+<br>
 
 The increasing use of software to automate acquisition and 
 analysis pipelines should be revolutionising how researchers collaborate.
@@ -26,19 +25,17 @@ data into community pipelines for common preprocessing and analysis steps.
 Unfortunately this is typically not the case, with researchers 
 often re-coding pipelines from scratch and in isolation.
 
-A lack of standardised data format for systems neuroscience
+A lack of standardised data formats for systems neuroscience
 is a major obstacle to realising the benefits of automation.
-Have you ever borrowed a colleagues analysis scripts, only to spend
+Have you ever borrowed a colleagues' analysis script, only to spend
 the next few hours changing the code structure to fit your data?
 Lack of data standardisation wastes time, prohibits effective 
 collaboration and at worst leads to mistakes in analysis and reporting.
-It becomes impossible for the community to build high-level preprocessing 
-and analysis pipelines.
 
-To address these problems, the [Neuroinformatics Unit](https://neuroinformatics.dev/) at the SWC have 
+To address these problems, the [Neuroinformatics Unit](https://neuroinformatics.dev/) have 
 developed an easy-to-use data standardisation framework, 
 [**NeuroBlueprint**](https://neuroblueprint.neuroinformatics.dev/). This blog motivates the need for
-data standardisation at the SWC and provides an introduction
+data standardisation and provides an introduction
 to **NeuroBlueprint**,
 highlighting its
 place within the current data standardisation landscape.
@@ -68,6 +65,8 @@ you know it, things get messy, things gets misplaced, and what was once clear is
 :align: center
 :width: 100%
 ```
+credit: [ErrantScience](https://errantscience.com/blog/2014/08/06/how-not-to-organise-data/)
+<br>
 
 However, the **payoff for good data management is huge**, not just for teamwork but also for your future self who's 
 racing to submit a paper. The headaches and time lost to disorganised data aren't just frustrating; they can undermine 
@@ -98,7 +97,7 @@ Let's look at two concrete specifications that have been most successful in neur
 
 ## Standardisation landscape: BIDS and NWB
 
-[BIDS](https://bids.neuroimaging.io/) is a data specification widely used in
+[BIDS](https://bids.neuroimaging.io/) is a data specification widely used
 in the field of human neuroimaging, with extensions to systems neuroscience ongoing. 
 Developed through the collaborative efforts of hundreds of researchers, 
 BIDS is known for its intuitive design and comprehensive guidelines. It offers explicit rules for folder and file 
@@ -114,7 +113,7 @@ data sharing.
 
 BIDS and NWB represent the gold-standard of data standardisation—a fully specified dataset
 stored in an open-access file format. Though full standardisation should always be
-the end goal for a published dataset, confirming to full BIDS or NWB during acquisition
+the end goal for a published dataset, conforming to full BIDS or NWB during acquisition
 and analysis—when many of the benefits of standardisation are realised—can be prohibitively difficult. 
 
 For example, BIDS has a level of detail that can be intimidating to new users and difficult to 
@@ -149,6 +148,7 @@ levels. The naming of these folders should adhere to a certain style, as exempli
 :class: only-light
 :width: 650px
 ```
+<br>
 
 While the full specification is available to read 
 [here](https://neuroblueprint.neuroinformatics.dev/specification.html), 

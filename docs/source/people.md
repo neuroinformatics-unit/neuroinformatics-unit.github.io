@@ -1,3 +1,5 @@
+:html_theme.sidebar_primary.remove:
+
 # People
 
 Current members of the Neuroinformatics Unit:
