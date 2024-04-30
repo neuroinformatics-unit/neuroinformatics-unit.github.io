@@ -25,7 +25,7 @@ image: 1
 ```
 <br>
 
-Maintaining a well-organised neuroscience project is hard. 
+**Maintaining a well-organised neuroscience project is hard.**
 
 Although everyone can appreciate the benefits of a tidy project
 folder, the practicalities of running an experiment often gets 
