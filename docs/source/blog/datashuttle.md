@@ -55,7 +55,7 @@ In this blog post we introduce
 [**datashuttle**](https://datashuttle.neuroinformatics.dev/)—a 
 tool for the automated creation, 
 validation and transfer of projects organised to 
-the **NeuroBlueprint** standard. **datashutte** aims to
+the **NeuroBlueprint** standard. **datashuttle** aims to
 drop into existing acquisition pipelines, reducing errors
 associated with manual folder creation and removing the need
 to write your down data-management code.
