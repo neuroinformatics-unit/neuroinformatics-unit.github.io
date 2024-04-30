@@ -84,7 +84,7 @@ acquisition session, or behaviour (`behav`)
 and electrophysiological (`ephys`) data. 
 
 The first thing typically done prior to acquiring data is to
-create the folders that the data will be stored. 
+create the folders that the data will be stored in. 
 **datashuttle** can be used to quickly create the standardised
 project folders in which to store the acquired data. 
 Using **datashuttle** as apposed to manual creation or using custom
