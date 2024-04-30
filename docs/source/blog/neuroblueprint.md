@@ -154,12 +154,11 @@ While the full specification is available to read
 [here](https://neuroblueprint.neuroinformatics.dev/specification.html), 
 we provide a brief summary of its main features:
 
-- A top-level distinction splitting raw data ("rawdata") and data derived from processing the raw data ("derivatives").
-- Hierarchical subject-session-datatype organisation, capturing a model where individual subjects undergo 
-repeated experimental sessions
-- Subject and session folder names are formatted as key-value pairs (only "sub-" and "ses-" required).
+- A top-level distinction splitting raw data ("rawdata") and data derived from processing the raw data ("derivatives")
+- Hierarchical subject-session-datatype organisation
+- Subject and session folder names are formatted as key-value pairs (only "sub-" and "ses-" required)
 - Datatype folders with fixed names (e.g. "ephys")
-- No hard specification on filenames, but recommended structure provided.
+- No hard specification on filenames, but recommended structure provided
 
 ### Limitations 
 
