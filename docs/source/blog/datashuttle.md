@@ -13,14 +13,8 @@ image: 1
 # Managing neuroscience projects with **datashuttle**
 *Create, validate and transfer standardised project folders*
 
-```{image} /_static/blog_images/datashuttle/datashuttle-overview-dark.png
-:align: center
-:class: only-dark
-:width: 650px
-```
 ```{image} /_static/blog_images/datashuttle/datashuttle-overview-light.png
 :align: center
-:class: only-light
 :width: 650px
 ```
 <br>
