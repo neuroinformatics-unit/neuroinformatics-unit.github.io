@@ -62,7 +62,7 @@ to write your down data-management code.
 
 Below we give a whistlestop tour of **datashuttle** and it's key
 features. More information is available at the 
-[datashutte](https://datashuttle.neuroinformatics.dev/) 
+[datashuttle](https://datashuttle.neuroinformatics.dev/) 
 website.
 
 ## How **datashuttle** is used in an experiment
