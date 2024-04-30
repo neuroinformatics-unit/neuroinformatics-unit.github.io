@@ -124,8 +124,8 @@ it is as simple as entering the subject and session name in the folder and click
 ```
 <br>
 
-There are a number of convenience shortcuts to ensure you only need to enter 
-your custom information. For example, the convenience tags 
+There are a number of shortcuts to ensure you only need to enter 
+your custom information. For example, the tags 
 (`@DATE@`, `@TIME@`, `@DATETIME@`) will fill the created folder 
 with the date / time / datetime.
 
