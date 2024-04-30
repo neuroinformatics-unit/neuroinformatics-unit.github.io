@@ -42,7 +42,7 @@ through acquisition scripts—resulting in hours spent writing code
 managing the naming and transfer of folders—a task entirely 
 unrelated to the central research goals.
 
-In our previous blog, we highlighted the benefits of data standardisation 
+In our previous blog post, we highlighted the benefits of data standardisation 
 for systems neuroscience, introducing the 
 [NeuroBlueprint](https://neuroblueprint.neuroinformatics.dev/) 
 specification. 
