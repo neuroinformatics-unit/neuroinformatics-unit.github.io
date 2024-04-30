@@ -60,7 +60,7 @@ drop into existing acquisition pipelines, reducing errors
 associated with manual folder creation and removing the need
 to write your down data-management code.
 
-Below we give a whistlestop tour of **datashuttles** and it's key
+Below we give a whistlestop tour of **datashuttle** and it's key
 features. More information is available at the 
 [datashutte](https://datashuttle.neuroinformatics.dev/) 
 website.
