@@ -1,6 +1,6 @@
 :blogpost: true
-:date: Apr 25, 2024
-:author: Joe Ziminski, Niko Sirmpilatze
+:date: May 01, 2024
+:author: Niko Sirmpilatze, Joe Ziminski
 :location: London, UK
 :category: Blog
 :language: English
