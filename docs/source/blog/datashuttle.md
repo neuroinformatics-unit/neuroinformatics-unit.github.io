@@ -1,6 +1,6 @@
 :blogpost: true
-:date: Apr 25, 2024
-:author: Ziminski, Sirmpilatze
+:date: May 01, 2024
+:author: Joe Ziminski, Niko Sirmpilatze
 :location: London, UK
 :category: Blog
 :language: English
@@ -18,20 +18,18 @@
 
 **Maintaining a well-organised neuroscience project is hard.**
 
-Although everyone can appreciate the benefits of a tidy project
-folder, the practicalities of running an experiment often gets 
+Everyone can appreciate the benefits of a tidy project
+folder, but the practicalities of running an experiment often gets 
 in the way. Folder organisation 
-is low on the list of priorities when it
-comes to acquisition sessions spent managing complex systems 
-and experimental animals.
+is low on the priority list during acquisition sessions 
+spent managing complex systems and experimental animals.
 
-However, the cost of small mistakes during data acquisition can be high.
-One misplaced character may mean sessions are missed by analysis 
-scripts or subject identifications duplicated.
+However, the cost of small mistakes during data acquisition are high.
+One misplaced character can mean sessions are missed by analysis 
+scripts or subject identifiers duplicated.
 The best protection against such errors is automating the process
-through acquisition scripts—resulting in hours spent writing code 
-managing the naming and transfer of folders—a task entirely 
-unrelated to the central research goals.
+through acquisition scripts—resulting in hours spent writing 
+data-management code entirely unrelated to the central research goals.
 
 In our previous blog post, we highlighted the benefits of data standardisation 
 for systems neuroscience, introducing the 
@@ -86,16 +84,24 @@ At the end of the data acquisition session,
 to a central storage machine to be backed up.
 
 Later on in the experiment, you may want to transfer only a subset
-of data from the central machine to an analysis machine. You may 
-want to pilot a behavioural data analysis, and grab
-for example only the behavioural data for
-the first 5 subjects. **datashuttle** allows flexible custom transfers, 
+of data from the central machine to separate computer for analysis. For exampe,
+you may  want to pilot a behavioural data analysis, grabbing
+only the behavioural data for the first 5 subjects. 
+**datashuttle** allows flexible custom transfers, 
 meaning you don't have to drag and drop these data manually or
 write a custom script.
 
-And that really is all there is to **datashuttle**, a tool to drop into acquisition
-workflows to make folder creation and transfer more convenient and ensure standardisation.
-Below we will give a brief tour of these key **datashuttle** features.
+And that really is all there is to **datashuttle**, which aims to, 
+drop into your existing acquisition pipelines whether they be manual
+or automated:
+- the **graphical interface** can be used instead of manual folder creation, 
+reducing the risk of typographical errors
+- alternatively, the **Python API** can be used directly in automated acquisition 
+pipelines, removing the need to write you own data-management code
+
+Below we will give an overview of **datashttle**'s key folder creation
+and transfer features.
+
 
 ## Creating folders with live-validation
 
@@ -154,7 +160,7 @@ allows you to transfer all new data to the central machine
 at the click of a `Transfer` button.
 
 However, the real power comes from customisable transfers, for 
-example downloading a subset of data to an analysis machine. Say you wanted
+example downloading a subset of data to a machine for analysis. Say you wanted
 to transfer only the first behavioural session from all subjects
 to an analysis PC. 
 
@@ -188,9 +194,21 @@ project.transfer_custom(
 ## Logging
 A final feature of **datashuttle** is logging—whenever a folder is created or
 data transferred, full details are saved in the logs. This ensures
-a full history of the project is available at any time
+a full history of the project is available at any time. Logs are stored
+on the local filesystem and can be viewed in a text editor or through
+the graphical interface:
 
-***TODO ADD AN IMAGE OF LOGS IN GRAPHICAL INTERFACE**
+```{image} /_static/blog_images/datashuttle/logging-example-dark.png
+:align: center
+:class: only-dark
+:width: 650px
+```
+```{image} /_static/blog_images/datashuttle/logging-example-light.png
+:align: center
+:class: only-light
+:width: 650px
+```
+<br>
 
 ## Getting started with **datashuttle**
 
