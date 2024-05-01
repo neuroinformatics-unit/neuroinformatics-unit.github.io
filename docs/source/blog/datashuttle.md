@@ -58,6 +58,9 @@ website.
 
 ## How **datashuttle** is used in an experiment
 
+Imagine that you are starting a new experiment during which you acquire both
+behavioural (`behav`) and electrophysiological (`ephys`) data. 
+
 ```{image} /_static/blog_images/datashuttle/tutorial-1-example-file-tree-dark.png
 :align: center
 :class: only-dark
@@ -70,27 +73,24 @@ website.
 ```
 <br>
 
-Imagine that you are starting a new experiment and have the first
-acquisition session, or behaviour (`behav`) 
-and electrophysiological (`ephys`) data. 
 
 The first thing typically done prior to acquiring data is to
 create the folders that the data will be stored in. 
 **datashuttle** can be used to quickly create the standardised
 project folders in which to store the acquired data. 
 Using **datashuttle** as apposed to manual creation or using custom
-scripts is that it ensures no formatting errors creep in.
+scripts ensures that no formatting errors creep in.
 
-At the end of the session once data is acquired, 
+At the end of the data acquisition session, 
 **datashuttle** transfers the newly acquired data 
 to a central storage machine to be backed up.
 
 Later on in the experiment, you may want to transfer only a subset
 of data from the central machine to an analysis machine. You may 
 want to pilot a behavioural data analysis, and grab
-for example only the behavioural 'test' session for
-the first 5 subjects. **datashuttle** allows flexible custom transfers
-easily, meaning you don't have to drag and drop these data manually or
+for example only the behavioural data for
+the first 5 subjects. **datashuttle** allows flexible custom transfers, 
+meaning you don't have to drag and drop these data manually or
 write a custom script.
 
 And that really is all there is to **datashuttle**, a tool to drop into acquisition
@@ -99,8 +99,8 @@ Below we will give a brief tour of these key **datashuttle** features.
 
 ## Creating folders with live-validation
 
-To create folders manually through the graphical interface with **datashuttle**, 
-it is as simple as entering the subject and session name in the folder and clicking 'create'.
+Creating folders through **datashuttle**'s graphical interface is as simple as
+entering the subject and session name in the folder and clicking 'create'.
 
 
 ```{image} /_static/blog_images/datashuttle/create-folders-example-dark.png
