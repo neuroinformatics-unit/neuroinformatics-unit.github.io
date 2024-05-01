@@ -124,7 +124,10 @@ entering the subject and session name in the folder and clicking 'create'.
 There are a number of shortcuts to ensure you only need to enter 
 your custom information. For example, the tags 
 (`@DATE@`, `@TIME@`, `@DATETIME@`) will fill the created folder 
-with the date / time / datetime.
+with the date / time / datetime. A full list of shortcuts
+(e.g. automatic suggestion of next subject / session names)
+are available in the 
+[documentation](https://datashuttle.neuroinformatics.dev/pages/how_tos/create-folders.html#creating-project-folders)
 
 **datashuttle** performs live-validation of inputs, ensuring 
 formatting errors cannot creep into the project:
@@ -179,8 +182,7 @@ as below and click `Transfer`:
 ```
 <br>
 
-and in code, it looks similar:
-
+and transfers can be similarly performed through the Python API:
 ```python
 from datashuttle import DataShuttle
 
@@ -192,8 +194,8 @@ project.transfer_custom(
 ```
 
 ## Logging
-A final feature of **datashuttle** is logging—whenever a folder is created or
-data transferred, full details are saved in the logs. This ensures
+Whenever a folder is created or data transferred in **datashuttle**, 
+full details are saved in the logs. This ensures
 a full history of the project is available at any time. Logs are stored
 on the local filesystem and can be viewed in a text editor or through
 the graphical interface:
@@ -213,15 +215,16 @@ the graphical interface:
 ## Getting started with **datashuttle**
 
 We have given a brief tour of **datashuttle**'s key features,
-but full details on getting started can be found at our 
+but full details on getting started can be found on our 
 [website](https://datashuttle.neuroinformatics.dev/) and
-[getting started tutorial](https://datashuttle.neuroinformatics.dev/pages/tutorials/getting_started.html).
+in the [getting started tutorial](https://datashuttle.neuroinformatics.dev/pages/tutorials/getting_started.html).
 
-We are very keen to get feedback on **datashuttle**. 
 Standardisation is incredibly useful, but it should not come at the 
 expense of convenience. **datashuttle** aims to make managing your project easier than 
 it currently is—if it is not, we want to hear how it can be improved. 
-You can get in contact with get in contact through our
+
+We are very keen to get feedback on **datashuttle**. 
+Please can get in contact anytime through our
 [GitHub Issues](https://github.com/neuroinformatics-unit/datashuttle/issues)
 or
 [Zulip Chat.](https://neuroinformatics.zulipchat.com/#narrow/stream/405999-DataShuttle)
