@@ -1,12 +1,10 @@
 :blogpost: true
-:date: 25 April 2024
-:authors: Joe Ziminski, Niko Sirmpilatze
-:blog_default_author: Joe Ziminski
+:date: Apr 25, 2024
+:author: Ziminski, Sirmpilatze
 :location: London, UK
 :category: Blog
 :language: English
 :image: 1
-
 
 
 # Managing neuroscience projects with **datashuttle**
