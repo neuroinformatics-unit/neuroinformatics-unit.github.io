@@ -1,14 +1,11 @@
 Blog
 ================================
 
-Recent blog posts:
-
-
 .. postlist:: 5
    :list-style: circle
    :category: Blog
-   :format: {title}
-   :excerpts: 
-   :sort:
+   :date: %B %d, %Y
+   :format: {title} by {author}, {date}
+   :excerpts:
 
 

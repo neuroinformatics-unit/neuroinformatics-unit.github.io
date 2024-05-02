@@ -1,12 +1,10 @@
----
-blogpost: true
-date: 23 June 2023
-author: Laura Porta
-location: London, UK
-category: Blog
-language: English
-image: 1
----
+:blogpost: true
+:date: June 23, 2023
+:author: Laura Porta
+:location: London, UK
+:category: Blog
+:language: English
+:image: 1
 
 # Why and How to Translate Scientific code from MATLAB to Python: A Guide for Researchers
 *Author: Laura Porta*
