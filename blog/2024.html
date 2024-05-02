@@ -6,9 +6,8 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <title>General development guidelines &#8212; NIU</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Posted in 2024 &#8212; NIU</title>
   
   
   
@@ -55,17 +54,22 @@
                 gtag('js', new Date());
                 gtag('config', 'G-6260TGM7TY');
             </script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'get-involved/development_guidelines';</script>
-    <link rel="canonical" href="https://neuroinformatics.dev/get-involved/development_guidelines.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'blog/2024';</script>
+    <link rel="canonical" href="https://neuroinformatics.dev/blog/2024.html" />
     <link rel="icon" href="../_static/logo_light.png"/>
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Development guidelines for specific languages and frameworks" href="languages_frameworks.html" />
-    <link rel="prev" title="Get involved" href="index.html" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../blog/atom.xml"
+  title="Posted in 2024"
+/>
 
 
 
@@ -190,7 +194,7 @@
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../blog/index.html">
+                      <a class="nav-link nav-internal" href="index.html">
                         Blog
                       </a>
                     </li>
@@ -201,8 +205,8 @@
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
                     
-                    <li class="nav-item current active">
-                      <a class="nav-link dropdown-item nav-internal" href="index.html">
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../get-involved/index.html">
                         Get involved
                       </a>
                     </li>
@@ -336,10 +340,6 @@ document.write(`
   
 
   
-    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
-      <span class="fa-solid fa-outdent"></span>
-    </label>
-  
 </div>
 
     </header>
@@ -349,6 +349,8 @@ document.write(`
     <div class="bd-container__inner bd-page-width">
       
       
+      
+        
       
       <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
         
@@ -392,7 +394,7 @@ document.write(`
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../blog/index.html">
+                      <a class="nav-link nav-internal" href="index.html">
                         Blog
                       </a>
                     </li>
@@ -403,8 +405,8 @@ document.write(`
                 </button>
                 <ul id="pst-nav-more-links-2" class="dropdown-menu">
                     
-                    <li class="nav-item current active">
-                      <a class="nav-link dropdown-item nav-internal" href="index.html">
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../get-involved/index.html">
                         Get involved
                       </a>
                     </li>
@@ -540,10 +542,7 @@ document.write(`
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    
-    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Get involved</a></li>
-    
-    <li class="breadcrumb-item active" aria-current="page">General...</li>
+    <li class="breadcrumb-item active" aria-current="page">Posted in 2024</li>
   </ul>
 </nav>
 </div>
@@ -560,122 +559,117 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-<section class="tex2jax_ignore mathjax_ignore" id="general-development-guidelines">
-<h1>General development guidelines<a class="headerlink" href="#general-development-guidelines" title="Link to this heading">#</a></h1>
-<p>All our software is built as a team, and this means we must agree on some development conventions. This page
-covers our internal development guidelines, which we hope are also useful to external contributors.</p>
-<section id="general-principles">
-<h2>General principles<a class="headerlink" href="#general-principles" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>All projects will use <a class="reference external" href="https://git-scm.com/">Git</a> for version control and <a class="reference external" href="https://github.com/">GitHub</a> for hosting.</p></li>
-<li><p>By default we will use the <a class="reference external" href="https://github.com/neuroinformatics-unit">neuroinformatics-unit</a> organisation for new projects.
-Otherwise we may use other organisations, e.g. the <a class="reference external" href="https://github.com/SainsburyWellcomeCentre">SWC organisation</a> when
-working with SWC researchers, or when releasing software to the community. Often we will use a project-specific organisation (e.g. <a class="reference external" href="https://github.com/brainglobe">BrainGlobe</a>).</p></li>
-<li><p>Unless there is a specific reason not to, we will develop all software in the open (i.e. public).
-This facilitates collaboration and encourages good software development practices.</p></li>
-<li><p>All changes to a codebase must be via a
-<a class="reference external" href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests">Pull Request (PR)</a> approved by another member of the team.
-How detailed the review should be will depend depends on the changes made, and the current status of the project. E.g.
-a brand new, exploratory project may not need every line of code checked in detail, but a heavily used community project may do.</p></li>
-<li><p>All software is developed in branches. When developing a new feature, or planning to make substantive changes
-(e.g. not a quick bug fix which could go straight to a ready to review PR), make a new branch as well as a draft
-PR detailing the purpose of the new code. Then, new commits can be easily tracked and commented on in-progress,
-and extended periods of coding in isolation avoided. When the code is ready to be merged, the PR can be changed to
-“ready to review” for full review. All code must be reviewed by at least one other team member
-(or collaborator) before merging.</p></li>
-<li><p>Code should be reviewed often, in as small a block as is practical. There should be no “magic unveiling” of code
-developed in secret over a long time. Commits should be pushed to GitHub as often as practical, and feedback from
-others (code review, and informal conversation) solicited as often as possible.</p></li>
-<li><p>We will use the best tool (language, framework etc.) for the job. This depends on many factors such as the
-computation itself, relevant other packages and collaborators. We will always prefer to work in open-source languages.
-Python is likely to often be the most appropriate language due to the level of adoption in the community (we want
-researchers to contribute to the code).
-Guidelines specific to each language or framework can be found in
-<a class="reference internal" href="languages_frameworks.html"><span class="doc std std-doc">Development guidelines for specific languages and frameworks</span></a>.</p></li>
-<li><p>We aim that software can be used across operating systems, by novice users and using anything from a standard laptop
-to HPC.</p></li>
-<li><p>All software will be fully documented. Our understanding of documentation is guided by the systematic
-<a class="reference external" href="https://diataxis.fr/">diataxis</a> framework. We will strive to standardise the documentation structure across projects
-by <a class="reference external" href="https://diataxis.fr/how-to-use-diataxis/#">gradually adopting the diataxis approach</a>.</p></li>
-<li><p>All software will have (close to) 100% test coverage. This applies at all stages, i.e. tests shouldn’t be added
-“later” (later often doesn’t come). <strong>All code should be fully tested (and passing those tests) before submitting for
-review</strong>. If the code cannot be fully tested, or is failing the tests, the PR should be marked as “draft” to enable discussion.</p></li>
-<li><p>All tests should run automatically on GitHub actions on macOS, Windows and Linux where appropriate. Other testing
-permutations will depend on the language, e.g. for Python, all supported Python versions should be tested on at least
-one operating system.</p></li>
-<li><p>As far as possible, we should follow <a class="reference external" href="https://en.wikipedia.org/wiki/Test-driven_development">Test Driven Development</a> practices.</p></li>
-<li><p>We will use <a class="reference external" href="https://semver.org/">semantic versioning</a> for all projects.</p></li>
-</ul>
-</section>
-<section id="pull-requests">
-<h2>Pull requests<a class="headerlink" href="#pull-requests" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Please submit <em>draft</em> pull requests as early as possible (you can still push to the branch once submitted) to
-allow for discussion.</p></li>
-<li><p>One approval of a PR is enough for it to be merged.</p></li>
-<li><p>Unless someone approves the PR with optional comments, the PR can be immediately merged by the approving reviewer.</p></li>
-<li><p>Please merge via “Squash and Merge” on GitHub to maintain a clean commit history.</p></li>
-<li><p>Ask for a review from someone specific if you think they would be a particularly suited reviewer (possibly noting
-why they are suited on the PR description)</p></li>
-</ul>
-</section>
-<section id="starting-a-new-project">
-<h2>Starting a new project<a class="headerlink" href="#starting-a-new-project" title="Link to this heading">#</a></h2>
-<p>When beginning a new project, the above guidelines can be relaxed until the basic structure of the code is established.
-In particular, rather than waiting for a series of small PRs to be merged, one model could be:</p>
-<ul class="simple">
-<li><p>Start the project in a <code class="docutils literal notranslate"><span class="pre">dev</span></code> branch</p></li>
-<li><p>Open a draft PR, and assign someone as a reviewer (for another set of eyes, not necessarily a proper review)</p></li>
-<li><p>Keep committing to <code class="docutils literal notranslate"><span class="pre">dev</span></code> until a good initial project structure is defined</p></li>
-<li><p>Merge <code class="docutils literal notranslate"><span class="pre">dev</span></code> into <code class="docutils literal notranslate"><span class="pre">main</span></code></p></li>
-<li><p>Move to feature branch/PR workflow (branching from <code class="docutils literal notranslate"><span class="pre">dev</span></code> if necessary while waiting for <code class="docutils literal notranslate"><span class="pre">dev</span></code> to be merged)</p></li>
-</ul>
-</section>
-<section id="issue-tags">
-<h2>Issue tags<a class="headerlink" href="#issue-tags" title="Link to this heading">#</a></h2>
-<p>All new repositories in the NIU organisation will have the following tags. These can be added to existing projects to
-help standardise how we categorise issues. As a general rule, <code class="docutils literal notranslate"><span class="pre">critical</span></code> issues should be tackled ASAP and
-<code class="docutils literal notranslate"><span class="pre">priority</span></code> issues should be tackled before any others.</p>
-<table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Label</p></th>
-<th class="head"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>critical</p></td>
-<td><p>To be addressed first</p></td>
-</tr>
-<tr class="row-odd"><td><p>priority</p></td>
-<td><p>More important than other issues</p></td>
-</tr>
-<tr class="row-even"><td><p>documentation</p></td>
-<td><p>Improvements or additions to documentation</p></td>
-</tr>
-<tr class="row-odd"><td><p>bug</p></td>
-<td><p>Something isn’t working</p></td>
-</tr>
-<tr class="row-even"><td><p>enhancement</p></td>
-<td><p>New feature or request</p></td>
-</tr>
-<tr class="row-odd"><td><p>duplicate</p></td>
-<td><p>This issue or pull request already exists</p></td>
-</tr>
-<tr class="row-even"><td><p>good first issue</p></td>
-<td><p>Good for newcomers</p></td>
-</tr>
-<tr class="row-odd"><td><p>question</p></td>
-<td><p>Further information is requested</p></td>
-</tr>
-<tr class="row-even"><td><p>wontfix</p></td>
-<td><p>This will not be worked on</p></td>
-</tr>
-</tbody>
-</table>
-</section>
-</section>
 
-<div class="section ablog__blog_comments">
+<div class="section ablog__collection">
+  <h1>
+    
+      <span>Posted in
+      
+    2024
+    
+  </span>
+  </h1>
+  
+  
+  <div class="section ablog-post">
+    <h2 class="ablog-post-title">
+      <a href="neuroblueprint.html">Data organisation with NeuroBlueprint</a>
+    </h2>
+    <ul class="ablog-archive">
+      <li>
+        
+        
+        <i class="fa fa-calendar"></i>
+        
+        <span>02 May 2024</span>
+        
+      </li>
+      <div class="ablog-sidebar-item ablog__postcard2">
+
+
+<li id="ablog-sidebar-item author ablog__author">
+  <span>
+    
+    <i class="fa-fw fa fa-user"></i>
+    
+    </span>
+  
+  
+  <a href="author/niko-sirmpilatze.html">Niko Sirmpilatze</a>
+  
+  ,
+  
+  
+  
+  
+  <a href="author/joe-ziminski.html">Joe Ziminski</a>
+  
+  
+  
+</li>
+
+
+<li id="ablog-sidebar-item location ablog__location">
+  <span>
+    
+    <i class="fa-fw fa fa-location-arrow"></i>
+    
+    </span>
+  
+  
+  <a href="location/london.html">London</a>
+  
+  ,
+  
+  
+  
+  
+  <a href="location/uk.html">UK</a>
+  
+  
+  
+</li>
+
+
+<li id="ablog-sidebar-item language ablog__language">
+  <span>
+    
+    <i class="fa-fw fa fa-language"></i>
+    
+    </span>
+  
+  
+  <a href="language/english.html">English</a>
+  
+  
+  
+</li>
+
+
+<li id="ablog-sidebar-item category ablog__category">
+  <span>
+    
+    <i class="fa-fw fa fa-folder-open"></i>
+    
+    </span>
+  
+  
+  <a href="category/blog.html">Blog</a>
+  
+  
+  
+</li>
+
+
+
+</div>
+    </ul>
+    <p class="ablog-post-excerpt"><p><em>The challenge of unstandardised data in systems neuroscience</em></p>
+<img alt="../_images/errant-science-data-organisation.jpg" class="align-center" src="../_images/errant-science-data-organisation.jpg" style="width: 75%;" /></p>
+
+    <p class="ablog-post-expand"><a href="neuroblueprint.html"><em>Read more ...</em></a></p>
+    <hr/>
+  </div>
   
   
 </div>
@@ -689,24 +683,6 @@ help standardise how we categorise issues. As a general rule, <code class="docut
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="index.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Get involved</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="languages_frameworks.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Development guidelines for specific languages and frameworks</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -714,34 +690,7 @@ help standardise how we categorise issues. As a general rule, <code class="docut
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-<div
-    id="pst-page-navigation-heading-2"
-    class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
-  </div>
-  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-principles">General principles</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pull-requests">Pull requests</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-a-new-project">Starting a new project</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#issue-tags">Issue tags</a></li>
-</ul>
-  </nav></div>
-
-  <div class="sidebar-secondary-item">
-
-  <div class="tocsection sourcelink">
-    <a href="../_sources/get-involved/development_guidelines.md.txt">
-      <i class="fa-solid fa-file-lines"></i> Show Source
-    </a>
-  </div>
-</div>
-
-</div></div>
+                <div class="bd-sidebar-secondary bd-toc"></div>
               
             
           </div>
