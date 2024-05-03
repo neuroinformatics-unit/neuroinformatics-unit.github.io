@@ -1,5 +1,5 @@
 :blogpost: true
-:date: May 01, 2024
+:date: May 02, 2024
 :author: Joe Ziminski, Niko Sirmpilatze
 :location: London, UK
 :category: Blog
@@ -19,26 +19,24 @@
 **Maintaining a well-organised neuroscience project is hard.**
 
 Everyone can appreciate the benefits of a tidy project
-folder, but the practicalities of running an experiment often gets 
+folder, but the practicalities of running an experiment often get 
 in the way. Folder organisation 
 is low on the priority list during acquisition sessions 
-spent managing complex systems and experimental animals.
+spent managing complex equipment and experimental animals.
 
 However, the cost of small mistakes during data acquisition are high.
 One misplaced character can mean sessions are missed by analysis 
 scripts or subject identifiers duplicated.
 The best protection against such errors is automating the process
 through acquisition scripts—resulting in hours spent writing 
-data-management code entirely unrelated to the central research goals.
+data-management code entirely unrelated the central research goal.
 
-In our previous blog post, we highlighted the benefits of data standardisation 
+In our previous blog post we highlighted the benefits of data standardisation 
 for systems neuroscience, introducing the 
 [NeuroBlueprint](https://neuroblueprint.neuroinformatics.dev/) 
 specification. 
 An immediate benefit of a widely-used standard is that the entire community
-can contribute to shared tools for project management.
-This means individual researchers don't waste time
-writing data-management code. 
+can share tools for project management.
 
 In this blog post we introduce 
 [**datashuttle**](https://datashuttle.neuroinformatics.dev/)—a 
@@ -49,14 +47,21 @@ drop into existing acquisition pipelines, reducing errors
 associated with manual folder creation and removing the need
 to write your down data-management code.
 
-Below we give a whistlestop tour of **datashuttle** and it's key
-features. More information is available at the 
-[datashuttle](https://datashuttle.neuroinformatics.dev/) 
-website.
+Below we give a whistlestop tour of **datashuttle** and its key
+features. 
 
 ## How **datashuttle** is used in an experiment
 
-Imagine that you are starting a new experiment during which you acquire both
+**datashuttle** runs on Windows, macOS or Linux and is
+[easy to install](https://datashuttle.neuroinformatics.dev/pages/how_tos/install.html)
+through 
+[Conda Forge](https://conda-forge.org/)
+or 
+[PyPi](https://pypi.org/). **datashuttle** can be used
+from within Python code (using the 'Python API') or through a graphical 
+interface that works in any system terminal.
+
+Imagine you are starting a new experiment, during which you acquire both
 behavioural (`behav`) and electrophysiological (`ephys`) data. 
 
 ```{image} /_static/blog_images/datashuttle/tutorial-1-example-file-tree-dark.png
@@ -73,15 +78,20 @@ behavioural (`behav`) and electrophysiological (`ephys`) data.
 
 
 The first thing typically done prior to acquiring data is to
-create the folders that the data will be stored in. 
-**datashuttle** can be used to quickly create the standardised
-project folders in which to store the acquired data. 
-Using **datashuttle** as apposed to manual creation or using custom
-scripts ensures that no formatting errors creep in.
+create the folders it will be stored in. 
+**datashuttle** can be used to quickly create standardised
+project folders for this purpose, with live-validation to ensure
+no errors creep in.
 
-At the end of the data acquisition session, 
-**datashuttle** transfers the newly acquired data 
-to a central storage machine to be backed up.
+Then, the important part, acquiring the actual data (hoping the animals and
+their brain's do what you want them to!). **datashuttle** plays no role
+in the acquisition process, its job so far was to simply create the standardised project folders.
+
+Once the data is collected, it is usually moved to a central storage
+machine and collated with other project data. This might typically be 
+done by manually dragging and dropping, or a custom transfer script.
+**datashuttle** you to transfer project folders after acquisition 
+at the click of a button, or with a single function call.
 
 Later on in the experiment, you may want to transfer only a subset
 of data from the central machine to separate computer for analysis. For exampe,
@@ -91,17 +101,11 @@ only the behavioural data for the first 5 subjects.
 meaning you don't have to drag and drop these data manually or
 write a custom script.
 
-And that really is all there is to **datashuttle**, which aims to, 
-drop into your existing acquisition pipelines whether they be manual
-or automated:
-- the **graphical interface** can be used instead of manual folder creation, 
-reducing the risk of typographical errors
-- alternatively, the **Python API** can be used directly in automated acquisition 
-pipelines, removing the need to write you own data-management code
+Overall, **datashuttle** aims to drop into your existing acquisition pipelines whether 
+they be manual or automated, with two ways to use it:
 
 Below we will give an overview of **datashttle**'s key folder creation
 and transfer features.
-
 
 ## Creating folders with live-validation
 
@@ -121,15 +125,7 @@ entering the subject and session name in the folder and clicking 'create'.
 ```
 <br>
 
-There are a number of shortcuts to ensure you only need to enter 
-your custom information. For example, the tags 
-(`@DATE@`, `@TIME@`, `@DATETIME@`) will fill the created folder 
-with the date / time / datetime. A full list of shortcuts
-(e.g. automatic suggestion of next subject / session names)
-are available in the 
-[documentation](https://datashuttle.neuroinformatics.dev/pages/how_tos/create-folders.html#creating-project-folders)
-
-**datashuttle** performs live-validation of inputs, ensuring 
+Live-validation of inputs, ensuring 
 formatting errors cannot creep into the project:
 
 ```{image} /_static/blog_images/datashuttle/validation-bad-dark.png
@@ -144,7 +140,16 @@ formatting errors cannot creep into the project:
 ```
 <br>
 
-and folders can be created in an equivalent way through the Python API:
+There are a number of shortcuts to ensure you only need to enter 
+your custom information. For example, the tags 
+(`@DATE@`, `@TIME@`, `@DATETIME@`) will fill the created folder 
+with the date / time / datetime. A full list of shortcuts
+(e.g. automatic suggestion of next subject / session names)
+are available in the 
+[documentation](https://datashuttle.neuroinformatics.dev/pages/how_tos/create-folders.html#creating-project-folders)
+
+
+Folders can be created in an equivalent way through the Python API:
 
 ```python
 from datashuttle import DataShuttle
@@ -158,16 +163,15 @@ created_folder_paths = project.create_folders(
 
 ## Data Transfer
 
-At the end of an acquisition session, **datashuttle**
-allows you to transfer all new data to the central machine
+**datashuttle** allows you to transfer all data between machines
 at the click of a `Transfer` button.
 
-However, the real power comes from customisable transfers, for 
-example downloading a subset of data to a machine for analysis. Say you wanted
-to transfer only the first behavioural session from all subjects
-to an analysis PC. 
+The real power comes from customisable transfers. Let's say
+that you wanted to transfer a subset of your acquired data to a 
+workstation for analysis. For example, only the first behavioural 
+session from all subjects to pilot an animal-tracking pipeline.
 
-In the graphical interface, you could fill in the `Custom Transfer` screen
+In the graphical interface, you would fill in the `Custom Transfer` screen
 as below and click `Transfer`:
 
 ```{image} /_static/blog_images/datashuttle/how-to-transfer-custom-dark.png
@@ -182,7 +186,12 @@ as below and click `Transfer`:
 ```
 <br>
 
-and transfers can be similarly performed through the Python API:
+The keyword `all_sub` will transfer any subject while the `@*@` tag
+in the session name acts as a wildcard. There are 
+[many more options](https://datashuttle.neuroinformatics.dev/pages/how_tos/transfer-data.html#custom-transfers)
+for customised transfer available.
+
+Transfers can be run through the Python API similarly:
 ```python
 from datashuttle import DataShuttle
 
@@ -194,6 +203,7 @@ project.transfer_custom(
 ```
 
 ## Logging
+
 Whenever a folder is created or data transferred in **datashuttle**, 
 full details are saved in the logs. This ensures
 a full history of the project is available at any time. Logs are stored
@@ -217,13 +227,11 @@ the graphical interface:
 We have given a brief tour of **datashuttle**'s key features,
 but full details on getting started can be found on our 
 [website](https://datashuttle.neuroinformatics.dev/) and
-in the [getting started tutorial](https://datashuttle.neuroinformatics.dev/pages/tutorials/getting_started.html).
+[Getting Started tutorial](https://datashuttle.neuroinformatics.dev/pages/tutorials/getting_started.html).
 
 Standardisation is incredibly useful, but it should not come at the 
-expense of convenience. **datashuttle** aims to make managing your project easier than 
-it currently is—if it is not, we want to hear how it can be improved. 
-
-We are very keen to get feedback on **datashuttle**. 
+expense of convenience. **datashuttle** should make managing your project easier than 
+it currently is—if not, we want to hear how it can be improved.
 Please can get in contact anytime through our
 [GitHub Issues](https://github.com/neuroinformatics-unit/datashuttle/issues)
 or
