@@ -6,6 +6,7 @@
 :language: English
 :image: 1
 
+(target-neuroblueprint)=
 # Data organisation with NeuroBlueprint
 *The challenge of unstandardised data in systems neuroscience*
 
@@ -40,7 +41,8 @@ to **NeuroBlueprint**,
 highlighting its
 place within the current data standardisation landscape.
 
-In a companion posts, we introduce [**datashuttle**](https://datashuttle.neuroinformatics.dev), a tool to 
+In a [companion post](target-datashuttle), we introduce
+[**datashuttle**](https://datashuttle.neuroinformatics.dev), a tool to 
 automate the implementation of **NeuroBlueprint**.
 
 ## Why should you care about standardisation?
