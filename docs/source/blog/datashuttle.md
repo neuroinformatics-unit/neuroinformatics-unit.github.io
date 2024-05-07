@@ -1,5 +1,5 @@
 :blogpost: true
-:date: May 02, 2024
+:date: May 07, 2024
 :author: Joe Ziminski, Niko Sirmpilatze
 :location: London, UK
 :category: Blog
@@ -55,9 +55,9 @@ features.
 **datashuttle** runs on Windows, macOS or Linux and is
 [easy to install](https://datashuttle.neuroinformatics.dev/pages/how_tos/install.html)
 through 
-[Conda Forge](https://conda-forge.org/)
+[conda-forge](https://anaconda.org/conda-forge/datashuttle)
 or 
-[PyPi](https://pypi.org/). **datashuttle** can be used
+[PyPI](https://pypi.org/project/datashuttle). **datashuttle** can be used
 from within Python code (using the *Python API*) or through a graphical 
 interface that works in any system terminal.
 
@@ -103,7 +103,7 @@ they be manual or automated, with two ways to use it:
 - The **graphical user interface** can be used instead of manual folder creation
 or transfer, reducing the risk of errors
 - The **Python API** can be used directly in automated acquisition
-pipelines, removing the need to write you own data-management code
+pipelines, removing the need to write your own data-management code
 
 Below we will give an overview of **datashuttle**'s key folder creation
 and transfer features.
@@ -111,7 +111,7 @@ and transfer features.
 ## Creating folders with live-validation
 
 Creating folders through **datashuttle**'s graphical interface is as simple as
-entering the subject and session names, selecting the datatype and clicking 'create':
+entering the subject and session names, selecting the datatype and clicking `Create Folders`
 
 
 ```{image} /_static/blog_images/datashuttle/create-folders-example-dark.png
@@ -154,14 +154,13 @@ subject / session names) are available in the
 Folders can be created in an equivalent way through the Python API:
 
 ```python
-from datashuttle import DataShuttle             # import datashuttle
+from datashuttle import DataShuttle
 
-project = DataShuttle("my_first_project")       # initialise the project
+project = DataShuttle("my_first_project")
 
-created_folder_paths = project.create_folders(  # create the folders
+created_folder_paths = project.create_folders(
     "sub-001", "ses-001_@DATE@", ["behav", "funcimg"]
 )
-```
 
 ## Data Transfer
 
@@ -205,7 +204,7 @@ project.transfer_custom(
 
 ## Logging
 
-A complete record of all file transfers in a neuroscience project 
+A complete record of all file transfers 
 is invaluable, ensuring the full history of the project can be checked 
 at any time. When a folder is created or data transferred in **datashuttle**, 
 all details are logged to the local machine. Logs are stored
@@ -227,7 +226,7 @@ the graphical interface:
 ## Getting started with **datashuttle**
 
 We have given a brief tour of **datashuttle**'s key features,
-but full details on getting started can be found on our 
+but full details on getting started can be found on the 
 [website](https://datashuttle.neuroinformatics.dev/) and
 [Getting Started tutorial](https://datashuttle.neuroinformatics.dev/pages/tutorials/getting_started.html).
 
