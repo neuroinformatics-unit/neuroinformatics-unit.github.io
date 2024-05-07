@@ -90,7 +90,7 @@ at the click of a button (graphical interface) or with a
 single function call (Python API).
 
 Later on in the experiment, you may want to transfer only a subset
-of data from the central machine to separate computer for analysis. For example,
+of data from the central machine to a separate computer for analysis. For example,
 you may  want to pilot an animal tracking pipeline, grabbing
 only the behavioural data for the first 5 subjects. 
 **datashuttle** allows flexible custom transfers, 
