@@ -26,7 +26,7 @@ spent managing complex setups and experimental animals.
 
 However, the cost of small mistakes during data acquisition can be high.
 One misplaced character may mean sessions are missed by analysis 
-scripts or subject identifiers duplicated.
+scripts or subject identifiers are duplicated.
 The best protection against such errors is automating the process
 through acquisition scripts—resulting in hours spent writing 
 data-management code entirely unrelated to your central research goals.
@@ -77,13 +77,12 @@ behavioural (`behav`) and electrophysiological (`ephys`) data.
 <br>
 
 
-The first thing typically done prior to acquiring data is to
-create the folders to store it in. 
+Typically, the initial step is to create the folders to store the data.
 **datashuttle** can be used to quickly create standardised
 project folders for this purpose, with live-validation to ensure
 no errors are introduced.
 
-Once the data is collected, it is often moved to a central storage
+Once the data are collected, they are often moved to a central storage
 machine and integrated with previously collected data. 
 **datashuttle** allows you to transfer project folders
 at the click of a button (graphical interface) or with a 
@@ -98,11 +97,11 @@ meaning you don't have to drag and drop these data manually or
 write a custom script.
 
 **datashuttle** aims to drop into your existing acquisition pipelines whether 
-they be manual or automated, with two ways to use it:
+they are manual or automated, and can be used in two ways:
 
-- The **graphical user interface** can be used instead of manual folder creation
-or transfer, reducing the risk of errors
-- The **Python API** can be used directly in automated acquisition
+- The **graphical user interface** replaces manual folder creation
+and/or transfer, reducing the risk of errors
+- The **Python API** can be integrated into automated acquisition
 pipelines, removing the need to write your own data-management code
 
 Below we will give an overview of **datashuttle**'s key folder creation
@@ -141,13 +140,11 @@ formatting errors don't creep into the project:
 ```
 <br>
 
-There are a number of shortcuts to ensure only
-information relevant to your specific project must be typed. 
+There are a number of shortcuts to reduce the amount of manual typing.
 For example, the tags (`@DATE@`, `@TIME@`, `@DATETIME@`) will 
 fill the created folder  with the date / time / datetime. Double-clicking
 an input will suggest the next subject or session.
-A full list of shortcuts (e.g. automatic suggestion of next 
-subject / session names) are available in the 
+A full list of such shortcuts are available in the 
 [documentation.](https://datashuttle.neuroinformatics.dev/pages/how_tos/create-folders.html#creating-project-folders)
 
 
@@ -207,8 +204,8 @@ project.transfer_custom(
 
 A complete record of all file transfers 
 is invaluable, ensuring the full history of the project can be checked 
-at any time. When a folder is created or data transferred in **datashuttle**, 
-all details are logged to the local machine. Logs are stored
+at any time. Whenever **datashuttle** creates a folder or transfers some data, 
+it logs all details to the local machine. Logs are stored
 on the filesystem and can be viewed in a text editor or through
 the graphical interface:
 
@@ -234,7 +231,7 @@ but full details on getting started can be found on the
 Standardisation is incredibly useful, but it should not come at the 
 expense of convenience. **datashuttle** should make managing your project easier than 
 it is now—if not, we want to hear how it can be improved.
-Please can get in contact anytime through our
+Please get in touch anytime through our
 [GitHub Issues](https://github.com/neuroinformatics-unit/datashuttle/issues)
 or
 [Zulip Chat](https://neuroinformatics.zulipchat.com/#narrow/stream/405999-DataShuttle)!
