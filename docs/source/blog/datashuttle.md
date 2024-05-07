@@ -161,6 +161,7 @@ project = DataShuttle("my_first_project")
 created_folder_paths = project.create_folders(
     "sub-001", "ses-001_@DATE@", ["behav", "funcimg"]
 )
+```
 
 ## Data Transfer
 
