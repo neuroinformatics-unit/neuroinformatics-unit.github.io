@@ -6,7 +6,7 @@
 :language: English
 :image: 1
 
-
+(target-datashuttle)=
 # Managing neuroscience projects with **datashuttle**
 *Create, validate and transfer standardised project folders*
 
@@ -31,8 +31,8 @@ The best protection against such errors is automating the process
 through acquisition scripts—resulting in hours spent writing 
 data-management code entirely unrelated to your central research goals.
 
-In our previous blog post we highlighted the benefits of data standardisation 
-for systems neuroscience, introducing the 
+In our [previous blog post](target-neuroblueprint) we highlighted the benefits
+of data standardisation for systems neuroscience, introducing the 
 [NeuroBlueprint](https://neuroblueprint.neuroinformatics.dev/) 
 specification. 
 An immediate benefit of a widely-used standard is that the entire community
