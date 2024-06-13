@@ -9,7 +9,7 @@ on the relevant software repository or website. These roadmaps are not exhaustiv
 
 If you have any questions or suggestions, please get in touch, either via [Zulip](https://neuroinformatics.zulipchat.com/) 
 or <a href="mailto:adam.tyson@ucl.ac.uk ?subject=NIU roadmap">emailing Adam Tyson</a> directly. These 
-roadmaps are living documents and will likely be revisited regularly.
+roadmaps are living documents and will be revisited regularly.
 
 ```{toctree}
 :maxdepth: 1
