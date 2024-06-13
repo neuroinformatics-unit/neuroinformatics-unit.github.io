@@ -9,6 +9,12 @@ The NIU is based at the [Sainsbury Wellcome Centre](https://www.sainsburywellcom
 For more information, please read about the [projects we lead](/projects) our [collaborations](/collaborations) and
 our [roadmaps](/roadmaps/index).
 
+
+```{image} /_static/NIU.jpg
+:align: center
+:width: 650px
+```
+
 ## Contact
 For help and support with individual tools, or just to get in touch, please use our [Zulip](https://neuroinformatics.zulipchat.com/).
 
