@@ -1,0 +1,145 @@
+# June 2024
+
+One of our main goals in the team is to provide fully integrated, automated analysis tools for systems neuroscience 
+data. As a researcher, this would mean providing only a set of configurations before running the analysis for an entire 
+dataset, with results and quality metrics output for checking. This will avoid researchers needing to write 
+custom preprocessing and analysis scripts that often duplicate existing efforts, and allows researchers to work 
+together on community tools.
+
+This is a long-term goal, and we are working across multiple themes towards achieving this. We are ensuring [data is 
+organised in a standard way](data_management), a critical step towards automation. Currently, we are focused on 
+building pipelines for [behaviour](behaviour), [electrophysiology](electrophysiology) and [anatomy](anatomy) that 
+can ingest data from various acquisition systems into a common interface. These are critical steps towards the 
+longer-term goal of multimodal integration. The detailed roadmap is split into these themes below.
+
+(data_management)=
+## Data management
+**Current status**
+
+We have developed [NeuroBlueprint](https://neuroblueprint.neuroinformatics.dev/), a simple, standard data folder 
+specification for (systems) neuroscience and [datashuttle](https://datashuttle.neuroinformatics.dev/), to automate the 
+creation, validation and transfer of NeuroBlueprint projects. For more details on these specific projects, see the 
+[NeuroBlueprint](https://neuroblueprint.neuroinformatics.dev/roadmap.html) and 
+[datashuttle](https://datashuttle.neuroinformatics.dev/pages/community/roadmap.html) roadmaps.
+
+**Q4 2024**
+
+Standardised metadata support
+
+**Q2 2025**
+
+Support for customising data structure (e.g. specific mandatory elements or new file types)
+
+**Q4 2025**
+
+Export of NeuroBlueprint projects to [Neurodata Without Borders](https://www.nwb.org/) format
+
+(behaviour)=
+## Behavioural analysis
+**Current status**
+
+We are building [movement](https://movement.neuroinformatics.dev/) a Python toolbox for analysis of animal tracking 
+data. For more details on this specific project, see the [movement roadmap](https://movement.neuroinformatics.dev/community/roadmaps.html).
+
+**Q3 2025**
+
+- Support all common post pose-estimation analysis tasks
+- Support for single experiments and complex multi-animal, multi-session datasets 
+(by reading and writing to [NeuroBlueprint](https://neuroblueprint.neuroinformatics.dev/) format)
+
+**No current ETA**
+
+- A common interface to prevalent pose estimation tools, and other machine-learning based object detection methods
+- A common interface to methods for behavioural segmentation and classification
+
+(electrophysiology)=
+## Extracellular electrophysiology analysis
+**Current status**
+
+We are currently building [spikewrap](https://github.com/neuroinformatics-unit/spikewrap) (built on top of 
+[SpikeInterface](https://spikeinterface.readthedocs.io/en/latest/)) for simple, routine analysis of extracellular 
+electrophysiology analysis. For more details on this specific project, see the
+[spikewrap roadmap](https://github.com/neuroinformatics-unit/spikewrap/issues/178).
+
+**Q3 2024**
+
+Contribute to ongoing SpikeInterface efforts to:
+- [Improve documentation](https://github.com/SpikeInterface/spikeinterface/issues/2046)
+- [Improve](https://github.com/SpikeInterface/spikeinterface/issues/2282) 
+and [standardise](https://github.com/SpikeInterface/spikeinterface/issues/2303) the API
+
+**Q4 2024**
+
+- Implement [inter-session alignment methods](https://github.com/SpikeInterface/spikeinterface/issues/2626) in SpikeInterface
+
+**Q2 2025**
+
+- Easy to use tool for all common extracellular electrophysiology analysis steps
+- Support for single experiments and complex multi-animal, multi-session datasets
+  (by reading and writing to [NeuroBlueprint](https://neuroblueprint.neuroinformatics.dev/) format)
+
+(anatomy)=
+## Computational anatomy
+**Current status**
+
+Our computational anatomy work is based around the [BrainGlobe Initiative](https://brainglobe.info). BrainGlobe is
+centered on the [BrainGlobe Atlas API](https://brainglobe.info/documentation/brainglobe-atlasapi/index.html) which
+provides a common interface to multiple anatomical atlases. Currently, there are tools for:
+- 3D whole brain microscopy registration ([brainreg](https://brainglobe.info/documentation/brainreg/index.html))
+- 3D cell detection in large images ([cellfinder](https://brainglobe.info/documentation/cellfinder/index.html))
+- Analysis of arbitrary shaped structures in atlas space such as lesions and implanted devices
+  ([brainglobe-segmentation](https://brainglobe.info/documentation/brainglobe-segmentation/index.html))
+- Visualisation of atlas registered data ([brainrender](https://brainglobe.info/documentation/brainrender/index.html),
+  [brainrender-napari](https://github.com/brainglobe/brainrender-napari) &
+  [brainglobe-heatmap](https://brainglobe.info/documentation/brainglobe-heatmap/index.html))
+- Various small tasks such as [reorienting anatomical images](https://brainglobe.info/documentation/brainglobe-space/index.html)
+
+**Future**
+
+BrainGlobe is a large project with many short- and long-term aims. Our two main goals are to:
+- Allow for all neuroscience histology analysis and visualisation tasks to be carried out easily in a single
+  environment. This includes 2D & 3D data in all common animal models.
+- Create an end-to-end pipeline to analyse mouse brains imaged with a [mesoSPIM](https://mesospim.org/).
+
+For full details, please see the [BrainGlobe roadmap](https://brainglobe.info/community/roadmaps/index.html).
+
+## Multimodal integration
+**Current status**
+
+Currently, our data analysis tools are restricted to a single modality. It is important that multimodal data can be 
+combined at the analysis stage e.g. to correlate neural activity and behaviour. There are some excellent existing packages for neurophysiological 
+data analysis (e.g. [pynapple](https://pynapple-org.github.io/pynapple/)) and so we plan to leverage these.
+
+**Q3 2024**
+
+- Export of behavioural timeseries from `movement` in [Neurodata Without Borders](https://www.nwb.org/) format, so it can 
+be loaded into [pynapple](https://pynapple-org.github.io/pynapple/)
+
+**Q2 2025**
+
+- Export of spike times from `spikewrap` in [Neurodata Without Borders](https://www.nwb.org/) format, so it can
+be loaded into [pynapple](https://pynapple-org.github.io/pynapple/)
+
+- Integration of `spikewrap` and `brainglobe-segmentation` to use the anatomical location of probe recordings as part of 
+the analysis
+
+## Teaching
+**Current status**
+
+Over the past 18 months, we have delivered a series of computational skills courses at the Sainsbury Wellcome Centre
+(details can be found on the [Software Skills website](https://software-skills.neuroinformatics.dev/)).
+
+**Q4 2025**
+
+Over the next 18 months we will develop our existing courses into a coherent set of materials that can be used to 
+deliver an introductory one-week course on the computational skills needed in systems neuroscience, including:
+- Basic linux command line usage
+- Version control
+- Python programming
+- Software development best practices
+- Good data management
+- High performance computing
+- Video behavioural analysis
+- Multiphoton image analysis
+- Extracellular electrophysiology analysis
+- Histology analysis
