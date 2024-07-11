@@ -9,7 +9,7 @@ project structure. Part of using this cookiecutter is keeping it updated (e.g. P
 communicating those changes to all users.
 
 * Whenever possible, we will use `pyproject.toml` as the main configuration file for the project. Support for 
-`setup.cfg` and `setup.py` will be deprecated in future python versions. This will also be the default option for the SWC cookiecutter.
+`setup.cfg` and `setup.py` will be deprecated in future Python versions. This will also be the default option for the SWC cookiecutter.
 
 ### Virtual environments
 * We will use [conda](https://docs.conda.io/en/latest/) environments for all Python projects.
