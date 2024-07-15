@@ -23,4 +23,4 @@ Anyone is welcome to contribute to any of our tools, and we will always aim to h
 Unfortunately, we're busy and may not be able to guide everyone through the process. 
 
 If this sounds of interest, please get in touch with us either via [Zulip](https://neuroinformatics.zulipchat.com/) 
-or by <a href="mailto:adam.tyson@ucl.ac.uk ?subject=Mentored open-source contributions ">emailing Adam Tyson</a>.
+or by <a href="mailto:adam.tyson@ucl.ac.uk?subject=Mentored open-source contributions ">emailing Adam Tyson</a>.
