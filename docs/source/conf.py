@@ -134,7 +134,7 @@ html_theme_options = {
         },
         {
             "name": "Bluesky",
-            "url": "https://bsky.app/profile/neuroinformatics.bsky.social",
+            "url": "https://bsky.app/profile/neuroinformatics.dev",
             "icon": "fa-solid fa-square",
         },
         {
