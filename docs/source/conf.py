@@ -72,6 +72,10 @@ templates_path = ['_templates']
 linkcheck_anchors_ignore_for_url = [
     "https://neuroinformatics.zulipchat.com/"
 ]
+linkcheck_ignore = [
+    "https://opensource.org",
+    ]
+
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
