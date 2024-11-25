@@ -139,7 +139,7 @@ html_theme_options = {
         {
             "name": "Bluesky",
             "url": "https://bsky.app/profile/neuroinformatics.dev",
-            "icon": "fa-solid fa-square",
+            "icon": "fa-brands fa-bluesky",
         },
         {
             # Label for this link
