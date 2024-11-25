@@ -1,3 +1,4 @@
 get-involved/languages_frameworks.md:25: [redirected permanently] https://beta.ruff.rs/docs/ to https://docs.astral.sh/ruff/
-get-involved/languages_frameworks.md:19: [redirected with Found] https://docs.pytest.org to https://docs.pytest.org/en/8.2.x/
-get-involved/languages_frameworks.md:61: [redirected permanently] https://opensource.org/licenses/BSD-3-Clause to https://opensource.org/license/BSD-3-Clause
+get-involved/languages_frameworks.md:19: [redirected with Found] https://docs.pytest.org to https://docs.pytest.org/en/stable/
+get-involved/languages_frameworks.md:36: [redirected permanently] https://github.com/pypa/setuptools_scm to https://github.com/pypa/setuptools-scm
+roadmaps/june-2024.md:109: [redirected permanently] https://pynapple-org.github.io/pynapple/ to https://pynapple.org/
