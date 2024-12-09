@@ -153,7 +153,7 @@ levels. The naming of these folders should adhere to a certain style, as exempli
 <br>
 
 While the full specification is available to read 
-[here](https://neuroblueprint.neuroinformatics.dev/specification.html), 
+[here](https://neuroblueprint.neuroinformatics.dev/latest/specification.html), 
 we provide a brief summary of its main features:
 
 - A top-level distinction splitting raw data ("rawdata") and data derived from processing the raw data ("derivatives")
@@ -173,7 +173,7 @@ but recommendations for these are in development.
 ### Getting Started
 
 Getting started with **NeuroBlueprint** is as easy as reading the 
-[specification](https://neuroblueprint.neuroinformatics.dev/specification.html), and organising your experimental 
+[specification](https://neuroblueprint.neuroinformatics.dev/latest/specification.html), and organising your experimental 
 folders according to the standard.  It's recommended to get started by using **NeuroBlueprint** with your 
 next experiment, rather than trying to re-organise existing folders and analysis code, which is always tricky.
 
