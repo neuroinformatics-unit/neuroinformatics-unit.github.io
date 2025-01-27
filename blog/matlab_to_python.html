@@ -16,8 +16,8 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
+  <!--
+    this give us a css class that will be invisible only if js is disabled
   -->
   <noscript>
     <style>
@@ -27,18 +27,18 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=56311cd7" />
   
   <!-- So that users can add custom icons -->
-  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../_static/documentation_options.js?v=d45e8c67"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
@@ -185,7 +185,9 @@
 </li>
 
             <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
                     More
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
@@ -495,9 +497,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -597,22 +604,22 @@ cookiecutter<span class="w"> </span>https://github.com/neuroinformatics-unit/pyt
 <p>Depending on your preference you might want to draw schemas or flowcharts to help you understand how to structure your code. There are many tools you can use to do this, such as <a class="reference external" href="https://app.diagrams.net/">draw.io</a> or <a class="reference external" href="https://miro.com/">Miro</a>.</p>
 <p>The programming paradigm you choose will influence the structure of your code. For example, if you decide to use object-oriented programming, you will need to define classes and methods. In the latter case, you want to spend time in understanding which design patterns are more suitable for your goals. Will your project be released as a package? Will you need to create a GUI? Will you need to create a web application? Design patterns deserve an entire blog post on their own, but for now, I will just mention that the <a class="reference external" href="https://refactoring.guru/design-patterns">Refactoring Guru</a> is an excellent resource to learn more about them.</p>
 <p>In my case, I chose to employ object-oriented programming (OOP) and decided to release my project as a package. To achieve this, I utilized the factory pattern to create my classes. Additionally, my project involved a dashboard, so I implemented the model-view-controller (MVC) pattern to develop the web application. With a clear understanding of the classes and methods I needed, I proceeded to draft them all. Here’s an example:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">SF_TF</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">PhotonData</span><span class="p">,</span> <span class="n">specs</span><span class="p">:</span> <span class="n">Specifications</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">SF_TF</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">PhotonData</span><span class="p">,</span> <span class="n">specs</span><span class="p">:</span> <span class="n">Specifications</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">config</span> <span class="o">=</span> <span class="n">specs</span>
 
-    <span class="k">def</span> <span class="nf">get_fit_parameters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_fit_parameters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># calls fit_two_dimensional_elliptical_gaussian</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;This method is not implemented yet&quot;</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">responsiveness</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">responsiveness</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;This method is not implemented yet&quot;</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">get_preferred_direction_all_rois</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_preferred_direction_all_rois</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;This method is not implemented yet&quot;</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">fit_two_dimensional_elliptical_gaussian</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">fit_two_dimensional_elliptical_gaussian</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># calls _2d_gaussian</span>
         <span class="c1"># calls _get_response_map</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;This method is not implemented yet&quot;</span><span class="p">)</span>
@@ -629,7 +636,7 @@ cookiecutter<span class="w"> </span>https://github.com/neuroinformatics-unit/pyt
 <div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">];</span>
 <span class="n">squares</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">zeros</span><span class="p">(</span><span class="nb">size</span><span class="p">(</span><span class="n">numbers</span><span class="p">));</span>
 <span class="k">for</span><span class="w"> </span><span class="nb">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="nb">numel</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
-<span class="w">    </span><span class="n">squares</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">numbers</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span>^<span class="mi">2</span><span class="p">;</span>
+<span class="w">    </span><span class="n">squares</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">numbers</span><span class="p">(</span><span class="nb">i</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="p">;</span>
 <span class="k">end</span>
 </pre></div>
 </div>
@@ -645,7 +652,7 @@ cookiecutter<span class="w"> </span>https://github.com/neuroinformatics-unit/pyt
 </pre></div>
 </div>
 <p>Python matrix indexing</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]])</span>
 <span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>
 </pre></div>
@@ -730,13 +737,13 @@ cookiecutter<span class="w"> </span>https://github.com/neuroinformatics-unit/pyt
   </nav></div>
 
   <div class="sidebar-secondary-item">
-
-  <div class="tocsection sourcelink">
-    <a href="../_sources/blog/matlab_to_python.md.txt">
-      <i class="fa-solid fa-file-lines"></i> Show Source
-    </a>
-  </div>
-</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/blog/matlab_to_python.md.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
 
 </div></div>
               
@@ -751,8 +758,8 @@ cookiecutter<span class="w"> </span>https://github.com/neuroinformatics-unit/pyt
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -766,7 +773,7 @@ cookiecutter<span class="w"> </span>https://github.com/neuroinformatics-unit/pyt
     <p class="theme-version">
     Built with the
     <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a>
-    0.16.0.
+    0.16.1.
     </p>
     </div>
       

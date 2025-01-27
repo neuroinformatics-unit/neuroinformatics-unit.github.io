@@ -16,8 +16,8 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
+  <!--
+    this give us a css class that will be invisible only if js is disabled
   -->
   <noscript>
     <style>
@@ -27,18 +27,18 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=56311cd7" />
   
   <!-- So that users can add custom icons -->
-  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="_static/documentation_options.js?v=d45e8c67"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
@@ -187,7 +187,9 @@
 </li>
 
             <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
                     More
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
@@ -495,9 +497,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -602,6 +609,36 @@ process extracellular electrophysiology data from multiple subjects and sessions
 test different pipeline configurations.</p>
 </div>
 <a class="sd-stretched-link sd-hide-link-text reference external" href="https://github.com/neuroinformatics-unit/spikewrap"><span>https://github.com/neuroinformatics-unit/spikewrap</span></a></div>
+</div>
+</div>
+</div>
+</section>
+<section id="optophysiology">
+<span id="projects-optophysiology"></span><h2>Optophysiology<a class="headerlink" href="#optophysiology" title="Link to this heading">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-1 sd-row-cols-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+<span class="fas fa-sun sd-text-primary"></span> photon-mosaic</div>
+<p class="sd-card-text">photon-mosaic simplifies the analysis of multi-photon calcium imaging data by integrating algorithms from tools like Suite2p and CaImAn into a modular pipeline. Researchers can evaluate, compare, and combine methods for each processing step, such as registration or source extraction, and explore metrics to identify the best fit for their datasets.</p>
+<p class="sd-card-text">With support for local or cluster-based parallelization, photon-mosaic provides visualization tools, reports, and guides to streamline decision-making and enhance reproducibility.</p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://github.com/neuroinformatics-unit/photon-mosaic"><span>https://github.com/neuroinformatics-unit/photon-mosaic</span></a></div>
+</div>
+</div>
+</div>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-1 sd-row-cols-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+<span class="fas fa-stroopwafel sd-text-primary"></span> derotation</div>
+<p class="sd-card-text">A python library to solve sample-rotation artifacts in multiphoton imaging data acquired with a line scanning microscope.</p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://github.com/neuroinformatics-unit/derotation"><span>https://github.com/neuroinformatics-unit/derotation</span></a></div>
 </div>
 </div>
 </div>
@@ -720,19 +757,20 @@ workflows for common tasks such as linting, testing, and releasing Python projec
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#neuroanatomy">Neuroanatomy</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#behaviour">Behaviour</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electrophysiology">Electrophysiology</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optophysiology">Optophysiology</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-management">Data Management</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#developer-tools">Developer Tools</a></li>
 </ul>
   </nav></div>
 
   <div class="sidebar-secondary-item">
-
-  <div class="tocsection sourcelink">
-    <a href="_sources/projects.md.txt">
-      <i class="fa-solid fa-file-lines"></i> Show Source
-    </a>
-  </div>
-</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/projects.md.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
 
 </div></div>
               
@@ -747,8 +785,8 @@ workflows for common tasks such as linting, testing, and releasing Python projec
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -762,7 +800,7 @@ workflows for common tasks such as linting, testing, and releasing Python projec
     <p class="theme-version">
     Built with the
     <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a>
-    0.16.0.
+    0.16.1.
     </p>
     </div>
       
