@@ -51,6 +51,27 @@ test different pipeline configurations.
 :::
 ::::
 
+
+(projects-optophysiology)=
+## Optophysiology
+::::{grid} 1 1 1 1
+:::{grid-item-card} {fas}`sun;sd-text-primary` photon-mosaic
+:link: https://github.com/neuroinformatics-unit/photon-mosaic
+photon-mosaic simplifies the analysis of multi-photon calcium imaging data by integrating algorithms from tools like Suite2p and CaImAn into a modular pipeline. Researchers can evaluate, compare, and combine methods for each processing step, such as registration or source extraction, and explore metrics to identify the best fit for their datasets.
+
+With support for local or cluster-based parallelization, photon-mosaic provides visualization tools, reports, and guides to streamline decision-making and enhance reproducibility.
+:::
+::::
+
+::::{grid} 1 1 1 1
+:::{grid-item-card} {fas}`stroopwafel;sd-text-primary` derotation
+:link: https://github.com/neuroinformatics-unit/derotation
+A python library to solve sample-rotation artifacts in multiphoton imaging data acquired with a line scanning microscope.
+:::
+::::
+
+
+
 (projects-data-management)=
 ## Data Management
 ::::{grid} 1 1 1 1
