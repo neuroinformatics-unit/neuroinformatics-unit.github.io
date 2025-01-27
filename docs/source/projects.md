@@ -66,7 +66,7 @@ With support for local or cluster-based parallelization, PhotonMosaic provides v
 ::::{grid} 1 1 1 1
 :::{grid-item-card} {fas}`stroopwafel;sd-text-primary` derotation
 :link: https://github.com/neuroinformatics-unit/derotation
-A python library to solve sample-rotation artifacts on movies acquired with a line scanning microscope.
+A python library to solve sample-rotation artifacts in multiphoton imaging data acquired with a line scanning microscope.
 :::
 ::::
 
