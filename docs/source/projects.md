@@ -55,7 +55,7 @@ test different pipeline configurations.
 (projects-optophysiology)=
 ## Optophysiology
 ::::{grid} 1 1 1 1
-:::{grid-item-card} {fas}`sun;sd-text-primary` PhotonMosaic
+:::{grid-item-card} {fas}`sun;sd-text-primary` photon-mosaic
 :link: https://github.com/neuroinformatics-unit/photon-mosaic
 PhotonMosaic simplifies the analysis of multi-photon calcium imaging data by integrating algorithms from tools like Suite2p and Caiman into a modular pipeline. Researchers can evaluate, compare, and combine methods for each processing step, such as registration or source extraction, and explore metrics to identify the best fit for their datasets.
 
