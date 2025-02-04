@@ -66,7 +66,7 @@ Experience with Python, [NumPy](https://numpy.org/doc/stable/index.html) and/or 
 - `movement` [mission and scope](https://movement.neuroinformatics.dev/community/mission-scope.html#target-mission), [roadmap](https://movement.neuroinformatics.dev/community/roadmaps.html#target-roadmaps) and [contributing guide](https://movement.neuroinformatics.dev/community/contributing.html#target-contributing).
 - [KalmanFilter.NET tutorial](https://www.kalmanfilter.net/default.aspx).
 - An [example implementation](https://github.com/joacorapela/lds_python) in Python using linear dynamical systems for tracking.
-- Python implementations of Kalman filters, such as [pykalman](https://pykalman.github.io/)
+- Python implementations of Kalman filters, such as [pykalman](https://github.com/pykalman/pykalman)
 - State-space models packages with support for Kalman filters, such as [dynamax](https://movement.neuroinformatics.dev/examples/index.html), or time series analysis packages such as [darts](https://unit8co.github.io/darts/index.html).
 :::
 
