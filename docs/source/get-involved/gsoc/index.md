@@ -35,6 +35,9 @@ For clarity, please always use your full name when getting a [Zulip](https://neu
 
 The NIU GSoC team for 2025 is composed of the following members. To read more about the different roles involved in GSoC, see [GSoC Participant Roles](https://google.github.io/gsocguides/mentor/#participant-roles).
 
+Our working languages are Python and English ;) - but we also speak other languages! 
+
+Additional languages are specified with a 🗣️ icon.
 
 ::::{grid} 3 3 3 3
 :gutter: 3
@@ -57,6 +60,8 @@ Organisation administrator
 {fab}`github` [@alessandrofelder](https://github.com/alessandrofelder)
 
 Mentor
+
+<!-- 🗣️  -->
 :::
 
 :::{grid-item-card} Sofía Miñano
@@ -67,6 +72,8 @@ Mentor
 
 
 Mentor
+
+🗣️ Spanish
 :::
 
 :::{grid-item-card} Laura Porta
@@ -76,6 +83,8 @@ Mentor
 {fab}`github` [@lporta](https://github.com/lporta)
 
 Mentor
+
+<!-- 🗣️  -->
 :::
 
 :::{grid-item-card} Niko Sirmpilatze
@@ -85,6 +94,8 @@ Mentor
 {fab}`github` [@niksirbi](https://github.com/niksirbi)
 
 Mentor
+
+<!-- 🗣️  -->
 :::
 
 :::{grid-item-card} Igor Tatarnikov
@@ -94,6 +105,8 @@ Mentor
 {fab}`github` [@IgorTatarnikov](https://github.com/IgorTatarnikov)
 
 Mentor
+
+<!-- 🗣️  -->
 :::
 
 ::::
@@ -103,6 +116,7 @@ Mentor
 
 ```{toctree}
 :maxdepth: 1
-guidelines
+
 projects_2025
+guidelines
 ```
