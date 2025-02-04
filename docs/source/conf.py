@@ -17,12 +17,12 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'neuroinformatics-unit homepage'
-copyright = '2022, Neuroinformatics Unit'
-author = 'Neuroinformatics Unit'
+project = "neuroinformatics-unit homepage"
+copyright = "2022, Neuroinformatics Unit"
+author = "Neuroinformatics Unit"
 
 # The full version, including alpha/beta/rc tags
-release = '0.0.1'
+release = "0.0.1"
 
 
 # -- General configuration ---------------------------------------------------
@@ -31,18 +31,19 @@ release = '0.0.1'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.githubpages',
-    'sphinx.ext.autodoc',
-    'sphinx.ext.autosummary',
-    'sphinx.ext.viewcode',
-    'sphinx.ext.intersphinx',
-    'sphinx.ext.napoleon',
-    'sphinx_design',
-    'sphinx_sitemap',
-    'myst_parser',
-    'numpydoc',
-    'nbsphinx',
-    'ablog',
+    "sphinx.ext.githubpages",
+    "sphinx.ext.autodoc",
+    "sphinx.ext.autosummary",
+    "sphinx.ext.viewcode",
+    "sphinx.ext.intersphinx",
+    "sphinx.ext.napoleon",
+    "sphinx_design",
+    "sphinx_sitemap",
+    "myst_parser",
+    "numpydoc",
+    "nbsphinx",
+    "ablog",
+    "sphinxcontrib.icon",
 ]
 
 # Configure the myst parser to enable cool markdown features
@@ -65,16 +66,14 @@ myst_enable_extensions = [
 myst_heading_anchors = 3
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
+templates_path = ["_templates"]
 
 # Ignore links that do not work with github actions link checking
 # https://github.com/neuroinformatics-unit/actions/pull/24#issue-1978966182
-linkcheck_anchors_ignore_for_url = [
-    "https://neuroinformatics.zulipchat.com/"
-]
+linkcheck_anchors_ignore_for_url = ["https://neuroinformatics.zulipchat.com/"]
 linkcheck_ignore = [
     "https://opensource.org",
-    ]
+]
 
 
 # List of patterns, relative to source directory, that match files and
@@ -93,27 +92,28 @@ exclude_patterns = [
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'pydata_sphinx_theme'
-html_title = 'NIU'
+html_theme = "pydata_sphinx_theme"
+html_title = "NIU"
 
 # Redirect the webpage to another URL
 # Sphinx will create the appropriate CNAME file in the build directory
 # https://www.sphinx-doc.org/en/master/usage/extensions/githubpages.html
-html_baseurl = 'https://neuroinformatics.dev/'
+html_baseurl = "https://neuroinformatics.dev/"
 sitemap_url_scheme = "{link}"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+html_static_path = ["_static"]
 
 html_css_files = [
-    'css/custom.css',
+    "css/custom.css",
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
 ]
 
 html_favicon = "_static/logo_light.png"
 
-## Cutomize the theme
+# Cutomize the theme
 html_theme_options = {
     "icon_links": [
         {
@@ -150,9 +150,9 @@ html_theme_options = {
             "icon": "fa-solid fa-comments",
             # The type of image to be used (see below for details)
             "type": "fontawesome",
-        }
-   ],
-   "logo": {
+        },
+    ],
+    "logo": {
         "text": "NIU",
         "image_light": "logo_light.png",
         "image_dark": "logo_dark.png",
@@ -161,13 +161,13 @@ html_theme_options = {
     "footer_end": ["footer_end"],
     "analytics": {
         "google_analytics_id": "G-6260TGM7TY",
-    }
-
+    },
 }
 
 html_sidebars = {
-   'blog/index': [
-       # Ablog sidebars (https://ablog.readthedocs.io/en/stable/manual/ablog-configuration-options.html#sidebars)
-       'ablog/recentposts.html'],  # 'ablog/archives.html << we may want to use archives when we have more posts.
+    "blog/index": [
+        # Ablog sidebars (https://ablog.readthedocs.io/en/stable/manual/ablog-configuration-options.html#sidebars)
+        "ablog/recentposts.html"
+    ],  # 'ablog/archives.html << we may want to use archives when we have more posts.
     "**": [],
 }
