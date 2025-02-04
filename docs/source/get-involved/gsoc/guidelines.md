@@ -1,0 +1,1 @@
+# GSoC NIU Contributor Application Guidelines

@@ -9,7 +9,7 @@ but it can be _complicated_.
 
 For this reason we have written some documents to outline the processes we use, so hopefully they aren't so opaque. 
 We are also happy to guide new contributors through the process. For more details please see 
-[details about mentored open source contributions](mentoring).
+[details about mentored open source contributions](mentoring) and [Google Summer of Code](gsoc/index).
 
 ## Further details
 ```{toctree}
@@ -17,4 +17,5 @@ We are also happy to guide new contributors through the process. For more detail
 development_guidelines
 languages_frameworks
 mentoring
+gsoc/index
 ```
