@@ -73,6 +73,9 @@ templates_path = ["_templates"]
 linkcheck_anchors_ignore_for_url = ["https://neuroinformatics.zulipchat.com/"]
 linkcheck_ignore = [
     "https://opensource.org",
+    "https://www.incf.org/recommendations-gsoc-contributors",
+    "https://www.incf.org/sites/default/files/files/INCF_GSoC_2022_Application_template.pdf",
+
 ]
 
 
