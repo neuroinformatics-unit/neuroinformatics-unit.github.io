@@ -76,7 +76,9 @@ Please include the following information:
 
     Please link a pull request or code sample, ideally submitted to your chosen project. It must be publicly visible and represent your own work, although you may have help from other developers in the community to further improve it. You can link more than one contribution or pull request if desired.
 
-### Project proposal
+### Project proposal 
+Extension: <u> max 1 page </u> 
+
 - **Title.**
     Please clearly include the title of the project you are applying for and the tool it refers to. E.g. "movement: support for Kalman filters".
 
@@ -101,6 +103,8 @@ Please include the following information:
 
 ### Personal statement
 
+Extension: <u> max 3/4 page </u>
+
 - **Past experience.** 
     Please describe your past experience with programming, open source, or any other experience you deem relevant for the project you are applying for. Any successful open source projects, published work or content of the like should definitely be highlighted.
 - **Motivation: why this project?**
@@ -111,6 +115,8 @@ Please include the following information:
     Please state if you have any other plans for the work period (school work, another job, planned vacation)? If so, how do you plan to combine them with your GSoC work?
 
 ### GSoC
+
+Extension: <u> max 1/4 page </u> 
 
 - **GSoC experience.**
     Have you participated in GSoC before? If so, when and with which project? What was your experience like? If you haven't, what do you expect from the program?
