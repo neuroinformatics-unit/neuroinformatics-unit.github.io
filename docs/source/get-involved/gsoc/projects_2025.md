@@ -319,6 +319,53 @@ Experience with Python and [PyTorch](https://pytorch.org/).
 - [napari Plugin documentation](https://napari.org/stable/plugins/index.html), particularly the section on [Building a plugin](https://napari.org/stable/plugins/building_a_plugin/index.html).
 :::
 
+:::{grid-item-card} {fas}`video;sd-text-primary` Improve `cellfinder`'s classification algorithm
+<!-- Description -->
+BrainGlobe is a community-driven suite of open-source Python tools. The BrainGlobe tools are widely used to process, analyse and visualise images of brains (and other related data) in neuroscientific research.
+
+The BrainGlobe `cellfinder` tool is used to detect cells in large whole-brain images. It uses signal processing to find possible cell candidates and passes them to a customisable classifier to split the candidates into cells and no-cells. `cellfinder` relies heavily on `pytorch` and `keras`.
+
+`cellfinder` currently uses a residual neural network (ResNet) to classify cell candidates, and Deep Learning networks have progressed since. In this project, you will explore newer classification algorithms as alternatives to ResNet, and see whether they work better and/or faster than the existing implementation.
+
+
+**Deliverables**
+<!-- Goals, or expected status after Community Bonding Period, Start of Coding, End of Coding. Stretch goals? -->
+The expected deliverables include:
+
+- A Python implementation of at least one new Deep Learning network in `cellfinder`
+- Tests to cover any added functionality.
+- Documentation for the new functionality.
+- A [blog]((https://brainglobe.info/blog)) explaining the new network and its advantages and disadvantages.
+
+**Duration**
+<!-- Small (~90 hours), Medium (~175 hours) or Large (~350 hours)  -->
+Medium (~175 hours) or Large (~350 hours).
+
+**Difficulty**
+<!-- Is this project geared more toward a student level or a more advanced developer level? -->
+This project is well-suited for a student or a beginner contributor to open source.
+
+**Required skills**
+
+Experience with Python, [NumPy](https://numpy.org/doc/stable/index.html) and/or [pandas](https://pandas.pydata.org/docs/index.html).
+
+**Nice-to-haves**
+- Experience working with machine learning
+- Experience working with image data
+
+
+**Potential mentors**
+- [@IgorTatarnikov](https://github.com/IgorTatarnikov)
+- [@alessandrofelder](https://github.com/alessandrofelder)
+
+
+**Further reading**
+<!-- The best pages include links to more detailed descriptions and related materials for each project. They might even include actual use cases! -->
+- [cellfinder paper](https://doi.org/10.1371/journal.pcbi.1009074)
+- [cellfinder code](https://github.com/brainglobe/cellfinder)
+:::
+
+
 ::::
 
 
