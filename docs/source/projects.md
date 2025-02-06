@@ -40,7 +40,7 @@ tracking of single or multiple animals.
 ## Electrophysiology
 ::::{grid} 1 1 1 1
 :::{grid-item-card} {fas}`bolt;sd-text-primary` SpikeWrap
-:link: https://github.com/neuroinformatics-unit/spikewrap
+:link: https://spikewrap.neuroinformatics.dev
 Spikewrap simplifies the execution and visualisation of extracellular electrophysiology pre-processing and 
 spike-sorting pipelines. Taking input organised to our NeuroBlueprint standard, it provides an easy and flexible way to 
 process extracellular electrophysiology data from multiple subjects and sessions. 
