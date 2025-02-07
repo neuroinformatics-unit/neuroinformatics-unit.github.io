@@ -104,8 +104,8 @@ The [BrainGlobe `cellfinder` tool](https://brainglobe.info/documentation/cellfin
 
 **Deliverables**
 <!-- Goals, or expected status after Community Bonding Period, Start of Coding, End of Coding. Stretch goals? -->
-- A modified implementation of the existing image processing algorithm (blob detection) in `cellfinder` that can detect cell candidates from an abitrary number of channels. 
-- A modified implementation of the neural network in `cellfinder` that can classify cell candidates from brain images with an abitrary number of channels.
+- A modified implementation of the existing image processing algorithm (blob detection) in `cellfinder` that can detect cell candidates from an arbitrary number of channels. 
+- A modified implementation of the neural network in `cellfinder` that can classify cell candidates from brain images with an arbitrary number of channels.
 - Tests to cover any added functionality.
 - Documentation for the new functionality.
 - A [blog](https://brainglobe.info/blog) showcasing the use of `cellfinder` on images with 1 or 3 channels.
