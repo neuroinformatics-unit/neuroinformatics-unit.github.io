@@ -138,3 +138,48 @@ This project is well-suited for an intermediate contributor to open source.
 - [cellfinder paper](https://doi.org/10.1371/journal.pcbi.1009074)
 - [cellfinder code](https://github.com/brainglobe/cellfinder)
 :::
+
+
+:::{dropdown} {fas}`brain;sd-text-primary` Add to BrainGlobe's data visualisation tools
+<!-- Description -->
+The [BrainGlobe `brainrender` tool](https://brainglobe.info/documentation/brainrender/index.html) is widely used to visualise brain data in a common coordinate space defined by a "brain atlas" (We refer to this data as "atlas-registered" data). However, `brainrender` is inaccessible to people without programming skills. The [`brainrender-napari` tool](https://brainglobe.info/tutorials/visualise-atlas-napari.html) aims to make `brainrender` functionality available to more people through a plugin for the popular open-source graphical image viewer [napari](https://napari.org/stable/). 
+
+Although `brainrender` and `brainrender-napari` share some functionality, some publicly available atlas-registered data is not yet available in `brainrender-napari`. In this project, we would implement code to allow users to visualise publicly available atlas-registered data from mouse and fish brains in `brainrender-napari`
+
+**Deliverables**
+<!-- Goals, or expected status after Community Bonding Period, Start of Coding, End of Coding. Stretch goals? -->
+- A Python implementation of a `napari` widget that allows users to download and visualise atlas-registered data.
+- Tests to cover any added functionality.
+- Documentation for the new functionality.
+
+**Duration**
+<!-- Small (~90 hours), Medium (~175 hours) or Large (~350 hours)  -->
+Small (~90 hours) or Medium (~175 hours).
+
+**Difficulty**
+<!-- Is this project geared more toward a student level or a more advanced developer level? -->
+This project is well-suited for a student or a beginner contributor to open source.
+
+**Required skills**
+- Experience with Python.
+
+
+**Nice-to-haves**
+- Experience working with data visualisation
+- Experience working with image data
+
+
+**Potential mentors**
+- [@alessandrofelder](https://github.com/alessandrofelder)
+- [@IgorTatarnikov](https://github.com/IgorTatarnikov)
+
+
+**Further reading**
+<!-- The best pages include links to more detailed descriptions and related materials for each project. They might even include actual use cases! -->
+- [BrainGlobe developer guide](https://brainglobe.info/community/developers/index.html)
+- [brainrender paper](https://doi.org/10.7554/eLife.65751)
+- [brainrender code](https://github.com/brainglobe/brainrender)
+- [brainrender-napari code](https://github.com/brainglobe/brainrender)
+- [napari usage tutorials](https://napari.org/stable/tutorials/index.html).
+- [napari Plugin documentation](https://napari.org/stable/plugins/index.html), particularly the section on [Building a plugin](https://napari.org/stable/plugins/building_a_plugin/index.html).
+:::
