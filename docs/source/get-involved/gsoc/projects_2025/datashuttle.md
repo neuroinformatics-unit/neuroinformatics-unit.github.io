@@ -17,7 +17,7 @@ Under the hood ``datashuttle`` uses [RClone](https://rclone.org/), which already
 
 **Deliverables**
 <!-- Goals, or expected status after Community Bonding Period, Start of Coding, End of Coding. Stretch goals? -->
-- Extend ``datashuttle`` functionality to permit transfer between a local filesytem and Google Drive or AWS. This will involve exposing new functionality within the Python API as well as the terminal user interface.
+- Extend ``datashuttle`` functionality to permit transfer between a local filesystem and Google Drive or AWS. This will involve exposing new functionality within the Python API as well as the terminal user interface.
 - Tests to cover any added functionality.
 - Documentation for the new functionality.
 
