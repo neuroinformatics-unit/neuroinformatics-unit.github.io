@@ -325,7 +325,7 @@ BrainGlobe is a community-driven suite of open-source Python tools. The BrainGlo
 
 The BrainGlobe `cellfinder` tool is used to detect cells in large whole-brain images. It uses signal processing to find possible cell candidates and passes them to a customisable classifier to split the candidates into cells and no-cells. `cellfinder` relies heavily on `pytorch` and `keras`.
 
-`cellfinder` currently uses a residual neural network (ResNet) to classify cell candidates, and Deep Learning networks have progressed since. In this project, you will explore newer classification algorithms as alternatives to ResNet, and see whether they work better and/or faster than the existing implementation.
+`cellfinder` currently uses a residual neural network (ResNet) to classify cell candidates, and Deep Learning network architectures have progressed since. In this project, you will explore newer architectures for the classification network as alternatives to ResNet, and see whether they work better and/or faster than the existing implementation.
 
 
 **Deliverables**
