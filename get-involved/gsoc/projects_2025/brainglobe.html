@@ -558,15 +558,15 @@
                 <article class="bd-article">
                    <section class="tex2jax_ignore mathjax_ignore" id="gsoc-niu-projects-2025-brainglobe">
 <h1>GSoC NIU Projects 2025: BrainGlobe<a class="headerlink" href="#gsoc-niu-projects-2025-brainglobe" title="Link to this heading">#</a></h1>
-<p>If you are interested in any of these projects, <a class="reference external" href="https://brainglobe.info/contact.html">get in touch</a>! Feel free to open a new topic on <a class="reference external" href="https://brainglobe.zulipchat.com/">Zulip</a> and tag the potential mentors.</p>
+<p><a class="reference external" href="https://brainglobe.info">BrainGlobe</a> is a community-driven suite of open-source Python tools. The BrainGlobe tools are widely used to process, analyse and visualise images of brains (and other related data) in neuroscientific research.
+If you are interested in any of these projects, <a class="reference external" href="https://brainglobe.info/contact.html">get in touch</a>! Feel free to open a new topic on <a class="reference external" href="https://brainglobe.zulipchat.com/">Zulip</a> and tag the potential mentors.</p>
 <p>Our working language is English, but our mentors for these projects also speak Italian, French, and German.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text"><span class="fas fa-video sd-text-primary"></span> Improve <code class="docutils literal notranslate"><span class="pre">cellfinder</span></code>’s classification algorithm</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<span class="sd-summary-text"><span class="fas fa-brain sd-text-primary"></span> Improve <code class="docutils literal notranslate"><span class="pre">cellfinder</span></code>’s classification algorithm</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <!-- Description -->
-<p class="sd-card-text">BrainGlobe is a community-driven suite of open-source Python tools. The BrainGlobe tools are widely used to process, analyse and visualise images of brains (and other related data) in neuroscientific research.</p>
-<p class="sd-card-text">The BrainGlobe <code class="docutils literal notranslate"><span class="pre">cellfinder</span></code> tool is used to detect cells in large whole-brain images. It uses signal processing to find possible cell candidates and passes them to a customisable classifier to split the candidates into cells and no-cells. <code class="docutils literal notranslate"><span class="pre">cellfinder</span></code> relies heavily on <code class="docutils literal notranslate"><span class="pre">pytorch</span></code> and <code class="docutils literal notranslate"><span class="pre">keras</span></code>.</p>
-<p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">cellfinder</span></code> currently uses a residual neural network (ResNet) to classify cell candidates, and Deep Learning network architectures have progressed since. In this project, you will explore newer architectures for the classification network as alternatives to ResNet, and see whether they work better and/or faster than the existing implementation.</p>
+<p class="sd-card-text">The <a class="reference external" href="https://brainglobe.info/documentation/cellfinder/index.html">BrainGlobe <code class="docutils literal notranslate"><span class="pre">cellfinder</span></code> tool</a> is used to detect cells in large whole-brain images. It uses traditional image processing to find possible cell candidates and passes them to a customisable classifier to split the candidates into cells and no-cells. <code class="docutils literal notranslate"><span class="pre">cellfinder</span></code> relies heavily on <code class="docutils literal notranslate"><span class="pre">pytorch</span></code> and <code class="docutils literal notranslate"><span class="pre">keras</span></code>.</p>
+<p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">cellfinder</span></code> currently uses a residual neural network (ResNet) to classify cell candidates, and deep learning network architectures have progressed since. In this project, you will explore newer architectures for the classification network as alternatives to ResNet, and see whether they work better and/or faster than the existing implementation.</p>
 <p class="sd-card-text"><strong>Deliverables</strong></p>
 <!-- Goals, or expected status after Community Bonding Period, Start of Coding, End of Coding. Stretch goals? -->
 <ul class="simple">
@@ -583,10 +583,13 @@
 <!-- Is this project geared more toward a student level or a more advanced developer level? -->
 <p class="sd-card-text">This project is well-suited for an intermediate contributor to open source.</p>
 <p class="sd-card-text"><strong>Required skills</strong></p>
-<p class="sd-card-text">Experience with Python, <a class="reference external" href="https://numpy.org/doc/stable/index.html">NumPy</a> and/or <a class="reference external" href="https://pandas.pydata.org/docs/index.html">pandas</a>.</p>
+<ul class="simple">
+<li><p class="sd-card-text">Experience with Python, <a class="reference external" href="https://numpy.org/doc/stable/index.html">NumPy</a> and/or <a class="reference external" href="https://pandas.pydata.org/docs/index.html">pandas</a>.</p></li>
+<li><p class="sd-card-text">At least initial understanding of machine learning algorithms</p></li>
+</ul>
 <p class="sd-card-text"><strong>Nice-to-haves</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text">Experience working with machine learning</p></li>
+<li><p class="sd-card-text">Experience working with machine learning frameworks, in particular <code class="docutils literal notranslate"><span class="pre">keras</span></code> or <code class="docutils literal notranslate"><span class="pre">pytorch</span></code></p></li>
 <li><p class="sd-card-text">Experience working with image data</p></li>
 </ul>
 <p class="sd-card-text"><strong>Potential mentors</strong></p>
@@ -597,6 +600,95 @@
 <p class="sd-card-text"><strong>Further reading</strong></p>
 <!-- The best pages include links to more detailed descriptions and related materials for each project. They might even include actual use cases! -->
 <ul class="simple">
+<li><p class="sd-card-text"><a class="reference external" href="https://brainglobe.info/community/developers/index.html">BrainGlobe developer guide</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://doi.org/10.1371/journal.pcbi.1009074">cellfinder paper</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://github.com/brainglobe/cellfinder">cellfinder code</a></p></li>
+</ul>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><span class="fas fa-brain sd-text-primary"></span> <code class="docutils literal notranslate"><span class="pre">cellfinder</span></code> support for two-dimensional brain images</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<!-- Description -->
+<p class="sd-card-text">The <a class="reference external" href="https://brainglobe.info/documentation/cellfinder/index.html">BrainGlobe <code class="docutils literal notranslate"><span class="pre">cellfinder</span></code> tool</a> is used to detect cells in large whole-brain images. It uses traditional image processing to find possible cell candidates and passes them to a customisable classifier to split the candidates into cells and no-cells. <code class="docutils literal notranslate"><span class="pre">cellfinder</span></code> relies heavily on <code class="docutils literal notranslate"><span class="pre">pytorch</span></code> and <code class="docutils literal notranslate"><span class="pre">keras</span></code>.</p>
+<p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">cellfinder</span></code> currently uses a residual neural network (ResNet) to classify cell candidates. This network is designed for three-dimensional whole-brain images, but neuroscientists often take images of two-dimensional slices of the brain. In this project, you would adapt <code class="docutils literal notranslate"><span class="pre">cellfinder</span></code> to support two-dimensional data. This would involve implementing a new neural network suitable for two-dimensional images, as well as refactoring some of the image processing code.</p>
+<p class="sd-card-text"><strong>Deliverables</strong></p>
+<!-- Goals, or expected status after Community Bonding Period, Start of Coding, End of Coding. Stretch goals? -->
+<ul class="simple">
+<li><p class="sd-card-text">A modified implementation of the existing image processing algorithm (blob detection) in <code class="docutils literal notranslate"><span class="pre">cellfinder</span></code> that detects cell candidates in both two- and three-dimensional images</p></li>
+<li><p class="sd-card-text">A Python implementation of a neural network in <code class="docutils literal notranslate"><span class="pre">cellfinder</span></code> that classifies cell candidates from two-dimensional images.</p></li>
+<li><p class="sd-card-text">Tests to cover any added functionality.</p></li>
+<li><p class="sd-card-text">Documentation for the new functionality.</p></li>
+<li><p class="sd-card-text">A <a class="reference external" href="https://brainglobe.info/blog">blog</a> showcasing the use of <code class="docutils literal notranslate"><span class="pre">cellfinder</span></code> on two-dimensional images of brains.</p></li>
+</ul>
+<p class="sd-card-text"><strong>Duration</strong></p>
+<!-- Small (~90 hours), Medium (~175 hours) or Large (~350 hours)  -->
+<p class="sd-card-text">Large (~350 hours).</p>
+<p class="sd-card-text"><strong>Difficulty</strong></p>
+<!-- Is this project geared more toward a student level or a more advanced developer level? -->
+<p class="sd-card-text">This project is well-suited for an intermediate contributor to open source.</p>
+<p class="sd-card-text"><strong>Required skills</strong></p>
+<ul class="simple">
+<li><p class="sd-card-text">Experience with Python, <a class="reference external" href="https://numpy.org/doc/stable/index.html">NumPy</a> and/or <a class="reference external" href="https://pandas.pydata.org/docs/index.html">pandas</a>.</p></li>
+<li><p class="sd-card-text">At least initial understanding of machine learning algorithms</p></li>
+</ul>
+<p class="sd-card-text"><strong>Nice-to-haves</strong></p>
+<ul class="simple">
+<li><p class="sd-card-text">Experience working with machine learning frameworks, in particular <code class="docutils literal notranslate"><span class="pre">keras</span></code> or <code class="docutils literal notranslate"><span class="pre">pytorch</span></code></p></li>
+<li><p class="sd-card-text">Experience working with image data</p></li>
+</ul>
+<p class="sd-card-text"><strong>Potential mentors</strong></p>
+<ul class="simple">
+<li><p class="sd-card-text"><a class="reference external" href="https://github.com/IgorTatarnikov">&#64;IgorTatarnikov</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://github.com/alessandrofelder">&#64;alessandrofelder</a></p></li>
+</ul>
+<p class="sd-card-text"><strong>Further reading</strong></p>
+<!-- The best pages include links to more detailed descriptions and related materials for each project. They might even include actual use cases! -->
+<ul class="simple">
+<li><p class="sd-card-text"><a class="reference external" href="https://brainglobe.info/community/developers/index.html">BrainGlobe developer guide</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://doi.org/10.1371/journal.pcbi.1009074">cellfinder paper</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://github.com/brainglobe/cellfinder">cellfinder code</a></p></li>
+</ul>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><span class="fas fa-brain sd-text-primary"></span> <code class="docutils literal notranslate"><span class="pre">cellfinder</span></code> support for arbitrary number of channels</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<!-- Description -->
+<p class="sd-card-text">The <a class="reference external" href="https://brainglobe.info/documentation/cellfinder/index.html">BrainGlobe <code class="docutils literal notranslate"><span class="pre">cellfinder</span></code> tool</a> is used to detect cells in large whole-brain images. It uses traditional image processing to find possible cell candidates and passes them to a customisable classifier to split the candidates into cells and no-cells. <code class="docutils literal notranslate"><span class="pre">cellfinder</span></code> relies heavily on <code class="docutils literal notranslate"><span class="pre">pytorch</span></code> and <code class="docutils literal notranslate"><span class="pre">keras</span></code>.</p>
+<p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">cellfinder</span></code> was originally designed to work with two channels: the “background” channel and the “signal” channel. This is a limitation, because sometimes only the signal channel is acquired, or there are several signal channels containing useful information. In this project, you would explore ways to allow <code class="docutils literal notranslate"><span class="pre">cellfinder</span></code> to classify cells based on information from an arbitrary number of channels. This could allow cellfinder to not just detect cells, but classify their type based on their shape and other features.</p>
+<p class="sd-card-text"><strong>Deliverables</strong></p>
+<!-- Goals, or expected status after Community Bonding Period, Start of Coding, End of Coding. Stretch goals? -->
+<ul class="simple">
+<li><p class="sd-card-text">A modified implementation of the existing image processing algorithm (blob detection) in <code class="docutils literal notranslate"><span class="pre">cellfinder</span></code> that can detect cell candidates from an arbitrary number of channels.</p></li>
+<li><p class="sd-card-text">A modified implementation of the neural network in <code class="docutils literal notranslate"><span class="pre">cellfinder</span></code> that can classify cell candidates from brain images with an arbitrary number of channels.</p></li>
+<li><p class="sd-card-text">Tests to cover any added functionality.</p></li>
+<li><p class="sd-card-text">Documentation for the new functionality.</p></li>
+<li><p class="sd-card-text">A <a class="reference external" href="https://brainglobe.info/blog">blog</a> showcasing the use of <code class="docutils literal notranslate"><span class="pre">cellfinder</span></code> on images with 1 or 3 channels.</p></li>
+</ul>
+<p class="sd-card-text"><strong>Duration</strong></p>
+<!-- Small (~90 hours), Medium (~175 hours) or Large (~350 hours)  -->
+<p class="sd-card-text">Large (~350 hours).</p>
+<p class="sd-card-text"><strong>Difficulty</strong></p>
+<!-- Is this project geared more toward a student level or a more advanced developer level? -->
+<p class="sd-card-text">This project is well-suited for an intermediate contributor to open source.</p>
+<p class="sd-card-text"><strong>Required skills</strong></p>
+<ul class="simple">
+<li><p class="sd-card-text">Experience with Python, <a class="reference external" href="https://numpy.org/doc/stable/index.html">NumPy</a> and/or <a class="reference external" href="https://pandas.pydata.org/docs/index.html">pandas</a>.</p></li>
+<li><p class="sd-card-text">At least initial understanding of machine learning algorithms</p></li>
+</ul>
+<p class="sd-card-text"><strong>Nice-to-haves</strong></p>
+<ul class="simple">
+<li><p class="sd-card-text">Experience working with machine learning frameworks, in particular <code class="docutils literal notranslate"><span class="pre">keras</span></code> or <code class="docutils literal notranslate"><span class="pre">pytorch</span></code></p></li>
+<li><p class="sd-card-text">Experience working with image data</p></li>
+</ul>
+<p class="sd-card-text"><strong>Potential mentors</strong></p>
+<ul class="simple">
+<li><p class="sd-card-text"><a class="reference external" href="https://github.com/IgorTatarnikov">&#64;IgorTatarnikov</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://github.com/alessandrofelder">&#64;alessandrofelder</a></p></li>
+</ul>
+<p class="sd-card-text"><strong>Further reading</strong></p>
+<!-- The best pages include links to more detailed descriptions and related materials for each project. They might even include actual use cases! -->
+<ul class="simple">
+<li><p class="sd-card-text"><a class="reference external" href="https://brainglobe.info/community/developers/index.html">BrainGlobe developer guide</a></p></li>
 <li><p class="sd-card-text"><a class="reference external" href="https://doi.org/10.1371/journal.pcbi.1009074">cellfinder paper</a></p></li>
 <li><p class="sd-card-text"><a class="reference external" href="https://github.com/brainglobe/cellfinder">cellfinder code</a></p></li>
 </ul>

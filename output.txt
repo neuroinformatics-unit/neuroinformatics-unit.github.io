@@ -1,5 +1,5 @@
 get-involved/languages_frameworks.md:25: [redirected permanently] https://beta.ruff.rs/docs/ to https://docs.astral.sh/ruff/
 get-involved/languages_frameworks.md:19: [redirected with Found] https://docs.pytest.org to https://docs.pytest.org/en/stable/
-get-involved/gsoc/projects_2025/brainglobe.md:48: [redirected permanently] https://doi.org/10.1371/journal.pcbi.1009074 to https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1009074
+get-involved/gsoc/projects_2025/brainglobe.md:50: [redirected permanently] https://doi.org/10.1371/journal.pcbi.1009074 to https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1009074
 get-involved/languages_frameworks.md:36: [redirected permanently] https://github.com/pypa/setuptools_scm to https://github.com/pypa/setuptools-scm
 roadmaps/june-2024.md:109: [redirected permanently] https://pynapple-org.github.io/pynapple/ to https://pynapple.org/
