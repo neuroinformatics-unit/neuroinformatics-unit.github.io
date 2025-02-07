@@ -46,7 +46,7 @@ These tips are largely based on the [OpenAstronomy guidelines](https://openastro
 
     Make sure you carefully read through the [GSoC guidelines](https://google.github.io/gsocguides//student/writing-a-proposal) (and these guidelines!) when preparing your application. 
 
-    Select one of the projects from our [project list](projects_2025.md) and prepare a plan on how to tackle it, and the time you will need to complete it. Use our [application template](#application-template) to structure your proposal and don't be shy to ask for feedback from the mentors or the community.
+    Select one of the projects from our [project list](projects_2025/index) and prepare a plan on how to tackle it, and the time you will need to complete it. Use our [application template](#application-template) to structure your proposal and don't be shy to ask for feedback from the mentors or the community.
 
     Include specific examples in your application to support your skills - these will help reviewers build a better picture of you. These could be things like "Qualified in final round of XXXX" or "Participated in XXXX hackathon".
 
