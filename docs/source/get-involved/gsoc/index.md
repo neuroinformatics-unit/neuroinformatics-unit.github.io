@@ -80,6 +80,8 @@ Our working languages are Python and English ;) - but we also speak other langua
 :::{grid-item-card} Adam Tyson
 :img-top: ../../_static/adam_tyson.jpg
 :link: https://github.com/adamltyson
+:text-align: center
+
 
 {fab}`github` [@adamltyson](https://github.com/adamltyson)
 
@@ -89,7 +91,7 @@ Organisation administrator
 :::{grid-item-card} Alessandro Felder
 :img-top: ../../_static/alessandro_felder.png
 :link: https://github.com/alessandrofelder
-
+:text-align: center
 
 {fab}`github` [@alessandrofelder](https://github.com/alessandrofelder)
 
@@ -99,6 +101,7 @@ Mentor
 :::{grid-item-card} Sofía Miñano
 :img-top: ../../_static/sofia_minano.png
 :link: https://github.com/sfmig
+:text-align: center
 
 {fab}`github` [@sfmig](https://github.com/sfmig)
 
@@ -110,6 +113,7 @@ Mentor
 :::{grid-item-card} Niko Sirmpilatze
 :img-top: ../../_static/niko_sirmpilatze.png
 :link: https://github.com/niksirbi
+:text-align: center
 
 {fab}`github` [@niksirbi](https://github.com/niksirbi)
 
@@ -120,6 +124,7 @@ Mentor
 :::{grid-item-card} Igor Tatarnikov
 :img-top: ../../_static/igor_tatarnikov.jpg
 :link: https://github.com/IgorTatarnikov
+:text-align: center
 
 {fab}`github` [@IgorTatarnikov](https://github.com/IgorTatarnikov)
 
