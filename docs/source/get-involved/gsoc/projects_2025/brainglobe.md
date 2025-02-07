@@ -183,3 +183,44 @@ This project is well-suited for a student or a beginner contributor to open sour
 - [napari usage tutorials](https://napari.org/stable/tutorials/index.html).
 - [napari Plugin documentation](https://napari.org/stable/plugins/index.html), particularly the section on [Building a plugin](https://napari.org/stable/plugins/building_a_plugin/index.html).
 :::
+
+:::{dropdown} {fas}`brain;sd-text-primary` Update atlas packaging scripts to atlas API v2
+<!-- Description -->
+[Neuroanatomical atlases](https://neuroinformatics.dev/slides-templates-atlases/#/on-templates-and-atlases) define a common coordinate space for the brain, and have been created for many species (mouse, fish, ...) and imaging modalities (MRI, lightsheet microscopy, ...). A central piece of BrainGlobe's ecosystem is the BrainGlobe Atlas API. Importantly, the Atlas API allows the use of any BrainGlobe tool with [many publicly available atlases](https://brainglobe.info/documentation/brainglobe-atlasapi/index.html), by exposing them through the same, consistent Python interface. This is possible thanks to [packaging scripts](https://github.com/brainglobe/brainglobe-atlasapi/tree/main/brainglobe_atlasapi/atlas_generation/atlas_scripts) contributed by the community, that convert public data to a standard format.
+
+The standard format is somewhat limited, and we improve its utility by adhering [to a new community standard for neuroanatomical atlases, "OpenMINDS SANDS"](https://openminds-documentation.readthedocs.io/en/latest/schema_specifications/SANDS/atlas/brainAtlas.html).
+
+**Deliverables**
+<!-- Goals, or expected status after Community Bonding Period, Start of Coding, End of Coding. Stretch goals? -->
+- Modifying atlas packaging Python code to write to OpenMINDS SANDS
+- Adapting at least one packaging script to use the new functionality.
+- Tests to cover any added/changed functionality.
+- Documentation for the new functionality.
+
+**Duration**
+<!-- Small (~90 hours), Medium (~175 hours) or Large (~350 hours)  -->
+Medium (~175 hours) or Large (~350 hours).
+
+**Difficulty**
+<!-- Is this project geared more toward a student level or a more advanced developer level? -->
+This project is well-suited for a student or a beginner contributor to open source.
+
+**Required skills**
+- Experience with Python.
+
+
+**Nice-to-haves**
+- Experience working with data standards or data schema
+- Experience working with image data
+
+**Potential mentors**
+- [@alessandrofelder](https://github.com/alessandrofelder)
+- [@IgorTatarnikov](https://github.com/IgorTatarnikov)
+
+
+**Further reading**
+<!-- The best pages include links to more detailed descriptions and related materials for each project. They might even include actual use cases! -->
+- [BrainGlobe atlas API paper](https://doi.org/10.21105/joss.02668)
+- [Getting started with OpenMINDS](https://openminds-documentation.readthedocs.io/en/v3.0/shared/getting_started.html)
+- [OpenMINDS SANDS BrainAtlas specification](https://openminds-documentation.readthedocs.io/en/v3.0/schema_specifications/SANDS/atlas/brainAtlas.html)
+:::
