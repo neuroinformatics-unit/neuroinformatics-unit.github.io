@@ -332,7 +332,7 @@ The BrainGlobe `cellfinder` tool is used to detect cells in large whole-brain im
 <!-- Goals, or expected status after Community Bonding Period, Start of Coding, End of Coding. Stretch goals? -->
 The expected deliverables include:
 
-- A Python implementation of at least one new Deep Learning network in `cellfinder`
+- A Python implementation of at least one new Deep Learning network architecture in `cellfinder`
 - Quantitative comparison between the current and new architecture
 - Tests to cover any added functionality.
 - Documentation for the new functionality.
