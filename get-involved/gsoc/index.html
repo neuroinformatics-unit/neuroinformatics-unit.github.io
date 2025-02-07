@@ -1,0 +1,836 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Google Summer of Code &#8212; NIU</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=56311cd7" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-6260TGM7TY"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-6260TGM7TY');
+            </script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-6260TGM7TY');
+            </script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'get-involved/gsoc/index';</script>
+    <link rel="canonical" href="https://neuroinformatics.dev/get-involved/gsoc/index.html" />
+    <link rel="icon" href="../../_static/logo_light.png"/>
+    <link rel="author" title="About these documents" href="../../about.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="GSoC NIU Projects 2025" href="projects_2025/index.html" />
+    <link rel="prev" title="Mentored open-source contributions" href="../mentoring.html" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />   
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo_light.png" class="logo__image only-light" alt=""/>
+    <img src="../../_static/logo_dark.png" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">NIU</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../about.html">
+    About us
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../people.html">
+    People
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../projects.html">
+    Projects
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../collaborations.html">
+    Collaborations
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../blog/index.html">
+    Blog
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../roadmaps/index.html">
+    Roadmaps
+  </a>
+</li>
+
+
+<li class=" current active">
+  <a class="nav-link dropdown-item nav-internal" href="../index.html">
+    Get involved
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../resources.html">
+    Resources
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/neuroinformatics-unit/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/swc_niu" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://mastodon.online/@neuroinformatics" title="Mastodon" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-mastodon fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Mastodon</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://bsky.app/profile/neuroinformatics.dev" title="Bluesky" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-bluesky fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Bluesky</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://neuroinformatics.zulipchat.com/" title="Zulip (chat)" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-comments fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Zulip (chat)</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../about.html">
+    About us
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../people.html">
+    People
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../projects.html">
+    Projects
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../collaborations.html">
+    Collaborations
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../blog/index.html">
+    Blog
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../roadmaps/index.html">
+    Roadmaps
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    Get involved
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../resources.html">
+    Resources
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/neuroinformatics-unit/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/swc_niu" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://mastodon.online/@neuroinformatics" title="Mastodon" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-mastodon fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Mastodon</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://bsky.app/profile/neuroinformatics.dev" title="Bluesky" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-bluesky fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Bluesky</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://neuroinformatics.zulipchat.com/" title="Zulip (chat)" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-comments fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Zulip (chat)</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Get involved</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Google Summer of Code</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                   <section class="tex2jax_ignore mathjax_ignore" id="google-summer-of-code">
+<h1>Google Summer of Code<a class="headerlink" href="#google-summer-of-code" title="Link to this heading">#</a></h1>
+<p><a class="reference external" href="https://summerofcode.withgoogle.com/">Google Summer of Code</a> (GSoC) is a global fully online program whose aim is to bring new developers into open source software. It is a great opportunity to gain experience in real-world software development while helping the open source community. Additionally, GSoC contributors receive a stipend from Google.</p>
+<p>Initially focused on university students, since 2022 the program has expanded to welcome students and all beginner contributors to open source who are 18 years and older to participate.</p>
+<p>In 2025, NIU is applying for the first time to be a mentoring organization with GSoC, pairing candidates with NIU developers to work on ~12-week programming projects. So if you are interested in contributing to open source software, this is a great opportunity to get involved!</p>
+<section id="how-does-gsoc-work">
+<h2>How does GSoC work?<a class="headerlink" href="#how-does-gsoc-work" title="Link to this heading">#</a></h2>
+<p>Through the GSoC application process, interested applicants submit project proposals to the various organizations participating in GSoC - in our case, the NIU. Then, the organizations select which proposals they would like to see funded by Google. Successful applicants will spend their summer contributing code to our open source organization under the guidance of our mentoring team.</p>
+<p>Below you can find some more information on the <a class="reference internal" href="#gsoc-niu-projects-2025"><span class="std std-ref">projects</span></a> that we are putting forward for GSoC 2025, and some <a class="reference internal" href="#apply-to-gsoc-with-niu"><span class="std std-ref">guidelines</span></a> to help you with your application.</p>
+<p>To learn more about the program, we recommend reading the <a class="reference external" href="https://developers.google.com/open-source/gsoc/faq">GSoC FAQs</a> and the <a class="reference external" href="https://google.github.io/gsocguides/student/">GSoC Contributor Guide</a>, and having a look at the <a class="reference external" href="https://developers.google.com/open-source/gsoc/timeline">2025 Timeline</a>. For general information, see also the <a class="reference external" href="https://summerofcode.withgoogle.com/">GSoC website</a>.</p>
+</section>
+<section id="gsoc-niu-projects-2025">
+<h2>GSoC NIU Projects 2025<a class="headerlink" href="#gsoc-niu-projects-2025" title="Link to this heading">#</a></h2>
+<p>NIU is offering a variety of projects for GSoC 2025, organized under four of our software tools. Click on a card below to learn more about the project ideas for each tool.</p>
+<p>A project can be one of three sizes: small (90 h), medium (175 h) or large  large (350 h). The standard coding period is 12 weeks for medium and large projects, and 8 weeks for small projects.</p>
+<p>However, GSoC contributors can request in their proposal up to a 22-week coding period, if they know they may have other commitments or certain weeks when they will not be able to work full time on their GSoC project. During the project preparation period (called “community bonding period”), both the GSoC contributor and the mentors will agree on a schedule and sign off on it.</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-1 sd-row-cols-lg-1 sd-g-4 sd-g-xs-4 sd-g-sm-4 sd-g-md-4 sd-g-lg-4 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+<span class="fas fa-video sd-text-primary"></span> <code class="docutils literal notranslate"><span class="pre">movement</span></code></div>
+<p class="sd-card-text">Markerless pose estimation tools based on deep learning, such as <a class="reference external" href="https://www.mackenziemathislab.org/deeplabcut">DeepLabCut</a> and <a class="reference external" href="https://sleap.ai/">SLEAP</a>, have revolutionised the study of animal behaviour. However, there is currently no user-friendly, general-purpose approach for processing and analysing the trajectories generated by these popular tools. To fill this gap, we’re developing <a class="reference external" href="https://movement.neuroinformatics.dev/"><code class="docutils literal notranslate"><span class="pre">movement</span></code></a>, an open-source Python package that provides a unified data analysis interface across pose estimation frameworks.</p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference internal" href="projects_2025/movement.html"><span class="doc">GSoC NIU Projects 2025: movement</span></a></div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+<span class="fas fa-otter sd-text-primary"></span> <code class="docutils literal notranslate"><span class="pre">ethology</span></code></div>
+<p class="sd-card-text"><a class="reference external" href="https://github.com/neuroinformatics-unit/ethology"><code class="docutils literal notranslate"><span class="pre">ethology</span></code></a> is a Python package in early-development stage, whose aim is to facilitate the application of a wide range of computer vision tasks to animal behaviour research, by providing a unified data analysis interface across these tasks. We plan to support both classic computer vision tasks and deep learning based ones, such as background subtraction, object detection, ID tracking, segmentation, any-point tracking, and any useful combinations between them.</p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference internal" href="projects_2025/ethology.html"><span class="doc">GSoC NIU Projects 2025: ethology</span></a></div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+<span class="fas fa-brain sd-text-primary"></span> <code class="docutils literal notranslate"><span class="pre">BrainGlobe</span></code></div>
+<p class="sd-card-text"><a class="reference external" href="https://brainglobe.info/">BrainGlobe</a> is a community-driven suite of open-source Python tools. The BrainGlobe tools are widely used to process, analyse and visualise images of brains (and other related data) in neuroscientific research.</p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference internal" href="projects_2025/brainglobe.html"><span class="doc">GSoC NIU Projects 2025: BrainGlobe</span></a></div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+<span class="fas fa-database sd-text-primary"></span> <code class="docutils literal notranslate"><span class="pre">datashuttle</span></code></div>
+<p class="sd-card-text"><a class="reference external" href="https://datashuttle.neuroinformatics.dev/index.html"><code class="docutils literal notranslate"><span class="pre">datashuttle</span></code></a> is a tool to automate neuroscience project folder creation, validation and transfer. It creates and validates projects standardised to the <a class="reference external" href="https://neuroblueprint.neuroinformatics.dev/latest/index.html">NeuroBlueprint</a> specification. It also allows these folders to be easily synchronised between computers.</p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference internal" href="projects_2025/datashuttle.html"><span class="doc">GSoC NIU Projects 2025: datashuttle</span></a></div>
+</div>
+</div>
+</div>
+</section>
+<section id="apply-to-gsoc-with-niu">
+<h2>Apply to GSoC with NIU<a class="headerlink" href="#apply-to-gsoc-with-niu" title="Link to this heading">#</a></h2>
+<p>As part of your application to GSoC, you will need to submit a project proposal. To help you with this, we provide some <a class="reference internal" href="guidelines.html"><span class="doc std std-doc">NIU guidelines</span></a> on how to write a successful proposal to work with us.</p>
+<p>You may also want to checkout other useful application guides, such as:</p>
+<ul class="simple">
+<li><p>the <a class="reference external" href="https://google.github.io/gsocguides/student/writing-a-proposal">GSoC Contributor Guide: writing a proposal</a>,</p></li>
+<li><p>the <a class="reference external" href="https://python-gsoc.org/">Python Software Foundation guide</a>,</p></li>
+<li><p>the <a class="reference external" href="https://openastronomy.org/gsoc/student_guidelines.html">OpenAstronomy</a> one, or</p></li>
+<li><p>the <a class="reference external" href="https://www.incf.org/recommendations-gsoc-contributors">INCF</a> one,</p></li>
+</ul>
+<p>all of which we are closely following. Applicants are given about 2 weeks to complete their applications. For further details see the <a class="reference external" href="https://google.github.io/gsocguides/student/writing-a-proposal">GSoC Contributor Guide</a>.</p>
+<p>If you are interested in any of the NIU projects on offer, feel free to get in touch with us via <a class="reference external" href="https://neuroinformatics.zulipchat.com/">Zulip</a> with any questions. Potential GSoC contributors are encouraged to get in touch with participating organizations as soon as the list of accepted organizations is published (this year, on the <a class="reference external" href="https://developers.google.com/open-source/gsoc/timeline#february_27_-_1800_utc">27th February 2025</a>).</p>
+<p>For clarity, please always use your full name when getting a <a class="reference external" href="https://neuroinformatics.zulipchat.com/">Zulip</a> account, when registering for the program, and when submitting your project plan.</p>
+</section>
+<section id="team">
+<h2>Team<a class="headerlink" href="#team" title="Link to this heading">#</a></h2>
+<p>The NIU GSoC team for 2025 is composed of the following members. To read more about the different roles involved in GSoC, see <a class="reference external" href="https://google.github.io/gsocguides/mentor/#participant-roles">GSoC Participant Roles</a>.</p>
+<p>Our working languages are Python and English ;) - but we also speak other languages! We listed any additional languages spoken by the mentors in each of the projects’ descriptions.</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 sd-p-5 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img-top" src="../../_images/adam_tyson.jpg" />
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Adam Tyson</div>
+<p class="sd-card-text"><span class="fab fa-github"></span> <a class="reference external" href="https://github.com/adamltyson">&#64;adamltyson</a></p>
+<p class="sd-card-text">Organisation administrator</p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://github.com/adamltyson"><span>https://github.com/adamltyson</span></a></div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img-top" src="../../_images/alessandro_felder.png" />
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Alessandro Felder</div>
+<p class="sd-card-text"><span class="fab fa-github"></span> <a class="reference external" href="https://github.com/alessandrofelder">&#64;alessandrofelder</a></p>
+<p class="sd-card-text">Mentor</p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://github.com/alessandrofelder"><span>https://github.com/alessandrofelder</span></a></div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img-top" src="../../_images/sofia_minano.png" />
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Sofía Miñano</div>
+<p class="sd-card-text"><span class="fab fa-github"></span> <a class="reference external" href="https://github.com/sfmig">&#64;sfmig</a></p>
+<p class="sd-card-text">Mentor</p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://github.com/sfmig"><span>https://github.com/sfmig</span></a></div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img-top" src="../../_images/niko_sirmpilatze.png" />
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Niko Sirmpilatze</div>
+<p class="sd-card-text"><span class="fab fa-github"></span> <a class="reference external" href="https://github.com/niksirbi">&#64;niksirbi</a></p>
+<p class="sd-card-text">Mentor</p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://github.com/niksirbi"><span>https://github.com/niksirbi</span></a></div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img-top" src="../../_images/igor_tatarnikov.jpg" />
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Igor Tatarnikov</div>
+<p class="sd-card-text"><span class="fab fa-github"></span> <a class="reference external" href="https://github.com/IgorTatarnikov">&#64;IgorTatarnikov</a></p>
+<p class="sd-card-text">Mentor</p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://github.com/IgorTatarnikov"><span>https://github.com/IgorTatarnikov</span></a></div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover sd-text-center docutils">
+<img alt="" class="sd-card-img-top" src="../../_images/joe_ziminski.png" />
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Joe Ziminski</div>
+<p class="sd-card-text"><span class="fab fa-github"></span> <a class="reference external" href="https://github.com/JoeZiminski">&#64;JoeZiminski</a></p>
+<p class="sd-card-text">Mentor</p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://github.com/JoeZiminski"><span>https://github.com/JoeZiminski</span></a></div>
+</div>
+</div>
+</div>
+</section>
+<section id="further-details">
+<h2>Further details<a class="headerlink" href="#further-details" title="Link to this heading">#</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="projects_2025/index.html">GSoC NIU Projects 2025</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guidelines.html">GSoC NIU Contributor Application Guidelines</a></li>
+</ul>
+</div>
+</section>
+</section>
+
+<div class="section ablog__blog_comments">
+   
+</div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../mentoring.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Mentored open-source contributions</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="projects_2025/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">GSoC NIU Projects 2025</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-does-gsoc-work">How does GSoC work?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gsoc-niu-projects-2025">GSoC NIU Projects 2025</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apply-to-gsoc-with-niu">Apply to GSoC with NIU</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#team">Team</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-details">Further details</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/get-involved/gsoc/index.md.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item"><p class="sphinx-version">
+    Created using <a href="https://sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+    </p>
+    <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a>
+    0.16.1.
+    </p>
+    </div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><div class="things-in-a-row">
+    <a href="https://www.sainsburywellcome.org/web/">
+        <img src="../../_static/light-logo-swc.png" alt="Sponsors" class="only-light img-sponsor"/>
+        <img src="../../_static/dark-logo-swc.png" alt="Sponsors" class="only-dark img-sponsor"/>
+    </a>
+    <a href="https://www.ucl.ac.uk/gatsby/gatsby-computational-neuroscience-unit">
+        <img src="../../_static/light-logo-gatsby.png" alt="Sponsors" class="only-light img-sponsor"/>
+        <img src="../../_static/dark-logo-gatsby.png" alt="Sponsors" class="only-dark img-sponsor"/>
+    </a>
+    <a href="https://www.ucl.ac.uk/">
+        <img src="../../_static/light-logo-ucl.png" alt="Sponsors" class="only-light img-sponsor"/>
+        <img src="../../_static/dark-logo-ucl.png" alt="Sponsors" class="only-dark img-sponsor"/>
+    </a>
+</div></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
