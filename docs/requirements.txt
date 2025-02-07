@@ -7,3 +7,4 @@ nbsphinx
 linkify-it-py
 ablog
 sphinx-sitemap
+sphinx-icon
