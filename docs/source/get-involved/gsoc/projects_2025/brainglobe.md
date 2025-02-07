@@ -4,7 +4,7 @@ If you are interested in any of these projects, [get in touch](https://brainglob
 
 Our working language is English, but our mentors for these projects also speak Italian, French, and German.
 
-:::{dropdown} {fas}`video;sd-text-primary` Improve `cellfinder`'s classification algorithm
+:::{dropdown} {fas}`brain;sd-text-primary` Improve `cellfinder`'s classification algorithm
 <!-- Description -->
 [BrainGlobe](https://brainglobe.info) is a community-driven suite of open-source Python tools. The BrainGlobe tools are widely used to process, analyse and visualise images of brains (and other related data) in neuroscientific research.
 
@@ -51,7 +51,7 @@ Experience with Python, [NumPy](https://numpy.org/doc/stable/index.html) and/or 
 - [cellfinder code](https://github.com/brainglobe/cellfinder)
 :::
 
-:::{dropdown} {fas}`video;sd-text-primary` `cellfinder` support for two-dimensional brain images
+:::{dropdown} {fas}`brain;sd-text-primary` `cellfinder` support for two-dimensional brain images
 <!-- Description -->
 [BrainGlobe](https://brainglobe.info) is a community-driven suite of open-source Python tools. The BrainGlobe tools are widely used to process, analyse and visualise images of brains (and other related data) in neuroscientific research.
 
@@ -98,7 +98,7 @@ Experience with Python, [NumPy](https://numpy.org/doc/stable/index.html) and/or 
 - [cellfinder code](https://github.com/brainglobe/cellfinder)
 :::
 
-:::{dropdown} {fas}`video;sd-text-primary` `cellfinder` support for arbitrary number of channels
+:::{dropdown} {fas}`brain;sd-text-primary` `cellfinder` support for arbitrary number of channels
 <!-- Description -->
 [BrainGlobe](https://brainglobe.info) is a community-driven suite of open-source Python tools. The BrainGlobe tools are widely used to process, analyse and visualise images of brains (and other related data) in neuroscientific research.
 
