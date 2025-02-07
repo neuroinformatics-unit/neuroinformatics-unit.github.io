@@ -20,7 +20,7 @@ in particular terminal user interfaces.
 <!-- Goals, or expected status after Community Bonding Period, Start of Coding, End of Coding. Stretch goals? -->
 - Add TUI widgets that perform and display project validation. This will include buttons, radio-buttons and drop down menus and a [log display](https://textual.textualize.io/widgets/rich_log/) for validation errors.
 - Quality-of-life updates:
-  - Initiate a second event loop in a worker, to allow a response user interface while a transfer job is performed.
+  - Initiate a second event loop in a worker, to allow a responsive user interface while a transfer job is performed.
   - Buttons and select drop-down to edit a [directory tree](https://textual.textualize.io/widgets/directory_tree/).
 
 **Duration**
