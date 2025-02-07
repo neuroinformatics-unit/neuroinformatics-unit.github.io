@@ -53,8 +53,6 @@ Experience with Python, [NumPy](https://numpy.org/doc/stable/index.html) and/or 
 
 :::{dropdown} {fas}`brain;sd-text-primary` `cellfinder` support for two-dimensional brain images
 <!-- Description -->
-[BrainGlobe](https://brainglobe.info) is a community-driven suite of open-source Python tools. The BrainGlobe tools are widely used to process, analyse and visualise images of brains (and other related data) in neuroscientific research.
-
 The [BrainGlobe `cellfinder` tool](https://brainglobe.info/documentation/cellfinder/index.html) is used to detect cells in large whole-brain images. It uses signal processing to find possible cell candidates and passes them to a customisable classifier to split the candidates into cells and no-cells. `cellfinder` relies heavily on `pytorch` and `keras`.
 
 `cellfinder` currently uses a residual neural network (ResNet) to classify cell candidates. This network is designed for three-dimensional whole-brain images, but most neuroscientists take images of two-dimensional slices of the brain. In this project, you would adapt `cellfinder` to support two-dimensional data. This would involve implementing a new neural network suitable for two-dimensional images, as well as refactoring some of the signal processing code.
@@ -100,8 +98,6 @@ Experience with Python, [NumPy](https://numpy.org/doc/stable/index.html) and/or 
 
 :::{dropdown} {fas}`brain;sd-text-primary` `cellfinder` support for arbitrary number of channels
 <!-- Description -->
-[BrainGlobe](https://brainglobe.info) is a community-driven suite of open-source Python tools. The BrainGlobe tools are widely used to process, analyse and visualise images of brains (and other related data) in neuroscientific research.
-
 The [BrainGlobe `cellfinder` tool](https://brainglobe.info/documentation/cellfinder/index.html) is used to detect cells in large whole-brain images. It uses signal processing to find possible cell candidates and passes them to a customisable classifier to split the candidates into cells and no-cells. `cellfinder` relies heavily on `pytorch` and `keras`.
 
 `cellfinder` was originally designed to work with two channels: the "background" channel and the "signal" channel. This is a limitation, because sometimes only the signal channel is acquired, or there are several signal channels containing useful information. In this project, you would explore ways to allow `cellfinder` to classify cells based on information from an arbitrary number of channels.
