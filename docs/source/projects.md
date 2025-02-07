@@ -39,7 +39,7 @@ tracking of single or multiple animals.
 :::{grid-item-card} {fas}`otter;sd-text-primary` ethology
 :link: https://github.com/neuroinformatics-unit/ethology
 
-ethology is a Python package in early-development stage, whose aim is to facilitate the application of a wide range of computer vision tasks to animal behaviour research, by providing a unified data analysis interface. We plan to support both classic computer vision tasks and deep learning based ones, such as background subtraction, object detection, ID tracking, segmentation, any-point tracking, and any useful combinations between them. 
+ethology is a Python package which aims to facilitate the application of a wide range of computer vision tasks to animal behaviour research, by providing a unified data analysis interface. We plan to support both classic computer vision tasks and deep learning based ones, such as background subtraction, object detection, ID tracking, segmentation, any-point tracking, and any useful combinations between them. 
 :::
 ::::
 
