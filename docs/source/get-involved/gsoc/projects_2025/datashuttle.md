@@ -11,7 +11,7 @@ In systems neuroscience, a lack of standardisation in data organisation schemes 
 and collaboration. ``datashuttle`` provides a Python API and terminal-user interface (TUI) to allow researchers
 to create, validate and transfer folders in a standardised way.
 
-There are a number of features which are available in the Python API but not yet exposed in the terminal interface.
+In ``datashuttle``, there are a number of features which are available in the Python API but not yet exposed in the terminal interface.
 ``datashuttle`` uses [textual](https://github.com/Textualize/textual) to create the TUI. This project would
 involve extending the functionality of the TUI, providing experience in coding for graphical-user interfaces,
 in particular terminal user interfaces.
@@ -19,8 +19,8 @@ in particular terminal user interfaces.
 **Deliverables**
 <!-- Goals, or expected status after Community Bonding Period, Start of Coding, End of Coding. Stretch goals? -->
 - Expose project-validation in the TUI (widgets to run the validation and display the results)
-- Allow searching a remote project over ssh for information on subjects and sessions to display in the TUI
-- Quality-of-life updates. 
+- Allow searching a remote project over secure-shell (SSH) protocol for information on subjects and sessions to display in the TUI
+- Quality-of-life updates:
   - For example, running transfer-waiting pop-up windows in a separate worker for animated wait screen. 
   - Changing the root drive on directory tree widgets.
 
@@ -50,7 +50,7 @@ The[NeuroBlueprint](https://neuroblueprint.neuroinformatics.dev/latest/index.htm
 :::
 
 <!-- ------------------------------ -->
-:::{dropdown} {fas}`video;sd-text-primary` Extend the functionality of the terminal-user interface
+:::{dropdown} {fas}`video;sd-text-primary` Allow Google Drive or AWS as remote storage
 
 In systems neuroscience, a lack of standardisation in data organisation schemes creates a barrier to data-sharing
 and collaboration. ``datashuttle`` provides a Python API and terminal-user interface (TUI) to allow researchers
@@ -73,7 +73,7 @@ Medium (~175 hours)
 
 **Difficulty**
 <!-- Is this project geared more toward a student level or a more advanced developer level? -->
-This project is well-suited for a student or a beginner contributor to open source. 
+This project is well-suited for a beginner contributor to open source. 
 
 
 **Required skills**
