@@ -335,7 +335,7 @@ The expected deliverables include:
 - A Python implementation of at least one new Deep Learning network in `cellfinder`
 - Tests to cover any added functionality.
 - Documentation for the new functionality.
-- A [blog]((https://brainglobe.info/blog)) explaining the new network and its advantages and disadvantages.
+- A [blog](https://brainglobe.info/blog) explaining the new network and its advantages and disadvantages.
 
 **Duration**
 <!-- Small (~90 hours), Medium (~175 hours) or Large (~350 hours)  -->
