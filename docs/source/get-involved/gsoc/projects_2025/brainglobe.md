@@ -31,10 +31,10 @@ This project is well-suited for an intermediate contributor to open source.
 
 **Required skills**
 
-Experience with Python, [NumPy](https://numpy.org/doc/stable/index.html) and/or [pandas](https://pandas.pydata.org/docs/index.html).
+- Experience with Python, [NumPy](https://numpy.org/doc/stable/index.html) and/or [pandas](https://pandas.pydata.org/docs/index.html).
+- At least initial understanding of machine learning algorithms
 
 **Nice-to-haves**
-- Understanding of machine learning algorithms
 - Experience working with machine learning frameworks, in particular `keras` or `pytorch`
 - Experience working with image data
 
@@ -72,14 +72,14 @@ Large (~350 hours).
 
 **Difficulty**
 <!-- Is this project geared more toward a student level or a more advanced developer level? -->
-This project is well-suited for a student or a beginner contributor to open source.
+This project is well-suited for an intermediate contributor to open source.
 
 **Required skills**
 
-Experience with Python, [NumPy](https://numpy.org/doc/stable/index.html) and/or [pandas](https://pandas.pydata.org/docs/index.html).
+- Experience with Python, [NumPy](https://numpy.org/doc/stable/index.html) and/or [pandas](https://pandas.pydata.org/docs/index.html).
+- At least initial understanding of machine learning algorithms
 
 **Nice-to-haves**
-- Understanding of machine learning algorithms
 - Experience working with machine learning frameworks, in particular `keras` or `pytorch`
 - Experience working with image data
 
@@ -116,14 +116,13 @@ Large (~350 hours).
 
 **Difficulty**
 <!-- Is this project geared more toward a student level or a more advanced developer level? -->
-This project is well-suited for a student or a beginner contributor to open source.
+This project is well-suited for an intermediate contributor to open source.
 
 **Required skills**
-
-Experience with Python, [NumPy](https://numpy.org/doc/stable/index.html) and/or [pandas](https://pandas.pydata.org/docs/index.html).
+- Experience with Python, [NumPy](https://numpy.org/doc/stable/index.html) and/or [pandas](https://pandas.pydata.org/docs/index.html).
+- At least initial understanding of machine learning algorithms
 
 **Nice-to-haves**
-- Understanding of machine learning algorithms
 - Experience working with machine learning frameworks, in particular `keras` or `pytorch`
 - Experience working with image data
 
