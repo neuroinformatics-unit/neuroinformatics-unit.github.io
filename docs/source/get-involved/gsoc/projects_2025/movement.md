@@ -6,6 +6,7 @@ However, GSoC contributors can request in their proposal up to a 22-week coding 
 
 If you are interested in any of these projects, [get in touch](https://movement.neuroinformatics.dev/community/index.html)! Feel free to open a new topic on [Zulip](https://neuroinformatics.zulipchat.com/#narrow/stream/406001-Movement) and tag the potential mentors.
 
+Our working language is English, but our mentors for these projects also speak Spanish.
 
 <!-- ------------------------------ -->
 :::{dropdown} {fas}`video;sd-text-primary` Support for Kalman filters in `movement`

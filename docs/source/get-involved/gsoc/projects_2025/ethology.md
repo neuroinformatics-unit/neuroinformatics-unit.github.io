@@ -6,6 +6,7 @@ However, GSoC contributors can request in their proposal up to a 22-week coding 
 
 If you are interested in any of these projects, get in touch! Feel free to open a new topic on [Zulip](https://neuroinformatics.zulipchat.com/#narrow/channel/483869-Ethology) and tag the potential mentors.
 
+Our working language is English, but our mentors for these projects also speak Spanish.
 
 :::{dropdown} {fas}`video;sd-text-primary` Support for any-point trackers in `ethology`
 
