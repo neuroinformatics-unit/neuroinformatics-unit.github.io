@@ -43,7 +43,6 @@ extensions = [
     "numpydoc",
     "nbsphinx",
     "ablog",
-    "sphinxcontrib.icon",
 ]
 
 # Configure the myst parser to enable cool markdown features
