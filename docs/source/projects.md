@@ -32,7 +32,14 @@ behaviour. There is not yet a standardised, easy to use way to process the pose 
 movement aims to provide a consistent modular interface to analyse pose tracks, allowing steps such as data cleaning, 
 visualisation and motion quantification. We aim to support a range of pose estimation packages, along with 2D or 3D 
 tracking of single or multiple animals. 
+:::
+::::
 
+::::{grid} 1 1 1 1
+:::{grid-item-card} {fas}`otter;sd-text-primary` ethology
+:link: https://github.com/neuroinformatics-unit/ethology
+
+ethology is a Python package in early-development stage, whose aim is to facilitate the application of a wide range of computer vision tasks to animal behaviour research, by providing a unified data analysis interface. We plan to support both classic computer vision tasks and deep learning based ones, such as background subtraction, object detection, ID tracking, segmentation, any-point tracking, and any useful combinations between them. 
 :::
 ::::
 
