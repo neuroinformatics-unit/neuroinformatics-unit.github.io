@@ -5,7 +5,7 @@ These tips are largely based on the [OpenAstronomy guidelines](https://openastro
 
 1. **Get in touch with the community**
 
-    Open source work is done and communicated in public - the idea here is to demonstrate that you can do this! Join our Zulip, or browse through our GitHub repositories. Listen, ask questions, get to know the people involved, and participate in discussions. 
+    Open source work is done and communicated in public - the idea here is to demonstrate that you can do this! Join our [Zulip](https://neuroinformatics.zulipchat.com/), or browse through our GitHub repositories - you can find a full list of the NIU repositories under the [NIU GitHub organisation](https://github.com/neuroinformatics-unit) and the [Brainglobe](https://github.com/brainglobe) one. Read, ask questions, get to know the people involved, and participate in discussions. 
     
     Just introduce yourself, and feel free to can ask questions about specific projects, the development process, recommended readings or the community. 
 
