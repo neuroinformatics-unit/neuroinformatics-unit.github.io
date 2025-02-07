@@ -5,24 +5,23 @@ Our working language is English.
 
 
 <!-- ------------------------------ -->
-:::{dropdown} {fas}`video;sd-text-primary` Extend the functionality of the terminal-user interface
+:::{dropdown} {fas}`video;sd-text-primary` Extend the functionality of the terminal user interface
 
 In systems neuroscience, a lack of standardisation in data organisation schemes creates a barrier to data-sharing
-and collaboration. ``datashuttle`` provides a Python API and terminal-user interface (TUI) to allow researchers
+and collaboration. ``datashuttle`` provides a Python API and terminal user interface (TUI) to allow researchers
 to create, validate and transfer folders in a standardised way.
 
 In ``datashuttle``, there are a number of features which are available in the Python API but not yet exposed in the terminal interface.
 ``datashuttle`` uses [textual](https://github.com/Textualize/textual) to create the TUI. This project would
-involve extending the functionality of the TUI, providing experience in coding for graphical-user interfaces,
+involve extending the functionality of the TUI, providing experience in coding for graphical user interfaces,
 in particular terminal user interfaces.
 
 **Deliverables**
 <!-- Goals, or expected status after Community Bonding Period, Start of Coding, End of Coding. Stretch goals? -->
-- Expose project-validation in the TUI (widgets to run the validation and display the results)
-- Allow searching a remote project over secure-shell (SSH) protocol for information on subjects and sessions to display in the TUI
+- Add TUI widgets that perform and display project validation. This will include buttons, radio-buttons and drop down menus and a [log display](https://textual.textualize.io/widgets/rich_log/) for validation errors.
 - Quality-of-life updates:
-  - For example, running transfer-waiting pop-up windows in a separate worker for animated wait screen. 
-  - Changing the root drive on directory tree widgets.
+  - Initiate a second event loop in a worker, to allow a response user interface while a transfer job is performed.
+  - Buttons and select drop-down to edit a [directory tree](https://textual.textualize.io/widgets/directory_tree/).
 
 **Duration**
 <!-- Small (~90 hours), Medium (~175 hours) or Large (~350 hours)  -->
@@ -53,7 +52,7 @@ The[NeuroBlueprint](https://neuroblueprint.neuroinformatics.dev/latest/index.htm
 :::{dropdown} {fas}`video;sd-text-primary` Allow Google Drive or AWS as remote storage
 
 In systems neuroscience, a lack of standardisation in data organisation schemes creates a barrier to data-sharing
-and collaboration. ``datashuttle`` provides a Python API and terminal-user interface (TUI) to allow researchers
+and collaboration. ``datashuttle`` provides a Python API and terminal user interface (TUI) to allow researchers
 to create, validate and transfer folders in a standardised way.
 
 Projects can be transferred between computer systems in ``datashuttle`` via SSH or mounting drives.
@@ -62,8 +61,7 @@ Under the hood ``datashuttle`` uses [RClone](https://rclone.org/), which support
 
 **Deliverables**
 <!-- Goals, or expected status after Community Bonding Period, Start of Coding, End of Coding. Stretch goals? -->
-- Extend ``datashuttle`` functionality to permit transfer between a local filesytem and Google Drive or AWS.
-- This will involve exposing new functionality within the Python API as well as the terminal user interface.
+- Extend ``datashuttle`` functionality to permit transfer between a local filesytem and Google Drive or AWS. This will involve exposing new functionality within the Python API as well as the terminal user interface.
 - Testing transfers to Google Drive and AWS.
 
 **Duration**
