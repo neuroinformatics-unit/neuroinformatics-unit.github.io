@@ -136,11 +136,12 @@ Mentor
 :::
 
 :::{grid-item-card} Joe Ziminski
-:img-top: ../../_static/joe_ziminski.jpg
+:img-top: ../../_static/joe_ziminski.png
 :link: https://github.com/JoeZiminski
 :text-align: center
 
-{fab}`github` [@IgorTatarnikov](https://github.com/IgorTatarnikov)
+{fab}`github` [@JoeZiminski](https://github.com/JoeZiminski)
+
 
 Mentor
 
