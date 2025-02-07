@@ -134,6 +134,18 @@ Mentor
 Mentor
 
 :::
+
+:::{grid-item-card} Joe Ziminski
+:img-top: ../../_static/joe_ziminski.jpg
+:link: https://github.com/JoeZiminski
+:text-align: center
+
+{fab}`github` [@IgorTatarnikov](https://github.com/IgorTatarnikov)
+
+Mentor
+
+:::
+
 ::::
 
 
