@@ -19,6 +19,10 @@ To learn more about the program, we recommend reading the [GSoC FAQs](https://de
 
 NIU is offering a variety of projects for GSoC 2025, organized under four of our software tools. Click on a card below to learn more about the project ideas for each tool.
 
+A project can be one of three sizes: small (90 h), medium (175 h) or large  large (350 h). The standard coding period is 12 weeks for medium and large projects, and 8 weeks for small projects. 
+
+However, GSoC contributors can request in their proposal up to a 22-week coding period, if they know they may have other commitments or certain weeks when they will not be able to work full time on their GSoC project. During the project preparation period (called "community bonding period"), both the GSoC contributor and the mentors will agree on a schedule and sign off on it.
+
 
 ::::{grid} 1 1 1 1
 :gutter: 4
@@ -48,7 +52,6 @@ Markerless pose estimation tools based on deep learning, such as [DeepLabCut](ht
 :::
 
 ::::
-
 
 ## Apply to GSoC with NIU
 
