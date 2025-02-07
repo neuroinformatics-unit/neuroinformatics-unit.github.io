@@ -31,7 +31,7 @@ Medium (~175 hours) or Large (~350 hours).
 
 **Difficulty**
 <!-- Is this project geared more toward a student level or a more advanced developer level? -->
-This project is well-suited for a student or a beginner contributor to open source.
+This project is well-suited for an intermediate contributor to open source.
 
 **Required skills**
 
