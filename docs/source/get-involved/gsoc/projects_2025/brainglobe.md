@@ -224,3 +224,48 @@ This project is well-suited for a student or a beginner contributor to open sour
 - [Getting started with OpenMINDS](https://openminds-documentation.readthedocs.io/en/v3.0/shared/getting_started.html)
 - [OpenMINDS SANDS BrainAtlas specification](https://openminds-documentation.readthedocs.io/en/v3.0/schema_specifications/SANDS/atlas/brainAtlas.html)
 :::
+
+
+:::{dropdown} {fas}`brain;sd-text-primary` `brainglobe-registration`
+<!-- Description -->
+The [BrainGlobe `brainglobe-registration` tool](https://brainglobe.info/documentation/brainglobe-registration/index.html) is used to register 2D and 3D images to a common coordinate space defined by an atlas ([`brainglobe-atlasapi'](https://github.com/brainglobe/brainglobe-atlasapi)). This is a crucial step in many neuroscientific analyses, as it allows data from different experiments to be compared and combined.
+
+The current implementation relies on a manual selection of the specific 2D region, or 3D subvolume of the atlas to be used as the registration target. This is a time-consuming process, and can be error-prone. In this project, you would implement and compare methods to automatically select the region to be registered, based on the data itself. This could be done by using an adaptive grid search, ML based techniques, or Bayesian optimisation.
+
+**Deliverables**
+<!-- Goals, or expected status after Community Bonding Period, Start of Coding, End of Coding. Stretch goals? -->
+- A new preprocessing step in `brainglobe-registration` that automatically selects the region of the atlas to be used as the registration target.
+- Quantitative comparison between at least two different methods for selecting the region.
+- Tests to cover any added functionality.
+- Documentation for the new functionality.
+- A [blog](https://brainglobe.info/blog) showcasing the new functionality.
+
+**Duration**
+<!-- Small (~90 hours), Medium (~175 hours) or Large (~350 hours)  -->
+Medium (~175 hours).
+
+**Difficulty**
+<!-- Is this project geared more toward a student level or a more advanced developer level? -->
+This project is well-suited for an intermediate contributor to open source.
+
+**Required skills**
+- Experience with Python, [NumPy](https://numpy.org/doc/stable/index.html).
+- At least initial understanding of machine learning algorithms
+
+**Nice-to-haves**
+- Experience with image registration
+- Experience with `ITK` or `elastix`
+- Experience working with image data
+
+
+**Potential mentors**
+- [@IgorTatarnikov](https://github.com/IgorTatarnikov)
+- [@alessandrofelder](https://github.com/alessandrofelder)
+
+
+**Further reading**
+<!-- The best pages include links to more detailed descriptions and related materials for each project. They might even include actual use cases! -->
+- [BrainGlobe developer guide](https://brainglobe.info/community/developers/index.html)
+- [elastix manual (pdf)](https://github.com/SuperElastix/elastix/releases/download/5.2.0/elastix-5.2.0-manual.pdf)
+- [Bayesian optimisation](https://bayesian-optimization.github.io/BayesianOptimization/2.0.3/)
+:::
