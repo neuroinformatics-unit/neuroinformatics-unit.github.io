@@ -228,7 +228,7 @@ This project is well-suited for a student or a beginner contributor to open sour
 
 :::{dropdown} {fas}`brain;sd-text-primary` `brainglobe-registration`
 <!-- Description -->
-The [BrainGlobe `brainglobe-registration` tool](https://brainglobe.info/documentation/brainglobe-registration/index.html) is used to register 2D and 3D images to a common coordinate space defined by an atlas ([`brainglobe-atlasapi'](https://github.com/brainglobe/brainglobe-atlasapi)). This is a crucial step in many neuroscientific analyses, as it allows data from different experiments to be compared and combined.
+The [BrainGlobe `brainglobe-registration` tool](https://github.com/brainglobe/brainglobe-registration) is used to register 2D and 3D images to a common coordinate space defined by an atlas ([`brainglobe-atlasapi'](https://github.com/brainglobe/brainglobe-atlasapi)). This is a crucial step in many neuroscientific analyses, as it allows data from different experiments to be compared and combined.
 
 The current implementation relies on a manual selection of the specific 2D region, or 3D subvolume of the atlas to be used as the registration target. This is a time-consuming process, and can be error-prone. In this project, you would implement and compare methods to automatically select the region to be registered, based on the data itself. This could be done by using an adaptive grid search, ML based techniques, or Bayesian optimisation.
 
