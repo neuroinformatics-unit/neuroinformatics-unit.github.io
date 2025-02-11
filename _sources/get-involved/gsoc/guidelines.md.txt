@@ -121,7 +121,7 @@ Extension: <u> max 1/4 page </u>
 - **GSoC experience.**
     Have you participated in GSoC before? If so, when and with which project? What was your experience like? If you haven't, what do you expect from the program?
 - **Are you also applying to projects with other organisations in GSoC 2025?**
-    If so, which ones? How do you plan to manage your time and commitments if you are accepted by multiple organizations? What would be your preference in case of a tie?
+    If so, which ones? What would be your preference in case of a tie?
 
 
 ## References
