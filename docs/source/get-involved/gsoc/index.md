@@ -91,16 +91,6 @@ Our working languages are Python and English ;) - but we also speak other langua
 Organisation administrator
 :::
 
-:::{grid-item-card} Alessandro Felder
-:img-top: ../../_static/alessandro_felder.png
-:link: https://github.com/alessandrofelder
-:text-align: center
-
-{fab}`github` [@alessandrofelder](https://github.com/alessandrofelder)
-
-Mentor
-:::
-
 :::{grid-item-card} Sofía Miñano
 :img-top: ../../_static/sofia_minano.png
 :link: https://github.com/sfmig
@@ -109,8 +99,18 @@ Mentor
 {fab}`github` [@sfmig](https://github.com/sfmig)
 
 
-Mentor
+Organisation administrator & mentor
 
+:::
+
+:::{grid-item-card} Alessandro Felder
+:img-top: ../../_static/alessandro_felder.png
+:link: https://github.com/alessandrofelder
+:text-align: center
+
+{fab}`github` [@alessandrofelder](https://github.com/alessandrofelder)
+
+Mentor
 :::
 
 :::{grid-item-card} Niko Sirmpilatze
