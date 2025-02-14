@@ -144,7 +144,7 @@ This project is well-suited for an intermediate contributor to open source.
 <!-- Description -->
 The [BrainGlobe `brainrender` tool](https://brainglobe.info/documentation/brainrender/index.html) is widely used to visualise brain data in a common coordinate space defined by a "brain atlas" (We refer to this data as "atlas-registered" data). However, `brainrender` is inaccessible to people without programming skills. The [`brainrender-napari` tool](https://brainglobe.info/tutorials/visualise-atlas-napari.html) aims to make `brainrender` functionality available to more people through a plugin for the popular open-source graphical image viewer [napari](https://napari.org/stable/). 
 
-Although `brainrender` and `brainrender-napari` share some functionality, some publicly available atlas-registered data is not yet available in `brainrender-napari`. This includes data about brain connectivity, which allows researchers to align their own data with the "wiring diagram" of the brain. In this project, we would implement code to allow users to visualise [publicly available atlas-registered data from mouse and fish brains](https://github.com/brainglobe/brainrender/blob/main/README.md) in `brainrender-napari`
+Although `brainrender` and `brainrender-napari` share some functionality, some publicly available atlas-registered data is not yet available in `brainrender-napari`. In this project, we would implement code to allow users to visualise publicly available atlas-registered data from mouse and fish brains in `brainrender-napari`
 
 **Deliverables**
 <!-- Goals, or expected status after Community Bonding Period, Start of Coding, End of Coding. Stretch goals? -->
@@ -186,24 +186,24 @@ This project is well-suited for a student or a beginner contributor to open sour
 
 :::{dropdown} {fas}`brain;sd-text-primary` Update atlas packaging scripts to atlas API v2
 <!-- Description -->
-Neuroanatomical atlases define a common coordinate space for the brain, and have been created for many species (mouse, fish, ...) and imaging modalities (MRI, lightsheet microscopy, ...). A central piece of BrainGlobe's ecosystem is the BrainGlobe Atlas API. Importantly, the Atlas API allows the use of any BrainGlobe tool with [many publicly available atlases](https://brainglobe.info/documentation/brainglobe-atlasapi/index.html), by exposing them through the same, consistent Python interface. This is possible thanks to [packaging scripts](https://github.com/brainglobe/brainglobe-atlasapi/tree/main/brainglobe_atlasapi/atlas_generation/atlas_scripts) contributed by the community, that convert public data to a standard format.
+[Neuroanatomical atlases](https://neuroinformatics.dev/slides-templates-atlases/#/on-templates-and-atlases) define a common coordinate space for the brain, and have been created for many species (mouse, fish, ...) and imaging modalities (MRI, lightsheet microscopy, ...). A central piece of BrainGlobe's ecosystem is the BrainGlobe Atlas API. Importantly, the Atlas API allows the use of any BrainGlobe tool with [many publicly available atlases](https://brainglobe.info/documentation/brainglobe-atlasapi/index.html), by exposing them through the same, consistent Python interface. This is possible thanks to [packaging scripts](https://github.com/brainglobe/brainglobe-atlasapi/tree/main/brainglobe_atlasapi/atlas_generation/atlas_scripts) contributed by the community, that convert public data to a standard format.
 
-The standard format is somewhat limited: the same atlas at a different resolution, or with a different annotation is currently packaged entirely separately, leading to duplicate data being hosted in the background. In this project, we would like to improve on this by changing the inner workings of the Atlas API to reduce the number of atlas files we need to provide, importantly without changing the its public-facing functionality.
+The standard format is somewhat limited, and we improve its utility by adhering [to a new community standard for neuroanatomical atlases, "OpenMINDS SANDS"](https://openminds-documentation.readthedocs.io/en/latest/schema_specifications/SANDS/atlas/brainAtlas.html).
 
 **Deliverables**
 <!-- Goals, or expected status after Community Bonding Period, Start of Coding, End of Coding. Stretch goals? -->
-- Help design and implement new internal functionality in the Atlas API to make the standard format more flexible.
+- Modifying atlas packaging Python code to write to OpenMINDS SANDS
 - Adapting at least one packaging script to use the new functionality.
 - Tests to cover any added/changed functionality.
 - Documentation for the new functionality.
 
 **Duration**
 <!-- Small (~90 hours), Medium (~175 hours) or Large (~350 hours)  -->
-Large (~350 hours).
+Medium (~175 hours) or Large (~350 hours).
 
 **Difficulty**
 <!-- Is this project geared more toward a student level or a more advanced developer level? -->
-This project is well-suited for an intermediate contributor to open source.
+This project is well-suited for a student or a beginner contributor to open source.
 
 **Required skills**
 - Experience with Python.
@@ -221,8 +221,8 @@ This project is well-suited for an intermediate contributor to open source.
 **Further reading**
 <!-- The best pages include links to more detailed descriptions and related materials for each project. They might even include actual use cases! -->
 - [BrainGlobe atlas API paper](https://doi.org/10.21105/joss.02668)
-- [Slides introducing neuroanatomical atlases](https://neuroinformatics.dev/slides-templates-atlases/#/on-templates-and-atlases)
-- [Atlas API version 2 GitHub issue](https://github.com/brainglobe/brainglobe-atlasapi/issues/141)
+- [Getting started with OpenMINDS](https://openminds-documentation.readthedocs.io/en/v3.0/shared/getting_started.html)
+- [OpenMINDS SANDS BrainAtlas specification](https://openminds-documentation.readthedocs.io/en/v3.0/schema_specifications/SANDS/atlas/brainAtlas.html)
 :::
 
 
@@ -242,7 +242,7 @@ The current implementation relies on a manual selection of the specific 2D regio
 
 **Duration**
 <!-- Small (~90 hours), Medium (~175 hours) or Large (~350 hours)  -->
-Medium (~175 hours).
+Medium (~175 hours) or Large (~350 hours) depending on experience.
 
 **Difficulty**
 <!-- Is this project geared more toward a student level or a more advanced developer level? -->
