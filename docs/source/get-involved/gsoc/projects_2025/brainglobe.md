@@ -144,7 +144,7 @@ This project is well-suited for an intermediate contributor to open source.
 <!-- Description -->
 The [BrainGlobe `brainrender` tool](https://brainglobe.info/documentation/brainrender/index.html) is widely used to visualise brain data in a common coordinate space defined by a "brain atlas" (We refer to this data as "atlas-registered" data). However, `brainrender` is inaccessible to people without programming skills. The [`brainrender-napari` tool](https://brainglobe.info/tutorials/visualise-atlas-napari.html) aims to make `brainrender` functionality available to more people through a plugin for the popular open-source graphical image viewer [napari](https://napari.org/stable/). 
 
-Although `brainrender` and `brainrender-napari` share some functionality, some publicly available atlas-registered data is not yet available in `brainrender-napari`. In this project, we would implement code to allow users to visualise publicly available atlas-registered data from mouse and fish brains in `brainrender-napari`
+Although `brainrender` and `brainrender-napari` share some functionality, some publicly available atlas-registered data is not yet available in `brainrender-napari`. This includes data about brain connectivity, which allows researchers to align their own data with the "wiring diagram" of the brain. In this project, we would implement code to allow users to visualise publicly available atlas-registered data from mouse and fish brains in `brainrender-napari`
 
 **Deliverables**
 <!-- Goals, or expected status after Community Bonding Period, Start of Coding, End of Coding. Stretch goals? -->
