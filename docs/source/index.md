@@ -62,5 +62,4 @@ blog/index
 roadmaps/index
 get-involved/index
 resources
-open-software-week/index
 ```
