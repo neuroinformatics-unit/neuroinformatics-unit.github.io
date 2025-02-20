@@ -16,14 +16,14 @@ place in **August 2025** in **London, UK**. This event will bring together resea
 ## Schedule
 
 - **Tuesday** and **Wednesday** will be dedicated to the two
-[main tracks](#main-tracks) of the event—[Animals in Motion](track-animals-in-motion) & [Big Microscopy Data](track-big-microscopy-data)—running in parallel. These tracks are targetted to different audiences, so make sure to choose the one that best fits your interests.
+[main tracks](#main-tracks) of the event—[Animals in Motion](track-animals-in-motion) & [Big Microscopy Data](track-big-microscopy-data)—running in parallel. These tracks are targeted to different audiences, so make sure to choose the one that best fits your interests.
 - The main tracks will be bracketed by a series of [satellite events](#satellite-events) on **Monday**, **Thursday**, and **Friday**, including an [Intro to Python](intro-to-python) workshop a [Careers Clinic](careers-clinic), a [Collaborative coding with git](collaborative-coding-with-git) workshop, and a [Hackathon](hackathon).
 
 Insert schedule image here.
 
 ## Main Tracks
 
-We ecourage you to read each track's description and
+We encourage you to read each track's description and
 choose the one that best fits your interests.
 
 :::: {grid} 1 2 2 2
