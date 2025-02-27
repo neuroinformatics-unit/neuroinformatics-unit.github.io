@@ -7,13 +7,13 @@ These tips are largely based on the [OpenAstronomy guidelines](https://openastro
 
     Open source work is done and communicated in public - the idea here is to demonstrate that you can do this! Join our [Zulip](https://neuroinformatics.zulipchat.com/), or browse through our GitHub repositories - you can find a full list of the NIU repositories under the [NIU GitHub organisation](https://github.com/neuroinformatics-unit) and the [Brainglobe](https://github.com/brainglobe) one. Read, ask questions, get to know the people involved, and participate in discussions. 
     
-    Just introduce yourself, and feel free to can ask questions about specific projects, the development process, recommended readings or the community. 
+    Introduce yourself, and feel free to can ask questions about specific projects, the development process, recommended readings or the community. If you are not familiar with Zulip, have a look at this [quick guide](https://zulip.readthedocs.io/en/latest/getting-started.html) first.
 
 2. **Become a user**
 
     A great way to get started in the community of our open-source tools is to experience them as a user. Try to install and use our tools, experiment with the code, and report any issues you find. This will help you understand the tools better and will give you a better idea of what you can contribute.
 
-    A good starting point as a user could be `movement`'s gallery of [examples](https://movement.neuroinformatics.dev/examples/index.html) or BrainGlobe's [tutorials](https://brainglobe.info/tutorials/index.html).
+    A good starting point as a user could be `movement`'s [gallery of examples](https://movement.neuroinformatics.dev/examples/index.html) or [BrainGlobe's tutorials](https://brainglobe.info/tutorials/index.html).
 
 3. **Get ready to be a developer**
 
@@ -27,12 +27,14 @@ These tips are largely based on the [OpenAstronomy guidelines](https://openastro
     - [Oh my git!](https://ohmygit.org/) an open-source game about Git.
     - [Julia Evan's How Git Works! zine](https://jvns.ca/blog/2024/04/25/new-zine--how-git-works-/)
     - the [NIU's software skills courses](https://software-skills.neuroinformatics.dev/courses/index.html)
+
+    We can help you with this if needed! Reach out in a relevant Zulip topic (or open one) if you have any questions, and someone from the community will be happy to help you.
    
 4. **Get started with open-source development**
 
     Check the GitHub issues for the projects you are interested in. Sometimes issues are labeled as "good first issue" or "help wanted". These are usually easier to solve and are a good way to get started with the project. Otherwise, have a look and see if there are any issues you can help with!
 
-    You will be expected to submit a pull request (ideally to one of the NIU projects) before you submit your application. It does not have to be accepted - the goal is to show that you know how git, GitHub, pull requests and code reviews work. This also allows mentors to evaluate your applications beyond a pdf, and based on a real code contribution. If you have previously contributed to an NIU or other open source project, you can point to those pull requests in your application too.
+    You will need to submit a pull request (ideally to one of the NIU projects) as part of your application. It does not have to be accepted - the goal is to show that you know how git, GitHub, pull requests and code reviews work. This also allows mentors to evaluate your application based on a real code contribution. If you have previously contributed to an NIU or other open source project, you can point to those pull requests in your application too.
 
     If you are new to open source software or would like a refresher, these are some nice resources to check:
 
@@ -40,6 +42,15 @@ These tips are largely based on the [OpenAstronomy guidelines](https://openastro
     - the GitHub blog post: [New to open source? Here’s everything you need to get started](https://github.blog/open-source/new-to-open-source-heres-everything-you-need-to-get-started/)
 
     Before contributing to a project, make sure you read through their contributing guidelines. These will give you an idea of the required steps, and what is expected of you. An example is `movement`'s [How to Contribute guide](https://movement.neuroinformatics.dev/community/contributing.html#target-contributing). The NIU also publishes some general [development guidelines](https://neuroinformatics.dev/get-involved/languages_frameworks.html).
+
+    You can check the issues from the tools involved in the GSoC projects in the links below:
+    - [`movement` issues](https://github.com/neuroinformatics-unit/movement/issues)
+    - [`ethology` issues](https://github.com/neuroinformatics-unit/ethology/issues)
+    - [`BrainGlobe cellfinder` issues](https://github.com/brainglobe/cellfinder/issues)
+    - [`BrainGlobe brainrender` issues](https://github.com/brainglobe/brainrender/issues)
+    - [`BrainGlobe atlasaip` issues](https://github.com/brainglobe/brainglobe-atlasapi/issues)
+    - [`BrainGlobe registration` issues](https://github.com/brainglobe/brainglobe-registration/issues)
+    - [`datashuttle` issues](https://github.com/neuroinformatics-unit/datashuttle/issues)
 
 
 5. **Prepare your application**
@@ -55,7 +66,7 @@ These tips are largely based on the [OpenAstronomy guidelines](https://openastro
 
     Remember to submit your application before [the deadline](https://developers.google.com/open-source/gsoc/timeline#april_8_-_1800_utc)! 
     
-    Please do not send any applications directly to the NIU team - all applications must go through [Google's application system](https://summerofcode.withgoogle.com/)
+    Please do not send any applications directly to the NIU team, they won't be considered - all applications must go through [Google's application system](https://summerofcode.withgoogle.com/)
     
 
 ## Application template
@@ -63,6 +74,9 @@ These tips are largely based on the [OpenAstronomy guidelines](https://openastro
 Please use the following template to submit your application to the NIU GSoC 2025 program.
 
 The more closely you follow this template, the easier it will be for us to review your application! Please include clear headings for all the different sections.
+
+### Project title to use for the GSoC application
+Please clearly include in the title the tool the project refers to, and the title of the project you are applying for. E.g. "movement: support for Kalman filters".
 
 ### Personal details
 Please include the following information:
@@ -74,13 +88,12 @@ Please include the following information:
 - **Personal website / project portfolio** (optional)
 - **Code contribution**
 
-    Please link a pull request or code sample, ideally submitted to your chosen project. It must be publicly visible and represent your own work, although you may have help from other developers in the community to further improve it. You can link more than one contribution or pull request if desired.
+    Please link a pull request, ideally submitted to your chosen project or one of the NIU tools. Applications without a code contribution won't be considered. It must be publicly visible and represent your own work, although you may have help from other developers in the community to further improve it. You can link more than one contribution or pull request if desired.
 
 ### Project proposal 
 Extension: <u> max 1 page </u> 
-
 - **Title.**
-    Please clearly include the title of the project you are applying for and the tool it refers to. E.g. "movement: support for Kalman filters".
+    Please use the same title as in the GSoC application.
 
 - **Synopsis.**
     Briefly explain: what is the project about? Why is it important? What are the goals? What are the deliverables? How would the open source community benefit from this project?
