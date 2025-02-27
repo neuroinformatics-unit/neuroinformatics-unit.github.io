@@ -88,7 +88,7 @@ Please include the following information:
 - **Personal website / project portfolio** (optional)
 - **Code contribution**
 
-    Please link a pull request, ideally submitted to your chosen project or one of the NIU tools. Applications without a code contribution won't be considered. It must be publicly visible and represent your own work, although you may have help from other developers in the community to further improve it. You can link more than one contribution or pull request if desired.
+    Please link a pull request, ideally submitted to your chosen project or one of the NIU tools. Applications without a code contribution won't be considered. It must be publicly visible and represent your own work, although you may have help from other developers in the community to further improve it. It must be meaningful code contribution (i.e. not just fixing a minor spelling mistake). While AI tools (such as Copilot etc) can be a very useful, contributions mostly created by AI are unlikely to be useful, and will not be accepted. You can link more than one pull request if desired.
 
 ### Project proposal 
 Extension: <u> max 1 page </u> 
