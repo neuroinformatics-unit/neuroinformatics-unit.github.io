@@ -65,7 +65,7 @@ You may also want to checkout other useful application guides, such as:
 
 all of which we are closely following. Applicants are given about 2 weeks to complete their applications. For further details see the [GSoC Contributor Guide](https://google.github.io/gsocguides/student/writing-a-proposal).
 
-If you are interested in any of the NIU projects on offer, feel free to get in touch with us via [Zulip](https://neuroinformatics.zulipchat.com/) with any questions. Potential GSoC contributors are encouraged to get in touch with participating organizations as soon as the list of accepted organizations is published (this year, on the [27th February 2025](https://developers.google.com/open-source/gsoc/timeline#february_27_-_1800_utc)). 
+If you are interested in any of the NIU projects on offer, feel free to get in touch on the relevant project channel via [Zulip](https://neuroinformatics.zulipchat.com/) with any questions. Please reach out in public channels, rather than via DMs or personal conversations - communicating in the open is a big part of open source! However, if you have any concerns you wish to discuss privately (such as accessibility), please contact one of the organisation admins.
 
 For clarity, please always use your full name when getting a [Zulip](https://neuroinformatics.zulipchat.com/) account, when registering for the program, and when submitting your project plan. 
 
