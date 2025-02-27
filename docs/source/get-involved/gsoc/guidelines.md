@@ -59,7 +59,7 @@ These tips are largely based on the [OpenAstronomy guidelines](https://openastro
 
     Select one of the projects from our [project list](projects_2025/index) and prepare a plan on how to tackle it, and the time you will need to complete it. Use our [application template](#application-template) to structure your proposal and don't be shy to ask for feedback from the mentors or the community. 
     
-    If you have an idea that is not covered by the project list, feel free to propose it! Create a new page in the Wiki of the relevant project repository (e.g., the `movement` [wiki](https://github.com/neuroinformatics-unit/movement/wiki)) and we can discuss and polish your idea there.
+    If you have an idea that is not covered by the project list, feel free to propose it! Create a new page in the [NIU GitHub wiki](https://github.com/neuroinformatics-unit/gsoc/wiki) with a title starting "GSoC 2025:" and we can discuss and polish your idea there. Project proposals that are not pitched and discussed in the wiki will not be considered.
 
     Include specific examples in your application to support your skills - these will help reviewers build a better picture of you. These could be things like "Qualified in final round of XXXX" or "Participated in XXXX hackathon".
 
