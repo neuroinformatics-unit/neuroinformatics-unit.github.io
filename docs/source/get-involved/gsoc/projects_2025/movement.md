@@ -1,6 +1,6 @@
 # GSoC NIU Projects 2025: `movement`
 
-If you are interested in any of these projects, [get in touch](https://movement.neuroinformatics.dev/community/index.html)! Feel free to open a new topic on [Zulip](https://neuroinformatics.zulipchat.com/#narrow/stream/406001-Movement) and tag the potential mentors.
+If you are interested in any of these [movement](https://github.com/neuroinformatics-unit/movement) projects, [get in touch](https://movement.neuroinformatics.dev/community/index.html)! Feel free to open a new topic on [Zulip](https://neuroinformatics.zulipchat.com/#narrow/stream/406001-Movement) and ask the community.
 
 Our working language is English, but our mentors for these projects also speak Spanish.
 
