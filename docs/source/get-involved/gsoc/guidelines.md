@@ -28,7 +28,7 @@ These tips are largely based on the [OpenAstronomy guidelines](https://openastro
     - [Julia Evan's How Git Works! zine](https://jvns.ca/blog/2024/04/25/new-zine--how-git-works-/)
     - the [NIU's software skills courses](https://software-skills.neuroinformatics.dev/courses/index.html)
 
-    We can help you with this if needed! Reach out in a relevant Zulip topic (or open one) if you have any questions, and someone from the community will be happy to help you.
+    We can help you with this if needed! Feel free to start a new topic in our [Zulip GSoc channel](https://neuroinformatics.zulipchat.com/#narrow/channel/487898-GSoC) if you have any questions, and someone from the community will be happy to help you.
    
 4. **Get started with open-source development**
 
