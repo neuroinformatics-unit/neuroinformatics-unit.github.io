@@ -4,7 +4,7 @@
 
 Initially focused on university students, since 2022 the program has expanded to welcome students and all beginner contributors to open source who are 18 years and older to participate.
 
-In 2025, NIU is applying for the first time to be a mentoring organization with GSoC, pairing candidates with NIU developers to work on ~12-week programming projects. So if you are interested in contributing to open source software, this is a great opportunity to get involved!
+In 2025, NIU is participating as a mentoring organization with GSoC for the first time, pairing candidates with NIU developers to work on ~12-week programming projects. So if you are interested in contributing to open source software, this is a great opportunity to get involved!
 
 
 ## How does GSoC work?
