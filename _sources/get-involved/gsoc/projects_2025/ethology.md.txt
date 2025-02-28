@@ -1,6 +1,6 @@
 # GSoC NIU Projects 2025: `ethology`
 
-If you are interested in any of these [ethology](https://github.com/neuroinformatics-unit/ethology) projects, get in touch! Feel free to open a new topic on [Zulip](https://neuroinformatics.zulipchat.com/#narrow/channel/483869-Ethology) and ask the community.
+If you are interested in any of these [ethology](https://github.com/neuroinformatics-unit/ethology) projects, get in touch! Feel free to open a new topic on our [Zulip GSoC channel](https://neuroinformatics.zulipchat.com/#narrow/channel/487898-GSoC) and ask the community.
 
 Our working language is English, but our mentors for these projects also speak Spanish.
 
