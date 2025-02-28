@@ -84,6 +84,9 @@ Learn how to version control your code and collaborate with others using `git` a
 Put into practice what you have learned during the week and collaborate with others to tackle a real-world problem using open-source tools. The goal will be to end the day with several pull requests to open-source projects.
 :::
 
+## Funding
+
+The Animals in Motion and the Big Microscopy Data tracks have made possible by [Software Sustainability Institute](https://www.software.ac.uk/) fellowships to Nikoloz Sirmpilatze and Alessandro Felder, respectively. The NIU Open Software Week is further supported by the Sainsbury Wellcome Centre. We thank the Sainsbury Wellcome Centre and the Gatsby Computational Neuroscience Unit for providing facilities for the event.
 
 ```{toctree}
 :maxdepth: 2
