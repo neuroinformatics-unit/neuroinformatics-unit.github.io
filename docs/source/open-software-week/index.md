@@ -1,7 +1,7 @@
 # Open Software Week
 
 We are excited to announce our inaugural **NIU Open Software Week**, taking
-place in **August 2025** in **London, UK**. This event will bring together researchers, developers, and users of open-source software for some hands-on training and hacking.
+place in **August 2025** in **London, UK**. This event will bring together researchers, developers, and users of open-source software for some hands-on training, community-building and hacking.
 
 :::{admonition} Save the Date!
 :class: important
