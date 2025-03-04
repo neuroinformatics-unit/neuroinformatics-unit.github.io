@@ -19,7 +19,7 @@ preprocessing and spike sorting across experimental projects. It leverages
 [SpikeInterface](https://spikeinterface.readthedocs.io/en/latest/index.html), a popular package that exposes many electrophysiology processing tools.
 The aim of spikewrap is to abstract away implementation details and make running electrophysiological analysis as simple as possible.
 
-This project involves extending the number of SpikeInterface preprocessing steps that spikewrap makes available.
+This project involves adding 'motion correction' preprocessing to spikewrap.
 
 **Deliverables**
 <!-- Goals, or expected status after Community Bonding Period, Start of Coding, End of Coding. Stretch goals? -->
@@ -27,7 +27,7 @@ This project involves extending the number of SpikeInterface preprocessing steps
 - Test motion correction functions.
 - Document the new functionality
 
-- **Duration**
+**Duration**
 <!-- Small (~90 hours), Medium (~175 hours) or Large (~350 hours)  -->
 Large (~350 hours)
 
@@ -59,7 +59,7 @@ Experience with extracellular electrophysiology.
 <!-- ------------------------------ -->
 :::{dropdown} {fas}`database;sd-text-primary` Extend spikewrap test functionality
 
-[spikewrap](https://spikewrap.neuroinformatics.dev/)) is a young project in the prototyping phase.
+[spikewrap](https://spikewrap.neuroinformatics.dev/) is a young project in the prototyping phase.
 Testing the package is not straightforward and requires access to GPU hardware and SLURM scheduling software
 on a high-performance compute (HPC) cluster. Currently, test suite is currently lagging development.
 
