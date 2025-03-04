@@ -48,9 +48,11 @@ These tips are largely based on the [OpenAstronomy guidelines](https://openastro
     - [`ethology` issues](https://github.com/neuroinformatics-unit/ethology/issues)
     - [`BrainGlobe cellfinder` issues](https://github.com/brainglobe/cellfinder/issues)
     - [`BrainGlobe brainrender` issues](https://github.com/brainglobe/brainrender/issues)
-    - [`BrainGlobe atlasaip` issues](https://github.com/brainglobe/brainglobe-atlasapi/issues)
+    - [`BrainGlobe Atlas API` issues](https://github.com/brainglobe/brainglobe-atlasapi/issues)
     - [`BrainGlobe registration` issues](https://github.com/brainglobe/brainglobe-registration/issues)
     - [`datashuttle` issues](https://github.com/neuroinformatics-unit/datashuttle/issues)
+    - [`spikewrap` issues](https://github.com/neuroinformatics-unit/spikewrap/issues)
+
 
 
 5. **Prepare your application**
