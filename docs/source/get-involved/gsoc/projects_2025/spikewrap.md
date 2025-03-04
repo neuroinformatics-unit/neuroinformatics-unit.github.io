@@ -1,4 +1,4 @@
-# GSoC NIU Projects 2025: `datashuttle`
+# GSoC NIU Projects 2025: `spikewrap`
 
 If you are interested in any of these [spikewrap](https://github.com/neuroinformatics-unit/spikewrap) projects, 
 [get in touch](https://spikewrap.neuroinformatics.dev/community/index.html)! 
