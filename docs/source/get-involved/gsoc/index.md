@@ -51,6 +51,12 @@ Markerless pose estimation tools based on deep learning, such as [DeepLabCut](ht
 [`datashuttle`](https://datashuttle.neuroinformatics.dev/index.html) is a tool to automate neuroscience project folder creation, validation and transfer. It creates and validates projects standardised to the [NeuroBlueprint](https://neuroblueprint.neuroinformatics.dev/latest/index.html) specification. It also allows these folders to be easily synchronised between computers.
 :::
 
+:::{grid-item-card} {fas}`database;sd-text-primary` `spikewrap`
+:link: projects_2025/spikewrap
+:link-type: doc
+[`spikewrap`](https://spikewrap.neuroinformatics.dev/index.html) is a package for managing extracellular electrophysiology analysis.
+:::
+
 ::::
 
 ## Apply to GSoC with NIU
