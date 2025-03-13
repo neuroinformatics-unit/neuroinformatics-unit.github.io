@@ -75,7 +75,7 @@ These tips are largely based on the [OpenAstronomy guidelines](https://openastro
 
 ## Application template
 
-Please open a PR in our [GSoC repository](https://github.com/neuroinformatics-unit/gsoc) to add your proposal as a markdown file. All the steps on how to do that are explained in the [README](https://github.com/neuroinformatics-unit/gsoc/blob/main/README.md) of that repo. There you will also find a [template](GSoC-2025/application_template.md) proposal to submit your application to work with us.
+Please open a PR in our [GSoC repository](https://github.com/neuroinformatics-unit/gsoc) to add your proposal as a markdown file. All the steps on how to do that are explained in the [README](https://github.com/neuroinformatics-unit/gsoc/blob/main/README.md) of that repo. There you will also find a [template](https://github.com/neuroinformatics-unit/gsoc/blob/main/GSoC-2025/application_template.md) proposal to submit your application to work with us.
 
 ## References
 - [GSoC Contributor guide: writing a proposal](https://google.github.io/gsocguides/student/writing-a-proposal)
