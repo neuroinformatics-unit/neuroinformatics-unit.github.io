@@ -108,7 +108,7 @@ It also allows these folders to be easily synchronised between computers.
 :gutter: 3
 
 :::{grid-item-card} {fas}`code;sd-text-primary` Python Cookiecutter
-:link: https://github.com/neuroinformatics-unit/python-cookiecutter
+:link: https://python-cookiecutter.neuroinformatics.dev
 The Python Cookiecutter template allows quick and easy setup of new Python projects.
 Projects built using this template contain pre-set configurations for code quality checks, formatting,
 automated testing (pytest, both locally and through GitHub Actions), versioning and release on PyPI.
