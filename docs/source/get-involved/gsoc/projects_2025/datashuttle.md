@@ -55,7 +55,7 @@ Currently, ``datashuttle`` requires conda to use. It would be great if the termi
 it could be deployed as an executable installation across Windows, macOS and Linux. This would make it
  accessible for those without coding experience.
 
-Unfortunately, it renders poorly in native system terminals, and so would likely require also deploying a terminal to run in.
+Unfortunately, [textual](https://github.com/Textualize/textual) renders poorly in native system terminals, and so would likely require also deploying a terminal to run in.
 There are existing implementations [packaging textual in cross-platform executables](https://github.com/Textualize/textual/discussions/3834)
 but no standard way to proceed.
 
