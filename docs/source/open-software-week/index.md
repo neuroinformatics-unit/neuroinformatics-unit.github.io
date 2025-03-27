@@ -29,7 +29,7 @@ choose the one that best fits your interests.
 
 :::: {grid} 1 2 2 2
 
-:::{grid-item-card} {fas}`video;sd-text-primary` Animals in Motion
+:::{grid-item-card} {fas}`video;sd-text-secondary` Animals in Motion
 :img-top: ../_static/osw_images/animals-in-motion-card.png
 :link: track-animals-in-motion
 :link-type: ref
@@ -39,7 +39,7 @@ and analyse animal motion from video footage.
 
 :::
 
-:::{grid-item-card} {fas}`microscope;sd-text-primary` Big Microscopy Data
+:::{grid-item-card} {fas}`microscope;sd-text-warning` Big Microscopy Data
 :img-top: ../_static/osw_images/big-microscopy-data-card.png
 :link: track-big-microscopy-data
 :link-type: ref
