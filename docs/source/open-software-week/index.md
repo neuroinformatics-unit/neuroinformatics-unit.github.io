@@ -8,18 +8,22 @@ place in **August 2025** in **London, UK**. This event will bring together resea
 
 **August 11-15 2025**, [Sainsbury Wellcome Centre](https://maps.app.goo.gl/CzWFFjXJZwX87aMj6)
 
-- **April 1st 2025**: Registration opens
-- **June 1st 2025**: Travel grant application deadline
+- **April 7th 2025**: Registration opens
+- **May 11th 2025**: Travel grant application deadline
 - **June 31st 2025**: Registration closes
 :::
 
 ## Schedule
 
+Sessions will run daily between **10:00** and **17:00**.
+Here is an overview of the whole week:
+
+![](../_static/osw_images/schedule-2025.png)
+
 - **Tuesday** and **Wednesday** will be dedicated to the two
 [main tracks](#main-tracks) of the event—[Animals in Motion](track-animals-in-motion) & [Big Microscopy Data](track-big-microscopy-data)—running in parallel. These tracks are targeted to different audiences, so make sure to choose the one that best fits your interests.
 - The main tracks will be bracketed by a series of [satellite events](#satellite-events) on **Monday**, **Thursday**, and **Friday**, including an [Intro to Python](intro-to-python) workshop a [Careers Clinic](careers-clinic), a [Collaborative coding with git](collaborative-coding-with-git) workshop, and a [Hackathon](hackathon).
 
-Insert schedule image here.
 
 ## Main Tracks
 
@@ -28,7 +32,7 @@ choose the one that best fits your interests.
 
 :::: {grid} 1 2 2 2
 
-:::{grid-item-card} {fas}`video;sd-text-primary` Animals in Motion
+:::{grid-item-card} {fas}`video;sd-text-secondary` Animals in Motion
 :img-top: ../_static/osw_images/animals-in-motion-card.png
 :link: track-animals-in-motion
 :link-type: ref
@@ -38,7 +42,7 @@ and analyse animal motion from video footage.
 
 :::
 
-:::{grid-item-card} {fas}`microscope;sd-text-primary` Big Microscopy Data
+:::{grid-item-card} {fas}`microscope;sd-text-warning` Big Microscopy Data
 :img-top: ../_static/osw_images/big-microscopy-data-card.png
 :link: track-big-microscopy-data
 :link-type: ref
