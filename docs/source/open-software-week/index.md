@@ -15,6 +15,9 @@ place in **August 2025** in **London, UK**. This event will bring together resea
 
 ## Schedule
 
+Sessions will run daily between **10:00** and **17:00**.
+Here is an overview of the whole week:
+
 ![](../_static/osw_images/schedule-2025.png)
 
 - **Tuesday** and **Wednesday** will be dedicated to the two
