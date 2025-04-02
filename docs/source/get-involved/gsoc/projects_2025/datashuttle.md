@@ -71,7 +71,7 @@ This project would involve researching approaches, and implementing the most rob
 - **Duration**
 <!-- Small (~90 hours), Medium (~175 hours) or Large (~350 hours)  -->
 
-Large (~175 hours)
+Large (~350 hours)
 
 
 **Difficulty**
