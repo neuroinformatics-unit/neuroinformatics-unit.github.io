@@ -10,7 +10,7 @@ place in **August 2025** in **London, UK**. This event will bring together resea
 
 - **April 7th 2025**: Registration opens
 - **May 11th 2025**: Travel grant application deadline
-- **June 31st 2025**: Registration closes
+- **June 30th 2025**: Registration closes
 :::
 
 ## Schedule
