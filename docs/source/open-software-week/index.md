@@ -18,7 +18,8 @@ place in **August 2025** in **London, UK**. This event will bring together resea
 Sessions will run daily between **10:00** and **17:00**.
 Here is an overview of the whole week:
 
-![](../_static/osw_images/schedule-2025.png)
+<img src="../_static/osw_images/schedule-2025_light-mode.png" alt="event schedule" class="only-light img-responsive"/>
+<img src="../_static/osw_images/schedule-2025_dark-mode.png" alt="event schedule" class="only-dark img-responsive"/>
 
 - **Tuesday** and **Wednesday** will be dedicated to the two
 [main tracks](#main-tracks) of the event—[Animals in Motion](track-animals-in-motion) & [Big Microscopy Data](track-big-microscopy-data)—running in parallel. These tracks are targeted to different audiences, so make sure to choose the one that best fits your interests.
