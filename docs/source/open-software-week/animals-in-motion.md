@@ -1,66 +1,66 @@
 (track-animals-in-motion)=
-# Track: Animals in Motion 
+# Track: Animals in Motion
 
-The study of animal behaviour has been transformed by the increasing use of
-machine learning-based tools, such as DeepLabCut and SLEAP, which can track the
-positions of animals and their body parts from video footage. These tools
-have become widely accessible and are now used in a variety of fields,
-including neuroscience, ethology, biomechanincs, or any field that requires
-the analysis of animals move.
+Machine learning methods for motion tracking have transformed a wide range of scientific disciplines—from neuroscience and biomechanics to conservation and ethology.
+Tools such as [DeepLabCut](https://www.mackenziemathislab.org/deeplabcut/) and [SLEAP](https://sleap.ai/) enable researchers to track animal movements in video recordings with impressive accuracy, without the need for physical markers.
 
-That said, the sheer variery of available tools can be overwhelming, and its
-often difficult to know which tool is best suited for a particular
-application and how to get started with it.
+However, the variety of available tools can be overwhelming.
+It's often unclear which tool is best suited to a given application, or how to get started.
+Moreover, generating motion tracks is only the first step:
+these tracks must then be further processed, visualised, and analysed to yield meaningful
+and interpretable insights into animal behaviour.
 
-Moreover, the analysis seldom stops at tracking. Once motion tracks have
-been generated, they need to be further processed, visualised and quantified,
-in order to get from tracks to meaningful interpretable findings.
+::: {admonition} Target audience
+:class: note
 
-This track is aimed ar researchers and students who are interested in
-learning about the latest tools for tracking animal motion, and extracting
-meaning from the resulting data.
-
+This course is designed for researchers and students interested in learning about the latest free open-source tools for tracking animal motion from video footage and extracting quantitative descriptions of behaviour from motion tracks.
+:::
 
 ## Course overview
 
-**Computer Vision approaches for animal tracking:** an introduction to current machine learning-based approaches for detecting and tracking animals in videos. We will cover the essential terminology and concepts, and provide an overview of the available tools.
+__Tuesday morning:__
+We'll start with a primer on Computer Vision approaches for detecting and tracking animals in videos.
+We'll also cover key concepts and terminology, and provide an overview of the most widely used tools.
 
-**Pose estimation and tracking:** a hands-on tutorial for one of the most popular approaches for tracking animal motion: pose estimation and tracking.
-We will go step-by-step through the workflow of annotating animal body parts, training a model, and running inference on new data to generate predicted motions tracks. We will use the SLEAP package to do that, but the workflow is similar for other packages, such as DeepLabCut.
+__Tusday afternoon:__
+We'll continue with a hands-on tutorial on using [SLEAP](https://sleap.ai/)—a popular software library for animal pose estimation and tracking.
+The typical workflow, from annotating body parts to training a model and generating predictions, is common to most pose estimation tools, including [DeepLabCut](https://www.mackenziemathislab.org/deeplabcut/).
 
-**Analysing motion tracks:** a practical introduction to [movement](https://movement.neuroinformatics.dev)—an  We will cover the basics of the movement package, and then focus on specific use cases, which will be presented as computational exercises.
-Once you have generated motion tracks, you need to process and visualise them. We will use the open-source Python package  to do that. This package provides a diverse set of
-tools for loading, cleaning, visualising and quantifying animal motion tracks. We will cover the basics of the package, and then focus on specific use cases, which will be presented as computational exercises.
+__Wednesday:__
+The second day will be dedicated to a practical tutorial on [movement](https://movement.neuroinformatics.dev)—a Python toolbox for analysing animal body movements across space and time.
+You'll learn how to load, clean, visualise, and quantify motion tracks, and apply this knowledge to specific use cases through computational exercises.
+
+## Instructors
+- [Niko Sirmpilatze](https://github.com/niksirbi)
+- [Sofía Miñano](https://github.com/sfmig)
+- [Chang Huan Lo](https://github.com/lochhh)
 
 ## Pre-requisites
 
 ### Hardware
-As this is a hands-on workshop, we recommend that you bring your own laptop.
-We also recommend bringing a mouse, as this will make some tasks,
-such as image annotation, much easier. A dedicated graphics card (GPU)
-is not required.
+As this is a hands-on workshop, we recommend bringing your own laptop.
+A mouse is also recommended for tasks like image annotation.
+A dedicated GPU is __not__ required
 
 ### Software
-You will need an IDE (a code editor) for Python programming.
-We recommend one of the following:
-- [Visual Studio Code](https://code.visualstudio.com/) with the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
-- [PyCharm](https://www.jetbrains.com/pycharm/)
-- [JupyterLab](https://jupyter.org/install)
+Please ensure you have the following installed:
+- A Python IDE such as:
+  - [Visual Studio Code](https://code.visualstudio.com/) with the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+  - [PyCharm](https://www.jetbrains.com/pycharm/)
+  - [JupyterLab](https://jupyter.org/install)
+- A working `conda` (or `mamba`) installation. If you don't have it, install via [Miniforge](https://github.com/conda-forge/miniforge).
+- A working [Git](https://git-scm.com/) installation.
 
-A working conda (or mamba) installation. If you don't have it, install via [Miniforge](https://github.com/conda-forge/miniforge).
-
-A working [Git](https://git-scm.com/) installation.
-
-We will contact you at least a week before the event with instructions on
-how to install some additional specific software packages.
+We will email you at least a week before the event with instructions on installing any additional required software.
 
 ### Python knowledge
-If you new to coding with Python, we encourage attendance of our __Intro to Python__ workshop on Monday, or an equivalent course prior to the event. This will be a hands-on introduction to Python programming, and will cover the basics, including data types, control flow, functions, and libraries. This is a great opportunity to get up to speed with Python before the main event.
+If you're new to Python, we recommend attending our __Intro to Python__ workshop on Monday, or completing an equivalent course beforehand.
+This hands-on session will cover the basics, including data types, control flow, functions, and core libraries—a great way to get up to speed before this event.
 
 ### Data
-Bringing your own data is encouraged, but not strictly required. The data could be in the form of
-video recordings of animal behaviour, and/or motion tracks you've already generated from videos.
-This is a great opportunity to get help with your data and to learn from others.
-We expect that participant-led ideas that gain traction from any of the sub-events above can be taken forward as ideas for the __Hackathon__ on Friday.
+Bringing your own data is encouraged but not required.
+This could include video recordings of animal behaviour and/or motion tracks you've already generated.
+It's a great chance to get feedback on your data and learn from others.
+If you don't have your own data, we will provide example datasets for you to work with.
 
-If you have no suitable data, we will provide some example datasets for you to work with.
+We expect that participant-led ideas emerging from this track may inspire collaborative projects during the __Hackday__ on Friday.
