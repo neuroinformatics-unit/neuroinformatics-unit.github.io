@@ -23,7 +23,7 @@ Here is an overview of the whole week:
 
 There are three **main tracks** targeted to different audiences.
 We encourage you to read each track's description and choose the one that best fits your interests.
-You can apply for 2/3 main tracks, but note that [Animals in Motion](track-animals-in-motion) and [BrainGlobe](track-brainglobe)
+You can apply for at most 2/3 main tracks, but note that [Animals in Motion](track-animals-in-motion) and [BrainGlobe](track-brainglobe)
 cannot be combined as they are running in parallel.
 
 :::: {grid} 1 1 3 3
