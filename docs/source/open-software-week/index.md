@@ -4,12 +4,12 @@ We are excited to announce our inaugural **NIU Open Software Week**, taking
 place in **August 2025** in **London, UK**. This event will bring together researchers, developers, and users of open-source software for some hands-on training, community-building and hacking.
 
 :::{admonition} Save the Date!
-:class: important
+:class: info
 
 **August 11-15 2025**, [Sainsbury Wellcome Centre](https://maps.app.goo.gl/CzWFFjXJZwX87aMj6)
 
-- **April 7th 2025**: Registration opens
-- **May 11th 2025**: Travel grant application deadline
+- **April 16th 2025**: Registration opens
+- **May 16th 2025**: Travel grant application deadline
 - **June 30th 2025**: Registration closes
 :::
 
@@ -21,17 +21,12 @@ Here is an overview of the whole week:
 <img src="../_static/osw_images/schedule-2025_light-mode.png" alt="event schedule" class="only-light img-responsive"/>
 <img src="../_static/osw_images/schedule-2025_dark-mode.png" alt="event schedule" class="only-dark img-responsive"/>
 
-- **Tuesday** and **Wednesday** will be dedicated to the two
-[main tracks](#main-tracks) of the event—[Animals in Motion](track-animals-in-motion) & [Big Microscopy Data](track-big-microscopy-data)—running in parallel. These tracks are targeted to different audiences, so make sure to choose the one that best fits your interests.
-- The main tracks will be bracketed by a series of [satellite events](#satellite-events) on **Monday**, **Thursday**, and **Friday**, including an [Intro to Python](intro-to-python) workshop a [Careers Clinic](careers-clinic), a [Collaborative coding with git](collaborative-coding-with-git) workshop, and a [Hackathon](hackathon).
+There are three **main tracks** targeted to different audiences.
+We encourage you to read each track's description and choose the one that best fits your interests.
+You can apply for at most 2/3 main tracks, but note that [Animals in Motion](track-animals-in-motion) and [BrainGlobe](track-brainglobe)
+cannot be combined as they are running in parallel.
 
-
-## Main Tracks
-
-We encourage you to read each track's description and
-choose the one that best fits your interests.
-
-:::: {grid} 1 2 2 2
+:::: {grid} 1 1 3 3
 
 :::{grid-item-card} {fas}`video;sd-text-secondary` Animals in Motion
 :img-top: ../_static/osw_images/animals-in-motion-card.png
@@ -43,19 +38,29 @@ and analyse animal motion from video footage.
 
 :::
 
-:::{grid-item-card} {fas}`microscope;sd-text-warning` Big Microscopy Data
-:img-top: ../_static/osw_images/big-microscopy-data-card.png
-:link: track-big-microscopy-data
+:::{grid-item-card} {fas}`video;sd-text-warning` BrainGlobe
+:img-top: ../_static/osw_images/brainglobe-card.png
+:link: track-brainglobe
 :link-type: ref
 
-Use open-source tools to process and analyse large 3D microscopy
-datasets.
+Use the BrainGlobe ecosystem of computational neuroanatomy tools
+to analyse whole-brain microscopy datasets.
+:::
+
+:::{grid-item-card} {fas}`microscope;sd-text-primary` Big Imaging Data
+:img-top: ../_static/osw_images/big-imaging-data-card.png
+:link: track-big-imaging-data
+:link-type: ref
+
+Bridging technical gaps and communities to process and analyse
+large 3D imaging datasets with open-source tools.
 
 :::
 
 ::::
 
-## Satellite Events
+We also offer a series of **satellite events** which are open to all participants and are designed to provide additional training and networking opportunities.
+You can apply for any number of satellite events, but note that the ones on Thursday cannot be combined with the [Big Imaging Data](track-big-imaging-data) track.
 
 :::{dropdown} Intro to Python
 :name: intro-to-python
@@ -81,8 +86,8 @@ A discussion for those interested in exploring non-traditional career paths in r
 Learn how to version control your code and collaborate with others using `git` and GitHub. This workshop is open to all but is especially recommended for those who are planning to participate in the following day's hackathon.
 :::
 
-:::{dropdown} Hackathon
-:name: hackathon
+:::{dropdown} Hackday
+:name: hackday
 :color: primary
 :icon: people
 
@@ -91,7 +96,7 @@ Put into practice what you have learned during the week and collaborate with oth
 
 ## Funding
 
-The Animals in Motion and the Big Microscopy Data tracks have been made possible by [Software Sustainability Institute](https://www.software.ac.uk/) fellowships to Niko Sirmpilatze and Alessandro Felder, respectively. The NIU Open Software Week is further supported by the Sainsbury Wellcome Centre. We thank the Sainsbury Wellcome Centre and the Gatsby Computational Neuroscience Unit for providing facilities for the event.
+The [Animals in Motion](track-animals-in-motion) and the [Big Imaging Data](track-big-imaging-data) tracks have been made possible by [Software Sustainability Institute](https://www.software.ac.uk/) fellowships to **Niko Sirmpilatze** and **Alessandro Felder**, respectively. The NIU Open Software Week is further supported by the [Sainsbury Wellcome Centre](https://www.sainsburywellcome.org/). We thank the [Sainsbury Wellcome Centre](https://www.sainsburywellcome.org/) and the [Gatsby Computational Neuroscience Unit](https://www.ucl.ac.uk/gatsby/gatsby-computational-neuroscience-unit) for providing facilities for the event.
 
 ```{image} /_static/osw_images/ssi-logo.svg
 :align: center
@@ -104,5 +109,6 @@ The Animals in Motion and the Big Microscopy Data tracks have been made possible
 :hidden:
 
 animals-in-motion
-big-microscopy-data
+brainglobe
+big-imaging-data
 ```
