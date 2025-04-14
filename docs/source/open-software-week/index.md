@@ -9,7 +9,7 @@ place in **August 2025** in **London, UK**. This event will bring together resea
 **August 11-15 2025**, [Sainsbury Wellcome Centre](https://maps.app.goo.gl/CzWFFjXJZwX87aMj6)
 
 - **April 16th 2025**: Registration opens
-- **May 11th 2025**: Travel grant application deadline
+- **May 16th 2025**: Travel grant application deadline
 - **June 30th 2025**: Registration closes
 :::
 
