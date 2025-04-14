@@ -3,20 +3,34 @@
 
 The study of animal behaviour has been transformed by the increasing use of
 machine learning-based tools, such as DeepLabCut and SLEAP, which can track the
-positions of animals and their body parts from video footage.
+positions of animals and their body parts from video footage. These tools
+have become widely accessible and are now used in a variety of fields,
+including neuroscience, ethology, biomechanincs, or any field that requires
+the analysis of animals move.
+
+That said, the sheer variery of available tools can be overwhelming, and its
+often difficult to know which tool is best suited for a particular
+application and how to get started with it.
+
+Moreover, the analysis seldom stops at tracking. Once motion tracks have
+been generated, they need to be further processed, visualised and quantified,
+in order to get from tracks to meaningful interpretable findings.
+
+This track is aimed ar researchers and students who are interested in
+learning about the latest tools for tracking animal motion, and extracting
+meaning from the resulting data.
 
 
-## Computer Vision Primer
-Tuesday morning
+## Course overview
 
+**Computer Vision approaches for animal tracking:** an introduction to current machine learning-based approaches for detecting and tracking animals in videos. We will cover the essential terminology and concepts, and provide an overview of the available tools.
 
-## Pose estimation and tracking with SLEAP
-Tuesday afternoon
+**Pose estimation and tracking:** a hands-on tutorial for one of the most popular approaches for tracking animal motion: pose estimation and tracking.
+We will go step-by-step through the workflow of annotating animal body parts, training a model, and running inference on new data to generate predicted motions tracks. We will use the SLEAP package to do that, but the workflow is similar for other packages, such as DeepLabCut.
 
-
-## Analysing pose tracks with `movement`
-Wednesday
-
+**Analysing motion tracks:** a practical introduction to [movement](https://movement.neuroinformatics.dev)—an  We will cover the basics of the movement package, and then focus on specific use cases, which will be presented as computational exercises.
+Once you have generated motion tracks, you need to process and visualise them. We will use the open-source Python package  to do that. This package provides a diverse set of
+tools for loading, cleaning, visualising and quantifying animal motion tracks. We will cover the basics of the package, and then focus on specific use cases, which will be presented as computational exercises.
 
 ## Pre-requisites
 
