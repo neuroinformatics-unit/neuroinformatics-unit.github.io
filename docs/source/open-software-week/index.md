@@ -3,15 +3,17 @@
 We are excited to announce our inaugural **NIU Open Software Week**, taking
 place in **August 2025** in **London, UK**. This event will bring together researchers, developers, and users of open-source software for some hands-on training, community-building and hacking.
 
-:::{admonition} Save the Date!
+:::{admonition} Applications are open. Apply for your spot now by filling in [this Google form](https://forms.gle/2UAAzikhSgYArZpX7)!
 :class: info
 
 **August 11-15 2025**, [Sainsbury Wellcome Centre](https://maps.app.goo.gl/CzWFFjXJZwX87aMj6)
 
-- **April 16th 2025**: Registration opens
-- **May 16th 2025**: Travel grant application deadline
-- **June 30th 2025**: Registration closes
+- **April 16th 2025**: Applications 
+- **June 6th 2025**: Applications close
+- **End of June/Early July 2025**: Applicants are notified of acceptance
 :::
+
+To maximise our impact, we aim to select participants that would benefit the most from the event, and that can bring the experience back to a diverse set of fields. Please be specific in your application and tailor it to the main track(s) that you are planning to attend.
 
 ## Schedule
 
@@ -23,7 +25,7 @@ Here is an overview of the whole week:
 
 There are three **main tracks** targeted to different audiences.
 We encourage you to read each track's description and choose the one that best fits your interests.
-You can apply for at most 2/3 main tracks, but note that [Animals in Motion](track-animals-in-motion) and [BrainGlobe](track-brainglobe)
+You can apply for at most 2 of 3 main tracks, and note that [Animals in Motion](track-animals-in-motion) and [BrainGlobe](track-brainglobe)
 cannot be combined as they are running in parallel.
 
 :::: {grid} 1 1 3 3
