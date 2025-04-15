@@ -14,6 +14,8 @@ place in **August 2025** in **London, UK**. This event will bring together resea
 - **July 14th 2025**: Applicants are notified of acceptance
 :::
 
+To maximise our impact, we aim to select participants that would benefit the most from the event, and that can bring the experience back to a diverse set of fields. Please be specific in your application and tailor it to the main track(s) that you are planning to attend.
+
 ## Schedule
 
 Sessions will run daily between **10:00** and **17:00**.
