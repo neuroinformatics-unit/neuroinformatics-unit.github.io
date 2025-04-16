@@ -2,12 +2,12 @@
 # Track: Big Imaging Data
 
 As novel imaging methods such as light-sheet microscopy become more accessible, more researchers collect ever larger imaging data. Transforming this data into scientific insight requires the combined expertise of researchers, imaging facility staff and software engineers, but each of these communities are too often not well-linked to each other. This track aims to bring together image facility staff, imaging researchers and research software engineers to
-* engage in hands-on tutorials to handle big microscopy data with open-source software
-* build connections between the imaging and software engineering community
+* Engage in hands-on tutorials to handle big microscopy data with open-source software
+* Build connections between the imaging and software engineering community
 
 The Big Imaging Data track will include
-* hands-on introductory tutorials to open-source libraries `zarr` and `dask`
-* participant-led discussions of community, collaboration and careers in Big Imaging Data
+* Hands-on introductory tutorials to open-source libraries `zarr` and `dask`
+* Participant-led discussions of community, collaboration and careers in Big Imaging Data
 
 ::: {admonition} Target audience
 :class: note
@@ -20,8 +20,8 @@ This course is designed for imaging facility staff, image analysts, and imaging 
 __Tuesday morning:__
 The technical side of the track will start with an introduction to chunked file formats for big imaging data, such as `OME-zarr`.
 We will then proceed to work on hands-on tutorials to
-- read and write big imaging data using `zarr`
-- process big imaging data lazily and in-parallel with `dask`
+- Read and write big imaging data using `zarr`
+- Process big imaging data lazily and in-parallel with `dask`
 
 __Tuesday afternoon:__
 The community side of the track will start with a very short introduction to existing community efforts in both software engineering [^1]_, imaging[^2]_ and image analysis[^3]_.
