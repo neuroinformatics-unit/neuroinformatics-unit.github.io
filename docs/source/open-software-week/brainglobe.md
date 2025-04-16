@@ -1,13 +1,13 @@
 (track-brainglobe)=
 # Track: BrainGlobe
 
-The BrainGlobe Initiative provides easy-to-use tools to analyse brain histology data (e.g. serial section two-photon, lightsheet).
+The [BrainGlobe Initiative](https://brainglobe.info) provides easy-to-use tools to analyse brain histology data, particularly from whole-brain imaging methods (e.g. serial section two-photon, lightsheet).
 This track will guide participants through hands-on tutorials to learn how to use BrainGlobe.
 
 ::: {admonition} Target audience
 :class: note
 
-This course is designed for researchers and students interested in learning about open-source tools for analysing brain microscopy data.
+This course is designed for researchers and students interested in learning about open-source tools for analysing and visualising whole-brain microscopy data.
 :::
 
 ## Course overview
@@ -21,17 +21,17 @@ We will work through the following hands-on tutorials using BrainGlobe's `napari
 - Registering whole-brain microscopy images with `brainreg`
 - Segmenting structures in whole brain microscopy images with `brainglobe-segmentation`
 - Detecting cells in large 3D images with `cellfinder`
-- Analysing cell positions in atlas space
-- Visualisation of data in atlas space
+- Analysing cell positions in atlas space with `brainmapper`
+- Visualisation of data in atlas space with `brainrender` and brainrender-napari`
 
 __Wednesday morning:__
 We will introduce BrainGlobe's more advanced interfaces, including 
-- command line for typical workflows.
+- Command line for typical workflows.
 - Python API to include BrainGlobe in your own scripts
-- experimental user interfaces for stitching, subvolume registration and template-building.
+- Experimental tools for stitching, advanced registration and atlas building.
 
 __Wednesday afternoon:__
-Participants are encouraged to run BrainGlobe on their own data, discuss possible uses with the development team and other participants or integrate BrainGlobe into their existing workflows.
+Participants are encouraged to run BrainGlobe on their own data, discuss use cases with the development team and other participants or integrate BrainGlobe into their existing workflows.
 
 ## Instructors
 - [Alessandro Felder](https://github.com/alessandrofelder)
@@ -41,7 +41,7 @@ Participants are encouraged to run BrainGlobe on their own data, discuss possibl
 ## Pre-requisites
 
 ### Hardware
-As this is a hands-on workshop, we recommend bringing your own laptop.
+As this is a hands-on workshop, you will need to bring your own laptop. Any fairly recent laptop will be suitable, you don't need a GPU etc.
 
 ### Software
 Please ensure you have the following installed:
