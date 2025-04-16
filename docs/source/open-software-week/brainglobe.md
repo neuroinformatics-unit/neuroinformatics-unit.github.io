@@ -48,7 +48,6 @@ Please ensure you have the following installed:
 - A Python IDE such as:
   - [Visual Studio Code](https://code.visualstudio.com/) with the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
   - [PyCharm](https://www.jetbrains.com/pycharm/)
-  - [JupyterLab](https://jupyter.org/install)
 - A working `conda` (or `mamba`) installation. If you don't have it, install via [Miniforge](https://github.com/conda-forge/miniforge).
 - A working [Git](https://git-scm.com/) installation.
 
