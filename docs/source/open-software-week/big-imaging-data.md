@@ -52,6 +52,9 @@ We will email you at least a week before the event with instructions on installi
 If you're new to Python, we recommend attending our __Intro to Python__ workshop on Monday, or completing an equivalent course beforehand.
 This hands-on session will cover the basics, including data types, control flow, functions, and core libraries—a great way to get up to speed before this event.
 
+### Related
+
+If you're interested analysis tools for whole-organ imaging (particularly brains), you might also benefit from attending the preceding two-day [BrainGlobe main track](brainglobe.md).
 
 [^1]: community initiatives around e.g. the [Software Sustainability Institute](https://www.software.ac.uk/), the [Society for Research Software Engineering](https://society-rse.org/about/history/), and The Hidden REF.
 [^2]: For example [BioImagingUK](https://www.rms.org.uk/community/networks-affiliates/bioimaginguk-network.html), [Euro-BioImaging](https://www.eurobioimaging.eu/), [Global Bioimaging](https://globalbioimaging.org/)
