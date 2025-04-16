@@ -31,11 +31,12 @@ The discussions will then be fed back to the wider group, and result in the publ
 ## Instructors
 - [Alessandro Felder](https://github.com/alessandrofelder)
 - [Igor Tatarnikov](https://github.com/IgorTatarnikov)
+- [Adam Tyson](https://github.com/adamltyson)
 
 ## Pre-requisites
 
 ### Hardware
-As this is a hands-on workshop, we recommend bringing your own laptop.
+As this is a hands-on workshop, you will need to bring your own laptop. Any fairly recent laptop will be suitable, you don't need a GPU etc.
 
 ### Software
 Please ensure you have the following installed:
