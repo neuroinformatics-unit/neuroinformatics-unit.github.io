@@ -22,7 +22,7 @@ __Tuesday morning:__
 We'll start with a primer on Computer Vision approaches for detecting and tracking animals in videos.
 We'll also cover key concepts and terminology, and provide an overview of the most widely used tools.
 
-__Tusday afternoon:__
+__Tuesday afternoon:__
 We'll continue with a hands-on tutorial on using [SLEAP](https://sleap.ai/)—a popular software library for animal pose estimation and tracking.
 The typical workflow, from annotating body parts to training a model and generating predictions, is common to most pose estimation tools, including [DeepLabCut](https://www.mackenziemathislab.org/deeplabcut/).
 
