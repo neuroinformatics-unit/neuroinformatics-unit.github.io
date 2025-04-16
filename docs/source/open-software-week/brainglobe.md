@@ -2,7 +2,7 @@
 # Track: BrainGlobe
 
 The BrainGlobe Initiative provides easy-to-use tools to analyse brain histology data (e.g. serial section two-photon, lightsheet).
-This track will guide participants through hands-on tutorials to
+This track will guide participants through hands-on tutorials to learn how to use BrainGlobe.
 
 ::: {admonition} Target audience
 :class: note
