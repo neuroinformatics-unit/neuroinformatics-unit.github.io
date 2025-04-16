@@ -64,3 +64,7 @@ It's a great chance to get feedback on your data and learn from others.
 If you don't have your own data, we will provide example datasets for you to work with.
 
 We expect that participant-led ideas emerging from this track may inspire collaborative projects during the __Hackday__ on Friday.
+
+### Apply now!
+
+Fill in [this Google form](https://forms.gle/2UAAzikhSgYArZpX7) to apply. We unfortunately have limited space to accommodate participants. To maximise our impact, we aim to select participants that would benefit the most from the event, and that can bring the experience back to a diverse set of fields. Please be specific in your application and tailor it to the main track(s) that you are planning to attend. There is funding for travel and accommodation available. Applicants will be informed of the outcome by early July.
