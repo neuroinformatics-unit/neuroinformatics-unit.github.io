@@ -8,7 +8,7 @@ place in **August 2025** in **London, UK**. This event will bring together resea
 
 **August 11-15 2025**, [Sainsbury Wellcome Centre](https://maps.app.goo.gl/CzWFFjXJZwX87aMj6)
 
-- **April 16th 2025**: Applications 
+- **April 16th 2025**: Applications open
 - **June 6th 2025**: Applications close
 - **End of June/Early July 2025**: Applicants are notified of acceptance
 :::
