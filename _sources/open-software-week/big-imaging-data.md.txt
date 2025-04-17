@@ -17,13 +17,13 @@ This course is designed for imaging facility staff, image analysts, and imaging 
 
 ## Course overview
 
-__Tuesday morning:__
+__Thursday morning:__
 The technical side of the track will start with an introduction to chunked file formats for big imaging data, such as `OME-zarr`.
 We will then proceed to work on hands-on tutorials to
 - Read and write big imaging data using `zarr`
 - Process big imaging data lazily and in-parallel with `dask`
 
-__Tuesday afternoon:__
+__Thursday afternoon:__
 The community side of the track will start with a very short introduction to existing community efforts in both software engineering [^1]_, imaging[^2]_ and image analysis[^3]_.
 The participants will then join small discussion groups of their choice circling around the wider question: Where next for careers and community in Big Imaging Data?
 The discussions will then be fed back to the wider group, and result in the publication of a blog after the course.
@@ -51,6 +51,13 @@ We will email you at least a week before the event with instructions on installi
 ### Python knowledge
 If you're new to Python, we recommend attending our __Intro to Python__ workshop on Monday, or completing an equivalent course beforehand.
 This hands-on session will cover the basics, including data types, control flow, functions, and core libraries—a great way to get up to speed before this event.
+
+### Data
+Bringing your own data is encouraged but not required.
+It's a great chance to get feedback on your data and learn from others.
+If you don't have your own data, we will provide example datasets for you to work with.
+
+We expect that participant-led ideas emerging from this track may inspire collaborative projects during the __Hackday__ on Friday.
 
 ### Related
 
