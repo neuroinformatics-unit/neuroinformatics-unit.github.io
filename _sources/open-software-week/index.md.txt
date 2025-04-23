@@ -40,7 +40,7 @@ and analyse animal motion from video footage.
 
 :::
 
-:::{grid-item-card} {fas}`video;sd-text-warning` BrainGlobe
+:::{grid-item-card} {fas}`brain;sd-text-warning` BrainGlobe
 :img-top: ../_static/osw_images/brainglobe-card.png
 :link: track-brainglobe
 :link-type: ref
