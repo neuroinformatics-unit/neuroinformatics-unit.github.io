@@ -56,7 +56,7 @@ Claudi, F., Petrucco, L., **Tyson, A. L.**, Branco, T., Margrie, T. W., Portugue
 
 :::{grid-item-card} movement: A Python toolbox for analysing animal body movements
 :link: https://youtu.be/GXBQsqqZZTg?si=0bt5Q_lGY8GXw6dx
-Niko Sirmpilatze, ABIDE seminar, Febuary 2025
+Niko Sirmpilatze, ABIDE seminar, February 2025
 :::
 
 :::{grid-item-card} Aligning spikes to histology with BrainGlobe
