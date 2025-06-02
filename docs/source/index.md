@@ -57,10 +57,11 @@ to advance research in the two research centres and make new algorithms and tool
 about
 people
 projects
-collaborations
+publications
 blog/index
 roadmaps/index
 get-involved/index
 resources
+collaborations
 open-software-week/index
 ```
