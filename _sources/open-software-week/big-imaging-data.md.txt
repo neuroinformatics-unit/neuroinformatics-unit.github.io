@@ -63,9 +63,6 @@ We expect that participant-led ideas emerging from this track may inspire collab
 
 If you're interested analysis tools for whole-organ imaging (particularly brains), you might also benefit from attending the preceding two-day [BrainGlobe main track](brainglobe.md).
 
-### Apply now!
-
-Fill in [this Google form](https://forms.gle/2UAAzikhSgYArZpX7) to apply. We unfortunately have limited space to accommodate participants. To maximise our impact, we aim to select participants that would benefit the most from the event, and that can bring the experience back to a diverse set of fields. Please be specific in your application and tailor it to the main track(s) that you are planning to attend. There is funding for travel and accommodation available. Applicants will be informed of the outcome by early July.
 
 [^1]: community initiatives around e.g. the [Software Sustainability Institute](https://www.software.ac.uk/), the [Society for Research Software Engineering](https://society-rse.org/about/history/), and The Hidden REF.
 [^2]: For example [BioImagingUK](https://www.rms.org.uk/community/networks-affiliates/bioimaginguk-network.html), [Euro-BioImaging](https://www.eurobioimaging.eu/), [Global Bioimaging](https://globalbioimaging.org/)

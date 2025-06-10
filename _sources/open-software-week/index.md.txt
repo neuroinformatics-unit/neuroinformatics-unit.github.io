@@ -3,13 +3,13 @@
 We are excited to announce our inaugural **NIU Open Software Week**, taking
 place in **August 2025** in **London, UK**. This event will bring together researchers, developers, and users of open-source software for some hands-on training, community-building and hacking.
 
-:::{admonition} Applications are open. Apply for your spot now by filling in [this Google form](https://forms.gle/2UAAzikhSgYArZpX7)!
+:::{admonition} Application Period Closed. We will notify applicants of acceptance as soon as possible.
 :class: info
 
 **August 11-15 2025**, [Sainsbury Wellcome Centre](https://maps.app.goo.gl/CzWFFjXJZwX87aMj6)
 
-- **April 16th 2025**: Applications open
-- **June 6th 2025**: Applications close
+- ~~**April 16th 2025**: Applications open~~
+- ~~**June 6th 2025**: Applications close~~
 - **End of June/Early July 2025**: Applicants are notified of acceptance
 :::
 
