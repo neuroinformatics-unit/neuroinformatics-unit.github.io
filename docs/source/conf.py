@@ -75,7 +75,7 @@ linkcheck_ignore = [
     "https://www.incf.org/recommendations-gsoc-contributors",
     "https://www.incf.org/sites/default/files/files/INCF_GSoC_2022_Application_template.pdf",
     "https://neuroinformatics.dev/slides-templates-atlases/#/on-templates-and-atlases",
-
+    "https://errantscience.com/",
 ]
 
 
@@ -118,7 +118,6 @@ html_favicon = "_static/logo_light.png"
 
 # Cutomize the theme
 html_theme_options = {
-    "announcement": "The Neuroinformatics Unit is hosting its inaugural Open Software Week during the week of 11th-15th August 2025! <a href='https://neuroinformatics.dev/open-software-week/index.html'>Find out more</a>!",
     "icon_links": [
         {
             # Label for this link
