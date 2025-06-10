@@ -75,7 +75,7 @@ linkcheck_ignore = [
     "https://www.incf.org/recommendations-gsoc-contributors",
     "https://www.incf.org/sites/default/files/files/INCF_GSoC_2022_Application_template.pdf",
     "https://neuroinformatics.dev/slides-templates-atlases/#/on-templates-and-atlases",
-
+    "https://errantscience.com/",
 ]
 
 
