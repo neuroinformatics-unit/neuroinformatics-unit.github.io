@@ -20,8 +20,8 @@ To maximise our impact, we aim to select participants that would benefit the mos
 Sessions will run daily between **10:00** and **17:00**.
 Here is an overview of the whole week:
 
-<img src="../_static/osw_images/schedule-2025_light-mode.png" alt="event schedule" class="only-light img-responsive"/>
-<img src="../_static/osw_images/schedule-2025_dark-mode.png" alt="event schedule" class="only-dark img-responsive"/>
+<img src="../_static/osw_images/schedule-2025_light-mode.png" alt="A colour-coded table showing the schedule of open software week. The columns are weekdays, and the rows are Morning and Afternoon. All of Monday and Friday will be spent on 'Intro to Python' and 'Hackday', respectively. Tuesday and Wednesday are split into two whole-day main tracks: 'Animals in Motion' and 'BrainGlobe'. On Thursday, one can choose between either a full day of 'Big Imaging Data' or 'Careers Clinic' in the morning and 'Collaborative Coding with git' in the afternoon." class="only-light img-responsive"/>
+<img src="../_static/osw_images/schedule-2025_dark-mode.png" alt="A colour-coded table showing the schedule of open software week. The columns are weekdays, and the rows are Morning and Afternoon. All of Monday and Friday will be spent on 'Intro to Python' and 'Hackday', respectively. Tuesday and Wednesday are split into two whole-day main tracks: 'Animals in Motion' and 'BrainGlobe'. On Thursday, one can choose between either a full day of 'Big Imaging Data' or 'Careers Clinic' in the morning and 'Collaborative Coding with git' in the afternoon." class="only-dark img-responsive"/>
 
 There are three **main tracks** targeted to different audiences.
 We encourage you to read each track's description and choose the one that best fits your interests.
@@ -103,6 +103,7 @@ The [Animals in Motion](track-animals-in-motion) and the [Big Imaging Data](trac
 ```{image} /_static/osw_images/sponsor-logos.png
 :align: center
 :width: 80%
+:alt: The logos of three Open Software Week sponsors: The Software Sustainability Institute, the Society for RSE and AIBIO UK
 ```
 
 ```{toctree}
