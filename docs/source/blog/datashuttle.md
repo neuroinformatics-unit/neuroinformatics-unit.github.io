@@ -53,7 +53,7 @@ features.
 ## How **datashuttle** is used in an experiment
 
 **datashuttle** runs on Windows, macOS or Linux and is
-[easy to install](https://datashuttle.neuroinformatics.dev/pages/how_tos/install.html)
+[easy to install](https://datashuttle.neuroinformatics.dev/pages/get_started/install.html)
 through 
 [conda-forge](https://anaconda.org/conda-forge/datashuttle)
 or 
