@@ -145,7 +145,7 @@ For example, the tags (`@DATE@`, `@TIME@`, `@DATETIME@`) will
 fill the created folder  with the date / time / datetime. Double-clicking
 an input will suggest the next subject or session.
 A full list of such shortcuts are available in the 
-[documentation.](https://datashuttle.neuroinformatics.dev/pages/how_tos/create-folders.html#creating-project-folders)
+[documentation.](https://datashuttle.neuroinformatics.dev/pages/user_guides/create-folders.html#creating-project-folders)
 
 
 Folders can be created in an equivalent way through the Python API:
@@ -186,7 +186,7 @@ as below and click `Transfer`:
 
 The keyword `all_sub` will transfer any subject while the `@*@` tag
 in the session name acts as a wildcard. There are 
-[many more options](https://datashuttle.neuroinformatics.dev/pages/how_tos/transfer-data.html#custom-transfers)
+[many more options](https://datashuttle.neuroinformatics.dev/pages/user_guides/transfer-data.html#custom-transfers)
 for customised transfer available.
 
 Transfers can also be run directly in code through the Python API:
@@ -226,7 +226,7 @@ the graphical interface:
 We have given a brief tour of **datashuttle**'s key features,
 but full details on getting started can be found on the 
 [website](https://datashuttle.neuroinformatics.dev/) and
-[Getting Started tutorial](https://datashuttle.neuroinformatics.dev/pages/tutorials/getting_started.html).
+[Getting Started tutorial](https://datashuttle.neuroinformatics.dev/pages/get_started/getting-started.html).
 
 Standardisation is incredibly useful, but it should not come at the 
 expense of convenience. **datashuttle** should make managing your project easier than 
