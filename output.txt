@@ -1,28 +1,28 @@
 publications.md:48: [redirected with Found] http://doi.org/10.21105/joss.02668 to https://joss.theoj.org/papers/10.21105/joss.02668
 publications.md:11: [redirected with Found] http://doi.org/10.48550/arXiv.2505.16882 to https://arxiv.org/abs/2505.16882
-publications.md:43: [redirected with Found] http://doi.org/10.7554/eLife.65751 to https://elifesciences.org/articles/65751
 publications.md:38: [redirected permanently] http://doi.org/10.1371/journal.pcbi.1009074 to https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1009074
 publications.md:33: [redirected with Found] http://doi.org/10.1038/s41598-021-04676-9 to https://www.nature.com/articles/s41598-021-04676-9
+publications.md:43: [redirected with Found] http://doi.org/10.7554/eLife.65751 to https://elifesciences.org/articles/65751
 get-involved/languages_frameworks.md:25: [redirected permanently] https://beta.ruff.rs/docs/ to https://docs.astral.sh/ruff/
-publications.md:21: [redirected permanently] http://doi.org/10.1101/2024.03.06.583699 to https://www.biorxiv.org/content/10.1101/2024.03.06.583699v1
 publications.md:16: [redirected permanently] http://doi.org/10.1101/2025.03.04.641293 to https://www.biorxiv.org/content/10.1101/2025.03.04.641293v1
+publications.md:21: [redirected permanently] http://doi.org/10.1101/2024.03.06.583699 to https://www.biorxiv.org/content/10.1101/2024.03.06.583699v1
 get-involved/languages_frameworks.md:19: [redirected with Found] https://docs.pytest.org to https://docs.pytest.org/en/stable/
 get-involved/gsoc/projects_2025/brainglobe.md:223: [redirected with Found] https://doi.org/10.21105/joss.02668 to https://joss.theoj.org/papers/10.21105/joss.02668
 publications.md:9: [redirected with Found] https://doi.org/10.48550/arXiv.2505.16882 to https://arxiv.org/abs/2505.16882
-get-involved/gsoc/projects_2025/brainglobe.md:50: [redirected permanently] https://doi.org/10.1371/journal.pcbi.1009074 to https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1009074
-get-involved/gsoc/projects_2025/brainglobe.md:180: [redirected with Found] https://doi.org/10.7554/eLife.65751 to https://elifesciences.org/articles/65751
 publications.md:31: [redirected with Found] https://doi.org/10.1038/s41598-021-04676-9 to https://www.nature.com/articles/s41598-021-04676-9
-publications.md:19: [redirected permanently] https://doi.org/10.1101/2024.03.06.583699 to https://www.biorxiv.org/content/10.1101/2024.03.06.583699v1
+get-involved/gsoc/projects_2025/brainglobe.md:180: [redirected with Found] https://doi.org/10.7554/eLife.65751 to https://elifesciences.org/articles/65751
+get-involved/gsoc/projects_2025/brainglobe.md:50: [redirected permanently] https://doi.org/10.1371/journal.pcbi.1009074 to https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1009074
 publications.md:14: [redirected permanently] https://doi.org/10.1101/2025.03.04.641293 to https://www.biorxiv.org/content/10.1101/2025.03.04.641293v1
-get-involved/gsoc/projects_2025/brainglobe.md:269: [redirected with Found] https://github.com/SuperElastix/elastix/releases/download/5.2.0/elastix-5.2.0-manual.pdf to https://objects.githubusercontent.com/github-production-release-asset-2e65be/91586944/1f956413-6273-41c3-bb51-5f59d0d670b9?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250611%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250611T173228Z&X-Amz-Expires=300&X-Amz-Signature=0f639c6819654c7069ae960882290de6b696712d143b9d2c56204f18ebd2b94d&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3Delastix-5.2.0-manual.pdf&response-content-type=application%2Foctet-stream
+publications.md:19: [redirected permanently] https://doi.org/10.1101/2024.03.06.583699 to https://www.biorxiv.org/content/10.1101/2024.03.06.583699v1
+get-involved/gsoc/projects_2025/brainglobe.md:269: [redirected with Found] https://github.com/SuperElastix/elastix/releases/download/5.2.0/elastix-5.2.0-manual.pdf to https://objects.githubusercontent.com/github-production-release-asset-2e65be/91586944/1f956413-6273-41c3-bb51-5f59d0d670b9?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250703%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250703T105343Z&X-Amz-Expires=1800&X-Amz-Signature=4bca1257ebced92372594947a60db1451dde1c4e0b54a73bc7178fac6808ac34&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3Delastix-5.2.0-manual.pdf&response-content-type=application%2Foctet-stream
 get-involved/gsoc/projects_2025/movement.md:47: [redirected permanently] https://github.com/joacorapela/lds_python to https://github.com/joacorapela/lds
 get-involved/languages_frameworks.md:36: [redirected permanently] https://github.com/pypa/setuptools_scm to https://github.com/pypa/setuptools-scm
 open-software-week/index.md:9: [redirected with Found] https://maps.app.goo.gl/CzWFFjXJZwX87aMj6 to https://www.google.com/maps/place/Sainsbury+Wellcome+Centre/@51.521174,-0.138121,15z/data=!4m6!3m5!1s0x48761b290cd61e55:0xff71d53b61728860!8m2!3d51.5211738!4d-0.1381206!16s%2Fg%2F11c60mbymm?entry=tts&g_ep=EgoyMDI1MDIxOC4wIPu8ASoASAFQAw%3D%3D
+roadmaps/june-2024.md:109: [redirected permanently] https://pynapple-org.github.io/pynapple/ to https://pynapple.org/
 get-involved/gsoc/projects_2025/brainglobe.md:191: [redirected with Found] https://openminds-documentation.readthedocs.io/en/latest/schema_specifications/SANDS/atlas/brainAtlas.html to https://openminds.docs.om-i.org/en/latest/schema_specifications/SANDS/atlas/brainAtlas.html
 get-involved/gsoc/projects_2025/brainglobe.md:224: [redirected with Found] https://openminds-documentation.readthedocs.io/en/v3.0/shared/getting_started.html to https://openminds.docs.om-i.org/en/v3.0/shared/getting_started.html
 get-involved/gsoc/projects_2025/brainglobe.md:225: [redirected with Found] https://openminds-documentation.readthedocs.io/en/v3.0/schema_specifications/SANDS/atlas/brainAtlas.html to https://openminds.docs.om-i.org/en/v3.0/schema_specifications/SANDS/atlas/brainAtlas.html
-roadmaps/june-2024.md:109: [redirected permanently] https://pynapple-org.github.io/pynapple/ to https://pynapple.org/
 blog/neuroblueprint.md:95: [redirected permanently] https://www.nwb.org/ to https://nwb.org/
 open-software-week/index.md:101: [redirected permanently] https://www.sainsburywellcome.org/ to https://www.sainsburywellcome.org/web/
-publications.md:63: [redirected with See Other] https://youtu.be/ck-2vNR7qwo?si=awOA9sEw7xRl9-Nf to https://www.youtube.com/watch?si=awOA9sEw7xRl9-Nf&v=ck-2vNR7qwo&feature=youtu.be
 publications.md:58: [redirected with See Other] https://youtu.be/GXBQsqqZZTg?si=0bt5Q_lGY8GXw6dx to https://www.youtube.com/watch?si=0bt5Q_lGY8GXw6dx&v=GXBQsqqZZTg&feature=youtu.be
+publications.md:63: [redirected with See Other] https://youtu.be/ck-2vNR7qwo?si=awOA9sEw7xRl9-Nf to https://www.youtube.com/watch?si=awOA9sEw7xRl9-Nf&v=ck-2vNR7qwo&feature=youtu.be
