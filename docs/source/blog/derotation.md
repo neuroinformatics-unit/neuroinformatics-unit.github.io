@@ -6,7 +6,9 @@
 :language: English
 :image: 1
 
-# Scientific Background
+# `derotation`: a Python package for correcting motion artifacts in rotating multiphoton movies
+
+## Scientific Background
 
 Passive or active rotation of the head (yaw) is an ethologically relevant movement for rodents, enabling them to orient their bodies, avoid obstacles, and locate food sources. In neuroscience, controlled head rotation is a key experimental paradigm for studying the vestibular system and its influence on sensory processing. Electrophysiological recordings have demonstrated the impact of such movements on neural activity in the visual cortex, as shown by [Velez et al. (2018)](https://www.cell.com/neuron/fulltext/S0896-6273(18)30144-2). 
 
@@ -14,12 +16,16 @@ To further connect neural activity to cellular morphology, multiphoton calcium i
 
 ---
 
-# `derotation`: a Python package for correcting motion artifacts in rotating multiphoton movies
+## Introduction to `derotation`
 
 The `derotation` package provides a robust solution for reconstructing multiphoton movies of rotating samples acquired with a line-scanning microscope at high rotation speeds and low frame rates. When imaging a rotating sample, the line-by-line nature of acquisition introduces significant in-frame geometric distortions, which make later registration not feasible with frame-by-frame derotation methods. This package corrects these artifacts to produce clear, stable movies suitable for standard analysis pipelines like Suite2p.
 
-![](https://raw.githubusercontent.com/neuroinformatics-unit/derotation/main/docs/source/_static/mean_images_with_incremental.png)
-> **Left**: The mean image from a raw 3-photon movie of a rotating sample. **Center**: The mean image after processing with `derotation`. **Right**: The mean image after further registration with Suite2p. The improvement in cell definition is evident after derotation.
+:::note 
+A multiphoton movie is a sequence of 2D images captured over time with a 1-, 2-, or 3-photon microscope.
+:::
+
+![](../_static/blog_images/derotation/mean_images_with_incremental.png)
+> **Left**: The mean image of the entire raw 3-photon movie of a rotating sample. **Center**: The mean image after processing with `derotation`. **Right**: The mean image after further registration with Suite2p. The improvement in cell definition is evident after derotation.
 
 ---
 
@@ -27,12 +33,12 @@ The `derotation` package provides a robust solution for reconstructing multiphot
 
 The fundamental principle of the package is **derotation-by-line**. Because a line-scanning microscope acquires an image one horizontal line at a time, a rotating sample causes each line to be captured at a slightly different angle. 
 
-![](https://raw.githubusercontent.com/neuroinformatics-unit/derotation/refs/heads/main/docs/source/_static/derotation_index.png)
+![](../_static/blog_images/derotation/derotation_index.png)
 > **Left:** schematic of a line-scanning microscope acquiring an image of a grid. The scanning pattern plus the sample rotation leads to fan-like artifacts. **Right:** grid that has been imaged while still (top), while rotating (middle) and the derotated image (bottom). The grid is now perfectly aligned.
 
 If the angle of rotation is recorded simultaneously, the `derotation` package can computationally rotate each line back to a common frame of reference, incrementally building a corrected, distortion-free image.
 
-![](https://raw.githubusercontent.com/neuroinformatics-unit/derotation/main/docs/source/_static/derotation_by_line.gif)
+![](../_static/blog_images/derotation/derotation_by_line.gif)
 > This animation demonstrates the line-by-line reconstruction. The distorted frame (left) is corrected one line at a time based on its specific rotation angle to generate the final, stabilized frame (right).
 
 ---
@@ -66,7 +72,7 @@ Both pipelines generate a corrected TIFF stack, metadata files, and debugging pl
 
 Accurately identifying the **center of rotation** is critical. An incorrect center will result in residual motion, where stationary objects appear to trace circles in the final movie.
 
-![](https://raw.githubusercontent.com/neuroinformatics-unit/derotation/main/docs/source/_static/wrong_center.png)
+![](../_static/blog_images/derotation/wrong_center.png)
 > When the center of rotation is miscalculated, a stationary cell's center (red crosses) will appear to move in a circular path across different rotation angles.
 
 The package implements two methods to find this center:
@@ -83,7 +89,7 @@ To ensure the quality of the correction and validate the algorithms, `derotation
 * **`Rotator` Class**: This class can take a static image and apply a virtual line-by-line rotation, simulating the distortion from a real microscope.
 * **`SyntheticData` Class**: This builds on `Rotator` to create complete, simulated datasets, including fake cell images and corresponding rotation signals.
 
-![](https://raw.githubusercontent.com/neuroinformatics-unit/derotation/main/docs/source/_static/rotator.gif)
+![](../_static/blog_images/derotation/rotator.gif)
 > An animation showing a synthetic dataset of two "cells" being rotated with line-scanning artifacts.
 
 These tools are invaluable for testing and can even simulate complex cases like **out-of-plane rotations**, where the axis of rotation is tilted relative to the imaging plane. In such cases, the package can fit an ellipse to the object's trajectory to calculate the 3D rotation geometry and apply a more sophisticated correction.
@@ -94,8 +100,8 @@ These tools are invaluable for testing and can even simulate complex cases like 
 
 `derotation` is an open-source project in active development. Community contributions are welcome.
 
-* **Report Bugs or Request Features**: [Open an issue on GitHub](https://github.com/neuroinformatics-unit/derotation/issues)
-* **Discuss Development**: [Join the Zulip chat](https://neuroinformatics.zulipchat.com/#narrow/channel/495735-Derotation)
+* Report bugs or request features: [Open an issue on GitHub](https://github.com/neuroinformatics-unit/derotation/issues)
+* Discuss development: [Join the Zulip chat](https://neuroinformatics.zulipchat.com/#narrow/channel/495735-Derotation)
 
 ---
 
