@@ -76,8 +76,11 @@ linkcheck_ignore = [
     "https://www.incf.org/sites/default/files/files/INCF_GSoC_2022_Application_template.pdf",
     "https://neuroinformatics.dev/slides-templates-atlases/#/on-templates-and-atlases",
     "https://errantscience.com/",
-    "https://www.cell.com/neuron/fulltext/S0896-6273(18)30144-2"
+    r"https://www\.cell\.com/.*",  # Use regex pattern to match all cell.com URLs
 ]
+
+# Suppress strikethrough warnings - strikethrough is only supported in HTML
+suppress_warnings = ['myst.strikethrough']
 
 
 # List of patterns, relative to source directory, that match files and
