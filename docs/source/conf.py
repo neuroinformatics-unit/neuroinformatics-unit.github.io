@@ -77,6 +77,7 @@ linkcheck_ignore = [
     "https://neuroinformatics.dev/slides-templates-atlases/#/on-templates-and-atlases",
     "https://errantscience.com/",
     r"https://www\.cell\.com/.*",  # Use regex pattern to match all cell.com URLs
+    r"https?://(?:dx\.)?doi\.org/.*",  # Use regex pattern to match all DOI URLs
 ]
 
 # Suppress strikethrough warnings - strikethrough is only supported in HTML
