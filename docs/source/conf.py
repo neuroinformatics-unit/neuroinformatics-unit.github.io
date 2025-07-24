@@ -76,7 +76,12 @@ linkcheck_ignore = [
     "https://www.incf.org/sites/default/files/files/INCF_GSoC_2022_Application_template.pdf",
     "https://neuroinformatics.dev/slides-templates-atlases/#/on-templates-and-atlases",
     "https://errantscience.com/",
+    r"https://www\.cell\.com/.*",  # Use regex pattern to match all cell.com URLs
+    r"https?://(?:dx\.)?doi\.org/.*",  # Use regex pattern to match all DOI URLs
 ]
+
+# Suppress strikethrough warnings - strikethrough is only supported in HTML
+suppress_warnings = ['myst.strikethrough']
 
 
 # List of patterns, relative to source directory, that match files and
