@@ -8,6 +8,40 @@ html[data-theme=light] {
   --pst-color-link: var(--pst-color-primary);
 }
 
+/* Preserve image transparency and center images */
+img {
+  background: transparent !important;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Optional: Add subtle border/shadow for better visibility on light backgrounds */
+.bd-main img {
+  background: transparent;
+  border-radius: 4px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Ensure transparent images work well in both light and dark themes */
+html[data-theme=light] .bd-main img {
+  background: transparent;
+}
+
+html[data-theme=dark] .bd-main img {
+  background: transparent;
+}
+
+/* Center images in content areas specifically */
+.bd-article img, 
+.bd-content img {
+  display: block;
+  margin: 1rem auto;
+  max-width: 100%;
+  height: auto;
+}
+
 .sponsor {
   height: 100px;
   padding-top: 5px;
