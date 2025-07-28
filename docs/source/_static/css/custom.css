@@ -37,7 +37,6 @@ html[data-theme=dark] .bd-main img {
 .bd-article img, 
 .bd-content img {
   display: block;
-  /* margin: 1rem auto; */
   max-width: 100%;
   height: auto;
 }
