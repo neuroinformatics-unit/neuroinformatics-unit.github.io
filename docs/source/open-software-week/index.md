@@ -94,6 +94,40 @@ Learn how to version control your code and collaborate with others using `git` a
 Put into practice what you have learned during the week and collaborate with others to tackle a real-world problem using open-source tools. The goal will be to end the day with several pull requests to open-source projects.
 :::
 
+(target-general-prerequisites)=
+## Prerequisites
+
+As this is a hands-on event, you will need to bring your own **laptop** and **charger**. Any fairly recent laptop will be suitable, you don't need a dedicated GPU.
+
+:::{note}
+If you already have a working Anaconda or Miniconda installation and have used it to run Python scripts or Jupyter notebooks, you can likely skip ahead to the [additional track-specific prerequisites](target-track-specific-prerequisites).
+:::
+
+To prepare your computer for Python development, we recommend following the [Software Carpentries installation instructions](https://carpentries.github.io/workshop-template/install_instructions), in particular:
+
+- [Bash Shell](https://carpentries.github.io/workshop-template/install_instructions/#shell), to run terminal commands
+- [Git](https://carpentries.github.io/workshop-template/install_instructions/#git), including a GitHub account
+- [Python](https://carpentries.github.io/workshop-template/install_instructions/#python), via the [conda-forge installer](https://conda-forge.org/download/). Please make sure you install a __Python version >= 3.12__ (e.g. 3.12 is fine, 3.10 is not).
+
+You'll also need a code editor (IDE) configured for Python.
+If you already have one you're comfortable with, feel free to use it. Otherwise, we recommend:
+
+- [Visual Studio Code](https://code.visualstudio.com/) with the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+- [PyCharm](https://www.jetbrains.com/pycharm/)
+- [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/)
+
+(target-track-specific-prerequisites)=
+:::{admonition} Additional track-specific prerequisites
+:class: warning
+
+Apart from the general development tools mentioned above, each track may have additional prerequisites:
+- [Animals in Motion](target-animals-in-motion-prerequisites)
+- [BrainGlobe](target-brainglobe-prerequisites)
+- [Big Imaging Data](target-imaging-prerequisites)
+
+Please arrive 30 minutes early if you are facing problems installing course prerequisites.
+:::
+
 ## Funding
 
 The [Animals in Motion](track-animals-in-motion) and the [Big Imaging Data](track-big-imaging-data) tracks have been made possible by [Software Sustainability Institute](https://www.software.ac.uk/) fellowships to **Niko Sirmpilatze** and **Alessandro Felder**, respectively. The NIU Open Software Week is further supported by the [Sainsbury Wellcome Centre](https://www.sainsburywellcome.org/), the [Society for Research Software Engineering](https://society-rse.org/) and [AIBIO-UK](https://aibio.ac.uk/). We thank the [Sainsbury Wellcome Centre](https://www.sainsburywellcome.org/) and the [Gatsby Computational Neuroscience Unit](https://www.ucl.ac.uk/gatsby/gatsby-computational-neuroscience-unit) for providing facilities for the event.

@@ -33,20 +33,16 @@ The discussions will then be fed back to the wider group, and result in the publ
 - [Igor Tatarnikov](https://github.com/IgorTatarnikov)
 - [Adam Tyson](https://github.com/adamltyson)
 
-## Pre-requisites
+(target-imaging-prerequisites)=
+## Prerequisites
 
 ### Hardware
 As this is a hands-on workshop, you will need to bring your own laptop. Any fairly recent laptop will be suitable, you don't need a GPU etc.
 
 ### Software
-Please ensure you have the following installed:
-- A Python IDE such as:
-  - [Visual Studio Code](https://code.visualstudio.com/) with the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
-  - [PyCharm](https://www.jetbrains.com/pycharm/)
-- A working `conda` (or `mamba`) installation. If you don't have it, install via [Miniforge](https://github.com/conda-forge/miniforge).
-- A working [Git](https://git-scm.com/) installation.
+For general software requirements, please see the [prerequisites](target-general-prerequisites) on the main event page and make sure you have these installed and properly configured.
 
-We will email you at least a week before the event with instructions on installing any additional required software.
+Specialise software beyond the above general requirements will be installed during the course.
 
 ### Python knowledge
 If you're new to Python, we recommend attending our __Intro to Python__ workshop on Monday, or completing an equivalent course beforehand.

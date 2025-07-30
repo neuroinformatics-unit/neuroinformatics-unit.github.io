@@ -35,23 +35,64 @@ You'll learn how to load, clean, visualise, and quantify motion tracks, and appl
 - [Sofía Miñano](https://github.com/sfmig)
 - [Chang Huan Lo](https://github.com/lochhh)
 
-## Pre-requisites
+(target-animals-in-motion-prerequisites)=
+## Prerequisites
 
 ### Hardware
-As this is a hands-on workshop, we recommend bringing your own laptop.
-A mouse is also recommended for tasks like image annotation.
-A dedicated GPU is __not__ required
+This is a hands-on course, so please bring your own **laptop** and **charger**.
+A **mouse** is strongly recommended, especially for tasks like image annotation.
+A dedicated **GPU is not required**, though it may speed up some computations.
 
 ### Software
-Please ensure you have the following installed:
-- A Python IDE such as:
-  - [Visual Studio Code](https://code.visualstudio.com/) with the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
-  - [PyCharm](https://www.jetbrains.com/pycharm/)
-  - [JupyterLab](https://jupyter.org/install)
-- A working `conda` (or `mamba`) installation. If you don't have it, install via [Miniforge](https://github.com/conda-forge/miniforge).
-- A working [Git](https://git-scm.com/) installation.
+For general software requirements, please see the [prerequisites](target-general-prerequisites) on the main event page and make sure you have these installed and properly configured.
 
-We will email you at least a week before the event with instructions on installing any additional required software.
+In addition to the general tools, you will need to install
+the following specialised software:
+
+::::{tab-set}
+
+:::{tab-item} SLEAP
+
+Please install [SLEAP](https://sleap.ai/) following the [official installation instructions](https://sleap.ai/installation.html).
+
+For this workshop, use **SLEAP version 1.3.3**. Be sure to replace the default version number (e.g. 1.4.1) in the instructions with 1.3.3.
+
+This should create a `conda` environment named `sleap` with the necessary dependencies. You can verify the installation by running:
+
+```bash
+conda activate sleap
+sleap-label
+```
+This should launch the SLEAP graphical user interface (GUI).
+
+:::
+
+:::{tab-item} movement
+
+You will also need a separate `conda` environment with everything required for the interactive exercises, including the [movement](https://movement.neuroinformatics.dev/) and [jupyter](https://jupyter.org/) packages.
+
+We recommend cloning the workshop's repository and creating the environment using the provided `environment.yaml` file:
+
+```bash
+git clone https://github.com/neuroinformatics-unit/animals-in-motion.git
+cd animals-in-motion
+conda env create -n animals-in-motion-env -f environment.yaml
+```
+
+To test your setup, run:
+```bash
+conda activate animals-in-motion-env
+movement launch
+```
+
+This should open the [movement GUI](https://movement.neuroinformatics.dev/user_guide/gui.html), i.e. the [napari](https://napari.org/) image viewer with the `movement` plugin docked on the right.
+
+There are other ways to [install the movement package](https://movement.neuroinformatics.dev/user_guide/installation.html).
+However, for this workshop, we recommend using the `environment.yaml` file to ensure that all necessary dependencies, including those beyond `movement`, are included.
+
+:::
+
+::::
 
 ### Python knowledge
 If you're new to Python, we recommend attending our __Intro to Python__ workshop on Monday, or completing an equivalent course beforehand.
