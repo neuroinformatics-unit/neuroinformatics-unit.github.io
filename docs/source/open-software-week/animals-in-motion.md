@@ -30,6 +30,14 @@ __Wednesday:__
 The second day will be dedicated to a practical tutorial on [movement](https://movement.neuroinformatics.dev)—a Python toolbox for analysing animal body movements across space and time.
 You'll learn how to load, clean, visualise, and quantify motion tracks, and apply this knowledge to specific use cases through computational exercises.
 
+::: {admonition} Course materials
+:class: note
+
+All course materials will be made available at <https://animals-in-motion.neuroinformatics.dev/latest/> during the workshop and will remain accessible afterwards.
+
+The source code for the course materials is publicly hosted at <https://github.com/neuroinformatics-unit/animals-in-motion>.
+:::
+
 ## Instructors
 - [Niko Sirmpilatze](https://github.com/niksirbi)
 - [Sofía Miñano](https://github.com/sfmig)
