@@ -81,14 +81,14 @@ The audience is encouraged to prepare questions for the panellists, and reflect 
 
 Panelists include:
 
-- **Mayo Faulkner**, Research Software Engineer at the International Brain Lab
+- **Mayo Faulkner**, Senior User Experience Engineer at the International Brain Lab
 - **Vicki Yorke-Edwards**, Senior Research Data Steward at UCL Advanced Research Computing Centre
 - **Batool Almarzouq**, Manager of Imago (Imagery Smart Data Service), part of the Smart Data Research UK programme
 - **Laura Porta**, Senior Research Software Engineer in the Neuroinformatics Unit
 - **Jonas Hartmann**, Postdoctoral Researcher at UCL Cell + Developmental Biology
 
 If you've signed up for the Careers Clinic, please arrive at the Sainsbury Wellcome Centre
-exactly at **11:30** on **Thursday**. This will give you a chance to grab a coffee from the Ground Floor Lecture Theatre before being guided to the 3rd Floor Seminar Room for
+by **11:30** on **Thursday**. This will give you a chance to grab a coffee from the Ground Floor Lecture Theatre before being guided to the 3rd Floor Seminar Room for
 the panel discussion, which will start at **11:45**.
 :::
 
