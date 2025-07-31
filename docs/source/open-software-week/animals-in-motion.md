@@ -69,9 +69,10 @@ This should launch the SLEAP graphical user interface (GUI).
 
 :::{tab-item} movement
 
-You will also need a separate `conda` environment with everything required for the interactive exercises, including the [movement](https://movement.neuroinformatics.dev/) and [jupyter](https://jupyter.org/) packages.
+You will also need a separate `conda` environment to use for interactive coding exercises.
+This environment will include the [movement](https://movement.neuroinformatics.dev/) and [jupyter](https://jupyter.org/) packages.
 
-We recommend cloning the workshop's repository and creating the environment using the provided `environment.yaml` file:
+We recommend cloning the workshop's GitHub repository and creating the environment using the provided `environment.yaml` file:
 
 ```bash
 git clone https://github.com/neuroinformatics-unit/animals-in-motion.git

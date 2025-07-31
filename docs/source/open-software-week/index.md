@@ -120,7 +120,7 @@ If you already have one you're comfortable with, feel free to use it. Otherwise,
 :::{admonition} Additional track-specific prerequisites
 :class: warning
 
-Apart from the general development tools mentioned above, each track may have additional prerequisites:
+Apart from the general development tools mentioned above, each track may have additional prerequisites. The following links will take you there:
 - [Animals in Motion](target-animals-in-motion-prerequisites)
 - [BrainGlobe](target-brainglobe-prerequisites)
 - [Big Imaging Data](target-imaging-prerequisites)

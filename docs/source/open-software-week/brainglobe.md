@@ -47,7 +47,7 @@ As this is a hands-on workshop, you will need to bring your own laptop. Any fair
 ### Software
 For general software requirements, please see the [prerequisites](target-general-prerequisites) on the main event page and make sure you have these installed and properly configured.
 
-Specialise software beyond the above general requirements, including BrainGlobe itself, will be installed during the course.
+Specialised software beyond the above general requirements, including BrainGlobe itself, will be installed during the course.
 
 ### Python knowledge
 If you're new to Python, we recommend attending our __Intro to Python__ workshop on Monday, or completing an equivalent course beforehand.
