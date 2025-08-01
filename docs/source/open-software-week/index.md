@@ -3,17 +3,15 @@
 We are excited to announce our inaugural **NIU Open Software Week**, taking
 place in **August 2025** in **London, UK**. This event will bring together researchers, developers, and users of open-source software for some hands-on training, community-building and hacking.
 
-:::{admonition} Application Period Closed. We will notify applicants of acceptance as soon as possible.
+:::{admonition} Application period has ended and selected applicants have been notified.
 :class: info
 
 **August 11-15 2025**, [Sainsbury Wellcome Centre](https://maps.app.goo.gl/CzWFFjXJZwX87aMj6)
 
 - ~~**April 16th 2025**: Applications open~~
 - ~~**June 6th 2025**: Applications close~~
-- **End of June/Early July 2025**: Applicants are notified of acceptance
+- ~~**End of June/Early July 2025**: Applicants are notified of acceptance~~
 :::
-
-To maximise our impact, we aim to select participants that would benefit the most from the event, and that can bring the experience back to a diverse set of fields. Please be specific in your application and tailor it to the main track(s) that you are planning to attend. Attendance is free of charge (coffee and lunch are provided) and we expect to be able to offer 10-15 travel stipends of between £300 and £1500 for those that make a strong case for attendance and lack alternative funding sources.
 
 ## Schedule
 
@@ -77,7 +75,21 @@ A beginner-friendly workshop for those who are new to programming and want to le
 :color: primary
 :icon: briefcase
 
-A discussion for those interested in exploring non-traditional career paths in research, such as Research Software Engineer, Image Analyst, or Data Scientist.
+The Careers Clinic will consist of a panel discussion from diverse Research Technology Professionals with a background in life sciences.
+We hope for the discussion to benefit those interested in exploring non-traditional career paths in research.
+The audience is encouraged to prepare questions for the panellists, and reflect on their own careers.
+
+Panelists include:
+
+- **Mayo Faulkner**, Senior User Experience Engineer at the International Brain Lab
+- **Vicki Yorke-Edwards**, Senior Research Data Steward at UCL Advanced Research Computing Centre
+- **Batool Almarzouq**, Manager of Imago (Imagery Smart Data Service), part of the Smart Data Research UK programme
+- **Laura Porta**, Senior Research Software Engineer in the Neuroinformatics Unit
+- **Jonas Hartmann**, Postdoctoral Researcher at UCL Cell + Developmental Biology
+
+If you've signed up for the Careers Clinic, please arrive at the Sainsbury Wellcome Centre
+by **11:30** on **Thursday**. This will give you a chance to grab a coffee from the Ground Floor Lecture Theatre before being guided to the 3rd Floor Seminar Room for
+the panel discussion, which will start at **11:45**.
 :::
 
 :::{dropdown} Collaborative coding with git
@@ -93,7 +105,59 @@ Learn how to version control your code and collaborate with others using `git` a
 :color: primary
 :icon: people
 
-Put into practice what you have learned during the week and collaborate with others to tackle a real-world problem using open-source tools. The goal will be to end the day with several pull requests to open-source projects.
+If you've signed up for the Hackday on **Friday, 15 August**, we encourage you to start thinking about potential project ideas.
+You can propose an idea by visiting this [GitHub repository](https://github.com/neuroinformatics-unit/osw25-hackday) and clicking **"New Issue" > "Hackday project idea"**.
+
+You can browse existing proposals on this [board](https://github.com/orgs/neuroinformatics-unit/projects/19/views/1).
+If something catches your eye, feel free to leave a comment under the relevant issue to express your interest or ask questions.
+We hope that this will get the ball rolling on team formation, which will be finalised on Friday morning.
+Don't worry if you don't have a concrete idea just yet — we expect plenty of Hackday ideas to emerge organically throughout Open Software Week.
+
+**Projects don't need to involve coding.** As long as it's something that would benefit from collaboration with other Open Software Week participants, it's fair game!
+Here are a few examples of the kinds of projects that could be a great fit:
+
+- **Apply a tool**: Use any software you learned about during the week to analyse an interesting dataset (your own or a public one).
+- **Give feedback**: Raise issues on relevant open-source tools. Suggest missing features, report bugs, or flag unclear documentation.
+- **Make a contribution**: Submit a pull request to an open-source repository. If it's your first time, don't worry; there'll be plenty of people around to support you.
+- **Collaborative writing**: Draft something together, like a blog post, white paper, or improved documentation.
+- **Prototype an idea**: Try out a cool new analysis or method on real-world data and share your findings.
+
+We're looking forward to seeing what you come up with! You will get the chance to present your progress at the end of the Hackday.
+
+:::
+
+(target-general-prerequisites)=
+## Prerequisites
+
+As this is a hands-on event, you will need to bring your own **laptop** and **charger**. Any fairly recent laptop will be suitable, you don't need a dedicated GPU.
+
+:::{note}
+If you already have a working Anaconda or Miniconda installation and have used it to run Python scripts or Jupyter notebooks, you can likely skip ahead to the [additional track-specific prerequisites](target-track-specific-prerequisites).
+:::
+
+To prepare your computer for Python development, we recommend following the [Software Carpentries installation instructions](https://carpentries.github.io/workshop-template/install_instructions), in particular:
+
+- [Bash Shell](https://carpentries.github.io/workshop-template/install_instructions/#shell), to run terminal commands
+- [Git](https://carpentries.github.io/workshop-template/install_instructions/#git), including a GitHub account
+- [Python](https://carpentries.github.io/workshop-template/install_instructions/#python), via the [conda-forge installer](https://conda-forge.org/download/). Please make sure you install a __Python version >= 3.12__ (e.g. 3.12 is fine, 3.10 is not).
+
+You'll also need a code editor (IDE) configured for Python.
+If you already have one you're comfortable with, feel free to use it. Otherwise, we recommend:
+
+- [Visual Studio Code](https://code.visualstudio.com/) with the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+- [PyCharm](https://www.jetbrains.com/pycharm/)
+- [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/)
+
+(target-track-specific-prerequisites)=
+:::{admonition} Additional track-specific prerequisites
+:class: warning
+
+Apart from the general development tools mentioned above, each track may have additional prerequisites. The following links will take you there:
+- [Animals in Motion](target-animals-in-motion-prerequisites)
+- [BrainGlobe](target-brainglobe-prerequisites)
+- [Big Imaging Data](target-imaging-prerequisites)
+
+Please arrive 30 minutes early if you are facing problems installing course prerequisites.
 :::
 
 ## Funding
