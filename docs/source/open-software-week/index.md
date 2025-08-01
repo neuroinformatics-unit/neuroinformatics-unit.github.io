@@ -111,7 +111,6 @@ You can propose an idea by visiting this [GitHub repository](https://github.com/
 You can browse existing proposals on this [board](https://github.com/orgs/neuroinformatics-unit/projects/19/views/1).
 If something catches your eye, feel free to leave a comment under the relevant issue to express your interest or ask questions.
 We hope that this will get the ball rolling on team formation, which will be finalised on Friday morning.
-You are totally free to change your mind many times.
 Don't worry if you don't have a concrete idea just yet — we expect plenty of Hackday ideas to emerge organically throughout Open Software Week.
 
 **Projects don't need to involve coding.** As long as it's something that would benefit from collaboration with other Open Software Week participants, it's fair game!

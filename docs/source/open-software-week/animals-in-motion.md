@@ -35,7 +35,7 @@ You'll learn how to load, clean, visualise, and quantify motion tracks, and appl
 
 All course materials will be made available at <https://animals-in-motion.neuroinformatics.dev/latest/> during the workshop and will remain accessible afterwards.
 
-The source code for the course materials is publicly hosted at <https://github.com/neuroinformatics-unit/animals-in-motion>.
+The source code for the course materials is publicly hosted at <https://github.com/neuroinformatics-unit/course-animals-in-motion>.
 :::
 
 ## Instructors
