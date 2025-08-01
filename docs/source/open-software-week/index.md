@@ -100,12 +100,14 @@ the panel discussion, which will start at **11:45**.
 Learn how to version control your code and collaborate with others using `git` and GitHub. This workshop is open to all but is especially recommended for those who are planning to participate in the following day's hackathon.
 :::
 
+(target-hackday)=
 :::{dropdown} Hackday
 :name: hackday
 :color: primary
 :icon: people
+On **Friday, 15 August** we will run a collaborative hackday. This will involve self-organising into small groups and tackling a project of interest hands-on and together, in a fun atmosphere.
 
-If you've signed up for the Hackday on **Friday, 15 August**, we encourage you to start thinking about potential project ideas.
+If you've signed up for the Hackday, we encourage you to start thinking about potential project ideas.
 You can propose an idea by visiting this [GitHub repository](https://github.com/neuroinformatics-unit/osw25-hackday) and clicking **"New Issue" > "Hackday project idea"**.
 
 You can browse existing proposals on this [board](https://github.com/orgs/neuroinformatics-unit/projects/19/views/1).
