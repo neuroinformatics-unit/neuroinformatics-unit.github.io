@@ -602,6 +602,11 @@ The typical workflow, from annotating body parts to training a model and generat
 <p><strong>Wednesday:</strong>
 The second day will be dedicated to a practical tutorial on <a class="reference external" href="https://movement.neuroinformatics.dev">movement</a>—a Python toolbox for analysing animal body movements across space and time.
 You’ll learn how to load, clean, visualise, and quantify motion tracks, and apply this knowledge to specific use cases through computational exercises.</p>
+<div class="note admonition">
+<p class="admonition-title">Course materials</p>
+<p>All course materials will be made available at <a class="reference external" href="https://animals-in-motion.neuroinformatics.dev/latest/">https://animals-in-motion.neuroinformatics.dev/latest/</a> during the workshop and will remain accessible afterwards.</p>
+<p>The source code for the course materials is publicly hosted at <a class="github reference external" href="https://github.com/neuroinformatics-unit/course-animals-in-motion">neuroinformatics-unit/course-animals-in-motion</a>.</p>
+</div>
 </section>
 <section id="instructors">
 <h2>Instructors<a class="headerlink" href="#instructors" title="Link to this heading">#</a></h2>
@@ -611,29 +616,53 @@ You’ll learn how to load, clean, visualise, and quantify motion tracks, and ap
 <li><p><a class="reference external" href="https://github.com/lochhh">Chang Huan Lo</a></p></li>
 </ul>
 </section>
-<section id="pre-requisites">
-<h2>Pre-requisites<a class="headerlink" href="#pre-requisites" title="Link to this heading">#</a></h2>
+<section id="prerequisites">
+<span id="target-animals-in-motion-prerequisites"></span><h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">#</a></h2>
 <section id="hardware">
 <h3>Hardware<a class="headerlink" href="#hardware" title="Link to this heading">#</a></h3>
-<p>As this is a hands-on workshop, we recommend bringing your own laptop.
-A mouse is also recommended for tasks like image annotation.
-A dedicated GPU is <strong>not</strong> required</p>
+<p>This is a hands-on course, so please bring your own <strong>laptop</strong> and <strong>charger</strong>.
+A <strong>mouse</strong> is strongly recommended, especially for tasks like image annotation.
+A dedicated <strong>GPU is not required</strong>, though it may speed up some computations.</p>
 </section>
 <section id="software">
 <h3>Software<a class="headerlink" href="#software" title="Link to this heading">#</a></h3>
-<p>Please ensure you have the following installed:</p>
-<ul class="simple">
-<li><p>A Python IDE such as:</p>
-<ul>
-<li><p><a class="reference external" href="https://code.visualstudio.com/">Visual Studio Code</a> with the <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">Python extension</a></p></li>
-<li><p><a class="reference external" href="https://www.jetbrains.com/pycharm/">PyCharm</a></p></li>
-<li><p><a class="reference external" href="https://jupyter.org/install">JupyterLab</a></p></li>
-</ul>
-</li>
-<li><p>A working <code class="docutils literal notranslate"><span class="pre">conda</span></code> (or <code class="docutils literal notranslate"><span class="pre">mamba</span></code>) installation. If you don’t have it, install via <a class="reference external" href="https://github.com/conda-forge/miniforge">Miniforge</a>.</p></li>
-<li><p>A working <a class="reference external" href="https://git-scm.com/">Git</a> installation.</p></li>
-</ul>
-<p>We will email you at least a week before the event with instructions on installing any additional required software.</p>
+<p>For general software requirements, please see the <a class="reference internal" href="index.html#target-general-prerequisites"><span class="std std-ref">prerequisites</span></a> on the main event page and make sure you have these installed and properly configured.</p>
+<p>In addition to the general tools, you will need to install
+the following specialised software:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+SLEAP</label><div class="sd-tab-content docutils">
+<p>Please install <a class="reference external" href="https://sleap.ai/">SLEAP</a> following the <a class="reference external" href="https://sleap.ai/installation.html">official installation instructions</a>.</p>
+<p>For this workshop, use <strong>SLEAP version 1.3.4</strong>. Be sure to replace the default version number (e.g. 1.4.1) in the instructions with 1.3.4.</p>
+<p>This should create a <code class="docutils literal notranslate"><span class="pre">conda</span></code> environment named <code class="docutils literal notranslate"><span class="pre">sleap</span></code> with the necessary dependencies. You can verify the installation by running:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>sleap
+sleap-label
+</pre></div>
+</div>
+<p>This should launch the SLEAP graphical user interface (GUI).</p>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
+movement</label><div class="sd-tab-content docutils">
+<p>You will also need a separate <code class="docutils literal notranslate"><span class="pre">conda</span></code> environment to use for interactive coding exercises.
+This environment will include the <a class="reference external" href="https://movement.neuroinformatics.dev/">movement</a> and <a class="reference external" href="https://jupyter.org/">jupyter</a> packages.</p>
+<p>We recommend cloning the workshop’s GitHub repository and creating the environment using the provided <code class="docutils literal notranslate"><span class="pre">environment.yaml</span></code> file:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/neuroinformatics-unit/animals-in-motion.git
+<span class="nb">cd</span><span class="w"> </span>animals-in-motion
+conda<span class="w"> </span>env<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>animals-in-motion-env<span class="w"> </span>-f<span class="w"> </span>environment.yaml
+</pre></div>
+</div>
+<p>To test your setup, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>animals-in-motion-env
+movement<span class="w"> </span>launch
+</pre></div>
+</div>
+<p>This should open the <a class="reference external" href="https://movement.neuroinformatics.dev/user_guide/gui.html">movement GUI</a>, i.e. the <a class="reference external" href="https://napari.org/">napari</a> image viewer with the <code class="docutils literal notranslate"><span class="pre">movement</span></code> plugin docked on the right.</p>
+<p>There are other ways to <a class="reference external" href="https://movement.neuroinformatics.dev/user_guide/installation.html">install the movement package</a>.
+However, for this workshop, we recommend using the <code class="docutils literal notranslate"><span class="pre">environment.yaml</span></code> file to ensure that all necessary dependencies, including those beyond <code class="docutils literal notranslate"><span class="pre">movement</span></code>, are included.</p>
+</div>
+</div>
 </section>
 <section id="python-knowledge">
 <h3>Python knowledge<a class="headerlink" href="#python-knowledge" title="Link to this heading">#</a></h3>
@@ -644,8 +673,12 @@ This hands-on session will cover the basics, including data types, control flow,
 <h3>Data<a class="headerlink" href="#data" title="Link to this heading">#</a></h3>
 <p>Bringing your own data is encouraged but not required.
 This could include video recordings of animal behaviour and/or motion tracks you’ve already generated.
-It’s a great chance to get feedback on your data and learn from others.
-If you don’t have your own data, we will provide example datasets for you to work with.</p>
+It’s a great chance to get feedback on your data and learn from others.</p>
+<div class="note admonition">
+<p class="admonition-title">Download example datasets</p>
+<p>We also provide some example datasets for you to use during the workshop.
+Please download these from <a class="reference external" href="https://www.dropbox.com/scl/fo/81ug5hoy9msc7v7bteqa0/AH32RLdbZqWZJstIeR4YHZY?rlkey=blgagtaizw8aac5areja6h7q1&amp;amp;st=w1zueyi9&amp;amp;dl=0">Dropbox</a> before the workshop starts (they are a few GB in size).</p>
+</div>
 <p>We expect that participant-led ideas emerging from this track may inspire collaborative projects during the <strong>Hackday</strong> on Friday.</p>
 </section>
 </section>
@@ -703,7 +736,7 @@ If you don’t have your own data, we will provide example datasets for you to w
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#course-overview">Course overview</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructors">Instructors</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-requisites">Pre-requisites</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware">Hardware</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#software">Software</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-knowledge">Python knowledge</a></li>
