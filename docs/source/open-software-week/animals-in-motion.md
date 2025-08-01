@@ -63,7 +63,7 @@ the following specialised software:
 
 Please install [SLEAP](https://sleap.ai/) following the [official installation instructions](https://sleap.ai/installation.html).
 
-For this workshop, use **SLEAP version 1.3.3**. Be sure to replace the default version number (e.g. 1.4.1) in the instructions with 1.3.3.
+For this workshop, use **SLEAP version 1.3.4**. Be sure to replace the default version number (e.g. 1.4.1) in the instructions with 1.3.4.
 
 This should create a `conda` environment named `sleap` with the necessary dependencies. You can verify the installation by running:
 
