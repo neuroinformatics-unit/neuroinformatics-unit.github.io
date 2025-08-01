@@ -111,6 +111,8 @@ This hands-on session will cover the basics, including data types, control flow,
 Bringing your own data is encouraged but not required.
 This could include video recordings of animal behaviour and/or motion tracks you've already generated.
 It's a great chance to get feedback on your data and learn from others.
-If you don't have your own data, we will provide example datasets for you to work with.
+
+We also provide some example datasets for you to use during the workshop.
+Please download these from [Dropbox](https://www.dropbox.com/scl/fo/81ug5hoy9msc7v7bteqa0/AH32RLdbZqWZJstIeR4YHZY?rlkey=blgagtaizw8aac5areja6h7q1&st=7eg2nslv&dl=0) before the workshop starts (they are a few GB in size).
 
 We expect that participant-led ideas emerging from this track may inspire collaborative projects during the __Hackday__ on Friday.
