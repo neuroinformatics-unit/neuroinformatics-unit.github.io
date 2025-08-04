@@ -116,7 +116,10 @@ It's a great chance to get feedback on your data and learn from others.
 :class: note
 
 We also provide some example datasets for you to use during the workshop.
-Please download these from [Dropbox](https://www.dropbox.com/scl/fo/81ug5hoy9msc7v7bteqa0/AH32RLdbZqWZJstIeR4YHZY?rlkey=blgagtaizw8aac5areja6h7q1&st=xni448zl&dl=0) before the workshop starts (they are a few GB in size).
+Please download these from
+<a href="https://www.dropbox.com/scl/fo/81ug5hoy9msc7v7bteqa0/AH32RLdbZqWZJstIeR4YHZY?rlkey=blgagtaizw8aac5areja6h7q1&st=xni448zl&dl=0">
+Dropbox </a>
+before the workshop starts (they are a few GB in size).
 
 :::
 
