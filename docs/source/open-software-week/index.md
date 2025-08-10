@@ -67,7 +67,38 @@ You can apply for any number of satellite events, but note that the ones on Thur
 :color: primary
 :icon: code-square
 
-A beginner-friendly workshop for those who are new to programming and want to learn the basics of Python before diving into the rest of the week.
+Python is one of the most popular programming languages worldwide and is used in all areas of science. As one of the 
+most flexible languages it can be used to automate routine tasks, visualise data, process images and run statistical 
+tests, along with many other applications.
+
+The morning session will introduce you to the basics of programming in Python and get you up and running 
+on your own machine. No experience is necessary, all you need is a laptop you can install software on.
+
+The afternoon session will provide some further Python training, and particularly introduce good practices that 
+will pay dividends as you dive deeper into programming. 
+
+## Contents
+
+**Morning**
+
+*   Introduction to Python
+*   Variables
+*   Data types
+*   Loops
+*   Conditional statements
+*   List comprehension
+*   Loading and saving data
+*   Writing your first Python script
+
+**Afternoon**
+
+*   Using third party libraries from pip and conda
+*   Functions
+*   Classes and objects
+*   Errors and exceptions
+*   Organising your Python project and importing functions
+*   Documenting your code
+
 :::
 
 :::{dropdown} Careers Clinic
