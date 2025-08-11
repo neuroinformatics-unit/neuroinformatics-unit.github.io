@@ -33,6 +33,8 @@ The discussions will then be fed back to the wider group, and result in the publ
 - [Igor Tatarnikov](https://github.com/IgorTatarnikov)
 - [Adam Tyson](https://github.com/adamltyson)
 
+Slides are [available online](https://neuroinformatics.dev/slides-big-imaging-data-osw25/).
+
 (target-imaging-prerequisites)=
 ## Prerequisites
 
