@@ -38,6 +38,8 @@ Participants are encouraged to run BrainGlobe on their own data, discuss use cas
 - [Igor Tatarnikov](https://github.com/IgorTatarnikov)
 - [Adam Tyson](https://github.com/adamltyson)
 
+Slides are [available online](https://brainglobe.info/course-whole-brain-microscopy-analysis/).
+
 (target-brainglobe-prerequisites)=
 ## Prerequisites
 
