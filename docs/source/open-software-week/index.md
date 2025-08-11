@@ -99,6 +99,8 @@ will pay dividends as you dive deeper into programming.
 *   Organising your Python project and importing functions
 *   Documenting your code
 
+[Slides](https://docs.google.com/presentation/d/1WFCgjVqjTbykNwjidH1VT0u7uS5dOWaNYPp69mfTMbk/edit?usp=sharing)
+
 :::
 
 :::{dropdown} Careers Clinic
