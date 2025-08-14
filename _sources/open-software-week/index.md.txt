@@ -131,6 +131,15 @@ the panel discussion, which will start at **11:45**.
 :icon: git-pull-request
 
 Learn how to version control your code and collaborate with others using `git` and GitHub. This workshop is open to all but is especially recommended for those who are planning to participate in the following day's hackathon.
+
+We will cover:
+- An introduction to `git` and GitHub
+- How to set up `git` on your computer
+- Using `git` to save, track and manage your code
+- Sharing code and working collaboratively with `git` / GitHub
+
+[Slides](https://docs.google.com/presentation/d/1Dj_UGQaMto1tpRjv6uO4Ze1aq23D0bCCyU1wy6OU9DE/edit)
+
 :::
 
 (target-hackday)=
