@@ -75,8 +75,8 @@ During the coding period, the primary focus was on the implementation, tests and
     - Used threading library to run connection setup without blocking the TUI. 
     - Used Python's subprocess API to implement cancellation of connection setup via killing the underlying process.
 
-4. **Wrote transfer tests to test data transfers to Google Drive and AWS buckets - PR [#570](https://github.com/neuroinformatics-unit/datashuttle/pull/570/)**
-    - Refactored existing transfer tests to extend them for Google Drive and AWS.
+4. **Wrote tests with `pytest` to test data transfers to Google Drive and AWS buckets - PR [#570](https://github.com/neuroinformatics-unit/datashuttle/pull/570/)**
+    - Refactored existing transfer tests for SSH transfers to extend them for Google Drive and AWS.
     - Used Github secrets for connection credentials to run tests in the CI.
     - Wrote tests for connection setup via the TUI.
     - Wrote backward compatibility tests and extended existing TUI tests to test the new connection widgets.
@@ -149,7 +149,7 @@ The project was a smooth sail for the most part. However, a few parts felt a bit
 
 2. ### Writing tests to run in the CI environment
 
-    Since CI environments don't have access to browsers (needed for Google's oauth), me and my mentor discussed several strategies for automated testing in the CI until we found a suitable one.
+    Since CI environments don't have access to browsers (needed for Google's OAuth for Google Drive access), me and my mentor discussed several strategies for automated testing in the CI until we found a suitable one.
 
 
 ## Future work
