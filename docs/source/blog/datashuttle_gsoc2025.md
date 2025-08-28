@@ -4,7 +4,7 @@
 :location: Delhi, India
 :category: Blog
 :language: English
-:image: 1
+:image: 3
 
 
 (datashuttle-gsoc2025-title)=
@@ -104,13 +104,13 @@ In addition to writing code, I performed code review for about 10 PRs, for which
 
 <br>
 
-```{image} /_static/blog_images/datashuttle_gsoc2025/datashuttle-gdrive-setup-dark.png
+```{image} /_static/blog_images/datashuttle_gsoc2025/datashuttle-transferring-data-dark.png
 :align: center
 :width: 80%
 :class: only-dark
 ```
 
-```{image} /_static/blog_images/datashuttle_gsoc2025/datashuttle-gdrive-setup-light.png
+```{image} /_static/blog_images/datashuttle_gsoc2025/datashuttle-transferring-data-light.png
 :align: center
 :width: 80%
 :class: only-light
