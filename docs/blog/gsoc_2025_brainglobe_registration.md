@@ -1,3 +1,11 @@
+:blogpost: true
+:date: August 25, 2025
+:author: Saarah Hussain
+:location: London, UK
+:category: Blog
+:language: English
+:image: 0
+
 # GSoC 2025: brainglobe-registration
 
 Over the summer, I worked on extending the brainglobe-registration plugin, 
