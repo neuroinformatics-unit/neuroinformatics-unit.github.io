@@ -1,0 +1,851 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Add Google Drive and AWS to datashuttle - Final GSoC Report &#8212; NIU</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=d57c6e56" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=d45e8c67"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-6260TGM7TY"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-6260TGM7TY');
+            </script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-6260TGM7TY');
+            </script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'blog/datashuttle_gsoc2025';</script>
+    <link rel="canonical" href="https://neuroinformatics.dev/blog/datashuttle_gsoc2025.html" />
+    <link rel="icon" href="../_static/logo_light.png"/>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />   
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo_light.png" class="logo__image only-light" alt=""/>
+    <img src="../_static/logo_dark.png" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">NIU</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../about.html">
+    About us
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../people.html">
+    People
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../projects.html">
+    Projects
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../publications.html">
+    Publications & Media
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="index.html">
+    Blog
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../roadmaps/index.html">
+    Roadmaps
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../get-involved/index.html">
+    Get involved
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../resources.html">
+    Resources
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../collaborations.html">
+    Collaborations
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../open-software-week/index.html">
+    Open Software Week
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/neuroinformatics-unit/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/swc_niu" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://mastodon.online/@neuroinformatics" title="Mastodon" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-mastodon fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Mastodon</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://bsky.app/profile/neuroinformatics.dev" title="Bluesky" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-bluesky fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Bluesky</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://neuroinformatics.zulipchat.com/" title="Zulip (chat)" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-comments fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Zulip (chat)</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../about.html">
+    About us
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../people.html">
+    People
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../projects.html">
+    Projects
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../publications.html">
+    Publications & Media
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="index.html">
+    Blog
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../roadmaps/index.html">
+    Roadmaps
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../get-involved/index.html">
+    Get involved
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../resources.html">
+    Resources
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../collaborations.html">
+    Collaborations
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../open-software-week/index.html">
+    Open Software Week
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/neuroinformatics-unit/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/swc_niu" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://mastodon.online/@neuroinformatics" title="Mastodon" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-mastodon fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Mastodon</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://bsky.app/profile/neuroinformatics.dev" title="Bluesky" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-bluesky fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Bluesky</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://neuroinformatics.zulipchat.com/" title="Zulip (chat)" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-comments fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Zulip (chat)</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Add Google Drive and AWS to <code class="docutils literal notranslate"><span class="pre">datashuttle</span></code> - Final GSoC Report</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                   <section class="tex2jax_ignore mathjax_ignore" id="add-google-drive-and-aws-to-datashuttle-final-gsoc-report">
+<span id="datashuttle-gsoc2025-title"></span><h1>Add Google Drive and AWS to <code class="docutils literal notranslate"><span class="pre">datashuttle</span></code> - Final GSoC Report<a class="headerlink" href="#add-google-drive-and-aws-to-datashuttle-final-gsoc-report" title="Link to this heading">#</a></h1>
+<a class="reference internal image-reference" href="../_images/gsoc-niu.png"><img alt="../_images/gsoc-niu.png" class="align-center" src="../_images/gsoc-niu.png" style="width: 50%;" />
+</a>
+<br>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>I am Shrey, this summer I contributed to <a class="reference external" href="https://datashuttle.neuroinformatics.dev/"><code class="docutils literal notranslate"><span class="pre">datashuttle</span></code></a>, a tool for the creation, validation and transfer of neuroscience project folders, as part of <a class="reference external" href="https://summerofcode.withgoogle.com/">Google Summer of Code</a> 2025. I worked on adding Google Drive and Amazon Web Services (AWS) buckets as remote storage options to <code class="docutils literal notranslate"><span class="pre">datashuttle</span></code>.</p>
+<p><strong>Mentors:</strong> Joseph Ziminski, Niko Sirmpilatze, Adam Tyson</p>
+</section>
+<section id="project-overview">
+<h2>Project Overview<a class="headerlink" href="#project-overview" title="Link to this heading">#</a></h2>
+<p>Neuroscientists typically collect diverse types of data during experiments, including behavioral data (such as camera feeds tracking animal movement), electrophysiological data from neural probes, imaging data from microscopes, and physiological measurements. When researchers use different data organization schemes across labs or even within the same lab, it creates significant challenges: analysis scripts may fail to locate files, data becomes difficult to share between collaborators, and valuable research time is lost navigating inconsistent folder structures.</p>
+<p><code class="docutils literal notranslate"><span class="pre">datashuttle</span></code> addresses these challenges by automating the creation, validation, and transfer of neuroscience project folders organized according to the <a class="reference external" href="https://neuroblueprint.neuroinformatics.dev/">NeuroBlueprint</a> standard. This standardization ensures that research data follows consistent naming conventions and folder hierarchies, making it easier for researchers to share analysis pipelines, collaborate across institutions, and maintain organized projects as they scale.</p>
+<p>Neuroscience researchers typically acquire data on separate acquisition machines and then store them centrally in some data storage. Prior to this project, <code class="docutils literal notranslate"><span class="pre">datashuttle</span></code> supported data transfers only to central machines through drive mounting or SSH connections. While effective, this approach limited adoption to labs with dedicated storage infrastructure. Many neuroscience labs, particularly smaller research groups or those at institutions with limited IT resources, rely on cloud storage solutions like Google Drive or AWS for their data management needs.</p>
+<p>This project aimed to democratize <code class="docutils literal notranslate"><span class="pre">datashuttle</span></code>’s capabilities by extending remote storage options to include Google Drive and AWS S3 buckets. This expansion significantly broadens <code class="docutils literal notranslate"><span class="pre">datashuttle</span></code>’s accessibility, allowing researchers without dedicated servers to benefit from standardized data organization and automated transfers.</p>
+</section>
+<section id="technical-implementation-overview">
+<h2>Technical Implementation Overview<a class="headerlink" href="#technical-implementation-overview" title="Link to this heading">#</a></h2>
+<p><strong>Dual Interface Development</strong>: <code class="docutils literal notranslate"><span class="pre">datashuttle</span></code> provides both a Python API for programmatic use and a Terminal User Interface (TUI, a user interface that runs in the terminal) built with <a class="reference external" href="https://textual.textualize.io/">Textual</a> for interactive use. Every new feature needed to be implemented across both interfaces, requiring careful consideration of user experience patterns in both programmatic and interactive contexts while minimizing code duplication.</p>
+<p><strong>Cloud Storage Integration:</strong> Rather than implementing custom transfer protocols, <code class="docutils literal notranslate"><span class="pre">datashuttle</span></code> leverages <a class="reference external" href="https://rclone.org/">Rclone</a> - a powerful command-line program for managing cloud storage. This project required an understanding of Rclone’s configuration system, authentication workflows, and transfer mechanisms for both Google Drive and AWS S3. Each cloud provider has distinct authentication requirements: Google Drive uses OAuth2 flows requiring browser-based authorization, while AWS uses access keys and secret keys with various authentication methods.</p>
+<p><strong>Asynchronous Operations:</strong> Cloud authentication processes, particularly Google Drive’s OAuth flow requires user interaction. The TUI implementation needed sophisticated background processing to prevent interface freezing during connection setup, requiring careful orchestration of Python’s threading and subprocess APIs.</p>
+</section>
+<section id="what-i-did">
+<h2>What I did<a class="headerlink" href="#what-i-did" title="Link to this heading">#</a></h2>
+<h4> Background </h4>
+<p>While finding organizations to contribute to for GSoC 2025, I came across the Neuroinformatics Unit (NIU), which was their first time participating in GSoC. Amongst all the projects, <code class="docutils literal notranslate"><span class="pre">datashuttle</span></code> caught my attention because of my interest in SSH and cloud storage and a user interface in the terminal seemed very astonishing.</p>
+<p>Contributing to a new large codebase seems daunting at first. So, I followed a very simple process while contributing: reproduce the bug from the issue description, identify the top-level function most likely to contain the bug, then use debuggers and print statements to trace through the call stack (using a pen and paper really helps). I would iteratively drill down through each function call, following the execution path until I located the specific code that needed to be fixed. With time, you start putting together a mental map of how things work. To understand framework specific code, documentation is one’s best friend.</p>
+<h4> Contributions </h4>
+<p>Before the GSoC coding period began, I worked on fixing issues on the <code class="docutils literal notranslate"><span class="pre">datashuttle</span></code> repository and merged 3 PRs.
+Here are the PRs that were merged:</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://github.com/neuroinformatics-unit/datashuttle/pull/479">Add Workers for transferring data and Loading Animation</a> - Moved the data transfer logic to run in thread workers to free up the main thread for GUI/TUI rendering.</p></li>
+<li><p><a class="reference external" href="https://github.com/neuroinformatics-unit/datashuttle/pull/496">Add Tests for Renaming File/Folder on directorytree</a> - Added test covering a keyboard shortcut for renaming a file or folder through the Textual Directory Tree widget.</p></li>
+<li><p><a class="reference external" href="https://github.com/neuroinformatics-unit/datashuttle/pull/505">Correct mainwindow typehints</a> - Fixed incorrect type hints for a function argument across the codebase.</p></li>
+</ol>
+<p>These PRs helped me explore various parts of the codebase and understand the overall architecture better.</p>
+<p>During the coding period, the primary focus was on the implementation, tests and documentation for the Google Drive and AWS backends.</p>
+<ol class="arabic simple">
+<li><p><strong>Suggest next sub ses remote - PR <a class="reference external" href="https://github.com/neuroinformatics-unit/datashuttle/pull/484">#484</a></strong></p>
+<ul class="simple">
+<li><p>Exposed the Python API functions in the TUI to search remote folders for suggesting next subject and session folders. By default, the local project folders are used to suggest next subject/session folder. Using the <code class="docutils literal notranslate"><span class="pre">search_central</span></code> option allows the user to search both the local and central project folders for suggestions.</p></li>
+<li><p>Implemented thread workers to handle background searching of folders while displaying a loading indicator.</p></li>
+</ul>
+</li>
+<li><p><strong>Implemented the core logic for Google Drive and AWS connection setup via Python API and Terminal User Interface (TUI) - PR <a class="reference external" href="https://github.com/neuroinformatics-unit/datashuttle/pull/503">#503</a></strong></p>
+<ul class="simple">
+<li><p>Implemented the core functions to authenticate to Google Drive and AWS and use <a class="reference external" href="https://rclone.org/">Rclone</a> for data transfers.</p></li>
+<li><p>Exposed the underlying functions of <code class="docutils literal notranslate"><span class="pre">datashuttle</span></code>’s Python API in the Terminal User Interface.</p></li>
+<li><p>Refactored polling the central storage for SSH transfers into a single unified function, used Rclone rather than sftp to reduce code duplication and improve logic.</p></li>
+</ul>
+</li>
+<li><p><strong>Implemented process management and threads to run connection setup in the background - PR <a class="reference external" href="https://github.com/neuroinformatics-unit/datashuttle/pull/503">#503</a></strong></p>
+<ul class="simple">
+<li><p>Used threading library to run connection setup without blocking the TUI.</p></li>
+<li><p>Used Python’s subprocess API to implement cancellation of connection setup via killing the underlying process.</p></li>
+</ul>
+</li>
+<li><p><strong>Wrote tests with <code class="docutils literal notranslate"><span class="pre">pytest</span></code> to test data transfers to Google Drive and AWS buckets - PR <a class="reference external" href="https://github.com/neuroinformatics-unit/datashuttle/pull/570/">#570</a></strong></p>
+<ul class="simple">
+<li><p>Refactored existing transfer tests for SSH transfers to extend them for Google Drive and AWS.</p></li>
+<li><p>Used Github secrets for connection credentials to run tests in the CI.</p></li>
+<li><p>Wrote tests for connection setup via the TUI.</p></li>
+<li><p>Wrote backward compatibility tests and extended existing TUI tests to test the new connection widgets.</p></li>
+</ul>
+</li>
+<li><p><strong>Added documentation for users to set up connection via the new connection methods - PR <a class="reference external" href="https://github.com/neuroinformatics-unit/datashuttle/pull/580">#580</a></strong></p>
+<ul class="simple">
+<li><p>Updated and enhanced documentation to include instructions to connect to Google Drive and AWS buckets and added relevant examples.</p></li>
+<li><p>Focused on providing clear instructions for setup, usage, and functionality, benefiting future contributors and users.</p></li>
+</ul>
+</li>
+</ol>
+<p>In addition to writing code, I performed code review for about 10 PRs, for which I was the sole approver prior to merging. Some examples - <a class="reference external" href="https://github.com/neuroinformatics-unit/datashuttle/pull/515">#515</a>, <a class="reference external" href="https://github.com/neuroinformatics-unit/datashuttle/pull/208">#208</a>, <a class="reference external" href="https://github.com/neuroinformatics-unit/datashuttle/pull/551">#551</a>. Here is a <a class="reference external" href="http://github.com/search?q=is%3Apr+reviewed-by%3Acs7-shrey+repo%3Aneuroinformatics-unit%2Fdatashuttle+created%3A2025-04-01..2025-09-01&amp;amp;type=pullrequests&amp;amp;p=1">comprehensive list</a>.</p>
+<h4 align="center">Screenshots</h4>
+<a class="only-dark reference internal image-reference" href="../_images/datashuttle-new-project-dark.png"><img alt="../_images/datashuttle-new-project-dark.png" class="only-dark align-center" src="../_images/datashuttle-new-project-dark.png" style="width: 80%;" />
+</a>
+<a class="only-light reference internal image-reference" href="../_images/datashuttle-new-project-light.png"><img alt="../_images/datashuttle-new-project-light.png" class="only-light align-center" src="../_images/datashuttle-new-project-light.png" style="width: 80%;" />
+</a>
+<br>
+<a class="only-dark reference internal image-reference" href="../_images/datashuttle-transferring-data-dark.png"><img alt="../_images/datashuttle-transferring-data-dark.png" class="only-dark align-center" src="../_images/datashuttle-transferring-data-dark.png" style="width: 80%;" />
+</a>
+<a class="only-light reference internal image-reference" href="../_images/datashuttle-transferring-data-light.png"><img alt="../_images/datashuttle-transferring-data-light.png" class="only-light align-center" src="../_images/datashuttle-transferring-data-light.png" style="width: 80%;" />
+</a>
+</section>
+<section id="prs-created-during-the-coding-period">
+<h2>PRs created during the coding period<a class="headerlink" href="#prs-created-during-the-coding-period" title="Link to this heading">#</a></h2>
+<ol class="arabic">
+<li><p><a class="reference external" href="https://github.com/neuroinformatics-unit/datashuttle/pull/503">Add Google Drive and AWS S3 as a Remote Storage option</a></p>
+<p><strong>Status:</strong> Merged <br>
+<strong>Description:</strong> This PR implemented the core functionality to connect to Google Drive and AWS S3 buckets, enabling users to store and retrieve neuroscience data from these cloud platforms. It included authentication workflows, background processing for non-blocking UI operations, and integration with the existing <code class="docutils literal notranslate"><span class="pre">datashuttle</span></code> infrastructure.</p>
+</li>
+<li><p><a class="reference external" href="https://github.com/neuroinformatics-unit/datashuttle/pull/570">Add Tests for Google Drive and AWS Connection Methods</a></p>
+<p><strong>Status:</strong> Merged <br>
+<strong>Description:</strong> This PR implemented comprehensive tests for the new storage options, ensuring reliable data transfer and connection setup validation. It also extended existing tests for backward compatibility and added new TUI tests to validate the connection widgets.</p>
+</li>
+<li><p><a class="reference external" href="https://github.com/neuroinformatics-unit/datashuttle/pull/580">Add docs for Google Drive and AWS connections</a></p>
+<p><strong>Status:</strong> Merged <br>
+<strong>Description:</strong> This PR updated the documentation to include detailed instructions for setting up and using Google Drive and AWS S3 connections. It provided step-by-step guides and examples to ensure users can easily configure and use the new storage options.</p>
+</li>
+<li><p><a class="reference external" href="https://github.com/neuroinformatics-unit/datashuttle/pull/556">Google Drive and AWS S3 - Implementation, Tests and Documentation</a></p>
+<p><strong>Status:</strong> Merged <br>
+<strong>Description:</strong> This PR serves as an integration point for all the changes related to Google Drive and AWS S3 functionality. To maintain code clarity and facilitate reviews, we split the implementation, testing, and documentation into separate PRs that merge into this one. This approach allowed for focused development and reviews while keeping the final integration streamlined before merging into the main branch.</p>
+</li>
+</ol>
+<p>All of these PRs were merged into the main branch and the new functionality is now available in <code class="docutils literal notranslate"><span class="pre">datashuttle</span></code>.</p>
+</section>
+<section id="challenges-learnings">
+<h2>Challenges / Learnings<a class="headerlink" href="#challenges-learnings" title="Link to this heading">#</a></h2>
+<p>The project was a smooth sailing for the most part. However, a few parts felt a bit challenging.</p>
+<ol class="arabic">
+<li><p class="rubric" id="developing-a-multi-step-authentication-flow">Developing a multi step authentication flow</p>
+<p>Creating the complex, multi-step authentication workflows in Textual presented a significant paradigm shift from traditional web development which I was more accustomed to. The connection setup process required orchestrating several sequential UI states, dynamically managing UI elements and flow control based on user input. Example - dynamically showing and removing input boxes and buttons on each UI state, reusing UI elements, use of workers / threads for handling connection setup while keeping the main thread responsive, launching subprocess from within the worker threads, storing the process objects and killing them when user cancels setup.</p>
+<p>How did I overcome it? Well, pen and paper. Visualizing the entire flow helped me focus on the overall architecture without getting too lost in the details.</p>
+</li>
+<li><p class="rubric" id="writing-tests-to-run-in-the-ci-environment">Writing tests to run in the CI environment</p>
+<p>Since CI environments don’t have access to browsers (needed for Google’s OAuth for Google Drive access), me and my mentor discussed several strategies and tried implementing a few of them for automated testing in the CI until we found and picked a suitable one. We started with implementing a <a class="reference external" href="https://cloud.google.com/iam/docs/service-account-overview">service account</a> file based authentication but due to a policy change by Google, this method would require users to have a <a class="reference external" href="https://workspace.google.com/">workspace</a> account. Ultimately, we settled on using a config token for browserless access in the Github secrets. This config token is pre-generated by authenticating to Google Drive via browser and contains access and refresh tokens in an encoded format required for authorization to Google Drive. This allows connection setup to be run by just using the config token without needed to authenticate via a browser (making testing in CI environments possible).</p>
+</li>
+</ol>
+</section>
+<section id="future-work">
+<h2>Future work<a class="headerlink" href="#future-work" title="Link to this heading">#</a></h2>
+<p>All the code has been merged into the main branch and is due for a release. Further work would involve discussing with users how they are finding the functionality, get feedback from them and improve upon the feedback.</p>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h2>
+<p>The integration of Google Drive and AWS S3 storage capabilities significantly expands <code class="docutils literal notranslate"><span class="pre">datashuttle</span></code>’s accessibility and utility for neuroscience researchers. By extending beyond SSH connections to incorporate widely-used cloud storage platforms, this project removes a key barrier to adoption for labs without dedicated central servers. Through careful implementation, testing, and documentation, these new features maintain <code class="docutils literal notranslate"><span class="pre">datashuttle</span></code>’s core mission of standardizing neuroscience data management while making it accessible to a broader scientific community.</p>
+</section>
+<section id="acknowledgements">
+<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Link to this heading">#</a></h2>
+<p>I would like to express my gratitude to my mentor, <a class="reference external" href="https://github.com/JoeZiminski">Joe Ziminski</a>, for his constant encouragement and support throughout this project. His constant positive comments on Github kept me motivated, and I have learnt a lot on how to write clean and documented code from him. My coding style has improved a lot as a result of the regular code reviews. It was an absolute pleasure working with him.</p>
+<p>Finally, I would like to thank Google for organizing GSoC helping first time contributors like me to enter the world of open source.</p>
+</section>
+<section id="related-links">
+<h2>Related Links<a class="headerlink" href="#related-links" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/neuroinformatics-unit/datashuttle"><code class="docutils literal notranslate"><span class="pre">datashuttle</span></code> repository</a></p></li>
+<li><p><a class="reference external" href="https://github.com/neuroinformatics-unit/gsoc/pull/9/files?short_path=fa70552#diff-fa70552f23074b47d370279a91cc831c563a2045143034e7d2ec56cab36de2e0">GSoC Project Proposal</a></p></li>
+<li><p><a class="reference external" href="https://github.com/cs7-shrey">My Github profile</a></p></li>
+</ul>
+</section>
+</section>
+
+<div class="section ablog__blog_comments">
+     
+<div class="section ablog__prev-next">
+  <span class="ablog__prev">
+     
+    <a href="derotation.html">
+      
+      <i class="fa fa-arrow-circle-left"></i>
+      
+      <span>derotation: a Python package for correcting motion artifacts in rotating multiphoton movies</span>
+    </a>
+    
+  </span>
+  <span class="ablog__spacer">&nbsp;</span>
+  <span class="ablog__next">
+    
+  </span>
+</div>
+  
+</div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-overview">Project Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#technical-implementation-overview">Technical Implementation Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-i-did">What I did</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prs-created-during-the-coding-period">PRs created during the coding period</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenges-learnings">Challenges / Learnings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#future-work">Future work</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgements">Acknowledgements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#related-links">Related Links</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/blog/datashuttle_gsoc2025.md.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item"><p class="sphinx-version">
+    Created using <a href="https://sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+    </p>
+    <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a>
+    0.16.1.
+    </p>
+    </div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><div class="things-in-a-row">
+    <a href="https://www.sainsburywellcome.org/web/">
+        <img src="../_static/light-logo-swc.png" alt="Sponsors" class="only-light img-sponsor"/>
+        <img src="../_static/dark-logo-swc.png" alt="Sponsors" class="only-dark img-sponsor"/>
+    </a>
+    <a href="https://www.ucl.ac.uk/gatsby/gatsby-computational-neuroscience-unit">
+        <img src="../_static/light-logo-gatsby.png" alt="Sponsors" class="only-light img-sponsor"/>
+        <img src="../_static/dark-logo-gatsby.png" alt="Sponsors" class="only-dark img-sponsor"/>
+    </a>
+    <a href="https://www.ucl.ac.uk/">
+        <img src="../_static/light-logo-ucl.png" alt="Sponsors" class="only-light img-sponsor"/>
+        <img src="../_static/dark-logo-ucl.png" alt="Sponsors" class="only-dark img-sponsor"/>
+    </a>
+</div></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
