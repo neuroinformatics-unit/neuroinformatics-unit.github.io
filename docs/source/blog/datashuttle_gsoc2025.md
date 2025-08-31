@@ -19,7 +19,7 @@
 
 ## Introduction
 
-I am Shrey, this summer I contributed to [datashuttle](https://datashuttle.neuroinformatics.dev/), a tool for the creation, validation and transfer of neuroscience project folders, as part of [Google Summer of Code](https://summerofcode.withgoogle.com/) 2025. I worked on adding Google Drive and AWS buckets as remote storage options to datashuttle.
+I am Shrey, this summer I contributed to [datashuttle](https://datashuttle.neuroinformatics.dev/), a tool for the creation, validation and transfer of neuroscience project folders, as part of [Google Summer of Code](https://summerofcode.withgoogle.com/) 2025. I worked on adding Google Drive and Amazon Web Services (AWS) buckets as remote storage options to datashuttle.
 
 **Mentors:** Joseph Ziminski, Niko Sirmpilatze, Adam Tyson
 
@@ -29,7 +29,7 @@ Neuroscientists typically collect diverse types of data during experiments, incl
 
 datashuttle addresses these challenges by automating the creation, validation, and transfer of neuroscience project folders organized according to the [NeuroBlueprint](https://neuroblueprint.neuroinformatics.dev/) standard. This standardization ensures that research data follows consistent naming conventions and folder hierarchies, making it easier for researchers to share analysis pipelines, collaborate across institutions, and maintain organized projects as they scale.
 
-Prior to this project, datashuttle supported data transfers only to remote central machines via SSH connections. While effective, this approach limited adoption to labs with dedicated server infrastructure and technical expertise to maintain SSH-accessible systems. Many neuroscience labs, particularly smaller research groups or those at institutions with limited IT resources, rely on cloud storage solutions like Google Drive or AWS for their data management needs.
+Neuroscience researchers typically acquire data on separate acquisition machines and then store them centrally in some data storage. Prior to this project, datashuttle supported data transfers only to central machines through drive mounting or SSH connections. While effective, this approach limited adoption to labs with dedicated storage infrastructure. Many neuroscience labs, particularly smaller research groups or those at institutions with limited IT resources, rely on cloud storage solutions like Google Drive or AWS for their data management needs.
 
 This project aimed to democratize datashuttle's capabilities by extending remote storage options to include Google Drive and AWS S3 buckets. This expansion significantly broadens datashuttle's accessibility, allowing researchers without dedicated servers to benefit from standardized data organization and automated transfers.
 
@@ -47,7 +47,7 @@ This project aimed to democratize datashuttle's capabilities by extending remote
 
 While finding organizations to contribute to for GSoC 2025, I came across Neuroinformatics Unit (NIU), which was their first time participating in GSoC. Amongst all the projects, datashuttle caught my attention because of my interest in SSH and cloud storage and a user interface in the terminal seemed very astonishing.
 
-I followed a very simple process while contributing: reproduce the bug from the issue description, identify the top-level function most likely to contain the bug, then use debuggers and print statements to trace through the call stack (using a pen and paper really helps). I would iteratively drill down through each function call, following the execution path until I located the specific code that needed to be fixed. With time, you start putting together a mental map of how things work. To understand framework specific code, documentation is one's best friend.
+Contributing to a new large codebase seems daunting at first. So, I followed a very simple process while contributing: reproduce the bug from the issue description, identify the top-level function most likely to contain the bug, then use debuggers and print statements to trace through the call stack (using a pen and paper really helps). I would iteratively drill down through each function call, following the execution path until I located the specific code that needed to be fixed. With time, you start putting together a mental map of how things work. To understand framework specific code, documentation is one's best friend.
 
 <h4> Contributions </h4>
 
@@ -63,7 +63,7 @@ These PRs helped me explore various parts of the codebase and understand the ove
 During the coding period, the primary focus was on the implementation, tests and documentation for the storage options. 
 
 1. **Suggest next sub ses remote - PR [#484](https://github.com/neuroinformatics-unit/datashuttle/pull/484)**
-    - Exposed the Python API functions in the TUI to search remote folders for suggesting next subject and session folders.
+    - Exposed the Python API functions in the TUI to search remote folders for suggesting next subject and session folders. By default, the local project folders are used to suggest next subject/session folder. Using the `search_central` option allows the user to search both the local and central project folders for suggestions.
     - Implemented thread workers to handle background searching of folders while displaying a loading indicator.
 
 2. **Implemented the core logic for Google Drive and AWS connection setup via Python API and Terminal User Interface (TUI) - PR [#503](https://github.com/neuroinformatics-unit/datashuttle/pull/503)**
@@ -142,11 +142,11 @@ All of these PRs were merged into the main branch and the new functionality is n
 
 ## Challenges / Learnings
 
-The project was a smooth sail for the most part. However, a few parts felt a bit challenging.
+The project was a smooth sailing for the most part. However, a few parts felt a bit challenging.
 
 1. ### Developing a multi step authentication flow
 
-    Creating the complex, multi-step authentication workflows in Textual presented a significant paradigm shift from traditional web development. The connection setup process required orchestrating several sequential UI states, dynamically managing UI elements and flow control based on user input. Example - dynamically showing and removing input boxes and buttons on each UI state, reusing UI elements, use of workers / threads for handling connection setup while keeping the main thread responsive, launching subprocess from within the worker threads, storing the process objects and killing them when user cancels setup.
+    Creating the complex, multi-step authentication workflows in Textual presented a significant paradigm shift from traditional web development which I was more accustomed to. The connection setup process required orchestrating several sequential UI states, dynamically managing UI elements and flow control based on user input. Example - dynamically showing and removing input boxes and buttons on each UI state, reusing UI elements, use of workers / threads for handling connection setup while keeping the main thread responsive, launching subprocess from within the worker threads, storing the process objects and killing them when user cancels setup.
 
     How did I overcome it? Well, pen and paper. Visualizing the entire flow helped me focus on the overall architecture without getting too lost in the details.
 
