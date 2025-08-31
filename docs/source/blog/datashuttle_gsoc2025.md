@@ -8,7 +8,7 @@
 
 
 (datashuttle-gsoc2025-title)=
-# Add Google Drive and AWS to datashuttle - Final GSoC Report
+# Add Google Drive and AWS to `datashuttle` - Final GSoC Report
 
 ```{image} /_static/blog_images/gsoc2025/gsoc-niu.png
 :align: center
@@ -19,7 +19,7 @@
 
 ## Introduction
 
-I am Shrey, this summer I contributed to [datashuttle](https://datashuttle.neuroinformatics.dev/), a tool for the creation, validation and transfer of neuroscience project folders, as part of [Google Summer of Code](https://summerofcode.withgoogle.com/) 2025. I worked on adding Google Drive and Amazon Web Services (AWS) buckets as remote storage options to datashuttle.
+I am Shrey, this summer I contributed to [`datashuttle`](https://datashuttle.neuroinformatics.dev/), a tool for the creation, validation and transfer of neuroscience project folders, as part of [Google Summer of Code](https://summerofcode.withgoogle.com/) 2025. I worked on adding Google Drive and Amazon Web Services (AWS) buckets as remote storage options to `datashuttle`.
 
 **Mentors:** Joseph Ziminski, Niko Sirmpilatze, Adam Tyson
 
@@ -27,17 +27,17 @@ I am Shrey, this summer I contributed to [datashuttle](https://datashuttle.neuro
 
 Neuroscientists typically collect diverse types of data during experiments, including behavioral data (such as camera feeds tracking animal movement), electrophysiological data from neural probes, imaging data from microscopes, and physiological measurements. When researchers use different data organization schemes across labs or even within the same lab, it creates significant challenges: analysis scripts may fail to locate files, data becomes difficult to share between collaborators, and valuable research time is lost navigating inconsistent folder structures.
 
-datashuttle addresses these challenges by automating the creation, validation, and transfer of neuroscience project folders organized according to the [NeuroBlueprint](https://neuroblueprint.neuroinformatics.dev/) standard. This standardization ensures that research data follows consistent naming conventions and folder hierarchies, making it easier for researchers to share analysis pipelines, collaborate across institutions, and maintain organized projects as they scale.
+`datashuttle` addresses these challenges by automating the creation, validation, and transfer of neuroscience project folders organized according to the [NeuroBlueprint](https://neuroblueprint.neuroinformatics.dev/) standard. This standardization ensures that research data follows consistent naming conventions and folder hierarchies, making it easier for researchers to share analysis pipelines, collaborate across institutions, and maintain organized projects as they scale.
 
-Neuroscience researchers typically acquire data on separate acquisition machines and then store them centrally in some data storage. Prior to this project, datashuttle supported data transfers only to central machines through drive mounting or SSH connections. While effective, this approach limited adoption to labs with dedicated storage infrastructure. Many neuroscience labs, particularly smaller research groups or those at institutions with limited IT resources, rely on cloud storage solutions like Google Drive or AWS for their data management needs.
+Neuroscience researchers typically acquire data on separate acquisition machines and then store them centrally in some data storage. Prior to this project, `datashuttle` supported data transfers only to central machines through drive mounting or SSH connections. While effective, this approach limited adoption to labs with dedicated storage infrastructure. Many neuroscience labs, particularly smaller research groups or those at institutions with limited IT resources, rely on cloud storage solutions like Google Drive or AWS for their data management needs.
 
-This project aimed to democratize datashuttle's capabilities by extending remote storage options to include Google Drive and AWS S3 buckets. This expansion significantly broadens datashuttle's accessibility, allowing researchers without dedicated servers to benefit from standardized data organization and automated transfers.
+This project aimed to democratize `datashuttle`'s capabilities by extending remote storage options to include Google Drive and AWS S3 buckets. This expansion significantly broadens `datashuttle`'s accessibility, allowing researchers without dedicated servers to benefit from standardized data organization and automated transfers.
 
 ## Technical Implementation Overview
 
-**Dual Interface Development**: datashuttle provides both a Python API for programmatic use and a Terminal User Interface (TUI, a user interface that runs in the terminal) built with [Textual](https://textual.textualize.io/) for interactive use. Every new feature needed to be implemented across both interfaces, requiring careful consideration of user experience patterns in both programmatic and interactive contexts while minimizing code duplication.
+**Dual Interface Development**: `datashuttle` provides both a Python API for programmatic use and a Terminal User Interface (TUI, a user interface that runs in the terminal) built with [Textual](https://textual.textualize.io/) for interactive use. Every new feature needed to be implemented across both interfaces, requiring careful consideration of user experience patterns in both programmatic and interactive contexts while minimizing code duplication.
 
-**Cloud Storage Integration:** Rather than implementing custom transfer protocols, datashuttle leverages [Rclone](https://rclone.org/) - a powerful command-line program for managing cloud storage. This project required an understanding of Rclone's configuration system, authentication workflows, and transfer mechanisms for both Google Drive and AWS S3. Each cloud provider has distinct authentication requirements: Google Drive uses OAuth2 flows requiring browser-based authorization, while AWS uses access keys and secret keys with various authentication methods.
+**Cloud Storage Integration:** Rather than implementing custom transfer protocols, `datashuttle` leverages [Rclone](https://rclone.org/) - a powerful command-line program for managing cloud storage. This project required an understanding of Rclone's configuration system, authentication workflows, and transfer mechanisms for both Google Drive and AWS S3. Each cloud provider has distinct authentication requirements: Google Drive uses OAuth2 flows requiring browser-based authorization, while AWS uses access keys and secret keys with various authentication methods.
 
 **Asynchronous Operations:** Cloud authentication processes, particularly Google Drive's OAuth flow requires user interaction. The TUI implementation needed sophisticated background processing to prevent interface freezing during connection setup, requiring careful orchestration of Python's threading and subprocess APIs.
 
@@ -45,13 +45,13 @@ This project aimed to democratize datashuttle's capabilities by extending remote
 
 <h4> Background </h4>
 
-While finding organizations to contribute to for GSoC 2025, I came across the Neuroinformatics Unit (NIU), which was their first time participating in GSoC. Amongst all the projects, datashuttle caught my attention because of my interest in SSH and cloud storage and a user interface in the terminal seemed very astonishing.
+While finding organizations to contribute to for GSoC 2025, I came across the Neuroinformatics Unit (NIU), which was their first time participating in GSoC. Amongst all the projects, `datashuttle` caught my attention because of my interest in SSH and cloud storage and a user interface in the terminal seemed very astonishing.
 
 Contributing to a new large codebase seems daunting at first. So, I followed a very simple process while contributing: reproduce the bug from the issue description, identify the top-level function most likely to contain the bug, then use debuggers and print statements to trace through the call stack (using a pen and paper really helps). I would iteratively drill down through each function call, following the execution path until I located the specific code that needed to be fixed. With time, you start putting together a mental map of how things work. To understand framework specific code, documentation is one's best friend.
 
 <h4> Contributions </h4>
 
-Before the GSoC coding period began, I worked on fixing issues on the datashuttle repository and merged 3 PRs. 
+Before the GSoC coding period began, I worked on fixing issues on the `datashuttle` repository and merged 3 PRs. 
 Here are the PRs that were merged: 
 
 1. [Add Workers for transferring data and Loading Animation](https://github.com/neuroinformatics-unit/datashuttle/pull/479) - Moved the data transfer logic to run in thread workers to free up the main thread for GUI/TUI rendering.
@@ -68,7 +68,7 @@ During the coding period, the primary focus was on the implementation, tests and
 
 2. **Implemented the core logic for Google Drive and AWS connection setup via Python API and Terminal User Interface (TUI) - PR [#503](https://github.com/neuroinformatics-unit/datashuttle/pull/503)**
     - Implemented the core functions to authenticate to Google Drive and AWS and use [Rclone](https://rclone.org/) for data transfers.
-    - Exposed the underlying functions of datashuttle's Python API in the Terminal User Interface.
+    - Exposed the underlying functions of `datashuttle`'s Python API in the Terminal User Interface.
     - Refactored polling the central storage for SSH transfers into a single unified function, used Rclone rather than sftp to reduce code duplication and improve logic.
 
 
@@ -121,7 +121,7 @@ In addition to writing code, I performed code review for about 10 PRs, for which
 1. [Add Google Drive and AWS S3 as a Remote Storage option](https://github.com/neuroinformatics-unit/datashuttle/pull/503)
 
     **Status:** Merged <br>
-    **Description:** This PR implemented the core functionality to connect to Google Drive and AWS S3 buckets, enabling users to store and retrieve neuroscience data from these cloud platforms. It included authentication workflows, background processing for non-blocking UI operations, and integration with the existing datashuttle infrastructure.
+    **Description:** This PR implemented the core functionality to connect to Google Drive and AWS S3 buckets, enabling users to store and retrieve neuroscience data from these cloud platforms. It included authentication workflows, background processing for non-blocking UI operations, and integration with the existing `datashuttle` infrastructure.
 
 2. [Add Tests for Google Drive and AWS Connection Methods](https://github.com/neuroinformatics-unit/datashuttle/pull/570)
 
@@ -138,7 +138,7 @@ In addition to writing code, I performed code review for about 10 PRs, for which
     **Status:** Merged <br>
     **Description:** This PR serves as an integration point for all the changes related to Google Drive and AWS S3 functionality. To maintain code clarity and facilitate reviews, we split the implementation, testing, and documentation into separate PRs that merge into this one. This approach allowed for focused development and reviews while keeping the final integration streamlined before merging into the main branch.
 
-All of these PRs were merged into the main branch and the new functionality is now available in datashuttle.
+All of these PRs were merged into the main branch and the new functionality is now available in `datashuttle`.
 
 ## Challenges / Learnings
 
@@ -162,7 +162,7 @@ All the code has been merged into the main branch and is due for a release. Furt
 
 ## Conclusion
 
-The integration of Google Drive and AWS S3 storage capabilities significantly expands datashuttle's accessibility and utility for neuroscience researchers. By extending beyond SSH connections to incorporate widely-used cloud storage platforms, this project removes a key barrier to adoption for labs without dedicated central servers. Through careful implementation, testing, and documentation, these new features maintain datashuttle's core mission of standardizing neuroscience data management while making it accessible to a broader scientific community.
+The integration of Google Drive and AWS S3 storage capabilities significantly expands `datashuttle`'s accessibility and utility for neuroscience researchers. By extending beyond SSH connections to incorporate widely-used cloud storage platforms, this project removes a key barrier to adoption for labs without dedicated central servers. Through careful implementation, testing, and documentation, these new features maintain `datashuttle`'s core mission of standardizing neuroscience data management while making it accessible to a broader scientific community.
 
 ## Acknowledgements
 
@@ -172,6 +172,6 @@ Finally, I would like to thank Google for organizing GSoC helping first time con
 
 ## Related Links
 
-- [datashuttle repository](https://github.com/neuroinformatics-unit/datashuttle)
+- [`datashuttle` repository](https://github.com/neuroinformatics-unit/datashuttle)
 - [GSoC Project Proposal](https://github.com/neuroinformatics-unit/gsoc/pull/9/files?short_path=fa70552#diff-fa70552f23074b47d370279a91cc831c563a2045143034e7d2ec56cab36de2e0)
 - [My Github profile](https://github.com/cs7-shrey)
