@@ -45,7 +45,7 @@ This project aimed to democratize datashuttle's capabilities by extending remote
 
 <h4> Background </h4>
 
-While finding organizations to contribute to for GSoC 2025, I came across Neuroinformatics Unit (NIU), which was their first time participating in GSoC. Amongst all the projects, datashuttle caught my attention because of my interest in SSH and cloud storage and a user interface in the terminal seemed very astonishing.
+While finding organizations to contribute to for GSoC 2025, I came across the Neuroinformatics Unit (NIU), which was their first time participating in GSoC. Amongst all the projects, datashuttle caught my attention because of my interest in SSH and cloud storage and a user interface in the terminal seemed very astonishing.
 
 Contributing to a new large codebase seems daunting at first. So, I followed a very simple process while contributing: reproduce the bug from the issue description, identify the top-level function most likely to contain the bug, then use debuggers and print statements to trace through the call stack (using a pen and paper really helps). I would iteratively drill down through each function call, following the execution path until I located the specific code that needed to be fixed. With time, you start putting together a mental map of how things work. To understand framework specific code, documentation is one's best friend.
 
@@ -55,12 +55,12 @@ Before the GSoC coding period began, I worked on fixing issues on the datashuttl
 Here are the PRs that were merged: 
 
 1. [Add Workers for transferring data and Loading Animation](https://github.com/neuroinformatics-unit/datashuttle/pull/479) - Moved the data transfer logic to run in thread workers to free up the main thread for GUI/TUI rendering.
-2. [Add Tests for Renaming File/Folder on directorytree](https://github.com/neuroinformatics-unit/datashuttle/pull/496) - Added test for a shortcut key for renaming file/folder on directory tree.
+2. [Add Tests for Renaming File/Folder on directorytree](https://github.com/neuroinformatics-unit/datashuttle/pull/496) - Added test covering a keyboard shortcut for renaming a file or folder through the Textual Directory Tree widget.
 3. [Correct mainwindow typehints](https://github.com/neuroinformatics-unit/datashuttle/pull/505) - Fixed incorrect type hints for a function argument across the codebase.
 
 These PRs helped me explore various parts of the codebase and understand the overall architecture better.
 
-During the coding period, the primary focus was on the implementation, tests and documentation for the storage options. 
+During the coding period, the primary focus was on the implementation, tests and documentation for the Google Drive and AWS backends. 
 
 1. **Suggest next sub ses remote - PR [#484](https://github.com/neuroinformatics-unit/datashuttle/pull/484)**
     - Exposed the Python API functions in the TUI to search remote folders for suggesting next subject and session folders. By default, the local project folders are used to suggest next subject/session folder. Using the `search_central` option allows the user to search both the local and central project folders for suggestions.
