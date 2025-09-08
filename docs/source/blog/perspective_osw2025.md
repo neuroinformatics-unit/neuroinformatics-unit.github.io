@@ -7,7 +7,7 @@
 :image: 1
 
 # Open Software Week
-It's already been almost a month since I returned home to Vienna from a fantastic week in London for the first edition of [Open Software Week](https://neuroinformatics.dev/open-software-week/) hosted by [Sainsbury Wellcome Centre](https://www.sainsburywellcome.org/) and organized by the [Neuroinformatics Unit](https://neuroinformatics.dev/).
+It's already been almost a month since I returned home to Vienna from a fantastic week in London for the first edition of [Open Software Week](https://neuroinformatics.dev/open-software-week/) hosted by [Sainsbury Wellcome Centre](https://www.sainsburywellcome.org/) and organized by the [Neuroinformatics Unit (NIU)](https://neuroinformatics.dev/).
 
 OSW was a celebration of knowledge and experience exchange merged with neuroscience applications and best practices in Python programming. If you are at all into open-source, education, programming or neuroscience, you don't want to miss the next iteration of the course (which hopefully will become a yearly appointment)!
 
@@ -31,13 +31,35 @@ Although not part of the official program, I appreciated how the NIU team though
 
 Overall, the program was extremely well thought out and organized, with a perfect balance between lectures, hands-on exercises, breaks, and social events. A few details to iron out are always there, but that's to be expected for a first edition of an event.
 
-## The Experience
-
 ## The People
+We need to talk about the people. This was my first time attending a *non-standard* conference, and I was blown away by the friendliness, openness, and willingness to help of everyone I met. From the first few minutes waiting for the event to start to the last goodbye, I felt much more welcomed and included than at any other conference or other scientific event I attended in the past.
+
+There is something about open-source communities that makes them so special. I think the idea of working together with people from across the world, sharing knowledge and resources, and building something together, changes the way we think about science and collaboration and the way we interact with each other. I felt that spirit of collaboration and openness throughout the entire week, and it was truly inspiring.
+
+I also loved interacting with many of the other participants, who came from all over the world and had different backgrounds and experiences. It was amazing to see the different phase of their careers, their field of expertise and their problems that needed solving. I helped some, got help from others, and made some great connections. Thank you everyone!
+
+My last remark on the people has to be on the knowledge, expertise and know-how of the NIU team. People like this don't come along every day, and I feel extremely lucky to have had the chance to learn from them. Their passion for open-source, education, and neuroscience is contagious, and it's driven by a strong competence and professionalism unique to few. I am very grateful that not only the course, program and organization was top-notch, but also the people behind it.
+
+## The Experience
+It's pretty clear by now that I had a great time at OSW, but I wanted to highlight a few aspects of the experience that made it so special.
+
+SWC was a great hosting venue, with a great location in the heart of London, and all you need to run a successful event. There were a few hiccups here and there (like Wifi, plugs and moving between floors for different sessions), but nothing that would have ruined the experience.
+
+I need to highlight the food. I am not exaggerating when I say that the food was wonderful, and it was _sooo much_. We were spoiled with a good variety for all lunches and coffee breaks, and there was always leftovers as it was _sooo much_ food. Thank you to the catering team, you made us all very happy and well fed!
+
+I also personally loved the use of [Zulip](https://zulip.com/) as a communication tool during the event. It was perfect for asking questions, sharing resources, and interacting with other participants and instructors, also real-time or outside the sessions. Instructors were very responsive and the fact that the [Zulip channel](neuroinformatics.zulipchat.com) will stay alive and open after the event makes it easier to keep in tourch with everyone and reducing the barrier to create discussions and to contribute to projects. I know some people might find it a bit overwhelming or clunky at first, but I personally found it very useful and relatively easy to get used to.
+
+I finally want to bring up again the inclusivity topic. My main struggle point of many social events is to start conversations, break the ice and get to know people. The NIU team, made it so easy to avoid all the typical social barriers, with a few tips:
+
+1. My favorite new social rule: [**the Pacman Rule**](https://psychsafety.com/the-pac-man-rule/)
+2. Stickers for names
+3. Every instructor introducing themselves to every new participant and bridging participants to each other
+4. A clear and official code of conduct explained and referred to from the beginning
+5. General positive vibes in regards to mistakes, questions and learning
+
 
 ## The Extra Stuff
 - Facility tour
 - Crab brain!
 - The food
 - Inclusivity (pacman rule)
-- Zulip
