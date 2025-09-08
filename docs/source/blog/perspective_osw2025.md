@@ -57,9 +57,16 @@ I finally want to bring up again the inclusivity topic. My main struggle point o
 4. A clear and official code of conduct explained and referred to from the beginning
 5. General positive vibes in regards to mistakes, questions and learning
 
-
 ## The Extra Stuff
-- Facility tour
-- Crab brain!
-- The food
-- Inclusivity (pacman rule)
+Let's conclude with a few extra things, that made the whole things even more special!
+
+As part of the program, we had a chance to visit the [Advanced Microscopy Facility](https://swcmicroscopy.com/) at SWC, which as a microscopist and image analysis was awesome. I loved seeing the few-in-the-world serial section imaging systems, how the team works together and the excellent support they provide to the neuroscientists.
+
+At some point during the week, we made a second visit to the facility, in which we had the chance to see a real crab brain recently being extracted and prepared! Who would have guessed?!
+
+It was unexpectedly fun to work in groups on the speed blogging event at the end of the week. I kid you not when I say I have never seen so many experts in one room so focused on writing their piece of text. So much in fact that barely anyone got coffee during the breaks! I am very curious to see the final results of such blogs, there is the chance that some of them will be published in the [Software Sustainability Institute](https://www.software.ac.uk/) website or even on the [FocalPlane blog](https://focalplane.biologists.com/)!
+
+## Conclusion
+Without exaggeration, I came home a little changed person. Not only I learned how to be a better programmer, software developed and open-source contributor, but I also learned how to be a better scientist, educator and a overall human being.
+
+I learned so much, met so many great people, and had a lot of fun. I am very grateful to the NIU team for organizing such a fantastic event, and I am already looking forward to the next edition of OSW!
