@@ -6,7 +6,7 @@
 :language: English
 :image: 1
 
-# Open Software Week
+# A Personal Perspective on the Open Software Week
 It's already been almost a month since I returned home to Vienna from a fantastic week in London for the first edition of [Open Software Week](https://neuroinformatics.dev/open-software-week/) hosted by [Sainsbury Wellcome Centre](https://www.sainsburywellcome.org/) and organized by the [Neuroinformatics Unit (NIU)](https://neuroinformatics.dev/).
 
 OSW was a celebration of knowledge and experience exchange merged with neuroscience applications and best practices in Python programming. If you are at all into open-source, education, programming or neuroscience, you don't want to miss the next iteration of the course (which hopefully will become a yearly appointment)!
@@ -47,7 +47,7 @@ SWC was a great hosting venue, with a great location in the heart of London, and
 
 I need to highlight the food. I am not exaggerating when I say that the food was wonderful, and it was _sooo much_. We were spoiled with a good variety for all lunches and coffee breaks, and there was always leftovers as it was _sooo much_ food. Thank you to the catering team, you made us all very happy and well fed!
 
-I also personally loved the use of [Zulip](https://zulip.com/) as a communication tool during the event. It was perfect for asking questions, sharing resources, and interacting with other participants and instructors, also real-time or outside the sessions. Instructors were very responsive and the fact that the [Zulip channel](neuroinformatics.zulipchat.com) will stay alive and open after the event makes it easier to keep in tourch with everyone and reducing the barrier to create discussions and to contribute to projects. I know some people might find it a bit overwhelming or clunky at first, but I personally found it very useful and relatively easy to get used to.
+I also personally loved the use of [Zulip](https://zulip.com/) as a communication tool during the event. It was perfect for asking questions, sharing resources, and interacting with other participants and instructors, also real-time or outside the sessions. Instructors were very responsive and the fact that the [Zulip channel](https://neuroinformatics.zulipchat.com/) will stay alive and open after the event makes it easier to keep in tourch with everyone and reducing the barrier to create discussions and to contribute to projects. I know some people might find it a bit overwhelming or clunky at first, but I personally found it very useful and relatively easy to get used to.
 
 I finally want to bring up again the inclusivity topic. My main struggle point of many social events is to start conversations, break the ice and get to know people. The NIU team, made it so easy to avoid all the typical social barriers, with a few tips:
 
