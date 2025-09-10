@@ -18,8 +18,8 @@ place in **August 2025** in **London, UK**. This event will bring together resea
 Sessions will run daily between **10:00** and **17:00**.
 Here is an overview of the whole week:
 
-<img src="../_static/osw_images/schedule-2025_light-mode.png" alt="A colour-coded table showing the schedule of open software week. The columns are weekdays, and the rows are Morning and Afternoon. All of Monday and Friday will be spent on 'Intro to Python' and 'Hackday', respectively. Tuesday and Wednesday are split into two whole-day main tracks: 'Animals in Motion' and 'BrainGlobe'. On Thursday, one can choose between either a full day of 'Big Imaging Data' or 'Careers Clinic' in the morning and 'Collaborative Coding with git' in the afternoon." class="only-light img-responsive"/>
-<img src="../_static/osw_images/schedule-2025_dark-mode.png" alt="A colour-coded table showing the schedule of open software week. The columns are weekdays, and the rows are Morning and Afternoon. All of Monday and Friday will be spent on 'Intro to Python' and 'Hackday', respectively. Tuesday and Wednesday are split into two whole-day main tracks: 'Animals in Motion' and 'BrainGlobe'. On Thursday, one can choose between either a full day of 'Big Imaging Data' or 'Careers Clinic' in the morning and 'Collaborative Coding with git' in the afternoon." class="only-dark img-responsive"/>
+<img src="/_static/osw_images/schedule-2025_light-mode.png" alt="A colour-coded table showing the schedule of open software week. The columns are weekdays, and the rows are Morning and Afternoon. All of Monday and Friday will be spent on 'Intro to Python' and 'Hackday', respectively. Tuesday and Wednesday are split into two whole-day main tracks: 'Animals in Motion' and 'BrainGlobe'. On Thursday, one can choose between either a full day of 'Big Imaging Data' or 'Careers Clinic' in the morning and 'Collaborative Coding with git' in the afternoon." class="only-light img-responsive"/>
+<img src="/_static/osw_images/schedule-2025_dark-mode.png" alt="A colour-coded table showing the schedule of open software week. The columns are weekdays, and the rows are Morning and Afternoon. All of Monday and Friday will be spent on 'Intro to Python' and 'Hackday', respectively. Tuesday and Wednesday are split into two whole-day main tracks: 'Animals in Motion' and 'BrainGlobe'. On Thursday, one can choose between either a full day of 'Big Imaging Data' or 'Careers Clinic' in the morning and 'Collaborative Coding with git' in the afternoon." class="only-dark img-responsive"/>
 
 There are three **main tracks** targeted to different audiences.
 We encourage you to read each track's description and choose the one that best fits your interests.
@@ -29,7 +29,7 @@ cannot be combined as they are running in parallel.
 :::: {grid} 1 1 3 3
 
 :::{grid-item-card} {fas}`video;sd-text-secondary` Animals in Motion
-:img-top: ../_static/osw_images/animals-in-motion-card.png
+:img-top: /_static/osw_images/animals-in-motion-card.png
 :link: track-animals-in-motion
 :link-type: ref
 
@@ -39,7 +39,7 @@ and analyse animal motion from video footage.
 :::
 
 :::{grid-item-card} {fas}`brain;sd-text-warning` BrainGlobe
-:img-top: ../_static/osw_images/brainglobe-card.png
+:img-top: /_static/osw_images/brainglobe-card.png
 :link: track-brainglobe
 :link-type: ref
 
@@ -48,7 +48,7 @@ to analyse whole-brain microscopy datasets.
 :::
 
 :::{grid-item-card} {fas}`microscope;sd-text-primary` Big Imaging Data
-:img-top: ../_static/osw_images/big-imaging-data-card.png
+:img-top: /_static/osw_images/big-imaging-data-card.png
 :link: track-big-imaging-data
 :link-type: ref
 

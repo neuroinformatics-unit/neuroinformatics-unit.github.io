@@ -10,7 +10,7 @@ in London, U.K. Details are being finalised, but take a look at the details of [
 Dates of the 2026 event are TBC, but we expect applications to open in early 2026.
 :::
 
-![](../_static/osw_images/OSW_2025.jpg)
+![](/_static/osw_images/OSW_2025.jpg)
 **Participants (having a great time) at the hackathon in 2025**
 
 ### Selected quotes from previous attendees
