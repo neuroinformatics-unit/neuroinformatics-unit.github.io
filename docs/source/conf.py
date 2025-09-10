@@ -39,6 +39,7 @@ extensions = [
     "sphinx.ext.napoleon",
     "sphinx_design",
     "sphinx_sitemap",
+    "sphinx_reredirects",
     "myst_parser",
     "numpydoc",
     "nbsphinx",
@@ -178,4 +179,9 @@ html_sidebars = {
         "ablog/recentposts.html"
     ],  # 'ablog/archives.html << we may want to use archives when we have more posts.
     "**": [],
+}
+
+
+redirects = {
+    'open-software-week/index.html': '/open-software-summer-school/index.html',
 }
