@@ -64,29 +64,41 @@ These PRs helped me explore various parts of the codebase and understand the ove
 
 During the coding period, the primary focus was on the implementation, tests and documentation for the Google Drive and AWS backends. 
 
-1. **Suggest next sub ses remote - PR [#484](https://github.com/neuroinformatics-unit/datashuttle/pull/484)**
+<h4>PRs created during the coding period</h4>
+
+1. **Suggest next sub ses remote — PR [#484](https://github.com/neuroinformatics-unit/datashuttle/pull/484)**
+    
     - Exposed the Python API functions in the TUI to search remote folders for suggesting next subject and session folders. By default, the local project folders are used to suggest next subject/session folder. Using the `search_central` option allows the user to search both the local and central project folders for suggestions.
     - Implemented thread workers to handle background searching of folders while displaying a loading indicator.
+    - **Status:** Merged
 
-2. **Implemented the core logic for Google Drive and AWS connection setup via Python API and Terminal User Interface (TUI) - PR [#503](https://github.com/neuroinformatics-unit/datashuttle/pull/503)**
+2. **Implemented the core logic for Google Drive and AWS connection setup via Python API and Terminal User Interface (TUI) — PR [#503](https://github.com/neuroinformatics-unit/datashuttle/pull/503)**
+
     - Implemented the core functions to authenticate to Google Drive and AWS and use [Rclone](https://rclone.org/) for data transfers.
     - Exposed the underlying functions of `datashuttle`'s Python API in the Terminal User Interface.
     - Refactored polling the central storage for SSH transfers into a single unified function, used Rclone rather than sftp to reduce code duplication and improve logic.
-
-
-3. **Implemented process management and threads to run connection setup in the background - PR [#503](https://github.com/neuroinformatics-unit/datashuttle/pull/503)**
     - Used threading library to run connection setup without blocking the TUI. 
     - Used Python's subprocess API to implement cancellation of connection setup via killing the underlying process.
+    - **Status:** Merged
 
-4. **Wrote tests with `pytest` to test data transfers to Google Drive and AWS buckets - PR [#570](https://github.com/neuroinformatics-unit/datashuttle/pull/570/)**
+3. **Wrote tests with `pytest` to test data transfers to Google Drive and AWS buckets — PR [#570](https://github.com/neuroinformatics-unit/datashuttle/pull/570/)**
     - Refactored existing transfer tests for SSH transfers to extend them for Google Drive and AWS.
     - Used GitHub secrets for connection credentials to run tests in the CI.
     - Wrote tests for connection setup via the TUI.
     - Wrote backward compatibility tests and extended existing TUI tests to test the new connection widgets.
+    - **Status:** Merged
 
-5. **Added documentation for users to set up connection via the new connection methods - PR [#580](https://github.com/neuroinformatics-unit/datashuttle/pull/580)**
+4. **Added documentation for users to set up connection via the new connection methods — PR [#580](https://github.com/neuroinformatics-unit/datashuttle/pull/580)**
     - Updated and enhanced documentation to include instructions to connect to Google Drive and AWS buckets and added relevant examples.
     - Focused on providing clear instructions for setup, usage, and functionality, benefiting future contributors and users.
+    - **Status:** Merged
+
+5. **Integration of the core implementations, tests and docs — PR [#556](https://github.com/neuroinformatics-unit/datashuttle/pull/556)**
+    - This PR serves as an integration point for all the changes related to Google Drive and AWS S3 functionality.
+    - To maintain code clarity and facilitate reviews, we split the implementation, testing, and documentation into separate PRs that merge into this one
+    - **Status:** Merged
+
+All of these PRs were merged into the main branch and the new functionality will be available in the next release of `datashuttle`.
 
 In addition to writing code, I performed code review for about 10 PRs, for which I was the sole approver prior to merging. Some examples - [#515](https://github.com/neuroinformatics-unit/datashuttle/pull/515), [#208](https://github.com/neuroinformatics-unit/datashuttle/pull/208), [#551](https://github.com/neuroinformatics-unit/datashuttle/pull/551). Here is a [comprehensive list](http://github.com/search?q=is%3Apr+reviewed-by%3Acs7-shrey+repo%3Aneuroinformatics-unit%2Fdatashuttle+created%3A2025-04-01..2025-09-01&type=pullrequests&p=1).
 
@@ -103,6 +115,7 @@ In addition to writing code, I performed code review for about 10 PRs, for which
 :width: 80%
 :class: only-light
 ```
+<p style="text-align:center;margin:8px;color:#d4d4d4;font-style:italic">Setting up a new project with Google Drive storage option</p>
 
 <br>
 
@@ -117,30 +130,7 @@ In addition to writing code, I performed code review for about 10 PRs, for which
 :width: 80%
 :class: only-light
 ```
-
-## PRs created during the coding period
-
-1. [Add Google Drive and AWS S3 as a Remote Storage option](https://github.com/neuroinformatics-unit/datashuttle/pull/503)
-
-    **Status:** Merged <br>
-    **Description:** This PR implemented the core functionality to connect to Google Drive and AWS S3 buckets, enabling users to store and retrieve neuroscience data from these cloud platforms. It included authentication workflows, background processing for non-blocking UI operations, and integration with the existing `datashuttle` infrastructure.
-
-2. [Add Tests for Google Drive and AWS Connection Methods](https://github.com/neuroinformatics-unit/datashuttle/pull/570)
-
-    **Status:** Merged <br>
-    **Description:** This PR implemented comprehensive tests for the new storage options, ensuring reliable data transfer and connection setup validation. It also extended existing tests for backward compatibility and added new TUI tests to validate the connection widgets.
-
-3. [Add docs for Google Drive and AWS connections](https://github.com/neuroinformatics-unit/datashuttle/pull/580)
-
-    **Status:** Merged <br>
-    **Description:** This PR updated the documentation to include detailed instructions for setting up and using Google Drive and AWS S3 connections. It provided step-by-step guides and examples to ensure users can easily configure and use the new storage options.
-
-4. [Google Drive and AWS S3 - Implementation, Tests and Documentation](https://github.com/neuroinformatics-unit/datashuttle/pull/556)
-
-    **Status:** Merged <br>
-    **Description:** This PR serves as an integration point for all the changes related to Google Drive and AWS S3 functionality. To maintain code clarity and facilitate reviews, we split the implementation, testing, and documentation into separate PRs that merge into this one. This approach allowed for focused development and reviews while keeping the final integration streamlined before merging into the main branch.
-
-All of these PRs were merged into the main branch and the new functionality will be available in the next release of `datashuttle`.
+<p style="text-align:center;margin:8px;color:#d4d4d4;font-style:italic">Transferring data using <code>datashuttle</code></p>
 
 ## Challenges / Learnings
 
