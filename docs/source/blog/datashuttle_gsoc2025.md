@@ -19,7 +19,9 @@
 
 ## Introduction
 
-I am Shrey, this summer I contributed to [`datashuttle`](https://datashuttle.neuroinformatics.dev/), a tool for the creation, validation and transfer of neuroscience project folders, as part of [Google Summer of Code](https://summerofcode.withgoogle.com/) 2025. I worked on adding Google Drive and Amazon Web Services (AWS) buckets as remote storage options to `datashuttle`.
+Hi, I am Shrey. This summer, I had the opportunity to contribute to open-source neuroscience software through [Google Summer of Code](https://summerofcode.withgoogle.com/) — program that connects student developers with mentoring organizations to work on real-world projects. I worked with the [Neuroinformatics Unit](https://neuroinformatics.dev/) to enhance [`datashuttle`](https://datashuttle.neuroinformatics.dev/), a tool for the creation, validation and transfer of neuroscience project folders.
+
+In this blog post, I'll share my experience adding cloud storage support to `datashuttle`, specifically integrating Google Drive and Amazon Web Services (AWS) S3 buckets as new remote storage options. This project expanded the tool's storage capabilities beyond its original SSH-based transfers, giving researchers more flexibility in how they manage and store their data.
 
 **Mentors:** Joseph Ziminski, Niko Sirmpilatze, Adam Tyson
 
@@ -31,7 +33,7 @@ Neuroscientists typically collect diverse types of data during experiments, incl
 
 Neuroscience researchers typically acquire data on separate acquisition machines and then store them in a central data storage. Prior to this project, `datashuttle` supported data transfers only to central machines through drive mounting or SSH connections. While effective, this approach limited adoption to labs with dedicated storage infrastructure. Many neuroscience labs, particularly smaller research groups or those at institutions with limited IT resources, rely on cloud storage solutions like Google Drive or AWS for their data management needs.
 
-This project aimed to democratize `datashuttle`'s capabilities by extending remote storage options to include Google Drive and AWS S3 buckets. This expansion significantly broadens `datashuttle`'s accessibility, allowing researchers without dedicated servers to benefit from standardized data organization and automated transfers.
+This project extended `datashuttle`'s remote storage capabilities to include Google Drive and AWS S3 buckets. This expansion significantly broadens `datashuttle`'s accessibility, allowing research labs without dedicated servers to benefit from standardized data organization and automated transfers.
 
 ## Technical Implementation Overview
 
