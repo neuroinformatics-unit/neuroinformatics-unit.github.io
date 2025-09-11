@@ -29,7 +29,7 @@ Neuroscientists typically collect diverse types of data during experiments, incl
 
 `datashuttle` addresses these challenges by automating the creation, validation, and transfer of neuroscience project folders organized according to the [NeuroBlueprint](https://neuroblueprint.neuroinformatics.dev/) standard. This standardization ensures that research data follows consistent naming conventions and folder hierarchies, making it easier for researchers to share analysis pipelines, collaborate across institutions, and maintain organized projects as they scale.
 
-Neuroscience researchers typically acquire data on separate acquisition machines and then store them centrally in some data storage. Prior to this project, `datashuttle` supported data transfers only to central machines through drive mounting or SSH connections. While effective, this approach limited adoption to labs with dedicated storage infrastructure. Many neuroscience labs, particularly smaller research groups or those at institutions with limited IT resources, rely on cloud storage solutions like Google Drive or AWS for their data management needs.
+Neuroscience researchers typically acquire data on separate acquisition machines and then store them in a central data storage. Prior to this project, `datashuttle` supported data transfers only to central machines through drive mounting or SSH connections. While effective, this approach limited adoption to labs with dedicated storage infrastructure. Many neuroscience labs, particularly smaller research groups or those at institutions with limited IT resources, rely on cloud storage solutions like Google Drive or AWS for their data management needs.
 
 This project aimed to democratize `datashuttle`'s capabilities by extending remote storage options to include Google Drive and AWS S3 buckets. This expansion significantly broadens `datashuttle`'s accessibility, allowing researchers without dedicated servers to benefit from standardized data organization and automated transfers.
 
@@ -37,9 +37,9 @@ This project aimed to democratize `datashuttle`'s capabilities by extending remo
 
 **Dual Interface Development**: `datashuttle` provides both a Python API for programmatic use and a Terminal User Interface (TUI, a user interface that runs in the terminal) built with [Textual](https://textual.textualize.io/) for interactive use. Every new feature needed to be implemented across both interfaces, requiring careful consideration of user experience patterns in both programmatic and interactive contexts while minimizing code duplication.
 
-**Cloud Storage Integration:** Rather than implementing custom transfer protocols, `datashuttle` leverages [Rclone](https://rclone.org/) - a powerful command-line program for managing cloud storage. This project required an understanding of Rclone's configuration system, authentication workflows, and transfer mechanisms for both Google Drive and AWS S3. Each cloud provider has distinct authentication requirements: Google Drive uses OAuth2 flows requiring browser-based authorization, while AWS uses access keys and secret keys with various authentication methods.
+**Cloud Storage Integration:** Rather than implementing custom transfer protocols, `datashuttle` leverages [Rclone](https://rclone.org/) — a powerful command-line program for managing cloud storage. This project required an understanding of Rclone's configuration system, authentication workflows, and transfer mechanisms for both Google Drive and AWS S3. Each cloud provider has distinct authentication requirements: Google Drive uses OAuth2 flows requiring browser-based authorization, while AWS uses access keys and secret keys with various authentication methods.
 
-**Asynchronous Operations:** Cloud authentication processes, particularly Google Drive's OAuth flow requires user interaction. The TUI implementation needed sophisticated background processing to prevent interface freezing during connection setup, requiring careful orchestration of Python's threading and subprocess APIs.
+**Asynchronous Operations:** Cloud authentication processes, particularly Google Drive's OAuth flow, require user interaction. The TUI implementation needed sophisticated background processing to prevent interface freezing during connection setup, requiring careful orchestration of Python's threading and subprocess APIs.
 
 ## What I did
 
@@ -47,7 +47,7 @@ This project aimed to democratize `datashuttle`'s capabilities by extending remo
 
 While finding organizations to contribute to for GSoC 2025, I came across the Neuroinformatics Unit (NIU), which was their first time participating in GSoC. Amongst all the projects, `datashuttle` caught my attention because of my interest in SSH and cloud storage and a user interface in the terminal seemed very astonishing.
 
-Contributing to a new large codebase seems daunting at first. So, I followed a very simple process while contributing: reproduce the bug from the issue description, identify the top-level function most likely to contain the bug, then use debuggers and print statements to trace through the call stack (using a pen and paper really helps). I would iteratively drill down through each function call, following the execution path until I located the specific code that needed to be fixed. With time, you start putting together a mental map of how things work. To understand framework specific code, documentation is one's best friend.
+Contributing to a new large codebase seems daunting at first. So, I followed a very simple process while contributing: reproduce the bug from the issue description, identify the top-level function most likely to contain the bug, then use debuggers and print statements to trace through the call stack (using a pen and paper really helps). I would iteratively drill down through each function call, following the execution path until I located the specific code that needed to be fixed. With time, you start putting together a mental map of how things work. To understand framework-specific code, documentation is one's best friend.
 
 <h4> Contributions </h4>
 
@@ -78,7 +78,7 @@ During the coding period, the primary focus was on the implementation, tests and
 
 4. **Wrote tests with `pytest` to test data transfers to Google Drive and AWS buckets - PR [#570](https://github.com/neuroinformatics-unit/datashuttle/pull/570/)**
     - Refactored existing transfer tests for SSH transfers to extend them for Google Drive and AWS.
-    - Used Github secrets for connection credentials to run tests in the CI.
+    - Used GitHub secrets for connection credentials to run tests in the CI.
     - Wrote tests for connection setup via the TUI.
     - Wrote backward compatibility tests and extended existing TUI tests to test the new connection widgets.
 
@@ -138,13 +138,13 @@ In addition to writing code, I performed code review for about 10 PRs, for which
     **Status:** Merged <br>
     **Description:** This PR serves as an integration point for all the changes related to Google Drive and AWS S3 functionality. To maintain code clarity and facilitate reviews, we split the implementation, testing, and documentation into separate PRs that merge into this one. This approach allowed for focused development and reviews while keeping the final integration streamlined before merging into the main branch.
 
-All of these PRs were merged into the main branch and the new functionality is now available in `datashuttle`.
+All of these PRs were merged into the main branch and the new functionality will be available in the next release of `datashuttle`.
 
 ## Challenges / Learnings
 
-The project was a smooth sailing for the most part. However, a few parts felt a bit challenging.
+The project was smooth sailing for the most part. However, a few parts felt a bit challenging.
 
-1. ### Developing a multi step authentication flow
+1. ### Developing a multi-step authentication flow
 
     Creating the complex, multi-step authentication workflows in Textual presented a significant paradigm shift from traditional web development which I was more accustomed to. The connection setup process required orchestrating several sequential UI states, dynamically managing UI elements and flow control based on user input. Example - dynamically showing and removing input boxes and buttons on each UI state, reusing UI elements, use of workers / threads for handling connection setup while keeping the main thread responsive, launching subprocess from within the worker threads, storing the process objects and killing them when user cancels setup.
 
@@ -152,12 +152,12 @@ The project was a smooth sailing for the most part. However, a few parts felt a 
 
 2. ### Writing tests to run in the CI environment
 
-    Since CI environments don't have access to browsers (needed for Google's OAuth for Google Drive access), me and my mentor discussed several strategies and tried implementing a few of them for automated testing in the CI until we found and picked a suitable one. We started with implementing a [service account](https://cloud.google.com/iam/docs/service-account-overview) file based authentication but due to a policy change by Google, this method would require users to have a [workspace](https://workspace.google.com/) account. Ultimately, we settled on using a config token for browserless access in the Github secrets. This config token is pre-generated by authenticating to Google Drive via browser and contains access and refresh tokens in an encoded format required for authorization to Google Drive. This allows connection setup to be run by just using the config token without needed to authenticate via a browser (making testing in CI environments possible).
+    Since CI environments don't have access to browsers (needed for Google's OAuth for Google Drive access), my mentor and I discussed several strategies and tried implementing a few of them for automated testing in the CI until we found and picked a suitable one. We started with implementing a [service account](https://cloud.google.com/iam/docs/service-account-overview) file based authentication but due to a policy change by Google, this method would require users to have a [workspace](https://workspace.google.com/) account. Ultimately, we settled on using a config token for browserless access in the GitHub secrets. This config token is pre-generated by authenticating to Google Drive via browser and contains access and refresh tokens in an encoded format required for authorization to Google Drive. This allows connection setup to be run by just using the config token without needing to authenticate via a browser (making testing in CI environments possible).
 
 
 ## Future work
 
-All the code has been merged into the main branch and is due for a release. Further work would involve discussing with users how they are finding the functionality, get feedback from them and improve upon the feedback.
+All the code has been merged into the main branch and is due for a release. Further work will involve discussing with users how they are finding the functionality, get feedback from them and improve upon the feedback.
 
 
 ## Conclusion
@@ -166,12 +166,12 @@ The integration of Google Drive and AWS S3 storage capabilities significantly ex
 
 ## Acknowledgements
 
-I would like to express my gratitude to my mentor, [Joe Ziminski](https://github.com/JoeZiminski), for his constant encouragement and support throughout this project. His constant positive comments on Github kept me motivated, and I have learnt a lot on how to write clean and documented code from him. My coding style has improved a lot as a result of the regular code reviews. It was an absolute pleasure working with him.
+I would like to express my gratitude to my mentor, [Joe Ziminski](https://github.com/JoeZiminski), for his constant encouragement and support throughout this project. His constant positive comments on GitHub kept me motivated, and I have learnt a lot on how to write clean and documented code from him. My coding style has improved a lot as a result of the regular code reviews. It was an absolute pleasure working with him.
 
-Finally, I would like to thank Google for organizing GSoC helping first time contributors like me to enter the world of open source.
+Finally, I would like to thank Google for organizing GSoC helping first-time contributors like me to enter the world of open source.
 
 ## Related Links
 
 - [`datashuttle` repository](https://github.com/neuroinformatics-unit/datashuttle)
 - [GSoC Project Proposal](https://github.com/neuroinformatics-unit/gsoc/pull/9/files?short_path=fa70552#diff-fa70552f23074b47d370279a91cc831c563a2045143034e7d2ec56cab36de2e0)
-- [My Github profile](https://github.com/cs7-shrey)
+- [My GitHub profile](https://github.com/cs7-shrey)
