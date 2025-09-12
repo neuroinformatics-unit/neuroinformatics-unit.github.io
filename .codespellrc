@@ -1,4 +1,4 @@
 [codespell]
 skip = '.git'
 check-hidden = true
-ignore-words-list = portugues,fo
+ignore-words-list = portugues,fo,ist
