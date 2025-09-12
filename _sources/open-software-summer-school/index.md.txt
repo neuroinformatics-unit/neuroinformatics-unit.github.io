@@ -13,7 +13,7 @@ Dates of the 2026 event are TBC, but we expect applications to open in early 202
 ![](/_static/osw_images/OSW_2025.jpg)
 **Participants (having a great time) at the hackathon in 2025**
 
-### Selected quotes from previous attendees
+## Selected quotes from previous attendees
 > Sparked a bit of a eureka moment after months of agonising over how to analyse my data!
 
 > Thank you again for organizing this amazing event
