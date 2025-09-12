@@ -6,10 +6,10 @@
 :language: English
 :image: 1
 
-**In this guest blog post, [Marco Dalla Vecchia](https://bsky.app/profile/marcodv.bsky.social), image analyst at [Imaging & Optics Facility](https://iof.pages.ist.ac.at/) of the [Institute of Science and Technology Austria](https://ista.ac.at/en/home/) (ISTA) shares his experience of the first [Open Software Week](/open-software-summer-school).**
+**In this guest blog post, [Marco Dalla Vecchia](https://bsky.app/profile/marcodv.bsky.social), image analyst at [Imaging & Optics Facility](https://iof.pages.ist.ac.at/) of the [Institute of Science and Technology Austria](https://ista.ac.at/en/home/) (ISTA) shares his experience of the first [Open Software Week](/open-software-summer-school/index).**
 
 # A Personal Perspective on the Open Software Week
-It's already been almost a month since I returned home to Vienna from a fantastic week in London for the first edition of [Open Software Week (OSW)](/open-software-summer-school) organized by the Neuroinformatics Unit and held at the [Sainsbury Wellcome Centre](https://www.sainsburywellcome.org/).
+It's already been almost a month since I returned home to Vienna from a fantastic week in London for the first edition of [Open Software Week (OSW)](/open-software-summer-school/index) organized by the Neuroinformatics Unit and held at the [Sainsbury Wellcome Centre](https://www.sainsburywellcome.org/).
 
 OSW was a celebration of knowledge and experience exchange merged with neuroscience applications and best practices in Python programming. If you are at all into open-source, education, programming or neuroscience, you don't want to miss the next iteration of the course (which hopefully will become a yearly appointment)!
 
@@ -19,9 +19,9 @@ OSW was a celebration of knowledge and experience exchange merged with neuroscie
 In this perspective piece, I wanted to go through some personal opinions on a few aspects of the event.
 
 ## The Program
-OSW consisted of an [impressive program](/open-software-summer-school/2025/index.html#schedule), escalating from an introduction to Python fundamentals all the way to advanced neuroscience Python applications and even a hack-day dedicated to nourish an open-source spirit of contribution and to problem-solving.
+OSW consisted of an [impressive program](/open-software-summer-school/2025/index), escalating from an introduction to Python fundamentals all the way to advanced neuroscience Python applications and even a hack-day dedicated to nourish an open-source spirit of contribution and to problem-solving.
 
-While every single session would have deserved attendance, I have to limit my perspective on the sessions I actually followed. I opted for the [BrainGlobe](/open-software-summer-school/2025/brainglobe.html) track and the [Big Imaging Data](/open-software-summer-school/2025/big-imaging-data.html) track. The [Animals in Motion](https://animals-in-motion.neuroinformatics.dev/latest/) track attracted many participants and I really wish I could have joined both tracks in the first half of the week!
+While every single session would have deserved attendance, I have to limit my perspective on the sessions I actually followed. I opted for the [BrainGlobe](/open-software-summer-school/2025/brainglobe) track and the [Big Imaging Data](/open-software-summer-school/2025/big-imaging-data) track. The [Animals in Motion](/open-software-summer-school/2025/animals-in-motion) track attracted many participants and I really wish I could have joined both tracks in the first half of the week!
 
 I loved the fact that the BrainGlobe program was all hands-on, with a lot of coding exercises and practical examples. Needless to say, this wouldn't have worked without excellent instructors and teaching assistants all throughout the course. Personally I found it a bit of a pity that most of the material was already present in the excellent [BrainGlobe tutorials](https://brainglobe.info/tutorials/), but that didn't take away from the many chances I got to interact with other participants, each with their own data to wrangle and explore. It was also perfect for many participants who were exposed to the package and its capabilities for the first time.
 
