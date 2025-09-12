@@ -64,4 +64,5 @@ get-involved/index
 resources
 collaborations
 open-software-summer-school/index
+gsoc-2025-datashuttle
 ```
