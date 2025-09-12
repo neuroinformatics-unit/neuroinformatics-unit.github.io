@@ -6,7 +6,7 @@
 :language: English
 :image: 1
 
-**In this guest blog post, [Marco Dalla Vecchia](https://bsky.app/profile/marcodv.bsky.social), image analyst at [Imaging & Optics Facility](https://iof.pages.ist.ac.at/) of the [Institute of Science and Technology Austria](https://ista.ac.at/en/home/) (ISTA) shares his experience of the first [Open Software Week](/open-software-summer-school/index).**
+In this guest blog post, [Marco Dalla Vecchia](https://bsky.app/profile/marcodv.bsky.social), image analyst at [Imaging & Optics Facility](https://iof.pages.ist.ac.at/) of the [Institute of Science and Technology Austria](https://ista.ac.at/en/home/) (ISTA) shares his experience of the first [Open Software Week](/open-software-summer-school/index).
 
 # A Personal Perspective on the Open Software Week
 It's already been almost a month since I returned home to Vienna from a fantastic week in London for the first edition of [Open Software Week (OSW)](/open-software-summer-school/index) organized by the Neuroinformatics Unit and held at the [Sainsbury Wellcome Centre](https://www.sainsburywellcome.org/).
