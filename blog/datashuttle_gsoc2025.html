@@ -227,6 +227,13 @@
   </a>
 </li>
 
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../gsoc-2025-datashuttle.html">
+    <no title>
+  </a>
+</li>
+
                 </ul>
             </li>
             
@@ -438,6 +445,13 @@
   </a>
 </li>
 
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../gsoc-2025-datashuttle.html">
+    <no title>
+  </a>
+</li>
+
   </ul>
 </nav></div>
           
@@ -582,28 +596,32 @@
 <br>
 <section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
-<p>I am Shrey, this summer I contributed to <a class="reference external" href="https://datashuttle.neuroinformatics.dev/"><code class="docutils literal notranslate"><span class="pre">datashuttle</span></code></a>, a tool for the creation, validation and transfer of neuroscience project folders, as part of <a class="reference external" href="https://summerofcode.withgoogle.com/">Google Summer of Code</a> 2025. I worked on adding Google Drive and Amazon Web Services (AWS) buckets as remote storage options to <code class="docutils literal notranslate"><span class="pre">datashuttle</span></code>.</p>
+<p>Hi, I am Shrey. This summer, I had the opportunity to contribute to open-source neuroscience software through <a class="reference external" href="https://summerofcode.withgoogle.com/">Google Summer of Code</a> — a program that connects student developers with mentoring organizations to work on real-world projects. I worked with the <a class="reference external" href="https://neuroinformatics.dev/">Neuroinformatics Unit</a> to enhance <a class="reference external" href="https://datashuttle.neuroinformatics.dev/"><code class="docutils literal notranslate"><span class="pre">datashuttle</span></code></a>, a tool for the creation, validation and transfer of neuroscience project folders.</p>
+<p>In this blog post, I’ll share my experience adding cloud storage support to <code class="docutils literal notranslate"><span class="pre">datashuttle</span></code>, specifically integrating Google Drive and Amazon Web Services (AWS) S3 buckets as new remote storage options. This project expanded the tool’s storage capabilities beyond its original SSH-based transfers, giving researchers more flexibility in how they manage and store their data.</p>
 <p><strong>Mentors:</strong> Joseph Ziminski, Niko Sirmpilatze, Adam Tyson</p>
 </section>
 <section id="project-overview">
 <h2>Project Overview<a class="headerlink" href="#project-overview" title="Link to this heading">#</a></h2>
 <p>Neuroscientists typically collect diverse types of data during experiments, including behavioral data (such as camera feeds tracking animal movement), electrophysiological data from neural probes, imaging data from microscopes, and physiological measurements. When researchers use different data organization schemes across labs or even within the same lab, it creates significant challenges: analysis scripts may fail to locate files, data becomes difficult to share between collaborators, and valuable research time is lost navigating inconsistent folder structures.</p>
 <p><code class="docutils literal notranslate"><span class="pre">datashuttle</span></code> addresses these challenges by automating the creation, validation, and transfer of neuroscience project folders organized according to the <a class="reference external" href="https://neuroblueprint.neuroinformatics.dev/">NeuroBlueprint</a> standard. This standardization ensures that research data follows consistent naming conventions and folder hierarchies, making it easier for researchers to share analysis pipelines, collaborate across institutions, and maintain organized projects as they scale.</p>
-<p>Neuroscience researchers typically acquire data on separate acquisition machines and then store them centrally in some data storage. Prior to this project, <code class="docutils literal notranslate"><span class="pre">datashuttle</span></code> supported data transfers only to central machines through drive mounting or SSH connections. While effective, this approach limited adoption to labs with dedicated storage infrastructure. Many neuroscience labs, particularly smaller research groups or those at institutions with limited IT resources, rely on cloud storage solutions like Google Drive or AWS for their data management needs.</p>
-<p>This project aimed to democratize <code class="docutils literal notranslate"><span class="pre">datashuttle</span></code>’s capabilities by extending remote storage options to include Google Drive and AWS S3 buckets. This expansion significantly broadens <code class="docutils literal notranslate"><span class="pre">datashuttle</span></code>’s accessibility, allowing researchers without dedicated servers to benefit from standardized data organization and automated transfers.</p>
+<p>Neuroscience researchers typically acquire data on separate acquisition machines and then store them in a central data storage. Prior to this project, <code class="docutils literal notranslate"><span class="pre">datashuttle</span></code> supported data transfers only to central machines through drive mounting or SSH connections. While effective, this approach limited adoption to labs with dedicated storage infrastructure. Many neuroscience labs, particularly smaller research groups or those at institutions with limited IT resources, rely on cloud storage solutions like Google Drive or AWS for their data management needs.</p>
+<p>This project extended <code class="docutils literal notranslate"><span class="pre">datashuttle</span></code>’s remote storage capabilities to include Google Drive and AWS S3 buckets. This expansion significantly broadens <code class="docutils literal notranslate"><span class="pre">datashuttle</span></code>’s accessibility, allowing research labs without dedicated servers to benefit from standardized data organization and automated transfers.</p>
 </section>
 <section id="technical-implementation-overview">
 <h2>Technical Implementation Overview<a class="headerlink" href="#technical-implementation-overview" title="Link to this heading">#</a></h2>
 <p><strong>Dual Interface Development</strong>: <code class="docutils literal notranslate"><span class="pre">datashuttle</span></code> provides both a Python API for programmatic use and a Terminal User Interface (TUI, a user interface that runs in the terminal) built with <a class="reference external" href="https://textual.textualize.io/">Textual</a> for interactive use. Every new feature needed to be implemented across both interfaces, requiring careful consideration of user experience patterns in both programmatic and interactive contexts while minimizing code duplication.</p>
-<p><strong>Cloud Storage Integration:</strong> Rather than implementing custom transfer protocols, <code class="docutils literal notranslate"><span class="pre">datashuttle</span></code> leverages <a class="reference external" href="https://rclone.org/">Rclone</a> - a powerful command-line program for managing cloud storage. This project required an understanding of Rclone’s configuration system, authentication workflows, and transfer mechanisms for both Google Drive and AWS S3. Each cloud provider has distinct authentication requirements: Google Drive uses OAuth2 flows requiring browser-based authorization, while AWS uses access keys and secret keys with various authentication methods.</p>
-<p><strong>Asynchronous Operations:</strong> Cloud authentication processes, particularly Google Drive’s OAuth flow requires user interaction. The TUI implementation needed sophisticated background processing to prevent interface freezing during connection setup, requiring careful orchestration of Python’s threading and subprocess APIs.</p>
+<p><strong>Cloud Storage Integration:</strong> Rather than implementing custom transfer protocols, <code class="docutils literal notranslate"><span class="pre">datashuttle</span></code> leverages <a class="reference external" href="https://rclone.org/">Rclone</a> — a powerful command-line program for managing cloud storage. This project required an understanding of Rclone’s configuration system, authentication workflows, and transfer mechanisms for both Google Drive and AWS S3. Each cloud provider has distinct authentication requirements: Google Drive uses OAuth2 flows requiring browser-based authorization, while AWS uses access keys and secret keys with various authentication methods.</p>
+<p><strong>Asynchronous Operations:</strong> Cloud authentication processes, particularly Google Drive’s OAuth flow, require user interaction. The TUI implementation needed sophisticated background processing to prevent interface freezing during connection setup, requiring careful orchestration of Python’s threading and subprocess APIs.</p>
 </section>
 <section id="what-i-did">
 <h2>What I did<a class="headerlink" href="#what-i-did" title="Link to this heading">#</a></h2>
-<h4> Background </h4>
+<section id="background">
+<h3>Background<a class="headerlink" href="#background" title="Link to this heading">#</a></h3>
 <p>While finding organizations to contribute to for GSoC 2025, I came across the Neuroinformatics Unit (NIU), which was their first time participating in GSoC. Amongst all the projects, <code class="docutils literal notranslate"><span class="pre">datashuttle</span></code> caught my attention because of my interest in SSH and cloud storage and a user interface in the terminal seemed very astonishing.</p>
-<p>Contributing to a new large codebase seems daunting at first. So, I followed a very simple process while contributing: reproduce the bug from the issue description, identify the top-level function most likely to contain the bug, then use debuggers and print statements to trace through the call stack (using a pen and paper really helps). I would iteratively drill down through each function call, following the execution path until I located the specific code that needed to be fixed. With time, you start putting together a mental map of how things work. To understand framework specific code, documentation is one’s best friend.</p>
-<h4> Contributions </h4>
+<p>Contributing to a new large codebase seems daunting at first. So, I followed a very simple process while contributing: reproduce the bug from the issue description, identify the top-level function most likely to contain the bug, then use debuggers and print statements to trace through the call stack (using a pen and paper really helps). I would iteratively drill down through each function call, following the execution path until I located the specific code that needed to be fixed. With time, you start putting together a mental map of how things work. To understand framework-specific code, documentation is one’s best friend.</p>
+</section>
+<section id="contributions">
+<h3>Contributions<a class="headerlink" href="#contributions" title="Link to this heading">#</a></h3>
 <p>Before the GSoC coding period began, I worked on fixing issues on the <code class="docutils literal notranslate"><span class="pre">datashuttle</span></code> repository and merged 3 PRs.
 Here are the PRs that were merged:</p>
 <ol class="arabic simple">
@@ -613,91 +631,83 @@ Here are the PRs that were merged:</p>
 </ol>
 <p>These PRs helped me explore various parts of the codebase and understand the overall architecture better.</p>
 <p>During the coding period, the primary focus was on the implementation, tests and documentation for the Google Drive and AWS backends.</p>
+</section>
+<section id="prs-created-during-the-coding-period">
+<h3>PRs created during the coding period<a class="headerlink" href="#prs-created-during-the-coding-period" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
-<li><p><strong>Suggest next sub ses remote - PR <a class="reference external" href="https://github.com/neuroinformatics-unit/datashuttle/pull/484">#484</a></strong></p>
+<li><p><strong>Suggest next sub ses remote — PR <a class="reference external" href="https://github.com/neuroinformatics-unit/datashuttle/pull/484">#484</a></strong></p>
 <ul class="simple">
 <li><p>Exposed the Python API functions in the TUI to search remote folders for suggesting next subject and session folders. By default, the local project folders are used to suggest next subject/session folder. Using the <code class="docutils literal notranslate"><span class="pre">search_central</span></code> option allows the user to search both the local and central project folders for suggestions.</p></li>
 <li><p>Implemented thread workers to handle background searching of folders while displaying a loading indicator.</p></li>
+<li><p><strong>Status:</strong> Merged</p></li>
 </ul>
 </li>
-<li><p><strong>Implemented the core logic for Google Drive and AWS connection setup via Python API and Terminal User Interface (TUI) - PR <a class="reference external" href="https://github.com/neuroinformatics-unit/datashuttle/pull/503">#503</a></strong></p>
+<li><p><strong>Implemented the core logic for Google Drive and AWS connection setup via Python API and Terminal User Interface (TUI) — PR <a class="reference external" href="https://github.com/neuroinformatics-unit/datashuttle/pull/503">#503</a></strong></p>
 <ul class="simple">
 <li><p>Implemented the core functions to authenticate to Google Drive and AWS and use <a class="reference external" href="https://rclone.org/">Rclone</a> for data transfers.</p></li>
 <li><p>Exposed the underlying functions of <code class="docutils literal notranslate"><span class="pre">datashuttle</span></code>’s Python API in the Terminal User Interface.</p></li>
 <li><p>Refactored polling the central storage for SSH transfers into a single unified function, used Rclone rather than sftp to reduce code duplication and improve logic.</p></li>
-</ul>
-</li>
-<li><p><strong>Implemented process management and threads to run connection setup in the background - PR <a class="reference external" href="https://github.com/neuroinformatics-unit/datashuttle/pull/503">#503</a></strong></p>
-<ul class="simple">
 <li><p>Used threading library to run connection setup without blocking the TUI.</p></li>
 <li><p>Used Python’s subprocess API to implement cancellation of connection setup via killing the underlying process.</p></li>
+<li><p><strong>Status:</strong> Merged</p></li>
 </ul>
 </li>
-<li><p><strong>Wrote tests with <code class="docutils literal notranslate"><span class="pre">pytest</span></code> to test data transfers to Google Drive and AWS buckets - PR <a class="reference external" href="https://github.com/neuroinformatics-unit/datashuttle/pull/570/">#570</a></strong></p>
+<li><p><strong>Wrote tests with <code class="docutils literal notranslate"><span class="pre">pytest</span></code> to test data transfers to Google Drive and AWS buckets — PR <a class="reference external" href="https://github.com/neuroinformatics-unit/datashuttle/pull/570/">#570</a></strong></p>
 <ul class="simple">
 <li><p>Refactored existing transfer tests for SSH transfers to extend them for Google Drive and AWS.</p></li>
-<li><p>Used Github secrets for connection credentials to run tests in the CI.</p></li>
+<li><p>Used GitHub secrets for connection credentials to run tests in the CI.</p></li>
 <li><p>Wrote tests for connection setup via the TUI.</p></li>
 <li><p>Wrote backward compatibility tests and extended existing TUI tests to test the new connection widgets.</p></li>
+<li><p><strong>Status:</strong> Merged</p></li>
 </ul>
 </li>
-<li><p><strong>Added documentation for users to set up connection via the new connection methods - PR <a class="reference external" href="https://github.com/neuroinformatics-unit/datashuttle/pull/580">#580</a></strong></p>
+<li><p><strong>Added documentation for users to set up connection via the new connection methods — PR <a class="reference external" href="https://github.com/neuroinformatics-unit/datashuttle/pull/580">#580</a></strong></p>
 <ul class="simple">
 <li><p>Updated and enhanced documentation to include instructions to connect to Google Drive and AWS buckets and added relevant examples.</p></li>
 <li><p>Focused on providing clear instructions for setup, usage, and functionality, benefiting future contributors and users.</p></li>
+<li><p><strong>Status:</strong> Merged</p></li>
+</ul>
+</li>
+<li><p><strong>Integration of the core implementations, tests and docs — PR <a class="reference external" href="https://github.com/neuroinformatics-unit/datashuttle/pull/556">#556</a></strong></p>
+<ul class="simple">
+<li><p>This PR serves as an integration point for all the changes related to Google Drive and AWS S3 functionality.</p></li>
+<li><p>To maintain code clarity and facilitate reviews, we split the implementation, testing, and documentation into separate PRs that merge into this one</p></li>
+<li><p><strong>Status:</strong> Merged</p></li>
 </ul>
 </li>
 </ol>
+<p>All of these PRs were merged into the main branch and the new functionality will be available in the next release of <code class="docutils literal notranslate"><span class="pre">datashuttle</span></code>.</p>
 <p>In addition to writing code, I performed code review for about 10 PRs, for which I was the sole approver prior to merging. Some examples - <a class="reference external" href="https://github.com/neuroinformatics-unit/datashuttle/pull/515">#515</a>, <a class="reference external" href="https://github.com/neuroinformatics-unit/datashuttle/pull/208">#208</a>, <a class="reference external" href="https://github.com/neuroinformatics-unit/datashuttle/pull/551">#551</a>. Here is a <a class="reference external" href="http://github.com/search?q=is%3Apr+reviewed-by%3Acs7-shrey+repo%3Aneuroinformatics-unit%2Fdatashuttle+created%3A2025-04-01..2025-09-01&amp;amp;type=pullrequests&amp;amp;p=1">comprehensive list</a>.</p>
-<h4 align="center">Screenshots</h4>
+<h3 align="center">Screenshots</h3>
 <a class="only-dark reference internal image-reference" href="../_images/datashuttle-new-project-dark.png"><img alt="../_images/datashuttle-new-project-dark.png" class="only-dark align-center" src="../_images/datashuttle-new-project-dark.png" style="width: 80%;" />
 </a>
 <a class="only-light reference internal image-reference" href="../_images/datashuttle-new-project-light.png"><img alt="../_images/datashuttle-new-project-light.png" class="only-light align-center" src="../_images/datashuttle-new-project-light.png" style="width: 80%;" />
 </a>
+<p style="text-align:center;margin:8px;color:##9c9c9c;font-style:italic">Setting up a new project with Google Drive storage option</p>
 <br>
 <a class="only-dark reference internal image-reference" href="../_images/datashuttle-transferring-data-dark.png"><img alt="../_images/datashuttle-transferring-data-dark.png" class="only-dark align-center" src="../_images/datashuttle-transferring-data-dark.png" style="width: 80%;" />
 </a>
 <a class="only-light reference internal image-reference" href="../_images/datashuttle-transferring-data-light.png"><img alt="../_images/datashuttle-transferring-data-light.png" class="only-light align-center" src="../_images/datashuttle-transferring-data-light.png" style="width: 80%;" />
 </a>
+<p style="text-align:center;margin:8px;color:##9c9c9c;font-style:italic">Transferring data using <code>datashuttle</code></p>
 </section>
-<section id="prs-created-during-the-coding-period">
-<h2>PRs created during the coding period<a class="headerlink" href="#prs-created-during-the-coding-period" title="Link to this heading">#</a></h2>
-<ol class="arabic">
-<li><p><a class="reference external" href="https://github.com/neuroinformatics-unit/datashuttle/pull/503">Add Google Drive and AWS S3 as a Remote Storage option</a></p>
-<p><strong>Status:</strong> Merged <br>
-<strong>Description:</strong> This PR implemented the core functionality to connect to Google Drive and AWS S3 buckets, enabling users to store and retrieve neuroscience data from these cloud platforms. It included authentication workflows, background processing for non-blocking UI operations, and integration with the existing <code class="docutils literal notranslate"><span class="pre">datashuttle</span></code> infrastructure.</p>
-</li>
-<li><p><a class="reference external" href="https://github.com/neuroinformatics-unit/datashuttle/pull/570">Add Tests for Google Drive and AWS Connection Methods</a></p>
-<p><strong>Status:</strong> Merged <br>
-<strong>Description:</strong> This PR implemented comprehensive tests for the new storage options, ensuring reliable data transfer and connection setup validation. It also extended existing tests for backward compatibility and added new TUI tests to validate the connection widgets.</p>
-</li>
-<li><p><a class="reference external" href="https://github.com/neuroinformatics-unit/datashuttle/pull/580">Add docs for Google Drive and AWS connections</a></p>
-<p><strong>Status:</strong> Merged <br>
-<strong>Description:</strong> This PR updated the documentation to include detailed instructions for setting up and using Google Drive and AWS S3 connections. It provided step-by-step guides and examples to ensure users can easily configure and use the new storage options.</p>
-</li>
-<li><p><a class="reference external" href="https://github.com/neuroinformatics-unit/datashuttle/pull/556">Google Drive and AWS S3 - Implementation, Tests and Documentation</a></p>
-<p><strong>Status:</strong> Merged <br>
-<strong>Description:</strong> This PR serves as an integration point for all the changes related to Google Drive and AWS S3 functionality. To maintain code clarity and facilitate reviews, we split the implementation, testing, and documentation into separate PRs that merge into this one. This approach allowed for focused development and reviews while keeping the final integration streamlined before merging into the main branch.</p>
-</li>
-</ol>
-<p>All of these PRs were merged into the main branch and the new functionality is now available in <code class="docutils literal notranslate"><span class="pre">datashuttle</span></code>.</p>
 </section>
 <section id="challenges-learnings">
 <h2>Challenges / Learnings<a class="headerlink" href="#challenges-learnings" title="Link to this heading">#</a></h2>
-<p>The project was a smooth sailing for the most part. However, a few parts felt a bit challenging.</p>
+<p>The project was smooth sailing for the most part. However, a few parts felt a bit challenging.</p>
 <ol class="arabic">
-<li><p class="rubric" id="developing-a-multi-step-authentication-flow">Developing a multi step authentication flow</p>
+<li><p class="rubric" id="developing-a-multi-step-authentication-flow">Developing a multi-step authentication flow</p>
 <p>Creating the complex, multi-step authentication workflows in Textual presented a significant paradigm shift from traditional web development which I was more accustomed to. The connection setup process required orchestrating several sequential UI states, dynamically managing UI elements and flow control based on user input. Example - dynamically showing and removing input boxes and buttons on each UI state, reusing UI elements, use of workers / threads for handling connection setup while keeping the main thread responsive, launching subprocess from within the worker threads, storing the process objects and killing them when user cancels setup.</p>
 <p>How did I overcome it? Well, pen and paper. Visualizing the entire flow helped me focus on the overall architecture without getting too lost in the details.</p>
 </li>
 <li><p class="rubric" id="writing-tests-to-run-in-the-ci-environment">Writing tests to run in the CI environment</p>
-<p>Since CI environments don’t have access to browsers (needed for Google’s OAuth for Google Drive access), me and my mentor discussed several strategies and tried implementing a few of them for automated testing in the CI until we found and picked a suitable one. We started with implementing a <a class="reference external" href="https://cloud.google.com/iam/docs/service-account-overview">service account</a> file based authentication but due to a policy change by Google, this method would require users to have a <a class="reference external" href="https://workspace.google.com/">workspace</a> account. Ultimately, we settled on using a config token for browserless access in the Github secrets. This config token is pre-generated by authenticating to Google Drive via browser and contains access and refresh tokens in an encoded format required for authorization to Google Drive. This allows connection setup to be run by just using the config token without needed to authenticate via a browser (making testing in CI environments possible).</p>
+<p>Since CI environments don’t have access to browsers (needed for Google’s OAuth for Google Drive access), my mentor and I discussed several strategies and tried implementing a few of them for automated testing in the CI until we found and picked a suitable one. We started with implementing a <a class="reference external" href="https://cloud.google.com/iam/docs/service-account-overview">service account</a> file based authentication but due to a policy change by Google, this method would require users to have a <a class="reference external" href="https://workspace.google.com/">workspace</a> account. Ultimately, we settled on using a config token for browserless access in the GitHub secrets. This config token is pre-generated by authenticating to Google Drive via browser and contains access and refresh tokens in an encoded format required for authorization to Google Drive. This allows connection setup to be run by just using the config token without needing to authenticate via a browser (making testing in CI environments possible).</p>
 </li>
 </ol>
 </section>
 <section id="future-work">
 <h2>Future work<a class="headerlink" href="#future-work" title="Link to this heading">#</a></h2>
-<p>All the code has been merged into the main branch and is due for a release. Further work would involve discussing with users how they are finding the functionality, get feedback from them and improve upon the feedback.</p>
+<p>All the code has been merged into the main branch and is due for a release. Further work will involve discussing with users how they are finding the functionality, get feedback from them and improve upon the feedback.</p>
 </section>
 <section id="conclusion">
 <h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h2>
@@ -705,15 +715,15 @@ Here are the PRs that were merged:</p>
 </section>
 <section id="acknowledgements">
 <h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Link to this heading">#</a></h2>
-<p>I would like to express my gratitude to my mentor, <a class="reference external" href="https://github.com/JoeZiminski">Joe Ziminski</a>, for his constant encouragement and support throughout this project. His constant positive comments on Github kept me motivated, and I have learnt a lot on how to write clean and documented code from him. My coding style has improved a lot as a result of the regular code reviews. It was an absolute pleasure working with him.</p>
-<p>Finally, I would like to thank Google for organizing GSoC helping first time contributors like me to enter the world of open source.</p>
+<p>I would like to express my gratitude to my mentor, <a class="reference external" href="https://github.com/JoeZiminski">Joe Ziminski</a>, for his constant encouragement and support throughout this project. His constant positive comments on GitHub kept me motivated, and I have learnt a lot on how to write clean and documented code from him. My coding style has improved a lot as a result of the regular code reviews. It was an absolute pleasure working with him.</p>
+<p>Finally, I would like to thank Google for organizing GSoC helping first-time contributors like me to enter the world of open source.</p>
 </section>
 <section id="related-links">
 <h2>Related Links<a class="headerlink" href="#related-links" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/neuroinformatics-unit/datashuttle"><code class="docutils literal notranslate"><span class="pre">datashuttle</span></code> repository</a></p></li>
 <li><p><a class="reference external" href="https://github.com/neuroinformatics-unit/gsoc/pull/9/files?short_path=fa70552#diff-fa70552f23074b47d370279a91cc831c563a2045143034e7d2ec56cab36de2e0">GSoC Project Proposal</a></p></li>
-<li><p><a class="reference external" href="https://github.com/cs7-shrey">My Github profile</a></p></li>
+<li><p><a class="reference external" href="https://github.com/cs7-shrey">My GitHub profile</a></p></li>
 </ul>
 </section>
 </section>
@@ -723,23 +733,16 @@ Here are the PRs that were merged:</p>
 <div class="section ablog__prev-next">
   <span class="ablog__prev">
      
-    <a href="derotation.html">
+    <a href="perspective_osw2025.html">
       
       <i class="fa fa-arrow-circle-left"></i>
       
-      <span>derotation: a Python package for correcting motion artifacts in rotating multiphoton movies</span>
+      <span>A Personal Perspective on the Open Software Week</span>
     </a>
     
   </span>
   <span class="ablog__spacer">&nbsp;</span>
   <span class="ablog__next">
-     
-    <a href="perspective_osw2025.html">
-      <span>A Personal Perspective on the Open Software Week</span>
-      
-      <i class="fa fa-arrow-circle-right"></i>
-      
-    </a>
     
   </span>
 </div>
@@ -777,8 +780,12 @@ Here are the PRs that were merged:</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-overview">Project Overview</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#technical-implementation-overview">Technical Implementation Overview</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-i-did">What I did</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prs-created-during-the-coding-period">PRs created during the coding period</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-i-did">What I did</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contributions">Contributions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prs-created-during-the-coding-period">PRs created during the coding period</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenges-learnings">Challenges / Learnings</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#future-work">Future work</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
