@@ -19,7 +19,7 @@
 
 ## Introduction
 
-Hi, I am Shrey. This summer, I had the opportunity to contribute to open-source neuroscience software through [Google Summer of Code](https://summerofcode.withgoogle.com/) — program that connects student developers with mentoring organizations to work on real-world projects. I worked with the [Neuroinformatics Unit](https://neuroinformatics.dev/) to enhance [`datashuttle`](https://datashuttle.neuroinformatics.dev/), a tool for the creation, validation and transfer of neuroscience project folders.
+Hi, I am Shrey. This summer, I had the opportunity to contribute to open-source neuroscience software through [Google Summer of Code](https://summerofcode.withgoogle.com/) — a program that connects student developers with mentoring organizations to work on real-world projects. I worked with the [Neuroinformatics Unit](https://neuroinformatics.dev/) to enhance [`datashuttle`](https://datashuttle.neuroinformatics.dev/), a tool for the creation, validation and transfer of neuroscience project folders.
 
 In this blog post, I'll share my experience adding cloud storage support to `datashuttle`, specifically integrating Google Drive and Amazon Web Services (AWS) S3 buckets as new remote storage options. This project expanded the tool's storage capabilities beyond its original SSH-based transfers, giving researchers more flexibility in how they manage and store their data.
 
@@ -45,13 +45,13 @@ This project extended `datashuttle`'s remote storage capabilities to include Goo
 
 ## What I did
 
-<h4> Background </h4>
+### Background 
 
 While finding organizations to contribute to for GSoC 2025, I came across the Neuroinformatics Unit (NIU), which was their first time participating in GSoC. Amongst all the projects, `datashuttle` caught my attention because of my interest in SSH and cloud storage and a user interface in the terminal seemed very astonishing.
 
 Contributing to a new large codebase seems daunting at first. So, I followed a very simple process while contributing: reproduce the bug from the issue description, identify the top-level function most likely to contain the bug, then use debuggers and print statements to trace through the call stack (using a pen and paper really helps). I would iteratively drill down through each function call, following the execution path until I located the specific code that needed to be fixed. With time, you start putting together a mental map of how things work. To understand framework-specific code, documentation is one's best friend.
 
-<h4> Contributions </h4>
+### Contributions 
 
 Before the GSoC coding period began, I worked on fixing issues on the `datashuttle` repository and merged 3 PRs. 
 Here are the PRs that were merged: 
@@ -64,7 +64,7 @@ These PRs helped me explore various parts of the codebase and understand the ove
 
 During the coding period, the primary focus was on the implementation, tests and documentation for the Google Drive and AWS backends. 
 
-<h4>PRs created during the coding period</h4>
+### PRs created during the coding period
 
 1. **Suggest next sub ses remote — PR [#484](https://github.com/neuroinformatics-unit/datashuttle/pull/484)**
     
@@ -102,7 +102,7 @@ All of these PRs were merged into the main branch and the new functionality will
 
 In addition to writing code, I performed code review for about 10 PRs, for which I was the sole approver prior to merging. Some examples - [#515](https://github.com/neuroinformatics-unit/datashuttle/pull/515), [#208](https://github.com/neuroinformatics-unit/datashuttle/pull/208), [#551](https://github.com/neuroinformatics-unit/datashuttle/pull/551). Here is a [comprehensive list](http://github.com/search?q=is%3Apr+reviewed-by%3Acs7-shrey+repo%3Aneuroinformatics-unit%2Fdatashuttle+created%3A2025-04-01..2025-09-01&type=pullrequests&p=1).
 
-<h4 align="center">Screenshots</h4>
+<h3 align="center">Screenshots</h3>
 
 ```{image} /_static/blog_images/datashuttle_gsoc2025/datashuttle-new-project-dark.png
 :align: center
@@ -115,7 +115,7 @@ In addition to writing code, I performed code review for about 10 PRs, for which
 :width: 80%
 :class: only-light
 ```
-<p style="text-align:center;margin:8px;color:#d4d4d4;font-style:italic">Setting up a new project with Google Drive storage option</p>
+<p style="text-align:center;margin:8px;color:##9c9c9c;font-style:italic">Setting up a new project with Google Drive storage option</p>
 
 <br>
 
@@ -130,7 +130,7 @@ In addition to writing code, I performed code review for about 10 PRs, for which
 :width: 80%
 :class: only-light
 ```
-<p style="text-align:center;margin:8px;color:#d4d4d4;font-style:italic">Transferring data using <code>datashuttle</code></p>
+<p style="text-align:center;margin:8px;color:##9c9c9c;font-style:italic">Transferring data using <code>datashuttle</code></p>
 
 ## Challenges / Learnings
 
