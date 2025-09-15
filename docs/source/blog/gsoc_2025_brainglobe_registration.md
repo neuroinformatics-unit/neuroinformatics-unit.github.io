@@ -1,5 +1,5 @@
 :blogpost: true
-:date: August 25, 2025
+:date: September 15, 2025
 :author: Saarah Hussain
 :location: London, UK
 :category: Blog
@@ -8,17 +8,15 @@
 
 # GSoC 2025: brainglobe-registration
 
-**Project**: [BrainGlobe: Automating Region Selection in brainglobe-registration](https://summerofcode.withgoogle.com/programs/2025/projects/7Xk4Fl7t) <br>
-**Mentors**: [Igor Tatarnikov](https://github.com/IgorTatarnikov), [Alessandro Felder](https://github.com/alessandrofelder), [Adam Tyson](https://github.com/adamltyson)
-
----
-
 ## Introduction
 
-Hi, I'm Saarah. The intersection of healthcare and software development has
+Hi, I'm [Saarah](https://github.com/saarah815). The intersection of healthcare and software development has
 always been important to me, which is why spending my summer with the
 [Neuroinformatics Unit](https://github.com/neuroinformatics-unit)
 has been the perfect opportunity to bring together the work I love.
+
+**Project**: [BrainGlobe: Automating Region Selection in brainglobe-registration](https://summerofcode.withgoogle.com/programs/2025/projects/7Xk4Fl7t) <br>
+**Mentors**: [Igor Tatarnikov](https://github.com/IgorTatarnikov), [Alessandro Felder](https://github.com/alessandrofelder), [Adam Tyson](https://github.com/adamltyson)
 
 ---
 
