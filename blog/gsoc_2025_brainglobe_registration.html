@@ -6,8 +6,9 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>All posts &#8212; NIU</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>GSoC 2025: brainglobe-registration &#8212; NIU</title>
   
   
   
@@ -58,8 +59,8 @@
                 gtag('js', new Date());
                 gtag('config', 'G-6260TGM7TY');
             </script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'blog/archive';</script>
-    <link rel="canonical" href="https://neuroinformatics.dev/blog/archive.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'blog/gsoc_2025_brainglobe_registration';</script>
+    <link rel="canonical" href="https://neuroinformatics.dev/blog/gsoc_2025_brainglobe_registration.html" />
     <link rel="icon" href="../_static/logo_light.png"/>
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -343,6 +344,10 @@
   
 
   
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
 </div>
 
     </header>
@@ -568,7 +573,7 @@
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">All posts</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">GSoC 2025: brainglobe-registration</span></li>
   </ul>
 </nav>
 </div>
@@ -584,109 +589,97 @@
                 
 <div id="searchbox"></div>
                 <article class="bd-article">
-                    
-<div class="section ablog__catalog_header">
-  <h2>
-    <span
-      >Posted in
-      <a href="2025.html">2025</a>
-    </span>
-  </h2>
-  
-  <div class="section ablog__catalog_post">
-    <p>
+                   <section class="tex2jax_ignore mathjax_ignore" id="gsoc-2025-brainglobe-registration">
+<h1>GSoC 2025: brainglobe-registration<a class="headerlink" href="#gsoc-2025-brainglobe-registration" title="Link to this heading">#</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>Hi, I’m <a class="reference external" href="https://github.com/saarah815">Saarah</a>. The intersection of healthcare and software development has
+always been important to me, which is why spending my summer with the
+<a class="reference external" href="https://github.com/neuroinformatics-unit">Neuroinformatics Unit</a>
+has been the perfect opportunity to bring together the work I love.</p>
+<p><strong>Project</strong>: <a class="reference external" href="https://summerofcode.withgoogle.com/programs/2025/projects/7Xk4Fl7t">BrainGlobe: Automating Region Selection in brainglobe-registration</a> <br>
+<strong>Mentors</strong>: <a class="reference external" href="https://github.com/IgorTatarnikov">Igor Tatarnikov</a>, <a class="reference external" href="https://github.com/alessandrofelder">Alessandro Felder</a>, <a class="reference external" href="https://github.com/adamltyson">Adam Tyson</a></p>
+</section>
+<hr class="docutils" />
+<section id="project-overview">
+<h2>Project Overview<a class="headerlink" href="#project-overview" title="Link to this heading">#</a></h2>
+<p>Over the summer, I worked on extending the
+<a class="reference external" href="https://github.com/brainglobe/brainglobe-registration"><code class="docutils literal notranslate"><span class="pre">brainglobe-registration</span></code></a>
+plugin, focusing on making atlas alignment more accessible and less
+error-prone for users without a neuroscience background.</p>
+<p>Thus far, choosing the correct atlas slice and orientation has been a manual
+task – requiring users to scroll through volumes, make rough visual
+judgements, and enter rotation values by hand. My project aimed to automate
+this step, using
+<a class="reference external" href="https://github.com/bayesian-optimization/BayesianOptimization"><code class="docutils literal notranslate"><span class="pre">BayesianOptimization</span></code></a>
+to identify the best matching slice and orientation parameters directly
+from the data.</p>
+<p>The result is a new <strong>Automatic Slice Detection widget</strong> in the plugin, which
+not only handles single 2D images but can also align slabs of consecutive
+slices.</p>
+<p><img alt="img_1.png" src="../_images/slice_detection_widget.png" /></p>
+<p>The optimiser identifies the atlas slice and rotation parameters that best
+match the moving image, and then updates the Napari widget accordingly:</p>
+<p><img alt="img.png" src="../_images/post_slice_detection_screenshot.png" /></p>
+<p>For slabs, the optimiser matches the first and last slices and then
+interpolates alignment parameters across the stack, so that users can align
+larger volumes in one go. I have also written detailed
+<a class="reference external" href="https://github.com/brainglobe/brainglobe.github.io/pull/362/files?short_path=61a3e19">documentation</a>
+outlining exactly how to use these features.</p>
+<p>In addition to the core project requirements, I also worked on enhancing the
+project following discussions with my mentors. A key part of this work was
+building <strong>clear and informative logging</strong> – every optimisation step logs
+the parameters tested, its similarity score, the corresponding rotated slice
+image, and the rotation parameters. This makes the process more transparent
+and provides a useful record for reproducibility.</p>
+<p>Working on this project has been a valuable experience in bridging methods
+from optimisation and image analysis with practical neuroscience workflows.
+I particularly enjoyed balancing algorithmic design with UX considerations,
+such as keeping the interface intuitive while still exposing enough
+flexibility for advanced use.</p>
+<p>Collaborating with the NIU team also gave me a deeper appreciation of the
+importance of open, well-documented tools in neuroinformatics, and the work
+that goes into making them robust and user-friendly.</p>
+<p>Looking back, the most rewarding part was seeing the tool go from concept to
+a usable feature that I hope will save researchers time and difficulty in
+their workflows. Contributing to the BrainGlobe ecosystem has been a greatly
+rewarding opportunity, and I am incredibly excited to see how these tools
+continue to evolve in the future.</p>
+</section>
+<hr class="docutils" />
+<section id="repositories">
+<h2>Repositories<a class="headerlink" href="#repositories" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/brainglobe/brainglobe-registration"><code class="docutils literal notranslate"><span class="pre">brainglobe-registration</span></code></a></p></li>
+<li><p><a class="reference external" href="https://github.com/neuroinformatics-unit/fancylog"><code class="docutils literal notranslate"><span class="pre">fancylog</span></code></a></p></li>
+<li><p><a class="reference external" href="https://github.com/brainglobe/brainglobe.github.io/"><code class="docutils literal notranslate"><span class="pre">brainglobe.github.io</span></code></a></p></li>
+</ul>
+<hr class="docutils" />
+<p><em>Thank you to my mentors and the incredible team at NIU for all of their support and guidance!</em></p>
+</section>
+</section>
+
+<div class="section ablog__blog_comments">
+     
+<div class="section ablog__prev-next">
+  <span class="ablog__prev">
+     
+    <a href="datashuttle_gsoc2025.html">
       
-      <span>15 September 2025</span>
-       -
-      <a href="gsoc_2025_brainglobe_registration.html">GSoC 2025: brainglobe-registration</a>
-    </p>
-  </div>
-  
-  <div class="section ablog__catalog_post">
-    <p>
+      <i class="fa fa-arrow-circle-left"></i>
       
-      <span>12 September 2025</span>
-       -
-      <a href="datashuttle_gsoc2025.html">Add Google Drive and AWS to datashuttle - Final GSoC Report</a>
-    </p>
-  </div>
-  
-  <div class="section ablog__catalog_post">
-    <p>
-      
-      <span>12 September 2025</span>
-       -
-      <a href="perspective_osw2025.html">A Personal Perspective on the Open Software Week</a>
-    </p>
-  </div>
-  
-  <div class="section ablog__catalog_post">
-    <p>
-      
-      <span>01 July 2025</span>
-       -
-      <a href="derotation.html">derotation: a Python package for correcting motion artifacts in rotating multiphoton movies</a>
-    </p>
-  </div>
-  
-  <div class="section ablog__catalog_post">
-    <p>
-      
-      <span>28 February 2025</span>
-       -
-      <a href="gsoc2025.html">We are participating in Google Summer of Code 2025!</a>
-    </p>
-  </div>
-  
+      <span>Add Google Drive and AWS to datashuttle - Final GSoC Report</span>
+    </a>
+    
+  </span>
+  <span class="ablog__spacer">&nbsp;</span>
+  <span class="ablog__next">
+    
+  </span>
 </div>
   
-<div class="section ablog__catalog_header">
-  <h2>
-    <span
-      >Posted in
-      <a href="2024.html">2024</a>
-    </span>
-  </h2>
-  
-  <div class="section ablog__catalog_post">
-    <p>
-      
-      <span>07 May 2024</span>
-       -
-      <a href="datashuttle.html">Managing neuroscience projects with datashuttle</a>
-    </p>
-  </div>
-  
-  <div class="section ablog__catalog_post">
-    <p>
-      
-      <span>02 May 2024</span>
-       -
-      <a href="neuroblueprint.html">Data organisation with NeuroBlueprint</a>
-    </p>
-  </div>
-  
 </div>
-  
-<div class="section ablog__catalog_header">
-  <h2>
-    <span
-      >Posted in
-      <a href="2023.html">2023</a>
-    </span>
-  </h2>
-  
-  <div class="section ablog__catalog_post">
-    <p>
-      
-      <span>23 June 2023</span>
-       -
-      <a href="matlab_to_python.html">Why and How to Translate Scientific code from MATLAB to Python: A Guide for Researchers</a>
-    </p>
-  </div>
-  
-</div>
-  
+
                 </article>
               
               
@@ -702,6 +695,35 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-overview">Project Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#repositories">Repositories</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/blog/gsoc_2025_brainglobe_registration.md.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
               
             
           </div>
