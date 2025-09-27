@@ -1,7 +1,7 @@
 Blog
 ================================
 
-.. postlist:: 5
+.. postlist:: 10
    :list-style: circle
    :category: Blog
    :date: %B %d, %Y
