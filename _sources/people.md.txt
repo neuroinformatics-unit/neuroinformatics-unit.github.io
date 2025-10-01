@@ -2,7 +2,7 @@
 
 # People
 
-Current members of the Neuroinformatics Unit:
+## Current members:
 
 ::::{grid} 1 1 2 4
 :gutter: 3
@@ -61,4 +61,18 @@ Senior Research Software Engineer
 :link: https://github.com/sfmig
 
 Senior Research Software Engineer
+:::
+::::
+
+
+## Affiliate members
+::::{grid} 1 1 2 4
+:gutter: 3
+
+:::{grid-item-card} Viktor Plattner
+:img-top: _static/viktor_plattner.jpg
+:link: https://github.com/viktorpm
+
+Senior Research Fellow
+:::
 ::::
