@@ -15,7 +15,8 @@ additional satellite events, guest lectures and opportunities for researchers to
 
 
 There are four tracks targeted to different audiences.
-We encourage you to read each track's description and choose the one(s) that best fits your interests.
+We encourage you to read each track's description and choose the one(s) that best fits your interests. More details 
+be added before registration opens.
 
 :::: {grid} 1 1 2 4
 
