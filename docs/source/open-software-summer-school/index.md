@@ -17,7 +17,7 @@ additional satellite events, guest lectures and opportunities for researchers to
 There are four tracks targeted to different audiences.
 We encourage you to read each track's description and choose the one(s) that best fits your interests.
 
-:::: {grid} 1 1 4 4
+:::: {grid} 1 1 2 4
 
 :::{grid-item-card} {fas}`video;sd-text-secondary` Animals in Motion
 :img-top: /_static/osw_images/animals-in-motion-card.png
@@ -29,7 +29,7 @@ and analyse animal motion from video footage.
 
 :::
 
-:::{grid-item-card} {fas}`microscope;sd-text-primary` Large array data
+:::{grid-item-card} {fas}`layer-group;sd-text-primary` Large array data
 :img-top: /_static/osw_images/big-imaging-data-card.png
 :link: 
 :link-type: ref
@@ -48,8 +48,8 @@ Use the BrainGlobe ecosystem of computational neuroanatomy tools
 to analyse whole-brain microscopy datasets.
 :::
 
-:::{grid-item-card} {fas}`bolt;sd-text-warning` Extracellular Electrophysiology
-:img-top:
+:::{grid-item-card} {fas}`bolt;sd-text-info` Extracellular Electrophysiology
+:img-top: /_static/osw_images/ephys-card.png
 :link:
 :link-type: ref
 
