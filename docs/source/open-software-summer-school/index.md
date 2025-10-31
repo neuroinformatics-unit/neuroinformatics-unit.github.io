@@ -88,7 +88,7 @@ commitment for four weeks prior to the summer school**
 
 
 ## Fees
-- **Academics**: £300 per week
+- **Academic**: £300 per week
 - **Industry**: £600 per week
 
 ### Financial Assistance
