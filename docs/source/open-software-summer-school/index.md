@@ -7,7 +7,7 @@ in **London, UK**. This event will bring together researchers, developers, and u
 
 [The 2025 event](2025/index) (known as Open Software Week) brought together 44 attendees from 12 countries to learn 
 about open source approaches for handling large images, processing microscopy data and analysing video behavioural data. 
-In 2026, we will return, with an expanded two-week program adding a new Extracellular Electrophysiology track, 
+In 2026, we will return, with an expanded two-week program adding a new *Extracellular Electrophysiology* track, 
 additional satellite events, guest lectures and opportunities for researchers to present their own work. 
 
 ## Schedule
