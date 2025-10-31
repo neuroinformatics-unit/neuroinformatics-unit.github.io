@@ -68,12 +68,14 @@ You may register for week 1, week 2 or both. However, you can only register for 
 
 ## Key Dates
 
-- **December 1st 2025**: Applications open
-- **January 31st 2026**: Applications close
-- **March 2026**: Applicants are notified of acceptance
-- **July 2026**: Optional preparatory month begins
-- **August 17-21 2026**: Week 1 (Animals in Motion & Large Array Data)
-- **August 24-28 2026**: Week 2 (BrainGlobe & Extracellular Electrophysiology)
+| Date | Event |
+| --- | --- |
+| December 1st 2025 | Applications open |
+| January 31st 2026 | Applications close |
+| March 2026 | Applicants are notified of acceptance |
+| July 2026 | Optional preparatory month begins |
+| August 17-21 2026 | Week 1: *Animals in Motion* & *Large Array Data* |
+| August 24-28 2026 | Week 2: *BrainGlobe* & *Extracellular Electrophysiology* 
 
 ## Preparatory month
 All four tracks require a basic knowledge of scientific Python programming. If you don't have this background, that's 
