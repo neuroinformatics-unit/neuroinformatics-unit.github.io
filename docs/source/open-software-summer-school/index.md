@@ -117,6 +117,7 @@ A limited number of travel stipends will also be available, but we encourage app
 ```{toctree}
 :maxdepth: 1
 :caption: Index
+:hidden:
 
 funding
 2025/index
