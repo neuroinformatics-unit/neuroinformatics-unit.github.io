@@ -60,8 +60,10 @@ Using open source tools to process and analyse large extracellular electrophysio
 
 :::{admonition} Registration
 :class: info
-You may register for week 1, week 2 or both weeks. However, you can only register for one track per week, i.e.
-Animals in Motion or Large Array Data and BrainGlobe or Extracellular Electrophysiology.
+You may register for week 1, week 2 or both. However, you can only register for one track per week, i.e:
+
+- **Week 1**: either *Animals in Motion* or *Large Array Data*.
+- **Week 2**: either *BrainGlobe* or *Extracellular Electrophysiology*.
 :::
 
 ## Key Dates
