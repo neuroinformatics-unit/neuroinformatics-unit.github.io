@@ -11,7 +11,7 @@ but it can be _complicated_.
 
 For this reason we have written some documents to outline the processes we use, so hopefully they aren't so opaque. 
 We are also happy to guide new contributors through the process. For more details please see 
-[details about mentored open source contributions](mentoring).
+[our documentation about mentored open source contributions](mentoring).
 
 ## Internships
 We offer a number of paid internships each year, through established programs such as 
