@@ -1,4 +1,6 @@
 # Get involved
+
+## Contributing to Neuroinformatics Unit projects
 We always welcome contributions to all of our software, whether from experienced developers, or researchers looking 
 to make their first open-source contribution. 
 
@@ -9,7 +11,19 @@ but it can be _complicated_.
 
 For this reason we have written some documents to outline the processes we use, so hopefully they aren't so opaque. 
 We are also happy to guide new contributors through the process. For more details please see 
-[details about mentored open source contributions](mentoring) and [Google Summer of Code](gsoc/index).
+[our documentation about mentored open source contributions](mentoring).
+
+## Internships
+We offer a number of paid internships each year, through established programs such as 
+[Google Summer of Code](gsoc/index) and [In2research](https://in2scienceuk.org/our-programmes/in2research/). 
+Unfortunately we do not offer any other formal internship opportunities. 
+
+## Research software engineer and scientist positions
+We usually do not have any full time positions available. As and when these are available, they will be advertised here 
+and via social media and Zulip.
+
+If you would like to discuss applying for funding to work with us (e.g. a personal fellowship), 
+please <a href="mailto:adam.tyson@ucl.ac.uk ?subject=Fellowship">email Adam Tyson</a>.
 
 ## Further details
 ```{toctree}
