@@ -54,6 +54,11 @@ Claudi, F., Petrucco, L., **Tyson, A. L.**, Branco, T., Margrie, T. W., Portugue
 ::::{grid} 1 1 1 1
 :gutter: 3
 
+:::{grid-item-card} Aligning spikes to histology with BrainGlobe
+:link: https://youtu.be/yER8ynNdJcE?si=9_9eTJv--0GZMntn
+Alessandro Felder, UCL Neuropixels course, October 2025
+:::
+
 :::{grid-item-card} movement: A Python toolbox for analysing animal body movements
 :link: https://youtu.be/GXBQsqqZZTg?si=0bt5Q_lGY8GXw6dx
 Niko Sirmpilatze, ABIDE seminar, February 2025
