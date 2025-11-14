@@ -13,7 +13,7 @@ These tips are largely based on the [OpenAstronomy guidelines](https://openastro
 
     A great way to get started in the community of our open-source tools is to experience them as a user. Try to install and use our tools, experiment with the code, and report any issues you find. This will help you understand the tools better and will give you a better idea of what you can contribute.
 
-    A good starting point as a user could be `movement`'s [gallery of examples](https://movement.neuroinformatics.dev/examples/index.html) or [BrainGlobe's tutorials](https://brainglobe.info/tutorials/index.html).
+    A good starting point as a user could be `movement`'s [gallery of examples](https://movement.neuroinformatics.dev/latest/examples/index.html) or [BrainGlobe's tutorials](https://brainglobe.info/tutorials/index.html).
 
 3. **Get ready to be a developer**
 
@@ -41,7 +41,7 @@ These tips are largely based on the [OpenAstronomy guidelines](https://openastro
     - the [First contributions project](https://github.com/firstcontributions/first-contributions)
     - the GitHub blog post: [New to open source? Here’s everything you need to get started](https://github.blog/open-source/new-to-open-source-heres-everything-you-need-to-get-started/)
 
-    Before contributing to a project, make sure you read through their contributing guidelines. These will give you an idea of the required steps, and what is expected of you. An example is `movement`'s [How to Contribute guide](https://movement.neuroinformatics.dev/community/contributing.html#target-contributing). The NIU also publishes some general [development guidelines](https://neuroinformatics.dev/get-involved/languages_frameworks.html).
+    Before contributing to a project, make sure you read through their contributing guidelines. These will give you an idea of the required steps, and what is expected of you. An example is `movement`'s [How to Contribute guide](https://movement.neuroinformatics.dev/latest/community/contributing.html#target-contributing). The NIU also publishes some general [development guidelines](https://neuroinformatics.dev/get-involved/languages_frameworks.html).
 
     You can check the issues from the tools involved in the GSoC projects in the links below:
     - [`movement` issues](https://github.com/neuroinformatics-unit/movement/issues)

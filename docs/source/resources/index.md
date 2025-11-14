@@ -1,5 +1,5 @@
 # Resources
-
+## Other Neuroinformatics Unit Websites
 ::::{grid} 1 1 1 1
 :gutter: 3
 
@@ -14,5 +14,10 @@ The HowTo site hosts resources for SWC & GCNU researchers (e.g. troubleshooting 
 :::
 ::::
 
+## Other Resources
+```{toctree}
+:maxdepth: 1
+code_of_conduct
+```
 
 
