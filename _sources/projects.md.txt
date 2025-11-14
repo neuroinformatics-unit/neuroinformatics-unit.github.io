@@ -24,7 +24,7 @@ and open-source community (e.g., by organising hackathons).
 ::::{grid} 1 1 1 1
 
 :::{grid-item-card} {fas}`video;sd-text-primary` movement
-:link: https://movement.neuroinformatics.dev/
+:link: https://movement.neuroinformatics.dev/latest/
 
 Pose estimation tools (such as DeepLabCut and SLEAP) are now commonplace when processing video data of animal 
 behaviour. There is not yet a standardised, easy to use way to process the pose tracks from these software packages.
