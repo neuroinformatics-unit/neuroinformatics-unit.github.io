@@ -61,7 +61,7 @@ publications
 blog/index
 roadmaps/index
 get-involved/index
-resources
+resources/index
 collaborations
 open-software-summer-school/index
 gsoc-2025-datashuttle
