@@ -1,12 +1,12 @@
 # GSoC NIU Projects 2025: `movement`
 
-If you are interested in any of these [movement](https://github.com/neuroinformatics-unit/movement) projects, [get in touch](https://movement.neuroinformatics.dev/community/index.html)! Feel free to open a new topic on [Zulip GSoC channel](https://neuroinformatics.zulipchat.com/#narrow/channel/487898-GSoC) and ask the community.
+If you are interested in any of these [movement](https://github.com/neuroinformatics-unit/movement) projects, [get in touch](https://movement.neuroinformatics.dev/latest/community/index.html)! Feel free to open a new topic on [Zulip GSoC channel](https://neuroinformatics.zulipchat.com/#narrow/channel/487898-GSoC) and ask the community.
 
 Our working language is English, but our mentors for these projects also speak Spanish.
 
 <!-- ------------------------------ -->
 :::{dropdown} {fas}`video;sd-text-primary` Support for Kalman filters in `movement`
-One of `movement`'s [priority features](https://movement.neuroinformatics.dev/community/roadmaps.html#long-term-vision) is to support versatile and efficient methods for data cleaning and filtering. To this aim, we would like to add support for applying Kalman filter in `movement`.
+One of `movement`'s [priority features](https://movement.neuroinformatics.dev/latest/community/roadmaps.html#long-term-vision) is to support versatile and efficient methods for data cleaning and filtering. To this aim, we would like to add support for applying Kalman filter in `movement`.
 
 In its simplest implementation, we would like to be able to use Kalman filters to smooth position, velocity and acceleration timeseries. However, the same functionality could be expanded to other use cases, for example to fix identity switches between animals in multi-animal tracking data, or to improve point trajectory estimations by aggregating information from multiple sources. We are open to either implementing from scratch or wrapping an existing Python implementation. We would like to work with the GSoC contributor to design the best possible solution.
 
@@ -16,7 +16,7 @@ In its simplest implementation, we would like to be able to use Kalman filters t
 - A Python implementation of a Kalman filter for fixing identity switches in multi-animal tracking data (stretch goal).
 - Tests to cover any added functionality.
 - Documentation for the new functionality.
-- An example use case in the `movement` [gallery](https://movement.neuroinformatics.dev/examples/index.html).
+- An example use case in the `movement` [gallery](https://movement.neuroinformatics.dev/latest/examples/index.html).
 
 **Duration**
 <!-- Small (~90 hours), Medium (~175 hours) or Large (~350 hours)  -->
@@ -42,11 +42,11 @@ Experience with Python, [NumPy](https://numpy.org/doc/stable/index.html) and/or 
 
 **Further reading**
 <!-- The best pages include links to more detailed descriptions and related materials for each project. They might even include actual use cases! -->
-- `movement` [mission and scope](https://movement.neuroinformatics.dev/community/mission-scope.html#target-mission), [roadmap](https://movement.neuroinformatics.dev/community/roadmaps.html#target-roadmaps) and [contributing guide](https://movement.neuroinformatics.dev/community/contributing.html#target-contributing).
+- `movement` [mission and scope](https://movement.neuroinformatics.dev/latest/community/mission-scope.html#target-mission), [roadmap](https://movement.neuroinformatics.dev/latest/community/roadmaps.html#target-roadmaps) and [contributing guide](https://movement.neuroinformatics.dev/latest/community/contributing.html#target-contributing).
 - [KalmanFilter.NET tutorial](https://www.kalmanfilter.net/default.aspx).
 - An [example implementation](https://github.com/joacorapela/lds_python) in Python using linear dynamical systems for tracking.
 - Python implementations of Kalman filters, such as [pykalman](https://github.com/pykalman/pykalman)
-- State-space models packages with support for Kalman filters, such as [dynamax](https://movement.neuroinformatics.dev/examples/index.html), or time series analysis packages such as [darts](https://unit8co.github.io/darts/index.html).
+- State-space models packages with support for Kalman filters, such as [dynamax](https://movement.neuroinformatics.dev/latest/examples/index.html), or time series analysis packages such as [darts](https://unit8co.github.io/darts/index.html).
 :::
 
 
@@ -65,7 +65,7 @@ The goal of this project is to add functionality to easily detect such outlier k
 - Implementing an outlier detection module, with methods for temporal smoothness, pose plausibility and multi-view consistency.
 - Tests to cover any added functionality.
 - Documentation for the new functionality.
-- An example use case in the `movement` [gallery](https://movement.neuroinformatics.dev/examples/index.html).
+- An example use case in the `movement` [gallery](https://movement.neuroinformatics.dev/latest/examples/index.html).
 
 **Duration**
 <!-- Small (~90 hours), Medium (~175 hours) or Large (~350 hours)  -->
@@ -93,7 +93,7 @@ Experience with Python, [NumPy](https://numpy.org/doc/stable/index.html) and/or 
 
 **Further reading**
 <!-- The best pages include links to more detailed descriptions and related materials for each project. They might even include actual use cases! -->
-- `movement` [mission and scope](https://movement.neuroinformatics.dev/community/mission-scope.html#target-mission), [roadmap](https://movement.neuroinformatics.dev/community/roadmaps.html#target-roadmaps) and [contributing guide](https://movement.neuroinformatics.dev/community/contributing.html#target-contributing).
+- `movement` [mission and scope](https://movement.neuroinformatics.dev/latest/community/mission-scope.html#target-mission), [roadmap](https://movement.neuroinformatics.dev/latest/community/roadmaps.html#target-roadmaps) and [contributing guide](https://movement.neuroinformatics.dev/latest/community/contributing.html#target-contributing).
 - LightningPose [paper](https://www.nature.com/articles/s41592-024-02319-1) and [codebase](https://github.com/paninski-lab/lightning-pose/blob/main/lightning_pose/losses/losses.py)
 :::
 
@@ -115,7 +115,7 @@ We are open to other suggestions and would like to work with the GSoC contributo
 - A Python implementation of a method to calibrate the confidence scores provided by at least one of the pose estimation frameworks supported in `movement` (DeepLabCut, SLEAP, LightningPose, anipose).
 - Tests to cover any added functionality.
 - Documentation for the new functionality.
-- An example use case in the `movement` [gallery](https://movement.neuroinformatics.dev/examples/index.html).
+- An example use case in the `movement` [gallery](https://movement.neuroinformatics.dev/latest/examples/index.html).
 
 
 **Duration**
@@ -150,7 +150,7 @@ There are nice explanations of the calibration issue for the case of classificat
 <!-- ------------------------------ -->
 :::{dropdown} {fas}`video;sd-text-primary` Web-based graphical user interface for `movement`
 
-As stated in its [design principles](https://movement.neuroinformatics.dev/community/mission-scope.html#design-principles), `movement` is committed to ensuring ease of use and broad accessibility, to support scientist and researchers of all coding levels. This involves developing an intuitive graphical user interface (GUI), which the team has implemented using [napari](https://napari.org/stable/), a popular Python library for n-dimensional image visualisation, annotation, and analysis.
+As stated in its [design principles](https://movement.neuroinformatics.dev/latest/community/mission-scope.html#design-principles), `movement` is committed to ensuring ease of use and broad accessibility, to support scientist and researchers of all coding levels. This involves developing an intuitive graphical user interface (GUI), which the team has implemented using [napari](https://napari.org/stable/), a popular Python library for n-dimensional image visualisation, annotation, and analysis.
 
 However, there would be additional value in providing a web-based GUI for `movement`. Specifically one that would allow for interactive data visualisations within Jupyter Notebooks, a tool very popular among data scientists and researchers particularly during data exploration stages. A web-based GUI may also allow for easier sharing of results and analyses with collaborators, and may facilitate cloud-based workflows
 

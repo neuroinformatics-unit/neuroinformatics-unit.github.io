@@ -34,6 +34,6 @@ to develop computational neuroanatomy ([BrainGlobe](https://brainglobe.info/)) a
 
 ## External
 - We have an ongoing collaboration with the [Keshavarzi Laboratory](https://www.keshavarzilab.com/) at the University 
-of Cambridge to build multiple tools, including [movement](https://movement.neuroinformatics.dev/) and 
+of Cambridge to build multiple tools, including [movement](https://movement.neuroinformatics.dev/latest/) and 
 [DataShuttle](https://datashuttle.neuroinformatics.dev/)
 - We contribute to multiple open source projects, including [SpikeInterface](https://spikeinterface.readthedocs.io/en/latest/)
