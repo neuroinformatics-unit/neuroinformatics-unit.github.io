@@ -1,0 +1,805 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>GSoC NIU Projects 2025: ethology &#8212; NIU</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css?v=d57c6e56" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../../../_static/documentation_options.js?v=d45e8c67"></script>
+    <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-6260TGM7TY"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-6260TGM7TY');
+            </script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-6260TGM7TY');
+            </script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'get-involved/gsoc/2025/projects/ethology';</script>
+    <link rel="canonical" href="https://neuroinformatics.dev/get-involved/gsoc/2025/projects/ethology.html" />
+    <link rel="icon" href="../../../../_static/logo_light.png"/>
+    <link rel="author" title="About these documents" href="../../../../about.html" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="GSoC NIU Projects 2025: BrainGlobe" href="brainglobe.html" />
+    <link rel="prev" title="GSoC NIU Projects 2025: movement" href="movement.html" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />   
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../_static/logo_light.png" class="logo__image only-light" alt=""/>
+    <img src="../../../../_static/logo_dark.png" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">NIU</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../about.html">
+    About us
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../people.html">
+    People
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../projects.html">
+    Projects
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../publications.html">
+    Publications & Media
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../blog/index.html">
+    Blog
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../../roadmaps/index.html">
+    Roadmaps
+  </a>
+</li>
+
+
+<li class=" current active">
+  <a class="nav-link dropdown-item nav-internal" href="../../../index.html">
+    Get involved
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../../resources/index.html">
+    Resources
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../../collaborations.html">
+    Collaborations
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../../open-software-summer-school/index.html">
+    Open Software Summer School
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../../gsoc-2025-datashuttle.html">
+    <no title>
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/neuroinformatics-unit/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/swc_niu" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://mastodon.online/@neuroinformatics" title="Mastodon" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-mastodon fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Mastodon</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://bsky.app/profile/neuroinformatics.dev" title="Bluesky" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-bluesky fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Bluesky</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://neuroinformatics.zulipchat.com/" title="Zulip (chat)" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-comments fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Zulip (chat)</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../about.html">
+    About us
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../people.html">
+    People
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../projects.html">
+    Projects
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../publications.html">
+    Publications & Media
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../blog/index.html">
+    Blog
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../roadmaps/index.html">
+    Roadmaps
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../../../index.html">
+    Get involved
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../resources/index.html">
+    Resources
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../collaborations.html">
+    Collaborations
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../open-software-summer-school/index.html">
+    Open Software Summer School
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../gsoc-2025-datashuttle.html">
+    <no title>
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/neuroinformatics-unit/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/swc_niu" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://mastodon.online/@neuroinformatics" title="Mastodon" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-mastodon fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Mastodon</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://bsky.app/profile/neuroinformatics.dev" title="Bluesky" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-bluesky fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Bluesky</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://neuroinformatics.zulipchat.com/" title="Zulip (chat)" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-comments fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Zulip (chat)</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../../index.html" class="nav-link">Get involved</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">Google Summer of Code</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Google Summer of Code 2025</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">GSoC NIU Projects 2025</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">GSoC NIU Projects 2025: <code class="docutils literal notranslate"><span class="pre">ethology</span></code></span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                   <section class="tex2jax_ignore mathjax_ignore" id="gsoc-niu-projects-2025-ethology">
+<h1>GSoC NIU Projects 2025: <code class="docutils literal notranslate"><span class="pre">ethology</span></code><a class="headerlink" href="#gsoc-niu-projects-2025-ethology" title="Link to this heading">#</a></h1>
+<p>If you are interested in any of these <a class="reference external" href="https://github.com/neuroinformatics-unit/ethology">ethology</a> projects, get in touch! Feel free to open a new topic on our <a class="reference external" href="https://neuroinformatics.zulipchat.com/#narrow/channel/487898-GSoC">Zulip GSoC channel</a> and ask the community.</p>
+<p>Our working language is English, but our mentors for these projects also speak Spanish.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><span class="fas fa-video sd-text-primary"></span> Support for any-point trackers in <code class="docutils literal notranslate"><span class="pre">ethology</span></code></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The main goal of <a class="reference external" href="https://github.com/neuroinformatics-unit/ethology"><code class="docutils literal notranslate"><span class="pre">ethology</span></code></a> is to facilitate the application of a wide range of computer vision tasks to animal behaviour research, by providing a unified data analysis interface across these tasks.</p>
+<p class="sd-card-text">Any-point tracking is a good example of a computer vision task that is maturing within the field of computer vision, but it still relatively inaccessible to animal behaviour researchers. The task consists on the following: given a video and a set of query points on a frame of that video, predict the location of those points on every other frame of the video. This is a more general problem than the pose estimation one, which typically focuses on predicting the location of a fixed set of keypoints on an animal’s body. As a result, any-point tracking tools could prove to be a very valuable tool for studying animal behaviour, with potential to supplement or potentially even replace pose estimation.</p>
+<p class="sd-card-text">Depending on the quality of the trajectories generated by any-point trackers, these could be useful to study the movement patterns of animals directly, or they may be more helpful as a semi-automatic way to quickly generate labelled data. In recent years, there has been an increase in the development of any-point trackers, such as <a class="reference external" href="https://cotracker3.github.io/">cotracker3</a> and <a class="reference external" href="https://deepmind-tapir.github.io/blogpost.html">TAPIR</a>. The goal of this project is to add support for any-point trackers to <code class="docutils literal notranslate"><span class="pre">ethology</span></code>, so that users can easily apply these tools to their data and analyse the trajectories generated.</p>
+<p class="sd-card-text"><strong>Deliverables</strong></p>
+<!-- Goals, or expected status after Community Bonding Period, Start of Coding, End of Coding. Stretch goals? -->
+<p class="sd-card-text">The expected deliverables include:</p>
+<ul class="simple">
+<li><p class="sd-card-text">A prototype <a class="reference external" href="https://napari.org/stable/">napari</a> widget, that allows the user to load a video and select the query points to track.</p></li>
+<li><p class="sd-card-text">Back-end functionality to read the query points from the napari widget, and run inference on a pre-trained any-point tracker model, such as those provided by <a class="reference external" href="https://cotracker3.github.io/">cotracker3</a> or <a class="reference external" href="https://deepmind-tapir.github.io/blogpost.html">TAPIR</a>.</p></li>
+<li><p class="sd-card-text">Ability to read the generated trajectories as a <code class="docutils literal notranslate"><span class="pre">movement</span></code> <a class="reference external" href="https://movement.neuroinformatics.dev/latest/user_guide/movement_dataset.html">dataset</a>.</p></li>
+<li><p class="sd-card-text">Front-end support on the napari widget to overlay the trajectories generated by the any-point tracker on the video.</p></li>
+<li><p class="sd-card-text">As a stretch goal, the widget could be extended to allow the user to run inference directly from the napari GUI.</p></li>
+</ul>
+<p class="sd-card-text"><strong>Duration</strong></p>
+<!-- Small (~90 hours), Medium (~175 hours) or Large (~350 hours)  -->
+<p class="sd-card-text">Large (~350 hours)</p>
+<p class="sd-card-text"><strong>Difficulty</strong></p>
+<!-- Is this project geared more toward a student level or a more advanced developer level? -->
+<p class="sd-card-text">This project is well-suited for an intermediate or advanced contributor to open source.</p>
+<p class="sd-card-text"><strong>Required skills</strong></p>
+<p class="sd-card-text">Experience with Python and <a class="reference external" href="https://pytorch.org/">PyTorch</a>.</p>
+<p class="sd-card-text"><strong>Nice-to-haves</strong></p>
+<ul class="simple">
+<li><p class="sd-card-text">Experience developing or using <a class="reference external" href="https://napari.org/">napari</a> plugins.</p></li>
+<li><p class="sd-card-text">Experience with computer vision applications, particularly pose estimation and any-point tracking approaches.</p></li>
+</ul>
+<p class="sd-card-text"><strong>Potential mentors</strong></p>
+<ul class="simple">
+<li><p class="sd-card-text"><a class="reference external" href="https://github.com/sfmig">&#64;sfmig</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://github.com/niksirbi">&#64;niksirbi</a></p></li>
+</ul>
+<p class="sd-card-text"><strong>Further reading</strong></p>
+<!-- The best pages include links to more detailed descriptions and related materials for each project. They might even include actual use cases! -->
+<ul class="simple">
+<li><p class="sd-card-text"><a class="reference external" href="https://cotracker3.github.io/">cotracker3 paper and code</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://deepmind-tapir.github.io/blogpost.html">TAPIR paper and code</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://napari.org/stable/tutorials/index.html">napari usage tutorials</a> and <a class="reference external" href="https://napari.org/stable/developers/contributing/index.html">contributing guide</a>.</p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://napari.org/stable/plugins/index.html">napari Plugin documentation</a>, particularly the section on <a class="reference external" href="https://napari.org/stable/plugins/building_a_plugin/index.html">Building a plugin</a>.</p></li>
+</ul>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><span class="fas fa-video sd-text-primary"></span> Support for low-shot detectors in <code class="docutils literal notranslate"><span class="pre">ethology</span></code></span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Low-shot detection is a computer vision task that aims to detect objects in images with very few labelled examples (between 0 and 5). This task can be very useful to researchers in animal behaviour, but it is still somewhat inaccessible to them. For example, it could be particularly useful for collective animal behaviour research, where it may be tedious to obtain large labelled datasets for training accurate detection models. It could also be useful for labelling large datasets collected in the lab, where the collected frames are relatively similar in appearance, as it is common to record videos of animals with static cameras and relatively uniform backgrounds.</p>
+<p class="sd-card-text">The goal of this project is to support few-shot detection in <code class="docutils literal notranslate"><span class="pre">ethology</span></code>, initially as a semi-automatic approach to labelling bounding boxes. The workflow could look something like this: given a set of frames extracted from a video, the user would load these files into a GUI (likely a <a class="reference external" href="https://napari.org/stable/">napari</a> widget) and use the GUI annotation tools to manually draw bounding boxes around the object they want to detect. These annotations define the visual prompts, and could be drawn on a single or multiple frames. Then the user would select a low-shot detector model to label the rest of identical instances in the dataset. After the model has labelled the dataset, the user should be able to review the results and correct any mistakes. The final output would be a bounding boxes annotation object, which could then be used to create a detection dataset for training a supervised learning model.</p>
+<p class="sd-card-text"><strong>Deliverables</strong></p>
+<!-- Goals, or expected status after Community Bonding Period, Start of Coding, End of Coding. Stretch goals? -->
+<p class="sd-card-text">The expected deliverables include:</p>
+<ul class="simple">
+<li><p class="sd-card-text">Back-end functionality with a user friendly API, to read a set of manually labelled bounding boxes and run inference on a pre-trained low-shot detection model, such as those provided by <a class="reference external" href="https://github.com/jerpelhan/GeCo">GeCo</a> or <a class="reference external" href="https://github.com/niki-amini-naieni/CountGD">CountGD</a>. The detections should be formatted as an <code class="docutils literal notranslate"><span class="pre">ethology</span></code> annotation dataframe. Ideally we would support a couple of models with a similar API.</p></li>
+<li><p class="sd-card-text">A front-end <a class="reference external" href="https://napari.org/stable/">napari</a> widget, that allows the user to load a set of extracted frames, manually draw bounding boxes around the objects they want to detect, and run inference on the rest of the data using a low-shot detection model. The widget should also allow the user to review and correct the labels generated by the model.</p></li>
+<li><p class="sd-card-text">As a stretch goal, we could explore the possibility of specifying the target with a text prompt, as is done in <a class="reference external" href="https://arxiv.org/pdf/2407.04619">CountGD</a></p></li>
+</ul>
+<p class="sd-card-text"><strong>Duration</strong></p>
+<!-- Small (~90 hours), Medium (~175 hours) or Large (~350 hours)  -->
+<p class="sd-card-text">Large (~350 hours)</p>
+<p class="sd-card-text"><strong>Difficulty</strong></p>
+<!-- Is this project geared more toward a student level or a more advanced developer level? -->
+<p class="sd-card-text">This project is well-suited for an intermediate or advanced contributor to open source.</p>
+<p class="sd-card-text"><strong>Required skills</strong></p>
+<p class="sd-card-text">Experience with Python and <a class="reference external" href="https://pytorch.org/">PyTorch</a>.</p>
+<p class="sd-card-text"><strong>Nice-to-haves</strong></p>
+<ul class="simple">
+<li><p class="sd-card-text">Experience developing or using <a class="reference external" href="https://napari.org/">napari</a> plugins.</p></li>
+<li><p class="sd-card-text">Experience with computer vision applications, particularly vision transformers and detection.</p></li>
+</ul>
+<p class="sd-card-text"><strong>Potential mentors</strong></p>
+<ul class="simple">
+<li><p class="sd-card-text"><a class="reference external" href="https://github.com/sfmig">&#64;sfmig</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://github.com/niksirbi">&#64;niksirbi</a></p></li>
+</ul>
+<p class="sd-card-text"><strong>Further reading</strong></p>
+<!-- The best pages include links to more detailed descriptions and related materials for each project. They might even include actual use cases! -->
+<ul class="simple">
+<li><p class="sd-card-text"><a class="reference external" href="https://github.com/jerpelhan/GeCo">GeCo code</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://arxiv.org/pdf/2409.18686">GeCo paper</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://github.com/niki-amini-naieni/CountGD">CountGD code</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://arxiv.org/pdf/2407.04619">CountGD paper</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://napari.org/stable/tutorials/index.html">napari usage tutorials</a> and <a class="reference external" href="https://napari.org/stable/developers/contributing/index.html">contributing guide</a>.</p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://napari.org/stable/plugins/index.html">napari Plugin documentation</a>, particularly the section on <a class="reference external" href="https://napari.org/stable/plugins/building_a_plugin/index.html">Building a plugin</a>.</p></li>
+</ul>
+</div>
+</details></section>
+
+<div class="section ablog__blog_comments">
+   
+</div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="movement.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">GSoC NIU Projects 2025: <code class="docutils literal notranslate"><span class="pre">movement</span></code></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="brainglobe.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">GSoC NIU Projects 2025: BrainGlobe</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../../_sources/get-involved/gsoc/2025/projects/ethology.md.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item"><p class="sphinx-version">
+    Created using <a href="https://sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+    </p>
+    <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a>
+    0.16.1.
+    </p>
+    </div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><div class="things-in-a-row">
+    <a href="https://www.sainsburywellcome.org/web/">
+        <img src="../../../../_static/light-logo-swc.png" alt="Sponsors" class="only-light img-sponsor"/>
+        <img src="../../../../_static/dark-logo-swc.png" alt="Sponsors" class="only-dark img-sponsor"/>
+    </a>
+    <a href="https://www.ucl.ac.uk/gatsby/gatsby-computational-neuroscience-unit">
+        <img src="../../../../_static/light-logo-gatsby.png" alt="Sponsors" class="only-light img-sponsor"/>
+        <img src="../../../../_static/dark-logo-gatsby.png" alt="Sponsors" class="only-dark img-sponsor"/>
+    </a>
+    <a href="https://www.ucl.ac.uk/">
+        <img src="../../../../_static/light-logo-ucl.png" alt="Sponsors" class="only-light img-sponsor"/>
+        <img src="../../../../_static/dark-logo-ucl.png" alt="Sponsors" class="only-dark img-sponsor"/>
+    </a>
+</div></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
