@@ -4,10 +4,9 @@ The Neuroinformatics Unit (NIU) is dedicated to advancing neuroscience research 
 
 We also develop [training courses](https://software-skills.neuroinformatics.dev/) in using and developing software for neuroscience.
 
-The NIU is based at the [Sainsbury Wellcome Centre](https://www.sainsburywellcome.org/web/) and the [Gatsby Computational Neuroscience Unit](https://www.ucl.ac.uk/gatsby/gatsby-computational-neuroscience-unit) at [University College London](https://www.ucl.ac.uk/).
+The NIU is based at the [Sainsbury Wellcome Centre](https://www.sainsburywellcome.org/web/) and the [Gatsby Computational Neuroscience Unit](https://www.ucl.ac.uk/gatsby/gatsby-computational-neuroscience-unit) at [University College London (UCL)](https://www.ucl.ac.uk/).
 
-For more information, please read about the [projects we lead](/projects) our [collaborations](/collaborations) and
-our [roadmaps](/roadmaps/index).
+For more information, please read about the [projects we lead](/projects) and our [roadmaps](/roadmaps/index).
 
 
 ```{image} /_static/NIU.jpg
@@ -15,6 +14,15 @@ our [roadmaps](/roadmaps/index).
 :width: 650px
 ```
 
+## External collaborations
+We collaborate with many members of the [UCL Advanced Research Computing Centre](https://www.ucl.ac.uk/advanced-research-computing/advanced-research-computing-centre) to build a 
+variety of data processing, analysis and storage tools for neuroscience.
+
+We have an ongoing collaboration with the [Keshavarzi Laboratory](https://www.keshavarzilab.com/) at the University of Cambridge to build tools for data management and analysis.
+
+We work with a number of labs to build anatomical atlases, including 
+[Henrik Mouritsen](https://uol.de/en/ibu/animal-navigation/staff/henrik-mouritsen) at the University of Oldenburg and 
+[Pascal Malkemper](https://www.malkemper-lab.com/) at the Max Planck Institute for Neurobiology of Behavior – caesar.
 ## Contact
 For help and support with individual tools, or just to get in touch, please use our [Zulip](https://neuroinformatics.zulipchat.com/).
 

@@ -44,8 +44,8 @@ to advance research in the two research centres and make new algorithms and tool
 
 :::{grid-item-card} {fas}`handshake;sd-text-primary` Collaborations
 :img-top: _static/collaborations_card.png
-:link: collaborations
-:link-type: doc
+:link: projects-collaborations
+:link-type: ref
 :::
 ::::
 
@@ -62,7 +62,6 @@ blog/index
 roadmaps/index
 get-involved/index
 resources/index
-collaborations
 open-software-summer-school/index
 gsoc-2025-datashuttle
 ```
