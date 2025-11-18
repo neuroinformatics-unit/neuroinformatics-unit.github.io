@@ -1,6 +1,5 @@
 # Projects
-A summary of some of the projects lead by the Neuroinformatics Unit. Please also see our 
-[collaborations](/collaborations) page for details of other work we do. 
+A summary of some of the Neuroinformatics Unit projects.
 
 (projects-neuroanatomy)=
 ## Neuroanatomy
@@ -120,3 +119,27 @@ The actions repository hosts reliable, maintained and versioned GitHub Actions
 workflows for common tasks such as linting, testing, and releasing Python projects to PyPI.
 :::
 ::::
+
+(projects-collaborations)=
+## Collaborative projects
+We also contribute to a number of other software projects lead by others.
+::::{grid} 1 1 1 1
+:gutter: 3
+
+:::{grid-item-card} {fas}`clock;sd-text-primary` Aeon
+:link: https://sainsburywellcomecentre.github.io/aeon_docs/
+We build data analysis tools for long term physiology and behavioural recordings as part of the Aeon project.
+:::
+
+:::{grid-item-card} {fas}`table-tennis-paddle-ball;sd-text-primary` NeuralPlayground
+:link: https://github.com/SainsburyWellcomeCentre/NeuralPlayground
+We have helped productionise NeuralPlayground, a framework for comparing hippocampal and entorhinal cortex models.
+:::
+:::{grid-item-card} {fas}`bolt;sd-text-primary` SpikeInterface
+:link: https://spikeinterface.readthedocs.io/en/latest/
+As part of our work building pipelines for extracellular electrophysiology data, we contribute to SpikeInterface.
+:::
+::::
+
+
+
