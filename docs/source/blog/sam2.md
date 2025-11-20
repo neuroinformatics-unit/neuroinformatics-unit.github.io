@@ -126,11 +126,12 @@ have to be entered manually. Finding out the coordinates and typing them into an
 not very convenient. There are plugins for FIJI (SAMJ-IJ, only works for images not for 
 videos) or napari (e.g. microSAM for microscopic images, supports 2D, 3D and videos), 
 that make this step of the workflow easier.
+<br>
 Second, on a more crowded plate, where the worms touch each other, the model tends to lose 
 track of single worms. This is, however a general problem not only for SAM-2 but also other 
 segmentation models. This kind of mistakes can be manually corrected or one can avoid them 
 by using less crowded videos.
-<br>
+<br><br>
 In summary, SAM-2 did a good job segmenting the worms in a short time. The resulting masks 
 can now be further analysed, e.g. by creating a skeleton and selecting some markers to create 
 a pose track.
