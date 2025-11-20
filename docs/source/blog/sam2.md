@@ -41,29 +41,35 @@ can be applied both to images and videos and is designed to segment any object w
 minimal input from the user.
 
 ### Installation
-Installing SAM-2 was one of the more challenging steps of this project. It requires:
+Installing SAM-2 was one of the more challenging steps of this project. The installation 
+instructions recommend using WSL on Windows. However, since I already had Python on my 
+Windows system, I decided to ignore that. SAM-2 requires:
 * Python >= 3.10
 * Pytorch and TorchVision
 * SAM-2 package, that can be cloned from GitHub
 * `ffmpeg` for video manipulation
 
-Pytorch and SAM-2 are both installed using `pip`, so `pip` should be installed in the 
-respective environment. Otherwise, it can come to version conflicts between packages 
-from different environments, where `pip` is installed. 
+Setting up Pytorch with GPU support on a Windows system can be tricky. Fortunately, 
+I had done this before, so the Nvidia drivers and CUDA were already set up and only the 
+correct wheel for Pytorch hat to be downloaded. Still, it didn't all work out the first time. 
+After some troubleshooting we found the culprit: Pytorch and SAM-2 are both installed 
+using `pip`, so you need to make sure `pip` is installed in the respective environment. 
+Otherwise, it can come to version conflicts between packages from different environments, 
+where `pip` is installed. 
 
 `ffmpeg` is a commandline video manipulation tool, that is recommended in the example 
-notebook for SAM-2 for extracting frames. It is installed outside the python 
-environment. Of course, any other video manipulation tool can be used as well.
+notebook for SAM-2 for extracting frames. It is integrated in Linux distributions, but 
+on Windows it has to be installed separately, outside the python environment. Of course, 
+any other video manipulation tool can be used as well.
 
-The installation instructions recommend using WSL on Windows. However, since I already 
-had Python on my Windows system, I decided to ignore that. In the end it did work, but I 
-kept getting some non-fatal error messages. The bigger problem, however, was the 
-performance of my laptop. Even though it has a GPU, the prediction took several hours, 
+In the end everything got installed correctly and I could run the notebook on my laptop, 
+even thou I kept getting some non-fatal error messages. The bigger problem, however, was the 
+performance of my laptop. Despite the GPU, the prediction took several hours, 
 so we decided to use Google Colab instead.
 
 ### Running the notebook on Google Colab
 The SAM-2 repository contains sample notebooks for different use-cases, including video 
-segmentation. The notebooks contain al link to Google Colab and code for setting up the 
+segmentation. The notebooks contain a link to Google Colab and code for setting up the 
 Colab environment. You just need to choose a runtime with GPU (T4 for a free runtime), 
 connect to it and mount Google Drive. The data has to be uploaded to Google Drive.
 
@@ -80,7 +86,7 @@ weights (need to be downloaded separately when using SAM-2 on a local machine!).
 video data has to be saved as single frames, the example notebook uses JPEG files. These 
 images are loaded into a variable called `ìnference_state`. Then the user should provide 
 prompts for the objects that should be segmented. There can be one or more objects and 
-the prompts can be either point coordinates or boxes. Furthermore, the prompts have label,
+the prompts can be either point coordinates or boxes. Furthermore, the prompts have a label,
 showing whether the prompt is positive (i.e. marking the desired object) or negative (
 marking the background). With this input the first masks for a given frame are predicted, 
 as shown below. Here, point prompts are used, 2 positive and one negative for each worm.
@@ -119,5 +125,12 @@ Using more points to prompt the model might solve this issue. However, the point
 have to be entered manually. Finding out the coordinates and typing them into an array is 
 not very convenient. There are plugins for FIJI (SAMJ-IJ, only works for images not for 
 videos) or napari (e.g. microSAM for microscopic images, supports 2D, 3D and videos), 
-that make this step of the workflow easier.  Second, on a more crowded plate where the worms touch each other, the 
-model tends to lose track of single worms. 
+that make this step of the workflow easier.
+Second, on a more crowded plate, where the worms touch each other, the model tends to lose 
+track of single worms. This is, however a general problem not only for SAM-2 but also other 
+segmentation models. This kind of mistakes can be manually corrected or one can avoid them 
+by using less crowded videos.
+<br>
+In summary, SAM-2 did a good job segmenting the worms in a short time. The resulting masks 
+can now be further analysed, e.g. by creating a skeleton and selecting some markers to create 
+a pose track.
