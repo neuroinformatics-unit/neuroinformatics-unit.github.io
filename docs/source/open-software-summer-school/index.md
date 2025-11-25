@@ -57,7 +57,7 @@ to analyse whole-brain microscopy datasets.
 
 :::{grid-item-card} {fas}`bolt;sd-text-info` Extracellular Electrophysiology
 :img-top: /_static/osw_images/ephys-card.png
-:link:
+:link: track-extracellular-ephys
 :link-type: ref
 
 Using open source tools to process and analyse large extracellular electrophysiology data (e.g. from silicon probes)
