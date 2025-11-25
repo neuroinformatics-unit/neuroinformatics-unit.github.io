@@ -1,14 +1,15 @@
 (track-extracellular-ephys)=
 # Track: Extracellular Electrophysiology
 
-Alongside the development of high-density recording probes (e.g. Neuropixels), the range and 
-complexity of extracellular preprocessing methods has greatly increased in recent years. In this course, 
-we will cover the theory and practical implementation of the full extracellular
+Alongside the development of high-density recording probes (e.g. [Neuropixels](https://www.neuropixels.org/), 
+the range and  complexity of extracellular preprocessing methods has greatly increased in recent years. 
+In this course, we will cover the theory and practical implementation of the full extracellular
 processing pipeline, including preprocessing, sorting and quality control. 
 
-We will use SpikeInterface to implement the pipeline, with manual curation in the SpikeInterface GUI. 
-We will explore modern toolkits for sorting quality assessment (Bombcell), 
-unit matching (UnitMatch) and downstream analysis (PyNapple).
+We will use [SpikeInterface](https://spikeinterface.readthedocs.io/en/stable/) 
+to implement the pipeline, with manual curation in the [SpikeInterface GUI](https://github.com/SpikeInterface/spikeinterface-gui). 
+We will explore modern toolkits for sorting quality assessment ([Bombcell](https://github.com/Julie-Fabre/bombcell)), 
+unit matching ([UnitMatch](https://github.com/EnnyvanBeest/UnitMatch)) and downstream analysis ([PyNapple](https://github.com/pynapple-org/pynapple)).
 
 ::: {admonition} Target audience
 :class: note
@@ -37,7 +38,8 @@ common median referencing), sorting (e.g. `kilosort4`) and computing quality met
 _Morning: Preprocessing Deep Dive_
 
 We will extend the pipeline developed on Monday by exploring:
-- Advanced preprocessing methods (IBL tools for assessing raw data quality, DREDGE motion correction)
+- Advanced preprocessing methods ([IBL tools](https://figshare.com/articles/online_resource/Spike_sorting_pipeline_for_the_International_Brain_Laboratory/19705522)
+for assessing raw data quality, [DREDGE](https://www.nature.com/articles/s41592-025-02614-5) motion correction)
 - Concatenating recordings for multi-session studies
 
 We will also have talks that go through the theory of the applied preprocessing steps.
@@ -57,15 +59,16 @@ _Morning: Assessing Sorting Quality_
 
 In this session, we will cover how to assess the quality of the sorting outputs.
 This will include a lecture on the different quality metrics as well as:
-- Computing quality metrics in SpikeInterface and Bombcell
-- Assessing the sorter output in the SpikeInterface GUI (you are also free
-to use Phy here if you have it installed).
+- Computing quality metrics in [SpikeInterface](https://spikeinterface.readthedocs.io/en/latest/modules/qualitymetrics.html)
+and [Bombcell](https://github.com/Julie-Fabre/bombcell)
+- Assessing the sorter output in the [SpikeInterface GUI](https://github.com/SpikeInterface/spikeinterface-gui) 
+(you are also free to use Phy here if you have it installed).
 
 _Afternoon: Analyzing Outputs_
 
 In the final session, we will focus on combining spike sorting outputs with behavioural events
 for analysis. This will include time alignment between electrophysiology and behavioural
-events, and using PyNapple to generate outputs (e.g. peristimulus time histograms).
+events, and using [PyNapple](https://github.com/pynapple-org/pynapple) to generate outputs (e.g. peristimulus time histograms).
 
 ## Instructors
 - [Joseph Ziminski](https://github.com/JoeZiminski)
