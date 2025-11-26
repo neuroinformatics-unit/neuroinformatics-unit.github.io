@@ -77,5 +77,6 @@ You will need to bring your own laptop with Python installed. We will provide a 
 test dataset, so any fairly recent laptop will be sufficient. A GPU is not required.
 
 ### Data
+
 Sample data will be provided, but if you have any of your own extracellular electrophysiology data, please bring it with you.
 
