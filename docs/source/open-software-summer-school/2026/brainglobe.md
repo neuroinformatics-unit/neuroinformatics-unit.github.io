@@ -7,7 +7,7 @@ This track will guide participants through hands-on tutorials to learn how to us
 ::: {admonition} Target audience
 :class: note
 
-This course is designed for researchers and students interested in learning about open-source tools for analysing and visualising whole-brain microscopy data.
+This course is designed for researchers and students interested in learning about open-source tools for analysing and visualising brain microscopy data.
 :::
 
 ## Course overview
