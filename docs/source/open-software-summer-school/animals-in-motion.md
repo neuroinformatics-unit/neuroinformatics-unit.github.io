@@ -20,63 +20,41 @@ This course is designed for researchers and students interested in learning abou
 
 ## Course overview
 
+
 ![](/_static/osw_images/animals-in-motion-overview.png)
 
-### Monday
+### Core workshop (Monday - Wednesday)
 
-__morning:__
-We'll start with a brief overview of common workflows and tools for analysing animal behaviour, to give you a sense of the big picture.
-We'll follow that up with a primer on deep learning for computer vision, going over the key concepts and technologies that underpin most markerless tracking approaches.
+We will cover the following topics during the first three days:
 
-__afternoon:__
-You will have a chance to present a poster about your work at our symposium event, which will be held jointly with participants from the __Large Array Data__ track of the summer school. It's a great opportunity to get to know each other and explore potential synergies.
-
-### Tuesday:
-
-__morning:__ I
-We'll continue with a hands-on tutorial on using [SLEAP](https://sleap.ai/)—a popular software library for animal pose estimation and tracking.
-The typical workflow, from annotating body parts to training a model and generating predictions, is common to most pose estimation tools, including [DeepLabCut](https://www.mackenziemathislab.org/deeplabcut/).
-
-__afternoon:__
-We will examine the motion tracks predicted by SLEAP, and explore methods for cleaning, visualising, and quantifying them using [movement](https://movement.neuroinformatics.dev)—a Python toolbox we develop.
-We will quantify various aspects of motion, such as speed, orientation, distance travelled, etc.
+* **Introduction:** a big-picture overview of analysis workflows and tools for animal behaviour.
+* **Deep learning for computer vision:** a primer covering the key concepts and technologies that underpin most markerless tracking approaches.
+* **Pose estimation and tracking:** a practical tutorial on using [SLEAP](https://sleap.ai/), a popular software library for animal pose estimation and tracking.
+* **Analysing motion tracks:** use [movement](https://movement.neuroinformatics.dev), a Python package we develop, to clean, visualise, and analyse motion tracks output by [SLEAP](https://sleap.ai/), [DeepLabCut](https://deeplabcut.org/), and similar tools. This part includes coding exercises and case studies on applying motion quantification to real-world scientific questions.
+* **Behaviour segmentation:** a primer on decomposing continous motion into discrete behaviours, followed by a hands-on tutorial of a supervised behaviour segmentation tool.
 
 
-### Wednesday
+### Collaboration days (Thursday - Friday)
 
-__morning:__
-We will start the day by reviewing a few real-world case studies that illustrate how markerless motion tracking can be applied to answer scientific questions.
+The final two days are dedicated to collaboration. We will join forces with participants from the **Large Array Data** track to work together on participant-led projects.
 
-__afternoon:__
-After lunch, we will give a brief theoretical introduction to behaviour segmentation methods that aim to decompose continuous motion into discrete units of behaviour. We will follow that up with a hands-on tutorial of a specific supervised behaviour segmentation tool.
-
-### Thursday & Friday
-
-These two __Collaboration Days__ are all about working together, so we'll rejoin forces with participants from the __Large Array Data__ track. We expect that participant-led ideas emerging from the two tracks will inspire and motivate interesting projects.
-
-We will start off Thursday with a workshop on Git and GitHub, to set everyone up with the necessary skills that smooth collaborative working, especially when code is involved.
-
-After that we'll self-organise into small teams to tackle projects of interest hands-on and together, in a fun atmosphere.
-
-__Projects don't need to involve coding.__ As long as it's something that would benefit from collaboration with other summer school participants, it's fair game! Here are a few examples of the kinds of projects that could be a great fit:
-
-- **Apply a tool:** Use any software you learned about during the week to analyse an interesting dataset (your own or a public one).
-- **Give feedback:** Raise issues on relevant open-source tools. Suggest missing features, report bugs, or flag unclear documentation.
-- **Make a contribution:** Submit a pull request to an open-source repository. If it's your first time, don't worry; there'll be plenty of people around to support you.
-- **Collaborative writing:** Draft something together, like a blog post, white paper, or improved documentation.
-- **Prototype an idea:** Try out a cool new analysis or method on real-world data and share your findings.
-
-We're looking forward to seeing what you come up with! You will get the chance to present your progress on Friday afternoon.
+* **Skill building:** we'll start with a practical workshop on **Git and GitHub** to equip everyone with the necessary skills for collaborative coding.
+* **Project-based work:** participants will self-organize into small teams to tackle projects hands-on. **Coding is not a requirement**; any idea that benefits from collaboration with other attendees is welcome. Potential project ideas include, but are not limited to:
+    * **Apply a tool:** use any learned software to analyze a new dataset (your own or a public one).
+    * **Give feedback:** raise issues, suggest features, or improve documentation for relevant open-source tools.
+    * **Make a contribution:** submit a pull request to an open-source repository (support will be provided).
+    * **Collaborative writing:** draft a white paper, blog post, or documentation together.
+    * **Prototype an idea:** test a cool new analysis or method on real-world data.
+* **Presentation:** you will have the opportunity to report your team's progress on the final afternoon.
 
 
 ::: {admonition} Course handbook
 :class: note
 
-All course materials will be made available as part of the online handbook at <https://animals-in-motion.neuroinformatics.dev> and will remain accessible afterwards.
+All course materials will be made available as part of the online handbook at <https://animals-in-motion.neuroinformatics.dev> and remain accessible afterwards.
 
 You are welcome to inspect the handbook and get a sense of its contents, but keep in mind that the materials will be updated and expanded before the 2026 event.
 
-The source code for the handbook is publicly hosted at <https://github.com/neuroinformatics-unit/course-animals-in-motion>.
 :::
 
 ## Instructors
@@ -101,7 +79,6 @@ If you're new to Python, we recommend signing up for our [asynchronous preparato
 ### Data
 We will provide some example datasets for you to use during the workshop.
 You will be asked to download these prior to the event.
-
 In addition, we encourage you to bring your own data.
 This could include video recordings of animal behaviour and/or motion tracks you've already generated.
-It's a **great chance to get feedback on your data and learn from others**, especially during the __Collaboration Days__ on __Thursday & Friday__.
+It's a great chance to get feedback on your data and learn from others, especially during the collaboration days.
