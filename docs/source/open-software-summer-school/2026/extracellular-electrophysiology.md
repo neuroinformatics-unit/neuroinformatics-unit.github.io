@@ -68,7 +68,7 @@ _Afternoon: Analyzing Outputs_
 
 In the final session, we will focus on combining spike sorting outputs with behavioural events
 for analysis. This will include time alignment between electrophysiology and behavioural
-events, and using [PyNapple](https://github.com/pynapple-org/pynapple) to generate outputs (e.g. peristimulus time histograms).
+events, and using [pynapple](https://github.com/pynapple-org/pynapple) to generate outputs (e.g. peristimulus time histograms).
 
 ## Instructors
 - [Joseph Ziminski](https://github.com/JoeZiminski)
