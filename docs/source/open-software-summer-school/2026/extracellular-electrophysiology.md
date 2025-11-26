@@ -2,7 +2,7 @@
 # Track: Extracellular Electrophysiology
 
 Alongside the development of high-density recording probes (e.g. [Neuropixels](https://www.neuropixels.org/)), 
-the range and  complexity of extracellular preprocessing methods has greatly increased in recent years. 
+the range and  complexity of extracellular electrophysiology preprocessing methods has greatly increased in recent years. 
 In this course, we will cover the theory and practical implementation of the full extracellular
 processing pipeline, including preprocessing, sorting and quality control. 
 
