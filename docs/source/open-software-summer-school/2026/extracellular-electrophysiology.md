@@ -65,23 +65,14 @@ events, and using [pynapple](https://github.com/pynapple-org/pynapple) to genera
 
 ## Prerequisites
 
-The only prerequisite is a basic knowledge of programming in Python, and the scientific Python ecosystem. For those without this background, the [preparatory month](https://neuroinformatics.dev/open-software-summer-school/index.html#preparatory-month) will equip you with all the skills needed to make the most of this course. 
+The only prerequisite is a basic knowledge of programming in Python, and the scientific Python ecosystem. 
+For those without this background, the [preparatory month](https://neuroinformatics.dev/open-software-summer-school/index.html#preparatory-month) 
+will equip you with all the skills needed to make the most of this course. 
 
 ### Hardware
 
 You will need to bring your own laptop with Python installed. We will provide a small
 test dataset, so any fairly recent laptop will be sufficient. A GPU is not required.
-
-### Software
-
-TODO: see prerequisites section and python knowledge
-
-For general software requirements, please see the [prerequisites](target-general-prerequisites) on the 
-main event page and make sure you have these installed and properly configured.
-
-We will install other software required (e.g. SpikeInterface, Kilosort, or another sorter of
-your choice) during the course.
-
 
 ### Data
 Sample data will be provided, but if you have any of your own extracellular electrophysiology data, please bring it with you.
