@@ -36,17 +36,15 @@ common median referencing), sorting (e.g. `kilosort4`) and computing quality met
 We will extend the pipeline developed on Monday by exploring:
 - Advanced preprocessing methods ([IBL tools](https://figshare.com/articles/online_resource/Spike_sorting_pipeline_for_the_International_Brain_Laboratory/19705522)
 for assessing raw data quality, [DREDGE](https://www.nature.com/articles/s41592-025-02614-5) motion correction)
+- The theory behind the applied preprocessing steps.
 - Concatenating recordings for multi-session studies
-
-We will also have talks that go through the theory of the applied preprocessing steps.
 
 **Sorting**
 
 In the afternoon session, we will run multiple sorters
 (e.g. `kilosort4`, `spyking circus 2`, `mountainsort`) and compare the outputs
-in SpikeInterface. We will also cover unit matching for multiple sessions.
-
-This section will include a talk going through the internal operations of a sorter in detail.
+in SpikeInterface. We will discuss the inner workings of a sorter in detail.
+We will also cover unit matching for multiple sessions.
 
 **Assessing Sorting Quality**
 
