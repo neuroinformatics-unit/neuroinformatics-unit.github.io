@@ -23,9 +23,7 @@ This course is focused on analysing high-density recordings (e.g. Neuropixels).
 
 ## Course overview
 
-**Monday — Introduction**
-
-_Morning_  
+**Introduction**
 
 We will begin with a high-level overview of extracellular electrophysiology data, including:
 - Probe layouts and channel maps, timeseries sampling and accessing the associated metadata on the probe
@@ -33,9 +31,7 @@ We will begin with a high-level overview of extracellular electrophysiology data
 - Implementing a simple pipeline in SpikeInterface, including preprocessing (phase shift, filtering, 
 common median referencing), sorting (e.g. `kilosort4`) and computing quality metrics.
 
-**Tuesday — Preprocessing & Sorting**
-
-_Morning: Preprocessing Deep Dive_
+**Preprocessing**
 
 We will extend the pipeline developed on Monday by exploring:
 - Advanced preprocessing methods ([IBL tools](https://figshare.com/articles/online_resource/Spike_sorting_pipeline_for_the_International_Brain_Laboratory/19705522)
@@ -44,8 +40,7 @@ for assessing raw data quality, [DREDGE](https://www.nature.com/articles/s41592-
 
 We will also have talks that go through the theory of the applied preprocessing steps.
 
-
-_Afternoon: Running and Comparing Sorters_
+**Sorting**
 
 In the afternoon session, we will run multiple sorters
 (e.g. `kilosort4`, `spyking circus 2`, `mountainsort`) and compare the outputs
@@ -53,9 +48,7 @@ in SpikeInterface. We will also cover unit matching for multiple sessions.
 
 This section will include a talk going through the internal operations of a sorter in detail.
 
-**Wednesday — Quality Assessment & Downstream Analysis**
-
-_Morning: Assessing Sorting Quality_
+**Assessing Sorting Quality**
 
 In this session, we will cover how to assess the quality of the sorting outputs.
 This will include a lecture on the different quality metrics as well as:
@@ -63,7 +56,7 @@ This will include a lecture on the different quality metrics as well as:
 and [Bombcell](https://github.com/Julie-Fabre/bombcell)
 - Assessing the sorter output in the [SpikeInterface GUI](https://github.com/SpikeInterface/spikeinterface-gui)
 
-_Afternoon: Analyzing Outputs_
+**Afternoon: Analysing Outputs**
 
 In the final session, we will focus on combining spike sorting outputs with behavioural events
 for analysis. This will include time alignment between electrophysiology and behavioural
