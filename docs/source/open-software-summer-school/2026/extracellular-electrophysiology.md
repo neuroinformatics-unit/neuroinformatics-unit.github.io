@@ -61,8 +61,7 @@ In this session, we will cover how to assess the quality of the sorting outputs.
 This will include a lecture on the different quality metrics as well as:
 - Computing quality metrics in [SpikeInterface](https://spikeinterface.readthedocs.io/en/latest/modules/qualitymetrics.html)
 and [Bombcell](https://github.com/Julie-Fabre/bombcell)
-- Assessing the sorter output in the [SpikeInterface GUI](https://github.com/SpikeInterface/spikeinterface-gui) 
-(you are also free to use Phy here if you have it installed).
+- Assessing the sorter output in the [SpikeInterface GUI](https://github.com/SpikeInterface/spikeinterface-gui)
 
 _Afternoon: Analyzing Outputs_
 
