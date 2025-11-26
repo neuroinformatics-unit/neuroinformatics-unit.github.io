@@ -94,10 +94,5 @@ your choice) during the course.
 
 
 ### Data
-
-We will provide a small test dataset for the purposes of the course, that will
-run quickly without requiring significant memory or a GPU. 
-
-However, please feel free to bring your own datasets. We are happy to discuss your data and
-help you try out the methods covered in the course on it. 
+Sample data will be provided, but if you have any of your own extracellular electrophysiology data, please bring it with you.
 
