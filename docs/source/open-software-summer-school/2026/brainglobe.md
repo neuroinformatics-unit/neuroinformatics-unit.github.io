@@ -57,4 +57,4 @@ Bringing your own data is encouraged but not required.
 It's a great chance to get feedback on your data and learn from others.
 If you don't have your own data, we will provide example datasets for you to work with.
 
-We expect that participant-led ideas emerging from this track may inspire collaborative projects during the __Hackday__ on Friday.
+We expect that participant-led ideas emerging from this track may inspire collaborative projects during the __Collaboration Days__ on Thursday and Friday.
