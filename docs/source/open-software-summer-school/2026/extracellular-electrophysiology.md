@@ -75,8 +75,7 @@ events, and using [pynapple](https://github.com/pynapple-org/pynapple) to genera
 
 ## Prerequisites
 
-TODO: python is the only pre-requisite, I guess we will all link in the same
-way to the python pre-course
+The only prerequisite is a basic knowledge of programming in Python, and the scientific Python ecosystem. For those without this background, the [preparatory month](https://neuroinformatics.dev/open-software-summer-school/index.html#preparatory-month) will equip you with all the skills needed to make the most of this course. 
 
 ### Hardware
 
