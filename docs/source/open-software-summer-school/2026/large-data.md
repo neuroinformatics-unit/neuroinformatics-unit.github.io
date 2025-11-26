@@ -3,7 +3,7 @@
 
 In many areas of research, large array datasets have become important and wide-spread. Examples include whole-organ images (e.g. light-sheet, HiP-CT), Neuropixels data, and long behavioural videos — to name just a few. Processing, analyzing and visualising these datasets is made significantly more complex and slow because they do not fit into a typical computer's memory and take up a lot of disk space.
 
-The use of compression algorithms and "chunked" file formats (which favour parallel processing) enable us to deal with these challenges effectively, but doing this well requires some expertise and careful consideration.
+The use of compression algorithms and "chunked" file formats (which favour parallel processing) enable us to deal with these challenges effectively, but doing this well requires careful consideration of the trade-offs between read and write speeds, disk space used, and portability.
 
 This track will cover the necessary context needed to understand the computational challenges posed by large array datasets, and how to address these challenges using open-source software tools. All sessions will include a significant hands-on component.
 
