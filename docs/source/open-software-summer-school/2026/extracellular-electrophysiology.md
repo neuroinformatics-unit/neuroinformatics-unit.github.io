@@ -14,9 +14,8 @@ unit matching ([UnitMatch](https://github.com/EnnyvanBeest/UnitMatch)) and downs
 ::: {admonition} Target audience
 :class: note
 
-This course is suitable for researchers and students with no experience in extracellular electrophysiology.
-However, experienced users interested in using SpikeInterface or exploring the theory of processing steps 
-in more detail will also benefit.
+This course is suitable for researchers and students who are acquiring, or planning to acquire
+electrophysiology data and want to learn how to build a processing pipeline and understand the underlying theory.
 
 This course is focused on analysing high-density recordings (e.g. Neuropixels).
 :::
