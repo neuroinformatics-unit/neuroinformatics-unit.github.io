@@ -9,7 +9,7 @@ processing pipeline, including preprocessing, sorting and quality control.
 We will use [SpikeInterface](https://spikeinterface.readthedocs.io/en/stable/) 
 to implement the pipeline, with manual curation in the [SpikeInterface GUI](https://github.com/SpikeInterface/spikeinterface-gui). 
 We will explore modern toolkits for sorting quality assessment ([Bombcell](https://github.com/Julie-Fabre/bombcell)), 
-unit matching ([UnitMatch](https://github.com/EnnyvanBeest/UnitMatch)) and downstream analysis ([PyNapple](https://github.com/pynapple-org/pynapple)).
+unit matching ([UnitMatch](https://github.com/EnnyvanBeest/UnitMatch)) and downstream analysis ([pynapple](https://github.com/pynapple-org/pynapple)).
 
 ::: {admonition} Target audience
 :class: note
