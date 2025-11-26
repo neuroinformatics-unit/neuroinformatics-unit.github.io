@@ -50,8 +50,8 @@ This section will include a talk going through the internal operations of a sort
 
 **Assessing Sorting Quality**
 
-In this session, we will cover how to assess the quality of the sorting outputs.
-This will include a lecture on the different quality metrics as well as:
+In this session, we will cover how to assess the quality of the sorting outputs:
+- Introduction to the different types of quality metrics
 - Computing quality metrics in [SpikeInterface](https://spikeinterface.readthedocs.io/en/latest/modules/qualitymetrics.html)
 and [Bombcell](https://github.com/Julie-Fabre/bombcell)
 - Assessing the sorter output in the [SpikeInterface GUI](https://github.com/SpikeInterface/spikeinterface-gui)
