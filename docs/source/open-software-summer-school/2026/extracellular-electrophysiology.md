@@ -93,10 +93,6 @@ We will install other software required (e.g. SpikeInterface, Kilosort, or anoth
 your choice) during the course.
 
 
-### Python knowledge
-
-TODO: SEE PREREQUISITES
-
 ### Data
 
 We will provide a small test dataset for the purposes of the course, that will
