@@ -1,6 +1,6 @@
 (track-brainglobe-2026)=
 # Track: BrainGlobe
-
+    
 The [BrainGlobe Initiative](https://brainglobe.info) provides easy-to-use tools to analyse brain histology data, particularly from whole-brain imaging methods (e.g. serial section two-photon, lightsheet).
 This track will guide participants through hands-on tutorials to learn how to use BrainGlobe.
 
@@ -21,7 +21,7 @@ We will cover the following topics from **Monday to Wednesday**:
 * **Working in a common coordinate space:** a primer on brain atlases, common coordinate spaces and image registration, followed by a hands-on tutorial using [`brainreg`](https://github.com/brainglobe/brainreg) and [`brainglobe-registration`](https://github.com/brainglobe/brainglobe-registration) to map data to a BrainGlobe atlas.
 * **Hands-on tutorials:** we will work through the following hands-on tutorials using BrainGlobe's `napari` graphical user interface:
   * Segmenting structures in whole brain microscopy images with [`brainglobe-segmentation`](https://github.com/brainglobe/brainglobe-segmentation)
-  * Detecting cells in large 3D images with [`cellfinder`](https://github./com/brainglobe/cellfinder)
+  * Detecting cells in large 3D images with [`cellfinder`](https://github.com/brainglobe/cellfinder)
   * Analysing cell positions in atlas space with [`brainmapper`](https://github.com/brainglobe/brainglobe-workflows)
   * Visualisation of data in atlas space with [`brainrender`](https://github.com/brainglobe/brainrender) and [`brainrender-napari`](https://github.com/brainglobe/brainrender-napari)
 * **Programmatic access:** an introduction to interacting with BrainGlobe via scripting and the command line.
