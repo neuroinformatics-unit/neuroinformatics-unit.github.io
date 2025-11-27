@@ -27,7 +27,6 @@ This course is designed for researchers and students interested in learning abou
 While icons of mice are used for illustration, the course content should be applicable to any animal species.
 
 ```
-![]()
 
 ### Core workshop
 
