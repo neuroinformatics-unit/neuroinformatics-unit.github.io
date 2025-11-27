@@ -1,4 +1,4 @@
-(track-animals-in-motion)=
+(track-animals-in-motion-2026)=
 # Track: Animals in Motion
 
 Machine learning methods for motion tracking have transformed a wide range of scientific disciplines—from neuroscience and biomechanics to conservation and ethology.
@@ -29,28 +29,28 @@ While icons of mice are used for illustration, the course content should be appl
 ```
 ![]()
 
-### Core workshop (Monday - Wednesday)
+### Core workshop
 
-We will cover the following topics during the first three days:
+We will cover the following topics from **Monday to Wednesday**:
 
 * **Introduction:** a big-picture overview of analysis workflows and tools for animal behaviour.
-* **Deep learning for computer vision:** a primer covering the key concepts and technologies that underpin most markerless tracking approaches.
-* **Pose estimation and tracking:** a practical tutorial on using [SLEAP](https://sleap.ai/), a popular software library for animal pose estimation and tracking.
-* **Analysing motion tracks:** use [movement](https://movement.neuroinformatics.dev), a Python package we develop, to clean, visualise, and analyse motion tracks output by [SLEAP](https://sleap.ai/), [DeepLabCut](https://deeplabcut.org/), and similar tools. This part includes coding exercises and case studies on applying motion quantification to real-world scientific questions.
-* **Behaviour segmentation:** a primer on decomposing continuous motion into discrete behaviours, followed by a hands-on tutorial of a supervised behaviour segmentation tool.
+* **Deep learning for computer vision:** a primer on the key concepts and technologies that underpin most markerless tracking approaches.
+* **Pose estimation and tracking:** a practical tutorial of [SLEAP](https://sleap.ai/)—a popular software library for animal pose estimation and tracking. You will learn how to annotate video frames, train deep learning models, and generate motion tracks from new videos.
+* **Motion track analysis:** a hands-on tutorial of [movement](https://movement.neuroinformatics.dev)—a Python package for cleaning, visualising, and analysing motion tracks output by [SLEAP](https://sleap.ai/), [DeepLabCut](https://deeplabcut.org/) and similar tools. This part includes coding exercises and case studies on applying motion quantification to real-world scientific questions.
+* **Behaviour segmentation:** a primer on decomposing continuous motion into discrete behaviours, followed by a practical tutorial of a supervised behaviour segmentation tool.
 
 
-### Collaboration days (Thursday - Friday)
+### Collaboration days
 
-The final two days are dedicated to collaboration. We will join forces with participants from the **Large Array Data** track to work together on participant-led projects.
+The final two days—**Thursday and Friday**—are dedicated to collaboration. We will join forces with participants from the **Large Array Data** track to work together on participant-led projects.
 
 * **Skill building:** we'll start with a practical workshop on **Git and GitHub** to equip everyone with the necessary skills for collaborative coding.
 * **Project-based work:** participants will self-organize into small teams to tackle projects hands-on. **Coding is not a requirement**; any idea that benefits from collaboration with other attendees is welcome. Potential project ideas include, but are not limited to:
-    * **Apply a tool:** use any learned software to analyze a new dataset (your own or a public one).
-    * **Give feedback:** raise issues, suggest features, or improve documentation for relevant open-source tools.
-    * **Make a contribution:** submit a pull request to an open-source repository (support will be provided).
-    * **Collaborative writing:** draft a white paper, blog post, or documentation together.
-    * **Prototype an idea:** test a cool new analysis or method on real-world data.
+    * *Apply a tool:* use any learned software to analyze a new dataset (your own or a public one).
+    * *Give feedback:* report bugs and suggest features by raising issues on relevant open-source tools.
+    * *Make a contribution:* submit a pull request to an open-source repository (support will be provided).
+    * *Collaborative writing:* draft a white paper, blog post, or documentation together.
+    * *Prototype an idea:* test a cool new analysis or method on real-world data.
 * **Presentation:** you will have the opportunity to report your team's progress on the final afternoon.
 
 
@@ -68,7 +68,6 @@ You are welcome to inspect the handbook and get a sense of its contents, but kee
 - [Sofía Miñano](https://github.com/sfmig)
 - [Chang Huan Lo](https://github.com/lochhh)
 
-(target-animals-in-motion-prerequisites)=
 ## Prerequisites
 
 ### Hardware
@@ -77,7 +76,7 @@ A **mouse** is strongly recommended, especially for tasks like image annotation.
 A dedicated **GPU is not required**, though it may speed up some computations.
 
 ### Software
-See the [software prerequisites](https://animals-in-motion.neuroinformatics.dev/dev/prerequisites.html#sec-software) section of the course handbook for detailed instructions on installing and configuring the required software. The prerequisites will be updated before the event, and accepted participants will be reminded to complete the setup in advance.
+See the [software prerequisites](https://animals-in-motion.neuroinformatics.dev/dev/prerequisites.html) section of the course handbook for detailed instructions on installing and configuring the required software. The prerequisites will be updated before the event, and accepted participants will be reminded to complete the setup in advance.
 
 ### Python knowledge
 If you're new to Python, we recommend signing up for our [asynchronous preparatory course](target-preparatory-month), which runs during the month leading up to the summer school.

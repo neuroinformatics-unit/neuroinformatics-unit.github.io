@@ -28,7 +28,7 @@ We encourage you to read each track's description and choose the one(s) that bes
 
 :::{grid-item-card} {fas}`video;sd-text-secondary` Animals in Motion
 :img-top: /_static/osw_images/animals-in-motion-card.png
-:link: track-animals-in-motion
+:link: track-animals-in-motion-2026
 :link-type: ref
 
 Use open-source tools to track
@@ -129,6 +129,6 @@ A limited number of travel stipends will also be available, but we encourage app
 
 funding
 2025/index
-
+animals-in-motion
 
 ```
