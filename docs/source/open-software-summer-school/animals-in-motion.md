@@ -13,7 +13,7 @@ and interpretable insights into animal behaviour.
 ::: {admonition} Target audience
 :class: note
 
-This course is designed for researchers and students interested in learning about the latest free open-source tools for tracking animal motion from video footage and extracting quantitative descriptions of behaviour from motion tracks.
+This course is designed for researchers and students who have collected — or plan to collect — videos of animal behaviour. It is aimed at those interested in using the latest free and open-source tools for tracking animal motion and extracting quantitative behavioural measures.
 :::
 
 
