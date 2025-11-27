@@ -58,7 +58,7 @@ The final two days—**Thursday and Friday**—are dedicated to collaboration. W
 
 All course materials will be made available as part of the online handbook at <https://animals-in-motion.neuroinformatics.dev> and remain accessible afterwards.
 
-Feel free to look through the handbook to understand its contents, but keep in mind that updates will be made before the 2026 event.
+Feel free to look through the handbook to get a sense of its contents, but keep in mind that updates will be made before the 2026 event.
 
 :::
 
