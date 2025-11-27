@@ -36,13 +36,12 @@ and analyse animal motion from video footage.
 
 :::
 
-:::{grid-item-card} {fas}`layer-group;sd-text-primary` Large array data
+:::{grid-item-card} {fas}`layer-group;sd-text-primary` Large Array Data
 :img-top: /_static/osw_images/big-imaging-data-card.png
-:link: 
+:link: track-large-array-data-2026
 :link-type: ref
 
-Bridging technical gaps and communities to process and analyse
-large 3D datasets with open-source tools.
+Learn about strategies and use open source tools to process large array data (e.g. imaging, videos, electrophysiology,...)
 
 :::
 
