@@ -1,8 +1,11 @@
 (track-brainglobe-2026)=
 # Track: BrainGlobe
-    
-The [BrainGlobe Initiative](https://brainglobe.info) provides easy-to-use tools to analyse brain histology data, particularly from whole-brain imaging methods (e.g. serial section two-photon, lightsheet).
-This track will guide participants through hands-on tutorials to learn how to use BrainGlobe.
+
+Modern microscopy techniques allow the acquisition of large-scale multidimensional datasets which enables unbiased investigation of brain structure and function. 
+However, the analysis of such datasets often requires specialised computational tools and expertise.
+
+The [BrainGlobe Initiative](https://brainglobe.info) addresses this by providing easy-to-use tools to analyse large-scale brain histology data and transform it to a common coordinate space in a species agnostic manner.
+This track will cover basic concepts of image analysis, brain atlases and common coordinate spaces, and guide participants through hands-on tutorials to learn how to use BrainGlobe's ecosystem of computational neuroanatomy tools.
 
 ::: {admonition} Target audience
 :class: note
