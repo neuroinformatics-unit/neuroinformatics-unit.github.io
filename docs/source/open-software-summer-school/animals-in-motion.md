@@ -20,8 +20,14 @@ This course is designed for researchers and students interested in learning abou
 
 ## Course overview
 
+```{figure} /_static/osw_images/animals-in-motion-2026_overview.png
+:alt: A schematic overview of topics covered in the Animals in Motion track.
 
-![](/_static/osw_images/animals-in-motion-overview.png)
+**A schematic overview of topics covered in the Animals in Motion** track.
+While icons of mice are used for illustration, the course content should be applicable to any animal species.
+
+```
+![]()
 
 ### Core workshop (Monday - Wednesday)
 
@@ -31,7 +37,7 @@ We will cover the following topics during the first three days:
 * **Deep learning for computer vision:** a primer covering the key concepts and technologies that underpin most markerless tracking approaches.
 * **Pose estimation and tracking:** a practical tutorial on using [SLEAP](https://sleap.ai/), a popular software library for animal pose estimation and tracking.
 * **Analysing motion tracks:** use [movement](https://movement.neuroinformatics.dev), a Python package we develop, to clean, visualise, and analyse motion tracks output by [SLEAP](https://sleap.ai/), [DeepLabCut](https://deeplabcut.org/), and similar tools. This part includes coding exercises and case studies on applying motion quantification to real-world scientific questions.
-* **Behaviour segmentation:** a primer on decomposing continous motion into discrete behaviours, followed by a hands-on tutorial of a supervised behaviour segmentation tool.
+* **Behaviour segmentation:** a primer on decomposing continuous motion into discrete behaviours, followed by a hands-on tutorial of a supervised behaviour segmentation tool.
 
 
 ### Collaboration days (Thursday - Friday)
