@@ -5,12 +5,12 @@ In many areas of research, large array datasets have become important and wide-s
 
 The use of compression algorithms and modern file formats which favour parallel processing enable us to deal with these challenges effectively, but doing this well requires careful consideration of the trade-offs between read and write speeds, disk space used, and portability.
 
-This track will cover the necessary context needed to understand the computational challenges posed by large array datasets, and how to address these challenges using open-source software tools. All sessions will include a significant hands-on component.
+This track will cover the necessary context needed to understand the computational challenges posed by large array datasets, and how to address these challenges using open-source software tools. All sessions will include a significant hands-on component. At the end of the week, participants will know how to write Python code to process a large array dataset (e.g. a 1TB functional imaging dataset) efficiently on their laptop.
 
 ::: {admonition} Target audience
 :class: note
 
-This course is designed for researchers and students interested in learning about open-source tools for processing large array data with Python. Participants are encouraged to bring their own data to experiment with, but example data will be provided.
+This course is designed for researchers and students interested in learning about open-source tools for processing large array data with Python. We will favour applicants that have acquired, or are about to acquire, large array data. Participants are encouraged to bring their own data to experiment with, but example data will be provided.
 :::
 
 ## Course overview
@@ -43,6 +43,8 @@ The final two days are dedicated to collaboration. We will join forces with part
 - [Alessandro Felder](https://github.com/alessandrofelder)
 - [Igor Tatarnikov](https://github.com/IgorTatarnikov)
 - [David Stansby](https://github.com/dstansby)
+- [Kimberly Meechan](https://github.com/K-Meech)
+- [Joe Ziminski](https://github.com/JoeZiminski)
 
 
 (target-large-array-data-prerequisites-2026)=
