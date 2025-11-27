@@ -10,10 +10,11 @@ about open-source approaches for handling large images, processing microscopy da
 In 2026, we will return, with an expanded two-week program adding a new *Extracellular Electrophysiology* track, 
 additional satellite events, guest lectures and opportunities for researchers to present their own work. 
 
-:::{admonition} More information
+:::{admonition} Application
 :class: info
-More details will be added before registration opens.
-However, if you have any questions, please ask on our [Zulip chat](https://neuroinformatics.zulipchat.com/#narrow/channel/542225-Open-Software-Summer-School). 
+To apply for OSSS, please complete [this form](https://forms.gle/S4jWFdQktkRxfHBo9). Application questions can be found [here](./2026/application_questions).
+
+f you have any questions, please ask on our [Zulip chat](https://neuroinformatics.zulipchat.com/#narrow/channel/542225-Open-Software-Summer-School). 
 Alternatively, please <a href="mailto:adam.tyson@ucl.ac.uk ?subject=Open Software Summer School">email Adam Tyson</a>.
 :::
 
@@ -126,8 +127,10 @@ A limited number of travel stipends will also be available, but we encourage app
 :caption: Index
 :hidden:
 
+2026/application_questions
 funding
 2025/index
+
 
 
 ```
