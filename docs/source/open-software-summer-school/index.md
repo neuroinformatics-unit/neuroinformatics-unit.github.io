@@ -48,7 +48,7 @@ large 3D datasets with open-source tools.
 
 :::{grid-item-card} {fas}`brain;sd-text-warning` BrainGlobe
 :img-top: /_static/osw_images/brainglobe-card.png
-:link: 
+:link: track-brainglobe-2026
 :link-type: ref
 
 Use the BrainGlobe ecosystem of computational neuroanatomy tools
@@ -130,5 +130,6 @@ A limited number of travel stipends will also be available, but we encourage app
 funding
 2025/index
 2026/animals-in-motion
+2026/brainglobe
 
 ```
