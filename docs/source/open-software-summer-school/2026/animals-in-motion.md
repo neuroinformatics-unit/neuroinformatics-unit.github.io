@@ -49,7 +49,7 @@ The final two days—**Thursday and Friday**—are dedicated to collaboration. W
     * *Give feedback:* report bugs and suggest features by raising issues on relevant open-source tools.
     * *Make a contribution:* submit a pull request to an open-source repository.
     * *Collaborative writing:* draft a white paper, blog post, or documentation together.
-    * *Prototype an idea:* Experiment with a new analysis or method.
+    * *Prototype an idea:* experiment with a new analysis or method.
 * **Presentation:** teams will have the opportunity to share their progress and outcomes on the final afternoon.
 
 
