@@ -78,6 +78,7 @@ linkcheck_ignore = [
     "https://neuroinformatics.dev/slides-templates-atlases/#/on-templates-and-atlases",
     "https://errantscience.com/",
     "https://in2scienceuk.org/our-programmes/in2research/",
+    "https://www.biorxiv.org/content/10.1101/2025.03.30.645770v1",
     r"https://www\.cell\.com/.*",  # Use regex pattern to match all cell.com URLs
     r"https?://(?:dx\.)?doi\.org/.*",  # Use regex pattern to match all DOI URLs
 ]
