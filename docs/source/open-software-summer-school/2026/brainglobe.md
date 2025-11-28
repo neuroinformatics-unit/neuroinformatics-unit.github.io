@@ -20,14 +20,14 @@ This course is designed for researchers and students interested in learning abou
 We will cover the following topics from **Monday to Wednesday**:
 
 * **Introduction:** a high level overview of the BrainGlobe ecosystem of computational neuroanatomy tools, and what they enable.
-* **Image analysis in `napari`:** basic concepts of image analysis using [`napari`](https://napari.org/stable/)
+* **Image analysis in `napari`:** basic concepts of image analysis using [`napari`](https://napari.org/stable/).
 * **Working in a common coordinate space:** a primer on brain atlases, common coordinate spaces and image registration, followed by a hands-on tutorial using [`brainreg`](https://github.com/brainglobe/brainreg) and [`brainglobe-registration`](https://github.com/brainglobe/brainglobe-registration) to map data to a BrainGlobe atlas.
 * **Hands-on tutorials:** we will work through the following hands-on tutorials using BrainGlobe's `napari` graphical user interface:
-  * Segmenting structures in whole brain microscopy images with [`brainglobe-segmentation`](https://github.com/brainglobe/brainglobe-segmentation)
-  * Detecting cells in large 3D images with [`cellfinder`](https://github.com/brainglobe/cellfinder)
-  * Analysing cell positions in atlas space with [`brainmapper`](https://github.com/brainglobe/brainglobe-workflows)
-  * Visualisation of data in atlas space with [`brainrender`](https://github.com/brainglobe/brainrender) and [`brainrender-napari`](https://github.com/brainglobe/brainrender-napari)
-* **Programmatic access:** an introduction to interacting with BrainGlobe via scripting and the command line.
+  * Segmenting structures in whole brain microscopy images with [`brainglobe-segmentation`](https://github.com/brainglobe/brainglobe-segmentation).
+  * Detecting cells in large 3D images with [`cellfinder`](https://github.com/brainglobe/cellfinder).
+  * Analysing cell positions in atlas space with [`brainmapper`](https://github.com/brainglobe/brainglobe-workflows).
+  * Visualisation of data in atlas space with [`brainrender`](https://github.com/brainglobe/brainrender) and [`brainrender-napari`](https://github.com/brainglobe/brainrender-napari).
+* **Programmatic access:** an introduction to interacting with the BrainGlobe ecosystem via scripting and the command line.
 
 ### Collaboration days
 
