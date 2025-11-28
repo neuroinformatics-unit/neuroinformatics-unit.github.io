@@ -28,7 +28,7 @@ We encourage you to read each track's description and choose the one(s) that bes
 
 :::{grid-item-card} {fas}`video;sd-text-secondary` Animals in Motion
 :img-top: /_static/osw_images/animals-in-motion-card.png
-:link:
+:link: track-animals-in-motion-2026
 :link-type: ref
 
 Use open-source tools to track
@@ -36,19 +36,18 @@ and analyse animal motion from video footage.
 
 :::
 
-:::{grid-item-card} {fas}`layer-group;sd-text-primary` Large array data
+:::{grid-item-card} {fas}`layer-group;sd-text-primary` Large Array Data
 :img-top: /_static/osw_images/big-imaging-data-card.png
-:link: 
+:link: track-large-array-data-2026
 :link-type: ref
 
-Bridging technical gaps and communities to process and analyse
-large 3D datasets with open-source tools.
+Learn about strategies and use open source tools to process large array data (e.g. imaging, videos, electrophysiology,...)
 
 :::
 
 :::{grid-item-card} {fas}`brain;sd-text-warning` BrainGlobe
 :img-top: /_static/osw_images/brainglobe-card.png
-:link: 
+:link: track-brainglobe-2026
 :link-type: ref
 
 Use the BrainGlobe ecosystem of computational neuroanatomy tools
@@ -89,6 +88,7 @@ You may register for week 1, week 2 or both. However, you can only register for 
 On the first day of each track (Monday afternoon), there will be a symposium, shared with participants of the other track held that week. 
 All attendees will be expected to present a poster describing their past, present or planned work. 
 
+(target-preparatory-month)=
 ## Preparatory month
 All four tracks require a basic knowledge of scientific Python programming. If you don't have this background, that's 
 totally fine, we will be running an asynchronous preparatory course in the month before the summer school. Training 
@@ -131,6 +131,8 @@ A limited number of travel stipends will also be available, but we encourage app
 
 funding
 2025/index
-
+2026/large-data
+2026/animals-in-motion
+2026/brainglobe
 
 ```
