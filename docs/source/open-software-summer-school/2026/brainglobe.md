@@ -10,7 +10,8 @@ This track will cover basic concepts of image analysis using [`napari`](https://
 ::: {admonition} Target audience
 :class: note
 
-This course is designed for researchers and students interested in learning about open-source tools for analysing and visualising brain microscopy data.
+This course is designed for researchers who have acquired or expect to acquire large brain histology datasets. 
+It is aimed at those interested in learning about open-source tools for analysing and visualising large microscopy datasets with a specific focus on the BrainGlobe ecosystem.
 :::
 
 ## Course overview
