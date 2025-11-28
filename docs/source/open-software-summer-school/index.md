@@ -12,7 +12,7 @@ additional satellite events, guest lectures and opportunities for researchers to
 
 :::{admonition} Application
 :class: info
-To apply for OSSS, please complete [this form](https://forms.gle/S4jWFdQktkRxfHBo9). Application questions can be found [here](./2026/application_questions).
+**To apply for OSSS, please complete [this form](https://forms.gle/S4jWFdQktkRxfHBo9).** Application questions can be found [here](./2026/application_questions).
 
 If you have any questions, please ask on our [Zulip chat](https://neuroinformatics.zulipchat.com/#narrow/channel/542225-Open-Software-Summer-School). 
 Alternatively, please <a href="mailto:adam.tyson@ucl.ac.uk ?subject=Open Software Summer School">email Adam Tyson</a>.
