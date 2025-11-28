@@ -86,7 +86,7 @@ You may register for week 1, week 2 or both. However, you can only register for 
 
 
 ## Symposium
-On the first day of each track, there will be a symposium, shared with participants of the other track held that week. 
+On the first day of each track (Monday afternoon), there will be a symposium, shared with participants of the other track held that week. 
 All attendees will be expected to present a poster describing their past, present or planned work. 
 
 ## Preparatory month
