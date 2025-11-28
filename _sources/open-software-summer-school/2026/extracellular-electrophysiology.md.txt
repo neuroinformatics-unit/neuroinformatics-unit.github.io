@@ -1,0 +1,97 @@
+(track-extracellular-ephys)=
+# Track: Extracellular Electrophysiology
+
+Alongside the development of high-density recording probes (e.g. [Neuropixels](https://www.neuropixels.org/)), 
+the range and  complexity of extracellular electrophysiology processing methods has greatly increased in recent years. 
+In this course, we will cover the theory and practical implementation of the full processing pipeline, 
+including preprocessing, sorting and quality control. 
+
+We will use [SpikeInterface](https://github.com/SpikeInterface/spikeinterface) 
+to implement the pipeline, with manual curation in the [SpikeInterface GUI](https://github.com/SpikeInterface/spikeinterface-gui). 
+We will explore modern toolkits for sorting quality assessment ([Bombcell](https://github.com/Julie-Fabre/bombcell)), 
+unit matching ([UnitMatch](https://github.com/EnnyvanBeest/UnitMatch)) and downstream analysis ([pynapple](https://github.com/pynapple-org/pynapple)).
+
+::: {admonition} Target audience
+:class: note
+
+This course is suitable for researchers and students who are acquiring, or planning to acquire
+electrophysiology data and want to learn how to build a processing pipeline and understand the underlying theory.
+
+This course is focused on analysing high-density recordings (e.g. Neuropixels) and would be 
+useful for those collecting large datasets and unsure how to process them.
+:::
+
+## Course overview
+
+**Introduction**
+
+We will begin with a high-level overview of extracellular electrophysiology data, including:
+* Probe layouts and channel maps, timeseries sampling and accessing the associated metadata on the probe
+* Visualising the probe and acquired data in [SpikeInterface](https://github.com/SpikeInterface/spikeinterface)
+* Implementing a simple pipeline in [SpikeInterface](https://github.com/SpikeInterface/spikeinterface), including preprocessing (phase shift, filtering, 
+common median referencing), sorting (e.g. [kilosort4](https://github.com/MouseLand/Kilosort)) and computing quality metrics
+
+**Preprocessing**
+
+We will extend the initial, simple pipeline by exploring:
+* Advanced preprocessing methods ([IBL tools](https://github.com/int-brain-lab/ibl-neuropixel)
+for assessing raw data quality, [DREDGE](https://github.com/evarol/dredge) motion correction)
+* The theory behind the applied preprocessing steps
+* Concatenating recordings for multi-session studies
+
+**Sorting**
+
+In this session, we will run multiple sorters
+(e.g. [kilosort4](https://github.com/MouseLand/Kilosort), 
+[SpyKING CIRCUS](https://github.com/spyking-circus/spyking-circus),
+[Mountainsort](https://github.com/flatironinstitute/mountainsort5)) and compare the outputs
+in [SpikeInterface](https://github.com/SpikeInterface/spikeinterface). We will also:
+* Discuss the inner workings of a sorter in detail
+* Cover unit matching with [UnitMatch](https://github.com/EnnyvanBeest/UnitMatch) for tracking putative neurons over multiple sessions
+
+**Assessing Sorting Quality**
+
+In this session, we will cover how to assess the quality of the sorting outputs:
+* Introduction to the different types of quality metrics
+* Computing [quality metrics in SpikeInterface](https://spikeinterface.readthedocs.io/en/latest/modules/qualitymetrics.html)
+and [Bombcell](https://github.com/Julie-Fabre/bombcell)
+* Assessing the sorter output in the [SpikeInterface GUI](https://github.com/SpikeInterface/spikeinterface-gui)
+* Creating and applying models which perform automated curation with [UnitRefine](https://www.biorxiv.org/content/10.1101/2025.03.30.645770v1)
+
+**Afternoon: Analysing Outputs**
+
+In the final session, we will focus on combining spike sorting outputs with behavioural events
+for analysis. This will include time alignment between electrophysiology and behavioural
+events, and using [pynapple](https://github.com/pynapple-org/pynapple) to generate outputs (e.g. peristimulus time histograms).
+
+## Instructors
+* [Joseph Ziminski](https://github.com/JoeZiminski)
+* [Chris Halcrow](https://github.com/chrishalcrow)
+
+## Prerequisites
+
+The only prerequisite is a basic knowledge of programming in Python, and the scientific Python ecosystem. 
+For those without this background, the [preparatory month](https://neuroinformatics.dev/open-software-summer-school/index.html#preparatory-month) 
+will equip you with all the skills needed to make the most of this course. 
+
+### Hardware
+
+You will need to bring your own laptop with Python installed. We will provide a small
+test dataset, so any fairly recent laptop will be sufficient. A GPU is not required.
+
+### Data
+
+Sample data will be provided, but if you have any of your own extracellular electrophysiology data, please bring it with you.
+
+### Collaboration days
+
+The final two days—**Thursday and Friday**—are dedicated to collaboration. We will join forces with participants from the **BrainGlobe** track to work together on participant-led projects.
+
+* **Skill building:** we'll start with a practical workshop on **Git and GitHub** to equip everyone with the necessary skills for collaborative coding.
+* **Project-based work:** participants will self-organise into small teams to tackle projects hands-on. **Coding is not a requirement**; any idea that benefits from collaboration with other attendees is welcome. Potential project ideas include, but are not limited to:
+    * *Apply a tool:* use any learned software to analyse a new dataset (your own or a public one)
+    * *Give feedback:* report bugs and suggest features by raising issues on relevant open-source tools
+    * *Make a contribution:* submit a pull request to an open-source repository
+    * *Collaborative writing:* draft a white paper, blog post, or documentation together
+    * *Prototype an idea:* experiment with a new analysis or method
+* **Presentation:** teams will have the opportunity to share their progress and outcomes on the final afternoon.
