@@ -134,5 +134,5 @@ funding
 2026/large-data
 2026/animals-in-motion
 2026/brainglobe
-
+2026/extracellular-electrophysiology
 ```
