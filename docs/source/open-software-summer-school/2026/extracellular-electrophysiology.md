@@ -25,18 +25,18 @@ This course is focused on analysing high-density recordings (e.g. Neuropixels).
 **Introduction**
 
 We will begin with a high-level overview of extracellular electrophysiology data, including:
-- Probe layouts and channel maps, timeseries sampling and accessing the associated metadata on the probe
-- Visualising the probe and acquired data in [SpikeInterface](https://github.com/SpikeInterface/spikeinterface)
-- Implementing a simple pipeline in [SpikeInterface](https://github.com/SpikeInterface/spikeinterface), including preprocessing (phase shift, filtering, 
-common median referencing), sorting (e.g. [kilosort4](https://github.com/MouseLand/Kilosort)) and computing quality metrics.
+* Probe layouts and channel maps, timeseries sampling and accessing the associated metadata on the probe
+* Visualising the probe and acquired data in [SpikeInterface](https://github.com/SpikeInterface/spikeinterface)
+* Implementing a simple pipeline in [SpikeInterface](https://github.com/SpikeInterface/spikeinterface), including preprocessing (phase shift, filtering, 
+common median referencing), sorting (e.g. [kilosort4](https://github.com/MouseLand/Kilosort)) and computing quality metrics
 
 **Preprocessing**
 
 We will extend this initial pipeline by exploring:
-- Advanced preprocessing methods ([IBL tools](https://github.com/int-brain-lab/ibl-neuropixel)
+* Advanced preprocessing methods ([IBL tools](https://github.com/int-brain-lab/ibl-neuropixel)
 for assessing raw data quality, [DREDGE](https://github.com/evarol/dredge) motion correction)
-- The theory behind the applied preprocessing steps.
-- Concatenating recordings for multi-session studies
+* The theory behind the applied preprocessing steps
+* Concatenating recordings for multi-session studies
 
 **Sorting**
 
@@ -45,17 +45,17 @@ In this session, we will run multiple sorters
 [SpyKING CIRCUS](https://github.com/spyking-circus/spyking-circus),
 [Mountainsort](https://github.com/flatironinstitute/mountainsort5)) and compare the outputs
 in [SpikeInterface](https://github.com/SpikeInterface/spikeinterface). We will also:
-- Discuss the inner workings of a sorter in detail,
-- Cover unit matching [UnitMatch](https://github.com/EnnyvanBeest/UnitMatch) for tracking putative neurons over multiple sessions.
+* Discuss the inner workings of a sorter in detail
+* Cover unit matching [UnitMatch](https://github.com/EnnyvanBeest/UnitMatch) for tracking putative neurons over multiple sessions
 
 **Assessing Sorting Quality**
 
 In this session, we will cover how to assess the quality of the sorting outputs:
-- Introduction to the different types of quality metrics
-- Computing [quality metrics in SpikeInterface](https://spikeinterface.readthedocs.io/en/latest/modules/qualitymetrics.html)
+* Introduction to the different types of quality metrics
+* Computing [quality metrics in SpikeInterface](https://spikeinterface.readthedocs.io/en/latest/modules/qualitymetrics.html)
 and [Bombcell](https://github.com/Julie-Fabre/bombcell)
-- Assessing the sorter output in the [SpikeInterface GUI](https://github.com/SpikeInterface/spikeinterface-gui)
-- Creating and applying models which perform automated curation [UnitRefine](https://www.biorxiv.org/content/10.1101/2025.03.30.645770v1)
+* Assessing the sorter output in the [SpikeInterface GUI](https://github.com/SpikeInterface/spikeinterface-gui)
+* Creating and applying models which perform automated curation [UnitRefine](https://www.biorxiv.org/content/10.1101/2025.03.30.645770v1)
 
 **Afternoon: Analysing Outputs**
 
@@ -64,8 +64,8 @@ for analysis. This will include time alignment between electrophysiology and beh
 events, and using [pynapple](https://github.com/pynapple-org/pynapple) to generate outputs (e.g. peristimulus time histograms).
 
 ## Instructors
-- [Joseph Ziminski](https://github.com/JoeZiminski)
-- [Chris Halcrow](https://github.com/chrishalcrow)
+* [Joseph Ziminski](https://github.com/JoeZiminski)
+* [Chris Halcrow](https://github.com/chrishalcrow)
 
 ## Prerequisites
 
@@ -88,9 +88,9 @@ The final two days—**Thursday and Friday**—are dedicated to collaboration. W
 
 * **Skill building:** we'll start with a practical workshop on **Git and GitHub** to equip everyone with the necessary skills for collaborative coding.
 * **Project-based work:** participants will self-organise into small teams to tackle projects hands-on. **Coding is not a requirement**; any idea that benefits from collaboration with other attendees is welcome. Potential project ideas include, but are not limited to:
-    * *Apply a tool:* use any learned software to analyse a new dataset (your own or a public one).
-    * *Give feedback:* report bugs and suggest features by raising issues on relevant open-source tools.
-    * *Make a contribution:* submit a pull request to an open-source repository.
-    * *Collaborative writing:* draft a white paper, blog post, or documentation together.
-    * *Prototype an idea:* experiment with a new analysis or method.
+    * *Apply a tool:* use any learned software to analyse a new dataset (your own or a public one)
+    * *Give feedback:* report bugs and suggest features by raising issues on relevant open-source tools
+    * *Make a contribution:* submit a pull request to an open-source repository
+    * *Collaborative writing:* draft a white paper, blog post, or documentation together
+    * *Prototype an idea:* experiment with a new analysis or method
 * **Presentation:** teams will have the opportunity to share their progress and outcomes on the final afternoon.
