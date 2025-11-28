@@ -28,7 +28,7 @@ We encourage you to read each track's description and choose the one(s) that bes
 
 :::{grid-item-card} {fas}`video;sd-text-secondary` Animals in Motion
 :img-top: /_static/osw_images/animals-in-motion-card.png
-:link:
+:link: track-animals-in-motion-2026
 :link-type: ref
 
 Use open-source tools to track
@@ -84,6 +84,7 @@ You may register for week 1, week 2 or both. However, you can only register for 
 | August 17-21 2026 | Week 1: *Animals in Motion* & *Large Array Data* |
 | August 24-28 2026 | Week 2: *BrainGlobe* & *Extracellular Electrophysiology* 
 
+(target-preparatory-month)=
 ## Preparatory month
 All four tracks require a basic knowledge of scientific Python programming. If you don't have this background, that's 
 totally fine, we will be running an asynchronous preparatory course in the month before the summer school. Training 
@@ -128,6 +129,7 @@ A limited number of travel stipends will also be available, but we encourage app
 
 funding
 2025/index
+2026/animals-in-motion
 2026/brainglobe
 
 ```
