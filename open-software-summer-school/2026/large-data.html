@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Track: Big Imaging Data &#8212; NIU</title>
+    <title>Track: Large Array Data &#8212; NIU</title>
   
   
   
@@ -59,14 +59,14 @@
                 gtag('js', new Date());
                 gtag('config', 'G-6260TGM7TY');
             </script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'open-software-summer-school/2025/big-imaging-data';</script>
-    <link rel="canonical" href="https://neuroinformatics.dev/open-software-summer-school/2025/big-imaging-data.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'open-software-summer-school/2026/large-data';</script>
+    <link rel="canonical" href="https://neuroinformatics.dev/open-software-summer-school/2026/large-data.html" />
     <link rel="icon" href="../../_static/logo_light.png"/>
     <link rel="author" title="About these documents" href="../../about.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Track: Large Array Data" href="../2026/large-data.html" />
-    <link rel="prev" title="Track: BrainGlobe" href="brainglobe.html" /> 
+    <link rel="next" title="Track: Animals in Motion" href="animals-in-motion.html" />
+    <link rel="prev" title="Track: Big Imaging Data" href="../2025/big-imaging-data.html" /> 
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />   
@@ -565,10 +565,7 @@
     
     <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Open Software Summer School</a></li>
     
-    
-    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Open Software Week 2025</a></li>
-    
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Track: Big Imaging Data</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Track: Large Array Data</span></li>
   </ul>
 </nav>
 </div>
@@ -584,89 +581,77 @@
                 
 <div id="searchbox"></div>
                 <article class="bd-article">
-                   <section class="tex2jax_ignore mathjax_ignore" id="track-big-imaging-data">
-<span id="id1"></span><h1>Track: Big Imaging Data<a class="headerlink" href="#track-big-imaging-data" title="Link to this heading">#</a></h1>
-<p>As novel imaging methods such as light-sheet microscopy become more accessible, more researchers collect ever larger imaging data. Transforming this data into scientific insight requires the combined expertise of researchers, imaging facility staff and software engineers, but each of these communities are too often not well-linked to each other. This track aims to bring together image facility staff, imaging researchers and research software engineers to</p>
-<ul class="simple">
-<li><p>Engage in hands-on tutorials to handle big microscopy data with open-source software</p></li>
-<li><p>Build connections between the imaging and software engineering community</p></li>
-</ul>
-<p>The Big Imaging Data track will include</p>
-<ul class="simple">
-<li><p>Hands-on introductory tutorials to open-source libraries <code class="docutils literal notranslate"><span class="pre">zarr</span></code> and <code class="docutils literal notranslate"><span class="pre">dask</span></code></p></li>
-<li><p>Participant-led discussions of community, collaboration and careers in Big Imaging Data</p></li>
-</ul>
+                   <section class="tex2jax_ignore mathjax_ignore" id="track-large-array-data">
+<span id="track-large-array-data-2026"></span><h1>Track: Large Array Data<a class="headerlink" href="#track-large-array-data" title="Link to this heading">#</a></h1>
+<p>In many areas of research, large array datasets have become important and wide-spread. Examples include whole-organ images, extracellular electrophysiology, and long behavioural videos — to name just a few. Processing, analyzing and visualising these datasets is made significantly more complex and slow because they do not fit into a typical computer’s memory and take up a lot of disk space.</p>
+<p>The use of compression algorithms and modern file formats which favour parallel processing enable us to deal with these challenges effectively, but doing this well requires careful consideration of the trade-offs between read and write speeds, disk space used, and portability.</p>
+<p>This track will cover the necessary context needed to understand the computational challenges posed by large array datasets, and how to address these challenges using open-source software tools. All sessions will include a significant hands-on component. At the end of the week, participants will know how to write Python code to process a large array dataset (e.g. a 1TB functional imaging dataset) efficiently on their laptop.</p>
 <div class="note admonition">
 <p class="admonition-title">Target audience</p>
-<p>This course is designed for imaging facility staff, image analysts, and imaging researchers interested in getting hands-on experience in, and building community around, free open-source tools to process big imaging data.</p>
+<p>This course is designed for researchers and students interested in learning about open-source tools for processing large array data with Python. We will favour applicants that have acquired, or are about to acquire, large array data. Participants are encouraged to bring their own data to experiment with, but example data will be provided.</p>
 </div>
 <section id="course-overview">
 <h2>Course overview<a class="headerlink" href="#course-overview" title="Link to this heading">#</a></h2>
-<p><strong>Thursday morning:</strong>
-The technical side of the track will start with an introduction to chunked file formats for big imaging data, such as <code class="docutils literal notranslate"><span class="pre">OME-zarr</span></code>.
-We will then proceed to work on hands-on tutorials to</p>
+<section id="core-workshop-monday-wednesday">
+<h3>Core workshop (Monday - Wednesday)<a class="headerlink" href="#core-workshop-monday-wednesday" title="Link to this heading">#</a></h3>
+<p>We will cover the following topics during the first three days:</p>
 <ul class="simple">
-<li><p>Read and write big imaging data using <code class="docutils literal notranslate"><span class="pre">zarr</span></code></p></li>
-<li><p>Process big imaging data lazily and in-parallel with <code class="docutils literal notranslate"><span class="pre">dask</span></code></p></li>
+<li><p><strong>Motivation:</strong> we will show examples of large array datasets from neuroscience and imaging, discuss what research they enable, in what situations you should acquire them, and the computational challenges they pose.</p></li>
+<li><p><strong>Introduction to the <a class="reference external" href="https://zarr.dev/">Zarr</a> and <a class="reference external" href="https://www.dask.org/">Dask</a> libraries:</strong> a short introduction to Python libraries that enable you to read, process, and write large array datasets.</p></li>
+<li><p><strong>Chunked, multi-scale file formats for large images:</strong> a short introduction to the <a class="reference external" href="https://ome-zarr-book.readthedocs.io/">OME-Zarr</a> format for large images and a practical tutorial to convert, process and visualise your large image data to OME-Zarr.</p></li>
+<li><p><strong>Parallel processing of large image data with <code class="docutils literal notranslate"><span class="pre">dask</span></code>:</strong> a hands-on tutorial covering <code class="docutils literal notranslate"><span class="pre">dask</span></code>’s parallelisation functionality.</p></li>
+<li><p><strong>Compression of large array data:</strong> an introduction to compression algorithms, how they are used in neuroscience, and what trade-offs you should be aware of when using them.</p></li>
 </ul>
-<p><strong>Thursday afternoon:</strong>
-The community side of the track will start with a very short introduction to existing community efforts in both software engineering <a class="footnote-reference brackets" href="#id5" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a><em>, imaging<a class="footnote-reference brackets" href="#id6" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></em> and image analysis<a class="footnote-reference brackets" href="#id7" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>_.
-The participants will then join small discussion groups of their choice circling around the wider question: Where next for careers and community in Big Imaging Data?
-The discussions will then be fed back to the wider group, and result in the publication of a blog after the course.</p>
+</section>
+<section id="collaboration-days-thursday-friday">
+<h3>Collaboration days (Thursday - Friday)<a class="headerlink" href="#collaboration-days-thursday-friday" title="Link to this heading">#</a></h3>
+<p>The final two days are dedicated to collaboration. We will join forces with participants from the <strong>Animals in Motion</strong> track to work together on participant-led projects.</p>
+<ul class="simple">
+<li><p><strong>Skill building:</strong> we’ll start with a practical workshop on <strong>Git and GitHub</strong> to equip everyone with the necessary skills for collaborative coding.</p></li>
+<li><p><strong>Project-based work:</strong> participants will self-organize into small teams to tackle projects hands-on. <strong>Coding is not a requirement</strong>; any idea that benefits from collaboration with other attendees is welcome. Potential project ideas include, but are not limited to:</p>
+<ul>
+<li><p><strong>Apply a tool:</strong> use any learned software to analyze a new dataset (your own or a public one).</p></li>
+<li><p><strong>Give feedback:</strong> raise issues, suggest features, or improve documentation for relevant open-source tools.</p></li>
+<li><p><strong>Make a contribution:</strong> submit a pull request to an open-source repository (support will be provided).</p></li>
+<li><p><strong>Collaborative writing:</strong> draft a white paper, blog post, or documentation together.</p></li>
+<li><p><strong>Prototype an idea:</strong> test a cool new analysis or method on real-world data.</p></li>
+</ul>
+</li>
+<li><p><strong>Presentation:</strong> you will have the opportunity to report your team’s progress on the final afternoon.</p></li>
+</ul>
+</section>
 </section>
 <section id="instructors">
 <h2>Instructors<a class="headerlink" href="#instructors" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/alessandrofelder">Alessandro Felder</a></p></li>
 <li><p><a class="reference external" href="https://github.com/IgorTatarnikov">Igor Tatarnikov</a></p></li>
-<li><p><a class="reference external" href="https://github.com/adamltyson">Adam Tyson</a></p></li>
+<li><p><a class="reference external" href="https://github.com/dstansby">David Stansby</a></p></li>
+<li><p><a class="reference external" href="https://github.com/K-Meech">Kimberly Meechan</a></p></li>
+<li><p><a class="reference external" href="https://github.com/JoeZiminski">Joe Ziminski</a></p></li>
 </ul>
-<p>Slides are <a class="reference external" href="https://neuroinformatics.dev/slides-big-imaging-data-osw25/">available online</a>.</p>
 </section>
 <section id="prerequisites">
-<span id="target-imaging-prerequisites"></span><h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">#</a></h2>
+<span id="target-large-array-data-prerequisites-2026"></span><h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">#</a></h2>
 <section id="hardware">
 <h3>Hardware<a class="headerlink" href="#hardware" title="Link to this heading">#</a></h3>
 <p>As this is a hands-on workshop, you will need to bring your own laptop. Any fairly recent laptop will be suitable, you don’t need a GPU etc.</p>
 </section>
-<section id="software">
-<h3>Software<a class="headerlink" href="#software" title="Link to this heading">#</a></h3>
-<p>For general software requirements, please see the <a class="reference internal" href="index.html#target-general-prerequisites"><span class="std std-ref">prerequisites</span></a> on the main event page and make sure you have these installed and properly configured.</p>
-<p>Specialised software beyond the above general requirements will be installed during the course.</p>
-</section>
 <section id="python-knowledge">
 <h3>Python knowledge<a class="headerlink" href="#python-knowledge" title="Link to this heading">#</a></h3>
-<p>If you’re new to Python, we recommend attending our <strong>Intro to Python</strong> workshop on Monday, or completing an equivalent course beforehand.
-This hands-on session will cover the basics, including data types, control flow, functions, and core libraries—a great way to get up to speed before this event.</p>
+<p>The only prerequisite is a basic knowledge of programming in Python, and the scientific Python ecosystem. For those without
+this background, the <a class="reference external" href="https://neuroinformatics.dev/open-software-summer-school/index.html#preparatory-month">preparatory month</a>
+will equip you with all the skills needed to make the most of this course.</p>
 </section>
 <section id="data">
 <h3>Data<a class="headerlink" href="#data" title="Link to this heading">#</a></h3>
 <p>Bringing your own data is encouraged but not required.
 It’s a great chance to get feedback on your data and learn from others.
 If you don’t have your own data, we will provide example datasets for you to work with.</p>
-<p>We expect that participant-led ideas emerging from this track may inspire collaborative projects during the <strong>Hackday</strong> on Friday.</p>
-</section>
-<section id="related">
-<h3>Related<a class="headerlink" href="#related" title="Link to this heading">#</a></h3>
-<p>If you’re interested analysis tools for whole-organ imaging (particularly brains), you might also benefit from attending the preceding two-day <a class="reference internal" href="brainglobe.html"><span class="std std-doc">BrainGlobe main track</span></a>.</p>
+<p>We expect that participant-led ideas emerging from this track may inspire collaborative projects during the <strong>Collaboration Days</strong> on Thursday and Friday.</p>
 </section>
 </section>
 </section>
-<hr class="footnotes docutils" />
-<aside class="footnote-list brackets">
-<aside class="footnote brackets" id="id5" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
-<p>community initiatives around e.g. the <a class="reference external" href="https://www.software.ac.uk/">Software Sustainability Institute</a>, the <a class="reference external" href="https://society-rse.org/about/history/">Society for Research Software Engineering</a>, and The Hidden REF.</p>
-</aside>
-<aside class="footnote brackets" id="id6" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">2</a><span class="fn-bracket">]</span></span>
-<p>For example <a class="reference external" href="https://www.rms.org.uk/community/networks-affiliates/bioimaginguk-network.html">BioImagingUK</a>, <a class="reference external" href="https://www.eurobioimaging.eu/">Euro-BioImaging</a>, <a class="reference external" href="https://globalbioimaging.org/">Global Bioimaging</a></p>
-</aside>
-<aside class="footnote brackets" id="id7" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">3</a><span class="fn-bracket">]</span></span>
-<p>For example <a class="reference external" href="https://eubias.org/NEUBIAS/">neubias</a>, <a class="reference external" href="https://www.globias.org/">GloBIAS</a></p>
-</aside>
-</aside>
 
 <div class="section ablog__blog_comments">
    
@@ -682,20 +667,20 @@ If you don’t have your own data, we will provide example datasets for you to w
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="brainglobe.html"
+       href="../2025/big-imaging-data.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Track: BrainGlobe</p>
+        <p class="prev-next-title">Track: Big Imaging Data</p>
       </div>
     </a>
     <a class="right-next"
-       href="../2026/large-data.html"
+       href="animals-in-motion.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Track: Large Array Data</p>
+        <p class="prev-next-title">Track: Animals in Motion</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -718,14 +703,16 @@ If you don’t have your own data, we will provide example datasets for you to w
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#course-overview">Course overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#course-overview">Course overview</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#core-workshop-monday-wednesday">Core workshop (Monday - Wednesday)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#collaboration-days-thursday-friday">Collaboration days (Thursday - Friday)</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructors">Instructors</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware">Hardware</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#software">Software</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-knowledge">Python knowledge</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#related">Related</a></li>
 </ul>
 </li>
 </ul>
@@ -735,7 +722,7 @@ If you don’t have your own data, we will provide example datasets for you to w
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="../../_sources/open-software-summer-school/2025/big-imaging-data.md.txt"
+      <li><a href="../../_sources/open-software-summer-school/2026/large-data.md.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div></div>
