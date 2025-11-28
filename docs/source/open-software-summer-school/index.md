@@ -128,6 +128,6 @@ A limited number of travel stipends will also be available, but we encourage app
 
 funding
 2025/index
-
+2026/brainglobe
 
 ```
