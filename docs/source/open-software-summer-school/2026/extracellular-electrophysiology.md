@@ -32,7 +32,7 @@ common median referencing), sorting (e.g. [kilosort4](https://github.com/MouseLa
 
 **Preprocessing**
 
-We will extend the pipeline developed on Monday by exploring:
+We will extend this initial pipeline by exploring:
 - Advanced preprocessing methods ([IBL tools](https://github.com/int-brain-lab/ibl-neuropixel)
 for assessing raw data quality, [DREDGE](https://github.com/evarol/dredge) motion correction)
 - The theory behind the applied preprocessing steps.
@@ -40,7 +40,7 @@ for assessing raw data quality, [DREDGE](https://github.com/evarol/dredge) motio
 
 **Sorting**
 
-In the afternoon session, we will run multiple sorters
+In this session, we will run multiple sorters
 (e.g. [kilosort4](https://github.com/MouseLand/Kilosort), 
 [SpyKING CIRCUS](https://github.com/spyking-circus/spyking-circus),
 [Mountainsort](https://github.com/flatironinstitute/mountainsort5)) and compare the outputs
@@ -65,6 +65,7 @@ events, and using [pynapple](https://github.com/pynapple-org/pynapple) to genera
 
 ## Instructors
 - [Joseph Ziminski](https://github.com/JoeZiminski)
+- [Chris Halcrow](https://github.com/chrishalcrow)
 
 ## Prerequisites
 
