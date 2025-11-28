@@ -46,7 +46,7 @@ In the afternoon session, we will run multiple sorters
 [Mountainsort](https://github.com/flatironinstitute/mountainsort5)) and compare the outputs
 in [SpikeInterface](https://github.com/SpikeInterface/spikeinterface). We will also:
 - Discuss the inner workings of a sorter in detail,
-- cover unit matching [UnitMatch](https://github.com/EnnyvanBeest/UnitMatch) for tracking putative neurons over multiple sessions.
+- Cover unit matching [UnitMatch](https://github.com/EnnyvanBeest/UnitMatch) for tracking putative neurons over multiple sessions.
 
 **Assessing Sorting Quality**
 
