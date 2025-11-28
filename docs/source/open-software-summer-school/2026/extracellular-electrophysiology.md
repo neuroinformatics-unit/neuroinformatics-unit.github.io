@@ -2,9 +2,9 @@
 # Track: Extracellular Electrophysiology
 
 Alongside the development of high-density recording probes (e.g. [Neuropixels](https://www.neuropixels.org/)), 
-the range and  complexity of extracellular electrophysiology preprocessing methods has greatly increased in recent years. 
-In this course, we will cover the theory and practical implementation of the full extracellular
-processing pipeline, including preprocessing, sorting and quality control. 
+the range and  complexity of extracellular electrophysiology processing methods has greatly increased in recent years. 
+In this course, we will cover the theory and practical implementation of the full processing pipeline, 
+including preprocessing, sorting and quality control. 
 
 We will use [SpikeInterface](https://github.com/SpikeInterface/spikeinterface) 
 to implement the pipeline, with manual curation in the [SpikeInterface GUI](https://github.com/SpikeInterface/spikeinterface-gui). 
@@ -17,7 +17,8 @@ unit matching ([UnitMatch](https://github.com/EnnyvanBeest/UnitMatch)) and downs
 This course is suitable for researchers and students who are acquiring, or planning to acquire
 electrophysiology data and want to learn how to build a processing pipeline and understand the underlying theory.
 
-This course is focused on analysing high-density recordings (e.g. Neuropixels).
+This course is focused on analysing high-density recordings (e.g. Neuropixels) and would be 
+useful for those collecting large datasets and unsure how to process them.
 :::
 
 ## Course overview
@@ -32,7 +33,7 @@ common median referencing), sorting (e.g. [kilosort4](https://github.com/MouseLa
 
 **Preprocessing**
 
-We will extend this initial pipeline by exploring:
+We will extend the initial, simple pipeline by exploring:
 * Advanced preprocessing methods ([IBL tools](https://github.com/int-brain-lab/ibl-neuropixel)
 for assessing raw data quality, [DREDGE](https://github.com/evarol/dredge) motion correction)
 * The theory behind the applied preprocessing steps
@@ -46,7 +47,7 @@ In this session, we will run multiple sorters
 [Mountainsort](https://github.com/flatironinstitute/mountainsort5)) and compare the outputs
 in [SpikeInterface](https://github.com/SpikeInterface/spikeinterface). We will also:
 * Discuss the inner workings of a sorter in detail
-* Cover unit matching [UnitMatch](https://github.com/EnnyvanBeest/UnitMatch) for tracking putative neurons over multiple sessions
+* Cover unit matching with [UnitMatch](https://github.com/EnnyvanBeest/UnitMatch) for tracking putative neurons over multiple sessions
 
 **Assessing Sorting Quality**
 
@@ -55,7 +56,7 @@ In this session, we will cover how to assess the quality of the sorting outputs:
 * Computing [quality metrics in SpikeInterface](https://spikeinterface.readthedocs.io/en/latest/modules/qualitymetrics.html)
 and [Bombcell](https://github.com/Julie-Fabre/bombcell)
 * Assessing the sorter output in the [SpikeInterface GUI](https://github.com/SpikeInterface/spikeinterface-gui)
-* Creating and applying models which perform automated curation [UnitRefine](https://www.biorxiv.org/content/10.1101/2025.03.30.645770v1)
+* Creating and applying models which perform automated curation with [UnitRefine](https://www.biorxiv.org/content/10.1101/2025.03.30.645770v1)
 
 **Afternoon: Analysing Outputs**
 
