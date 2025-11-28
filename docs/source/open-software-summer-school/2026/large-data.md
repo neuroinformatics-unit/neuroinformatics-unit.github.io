@@ -20,10 +20,10 @@ This course is designed for researchers and students interested in learning abou
 
 
 We will cover the following topics during the first three days:
-* **Motivation:** We will show examples of large array datasets from neuroscience and imaging, discuss what research they enable, in what situations you should acquire them, and the computational challenges they pose.
-* **Introduction to the `zarr` and `dask` libraries:** a short introduction to Python libraries that enable you to read, process, and write large array datasets.
+* **Motivation:** we will show examples of large array datasets from neuroscience and imaging, discuss what research they enable, in what situations you should acquire them, and the computational challenges they pose.
+* **Introduction to the [Zarr](https://zarr.dev/) and [Dask](https://www.dask.org/) libraries:** a short introduction to Python libraries that enable you to read, process, and write large array datasets.
 * **Chunked, multi-scale file formats for large images:** a short introduction to the [OME-Zarr](https://ome-zarr-book.readthedocs.io/) format for large images and a practical tutorial to convert, process and visualise your large image data to OME-Zarr.
-* **Parallel processing of large image data with `dask`:** a hands-on tutorial covering `dask`'s parallelisation functionality
+* **Parallel processing of large image data with `dask`:** a hands-on tutorial covering `dask`'s parallelisation functionality.
 * **Compression of large array data:** an introduction to compression algorithms, how they are used in neuroscience, and what trade-offs you should be aware of when using them.
 
 
