@@ -84,6 +84,11 @@ You may register for week 1, week 2 or both. However, you can only register for 
 | August 17-21 2026 | Week 1: *Animals in Motion* & *Large Array Data* |
 | August 24-28 2026 | Week 2: *BrainGlobe* & *Extracellular Electrophysiology* 
 
+
+## Symposium
+On the first day of each track, there will be a symposium, shared with participants of the other track held that week. 
+All attendees will be expected to present a poster describing their past, present or planned work. 
+
 ## Preparatory month
 All four tracks require a basic knowledge of scientific Python programming. If you don't have this background, that's 
 totally fine, we will be running an asynchronous preparatory course in the month before the summer school. Training 
@@ -91,8 +96,6 @@ materials and exercises will be shared with participants, and OSSS instructors w
 
 **This preparatory course is mandatory for those without Python experience, and requires a minimum of four hours per week 
 commitment for four weeks prior to the summer school**
-
-
 
 ## Fees
 - **Academic or self funding**: £300 per week
