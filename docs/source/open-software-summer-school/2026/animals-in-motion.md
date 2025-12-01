@@ -62,7 +62,7 @@ Feel free to look through the handbook to get a sense of its contents, but keep 
 
 :::
 
-## Instructors
+## Confirmed Instructors
 - [Niko Sirmpilatze](https://github.com/niksirbi)
 - [Sofía Miñano](https://github.com/sfmig)
 - [Chang Huan Lo](https://github.com/lochhh)

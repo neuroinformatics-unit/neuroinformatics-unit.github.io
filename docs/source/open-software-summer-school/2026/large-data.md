@@ -39,7 +39,8 @@ The final two days are dedicated to collaboration. We will join forces with part
     * **Collaborative writing:** draft a white paper, blog post, or documentation together.
     * **Prototype an idea:** test a cool new analysis or method on real-world data.
 * **Presentation:** you will have the opportunity to report your team's progress on the final afternoon.
-## Instructors
+
+## Confirmed Instructors
 - [Alessandro Felder](https://github.com/alessandrofelder)
 - [Igor Tatarnikov](https://github.com/IgorTatarnikov)
 - [David Stansby](https://github.com/dstansby)

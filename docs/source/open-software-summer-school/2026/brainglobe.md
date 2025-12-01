@@ -43,7 +43,7 @@ The final two days—**Thursday and Friday**—are dedicated to collaboration. W
     * *Prototype an idea:* test a cool new analysis idea or method on real-world data.
 * **Presentation:** you will have the opportunity to report your team's progress on the final afternoon.
 
-## Instructors
+## Confirmed Instructors
 - [Alessandro Felder](https://github.com/alessandrofelder)
 - [Igor Tatarnikov](https://github.com/IgorTatarnikov)
 - [Adam Tyson](https://github.com/adamltyson)
