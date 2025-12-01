@@ -28,9 +28,8 @@ While icons of mice are used for illustration, the course content should be appl
 
 ```
 
-### Core workshop
-
-We will cover the following topics from **Monday to Wednesday**:
+### Core workshop (Monday - Wednesday)
+We will cover the following topics during the first three days:
 
 * **Introduction:** a big-picture overview of analysis workflows and tools for animal behaviour.
 * **Deep learning for computer vision:** a primer on the key concepts and technologies that underpin most markerless tracking approaches.
@@ -39,9 +38,9 @@ We will cover the following topics from **Monday to Wednesday**:
 * **Behaviour segmentation:** a primer on decomposing continuous motion into discrete behaviours, followed by a practical tutorial of a supervised behaviour segmentation tool.
 
 
-### Collaboration days
+### Collaboration days (Thursday - Friday)
 
-The final two days—**Thursday and Friday**—are dedicated to collaboration. We will join forces with participants from the **Large Array Data** track to work together on participant-led projects.
+The final two days are dedicated to collaboration. We will join forces with participants from the **Large Array Data** track to work together on participant-led projects.
 
 * **Skill building:** we'll start with a practical workshop on **Git and GitHub** to equip everyone with the necessary skills for collaborative coding.
 * **Project-based work:** participants will self-organise into small teams to tackle projects hands-on. **Coding is not a requirement**; any idea that benefits from collaboration with other attendees is welcome. Potential project ideas include, but are not limited to:
@@ -62,7 +61,7 @@ Feel free to look through the handbook to get a sense of its contents, but keep 
 
 :::
 
-## Instructors
+## Confirmed Instructors
 - [Niko Sirmpilatze](https://github.com/niksirbi)
 - [Sofía Miñano](https://github.com/sfmig)
 - [Chang Huan Lo](https://github.com/lochhh)
