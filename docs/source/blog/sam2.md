@@ -150,8 +150,6 @@ The next step after obtaining segmentation masks is to extract a skeleton from t
 
 The process of skeletionsation by using the `skimage` library is an iterative one, with several cycles of removing the outermost pixels of the object until only a one-pixel wide representation of the object remains. The function works by iteratively removing pixels from the boundaries of the object while preserving its connectivity and overall structure. The algorithm continues this process until no more pixels can be removed without breaking the connectivity of the object.
 
-A Python code to perform skeletonisation and extracting the nodes from it, along with visualising the same can be seen in this [GitHub repository](https://github.com/jyoti-bhogal/neuroinformatics_osw/tree/main/python_code_skeletonisation_and_node_selection). 
-
 As an example, let's look at the following image of a worm mask and its skeletonised version:
 
 ```{figure} /_static/blog_images/sam2/output_skeleton_and_node_images/EGCG5_40_2018_10_19_Mask_masked_and_skeletonised.png
@@ -169,5 +167,7 @@ Once we have the skeletonised image, we can define keypoints or nodes along the 
 
 **Skeletonised worm image with sampled nodes.** Five pixels were randomly sampled along the skeleton to define the nodes.
 ```
+
+A Python notebook to perform the skeletonisation of the worm masks, extract the nodes from the masks, and visualise the process can be found in this [GitHub repository](https://github.com/jyoti-bhogal/neuroinformatics_osw/tree/main/python_code_skeletonisation_and_node_selection). 
 
 In conclusion, the combination of SAM-2 for segmentation and `skimage` for skeletonisation provides an effective workflow for extracting pose estimation skeletons for _C. elegans_. This automated approach can significantly speed up the analysis of worm behaviour and facilitate further research in this area.
