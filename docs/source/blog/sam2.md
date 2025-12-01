@@ -143,6 +143,8 @@ The next step after obtaining segmentation masks is to extract a skeleton from t
 
 The process of skeletionsation by using the `skimage` library is a repetitive one cycle of removing the outtermost pixels of the object until only a one-pixel wide representation of the object remains. The function works by iteratively removing pixels from the boundaries of the object while preserving its connectivity and overall structure. The algorithm continues this process until no more pixels can be removed without breaking the connectivity of the object.
 
+A Python code to perform skeletonisation and extracting the nodes from it, alogn with visualising the same can be seen in this [GitHub repository](https://github.com/jyoti-bhogal/neuroinformatics_osw/tree/main/python_code_skeletonisation_and_node_selection). 
+
 As an example, look at the following image of a worm mask and its skeletonised version:
 
 ```{image} /_static/blog_images/sam2/output_skeleton_and_node_images/EGCG5_40_2018_10_19_Mask_masked_and_skeletonised.png
