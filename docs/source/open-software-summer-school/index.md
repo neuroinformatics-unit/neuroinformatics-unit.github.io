@@ -133,8 +133,8 @@ A limited number of travel stipends will also be available, but we encourage app
 2026/application_questions
 funding
 2025/index
-2026/large-data
 2026/animals-in-motion
+2026/large-data
 2026/brainglobe
 2026/extracellular-electrophysiology
 ```
