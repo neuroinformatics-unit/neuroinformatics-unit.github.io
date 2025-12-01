@@ -31,13 +31,13 @@ We will cover the following topics during the first three days:
 The final two days are dedicated to collaboration. We will join forces with participants from the **Animals in Motion** track to work together on participant-led projects.
 
 * **Skill building:** we'll start with a practical workshop on **Git and GitHub** to equip everyone with the necessary skills for collaborative coding.
-* **Project-based work:** participants will self-organize into small teams to tackle projects hands-on. **Coding is not a requirement**; any idea that benefits from collaboration with other attendees is welcome. Potential project ideas include, but are not limited to:
-    * **Apply a tool:** use any learned software to analyze a new dataset (your own or a public one).
-    * **Give feedback:** raise issues, suggest features, or improve documentation for relevant open-source tools.
-    * **Make a contribution:** submit a pull request to an open-source repository (support will be provided).
-    * **Collaborative writing:** draft a white paper, blog post, or documentation together.
-    * **Prototype an idea:** test a cool new analysis or method on real-world data.
-* **Presentation:** you will have the opportunity to report your team's progress on the final afternoon.
+* **Project-based work:** participants will self-organise into small teams to tackle projects hands-on. **Coding is not a requirement**; any idea that benefits from collaboration with other attendees is welcome. Potential project ideas include, but are not limited to:
+    * *Apply a tool:* use any what you've learnt to analyse a new dataset (your own or a public one).
+    * *Give feedback:* report bugs and suggest features by raising issues on relevant open-source tools.
+    * *Make a contribution:* submit a pull request to an open-source repository.
+    * *Collaborative writing:* draft a white paper, blog post, or documentation together.
+    * *Prototype an idea:* experiment with a new analysis or method.
+* **Presentation:** teams will have the opportunity to share their progress and outcomes on the final afternoon.
 
 ## Confirmed Instructors
 - [Alessandro Felder](https://github.com/alessandrofelder)

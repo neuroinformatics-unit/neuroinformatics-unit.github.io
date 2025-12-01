@@ -72,11 +72,11 @@ The final two days are dedicated to collaboration. We will join forces with part
 
 * **Skill building:** we'll start with a practical workshop on **Git and GitHub** to equip everyone with the necessary skills for collaborative coding.
 * **Project-based work:** participants will self-organise into small teams to tackle projects hands-on. **Coding is not a requirement**; any idea that benefits from collaboration with other attendees is welcome. Potential project ideas include, but are not limited to:
-    * *Apply a tool:* use any learned software to analyse a new dataset (your own or a public one)
-    * *Give feedback:* report bugs and suggest features by raising issues on relevant open-source tools
-    * *Make a contribution:* submit a pull request to an open-source repository
-    * *Collaborative writing:* draft a white paper, blog post, or documentation together
-    * *Prototype an idea:* experiment with a new analysis or method
+    * *Apply a tool:* use any what you've learnt to analyse a new dataset (your own or a public one).
+    * *Give feedback:* report bugs and suggest features by raising issues on relevant open-source tools.
+    * *Make a contribution:* submit a pull request to an open-source repository.
+    * *Collaborative writing:* draft a white paper, blog post, or documentation together.
+    * *Prototype an idea:* experiment with a new analysis or method.
 * **Presentation:** teams will have the opportunity to share their progress and outcomes on the final afternoon.
 
 ## Confirmed Instructors
