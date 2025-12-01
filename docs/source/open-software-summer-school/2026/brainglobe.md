@@ -16,9 +16,8 @@ It is aimed at those interested in learning about open-source tools for analysin
 
 ## Course overview
 
-### Core workshop
-
-We will cover the following topics from **Monday to Wednesday**:
+### Core workshop (Monday - Wednesday)
+We will cover the following topics during the first three days:
 
 * **Introduction:** a high level overview of the BrainGlobe ecosystem of computational neuroanatomy tools, and what they enable.
 * **Image analysis in `napari`:** basic concepts of image analysis using [`napari`](https://napari.org/stable/).
@@ -30,9 +29,9 @@ We will cover the following topics from **Monday to Wednesday**:
   * Visualisation of data in atlas space with [`brainrender`](https://github.com/brainglobe/brainrender) and [`brainrender-napari`](https://github.com/brainglobe/brainrender-napari).
 * **Programmatic access:** an introduction to interacting with the BrainGlobe ecosystem via scripting and the command line.
 
-### Collaboration days
+### Collaboration days (Thursday - Friday)
 
-The final two days—**Thursday and Friday**—are dedicated to collaboration. We will join forces with participants from the **Extracellular Electrophysiology** track to work together on participant-led projects.
+The final two days are dedicated to collaboration. We will join forces with participants from the **Extracellular Electrophysiology** track to work together on participant-led projects.
 
 * **Skill building:** we'll start with a practical workshop on **Git and GitHub** to equip everyone with the necessary skills for collaborative coding.
 * **Project-based work:** participants will self-organize into small teams to tackle projects hands-on. **Coding is not a requirement**; any idea that benefits from collaboration with other attendees is welcome. Potential project ideas include, but are not limited to:

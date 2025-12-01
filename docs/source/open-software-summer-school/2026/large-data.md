@@ -17,9 +17,8 @@ This course is designed for researchers and students interested in learning abou
 
 
 ### Core workshop (Monday - Wednesday)
-
-
 We will cover the following topics during the first three days:
+
 * **Motivation:** we will show examples of large array datasets from neuroscience and imaging, discuss what research they enable, in what situations you should acquire them, and the computational challenges they pose.
 * **Introduction to the [Zarr](https://zarr.dev/) and [Dask](https://www.dask.org/) libraries:** a short introduction to Python libraries that enable you to read, process, and write large array datasets.
 * **Chunked, multi-scale file formats for large images:** a short introduction to the [OME-Zarr](https://ome-zarr-book.readthedocs.io/) format for large images and a practical tutorial to convert, process and visualise your large image data to OME-Zarr.
