@@ -15,7 +15,6 @@
 :align: center
 :width: 50%
 ```
-<br>
 
 Manually defining the pose skeletons in each video frame can be very tedious. 
 Automating this process would make movement analysis a lot faster and easier. Therefore, 
@@ -25,10 +24,10 @@ hackday aimed to explore ways of doing exactly that.
 ## Why worms?
 When studying animal behaviour, _Caenorhabditis elegans_ is not the first model 
 organism most people think of. However, they are used frequently as a model for 
-drug discovery, developmental biology, genetics, and other areas. Changes in the 
+drug discovery, developmental biology, genetics, and other areas. Changes in their 
 behaviour are thereby an important readout, indicating the effectiveness of a drug, 
 a developmental defect, or the contribution of a specific gene. The main advantage 
-of using _C. elegans_ over mammalian models like mice is the simpleness. This is also 
+of using _C. elegans_ over mammalian models like mice is their simplicity. This is also 
 true for the OSW hackday project described here: what could be easier to skeletonize 
 than a worm!
 
@@ -50,20 +49,20 @@ Windows system, I decided to ignore that. SAM-2 requires:
 * `ffmpeg` for video manipulation
 
 Setting up Pytorch with GPU support on a Windows system can be tricky. Fortunately, 
-I had done this before, so the Nvidia drivers and CUDA were already set up and only the 
+I had done this before, so the NVIDIA drivers and CUDA were already set up and only the 
 correct wheel for Pytorch hat to be downloaded. Still, it didn't all work out the first time. 
 After some troubleshooting we found the culprit: Pytorch and SAM-2 are both installed 
 using `pip`, so you need to make sure `pip` is installed in the respective environment. 
 Otherwise, it can come to version conflicts between packages from different environments, 
 where `pip` is installed. 
 
-`ffmpeg` is a commandline video manipulation tool, that is recommended in the example 
+`ffmpeg` is a command line tool for video manipulation, that is recommended in the example 
 notebook for SAM-2 for extracting frames. It is integrated in Linux distributions, but 
-on Windows it has to be installed separately, outside the python environment. Of course, 
+on Windows it has to be installed separately, outside the Python environment. Of course, 
 any other video manipulation tool can be used as well.
 
 In the end everything got installed correctly and I could run the notebook on my laptop, 
-even thou I kept getting some non-fatal error messages. The bigger problem, however, was the 
+even though I kept getting some non-fatal error messages. The bigger problem, however, was the 
 performance of my laptop. Despite the GPU, the prediction took several hours, 
 so we decided to use Google Colab instead.
 
@@ -74,46 +73,52 @@ Colab environment. You just need to choose a runtime with GPU (T4 for a free run
 connect to it and mount Google Drive. The data has to be uploaded to Google Drive.
 
 Google Colab is good for trying out things, however there are usage limits. The 
-connection is determined after being inactive for a while and there is a limited number 
+connection is terminated after being inactive for a while and there is a limited number 
 of sessions with GPU usage. Google does not publish these limits, apparently they vary. 
 There are paid options for longer runtimes and more GPU types.
 
 ### SAM-2 workflow for video segmentation
 
-SAM-2 repository provides an example notebook for segmenting videos, which is a good 
-starting point for exploring this model. The video predictor is built with pretrained 
-weights (need to be downloaded separately when using SAM-2 on a local machine!). The 
+The SAM-2 repository provides an example notebook for segmenting videos, which is a good 
+starting point for exploring this model. The video predictor is provided with pretrained 
+weights (which need to be downloaded separately when using SAM-2 on a local machine!). The 
 video data has to be saved as single frames, the example notebook uses JPEG files. These 
-images are loaded into a variable called `ìnference_state`. Then the user should provide 
+images are loaded into a variable called `inference_state` during initialization. Then the user should provide 
 prompts for the objects that should be segmented. There can be one or more objects and 
 the prompts can be either point coordinates or boxes. Furthermore, the prompts have a label,
 showing whether the prompt is positive (i.e. marking the desired object) or negative (
-marking the background). With this input the first masks for a given frame are predicted, 
-as shown below. Here, point prompts are used, 2 positive and one negative for each worm.
+marking the background). In this way, the first masks for a given frame are predicted, 
+as shown below. We used two positive and one negative point prompt for each worm.
 
-```{image} /_static/blog_images/sam2/sam2-workflow.png
+```{figure} /_static/blog_images/sam2/sam2-workflow.png
 :align: center
-:width: 100%
+:width: 70%
+
+**Masks definition on the first frame.** The SAM-2 workflow showing the provided prompts for three worms (positive points shown in green, negative points in red) and the initial mask predictions. A selected worm (highlighted with a red bounding box) is shown as a zoomed-in view in the panels on the right.
 ```
-<br>
+
 The resulting masks are visualized, so the user can decide whether to move on or add more 
 prompts for a better result. Due to limited time, the masks here were not refined further.
-The next step is to propagate the masks to whole video. Masks for each frame are predicted 
-and each object is tracked throughout the video. This is the time-consuming step. A good 
-innings to grab a cup of coffee (or a piece of pizza) and have a chat with fellow coders.
 
-```{image} /_static/blog_images/sam2/sam2-propagation.tiff
+The next step is to propagate the masks to the whole video. Masks for each frame are predicted 
+and each object labelled in the first frame is tracked throughout the video. This is the time-consuming step. A good 
+opportunity to grab a cup of coffee (or a piece of pizza) and have a chat with fellow coders.
+
+
+```{figure} /_static/blog_images/sam2/sam2-propagation.png
 :align: center
 :width: 100%
+
+**Propagation of masks to subsequent frames.** Once the masks are defined for the first frame, we can propagate the prompts to get the trajectories of the masks across the full video.
 ```
-<br>
+
 As a result of the prediction you get masks for every frame in the video. The notebook 
 displays some of them, so you can check the quality. All the predicted masks are stored 
-is a variable called `video_segments`. Since the masks are numpy arrays, they are not 
-serializable and cannot be stored in a JSON file. But you can use `pickle` to store them 
+in a variable called `video_segments`. Since the masks are numpy arrays, they are not 
+serializable and cannot be stored in a JSON file. But you can use `pickle` to export them 
 for later use.
 
-The example notebook contains all these steps with different options and extra code cells 
+The example notebook in the SAM-2 repository contains all these steps with different options and extra code cells 
 for e.g. adding additional prompts, different kinds of prompts, only one object, etc. 
 A more concise notebook, tailored for segmenting _C. elegans_, can be found 
 [here](https://github.com/pwetterauer/WormNotebooks.git).
@@ -123,15 +128,15 @@ While the results look reasonably good, there are some limitations. First, even 
 simple example the masks overlap not only the worm, but also some neighbouring pixels. 
 Using more points to prompt the model might solve this issue. However, the point coordinates 
 have to be entered manually. Finding out the coordinates and typing them into an array is 
-not very convenient. There are plugins for FIJI (SAMJ-IJ, only works for images not for 
-videos) or napari (e.g. microSAM for microscopic images, supports 2D, 3D and videos), 
-that make this step of the workflow easier.
-<br>
+not very convenient. There are some SAM plugins for FIJI (SAMJ-IJ, only works for images not for 
+videos) and napari (e.g. microSAM for microscopic images, supports 2D, 3D and videos), 
+that could make this step of the workflow easier.
+
 Second, on a more crowded plate, where the worms touch each other, the model tends to lose 
 track of single worms. This is, however a general problem not only for SAM-2 but also other 
 segmentation models. This kind of mistakes can be manually corrected or one can avoid them 
 by using less crowded videos.
-<br><br>
+
 In summary, SAM-2 did a good job segmenting the worms in a short time. The resulting masks 
 can now be further analysed, e.g. by creating a skeleton and selecting some markers to create 
 a pose track.
