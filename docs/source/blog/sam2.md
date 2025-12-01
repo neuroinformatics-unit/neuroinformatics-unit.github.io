@@ -11,15 +11,17 @@
 # Exploring automatic ways of extracting a pose estimation skeleton for *C. elegans*
 *Segmenting C. elegans using SAM-2 and extracting skeletons.*
 
-```{image} /_static/blog_images/sam2/worm-to-skeleton.png
-:align: center
-:width: 50%
-```
-
 Manually defining the pose skeletons in each video frame can be very tedious. 
 Automating this process would make movement analysis a lot faster and easier. Therefore, 
 our project at [OSW](https://neuroinformatics.dev/open-software-week/index.html) 
 hackday aimed to explore ways of doing exactly that.
+
+```{figure} /_static/blog_images/sam2/worm-to-skeleton.png
+:align: center
+:width: 60%
+
+**How to automatically define a pose estimation skeleton on a worm?** We explored this as part of the OSW hackday.
+```
 
 ## Why worms?
 When studying animal behaviour, _Caenorhabditis elegans_ is not the first model 
@@ -141,27 +143,31 @@ In summary, SAM-2 did a good job segmenting the worms in a short time. The resul
 can now be further analysed, e.g. by creating a skeleton and selecting some markers to create 
 a pose track.
 
-### Skeletonisation
+## Skeletonisation of the masks
 
 The next step after obtaining segmentation masks is to extract a skeleton from them. For this, we used the 
 [`skeletonize` function from the `skimage` library](https://scikit-image.org/docs/stable/auto_examples/edges/plot_skeleton.html). This function takes a masked image as input in the format of a two-dimensional array and returns a skeletonised version of the image.
 
-The process of skeletionsation by using the `skimage` library is a repetitive one cycle of removing the outtermost pixels of the object until only a one-pixel wide representation of the object remains. The function works by iteratively removing pixels from the boundaries of the object while preserving its connectivity and overall structure. The algorithm continues this process until no more pixels can be removed without breaking the connectivity of the object.
+The process of skeletionsation by using the `skimage` library is an iterative one, with several cycles of removing the outermost pixels of the object until only a one-pixel wide representation of the object remains. The function works by iteratively removing pixels from the boundaries of the object while preserving its connectivity and overall structure. The algorithm continues this process until no more pixels can be removed without breaking the connectivity of the object.
 
-A Python code to perform skeletonisation and extracting the nodes from it, alogn with visualising the same can be seen in this [GitHub repository](https://github.com/jyoti-bhogal/neuroinformatics_osw/tree/main/python_code_skeletonisation_and_node_selection). 
+A Python code to perform skeletonisation and extracting the nodes from it, along with visualising the same can be seen in this [GitHub repository](https://github.com/jyoti-bhogal/neuroinformatics_osw/tree/main/python_code_skeletonisation_and_node_selection). 
 
-As an example, look at the following image of a worm mask and its skeletonised version:
+As an example, let's look at the following image of a worm mask and its skeletonised version:
 
-```{image} /_static/blog_images/sam2/output_skeleton_and_node_images/EGCG5_40_2018_10_19_Mask_masked_and_skeletonised.png
+```{figure} /_static/blog_images/sam2/output_skeleton_and_node_images/EGCG5_40_2018_10_19_Mask_masked_and_skeletonised.png
 :align: center
 :width: 70%
+
+**Masked worm image and its skeletonised version.** The input masked worm image (left) and its one-pixel wide skeletonised version (right).
 ```
-<br>
-Once we have the skeletonised image, we can extract keypoints or nodes along the skeleton to represent the pose of the worm. This can be done by sampling points at regular intervals along the skeleton or by identifying specific features such as bends or junctions in the skeleton. These keypoints can then be used to create a pose track for the worm, which can be further analysed for movement patterns and behaviours.
 
-```{image} /_static/blog_images/sam2/output_skeleton_and_node_images/EGCG5_40_2018_10_19_Mask_skeleton_with_nodes.png
+Once we have the skeletonised image, we can define keypoints or nodes along the skeleton to represent the pose of the worm. This can be done by sampling points at regular intervals along the skeleton or by identifying specific features such as bends or junctions in the skeleton. These keypoints could then be used to create a pose track for the worm, which can be further analysed for movement patterns and behaviours. They could also be used to quickly create annotations for a pose estimation model (as long as the keypoints are consistent across the frames).
+
+```{figure} /_static/blog_images/sam2/output_skeleton_and_node_images/EGCG5_40_2018_10_19_Mask_skeleton_and_nodes.png
 :align: center
 :width: 70%
+
+**Skeletonised worm image with sampled nodes.** Five pixels were randomly sampled along the skeleton to define the nodes.
 ```
 
 In conclusion, the combination of SAM-2 for segmentation and `skimage` for skeletonisation provides an effective workflow for extracting pose estimation skeletons for _C. elegans_. This automated approach can significantly speed up the analysis of worm behaviour and facilitate further research in this area.
