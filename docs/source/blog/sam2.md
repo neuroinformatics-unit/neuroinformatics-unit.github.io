@@ -1,5 +1,5 @@
 :blogpost: true
-:date: August 15, 2025
+:date: December 8, 2025
 :author: Pille Wetterauer, Jyoti Bhogal
 :location: London, UK
 :category: Blog
