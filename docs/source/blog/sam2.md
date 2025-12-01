@@ -135,3 +135,26 @@ by using less crowded videos.
 In summary, SAM-2 did a good job segmenting the worms in a short time. The resulting masks 
 can now be further analysed, e.g. by creating a skeleton and selecting some markers to create 
 a pose track.
+
+### Skeletonisation
+
+The next step after obtaining segmentation masks is to extract a skeleton from them. For this, we used the 
+[`skeletonize` function from the `skimage` library](https://scikit-image.org/docs/stable/auto_examples/edges/plot_skeleton.html). This function takes a masked image as input in the format of a two-dimensional array and returns a skeletonised version of the image.
+
+The process of skeletionsation by using the `skimage` library is a repetitive one cycle of removing the outtermost pixels of the object until only a one-pixel wide representation of the object remains. The function works by iteratively removing pixels from the boundaries of the object while preserving its connectivity and overall structure. The algorithm continues this process until no more pixels can be removed without breaking the connectivity of the object.
+
+As an example, look at the following image of a worm mask and its skeletonised version:
+
+```{image} /_static/blog_images/sam2/output_skeleton_and_node_images/EGCG5_40_2018_10_19_Mask_masked_and_skeletonised.png
+:align: center
+:width: 70%
+```
+<br>
+Once we have the skeletonised image, we can extract keypoints or nodes along the skeleton to represent the pose of the worm. This can be done by sampling points at regular intervals along the skeleton or by identifying specific features such as bends or junctions in the skeleton. These keypoints can then be used to create a pose track for the worm, which can be further analysed for movement patterns and behaviours.
+
+```{image} /_static/blog_images/sam2/output_skeleton_and_node_images/EGCG5_40_2018_10_19_Mask_skeleton_with_nodes.png
+:align: center
+:width: 70%
+```
+
+In conclusion, the combination of SAM-2 for segmentation and `skimage` for skeletonisation provides an effective workflow for extracting pose estimation skeletons for _C. elegans_. This automated approach can significantly speed up the analysis of worm behaviour and facilitate further research in this area.
