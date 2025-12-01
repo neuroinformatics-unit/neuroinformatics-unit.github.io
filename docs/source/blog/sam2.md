@@ -1,5 +1,5 @@
 :blogpost: true
-:date: December 8, 2025
+:date: December 1, 2025
 :author: Pille Wetterauer, Jyoti Bhogal
 :location: London, UK
 :category: Blog
@@ -24,7 +24,7 @@ hackday aimed to explore ways of doing exactly that.
 ```
 
 ## Why worms?
-When studying animal behaviour, _Caenorhabditis elegans_ is not the first model 
+When studying animal behaviour, [_Caenorhabditis elegans_](https://en.wikipedia.org/wiki/Caenorhabditis_elegans) is not the first model 
 organism most people think of. However, they are used frequently as a model for 
 drug discovery, developmental biology, genetics, and other areas. Changes in their 
 behaviour are thereby an important readout, indicating the effectiveness of a drug, 
@@ -34,7 +34,7 @@ true for the OSW hackday project described here: what could be easier to skeleto
 than a worm!
 
 ## Segmenting worms with SAM-2
-In order to extract pose skeletons, we first need to create segmentation masks, and 
+In order to automatically extract pose skeletons, we first need to create segmentation masks, and 
 of course this should be automated as well. There are lots of deep learning algorithms 
 available for segmentation. Here, we try out 
 [Segment Anything Model 2 (SAM-2)](https://github.com/facebookresearch/sam2). This model
@@ -43,7 +43,7 @@ minimal input from the user.
 
 ### Installation
 Installing SAM-2 was one of the more challenging steps of this project. The installation 
-instructions recommend using WSL on Windows. However, since I already had Python on my 
+instructions recommend using [WSL](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux) on Windows. However, since I already had Python on my 
 Windows system, I decided to ignore that. SAM-2 requires:
 * Python >= 3.10
 * Pytorch and TorchVision
@@ -52,7 +52,7 @@ Windows system, I decided to ignore that. SAM-2 requires:
 
 Setting up Pytorch with GPU support on a Windows system can be tricky. Fortunately, 
 I had done this before, so the NVIDIA drivers and CUDA were already set up and only the 
-correct wheel for Pytorch hat to be downloaded. Still, it didn't all work out the first time. 
+correct wheel for Pytorch had to be downloaded. Still, it didn't all work out the first time. 
 After some troubleshooting we found the culprit: Pytorch and SAM-2 are both installed 
 using `pip`, so you need to make sure `pip` is installed in the respective environment. 
 Otherwise, it can come to version conflicts between packages from different environments, 
