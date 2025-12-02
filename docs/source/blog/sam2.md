@@ -53,13 +53,15 @@ Windows system, I decided to ignore that. SAM-2 requires:
 Setting up Pytorch with GPU support on a Windows system can be tricky. Fortunately, 
 I had done this before, so the NVIDIA drivers and CUDA were already set up and only the 
 correct wheel for Pytorch had to be downloaded. Still, it didn't all work out the first time. 
-After some troubleshooting we found the culprit: Pytorch and SAM-2 are both installed 
-using `pip`, so you need to make sure `pip` is installed in the respective environment. 
-Otherwise, it can come to version conflicts between packages from different environments, 
-where `pip` is installed. 
+After some troubleshooting we found the culprit: `conda` was using `pip` from a different 
+environment. `pip` is a package needed to install both Pytorch and SAM-2. Using `pip` from another environment
+can lead to version conflicts between packages from different environments. You can easily 
+check from which environment your `pip` comes from, using the command `which pip`, that will 
+display the path to the package linked to the `pip`command.
 
-`ffmpeg` is a command line tool for video manipulation, that is recommended in the example 
-notebook for SAM-2 for extracting frames. It is integrated in Linux distributions, but 
+
+`ffmpeg` is a command line tool for video manipulation, that is recommended in the [example 
+notebook for SAM-2](https://github.com/facebookresearch/sam2/blob/2b90b9f5ceec907a1c18123530e92e794ad901a4/notebooks/video_predictor_example.ipynb) for extracting frames. It is integrated in Linux distributions, but 
 on Windows it has to be installed separately, outside the Python environment. Of course, 
 any other video manipulation tool can be used as well.
 
@@ -69,7 +71,7 @@ performance of my laptop. Despite the GPU, the prediction took several hours,
 so we decided to use Google Colab instead.
 
 ### Running the notebook on Google Colab
-The SAM-2 repository contains sample notebooks for different use-cases, including video 
+The SAM-2 repository contains [sample notebooks](https://github.com/facebookresearch/sam2/tree/2b90b9f5ceec907a1c18123530e92e794ad901a4/notebooks) for different use-cases, including video 
 segmentation. The notebooks contain a link to Google Colab and code for setting up the 
 Colab environment. You just need to choose a runtime with GPU (T4 for a free runtime), 
 connect to it and mount Google Drive. The data has to be uploaded to Google Drive.
@@ -130,8 +132,8 @@ While the results look reasonably good, there are some limitations. First, even 
 simple example the masks overlap not only the worm, but also some neighbouring pixels. 
 Using more points to prompt the model might solve this issue. However, the point coordinates 
 have to be entered manually. Finding out the coordinates and typing them into an array is 
-not very convenient. There are some SAM plugins for FIJI (SAMJ-IJ, only works for images not for 
-videos) and napari (e.g. microSAM for microscopic images, supports 2D, 3D and videos), 
+not very convenient. There are some SAM plugins for [FIJI](https://fiji.sc) ([SAMJ-IJ](https://github.com/segment-anything-models-java/SAMJ-IJ), only works for images not for 
+videos) and [napari](https://napari.org) (e.g. [microSAM](https://computational-cell-analytics.github.io/micro-sam/micro_sam.html) for microscopic images, supports 2D, 3D and videos), 
 that could make this step of the workflow easier.
 
 Second, on a more crowded plate, where the worms touch each other, the model tends to lose 
