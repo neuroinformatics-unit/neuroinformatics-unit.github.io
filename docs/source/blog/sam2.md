@@ -13,12 +13,12 @@
 
 Manually defining the pose skeletons in each video frame can be very tedious. 
 Automating this process would make movement analysis a lot faster and easier. Therefore, 
-our project at [OSW](https://neuroinformatics.dev/open-software-week/index.html) 
+our project at [OSW 2025](https://neuroinformatics.dev/open-software-summer-school/2025/index.html) 
 hackday aimed to explore ways of doing exactly that.
 
 ```{figure} /_static/blog_images/sam2/worm-to-skeleton.png
 :align: center
-:width: 60%
+:width: 80%
 
 **How to automatically define a pose estimation skeleton on a worm?** We explored this as part of the OSW hackday.
 ```
