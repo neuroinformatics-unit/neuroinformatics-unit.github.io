@@ -1,0 +1,884 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Exploring automatic ways of extracting a pose estimation skeleton for C. elegans &#8212; NIU</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=d57c6e56" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=d45e8c67"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-6260TGM7TY"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-6260TGM7TY');
+            </script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'blog/sam2';</script>
+    <link rel="canonical" href="https://neuroinformatics.dev/blog/sam2.html" />
+    <link rel="icon" href="../_static/logo_light.png"/>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />   
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content">Learn more about our tools at the <a href='https://neuroinformatics.dev/open-software-summer-school/index.html'>Neuroinformatics Unit Open Software Summer School</a> in London, August 2026!</div>
+</aside>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo_light.png" class="logo__image only-light" alt=""/>
+    <img src="../_static/logo_dark.png" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">NIU</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../about.html">
+    About us
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../people.html">
+    People
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../projects.html">
+    Projects
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../publications.html">
+    Publications & Media
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="index.html">
+    Blog
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../roadmaps/index.html">
+    Roadmaps
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../get-involved/index.html">
+    Get involved
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../resources/index.html">
+    Resources
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../open-software-summer-school/index.html">
+    Open Software Summer School
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../gsoc-2025-datashuttle.html">
+    <no title>
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/neuroinformatics-unit/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/swc_niu" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://mastodon.online/@neuroinformatics" title="Mastodon" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-mastodon fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Mastodon</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://bsky.app/profile/neuroinformatics.dev" title="Bluesky" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-bluesky fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Bluesky</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://neuroinformatics.zulipchat.com/" title="Zulip (chat)" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-comments fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Zulip (chat)</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../about.html">
+    About us
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../people.html">
+    People
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../projects.html">
+    Projects
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../publications.html">
+    Publications & Media
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="index.html">
+    Blog
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../roadmaps/index.html">
+    Roadmaps
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../get-involved/index.html">
+    Get involved
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../resources/index.html">
+    Resources
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../open-software-summer-school/index.html">
+    Open Software Summer School
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../gsoc-2025-datashuttle.html">
+    <no title>
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/neuroinformatics-unit/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/swc_niu" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://mastodon.online/@neuroinformatics" title="Mastodon" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-mastodon fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Mastodon</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://bsky.app/profile/neuroinformatics.dev" title="Bluesky" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-bluesky fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Bluesky</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://neuroinformatics.zulipchat.com/" title="Zulip (chat)" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-comments fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Zulip (chat)</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Exploring automatic ways of extracting a pose estimation skeleton for <em>C. elegans</em></span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                   <section class="tex2jax_ignore mathjax_ignore" id="exploring-automatic-ways-of-extracting-a-pose-estimation-skeleton-for-c-elegans">
+<span id="target-sam2"></span><h1>Exploring automatic ways of extracting a pose estimation skeleton for <em>C. elegans</em><a class="headerlink" href="#exploring-automatic-ways-of-extracting-a-pose-estimation-skeleton-for-c-elegans" title="Link to this heading">#</a></h1>
+<p><em>Segmenting C. elegans using SAM-2 and extracting skeletons.</em></p>
+<p>Manually defining the pose skeletons in each video frame can be very tedious.
+Automating this process would make movement analysis a lot faster and easier. Therefore,
+our project at <a class="reference external" href="https://neuroinformatics.dev/open-software-summer-school/2025/index.html">OSW 2025</a>
+hackday aimed to explore ways of doing exactly that.</p>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../_images/worm-to-skeleton.png"><img alt="../_images/worm-to-skeleton.png" src="../_images/worm-to-skeleton.png" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-text"><strong>How to automatically define a pose estimation skeleton on a worm?</strong> We explored this as part of the OSW hackday.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="why-worms">
+<h2>Why worms?<a class="headerlink" href="#why-worms" title="Link to this heading">#</a></h2>
+<p>When studying animal behaviour, <a class="reference external" href="https://en.wikipedia.org/wiki/Caenorhabditis_elegans"><em>Caenorhabditis elegans</em></a> is not the first model
+organism most people think of. However, they are used frequently as a model for
+drug discovery, developmental biology, genetics, and other areas. Changes in their
+behaviour are thereby an important readout, indicating the effectiveness of a drug,
+a developmental defect, or the contribution of a specific gene. The main advantage
+of using <em>C. elegans</em> over mammalian models like mice is their simplicity. This is also
+true for the OSW hackday project described here: what could be easier to skeletonise
+than a worm!</p>
+</section>
+<section id="segmenting-worms-with-sam-2">
+<h2>Segmenting worms with SAM-2<a class="headerlink" href="#segmenting-worms-with-sam-2" title="Link to this heading">#</a></h2>
+<p>In order to automatically extract pose skeletons, we first need to create segmentation masks, and
+of course this should be automated as well. There are lots of deep learning algorithms
+available for segmentation. Here, we try out
+<a class="reference external" href="https://github.com/facebookresearch/sam2">Segment Anything Model 2 (SAM-2)</a>. This model
+can be applied both to images and videos and is designed to segment any object with
+minimal input from the user.</p>
+<section id="installation">
+<h3>Installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h3>
+<p>Installing SAM-2 was one of the more challenging steps of this project. The installation
+instructions recommend using <a class="reference external" href="https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux">WSL</a> on Windows. However, since I already had Python on my
+Windows system, I decided to ignore that. SAM-2 requires:</p>
+<ul class="simple">
+<li><p>Python &gt;= 3.10</p></li>
+<li><p>Pytorch and TorchVision</p></li>
+<li><p>SAM-2 package, that can be cloned from GitHub</p></li>
+<li><p><a class="reference external" href="https://ffmpeg.org/">ffmpeg</a> for video manipulation</p></li>
+</ul>
+<p>Setting up Pytorch with GPU support on a Windows system can be tricky. Fortunately,
+I had done this before, so the NVIDIA drivers and CUDA were already set up and only the
+correct wheel for Pytorch had to be downloaded. Still, it didn’t all work out the first time.
+After some troubleshooting we found the culprit: <code class="docutils literal notranslate"><span class="pre">conda</span></code> was using <code class="docutils literal notranslate"><span class="pre">pip</span></code> from a different
+environment. <code class="docutils literal notranslate"><span class="pre">pip</span></code> is a package needed to install both Pytorch and SAM-2. Using <code class="docutils literal notranslate"><span class="pre">pip</span></code> from another environment
+can lead to version conflicts between packages from different environments. You can easily
+check from which environment your <code class="docutils literal notranslate"><span class="pre">pip</span></code> comes from, using the command <code class="docutils literal notranslate"><span class="pre">which</span> <span class="pre">pip</span></code>, that will
+display the path to the package linked to the <code class="docutils literal notranslate"><span class="pre">pip</span></code>command.</p>
+<p><code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code> is a command line tool for video manipulation, that is recommended in the <a class="reference external" href="https://github.com/facebookresearch/sam2/blob/main/notebooks/video_predictor_example.ipynb">example
+notebook for SAM-2</a> for extracting frames. It is integrated in Linux distributions, but
+on Windows it has to be installed separately, outside the Python environment. Of course,
+any other video manipulation tool can be used as well.</p>
+<p>In the end everything got installed correctly and I could run the notebook on my laptop,
+even though I kept getting some non-fatal error messages. The bigger problem, however, was the
+performance of my laptop. Despite the GPU, the prediction took several hours,
+so we decided to use Google Colab instead.</p>
+</section>
+<section id="running-the-notebook-on-google-colab">
+<h3>Running the notebook on Google Colab<a class="headerlink" href="#running-the-notebook-on-google-colab" title="Link to this heading">#</a></h3>
+<p>The SAM-2 repository contains <a class="reference external" href="https://github.com/facebookresearch/sam2/tree/main/notebooks">sample notebooks</a> for different use-cases, including <a class="reference external" href="https://github.com/facebookresearch/sam2/blob/main/notebooks/video_predictor_example.ipynb">video
+segmentation</a>. The notebooks contain a link to Google Colab and code for setting up the
+Colab environment. You just need to choose a runtime with GPU (T4 for a free runtime),
+connect to it and mount Google Drive. The data has to be uploaded to Google Drive.</p>
+<p>Google Colab is good for trying out things, however there are usage limits. The
+connection is terminated after being inactive for a while and there is a limited number
+of sessions with GPU usage. Google does not publish these limits, apparently they vary.
+There are paid options for longer runtimes and more GPU types.</p>
+</section>
+<section id="sam-2-workflow-for-video-segmentation">
+<h3>SAM-2 workflow for video segmentation<a class="headerlink" href="#sam-2-workflow-for-video-segmentation" title="Link to this heading">#</a></h3>
+<p>The SAM-2 repository provides an example notebook for segmenting videos, which is a good
+starting point for exploring this model. The video predictor is provided with pretrained
+weights (which need to be downloaded separately when using SAM-2 on a local machine!). The
+video data has to be saved as single frames, the example notebook uses JPEG files. These
+images are loaded into a variable called <code class="docutils literal notranslate"><span class="pre">inference_state</span></code> during initialization. Then the user should provide
+prompts for the objects that should be segmented. There can be one or more objects and
+the prompts can be either point coordinates or boxes. Furthermore, the prompts have a label,
+showing whether the prompt is positive (i.e. marking the desired object) or negative (marking
+the background). In this way, the first masks for a given frame are predicted,
+as shown below. We used two positive and one negative point prompt for each worm.</p>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../_images/sam2-workflow.png"><img alt="../_images/sam2-workflow.png" src="../_images/sam2-workflow.png" style="width: 70%;" />
+</a>
+<figcaption>
+<p><span class="caption-text"><strong>Masks definition on the first frame.</strong> The SAM-2 workflow showing the provided prompts for three worms (positive points shown in green, negative points in red) and the initial mask predictions. A selected worm (highlighted with a red bounding box) is shown as a zoomed-in view in the panels on the right.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The resulting masks are visualized, so the user can decide whether to move on or add more
+prompts for a better result. Due to limited time, the masks here were not refined further.</p>
+<p>The next step is to propagate the masks to the whole video. Masks for each frame are predicted
+and each object labelled in the first frame is tracked throughout the video. This is the time-consuming step. A good
+opportunity to grab a cup of coffee (or a piece of pizza) and have a chat with fellow coders.</p>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="../_images/sam2-propagation.png"><img alt="../_images/sam2-propagation.png" src="../_images/sam2-propagation.png" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-text"><strong>Propagation of masks to subsequent frames.</strong> Once the masks are defined for the first frame, we can propagate the prompts to get the trajectories of the masks across the full video.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>As a result of the prediction you get masks for every frame in the video. The <a class="reference external" href="https://github.com/facebookresearch/sam2/blob/main/notebooks/video_predictor_example.ipynb">notebook</a>
+displays some of them, so you can check the quality. All the predicted masks are stored
+in a variable called <code class="docutils literal notranslate"><span class="pre">video_segments</span></code>. Since the masks are numpy arrays, they cannot be directly exported to a JSON file using Python’s standard <a class="reference external" href="https://docs.python.org/3/library/json.html"><code class="docutils literal notranslate"><span class="pre">json</span></code></a> module (without first converting them to lists, which would lose <code class="docutils literal notranslate"><span class="pre">dtype</span></code> information). But you can use <a class="reference external" href="https://docs.python.org/3/library/pickle.html"><code class="docutils literal notranslate"><span class="pre">pickle</span></code></a> or <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.savez.html"><code class="docutils literal notranslate"><span class="pre">numpy.savez()</span></code></a> to export them
+for later use.</p>
+<p>The <a class="reference external" href="https://github.com/facebookresearch/sam2/blob/main/notebooks/video_predictor_example.ipynb">example notebook</a>  in the SAM-2 repository contains all these steps with different options and extra code cells
+for e.g. adding additional prompts, different kinds of prompts, only one object, etc.
+A more concise notebook, tailored for segmenting <em>C. elegans</em>, can be found
+<a class="reference external" href="https://github.com/pwetterauer/WormNotebooks.git">here</a>.</p>
+</section>
+<section id="limitations">
+<h3>Limitations<a class="headerlink" href="#limitations" title="Link to this heading">#</a></h3>
+<p>While the results look reasonably good, there are some limitations. First, even in this
+simple example the masks overlap not only the worm, but also some neighbouring pixels.
+Using more points to prompt the model might solve this issue. However, the point coordinates
+have to be entered manually. Finding out the coordinates and typing them into an array is
+not very convenient. There are some SAM plugins for <a class="reference external" href="https://fiji.sc">FIJI</a> (<a class="reference external" href="https://github.com/segment-anything-models-java/SAMJ-IJ">SAMJ-IJ</a>, only works for images not for
+videos) and <a class="reference external" href="https://napari.org">napari</a> (e.g. <a class="reference external" href="https://computational-cell-analytics.github.io/micro-sam/micro_sam.html">microSAM</a> for microscopic images, supports 2D, 3D and videos),
+that could make this step of the workflow easier.</p>
+<p>Second, on a more crowded plate, where the worms touch each other, the model tends to lose
+track of single worms. This is, however a general problem not only for SAM-2 but also other
+segmentation models. This kind of mistakes can be manually corrected or one can avoid them
+by using less crowded videos.</p>
+<p>In summary, SAM-2 did a good job segmenting the worms in a short time. The resulting masks
+can now be further analysed, e.g. by creating a skeleton and selecting some markers to create
+a pose estimation skeleton.</p>
+</section>
+</section>
+<section id="skeletonisation-of-the-masks">
+<h2>Skeletonisation of the masks<a class="headerlink" href="#skeletonisation-of-the-masks" title="Link to this heading">#</a></h2>
+<p>The next step after obtaining segmentation masks is to extract a skeleton from them. For this, we used the
+<a class="reference external" href="https://scikit-image.org/docs/stable/auto_examples/edges/plot_skeleton.html"><code class="docutils literal notranslate"><span class="pre">skeletonize</span></code> function from the <code class="docutils literal notranslate"><span class="pre">skimage</span></code> library</a>. This function takes a masked image as input in the format of a two-dimensional array and returns a skeletonised version of the image.</p>
+<p>The process of skeletionsation by using the <code class="docutils literal notranslate"><span class="pre">skimage</span></code> library is an iterative one, with several cycles of removing the outermost pixels of the object until only a one-pixel wide representation of the object remains. The function works by iteratively removing pixels from the boundaries of the object while preserving its connectivity and overall structure. The algorithm continues this process until no more pixels can be removed without breaking the connectivity of the object.</p>
+<p>As an example, let’s look at the following image of a worm mask and its skeletonised version:</p>
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="../_images/EGCG5_40_2018_10_19_Mask_masked_and_skeletonised.png"><img alt="../_images/EGCG5_40_2018_10_19_Mask_masked_and_skeletonised.png" src="../_images/EGCG5_40_2018_10_19_Mask_masked_and_skeletonised.png" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-text"><strong>Masked worm image and its skeletonised version.</strong> The input masked worm image (left) and its one-pixel wide skeletonised version (right).</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Once we have the skeletonised image, we can define keypoints or nodes along the skeleton to represent the pose of the worm. This can be done by sampling points at regular intervals along the skeleton or by identifying specific features such as bends or junctions in the skeleton. In this exploration, I chose the method of random selection and selected 5 pixels by using <a class="reference external" href="https://numpy.org/doc/stable/reference/random/generated/numpy.random.Generator.choice.html#numpy.random.Generator.choice">numpy’s <code class="docutils literal notranslate"><span class="pre">choice()</span></code> function</a>. These keypoints could then be used to create a pose track for the worm, which can be further analysed for movement patterns and behaviours. They could also be used to quickly create annotations for a pose estimation model (as long as the keypoints are consistent across the frames).</p>
+<figure class="align-center" id="id5">
+<a class="reference internal image-reference" href="../_images/EGCG5_40_2018_10_19_Mask_skeleton_and_nodes.png"><img alt="../_images/EGCG5_40_2018_10_19_Mask_skeleton_and_nodes.png" src="../_images/EGCG5_40_2018_10_19_Mask_skeleton_and_nodes.png" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-text"><strong>Skeletonised worm image with sampled nodes.</strong> Five pixels were randomly sampled along the skeleton to define the nodes (shown in blue).</span><a class="headerlink" href="#id5" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>A Python notebook to perform the skeletonisation of the worm masks, extract the nodes from the masks, and visualise the process can be found in this <a class="reference external" href="https://github.com/jyoti-bhogal/neuroinformatics_osw/tree/main/python_code_skeletonisation_and_node_selection">GitHub repository</a>. Below we include the snippet to sample the nodes:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">PIL</span><span class="w"> </span><span class="kn">import</span> <span class="n">Image</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">skimage.morphology</span><span class="w"> </span><span class="kn">import</span> <span class="n">skeletonize</span>
+
+<span class="c1"># Open the .tif image</span>
+<span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;path/to/the/worm-mask.tif&quot;</span><span class="p">)</span>
+
+<span class="c1"># Convert to numpy array</span>
+<span class="n">img_worm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+
+<span class="c1"># Compute skeletonised worm image (1-pixel wide worm mask)</span>
+<span class="n">skeleton_worm</span> <span class="o">=</span> <span class="n">skeletonize</span><span class="p">(</span><span class="n">img_worm</span><span class="p">)</span>
+
+<span class="c1"># Get indices where skeleton_worm is True</span>
+<span class="n">worm_index_true</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argwhere</span><span class="p">(</span><span class="n">skeleton_worm</span><span class="p">)</span>
+
+<span class="c1"># Define nodes as 5 worm pixels randomly sampled (without replacement)</span>
+<span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="n">seed</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span> <span class="c1"># set a seed for reproducibility</span>
+<span class="n">sample_indices</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">worm_index_true</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># Get rows (y-coordinate) and columns (x-coordinate) of the nodes in the skeleton_worm array</span>
+<span class="n">sampled_worm_index_true</span> <span class="o">=</span> <span class="n">worm_index_true</span><span class="p">[</span><span class="n">sample_indices</span><span class="p">,</span> <span class="p">:]</span>
+</pre></div>
+</div>
+<p>In conclusion, the combination of SAM-2 for segmentation and <code class="docutils literal notranslate"><span class="pre">skimage</span></code> for skeletonisation provides an effective workflow for extracting pose estimation skeletons for <em>C. elegans</em>. This automated approach can significantly speed up the analysis of worm behaviour and facilitate further research in this area.</p>
+</section>
+</section>
+
+<div class="section ablog__blog_comments">
+     
+<div class="section ablog__prev-next">
+  <span class="ablog__prev">
+     
+    <a href="gsoc_2025_brainglobe_registration.html">
+      
+      <i class="fa fa-arrow-circle-left"></i>
+      
+      <span>GSoC 2025: brainglobe-registration</span>
+    </a>
+    
+  </span>
+  <span class="ablog__spacer">&nbsp;</span>
+  <span class="ablog__next">
+    
+  </span>
+</div>
+  
+</div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-worms">Why worms?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#segmenting-worms-with-sam-2">Segmenting worms with SAM-2</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-notebook-on-google-colab">Running the notebook on Google Colab</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sam-2-workflow-for-video-segmentation">SAM-2 workflow for video segmentation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#limitations">Limitations</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#skeletonisation-of-the-masks">Skeletonisation of the masks</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/blog/sam2.md.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item"><p class="sphinx-version">
+    Created using <a href="https://sphinx-doc.org/">Sphinx</a> 8.2.3.
+    <br/>
+    </p>
+    <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a>
+    0.16.1.
+    </p>
+    </div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><div class="things-in-a-row">
+    <a href="https://www.sainsburywellcome.org/web/">
+        <img src="../_static/light-logo-swc.png" alt="Sponsors" class="only-light img-sponsor"/>
+        <img src="../_static/dark-logo-swc.png" alt="Sponsors" class="only-dark img-sponsor"/>
+    </a>
+    <a href="https://www.ucl.ac.uk/gatsby/gatsby-computational-neuroscience-unit">
+        <img src="../_static/light-logo-gatsby.png" alt="Sponsors" class="only-light img-sponsor"/>
+        <img src="../_static/dark-logo-gatsby.png" alt="Sponsors" class="only-dark img-sponsor"/>
+    </a>
+    <a href="https://www.ucl.ac.uk/">
+        <img src="../_static/light-logo-ucl.png" alt="Sponsors" class="only-light img-sponsor"/>
+        <img src="../_static/dark-logo-ucl.png" alt="Sponsors" class="only-dark img-sponsor"/>
+    </a>
+</div></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
