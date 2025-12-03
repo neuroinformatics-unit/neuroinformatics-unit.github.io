@@ -1,5 +1,5 @@
 :blogpost: true
-:date: December 1, 2025
+:date: December 3, 2025
 :author: Pille Wetterauer, Jyoti Bhogal
 :location: London, UK
 :category: Blog
@@ -30,7 +30,7 @@ drug discovery, developmental biology, genetics, and other areas. Changes in the
 behaviour are thereby an important readout, indicating the effectiveness of a drug, 
 a developmental defect, or the contribution of a specific gene. The main advantage 
 of using _C. elegans_ over mammalian models like mice is their simplicity. This is also 
-true for the OSW hackday project described here: what could be easier to skeletonize 
+true for the OSW hackday project described here: what could be easier to skeletonise 
 than a worm!
 
 ## Segmenting worms with SAM-2
@@ -48,7 +48,7 @@ Windows system, I decided to ignore that. SAM-2 requires:
 * Python >= 3.10
 * Pytorch and TorchVision
 * SAM-2 package, that can be cloned from GitHub
-* `ffmpeg` for video manipulation
+* [ffmpeg](https://ffmpeg.org/) for video manipulation
 
 Setting up Pytorch with GPU support on a Windows system can be tricky. Fortunately, 
 I had done this before, so the NVIDIA drivers and CUDA were already set up and only the 
@@ -61,7 +61,7 @@ display the path to the package linked to the `pip`command.
 
 
 `ffmpeg` is a command line tool for video manipulation, that is recommended in the [example 
-notebook for SAM-2](https://github.com/facebookresearch/sam2/blob/2b90b9f5ceec907a1c18123530e92e794ad901a4/notebooks/video_predictor_example.ipynb) for extracting frames. It is integrated in Linux distributions, but 
+notebook for SAM-2](https://github.com/facebookresearch/sam2/blob/main/notebooks/video_predictor_example.ipynb) for extracting frames. It is integrated in Linux distributions, but 
 on Windows it has to be installed separately, outside the Python environment. Of course, 
 any other video manipulation tool can be used as well.
 
@@ -71,8 +71,8 @@ performance of my laptop. Despite the GPU, the prediction took several hours,
 so we decided to use Google Colab instead.
 
 ### Running the notebook on Google Colab
-The SAM-2 repository contains [sample notebooks](https://github.com/facebookresearch/sam2/tree/2b90b9f5ceec907a1c18123530e92e794ad901a4/notebooks) for different use-cases, including video 
-segmentation. The notebooks contain a link to Google Colab and code for setting up the 
+The SAM-2 repository contains [sample notebooks](https://github.com/facebookresearch/sam2/tree/main/notebooks) for different use-cases, including [video 
+segmentation](https://github.com/facebookresearch/sam2/blob/main/notebooks/video_predictor_example.ipynb). The notebooks contain a link to Google Colab and code for setting up the 
 Colab environment. You just need to choose a runtime with GPU (T4 for a free runtime), 
 connect to it and mount Google Drive. The data has to be uploaded to Google Drive.
 
@@ -90,8 +90,8 @@ video data has to be saved as single frames, the example notebook uses JPEG file
 images are loaded into a variable called `inference_state` during initialization. Then the user should provide 
 prompts for the objects that should be segmented. There can be one or more objects and 
 the prompts can be either point coordinates or boxes. Furthermore, the prompts have a label,
-showing whether the prompt is positive (i.e. marking the desired object) or negative (
-marking the background). In this way, the first masks for a given frame are predicted, 
+showing whether the prompt is positive (i.e. marking the desired object) or negative (marking 
+the background). In this way, the first masks for a given frame are predicted, 
 as shown below. We used two positive and one negative point prompt for each worm.
 
 ```{figure} /_static/blog_images/sam2/sam2-workflow.png
@@ -116,13 +116,12 @@ opportunity to grab a cup of coffee (or a piece of pizza) and have a chat with f
 **Propagation of masks to subsequent frames.** Once the masks are defined for the first frame, we can propagate the prompts to get the trajectories of the masks across the full video.
 ```
 
-As a result of the prediction you get masks for every frame in the video. The notebook 
+As a result of the prediction you get masks for every frame in the video. The [notebook](https://github.com/facebookresearch/sam2/blob/main/notebooks/video_predictor_example.ipynb) 
 displays some of them, so you can check the quality. All the predicted masks are stored 
-in a variable called `video_segments`. Since the masks are numpy arrays, they are not 
-serializable and cannot be stored in a JSON file. But you can use `pickle` to export them 
+in a variable called `video_segments`. Since the masks are numpy arrays, they cannot be directly exported to a JSON file using Python's standard [`json`](https://docs.python.org/3/library/json.html) module (without first converting them to lists, which would lose `dtype` information). But you can use [`pickle`](https://docs.python.org/3/library/pickle.html) or [`numpy.savez()`](https://numpy.org/doc/stable/reference/generated/numpy.savez.html) to export them 
 for later use.
 
-The example notebook in the SAM-2 repository contains all these steps with different options and extra code cells 
+The [example notebook](https://github.com/facebookresearch/sam2/blob/main/notebooks/video_predictor_example.ipynb)  in the SAM-2 repository contains all these steps with different options and extra code cells 
 for e.g. adding additional prompts, different kinds of prompts, only one object, etc. 
 A more concise notebook, tailored for segmenting _C. elegans_, can be found 
 [here](https://github.com/pwetterauer/WormNotebooks.git).
@@ -143,7 +142,7 @@ by using less crowded videos.
 
 In summary, SAM-2 did a good job segmenting the worms in a short time. The resulting masks 
 can now be further analysed, e.g. by creating a skeleton and selecting some markers to create 
-a pose track.
+a pose estimation skeleton.
 
 ## Skeletonisation of the masks
 
@@ -154,22 +153,47 @@ The process of skeletionsation by using the `skimage` library is an iterative on
 
 As an example, let's look at the following image of a worm mask and its skeletonised version:
 
-```{figure} /_static/blog_images/sam2/output_skeleton_and_node_images/EGCG5_40_2018_10_19_Mask_masked_and_skeletonised.png
+```{figure} /_static/blog_images/sam2/EGCG5_40_2018_10_19_Mask_masked_and_skeletonised.png
 :align: center
-:width: 70%
+:width: 100%
 
 **Masked worm image and its skeletonised version.** The input masked worm image (left) and its one-pixel wide skeletonised version (right).
 ```
 
-Once we have the skeletonised image, we can define keypoints or nodes along the skeleton to represent the pose of the worm. This can be done by sampling points at regular intervals along the skeleton or by identifying specific features such as bends or junctions in the skeleton. In this exploration, I chose the method of random selection and selected 5 pixels by using the `random.choice()` frunction from `NumPy`. These keypoints could then be used to create a pose track for the worm, which can be further analysed for movement patterns and behaviours. They could also be used to quickly create annotations for a pose estimation model (as long as the keypoints are consistent across the frames).
+Once we have the skeletonised image, we can define keypoints or nodes along the skeleton to represent the pose of the worm. This can be done by sampling points at regular intervals along the skeleton or by identifying specific features such as bends or junctions in the skeleton. In this exploration, I chose the method of random selection and selected 5 pixels by using [numpy's `choice()` function](https://numpy.org/doc/stable/reference/random/generated/numpy.random.Generator.choice.html#numpy.random.Generator.choice). These keypoints could then be used to create a pose track for the worm, which can be further analysed for movement patterns and behaviours. They could also be used to quickly create annotations for a pose estimation model (as long as the keypoints are consistent across the frames).
 
-```{figure} /_static/blog_images/sam2/output_skeleton_and_node_images/EGCG5_40_2018_10_19_Mask_skeleton_and_nodes.png
+```{figure} /_static/blog_images/sam2/EGCG5_40_2018_10_19_Mask_skeleton_and_nodes.png
 :align: center
-:width: 70%
+:width: 100%
 
-**Skeletonised worm image with sampled nodes.** Five pixels were randomly sampled along the skeleton to define the nodes.
+**Skeletonised worm image with sampled nodes.** Five pixels were randomly sampled along the skeleton to define the nodes (shown in blue).
 ```
 
-A Python notebook to perform the skeletonisation of the worm masks, extract the nodes from the masks, and visualise the process can be found in this [GitHub repository](https://github.com/jyoti-bhogal/neuroinformatics_osw/tree/main/python_code_skeletonisation_and_node_selection). 
+A Python notebook to perform the skeletonisation of the worm masks, extract the nodes from the masks, and visualise the process can be found in this [GitHub repository](https://github.com/jyoti-bhogal/neuroinformatics_osw/tree/main/python_code_skeletonisation_and_node_selection). Below we include the snippet to sample the nodes:
+
+```python
+import numpy as np
+from PIL import Image
+from skimage.morphology import skeletonize
+
+# Open the .tif image
+img = Image.open("path/to/the/worm-mask.tif")
+
+# Convert to numpy array
+img_worm = np.array(img)
+
+# Compute skeletonised worm image (1-pixel wide worm mask)
+skeleton_worm = skeletonize(img_worm)
+
+# Get indices where skeleton_worm is True
+worm_index_true = np.argwhere(skeleton_worm)
+
+# Define nodes as 5 worm pixels randomly sampled (without replacement)
+rng = np.random.default_rng(seed=42) # set a seed for reproducibility
+sample_indices = rng.choice(len(worm_index_true), size=5, replace=False)
+
+# Get rows (y-coordinate) and columns (x-coordinate) of the nodes in the skeleton_worm array
+sampled_worm_index_true = worm_index_true[sample_indices, :]
+```
 
 In conclusion, the combination of SAM-2 for segmentation and `skimage` for skeletonisation provides an effective workflow for extracting pose estimation skeletons for _C. elegans_. This automated approach can significantly speed up the analysis of worm behaviour and facilitate further research in this area.
