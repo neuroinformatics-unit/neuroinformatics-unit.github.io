@@ -161,7 +161,7 @@ As an example, let's look at the following image of a worm mask and its skeleton
 **Masked worm image and its skeletonised version.** The input masked worm image (left) and its one-pixel wide skeletonised version (right).
 ```
 
-Once we have the skeletonised image, we can define keypoints or nodes along the skeleton to represent the pose of the worm. This can be done by sampling points at regular intervals along the skeleton or by identifying specific features such as bends or junctions in the skeleton. These keypoints could then be used to create a pose track for the worm, which can be further analysed for movement patterns and behaviours. They could also be used to quickly create annotations for a pose estimation model (as long as the keypoints are consistent across the frames).
+Once we have the skeletonised image, we can define keypoints or nodes along the skeleton to represent the pose of the worm. This can be done by sampling points at regular intervals along the skeleton or by identifying specific features such as bends or junctions in the skeleton. In this exploration, I chose the method of random selection and selected 5 pixels by using the `random.choice()` frunction from `NumPy`. These keypoints could then be used to create a pose track for the worm, which can be further analysed for movement patterns and behaviours. They could also be used to quickly create annotations for a pose estimation model (as long as the keypoints are consistent across the frames).
 
 ```{figure} /_static/blog_images/sam2/output_skeleton_and_node_images/EGCG5_40_2018_10_19_Mask_skeleton_and_nodes.png
 :align: center
