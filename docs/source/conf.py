@@ -138,11 +138,6 @@ html_theme_options = {
             "type": "fontawesome",
         },
         {
-            "name": "Twitter",
-            "url": "https://twitter.com/swc_niu",
-            "icon": "fa-brands fa-twitter",
-        },
-        {
             "name": "Mastodon",
             "url": "https://mastodon.online/@neuroinformatics",
             "icon": "fa-brands fa-mastodon",
