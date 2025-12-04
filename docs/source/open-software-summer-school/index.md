@@ -102,6 +102,8 @@ commitment for four weeks prior to the summer school**
 - **Academic or self funding**: £300 per week
 - **Industry**: £600 per week
 
+Fees include all materials needed, and lunch/refreshments each day.
+
 ### Financial Assistance
 A number of fee waivers will be available to applicants who would not otherwise be able to attend the summer school. 
 A limited number of travel stipends will also be available, but we encourage applicants to apply for 
