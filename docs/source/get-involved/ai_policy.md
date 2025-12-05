@@ -42,7 +42,7 @@ to us in any format**. We want to hear what *you* think, not what an LLM thinks!
 
 ## Action
 We hope this policy will help clarify our position. If we think that a code contribution or communication is AI 
-generated, we will politely refer you to this page and close the issue or PR (if relevant). If we have made a mistake, 
+generated, we will politely refer you to this page and close the issue or pull request (if relevant). If we have made a mistake, 
 please tell us. As these tools progress, we will likely get it wrong a lot, and we want to know. The last thing we 
 want is to deter any real, human contributors!
 
