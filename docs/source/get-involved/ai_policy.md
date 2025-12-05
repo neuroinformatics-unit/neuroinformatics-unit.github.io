@@ -1,5 +1,6 @@
 # NIU policy on contributions using AI
 
+## Introduction
 Generative AI tools have developed quickly in the last few years, and have changed how many people write code. General 
 purpose tools such as [ChatGPT](https://chatgpt.com/) or specific code development tools such as 
 [Cursor](https://cursor.com/) now mean software development is quicker and more accessible than ever before. We only 
@@ -9,3 +10,24 @@ Many members of the NIU use AI in their workflows, as do many of our collaborato
 large community of contributors to our tools. However, many potential contributions are low-quality and either require 
 lots of work to get them into shape, or simply need to be rejected immediately as they do not solve the problem at hand. 
 In many cases, these contributions appear to be mostly, or entirely, AI generated. 
+
+## Code contributions
+It can be very difficult to contribute to an open-source repository for the first time, and we are always happy to 
+provide assistance to anyone trying to learn. However, it is our policy that **we will not review any code contribution 
+that is, or appears to be, mostly written by AI tools**. These contributions look useful superficially, but often make 
+poor design choices, and are difficult to maintain long-term. Sometimes the AI agent creates a solution that does not 
+solve the problem in any way.
+
+While the use of AI tools to help you write code is absolutely allowed, we expect all contributors to be able to 
+understand and explain every line of code they submit (if needed, we won't interrogate you!). If the contributor cannot 
+understand every line, it is unlikely that whoever reviews it will be able to.
+
+If you submit some code and we incorrectly tell you that we think it's AI generated, please let us know! There are various 
+"tells" that code has been written by AI, but these are not perfect. If we've made a mistake, that's on us, and we 
+want to correct it!
+
+## Communication
+It is also tempting to use AI for general communication, whether this is in GitHub issues or pull requests, or in our 
+[Zulip Chat]. For many contributors, English is not their first language, and it is of course fine to use tools to help 
+correct your communication. However, **please do not use LLMs to create messages that you send to us in any format**. 
+We want to hear what *you* think, not what an LLM thinks! 
