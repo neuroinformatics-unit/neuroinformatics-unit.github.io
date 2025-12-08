@@ -36,7 +36,7 @@ want to correct it.
 ## Communication
 It is also tempting to use AI for general communication, whether this is in GitHub issues or pull requests, or in our 
 [Zulip Chat](https://neuroinformatics.zulipchat.com). Often LLMs add lots of unnecessary text, and may distort the
-meaning behind the message.  For many contributors, English is not their first language, and it is of course fine to 
+meaning behind the message. For many contributors, English is not their first language, and it is of course fine to 
 use tools to help correct your communication. However, **please do not use LLMs to create entire messages that you send 
 to us in any format**. We want to hear what *you* think, not what an LLM thinks!
 
