@@ -25,9 +25,11 @@ that is, or appears to be, mostly written by AI tools**. These contributions loo
 poor design choices, and are difficult to maintain long-term. Sometimes the AI agent creates a solution that does not 
 solve the problem in any way.
 
-While the use of AI tools to help you write code is absolutely allowed, we expect all contributors to be able to 
-understand and explain every line of code they submit. Reviewers may ask you questions to aid their own understanding of your code (not to test you). If you cannot 
-understand every line, it is unlikely that whoever reviews it will be able to either!
+While the use of AI tools to help you write code is absolutely allowed, we expect all contributors to be responsible 
+for their code. This means they should be able to understand every line of code they submit and explain their 
+reasoning behind it. Reviewers may ask you questions to aid their own understanding 
+of your code (not to test you). If you cannot understand every line, it is unlikely that whoever reviews 
+it will be able to either!
 
 If you submit some code and we incorrectly tell you that we think it's AI generated, please let us know! There are various 
 "tells" that code has been written by AI, but these are not perfect. If we've made a mistake, that's on us, and we 
