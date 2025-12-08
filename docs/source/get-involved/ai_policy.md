@@ -26,7 +26,7 @@ poor design choices, and are difficult to maintain long-term. Sometimes the AI a
 solve the problem in any way.
 
 While the use of AI tools to help you write code is absolutely allowed, we expect all contributors to be able to 
-understand and explain every line of code they submit (if needed, we won't interrogate you!). If you cannot 
+understand and explain every line of code they submit. Reviewers may ask you questions to aid their own understanding of your code (not to test you). If you cannot 
 understand every line, it is unlikely that whoever reviews it will be able to either!
 
 If you submit some code and we incorrectly tell you that we think it's AI generated, please let us know! There are various 
