@@ -28,7 +28,7 @@ Please be aware that we will only accept applications via [this form](https://fo
 - Do you have any dietary requirements you would like us to be aware of? (If so, please specify)
 - Do you work in academia (or would fund yourself) or industry?
 - Are you unable to attend without a fee waiver?
-    - Please note, if you select "no" and are not selected for a fee waiver, you will not be offered an OSSS place.
+    - Please note, if you select "yes" and are not selected for a fee waiver, you will not be offered an OSSS place.
 - Please briefly explain why you require a fee waiver to attend.
 - Do you want to apply for travel funding?
 - If you require funding to attend, how much funding do you need (in GBP) and what will you use it for?
