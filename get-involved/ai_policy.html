@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Mentored open-source contributions &#8212; NIU</title>
+    <title>NIU policy on contributions using AI &#8212; NIU</title>
   
   
   
@@ -53,14 +53,14 @@
                 gtag('js', new Date());
                 gtag('config', 'G-6260TGM7TY');
             </script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'get-involved/mentoring';</script>
-    <link rel="canonical" href="https://neuroinformatics.dev/get-involved/mentoring.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'get-involved/ai_policy';</script>
+    <link rel="canonical" href="https://neuroinformatics.dev/get-involved/ai_policy.html" />
     <link rel="icon" href="../_static/logo_light.png"/>
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Google Summer of Code" href="gsoc/index.html" />
-    <link rel="prev" title="NIU policy on contributions using AI" href="ai_policy.html" /> 
+    <link rel="next" title="Mentored open-source contributions" href="mentoring.html" />
+    <link rel="prev" title="Development guidelines for specific languages and frameworks" href="languages_frameworks.html" /> 
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />   
@@ -535,7 +535,7 @@
     
     <li class="breadcrumb-item"><a href="index.html" class="nav-link">Get involved</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Mentored open-source contributions</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">NIU policy on contributions using AI</span></li>
   </ul>
 </nav>
 </div>
@@ -551,30 +551,57 @@
                 
 <div id="searchbox"></div>
                 <article class="bd-article">
-                   <section class="tex2jax_ignore mathjax_ignore" id="mentored-open-source-contributions">
-<h1>Mentored open-source contributions<a class="headerlink" href="#mentored-open-source-contributions" title="Link to this heading">#</a></h1>
-<p>Contributing to open-source software can be complicated, even if you’re an experienced programmer
-(and even more so if you’re not!). Contributions to open-source scientific software come in many forms, and often the
-most valuable contributions come from those who aren’t (or who wouldn’t call themselves) software developers.</p>
-<p>For this reason, we offer what we call a “mentored open-source contribution” model. If you’re interested in contributing
-to our tools in any way, we will help you through the process, teaching you some of the basics of software
-engineering as we go. The exact model varies on the individual, but may look something like:</p>
-<ol class="arabic simple">
-<li><p>We make initial contact and discuss your aims. Maybe you want to adapt one of our tools to your needs, or maybe you
-want to transition to research software engineering.</p></li>
-<li><p>We have a quick call to identify a small, well described piece of work for you to start on
-(typically an open GitHub issue).</p></li>
-<li><p>We go through the contribution process with you.</p></li>
-<li><p>You begin tackling the project at your own pace, and begin the code review process.</p></li>
-<li><p>We help you out where needed, either asynchronously (GitHub, Zulip) or synchronously (e.g. Zoom).</p></li>
-<li><p>Your contribution is merged.</p></li>
-<li><p>Ideally, we repeat the steps and you gradually work independently on open source.</p></li>
-</ol>
-<p>Importantly, this is not an internship, there is no obligation on either side. It is also not a promise of help.
-Anyone is welcome to contribute to any of our tools, and we will always aim to help people make this step.
-Unfortunately, we’re busy and may not be able to guide everyone through the process.</p>
-<p>If this sounds of interest, please get in touch with us either via <a class="reference external" href="https://neuroinformatics.zulipchat.com/">Zulip</a>
-or by <a href="mailto:adam.tyson@ucl.ac.uk?subject=Mentored open-source contributions ">emailing Adam Tyson</a>.</p>
+                   <section class="tex2jax_ignore mathjax_ignore" id="niu-policy-on-contributions-using-ai">
+<h1>NIU policy on contributions using AI<a class="headerlink" href="#niu-policy-on-contributions-using-ai" title="Link to this heading">#</a></h1>
+<div class="note admonition">
+<p class="admonition-title">TL;DR</p>
+<p>While we encourage, and are very grateful for, contributions to our software, we don’t accept any contributions generated
+mostly by AI.</p>
+</div>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>Generative AI tools have developed quickly in the last few years, and have changed how many people write code. General
+purpose tools such as <a class="reference external" href="https://chatgpt.com/">ChatGPT</a> or specific code development tools such as
+<a class="reference external" href="https://cursor.com/">Cursor</a> now mean software development is quicker and more accessible than ever before. We only
+expect these developments to continue, and AI agents to play a crucial role in the way that we create software.</p>
+<p>Many members of the NIU use AI in their workflows, as do many of our collaborators. We are also fortunate to have a
+large community of contributors to our tools. However, many potential contributions are low-quality and either require
+lots of work to get them into shape, or simply need to be rejected immediately as they do not solve the problem at hand.
+In many cases, these contributions appear to be mostly, or entirely, AI generated.</p>
+</section>
+<section id="code-contributions">
+<h2>Code contributions<a class="headerlink" href="#code-contributions" title="Link to this heading">#</a></h2>
+<p>It can be very difficult to contribute to an open-source repository for the first time, and we are always happy to
+provide assistance to anyone trying to learn. However, it is our policy that <strong>we will not review any code contribution
+that is, or appears to be, mostly written by AI tools</strong>. These contributions look useful superficially, but often make
+poor design choices, and are difficult to maintain long-term. Sometimes the AI agent creates a solution that does not
+solve the problem in any way.</p>
+<p>While the use of AI tools to help you write code is absolutely allowed, we expect all contributors to be responsible
+for their code. This means they should be able to understand every line of code they submit and explain their
+reasoning behind it. Reviewers may ask you questions to aid their own understanding
+of your code (not to test you). If you cannot understand every line, it is unlikely that whoever reviews
+it will be able to either!</p>
+<p>If you submit some code and we incorrectly tell you that we think it’s AI generated, please let us know! There are various
+“tells” that code has been written by AI, but these are not perfect. If we’ve made a mistake, that’s on us, and we
+want to correct it.</p>
+</section>
+<section id="communication">
+<h2>Communication<a class="headerlink" href="#communication" title="Link to this heading">#</a></h2>
+<p>It is also tempting to use AI for general communication, whether this is in GitHub issues or pull requests, or in our
+<a class="reference external" href="https://neuroinformatics.zulipchat.com">Zulip Chat</a>. Often LLMs add lots of unnecessary text, and may distort the
+meaning behind the message. For many contributors, English is not their first language, and it is of course fine to
+use tools to help correct your communication. However, <strong>please do not use LLMs to create entire messages that you send
+to us in any format</strong>. We want to hear what <em>you</em> think, not what an LLM thinks!</p>
+</section>
+<section id="action">
+<h2>Action<a class="headerlink" href="#action" title="Link to this heading">#</a></h2>
+<p>We hope this policy will help clarify our position. If we think that a code contribution or communication is AI
+generated, we will politely refer you to this page and close the issue or pull request (if relevant). If we have made a mistake,
+please tell us. As these tools progress, we will likely get it wrong a lot, and we want to know. The last thing we
+want is to deter any real, human contributors!</p>
+<p>In the unlikely event that our policy is repeatedly ignored (e.g. multiple AI-generated pull requests), we may block
+that individual from our GitHub organisation and/or Zulip.</p>
+</section>
 </section>
 
 <div class="section ablog__blog_comments">
@@ -591,20 +618,20 @@ or by <a href="mailto:adam.tyson@ucl.ac.uk?subject=Mentored open-source contribu
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="ai_policy.html"
+       href="languages_frameworks.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">NIU policy on contributions using AI</p>
+        <p class="prev-next-title">Development guidelines for specific languages and frameworks</p>
       </div>
     </a>
     <a class="right-next"
-       href="gsoc/index.html"
+       href="mentoring.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Google Summer of Code</p>
+        <p class="prev-next-title">Mentored open-source contributions</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -620,10 +647,25 @@ or by <a href="mailto:adam.tyson@ucl.ac.uk?subject=Mentored open-source contribu
 
 
   <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-contributions">Code contributions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#communication">Communication</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#action">Action</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="../_sources/get-involved/mentoring.md.txt"
+      <li><a href="../_sources/get-involved/ai_policy.md.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div></div>
