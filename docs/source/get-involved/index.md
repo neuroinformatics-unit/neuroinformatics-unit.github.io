@@ -14,8 +14,8 @@ These include our [general development guidelines](development_guidelines) and
 [guidelines for specific languages and frameworks](languages_frameworks).
 
 We are also happy to guide new contributors through the process. For more details please see 
-[our documentation about mentored open source contributions](mentoring). Please also see our 
-[policy on AI contributions](ai_policy).
+[our documentation about mentored open source contributions](mentoring)
+and our [policy on AI contributions](ai_policy).
 
 ## Internships
 We offer a number of paid internships each year, through established programs such as 
