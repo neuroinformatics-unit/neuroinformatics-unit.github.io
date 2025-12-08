@@ -79,6 +79,7 @@ linkcheck_ignore = [
     "https://errantscience.com/",
     "https://in2scienceuk.org/our-programmes/in2research/",
     "https://www.biorxiv.org/content/10.1101/2025.03.30.645770v1",
+    "https://chatgpt.com/",
     r"https://www\.cell\.com/.*",  # Use regex pattern to match all cell.com URLs
     r"https?://(?:dx\.)?doi\.org/.*",  # Use regex pattern to match all DOI URLs
 ]

@@ -1,7 +1,8 @@
 # General development guidelines
 
 All our software is built as a team, and this means we must agree on some development conventions. This page 
-covers our internal development guidelines, which we hope are also useful to external contributors.
+covers our internal development guidelines, which we hope are also useful to external contributors. If you are a new 
+contributor, please also see our [policy on AI contributions](ai_policy).
 
 
 ## General principles
