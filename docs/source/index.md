@@ -59,7 +59,6 @@ people
 projects
 publications
 blog/index
-roadmaps/index
 get-involved/index
 resources/index
 open-software-summer-school/index

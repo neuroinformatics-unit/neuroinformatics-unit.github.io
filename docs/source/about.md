@@ -6,7 +6,7 @@ We also develop [training courses](https://software-skills.neuroinformatics.dev/
 
 The NIU is based at the [Sainsbury Wellcome Centre](https://www.sainsburywellcome.org/web/) and the [Gatsby Computational Neuroscience Unit](https://www.ucl.ac.uk/gatsby/gatsby-computational-neuroscience-unit) at [University College London (UCL)](https://www.ucl.ac.uk/).
 
-For more information, please read about the [projects we lead](/projects) and our [roadmaps](/roadmaps/index).
+For more information, please read about the [projects we lead](/projects).
 
 
 ```{image} /_static/NIU.jpg
