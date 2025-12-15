@@ -55,7 +55,7 @@ in [SpikeInterface](https://github.com/SpikeInterface/spikeinterface). We will a
 
 In this session, we will cover how to assess the quality of the sorting outputs:
 * Introduction to the different types of quality metrics
-* Computing [quality metrics in SpikeInterface](https://spikeinterface.readthedocs.io/en/latest/modules/qualitymetrics.html)
+* Computing [quality metrics in SpikeInterface](https://spikeinterface.readthedocs.io/en/stable/modules/qualitymetrics.html)
 and [Bombcell](https://github.com/Julie-Fabre/bombcell)
 * Assessing the sorter output in the [SpikeInterface GUI](https://github.com/SpikeInterface/spikeinterface-gui)
 * Creating and applying models which perform automated curation with [UnitRefine](https://www.biorxiv.org/content/10.1101/2025.03.30.645770v1)
