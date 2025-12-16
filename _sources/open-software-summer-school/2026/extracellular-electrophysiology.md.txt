@@ -80,8 +80,14 @@ The final two days are dedicated to collaboration. We will join forces with part
 * **Presentation:** teams will have the opportunity to share their progress and outcomes on the final afternoon.
 
 ## Confirmed Instructors
+
 * [Joseph Ziminski](https://github.com/JoeZiminski)
-* [Chris Halcrow](https://github.com/chrishalcrow)
+* [Chris Halcrow](https://github.com/chrishalcrow) 
+* [Wolf de Wulf](https://github.com/wulfdewolf) 
+* [Alessio Buccino](https://github.com/alejoe91)
+* [Samuel Garcia](https://github.com/samuelgarcia) 
+* [Olivier Winter](https://github.com/oliche) 
+
 
 ## Prerequisites
 
