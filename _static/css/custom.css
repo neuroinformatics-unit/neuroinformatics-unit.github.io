@@ -41,7 +41,7 @@ html[data-theme=dark] .bd-main img {
   height: auto;
 }
 
-.sponsor {
+.bd-article .sponsor {
   height: 100px;
   padding-top: 5px;
   padding-right: 5px;
