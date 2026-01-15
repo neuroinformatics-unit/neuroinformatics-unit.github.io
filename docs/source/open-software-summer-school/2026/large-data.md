@@ -55,6 +55,7 @@ The final two days are dedicated to collaboration. We will join forces with part
 - [David Stansby](https://github.com/dstansby)
 - [Kimberly Meechan](https://github.com/K-Meech)
 - [Joe Ziminski](https://github.com/JoeZiminski)
+- [James A. Bednar](https://github.com/jbednar)
 
 
 (target-large-array-data-prerequisites-2026)=
