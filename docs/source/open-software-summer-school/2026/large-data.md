@@ -15,16 +15,26 @@ This course is designed for researchers and students interested in learning abou
 
 ## Course overview
 
+### Core workshop schedule and contents (Monday - Wednesday)
 
-### Core workshop (Monday - Wednesday)
-We will cover the following topics during the first three days:
+__Monday morning (Introduction and key libraries):__
+In an introductory lecture, we will define relevant concepts for the course. We will look at some examples of large array data, discuss what research they might enable, and what computational challenges they pose.
+This will be followed by an introduction to the [`zarr`](https://zarr.dev/) and [`dask`](https://www.dask.org/) libraries, which are designed to read, process and analyse large array datasets.
 
-* **Motivation:** we will show examples of large array datasets from neuroscience and imaging, discuss what research they enable, in what situations you should acquire them, and the computational challenges they pose.
-* **Introduction to the [Zarr](https://zarr.dev/) and [Dask](https://www.dask.org/) libraries:** a short introduction to Python libraries that enable you to read, process, and write large array datasets.
-* **Chunked, multi-scale file formats for large images:** a short introduction to the [OME-Zarr](https://ome-zarr-book.readthedocs.io/) format for large images and a practical tutorial to convert, process and visualise your large image data to OME-Zarr.
-* **Parallel processing of large image data with `dask`:** a hands-on tutorial covering `dask`'s parallelisation functionality.
-* **Compression of large array data:** an introduction to compression algorithms, how they are used in neuroscience, and what trade-offs you should be aware of when using them.
+__Monday afternoon:__
+Participants will get a chance to present their work, and network with other participants, as part of the symposium.
 
+__Tuesday morning (Large image data with OME):__
+We will introduce the [OME-Zarr specification](https://ngff.openmicroscopy.org/) for large image data (following the [OME-Zarr textbook](https://ome-zarr-book.readthedocs.io/)) and work through a hands-on tutorial to convert, process and write large imaging datasets.
+
+__Tuesday afternoon (Parallel processing):__
+Tuesday afternoon will involve having a deeper look at `dask` and its parallelisation functionality in practice.
+
+__Wednesday morning (Compression):__
+This session will involve an introduction to compression algorithms, how they are used in neuroscience, and what trade-offs one should be aware of when using them.
+
+__Wednesday afternoon (Visualisation):__
+A hands-on tutorial in interactive large data visualisation in collaboration with [holoviz](https://holoviz.org/).
 
 ### Collaboration days (Thursday - Friday)
 
