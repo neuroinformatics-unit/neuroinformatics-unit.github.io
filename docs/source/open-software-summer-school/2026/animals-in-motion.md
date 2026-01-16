@@ -42,7 +42,7 @@ While icons of mice are used for illustration, the course content should be appl
 
 ### Collaboration days (Thursday - Friday)
 
-The final two days are dedicated to collaboration. We will join forces with participants from the **Large Array Data** track to work together on participant-led projects.
+The final two days are dedicated to collaboration. We will join forces with participants from the [Large Array Data](track-large-array-data-2026) track to work together on participant-led projects.
 
 * **Skill building:** we'll start with a practical workshop on **Git and GitHub** to equip everyone with the necessary skills for collaborative coding.
 * **Project-based work:** participants will self-organise into small teams to tackle projects hands-on. **Coding is not a requirement**; any idea that benefits from collaboration with other attendees is welcome. Potential project ideas include, but are not limited to:
