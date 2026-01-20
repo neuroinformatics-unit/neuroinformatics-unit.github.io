@@ -1,4 +1,4 @@
-sphinx
+sphinx<9
 pydata-sphinx-theme
 myst-parser
 sphinx-design
