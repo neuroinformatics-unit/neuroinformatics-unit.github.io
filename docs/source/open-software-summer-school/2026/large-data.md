@@ -15,20 +15,20 @@ This course is designed for researchers and students interested in learning abou
 
 ## Course overview
 
-
 ### Core workshop (Monday - Wednesday)
-We will cover the following topics during the first three days:
 
-* **Motivation:** we will show examples of large array datasets from neuroscience and imaging, discuss what research they enable, in what situations you should acquire them, and the computational challenges they pose.
-* **Introduction to the [Zarr](https://zarr.dev/) and [Dask](https://www.dask.org/) libraries:** a short introduction to Python libraries that enable you to read, process, and write large array datasets.
-* **Chunked, multi-scale file formats for large images:** a short introduction to the [OME-Zarr](https://ome-zarr-book.readthedocs.io/) format for large images and a practical tutorial to convert, process and visualise your large image data to OME-Zarr.
-* **Parallel processing of large image data with `dask`:** a hands-on tutorial covering `dask`'s parallelisation functionality.
-* **Compression of large array data:** an introduction to compression algorithms, how they are used in neuroscience, and what trade-offs you should be aware of when using them.
-
+| Time | Theme | Description |
+| --- | --- | --- |
+| Monday<br>morning | Introduction and key libraries | Introductory lecture on key concepts; examples of large array data, research enabled, and computational challenges; introduction to [`zarr`](https://zarr.dev/) and [`dask`](https://www.dask.org/). |
+| Monday<br>afternoon | Symposium | Participants present their work and network with other participants. |
+| Tuesday<br>morning | Large image data with OME | Introduce the [OME-Zarr specification](https://ngff.openmicroscopy.org/) (following the [OME-Zarr textbook](https://ome-zarr-book.readthedocs.io/)); hands-on tutorial to convert, process, and write large imaging datasets. |
+| Tuesday<br>afternoon | Parallel processing | Deeper look at `dask` and its parallelisation functionality in practice. |
+| Wednesday<br>morning | Compression | Introduction to compression algorithms, their use in neuroscience, and trade-offs to consider. |
+| Wednesday<br>afternoon | Visualisation | Hands-on tutorial in interactive large data visualisation in collaboration with [holoviz](https://holoviz.org/). |
 
 ### Collaboration days (Thursday - Friday)
 
-The final two days are dedicated to collaboration. We will join forces with participants from the **Animals in Motion** track to work together on participant-led projects.
+The final two days are dedicated to collaboration. We will join forces with participants from the [Animals in Motion](track-animals-in-motion-2026) track to work together on participant-led projects.
 
 * **Skill building:** we'll start with a practical workshop on **Git and GitHub** to equip everyone with the necessary skills for collaborative coding.
 * **Project-based work:** participants will self-organise into small teams to tackle projects hands-on. **Coding is not a requirement**; any idea that benefits from collaboration with other attendees is welcome. Potential project ideas include, but are not limited to:
@@ -45,6 +45,7 @@ The final two days are dedicated to collaboration. We will join forces with part
 - [David Stansby](https://github.com/dstansby)
 - [Kimberly Meechan](https://github.com/K-Meech)
 - [Joe Ziminski](https://github.com/JoeZiminski)
+- [James A. Bednar](https://github.com/jbednar)
 
 
 (target-large-array-data-prerequisites-2026)=
