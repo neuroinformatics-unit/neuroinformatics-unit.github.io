@@ -15,30 +15,20 @@ This course is designed for researchers and students interested in learning abou
 
 ## Course overview
 
-### Core workshop schedule and contents (Monday - Wednesday)
+### Core workshop (Monday - Wednesday)
 
-__Monday morning (Introduction and key libraries):__
-In an introductory lecture, we will define relevant concepts for the course. We will look at some examples of large array data, discuss what research they might enable, and what computational challenges they pose.
-This will be followed by an introduction to the [`zarr`](https://zarr.dev/) and [`dask`](https://www.dask.org/) libraries, which are designed to read, process and analyse large array datasets.
-
-__Monday afternoon:__
-Participants will get a chance to present their work, and network with other participants, as part of the symposium.
-
-__Tuesday morning (Large image data with OME):__
-We will introduce the [OME-Zarr specification](https://ngff.openmicroscopy.org/) for large image data (following the [OME-Zarr textbook](https://ome-zarr-book.readthedocs.io/)) and work through a hands-on tutorial to convert, process and write large imaging datasets.
-
-__Tuesday afternoon (Parallel processing):__
-Tuesday afternoon will involve having a deeper look at `dask` and its parallelisation functionality in practice.
-
-__Wednesday morning (Compression):__
-This session will involve an introduction to compression algorithms, how they are used in neuroscience, and what trade-offs one should be aware of when using them.
-
-__Wednesday afternoon (Visualisation):__
-A hands-on tutorial in interactive large data visualisation in collaboration with [holoviz](https://holoviz.org/).
+| Time | Theme | Description |
+| --- | --- | --- |
+| Monday<br>morning | Introduction and key libraries | Introductory lecture on key concepts; examples of large array data, research enabled, and computational challenges; introduction to [`zarr`](https://zarr.dev/) and [`dask`](https://www.dask.org/). |
+| Monday<br>afternoon | Symposium | Participants present their work and network with other participants. |
+| Tuesday<br>morning | Large image data with OME | Introduce the [OME-Zarr specification](https://ngff.openmicroscopy.org/) (following the [OME-Zarr textbook](https://ome-zarr-book.readthedocs.io/)); hands-on tutorial to convert, process, and write large imaging datasets. |
+| Tuesday<br>afternoon | Parallel processing | Deeper look at `dask` and its parallelisation functionality in practice. |
+| Wednesday<br>morning | Compression | Introduction to compression algorithms, their use in neuroscience, and trade-offs to consider. |
+| Wednesday<br>afternoon | Visualisation | Hands-on tutorial in interactive large data visualisation in collaboration with [holoviz](https://holoviz.org/). |
 
 ### Collaboration days (Thursday - Friday)
 
-The final two days are dedicated to collaboration. We will join forces with participants from the **Animals in Motion** track to work together on participant-led projects.
+The final two days are dedicated to collaboration. We will join forces with participants from the [Animals in Motion](track-animals-in-motion-2026) track to work together on participant-led projects.
 
 * **Skill building:** we'll start with a practical workshop on **Git and GitHub** to equip everyone with the necessary skills for collaborative coding.
 * **Project-based work:** participants will self-organise into small teams to tackle projects hands-on. **Coding is not a requirement**; any idea that benefits from collaboration with other attendees is welcome. Potential project ideas include, but are not limited to:
