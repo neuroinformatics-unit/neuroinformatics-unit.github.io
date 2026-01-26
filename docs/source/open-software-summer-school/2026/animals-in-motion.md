@@ -36,7 +36,7 @@ While icons of mice are used for illustration, the course content should be appl
 | Monday<br>afternoon | Symposium | Participants present their work and network with other participants. |
 | Tuesday<br>morning | Pose estimation | A practical tutorial on [SLEAP](https://sleap.ai/)—a popular software library for animal pose estimation and tracking. You will learn how to annotate video frames, train deep learning models, and generate motion tracks from new videos. |
 | Tuesday<br>afternoon | Motion quantification | A hands-on tutorial on [movement](https://movement.neuroinformatics.dev)—a Python package for cleaning, visualising, and analysing motion tracks produced by [SLEAP](https://sleap.ai/), [DeepLabCut](https://deeplabcut.org/) and similar tools. |
-| Wednesday<br>morning | Case studies | A walk-through of real-world case studies on applying markerless motion tracking and quantification to scientific questions, with plenty of time for coding exercises. |
+| Wednesday<br>morning | Case studies | A hands-on tutorial on applying markerless motion tracking and quantification to real-world case studies through coding exercises. |
 | Wednesday<br>afternoon | Behaviour segmentation | A primer on decomposing continuous motion into discrete actions, followed by a practical tutorial on a supervised behaviour segmentation tool. |
 
 
