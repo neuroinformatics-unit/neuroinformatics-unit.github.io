@@ -29,18 +29,20 @@ While icons of mice are used for illustration, the course content should be appl
 ```
 
 ### Core workshop (Monday - Wednesday)
-We will cover the following topics during the first three days:
 
-* **Introduction:** a big-picture overview of analysis workflows and tools for animal behaviour.
-* **Deep learning for computer vision:** a primer on the key concepts and technologies that underpin most markerless tracking approaches.
-* **Pose estimation and tracking:** a practical tutorial of [SLEAP](https://sleap.ai/)—a popular software library for animal pose estimation and tracking. You will learn how to annotate video frames, train deep learning models, and generate motion tracks from new videos.
-* **Motion track analysis:** a hands-on tutorial of [movement](https://movement.neuroinformatics.dev)—a Python package for cleaning, visualising, and analysing motion tracks output by [SLEAP](https://sleap.ai/), [DeepLabCut](https://deeplabcut.org/) and similar tools. This part includes coding exercises and case studies on applying motion quantification to real-world scientific questions.
-* **Behaviour segmentation:** a primer on decomposing continuous motion into discrete behaviours, followed by a practical tutorial of a supervised behaviour segmentation tool.
+| Time | Theme | Description |
+| --- | --- | --- |
+| Monday<br>morning | Introduction and key concepts | A big-picture overview of analysis workflows and tools for animal behaviour, followed by a primer on deep learning for computer vision. |
+| Monday<br>afternoon | Symposium | Participants present their work and network with other participants. |
+| Tuesday<br>morning | Pose estimation | A practical tutorial on [SLEAP](https://sleap.ai/)—a popular software library for animal pose estimation and tracking. You will learn how to annotate video frames, train deep learning models, and generate motion tracks from new videos. |
+| Tuesday<br>afternoon | Motion quantification | A practical introduction to [movement](https://movement.neuroinformatics.dev)—a Python package for cleaning, visualising, and analysing motion tracks produced by [SLEAP](https://sleap.ai/), [DeepLabCut](https://deeplabcut.org/) and similar tools. |
+| Wednesday<br>morning | Case studies | A hands-on tutorial on applying markerless motion tracking and quantification to real-world case studies through coding exercises. |
+| Wednesday<br>afternoon | Behaviour segmentation | A primer on decomposing continuous motion into discrete actions, followed by a practical tutorial on a supervised behaviour segmentation tool. |
 
 
 ### Collaboration days (Thursday - Friday)
 
-The final two days are dedicated to collaboration. We will join forces with participants from the **Large Array Data** track to work together on participant-led projects.
+The final two days are dedicated to collaboration. We will join forces with participants from the [Large Array Data](track-large-array-data-2026) track to work together on participant-led projects.
 
 * **Skill building:** we'll start with a practical workshop on **Git and GitHub** to equip everyone with the necessary skills for collaborative coding.
 * **Project-based work:** participants will self-organise into small teams to tackle projects hands-on. **Coding is not a requirement**; any idea that benefits from collaboration with other attendees is welcome. Potential project ideas include, but are not limited to:
