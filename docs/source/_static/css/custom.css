@@ -72,3 +72,9 @@ html[data-theme=dark] .bd-main img {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+/* Align navigation links to the left and add padding between logo and nav */
+.bd-header .navbar-header-items__start {
+  margin-right: 0 !important;
+  padding-right: 1.5rem;
+}
