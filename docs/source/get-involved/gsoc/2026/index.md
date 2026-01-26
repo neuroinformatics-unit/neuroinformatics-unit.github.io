@@ -157,4 +157,18 @@ Mentor
 
 :::
 
+:::
+
+:::{grid-item-card} Viktor Plattner
+:img-top: ../../../_static/viktor_plattner.jpg
+:link: https://github.com/viktorpm
+:text-align: center
+
+{fab}`github` [@viktorpm](https://github.com/viktorpm)
+
+
+Mentor
+
+:::
+
 ::::
