@@ -67,10 +67,10 @@ Senior Research Software Engineer (with Branco & Margrie labs)
 :img-top: _static/harry_carey.png
 :link: https://github.com/polarbean
 
-Visting Research Fellow
+Visiting Research Fellow
 :::
 
-:::{grid-item-card} Harry Carey
+:::{grid-item-card} Saarah Hussain
 :img-top: _static/saarah_hussain.jpg
 :link: https://github.com/saarah815
 
@@ -95,6 +95,7 @@ Senior Research Fellow
 
 ## Former members
 - [Shrey Singh (Google Summer of Code 2025)](https://github.com/cs7-shrey)
+- [Saarah Hussain (Google Summer of Code 2025)](https://github.com/saarah815)
 - [Kaixiang Shuai (Masters Student 2025](https://github.com/Skxsmy)
 - Michaella Beeney (In2Research 2025)
 - [Yousuf-Adial Ansari (In2Research 2024)](https://github.com/yousuf-adialwa20)
