@@ -5,7 +5,7 @@
 :category: Blog
 :language: English
 
-
+(target-trusted-by-design-part1)=
 # Trusted by design (part 1): define your *software abstract*
 
 No project exists in a vacuum. Open-source software is a vast web of inter-connected and inter-dependent tools. When creating a new tool, your number one job is to carve out its place in the web *consciously*, *openly* and *from the outset*. How can you approach that?
@@ -38,20 +38,20 @@ The mission statement is often supplemented by more information, such as:
 
 ## Case study:  *movement*
 
-When I started developing  *movement*, my colleagues and I consciously chose to write a 'software abstract' before we began the work. We did that by first mapping out our neighbourhood—open-source tools for analysing animal behaviour. This meant doing lots of research upfront: googling, reading papers, browsing GitHub, and also talking to many researchers working in this field. We tried to condense our findings into a set of common workflows and broke them down into tasks. We zeroed in on tasks that were arduous and under-served by existing tools—the potential gaps to address.
+When I started developing  [movement](https://movement.neuroinformatics.dev/), my colleagues and I consciously chose to write a 'software abstract' before we began the work. We did that by first mapping out our neighbourhood—open-source tools for analysing animal behaviour. This meant doing lots of research upfront: googling, reading papers, browsing GitHub, and also talking to many researchers working in this field. We tried to condense our findings into a set of common workflows and broke them down into tasks. We zeroed in on tasks that were arduous and under-served by existing tools—the potential gaps to address.
 
 Next, we asked whether these gaps merited being addressed by a standalone package or by contributing to existing projects. We also asked ourselves if we were the right people to address each gap. 
 
 Through this process we concluded that the deep learning revolution of the last decade had already trickled down into user-friendly open-source packages. Tools such as [DeepLabCut](https://www.mackenziemathislab.org/deeplabcut/) and [SLEAP](https://sleap.ai) enabled researchers to track animal movements in videos accurately, cheaply, and at scale. This welcome development had moved the analysis bottleneck downstream of motion tracking: turning this swell of data into quantitative descriptions of behaviour. Researchers would often use the same behavioural metrics across projects and disciplines. But these were typically implemented as fragile, in-house scripts that were seldom maintained beyond a project's conclusion. We saw an opportunity for a general-purpose toolbox that would ingest motion tracking data from existing frameworks and provide validated and documented implementations for various common behavioural metrics.
 
-And that's how  *movement*'s 'abstract' was born. You just read it. You can find a version of it on the project's homepage. Over time we expanded that into a [whole section](https://movement.neuroinformatics.dev/latest/community/mission-scope.html) detailing the project's mission, scope, and design principles.
+And that's how  *movement*'s 'abstract' was born. You just read it. You can find a version of it on the [project's homepage](https://movement.neuroinformatics.dev). Over time we expanded that into a [whole section](https://movement.neuroinformatics.dev/latest/community/mission-scope.html) detailing the project's mission, scope, and design principles.
 
 You may have noticed that the homepage also contains a visual overview of the project—a graphical abstract of sorts. I am a visual thinker. So I felt a natural need to sketch out  *movement*, including the key tasks it covers and how it relates to other tools. The schematic has evolved over time and we've found it useful in communicating the project's mission and scope at a glance. It's faster to parse—and more memorable—than a wall of text. Consider a graphical abstract optional, but highly recommended.
 
 ## The benefits of abstracts
 No-one would argue against defining your work's aims. What I want to emphasise are the benefits of doing so **in the open** and **at the very beginning**, before you write a single line of code.
 
-How does this help with community adoption? Let's look at some scenarios inspired by real events.
+How does this help with community adoption? **Let's look at some scenarios inspired by real events.**
 
 **While writing the abstract:**
 
