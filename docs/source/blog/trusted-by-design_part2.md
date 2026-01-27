@@ -11,7 +11,7 @@
 *Release early, release often* is an often-repeated mantra, popularised by Eric S. Raymond in his 1997 essay ["The Cathedral and the Bazaar"](https://en.wikipedia.org/wiki/The_Cathedral_and_the_Bazaar). I hadn't fully grasped its significance until I switched from academic research to full-time software development. How *early*? How *often*? And why is this so critical to establishing and maintaining trust?
 
 ::: {note}
-This is the first of three blogposts on the theme of _Trusted by design: set up your research software for community adoption_. See the [introductory blogpost](target-trusted-by-design-intro) for context.
+This is the second of three blogposts on the theme of _Trusted by design: set up your research software for community adoption_. See the [introductory blogpost](target-trusted-by-design-intro) for context.
 :::
 
 ## The *Cathedral* and the *Bazaar*

@@ -44,11 +44,23 @@ Next, we asked whether these gaps merited being addressed by a standalone packag
 
 Through this process we concluded that the deep learning revolution of the last decade had already trickled down into user-friendly open-source packages. Tools such as [DeepLabCut](https://www.mackenziemathislab.org/deeplabcut/) and [SLEAP](https://sleap.ai) enabled researchers to track animal movements in videos accurately, cheaply, and at scale. This welcome development had moved the analysis bottleneck downstream of motion tracking: turning this swell of data into quantitative descriptions of behaviour. Researchers would often use the same behavioural metrics across projects and disciplines. But these were typically implemented as fragile, in-house scripts that were seldom maintained beyond a project's conclusion. We saw an opportunity for a general-purpose toolbox that would ingest motion tracking data from existing frameworks and provide validated and documented implementations for various common behavioural metrics.
 
+```{figure} /_static/blog_images/trusted-by-design/gap_after_tracking.png
+:align: center
+
+A schematic illustration of the gap in the open-source ecosystem for animal behaviour analysis that movement aims to fill.
+```
+
 And that's how  *movement*'s 'abstract' was born. You just read it. You can find a version of it on the [project's homepage](https://movement.neuroinformatics.dev). Over time we expanded that into a [whole section](https://movement.neuroinformatics.dev/latest/community/mission-scope.html) detailing the project's mission, scope, and design principles.
 
-You may have noticed that the homepage also contains a visual overview of the project—a graphical abstract of sorts. I am a visual thinker. So I felt a natural need to sketch out  *movement*, including the key tasks it covers and how it relates to other tools. The schematic has evolved over time and we've found it useful in communicating the project's mission and scope at a glance. It's faster to parse—and more memorable—than a wall of text. Consider a graphical abstract optional, but highly recommended.
+You may have noticed that the homepage also contains a visual overview of the project—a *graphical abstract* of sorts. I love a good visual, so I felt a natural urge to literally sketch things out. This graphical abstract has evolved over time and we've found it useful in communicating the project's mission and scope at a glance. It's faster to parse—and more memorable—than a wall of text.
 
-## The benefits of abstracts
+```{figure} /_static/blog_images/trusted-by-design/movement_overview.png
+:align: center
+
+A *graphical abstract* for the *movement* project, including the key tasks it covers and how it relates to other tools.
+```
+
+## The many benefits of an abstract
 No-one would argue against defining your work's aims. What I want to emphasise are the benefits of doing so **in the open** and **at the very beginning**, before you write a single line of code.
 
 How does this help with community adoption? **Let's look at some scenarios inspired by real events.**
@@ -60,19 +72,19 @@ How does this help with community adoption? **Let's look at some scenarios inspi
 
 **During the project's early days:**
 
-1. People grasp your project's essence at a glance and decide whether to engage. You attract the right attention and gain early adopters.
-2. Someone comments on a GitHub issue, linking to their own similar project. You'd missed it; it happens. You meet with them. Several outcomes are possible, all positive long-term:
+3. People grasp your project's essence at a glance and decide whether to engage. You attract the right attention and gain early adopters.
+4. Someone comments on a GitHub issue, linking to their own similar project. You'd missed it; it happens. You meet with them. Several outcomes are possible, all positive long-term:
 	- Their project is further along with many users. You contribute to theirs instead. Your visions merge into something bigger.
 	- Despite appearances, there isn't much overlap. There's room for both tools. You update your abstract to clarify how they differ.
 	- There is overlap, but you disagree with their approach or find them difficult to work with. You keep developing your software—every ecosystem benefits from diversity. Time to articulate your design principles and cultural norms.
 
 **Throughout the project's lifecycle:**
 
-1. Someone raises a GitHub issue requesting a feature. Your written scope guides you:
+5. Someone raises a GitHub issue requesting a feature. Your written scope guides you:
 	- In scope: it goes on the to-do list. You ask if they'd help implement or test. You just made a friend.
 	- Out of scope: you close the issue with a clear explanation.
 	- Borderline: you update your scope so the feature falls clearly in or out. Editing is easier than writing from scratch—this is how real scopes evolve.
-2. You disagree with a collaborator on implementation. You want to use an existing library; they want to build from scratch. You consult your written design principles and remember that one prioritises easy cross-platform installation—which your proposed dependency would compromise. A path opens to resolving the disagreement.
+6. You disagree with a collaborator on implementation. You want to use an existing library; they want to build from scratch. You consult your written design principles and remember that one prioritises easy cross-platform installation—which your proposed dependency would compromise. A path opens to resolving the disagreement.
 
 Now read these scenarios again. How does each play out without a public abstract? What pathways lead to hurt feelings and broken trust?
 
