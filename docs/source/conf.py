@@ -70,7 +70,10 @@ templates_path = ["_templates"]
 
 # Ignore links that do not work with github actions link checking
 # https://github.com/neuroinformatics-unit/actions/pull/24#issue-1978966182
-linkcheck_anchors_ignore_for_url = ["https://neuroinformatics.zulipchat.com/"]
+linkcheck_anchors_ignore_for_url = [
+    "https://neuroinformatics.zulipchat.com/",
+    "https://cocodataset.org/",
+]
 linkcheck_ignore = [
     "https://opensource.org",
     "https://www.incf.org/recommendations-gsoc-contributors",
