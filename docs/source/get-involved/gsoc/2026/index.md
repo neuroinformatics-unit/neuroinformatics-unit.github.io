@@ -274,6 +274,7 @@ Our working language is English, but our mentors for these projects also speak S
 - Support for mask annotation datasets in `ethology` (following the current bounding box annotations dataset).
 - Support for defining bounding box annotations in `napari`: drawing, exporting to file (e.g. JSON COCO format and as `ethology` dataset netCDF) and loading from file.
 - Support for defining mask annotations in `napari`: drawing, exporting to file (e.g. JSON COCO format and as `ethology` dataset netCDF) and loading from file.
+- Example use-cases in the `ethology` [gallery](https://ethology.neuroinformatics.dev/latest/examples/index.html).
 - (Optional) Support for defining keypoint annotations in `napari`
 
 **Duration**
