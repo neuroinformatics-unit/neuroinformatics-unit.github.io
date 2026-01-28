@@ -94,7 +94,7 @@ Fluency with Python
 :::
 
 :::{dropdown} {fas}`brain;sd-text-primary` Expand `cellfinder` to accept different types of input data (several or single channels, 2.5 dimensions)
-BrainGlobe's `cellfinder` tool allows researchers to detect flourescent cells in whole-brain microscopy images. It requires whole-brain images of both a signal and a background channels as input, which not many researchers have. We'd like to expand the types of inputs `cellfinder` support to include brain slices (essentially 2D data) and single channel inputs (no background channel).
+BrainGlobe's `cellfinder` tool allows researchers to detect fluorescent cells in whole-brain microscopy images. It requires whole-brain images of both a signal and a background channels as input, which not many researchers have. We'd like to expand the types of inputs `cellfinder` support to include brain slices (essentially 2D data) and single channel inputs (no background channel).
 
 
 **Deliverables**
