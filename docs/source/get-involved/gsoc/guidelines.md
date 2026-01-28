@@ -32,7 +32,8 @@ These tips are largely based on the [OpenAstronomy guidelines](https://openastro
 
     Check the GitHub issues for the projects you are interested in. Sometimes issues are labeled as "good first issue" or "help wanted". These are usually easier to solve and are a good way to get started with the project. Otherwise, have a look and see if there are any issues you can help with!
 
-    You will need to submit a pull request (ideally to one of the NIU or BrainGlobe projects) as part of your application. It does not have to be accepted - the goal is to show that you know how git, GitHub, pull requests and code reviews work. This also allows mentors to evaluate your application based on a real code contribution. If you have previously contributed to an NIU or other open source project, you can point to those pull requests in your application too.
+    You will need to submit a pull request (ideally to one of the NIU or BrainGlobe projects) as part of your application. It does not have to be accepted - the goal is to show that you know how git, GitHub, pull requests and code reviews work. This also allows mentors to evaluate your application based on a real code contribution. If you have previously contributed to an NIU or other open source project, you can point to those pull requests in your application too. If you are a new
+   contributor, please also see our [policy on AI contributions](../ai_policy)
 
     If you are new to open source software or would like a refresher, these are some nice resources to check:
 
@@ -62,7 +63,6 @@ These tips are largely based on the [OpenAstronomy guidelines](https://openastro
 
 In our [GSoC repository](https://github.com/neuroinformatics-unit/gsoc) you will find our application template - please use it to structure your proposal.
 
-All the steps on how to add your proposal to the repository are explained in the [README](https://github.com/neuroinformatics-unit/gsoc/blob/main/README.md) of the GSoC repository. 
 
 ## References
 - [GSoC Contributor guide: writing a proposal](https://google.github.io/gsocguides/student/writing-a-proposal)
