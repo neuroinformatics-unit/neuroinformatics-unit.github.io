@@ -32,7 +32,7 @@ Senior Research Software Engineer
 :img-top: _static/laura_porta.png
 :link: https://github.com/lauraporta
 
-Senior Research Software Engineer
+Senior Research Software Engineer (with Margrie Lab)
 :::
 
 :::{grid-item-card} Chang Huan Lo
@@ -53,15 +53,30 @@ Senior Research Software Engineer
 :img-top: _static/igor_tatarnikov.jpg
 :link: https://github.com/IgorTatarnikov
 
-Senior Research Software Engineer
+Senior Research Software Engineer (with SWC AMF)
 :::
 
 :::{grid-item-card} Sofía Miñano
 :img-top: _static/sofia_minano.png
 :link: https://github.com/sfmig
 
-Senior Research Software Engineer
+Senior Research Software Engineer (with Branco & Margrie labs)
 :::
+
+:::{grid-item-card} Harry Carey
+:img-top: _static/harry_carey.png
+:link: https://github.com/polarbean
+
+Visiting Research Fellow
+:::
+
+:::{grid-item-card} Saarah Hussain
+:img-top: _static/saarah_hussain.jpg
+:link: https://github.com/saarah815
+
+Masters Student (with Dean lab)
+:::
+
 ::::
 
 
@@ -76,3 +91,12 @@ Senior Research Software Engineer
 Senior Research Fellow
 :::
 ::::
+
+
+## Former members
+- [Shrey Singh (Google Summer of Code 2025)](https://github.com/cs7-shrey)
+- [Saarah Hussain (Google Summer of Code 2025)](https://github.com/saarah815)
+- [Kaixiang Shuai (Masters Student 2025)](https://github.com/Skxsmy)
+- Michaella Beeney (In2Research 2025)
+- [Yousuf-Adial Ansari (In2Research 2024)](https://github.com/yousuf-adialwa20)
+
