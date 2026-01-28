@@ -131,8 +131,6 @@ Mentor
 
 :::
 
-:::
-
 :::{grid-item-card} Chang Huan Lo
 :img-top: ../../../_static/chang_huan_lo.png
 :link: https://github.com/lochhh
@@ -157,7 +155,6 @@ Mentor
 
 :::
 
-:::
 
 :::{grid-item-card} Viktor Plattner
 :img-top: ../../../_static/viktor_plattner.jpg
