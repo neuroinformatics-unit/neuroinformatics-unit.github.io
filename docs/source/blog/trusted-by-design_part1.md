@@ -46,8 +46,15 @@ Through this process we concluded that the deep learning revolution of the last 
 
 ```{figure} /_static/blog_images/trusted-by-design/gap_after_tracking.png
 :align: center
+:class: only-light
 
-A schematic illustration of the gap in the open-source ecosystem for animal behaviour analysis that movement aims to fill.
+A schematic illustration of the gap in the open-source ecosystem for animal behaviour analysis that *movement* aims to fill.
+```
+```{figure} /_static/blog_images/trusted-by-design/gap_after_tracking_dark.png
+:align: center
+:class: only-dark
+
+A schematic illustration of the gap in the open-source ecosystem for animal behaviour analysis that *movement* aims to fill.
 ```
 
 And that's how  *movement*'s 'abstract' was born. You just read it. You can find a version of it on the [project's homepage](https://movement.neuroinformatics.dev). Over time we expanded that into a [whole page](https://movement.neuroinformatics.dev/latest/community/mission-scope.html) detailing the project's mission, scope, and design principles.
@@ -56,6 +63,13 @@ You may have noticed that the homepage also contains a visual overview of the pr
 
 ```{figure} /_static/blog_images/trusted-by-design/movement_overview.png
 :align: center
+:class: only-light
+
+A *graphical abstract* for the *movement* project, including the key tasks it covers and how it relates to other tools.
+```
+```{figure} /_static/blog_images/trusted-by-design/movement_overview_dark.png
+:align: center
+:class: only-dark
 
 A *graphical abstract* for the *movement* project, including the key tasks it covers and how it relates to other tools.
 ```
