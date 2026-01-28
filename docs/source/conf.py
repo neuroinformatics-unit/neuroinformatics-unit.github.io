@@ -82,6 +82,7 @@ linkcheck_ignore = [
     "https://chatgpt.com/",
     r"https://www\.cell\.com/.*",  # Use regex pattern to match all cell.com URLs
     r"https?://(?:dx\.)?doi\.org/.*",  # Use regex pattern to match all DOI URLs
+    "https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.14460",
 ]
 
 # Suppress strikethrough warnings - strikethrough is only supported in HTML
