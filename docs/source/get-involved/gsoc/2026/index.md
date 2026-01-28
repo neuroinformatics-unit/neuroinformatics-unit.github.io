@@ -15,6 +15,8 @@ Others do not yet have specific project ideas, but all on this list welcome idea
 ### BrainGlobe
 [BrainGlobe](https://brainglobe.info/) is a community-driven suite of open-source Python tools. The BrainGlobe tools are widely used to process, analyse and visualise images of brains (and other related data) in neuroscientific research.
 
+Our working language is English, but our mentors for these projects also speak Italian, French, and German.
+
 #### Project ideas
 
 :::{dropdown} {fas}`brain;sd-text-primary` Placeholder
