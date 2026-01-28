@@ -96,7 +96,7 @@ Senior Research Fellow
 ## Former members
 - [Shrey Singh (Google Summer of Code 2025)](https://github.com/cs7-shrey)
 - [Saarah Hussain (Google Summer of Code 2025)](https://github.com/saarah815)
-- [Kaixiang Shuai (Masters Student 2025](https://github.com/Skxsmy)
+- [Kaixiang Shuai (Masters Student 2025)](https://github.com/Skxsmy)
 - Michaella Beeney (In2Research 2025)
 - [Yousuf-Adial Ansari (In2Research 2024)](https://github.com/yousuf-adialwa20)
 
