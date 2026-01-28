@@ -148,7 +148,7 @@ Further details are available in the following `movement` issues: [#348](https:/
 
 
 :::{dropdown} {fas}`video;sd-text-primary` Adding support for tracked segmentation masks
-`movement` has initially focused on pose estimation data, but the [long term goal](https://movement.neuroinformatics.dev/latest/community/mission-scope.html) of the package is to support all animal tracking data formats that are relevant to animal behaviour research. With tools like [SAM](https://github.com/facebookresearch/sam2) or [OCTRON](https://octron-tracking.github.io/OCTRON-docs/) that track segmentation masks in videos, supporting these may be a nice addition to the set of input data accepted by `movement`. In this project, we would like to explore how we can support such that within the `movement` framework and implement a user-friendly approach.
+`movement` has initially focused on pose estimation data, but the [long term goal](https://movement.neuroinformatics.dev/latest/community/mission-scope.html) of the package is to support all animal tracking data formats that are relevant to animal behaviour research. With tools like [SAM](https://github.com/facebookresearch/sam2) or [OCTRON](https://octron-tracking.github.io/OCTRON-docs/) that track segmentation masks in videos, adding support for such data would be a valuable extension of `movement`'s input capabilities. In this project, we would like to explore how segmentation‑based tracking data can be integrated into the `movement` framework and design a user-friendly workflow for doing so.
 
 
 **Deliverables**
