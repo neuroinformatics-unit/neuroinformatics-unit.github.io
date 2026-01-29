@@ -251,6 +251,7 @@ This project is well suited for an intermediate contributor to open source, with
 
 **Potential mentors**
 - [@niksirbi](https://github.com/niksirbi)
+- [@lochhh](https://github.com/lochhh)
 
 **Further reading**
 - The [`swaRm` R package](https://swarm-lab.github.io/swaRm/reference/swaRm-package.html) and its associated [paper](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.14460)
@@ -296,7 +297,8 @@ Experience with [napari](https://napari.org/stable/) plugins.
 **Potential mentors**
 <!-- List of potential mentors for this project -->
 - [@sfmig](https://github.com/sfmig)
-
+- [@niksirbi](https://github.com/niksirbi)
+- [@lochhh](https://github.com/lochhh)
 
 **Further reading**
 <!-- Links to more detailed descriptions and related materials for each project. They might even include actual use cases -->
