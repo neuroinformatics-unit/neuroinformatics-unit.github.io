@@ -8,15 +8,13 @@ The Neuroinformatics Unit (NIU) takes part in GSoC to offer paid experience work
 
 ::: {admonition} GSoC 2026
 :class: note
-If the Neuroinformatics Unit takes part in GSoC in 2026, details about projects etc. will be posted here in due course.
+Our [2026 project list](2026/index) is now live, but our participation in GSoC 2026 is not yet confirmed. Further details will be posted here in due course.
 :::
 
 ## How does GSoC work?
 Through the GSoC application process, interested applicants submit project proposals to the various organizations participating in GSoC - in our case, the NIU. Then, the organizations select which proposals they would like to see funded by Google. Successful applicants will spend their summer contributing code to our open source organization under the guidance of our mentoring team. 
 
 To learn more about the program, we recommend reading the [GSoC FAQs](https://developers.google.com/open-source/gsoc/faq) and the [GSoC Contributor Guide](https://google.github.io/gsocguides/student/). For general information, see also the [GSoC website](https://summerofcode.withgoogle.com/).
-
-
 
 
 ## Apply to GSoC with NIU
@@ -44,6 +42,7 @@ For clarity, please always use your full name when getting a [Zulip](https://neu
 :maxdepth: 1
 
 guidelines
+2026/index
 ```
 
 ## Previous years
