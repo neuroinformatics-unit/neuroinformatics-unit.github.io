@@ -92,7 +92,7 @@ guidelines:
 * Do not directly email developers, please use official channels where possible (e.g. Zulip, GitHub).
 * Ensure all communication is in the most appropriate place (i.e. discuss proposed changes within the relevant issue or PR).
 * Make sure to [link issues to PRs](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue).
-* Do not unnecessarily duplicate information. When you've raised a PR, all the relevant people will be notified. 
+* Do not unnecessarily duplicate information. When you have raised a PR, all the relevant people will be notified. 
 Please don't post about the PR in the issue (linking the PR is sufficient), or post about in Zulip unless there is a specific aspect to discuss outside the PR.
 * Don't send reminders to core developers unless at least two weeks has passed without communication. The maintainers are busy and often have a very large backlog of notifications. 
 * If you are a new contributor, you do not need to be assigned an issue before getting started. We typically only assign issues to core developers. If you would like to work on something, just open a draft PR that links back to the issue.
