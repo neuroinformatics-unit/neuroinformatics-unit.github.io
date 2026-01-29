@@ -139,6 +139,11 @@ html_theme_options = {
             "type": "fontawesome",
         },
         {
+            "name": "LinkedIn",
+            "url": "https://www.linkedin.com/company/neuroinformatics-unit",
+            "icon": "fa-brands fa-linkedin",
+        },
+        {
             "name": "Mastodon",
             "url": "https://mastodon.online/@neuroinformatics",
             "icon": "fa-brands fa-mastodon",
