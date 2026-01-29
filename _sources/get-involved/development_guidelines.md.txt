@@ -67,6 +67,11 @@ one operating system.
 - Ask for a review from someone specific if you think they would be a particularly suited reviewer (possibly noting
   why they are suited on the PR description)
 
+::: {admonition} New contributors
+:class: note
+If you are new to the organisation, please only raise one PR at a time. Often multiple PRs will need the same 
+changes made, and it's much easier to just start with one.
+:::
 
 ## Starting a new project
 When beginning a new project, the above guidelines can be relaxed until the basic structure of the code is established. 
@@ -78,6 +83,19 @@ In particular, rather than waiting for a series of small PRs to be merged, one m
 * Merge `dev` into `main`
 * Move to feature branch/PR workflow (branching from `dev` if necessary while waiting for `dev` to be merged)
 
+## Communication
+Open source relies on communication between members of the community. However, this can get overwhelming for project 
+maintainers, with GitHub issues, pull requests, Zulip messages and emails. For this reason, we follow these 
+guidelines:
+
+* Ensure as much communication happens in public as possible. Only confidential communication should happen via private channels.
+* Do not directly email developers, please use official channels where possible (e.g. Zulip, GitHub).
+* Ensure all communication is in the most appropriate place (i.e. discuss proposed changes within the relevant issue or PR).
+* Make sure to [link issues to PRs](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue).
+* Do not unnecessarily duplicate information. When you have raised a PR, all the relevant people will be notified. 
+Please do not post about the PR in the issue (linking the PR is sufficient), or post about in Zulip unless there is a specific aspect to discuss outside the PR.
+* Please avoid sending reminders to core developers unless at least two weeks has passed without communication. The maintainers are busy and often have a very large backlog of notifications. 
+* If you are a new contributor, you do not need to be assigned an issue before getting started. We typically only assign issues to core developers. If you would like to work on something, just open a draft PR that links back to the issue.
 
 ## Issue tags
 
