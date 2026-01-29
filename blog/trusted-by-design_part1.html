@@ -6,8 +6,9 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Languages &#8212; NIU</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Trusted by design (part 1): define your software’s mission and scope &#8212; NIU</title>
   
   
   
@@ -52,8 +53,8 @@
                 gtag('js', new Date());
                 gtag('config', 'G-6260TGM7TY');
             </script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'blog/language';</script>
-    <link rel="canonical" href="https://neuroinformatics.dev/blog/language.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'blog/trusted-by-design_part1';</script>
+    <link rel="canonical" href="https://neuroinformatics.dev/blog/trusted-by-design_part1.html" />
     <link rel="icon" href="../_static/logo_light.png"/>
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -314,6 +315,10 @@
   
 
   
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
 </div>
 
     </header>
@@ -513,7 +518,7 @@
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Languages</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Trusted by design (part 1): define your software’s mission and scope</span></li>
   </ul>
 </nav>
 </div>
@@ -529,116 +534,146 @@
                 
 <div id="searchbox"></div>
                 <article class="bd-article">
-                    
-<div class="section ablog__catalog_header">
-  <h2>
-    <span
-      >Posts in
-      <a href="language/english.html">English</a>
-    </span>
-  </h2>
-  
-  <div class="section ablog__catalog_post">
-    <p>
+                   <section class="tex2jax_ignore mathjax_ignore" id="trusted-by-design-part-1-define-your-softwares-mission-and-scope">
+<span id="target-trusted-by-design-part1"></span><h1>Trusted by design (part 1): define your software’s mission and scope<a class="headerlink" href="#trusted-by-design-part-1-define-your-softwares-mission-and-scope" title="Link to this heading">#</a></h1>
+<p><em>No project exists in a vacuum. Open-source software is a vast web of inter-connected and inter-dependent tools. When creating a new tool, your number one job is to carve out its place in the web consciously, openly and from the outset. How can you approach that?</em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is the first of three blogposts on the theme of <em>Trusted by design: set up your research software for community adoption</em>. See the <a class="reference internal" href="trusted-by-design_intro.html#target-trusted-by-design-intro"><span class="std std-ref">introductory blogpost</span></a> for context.</p>
+</div>
+<p>The task is no different to scoping out research projects, which also live within a vast web—the scientific literature. You hang out in a research field that looks inviting and stumble upon a gap, or a discrepancy that won’t go away. You work to rectify it until, eventually, you discover a new piece of knowledge. You are not done—you must stitch that new piece back into the web of ideas. You do that by clearly articulating the gap filled by your piece and how the web is rearranged by it.</p>
+<p>Pinpointing your position on the web may be necessary at the end, but it’s useful from the very beginning.
+You may have heard lots of advice on doing that effectively in a research context. The practice I like most is writing down your project’s abstract before you even start. You imagine your research completed and write the abstract of your envisioned manuscript as best you can. Of course that abstract will change as you go along. But that’s the point. The abstract is not your destination. It’s your compass—your protection from getting lost in the sea of knowledge.</p>
+<section id="software-abstracts">
+<h2>Software abstracts<a class="headerlink" href="#software-abstracts" title="Link to this heading">#</a></h2>
+<p>What’s the equivalent of an abstract for a software package? There’s no standardised format for it, but if you browse through the READMEs and websites of your favourite tools you will start seeing some common patterns.</p>
+<p>You will often find a single-sentence, high-level description of the project—the mission statement. It sometimes takes the form of a tagline under the project’s title, or it can live in a dedicated page called “About us”, or just “Mission”. Let’s look at some examples for scientific Python packages, including some we develop:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Project</p></th>
+<th class="head"><p>Mission statement</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://pandas.pydata.org/">pandas</a></p></td>
+<td><p><em>pandas</em> aims to be the fundamental high-level building block for doing practical, real world data analysis in Python.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://napari.org/stable/">napari</a></p></td>
+<td><p><em>napari</em> aims to be the <em>multi-dimensional image viewer for Python</em> and to <em>provide GUI access to a plugin ecosystem of image analysis tools for scientists</em> to use in their daily work.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://brainglobe.info">BrainGlobe</a></p></td>
+<td><p>The <em>BrainGlobe</em> Initiative exists to facilitate the development of interoperable Python-based tools for computational neuroanatomy.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://movement.neuroinformatics.dev/">movement</a></p></td>
+<td><p><em>movement</em> aims to <em>facilitate the study of animal behaviour</em> by providing a suite of <em>Python tools to analyse body movements</em> across space and time.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The mission statement is often supplemented by more information, such as:</p>
+<ul class="simple">
+<li><p>The project’s aims, akin to what you’d find in a scientific grant; see <a class="reference external" href="https://brainglobe.info">BrainGlobe’s homepage</a> for an example.</p></li>
+<li><p>The project’s values and design principles; <a class="reference external" href="https://napari.org/stable/community/mission_and_values.html">napari</a> does that well.</p></li>
+<li><p>The project’s scope, i.e. the set of tasks it is designed to enable; see <em>pandas</em>’ <a class="reference external" href="https://pandas.pydata.org/about/">“Library Highlights” section</a>.</p></li>
+</ul>
+</section>
+<section id="case-study-movement">
+<h2>Case study:  <em>movement</em><a class="headerlink" href="#case-study-movement" title="Link to this heading">#</a></h2>
+<p>When I started developing  <a class="reference external" href="https://movement.neuroinformatics.dev/">movement</a>, my colleagues and I consciously chose to write a ‘software abstract’ before we began the work. We did that by first mapping out our neighbourhood—open-source tools for analysing animal behaviour. This meant doing lots of research upfront: googling, reading papers, browsing GitHub, and also talking to many researchers working in this field. We tried to condense our findings into a set of common workflows and broke them down into tasks. We zeroed in on tasks that were arduous and under-served by existing tools—the potential gaps to address.</p>
+<p>Next, we asked whether these gaps merited being addressed by a standalone package or by contributing to existing projects. We also asked ourselves if we were the right people to address each gap.</p>
+<p>Through this process we concluded that the deep learning revolution of the last decade had already trickled down into user-friendly open-source packages. Tools such as <a class="reference external" href="https://www.mackenziemathislab.org/deeplabcut/">DeepLabCut</a> and <a class="reference external" href="https://sleap.ai">SLEAP</a> enabled researchers to track animal movements in videos accurately, cheaply, and at scale. This welcome development had moved the analysis bottleneck downstream of motion tracking: turning this swell of data into quantitative descriptions of behaviour. Researchers would often use the same behavioural metrics across projects and disciplines. But these were typically implemented as fragile, in-house scripts that were seldom maintained beyond a project’s conclusion. We saw an opportunity for a general-purpose Python toolbox that would ingest motion tracking data from existing frameworks and provide validated and documented implementations for various common behavioural metrics.</p>
+<figure class="align-center" id="id1">
+<img alt="../_images/gap_after_tracking.png" class="only-light" src="../_images/gap_after_tracking.png" />
+<figcaption>
+<p><span class="caption-text">A schematic illustration of the gap in the open-source ecosystem for animal behaviour analysis that <em>movement</em> aims to fill.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id2">
+<img alt="../_images/gap_after_tracking_dark.png" class="only-dark" src="../_images/gap_after_tracking_dark.png" />
+<figcaption>
+<p><span class="caption-text">A schematic illustration of the gap in the open-source ecosystem for animal behaviour analysis that <em>movement</em> aims to fill.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>And that’s how  <em>movement</em>’s ‘abstract’ was born. You just read it. You can find a version of it on the <a class="reference external" href="https://movement.neuroinformatics.dev">project’s homepage</a>. Over time we expanded that into a <a class="reference external" href="https://movement.neuroinformatics.dev/latest/community/mission-scope.html">whole page</a> detailing the project’s mission, scope, and design principles.</p>
+<p>You may have noticed that the homepage also contains a visual overview of the project—a <em>graphical abstract</em> of sorts. I love a good visual, so I felt a natural urge to literally sketch things out. This graphical abstract has evolved over time and we’ve found it useful in communicating the project’s mission and scope at a glance. It’s faster to parse—and more memorable—than a wall of text.</p>
+<figure class="align-center" id="id3">
+<img alt="../_images/movement_overview.png" class="only-light" src="../_images/movement_overview.png" />
+<figcaption>
+<p><span class="caption-text">A <em>graphical abstract</em> for the <em>movement</em> project, including the key tasks it covers and how it relates to other tools.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id4">
+<img alt="../_images/movement_overview_dark.png" class="only-dark" src="../_images/movement_overview_dark.png" />
+<figcaption>
+<p><span class="caption-text">A <em>graphical abstract</em> for the <em>movement</em> project, including the key tasks it covers and how it relates to other tools.</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="the-many-benefits-of-an-abstract">
+<h2>The many benefits of an abstract<a class="headerlink" href="#the-many-benefits-of-an-abstract" title="Link to this heading">#</a></h2>
+<p>No-one would argue against defining your work’s aims. What I want to emphasise are the benefits of doing so <strong>in the open</strong> and <strong>at the very beginning</strong>, before you write a single line of code.</p>
+<p>How does this help with community adoption? <strong>Let’s look at some scenarios inspired by real events.</strong></p>
+<p><strong>While writing the abstract:</strong></p>
+<ol class="arabic simple">
+<li><p>You discover that existing tools already cover your project’s scope. No need to reinvent the wheel—you save time, other projects grow stronger.</p></li>
+<li><p>The deeper you dig, the more you see a pressing need. Articulating it in writing gives you clarity of purpose and lets you plan the work in reasonable chunks. You’re ready to advocate to colleagues, managers, and funders. You may recruit collaborators and secure resources.</p></li>
+</ol>
+<p><strong>During the project’s early days:</strong></p>
+<ol class="arabic" start="3">
+<li><p>People grasp your project’s essence at a glance and decide whether to engage. You attract the right attention and gain early adopters.</p></li>
+<li><p>Someone reaches out and points you to their cool project. It seems quite similar to yours, but you’d missed it in your initial research; it happens. You decide to have a chat, which may lead to one of several outcomes:</p>
+<ul class="simple">
+<li><p>Their project is further along with many users. You decide to stop working on your project and contribute to theirs instead. Your visions merge into something bigger and better.</p></li>
+<li><p>Despite appearances, there isn’t much overlap. There’s room for both tools. You update your abstract to clarify how they differ.</p></li>
+<li><p>There is overlap, but you disagree with their approach, or the two projects are hard to reconcile from a technical standpoint (e.g. use different programming languages). You keep developing your software—every ecosystem benefits from diversity. Perhaps it’s time to articulate your design principles and your technical choices.</p></li>
+</ul>
+<div class="tip admonition">
+<p class="admonition-title">A real-world example</p>
+<p>In the early days of <em>movement</em>, <a class="reference external" href="https://roald-arboel.com">Mikkel Roald-Arbøl</a> <a class="reference external" href="https://neuroinformatics.zulipchat.com/#narrow/channel/406001-Movement/topic/R.20Implementation/near/454864499">reached out to us</a> because he was developing <code class="docutils literal notranslate"><span class="pre">anibehavr</span></code>, an R package with a similar scope. Mikkel has since become one of our most valued collaborators. We decided to keep both projects going—one for Python, one for R. We are also working together to gradually converge on common data standards and workflows. Mikkel has since renamed his project to <a class="reference external" href="https://animovement.dev">animovement</a> to better reflect its complementarity to <a class="reference external" href="https://movement.neuroinformatics.dev">movement</a>.</p>
+</div>
+</li>
+</ol>
+<p><strong>Throughout the project’s lifecycle:</strong></p>
+<ol class="arabic simple" start="5">
+<li><p>Someone raises a GitHub issue requesting a feature. Your written scope guides you:</p>
+<ul class="simple">
+<li><p>In scope: it goes on the to-do list. You ask if they’d help implement or test. You just made a friend.</p></li>
+<li><p>Out of scope: you close the issue with a clear explanation.</p></li>
+<li><p>Borderline: you update your scope so the feature falls clearly in or out. Editing is easier than writing from scratch—this is how real scopes evolve.</p></li>
+</ul>
+</li>
+<li><p>You and a collaborator disagree on how to build a feature: you want to delegate the work to an existing library (adding a dependency in the process) while they want to implement the functionality from scratch. You consult your design principles and find one prioritising easy cross-platform installation. The library you proposed doesn’t support all platforms—so you concede. The disagreement resolves on merits.</p></li>
+</ol>
+<p>Now imagine these scenarios without a public abstract. Misunderstandings are more likely to arise. Decisions that felt principled to you may look arbitrary to others—and that erodes trust.</p>
+</section>
+<section id="the-takeaway">
+<h2>The takeaway<a class="headerlink" href="#the-takeaway" title="Link to this heading">#</a></h2>
+<p>Your software abstract is more than a planning document—it’s a trust signal. By articulating your mission publicly before the stakes are high, you invite collaboration and scrutiny early. You show that you’re building something thoughtfully, not just hacking code together. And when disagreements arise—as they will—you have something to point to. Not the final word, but a starting point for conversation.</p>
+<p><em>In the next post, we’ll explore how to turn your abstract into action while maintaining trust—by releasing early and often.</em></p>
+</section>
+</section>
+
+<div class="section ablog__blog_comments">
+     
+<div class="section ablog__prev-next">
+  <span class="ablog__prev">
+     
+    <a href="trusted-by-design_intro.html">
       
-      <span>28 January 2026</span>
-       -
-      <a href="trusted-by-design_part1.html">Trusted by design (part 1): define your software’s mission and scope</a>
-    </p>
-  </div>
-  
-  <div class="section ablog__catalog_post">
-    <p>
+      <i class="fa fa-arrow-circle-left"></i>
       
-      <span>28 January 2026</span>
-       -
-      <a href="trusted-by-design_intro.html">Trusted by design (intro): set up your research software for community adoption</a>
-    </p>
-  </div>
-  
-  <div class="section ablog__catalog_post">
-    <p>
-      
-      <span>03 December 2025</span>
-       -
-      <a href="worms_osw25.html">Exploring automatic ways of extracting a pose estimation skeleton for C. elegans</a>
-    </p>
-  </div>
-  
-  <div class="section ablog__catalog_post">
-    <p>
-      
-      <span>15 September 2025</span>
-       -
-      <a href="gsoc_2025_brainglobe_registration.html">GSoC 2025: brainglobe-registration</a>
-    </p>
-  </div>
-  
-  <div class="section ablog__catalog_post">
-    <p>
-      
-      <span>12 September 2025</span>
-       -
-      <a href="datashuttle_gsoc2025.html">Add Google Drive and AWS to datashuttle - Final GSoC Report</a>
-    </p>
-  </div>
-  
-  <div class="section ablog__catalog_post">
-    <p>
-      
-      <span>12 September 2025</span>
-       -
-      <a href="perspective_osw2025.html">A Personal Perspective on the Open Software Week</a>
-    </p>
-  </div>
-  
-  <div class="section ablog__catalog_post">
-    <p>
-      
-      <span>01 July 2025</span>
-       -
-      <a href="derotation.html">derotation: a Python package for correcting motion artifacts in rotating multiphoton movies</a>
-    </p>
-  </div>
-  
-  <div class="section ablog__catalog_post">
-    <p>
-      
-      <span>28 February 2025</span>
-       -
-      <a href="gsoc2025.html">We are participating in Google Summer of Code 2025!</a>
-    </p>
-  </div>
-  
-  <div class="section ablog__catalog_post">
-    <p>
-      
-      <span>07 May 2024</span>
-       -
-      <a href="datashuttle.html">Managing neuroscience projects with datashuttle</a>
-    </p>
-  </div>
-  
-  <div class="section ablog__catalog_post">
-    <p>
-      
-      <span>02 May 2024</span>
-       -
-      <a href="neuroblueprint.html">Data organisation with NeuroBlueprint</a>
-    </p>
-  </div>
-  
-  <div class="section ablog__catalog_post">
-    <p>
-      
-      <span>23 June 2023</span>
-       -
-      <a href="matlab_to_python.html">Why and How to Translate Scientific code from MATLAB to Python: A Guide for Researchers</a>
-    </p>
-  </div>
-  
+      <span>Trusted by design (intro): set up your research software for community adoption</span>
+    </a>
+    
+  </span>
+  <span class="ablog__spacer">&nbsp;</span>
+  <span class="ablog__next">
+    
+  </span>
 </div>
   
+</div>
+
                 </article>
               
               
@@ -654,6 +689,36 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#software-abstracts">Software abstracts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#case-study-movement">Case study:  <em>movement</em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-many-benefits-of-an-abstract">The many benefits of an abstract</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-takeaway">The takeaway</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/blog/trusted-by-design_part1.md.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
               
             
           </div>
