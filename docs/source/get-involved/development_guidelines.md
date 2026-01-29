@@ -95,7 +95,7 @@ guidelines:
 * Do not unnecessarily duplicate information. When you've raised a PR, all the relevant people will be notified. 
 Please don't post about the PR in the issue (linking the PR is sufficient), or post about in Zulip unless there is a specific aspect to discuss outside the PR.
 * Don't send reminders to core developers unless at least two weeks has passed without communication. The maintainers are busy and often have a very large backlog of notifications. 
-* If you are a new contributor, please don't ask to be assigned an issue. We typically only assign issues to core developers. 
+* If you are a new contributor, you do not need to be assigned an issue before getting started. We typically only assign issues to core developers. If you would like to work on something, just open a draft PR that links back to the issue.
 
 ## Issue tags
 
