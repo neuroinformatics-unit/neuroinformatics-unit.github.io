@@ -1,3 +1,4 @@
+(target-home)=
 # Neuroinformatics Unit
 
 The Neuroinformatics Unit (NIU) is a [Research Software Engineering](https://society-rse.org/) team based at the [Sainsbury Wellcome Centre](https://www.sainsburywellcome.org/web/) and the [Gatsby Computational Neuroscience Unit](https://www.ucl.ac.uk/gatsby/gatsby-computational-neuroscience-unit).
