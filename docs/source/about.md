@@ -22,7 +22,7 @@ We have an ongoing collaboration with the [Keshavarzi Laboratory](https://www.ke
 
 We work with a number of labs to build anatomical atlases, including 
 [Henrik Mouritsen](https://uol.de/en/ibu/animal-navigation/staff/henrik-mouritsen) at the University of Oldenburg and 
-[Pascal Malkemper](https://www.malkemper-lab.com/) at the Max Planck Institute for Neurobiology of Behavior – caesar.
+[Pascal Malkemper](https://mpinb.mpg.de/en/research-groups/groups/neurobiology-of-magnetoreception/research-focus.html) at the Max Planck Institute for Neurobiology of Behavior – caesar.
 ## Contact
 For help and support with individual tools, or just to get in touch, please use our [Zulip](https://neuroinformatics.zulipchat.com/).
 
