@@ -44,7 +44,7 @@ Fluency with Python
 
 * Experience with [pytest](https://docs.pytest.org/en/stable/).
 * Experience with visualisation libraries, in particular [matplotlib](https://matplotlib.org/) and/or [vedo](https://vedo.embl.es/)
-* Experience with neuro-anatomy
+* Experience with neuroanatomy
 
 
 **Potential mentors**
@@ -98,8 +98,8 @@ BrainGlobe's `cellfinder` tool allows researchers to detect fluorescent cells in
 
 
 **Deliverables**
-* add functionality supporting 2.5-dimensional data
-* add functionality to support single-channel data
+* Add functionality supporting 2.5-dimensional data
+* Add functionality to support single-channel data
 * Any added functionality will require extensive tests and documentation
 * A blog on the [BrainGlobe website](https://brainglobe.info/blog/) about the work done
 
