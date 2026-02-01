@@ -17,35 +17,117 @@ Others do not yet have specific project ideas, but all on this list welcome idea
 
 Our working language is English, but our mentors for these projects also speak Italian, French, and German.
 
-:::{dropdown} {fas}`brain;sd-text-primary` Placeholder
-<!-- Description -->
+Three BrainGlobe repositories ([morphapi](https://github.com/brainglobe/morphapi), [brainrender](https://github.com/brainglobe/brainrender), [brainreg](https://github.com/brainglobe/brainreg)) are in pure maintenance mode, and therefore excluded from any GSoC project proposals. All other BrainGlobe repositories welcome alternative project ideas!
 
+:::{dropdown} {fas}`brain;sd-text-primary` Refactor `brainglobe-heatmap` to use atlas annotations rather than mesh slices for visualisation
+`brainglobe-heatmap` is BrainGlobe's tool to generate heatmap plots of atlases in 2 and 3D. It relies heavily on BrainGlobe's meshes, which can cause small imprecisions in visualising data. In 2D it also can fail to slice the meshes along a plane correctly. This could be improved by moving the heatmap functions to relies on the atlas annotations instead of the meshes. There are a number of additional refactoring improvements that could be done to `brainglobe-heatmap`.
 
 **Deliverables**
-<!-- Goals, or expected status after Community Bonding Period, Start of Coding, End of Coding. Stretch goals? -->
-
+* Refactor 2D plotting functionality to use atlas annotations instead of meshes
+* Tests for new functionality
+* Ensure any refactored functionality has docstrings
+* A blog on the [BrainGlobe website](https://brainglobe.info/blog/) about the work done
+* (Stretch goal) - further improvements to `brainglobe-heatmaps`
 
 **Duration**
-<!-- Small (~90 hours), Medium (~175 hours) or Large (~350 hours)  -->
-
+Small (~90 hours)
 
 **Difficulty**
-<!-- Is this project geared more toward a student level or a more advanced developer level? -->
 
+This project is well suited for an intermediate contributor to open source.
 
 **Required skills**
 
+Fluency with Python
 
 **Nice-to-haves**
 
+* Experience with [pytest](https://docs.pytest.org/en/stable/).
+* Experience with visualisation libraries, in particular [matplotlib](https://matplotlib.org/) and/or [vedo](https://vedo.embl.es/)
+* Experience with neuroanatomy
 
 
 **Potential mentors**
-
-
+- [@alessandrofelder](https://github.com/alessandrofelder)
+- [@adamltyson](https://github.com/adamltyson)
+- [@IgorTatarnikov](https://github.com/IgorTatarnikov)
 
 **Further reading**
-<!-- The best pages include links to more detailed descriptions and related materials for each project. They might even include actual use cases! -->
+`brainglobe-heatmap` issue [#103](https://github.com/brainglobe/brainglobe-heatmap/issues/103) nicely demonstrates the problem and a potential solution approach.
+:::
+
+:::{dropdown} {fas}`brain;sd-text-primary` Improving the user experience in `brainrender-napari`
+`brainrender-napari` allows BrainGlobe users to download and visualise a variety of neuroanatomical atlases through a graphical user interface. As BrainGlobe supports more and more atlases, we'd like to make it more convenient for users to find the atlas they are interested in, and visualise it in more custom ways.
+
+**Deliverables**
+* Add sorting functionality to `brainrender-napari` tables
+* Allow users to filter atlas tables by species
+* Add functionality to visualise the atlas annotation with preset colours
+* Any added functionality will require extensive tests and documentation
+* A blog on the [BrainGlobe website](https://brainglobe.info/blog/) about the work done
+* (Stretch) add functionality to allow users to set the colours of meshes
+
+**Duration**
+Large (~350 hours)
+
+**Difficulty**
+
+This project is well suited for an intermediate contributor to open source.
+
+**Required skills**
+
+Fluency with Python
+
+**Nice-to-haves**
+
+* Experience with [pytest](https://docs.pytest.org/en/stable/).
+* Experience with graphical user face libraries, in particular [napari](https://napari.org/stable/) and/or [Qt](https://www.qt.io/)
+
+**Potential mentors**
+- [@alessandrofelder](https://github.com/alessandrofelder)
+- [@adamltyson](https://github.com/adamltyson)
+- [@IgorTatarnikov](https://github.com/IgorTatarnikov)
+
+**Further reading**
+- Further details can be found in `brainrender-napari` issues [#22](https://github.com/brainglobe/brainrender-napari/issues/22), [#46](https://github.com/brainglobe/brainrender-napari/issues/46),[#154](https://github.com/brainglobe/brainrender-napari/issues/154), and [#218](https://github.com/brainglobe/brainrender-napari/issues/218)
+- Initial familiarisation with `brainrender-napari`'s current features may happen by working through the [atlas downloading tutorial](https://brainglobe.info/tutorials/manage-atlases-in-GUI.html) and the [atlas visualisation tutorial](https://brainglobe.info/tutorials/visualise-atlas-napari.html)
+:::
+
+:::{dropdown} {fas}`brain;sd-text-primary` Expand `cellfinder` to accept different types of input data (several or single channels, 2.5 dimensions)
+BrainGlobe's `cellfinder` tool allows researchers to detect fluorescent cells in whole-brain microscopy images. It requires whole-brain images of both a signal and a background channels as input, which not many researchers have. We'd like to expand the types of inputs `cellfinder` support to include brain slices (essentially 2D data) and single channel inputs (no background channel).
+
+
+**Deliverables**
+* Add functionality supporting 2.5-dimensional data
+* Add functionality to support single-channel data
+* Any added functionality will require extensive tests and documentation
+* A blog on the [BrainGlobe website](https://brainglobe.info/blog/) about the work done
+
+**Duration**
+Large (~350 hours)
+
+**Difficulty**
+
+This project is well suited for an intermediate contributor to open source.
+
+**Required skills**
+
+Fluency with Python and [NumPy](https://numpy.org/)
+
+**Nice-to-haves**
+
+* Experience with [pytest](https://docs.pytest.org/en/stable/).
+* Experience working with image data
+* Experience working with large data, e.g. using [`pytorch`](https://pytorch.org/) and/or [`dask`](https://www.dask.org/)
+
+**Potential mentors**
+- [@alessandrofelder](https://github.com/alessandrofelder)
+- [@adamltyson](https://github.com/adamltyson)
+- [@IgorTatarnikov](https://github.com/IgorTatarnikov)
+
+**Further reading**
+- Further details can be found in `cellfinder` issues [#298](https://github.com/brainglobe/cellfinder/issues/298) and [#352](https://github.com/brainglobe/cellfinder/issues/352) 
+- The current `cellfinder` functionality can be explored by working through the [3D cell detection tutorial](https://brainglobe.info/tutorials/cellfinder-detection.html)
 :::
 
 
