@@ -70,7 +70,10 @@ templates_path = ["_templates"]
 
 # Ignore links that do not work with github actions link checking
 # https://github.com/neuroinformatics-unit/actions/pull/24#issue-1978966182
-linkcheck_anchors_ignore_for_url = ["https://neuroinformatics.zulipchat.com/"]
+linkcheck_anchors_ignore_for_url = [
+    "https://neuroinformatics.zulipchat.com/",
+    "https://cocodataset.org/",
+]
 linkcheck_ignore = [
     "https://opensource.org",
     "https://www.incf.org/recommendations-gsoc-contributors",
@@ -82,6 +85,8 @@ linkcheck_ignore = [
     "https://chatgpt.com/",
     r"https://www\.cell\.com/.*",  # Use regex pattern to match all cell.com URLs
     r"https?://(?:dx\.)?doi\.org/.*",  # Use regex pattern to match all DOI URLs
+    "https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.14460",
+    "https://onlinelibrary.wiley.com/doi/full/10.1111/eth.12739",  # trajR
 ]
 
 # Suppress strikethrough warnings - strikethrough is only supported in HTML
