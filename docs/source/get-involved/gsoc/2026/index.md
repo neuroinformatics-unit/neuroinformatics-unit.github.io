@@ -2,11 +2,12 @@
 
 ## GSoC NIU Projects 2026
 
-NIU is offering a variety of projects for GSoC 2026, organized under four of our software tools. Click on a card below to learn more about the project ideas for each tool.
+NIU is offering a variety of projects for GSoC 2026, organized under different software tools. Click on a project below learn more about the scope and requirements for each one. 
 
 A project can be one of three sizes: small (90 h), medium (175 h) or large (350 h). The standard coding period is 12 weeks for medium and large projects, and 8 weeks for small projects.
 
 However, GSoC contributors can request in their proposal up to a 22-week coding period, if they know they may have other commitments or certain weeks when they will not be able to work full time on their GSoC project. During the project preparation period (called "community bonding period"), both the GSoC contributor and the mentors will agree on a schedule and sign off on it.
+For more details please see our [main GSoC page](../index). Please also see our [application guidelines](../guidelines) and our [policy on the use of AI](../../ai_policy).
 
 Our GSoC ideas are based within specific, larger open source packages we develop. Some of these have specific project ideas associated with them. 
 Others do not yet have specific project ideas, but all on this list welcome ideas developed by GSoC participants. Please reach out to us via our [GSoc Zulip channel](https://neuroinformatics.zulipchat.com/#narrow/channel/487898-Google-Summer-of-Code) to discuss.
