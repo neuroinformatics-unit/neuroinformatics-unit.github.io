@@ -54,6 +54,16 @@ Claudi, F., Petrucco, L., **Tyson, A. L.**, Branco, T., Margrie, T. W., Portugue
 ::::{grid} 1 1 1 1
 :gutter: 3
 
+:::{grid-item-card} Trusted by design: set up your research software for community adoption
+:link: https://fosdem.org/2026/schedule/event/VPJH8F-trusted-by-design/
+Niko Sirmpilatze, FOSDEM, February 2026
+:::
+
+:::{grid-item-card} movement: a Python toolbox for analysing motion tracking data
+:link: https://fosdem.org/2026/schedule/event/9VLSXV-movement-tracks-python/
+Niko Sirmpilatze, FOSDEM, January 2026
+:::
+
 :::{grid-item-card} Aligning spikes to histology with BrainGlobe
 :link: https://youtu.be/yER8ynNdJcE?si=9_9eTJv--0GZMntn
 Alessandro Felder, UCL Neuropixels course, October 2025
