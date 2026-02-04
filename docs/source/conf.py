@@ -89,8 +89,8 @@ linkcheck_ignore = [
     "https://onlinelibrary.wiley.com/doi/full/10.1111/eth.12739",  # trajR
 ]
 linkcheck_request_headers = {
-    "https://github.com/": {
-        "Authorization": f"token {os.environ.get('GITHUB_TOKEN', '')}",
+    "https://github.com": {
+        "Authorization": f"Bearer {os.environ.get('GITHUB_TOKEN', '')}",
     },
 }
 # Suppress strikethrough warnings - strikethrough is only supported in HTML
