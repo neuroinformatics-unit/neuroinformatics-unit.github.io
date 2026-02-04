@@ -27,7 +27,7 @@ jobs:
     name: Build Sphinx Docs
     runs-on: ubuntu-latest
     steps:
-      - uses: neuroinformatics-unit/actions/build_sphinx_docs@pass-gh-token-to-linkcheck
+      - uses: neuroinformatics-unit/actions/build_sphinx_docs@main
         with:
           use-artifactci: lazy
           github-token: ${{ secrets.GITHUB_TOKEN }}
