@@ -10,7 +10,7 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
+import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
@@ -88,7 +88,11 @@ linkcheck_ignore = [
     "https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.14460",
     "https://onlinelibrary.wiley.com/doi/full/10.1111/eth.12739",  # trajR
 ]
-
+linkcheck_request_headers = {
+    "https://github.com/": {
+        "Authorization": f"token {os.environ.get('GITHUB_TOKEN', '')}",
+    },
+}
 # Suppress strikethrough warnings - strikethrough is only supported in HTML
 suppress_warnings = ['myst.strikethrough']
 

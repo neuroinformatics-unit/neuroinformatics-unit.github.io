@@ -30,6 +30,8 @@ jobs:
       - uses: neuroinformatics-unit/actions/build_sphinx_docs@main
         with:
           use-artifactci: lazy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   deploy_sphinx_docs:
     name: Deploy Sphinx Docs
