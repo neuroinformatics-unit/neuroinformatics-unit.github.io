@@ -62,9 +62,7 @@ Pull requests also create a lasting record. If you invite contributions from the
 
 As your project matures and your community grows, issues and pull requests will no longer be enough. You will probably have gained users and collaborators who don't feel at home on GitHub. And not all conversations will be about code and technical matters—community members will want to seek support, exchange tips, get to know each other, or just hang out.
 
-Provide them with alternative venues and designate specific roles for each. For example, here are the communication channels we use for [movement](https://movement.neuroinformatics.dev):
-
-_Table copied from [movement's community page](https://movement.neuroinformatics.dev/latest/community/index.html)._
+Provide them with alternative venues and designate specific roles for each. For example, here are the communication channels we use for [movement](https://movement.neuroinformatics.dev), as listed on [the project's community page](https://movement.neuroinformatics.dev/latest/community/index.html):
 
 |  | Platform | Come here to |
 |---|----------|---------------|
