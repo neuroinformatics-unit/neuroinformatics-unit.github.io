@@ -16,9 +16,9 @@ This is the last of three blogposts on the theme of _Trusted by design: set up y
 
 The trust-building practices we covered in the two previous blogposts—articulating your project's mission and making incremental releases—can be thought of as announcing your project to the world. But communication can be—and should be—more than occasional announcements. Here we'll look at communication at its most granular: the day-to-day conversations that take place in issues, pull requests and discussion forums.
 
-## Issues as a public scratchpad
+## Keeping track of ideas
 
-In our [team](target-home), we use GitHub issues[^issue-trackers] as a scratchpad. Our recipe is simple:
+In our [team](target-home), we use GitHub issues[^issue-trackers] to keep track of ideas out in the open. Our recipe is simple:
 
 ::: {admonition} How to use issues
 :class: tip
@@ -40,11 +40,13 @@ Let's drive this point home with a thought experiment. You are using software ma
 
 **Every unreported bug and unrequested feature is a missed opportunity**—not only for the developers but for everyone seeking answers in that repository. That loss is largely invisible. But you're also missing out on the greatest joy of open-source development: like-minded strangers who volunteer to solve your problems. Strangers will pick up issues more often than you think. Some will turn into regular contributors, long-term collaborators, or even friends. People are the engine of open-source, and they are attracted by interesting problems. Give them—and your project—a chance by writing things down.
 
-## Pull requests as an open workshop
+## Building collaboratively
+
+Capturing ideas is the first step. The next is turning them into working code—and that process can be just as open.
 
 Pull requests are a workflow for contributing to a software project. They allow anyone to create a copy of the codebase, make changes, and propose those changes to be merged back into the original. That proposal is the [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/),[^merge-request] and it's typically accompanied by a description documenting why the changes were made and what they accomplish. Maintainers review them and can approve outright, reject, or ask for changes before merging. **It's like scientific peer review, but for code and at a much faster pace**. Imagine writing your manuscript in a public Google doc, with reviewers suggesting changes line-by-line and anyone in the world being able to chime in with a comment. It sounds chaotic, but it's probably the most effective collaboration workflow ever invented.
 
-If issues are a scratchpad for jotting down ideas, **pull requests are the workshop where ideas become code.** You may feel the urge to work behind closed doors and only emerge when the pie is baked. But just like with issues, every private process is a missed opportunity for learning, collaboration, and trust-building. Open the doors and let anyone peek in, ask questions, and suggest improvements throughout.
+**Pull requests are where ideas become code.** You may feel the urge to work behind closed doors and only emerge when everything is polished. But just like with issues, every private process is a missed opportunity for learning, collaboration, and trust-building. Open the doors and let anyone peek in, ask questions, and suggest improvements throughout.
 
 ::: {tip}
 If you want to see an example, check out the [pull request proposing this very blogpost](https://github.com/neuroinformatics-unit/neuroinformatics-unit.github.io/pull/240).
