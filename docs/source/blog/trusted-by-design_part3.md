@@ -16,19 +16,16 @@ This is the last of three blogposts on the theme of _Trusted by design: set up y
 
 The trust-building practices we covered in the two previous blogposts—articulating your project's mission and making incremental releases—can be thought of as announcing your project to the world. But communication can be—and should be—more than occasional announcements. Here we'll look at communication at its most granular: the day-to-day conversations that take place in issues, pull requests and discussion forums.
 
-Our team's approach to communication could be summarised as:
-**write everything down, make it public by default, and let the magic happen.**
-
 ## Issues as a public scratchpad
 
-We use GitHub issues[^issue-trackers] as a scratchpad. Our recipe is simple:
+In our [team](target-home), we use GitHub issues[^issue-trackers] as a scratchpad. Our recipe is simple:
 
 ::: {admonition} How to use issues
 :class: tip
 
 - If you get a new idea, write it down as an issue.
 - If you obtain new information about an existing idea, comment under the issue.
-- If an idea grows to burst its banks, break it down into smaller, more manageable issues.
+- If an idea becomes too complex to track in a single issue, break it down into smaller, more manageable issues.
 - If two ideas are related, cross-link the issues.
 - If an idea is no longer relevant, close the issue.
 :::
@@ -45,17 +42,15 @@ Let's drive this point home with a thought experiment. You are using software ma
 
 ## Pull requests as an open workshop
 
-If issues are a collaborative public scratchpad, pull requests are the workshop where ideas become code. You may feel the urge to work behind closed doors and only emerge when the pie is baked. But just like with issues, every private process is a missed opportunity for learning, collaboration, and trust-building. Open the doors and let anyone peek in, ask questions, and suggest improvements throughout.
+Pull requests are a workflow for contributing to a software project. They allow anyone to create a copy of the codebase, make changes, and propose those changes to be merged back into the original. That proposal is the [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/),[^merge-request] and it's typically accompanied by a description documenting why the changes were made and what they accomplish. Maintainers review them and can approve outright, reject, or ask for changes before merging. **It's like scientific peer review, but for code and at a much faster pace**. Imagine writing your manuscript in a public Google doc, with reviewers suggesting changes line-by-line and anyone in the world being able to chime in with a comment. It sounds chaotic, but it's probably the most effective collaboration workflow ever invented.
 
-Pull requests are a workflow for contributing to a software project. They allow anyone to create a copy of the codebase, make changes, and propose those changes to be merged back into the original. That proposal is the [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/).[^merge-request]
-
-Typically, pull requests are accompanied by a description documenting why the changes were made and what they accomplish. Maintainers review them and can approve outright, reject, or ask for changes before merging. **It's like scientific peer review, but for code and at a much faster pace**. Imagine writing your manuscript in a public Google doc, with reviewers suggesting changes line-by-line and anyone in the world being able to chime in with a comment. It sounds chaotic, but it's probably the most effective collaboration workflow ever invented.
+If issues are a scratchpad for jotting down ideas, **pull requests are the workshop where ideas become code.** You may feel the urge to work behind closed doors and only emerge when the pie is baked. But just like with issues, every private process is a missed opportunity for learning, collaboration, and trust-building. Open the doors and let anyone peek in, ask questions, and suggest improvements throughout.
 
 ::: {tip}
 If you want to see an example, check out the [pull request proposing this very blogpost](https://github.com/neuroinformatics-unit/neuroinformatics-unit.github.io/pull/240).
 :::
 
-My first advice about **pull requests: just use them, without exception**. Don't succumb to the urge of pushing changes directly to 'main' (the conventional name for the canonical copy of the codebase). Get into the habit of always going through a pull request, even if you are the only developer. It may feel strange to propose changes to yourself and then review them. But self-review is a great way to improve: it disciplines you in writing informative descriptions and checking your own work with a critical eye before rushing ahead.
+My first advice about **pull requests: just use them, without exception**. Don't succumb to the urge of pushing changes directly to 'main' (the conventional name for the canonical copy of the codebase). Get into the habit of always going through a pull request, even if you are the only developer. It may feel strange to propose changes to yourself and then review them. But self-review is a great way to improve: it disciplines you in writing informative descriptions and checking your own work with a critical eye before rushing ahead. And you're not truly alone—automated tools can review your code for style, bugs, and security issues, giving you feedback even when no human collaborator is available.
 
 If you are blessed to have at least one collaborator, the benefits multiply. You can review each other's work, ask questions, suggest improvements, and hold each other accountable. Pull requests provide a fantastic interface for code review—use it. You will feel slowed down at first, perhaps even annoyed that you have to justify your every choice to someone else. But that's the point. You are not just writing code; you are communicating your thinking to others. **Over time, everyone involved will build a shared understanding of the codebase**. The project will stop being the property of your mind and continue life in shared mental models. That step is crucial on the path to community adoption.
 
@@ -67,6 +62,8 @@ As your project matures and your community grows, issues and pull requests will 
 
 Provide them with alternative venues and designate specific roles for each. For example, here are the communication channels we use for [movement](https://movement.neuroinformatics.dev):
 
+_Table copied from [movement's community page](https://movement.neuroinformatics.dev/latest/community/index.html)._
+
 |  | Platform | Come here to |
 |---|----------|---------------|
 | {fas}`comments` | [Zulip](https://neuroinformatics.zulipchat.com/#narrow/stream/406001-Movement) | Ask general questions, seek user support, chat with `movement` users and developers. |
@@ -74,13 +71,11 @@ Provide them with alternative venues and designate specific roles for each. For 
 | {fas}`video` | Community Calls | Meet the team and chat about any aspect of `movement` development. [Follow this Zulip topic](https://neuroinformatics.zulipchat.com/#narrow/channel/406001-Movement/topic/Community.20Calls) to receive updates about upcoming calls. These typically run every other Friday from 11:00 to 11:45 (London, U.K. time). |
 | {fab}`bluesky` {fab}`mastodon` | Social Media | Follow us on [Bluesky](https://bsky.app/profile/neuroinformatics.dev) and [Mastodon](https://mastodon.online/@neuroinformatics) for project announcements, opportunities and upcoming events. |
 
-_Table copied from [movement's community page](https://movement.neuroinformatics.dev/latest/community/index.html)._
-
 Apart from GitHub and social media, we provide two additional spaces: Zulip and Community Calls.
 
 [Zulip](https://zulip.com) is a chat platform with threaded conversations, similar to [Slack](https://slack.com) or [Discord](https://discord.com). We like it because it offers a generous free tier for open-source projects and keeps conversations organised by topic. Most importantly, it supports 'web-public' channels—anyone can read the conversations without creating an account. If they want to participate, they can log in with an existing account (GitHub, Google, etc.) and start chatting. **No matter which platform you choose, eliminate barriers to entry.** Don't make people create an account—or worse, request permission—just to read conversations. Let them come to you and give them agency.
 
-Community Calls are regular video meetings open to everyone. They are great for putting faces to GitHub handles, building rapport, and having free-form conversations. They are also opportunities to share updates, gather feedback, and brainstorm together. We advertise them ahead of time (with an agenda) and share meeting notes publicly afterwards. It can be hard to know when your project is ready for Community Calls. If unsure, err on the earlier side. When we rolled them out for *movement*, we thought no one would show up—we were pleasantly surprised. **"Nobody cares about my project" is a self-fulfilling prophecy.** Give people a chance to prove you wrong.
+Community Calls are regular video meetings open to everyone. They are great for putting faces to GitHub handles, building rapport, and having free-form conversations. They are also opportunities to share updates, gather feedback, and brainstorm together. We advertise them ahead of time (with an agenda) and share meeting notes publicly afterwards. It can be hard to know when your project is ready for Community Calls. If unsure, err on the earlier side. When we introduced them for *movement*, we thought no one would show up—we were pleasantly surprised. **"Nobody cares about my project" is a self-fulfilling prophecy.** Give people a chance to prove you wrong.
 
 As your community grows, managing all these communication channels can become a burden. There are bad actors out there, and you will have to work to keep a high signal-to-noise ratio. **This means moderation**. You need a clear code of conduct—ideally from the very start—and you must enforce it consistently. You may also need governance structures and perhaps a dedicated community manager.
 
@@ -88,7 +83,7 @@ As your community grows, managing all these communication channels can become a 
 
 ## Takeaway
 
-Write everything down. Make it public by default. Let the magic happen. The magic is people—strangers who become collaborators, collaborators who become friends. Radical openness is not a risk—it's how you find your people.
+**Write everything down. Make it public by default. Let the magic happen.** The magic is people—strangers who become collaborators, collaborators who become friends. Radical openness is not a risk—it's how you find your people.
 
 _This concludes the "Trusted by design" series. See the [introductory blogpost](target-trusted-by-design-intro) for an overview and links to parts 1 and 2._
 
