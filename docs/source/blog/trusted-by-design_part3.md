@@ -8,13 +8,13 @@
 (target-trusted-by-design-part3)=
 # Trusted by design (part 3): embrace radically open communication
 
-_Open-source software is public, yet much of the communication around it happens in private emails, internal Slack channels, and meetings with no minutes. This disconnect can erode the very trust that openness is meant to build. What if communication were radically open—a habit of constant, multi-way interactions visible to anyone who cares to look?_
+_Open-source software is public, yet much of the communication around it may happen in private emails, internal Slack channels and meetings with no minutes. This disconnect can erode the very trust that openness is meant to build. What if communication were radically open—a habit of constant, multi-way interactions visible to anyone who cares to look?_
 
 ::: {note}
 This is the last of three blogposts on the theme of _Trusted by design: set up your research software for community adoption_. See the [introductory blogpost](target-trusted-by-design-intro) for context.
 :::
 
-The trust-building practices we covered in the two previous blogposts—articulating your project's mission and making incremental releases—can be thought of as announcing your project to the world. But communication can be—and should be—more than occasional announcements. Here we'll look at communication at its most granular: the day-to-day conversations that take place in issues, pull requests, discussion forums, and social media.
+The trust-building practices we covered in the two previous blogposts—articulating your project's mission and making incremental releases—can be thought of as announcing your project to the world. But communication can be—and should be—more than occasional announcements. Here we'll look at communication at its most granular: the day-to-day conversations that take place in issues, pull requests and discussion forums.
 
 Our team's approach to communication could be summarised as:
 **write everything down, make it public by default, and let the magic happen.**
