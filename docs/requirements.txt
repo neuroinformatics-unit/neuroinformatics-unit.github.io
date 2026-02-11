@@ -1,11 +1,11 @@
-sphinx<9
+sphinx
 pydata-sphinx-theme
 myst-parser
 sphinx-design
 numpydoc
 nbsphinx
 linkify-it-py
-ablog
+ablog>=0.11.13
 sphinx-sitemap
 sphinx-icon
 sphinx-reredirects
