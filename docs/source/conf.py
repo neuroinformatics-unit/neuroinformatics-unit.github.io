@@ -184,8 +184,6 @@ html_theme_options = {
     "analytics": {
         "google_analytics_id": "G-6260TGM7TY",
     },
-    "announcement": "Learn more about our tools at the <a href='https://neuroinformatics.dev/open-software-summer-school/index.html'>Neuroinformatics Unit Open Software Summer School</a> in London, August 2026!",
-
 }
 
 html_sidebars = {
