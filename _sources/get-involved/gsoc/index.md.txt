@@ -8,7 +8,7 @@ The Neuroinformatics Unit (NIU) takes part in GSoC to offer paid experience work
 
 ::: {admonition} GSoC 2026
 :class: note
-Our [2026 project list](2026/index) is now live, but our participation in GSoC 2026 is not yet confirmed. Further details will be posted here in due course.
+Our [2026 project list](2026/index) is now live.
 :::
 
 ## How does GSoC work?
