@@ -46,6 +46,7 @@ For clarity, please always use your full name when getting a [Zulip](https://neu
 
 guidelines
 2026/index
+2026/application_template
 ```
 
 ## Previous years
