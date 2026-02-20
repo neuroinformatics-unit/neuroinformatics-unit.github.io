@@ -1,8 +1,10 @@
 # Application template
 
-::: {admonition} Markdown
-:class: note
-If you would like this template in Markdown format, click "Show Source" on the right hand side.
+::: {admonition} AI policy
+:class: warning
+Before submitting an application, please see our [AI policy](../../ai_policy). AI tools are great to help with spelling 
+and grammar, but in these applications we want to hear what you think. We will not accept any applications in which any 
+substantial chunk (i.e. whole sentences) are created with AI.
 :::
 
 
@@ -11,6 +13,9 @@ Please use the following template to submit your application to the NIU GSoC 202
 The more closely you follow this template, the easier it will be for us to review your application! Please include clear headings for all the different sections.
 
 **If all sections are not fully completed, the application will not be considered!**
+
+N.B. If you would like this template in Markdown format, click "Show Source" on the right hand side.
+
 
 ## Project title
 Follow the following format for the proposal title: `<Package Name>-<Project Name> (<Your-Name>)` when applying.
