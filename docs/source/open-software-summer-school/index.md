@@ -124,6 +124,10 @@ A limited number of travel stipends will also be available, but we encourage app
 
 > Atmosphere was very friendly and down to earth.
 
+## Funding
+
+The Open Software Summer School is supported by the [Sainsbury Wellcome Centre](https://www.sainsburywellcome.org/), [AIBIO-UK](https://aibio.ac.uk/) and [The Neuro – Irv and Helga Cooper Foundation Open Science Prize](https://www.mcgill.ca/neuro/open-science/open-science-awards-and-prizes/neuro-irv-and-helga-cooper-foundation-open-science-prizes).
+
 
 ```{toctree}
 :maxdepth: 1
