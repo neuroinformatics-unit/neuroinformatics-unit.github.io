@@ -84,7 +84,7 @@ _Length: max 0.25 page_
 
   What do you expect from the program?
 
-- **Are you also applying to projects with other organisations in GSoC 2025?**
+- **Are you also applying to projects with other organisations in GSoC 2026?**
 
   If so, which ones? What would be your preference in case of a tie?
 
