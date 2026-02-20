@@ -65,7 +65,7 @@ _Length: max 0.75 page_
 
 - **Past experience.**
 
-  Please describe your past experience with programming, open source, or any other experience you deem relevant for the project you are applying for. Any successful open source projects, published work or content of the like should definitely be highlighted.
+  Please describe your past experience with programming, open source, research or any other experience you deem relevant for the project you are applying for. Any successful open source projects, published work or content of the like should definitely be highlighted.
 - **Motivation: why this project?**
 
   Why are you interested in this specific project? What aspects of it motivate you to work on it? How does it link to your personal or professional interests? How do you envision its impact in the open source community?
