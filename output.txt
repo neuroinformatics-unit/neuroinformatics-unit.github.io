@@ -10,9 +10,9 @@ blog/worms_osw25.md:124: [redirected permanently] https://github.com/pwetterauer
 get-involved/languages_frameworks.md:36: [redirected permanently] https://github.com/pypa/setuptools_scm to https://github.com/pypa/setuptools-scm
 blog/trusted-by-design_part3.md:90: [redirected permanently] https://gitlab.com to https://about.gitlab.com/
 open-software-summer-school/2025/index.md:9: [redirected with Found] https://maps.app.goo.gl/CzWFFjXJZwX87aMj6 to https://www.google.com/maps/place/Sainsbury+Wellcome+Centre/@51.521174,-0.138121,15z/data=!4m6!3m5!1s0x48761b290cd61e55:0xff71d53b61728860!8m2!3d51.5211738!4d-0.1381206!16s%2Fg%2F11c60mbymm?entry=tts&g_ep=EgoyMDI1MDIxOC4wIPu8ASoASAFQAw%3D%3D
+get-involved/gsoc/2025/projects/brainglobe.md:225: [redirected with Found] https://openminds-documentation.readthedocs.io/en/v3.0/schema_specifications/SANDS/atlas/brainAtlas.html to https://openminds.docs.om-i.org/en/v3.0/schema_specifications/SANDS/atlas/brainAtlas.html
 get-involved/gsoc/2025/projects/brainglobe.md:224: [redirected with Found] https://openminds-documentation.readthedocs.io/en/v3.0/shared/getting_started.html to https://openminds.docs.om-i.org/en/v3.0/shared/getting_started.html
 get-involved/gsoc/2025/projects/brainglobe.md:191: [redirected with Found] https://openminds-documentation.readthedocs.io/en/latest/schema_specifications/SANDS/atlas/brainAtlas.html to https://openminds.docs.om-i.org/en/latest/schema_specifications/SANDS/atlas/brainAtlas.html
-get-involved/gsoc/2025/projects/brainglobe.md:225: [redirected with Found] https://openminds-documentation.readthedocs.io/en/v3.0/schema_specifications/SANDS/atlas/brainAtlas.html to https://openminds.docs.om-i.org/en/v3.0/schema_specifications/SANDS/atlas/brainAtlas.html
 get-involved/gsoc/2025/projects/movement.md:46: [redirected permanently] https://www.kalmanfilter.net/default.aspx to https://kalmanfilter.net/
 blog/neuroblueprint.md:95: [redirected permanently] https://www.nwb.org/ to https://nwb.org/
 about.md:7: [redirected permanently] https://www.ucl.ac.uk/gatsby/gatsby-computational-neuroscience-unit to https://www.ucl.ac.uk/life-sciences/gatsby
