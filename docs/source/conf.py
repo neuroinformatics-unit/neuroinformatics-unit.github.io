@@ -184,6 +184,7 @@ html_theme_options = {
     "analytics": {
         "google_analytics_id": "G-6260TGM7TY",
     },
+     "announcement": "Would you like a paid internship with the NIU this summer? We're taking part in <a href='https://neuroinformatics.dev/get-involved/gsoc/index.html'>Google Summer of Code</a>!",
 }
 
 html_sidebars = {

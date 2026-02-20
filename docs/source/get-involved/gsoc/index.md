@@ -1,6 +1,6 @@
 # Google Summer of Code
 
-[Google Summer of Code](https://summerofcode.withgoogle.com/) (GSoC) is a global fully online program whose aim is to bring new developers into open source software. It is a great opportunity to gain experience in real-world software development while helping the open source community. Additionally, GSoC contributors receive a stipend from Google. 
+[Google Summer of Code](https://summerofcode.withgoogle.com/) (GSoC) is a global fully online program whose aim is to bring new developers into open source software. It is a great opportunity to gain experience in real-world software development while helping the open source community. Additionally, GSoC contributors receive a [stipend from Google](https://developers.google.com/open-source/gsoc/help/student-stipends). 
 
 Initially focused on university students, since 2022 the program has expanded to welcome students and all beginner contributors to open source who are 18 years and older to participate.
 
@@ -8,7 +8,10 @@ The Neuroinformatics Unit (NIU) takes part in GSoC to offer paid experience work
 
 ::: {admonition} GSoC 2026
 :class: note
-Our [2026 project list](2026/index) is now live.
+We are taking part in GSoC again in 2026. Our [2026 project ideas list](2026/index) is now live, but we also want to hear 
+project ideas from you! In 2026 we are particularly interested in:
+- Making our software more maintainable and reducing technical debt.
+- Making our tools more accessible to scientists. We are keen to help scientists who don't normally contribute to open-source get involved.
 :::
 
 ## How does GSoC work?
