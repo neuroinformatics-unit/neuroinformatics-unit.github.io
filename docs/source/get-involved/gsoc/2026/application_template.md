@@ -20,7 +20,7 @@ N.B. If you would like this template in Markdown format, click "Show Source" on 
 ## Project title
 Follow the following format for the proposal title: `<Package Name>-<Project Name> (<Your-Name>)` when applying.
 
-E.g. "movement: support for Kalman filters (Jane Doe)".
+E.g. "brainglobe-atlasapi: improve atlas contribution process (Paddington Bear)".
 
 ## Personal details
 Please include the following information:
