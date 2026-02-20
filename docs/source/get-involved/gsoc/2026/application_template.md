@@ -41,6 +41,8 @@ _Length: max 1 page_
 
   Briefly explain: what is the project about? Why is it important? What are the goals? What are the deliverables? How would the open source community benefit from this project?
 
+- **Project size (small, medium or large)**
+
 - **Implementation timeline**
 
   Please include the following information:
