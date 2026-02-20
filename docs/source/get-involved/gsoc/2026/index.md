@@ -12,6 +12,15 @@ For more details please see our [main GSoC page](../index). Please also see our 
 Our GSoC ideas are based within specific, larger open source packages we develop. Some of these have specific project ideas associated with them. 
 Others do not yet have specific project ideas, but all on this list welcome ideas developed by GSoC participants. Please reach out to us via our [GSoc Zulip channel](https://neuroinformatics.zulipchat.com/#narrow/channel/487898-Google-Summer-of-Code) to discuss.
 
+::: {admonition} Other projects
+:class: note
+The list below are just project "ideas", we are very keen to hear about other potential projects from applicants. 
+In 2026 we are particularly interested in:
+- Making our software more maintainable and reducing technical debt.
+- Making our tools more accessible to scientists. We are keen to help practicing scientists make their first contributions to open source.
+
+If you have any ideas within these themes, please reach out via our [GSoc Zulip channel](https://neuroinformatics.zulipchat.com/#narrow/channel/487898-Google-Summer-of-Code).
+:::
 
 ## BrainGlobe 
 [BrainGlobe](https://brainglobe.info/) is a community-driven suite of open-source Python tools. The BrainGlobe tools are widely used to process, analyse and visualise images of brains (and other related data) in neuroscientific research.

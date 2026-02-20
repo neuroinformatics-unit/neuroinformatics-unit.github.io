@@ -12,7 +12,6 @@ We are taking part in GSoC again in 2026. Our [2026 project ideas list](2026/ind
 project ideas from you! In 2026 we are particularly interested in:
 - Making our software more maintainable and reducing technical debt.
 - Making our tools more accessible to scientists. We are keen to help scientists who don't normally contribute to open-source get involved.
-
 :::
 
 ## How does GSoC work?

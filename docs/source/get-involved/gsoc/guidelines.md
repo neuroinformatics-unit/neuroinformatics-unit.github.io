@@ -9,6 +9,8 @@ These tips are largely based on the [OpenAstronomy guidelines](https://openastro
     
     Introduce yourself, and feel free to can ask questions about specific projects, the development process, recommended readings or the community. If you are not familiar with Zulip, have a look at this [quick guide](https://zulip.com/help/getting-started-with-zulip) first.
 
+    Although we love to hear from you, please don't ask questions for the sake of "getting noticed". We're happy to help out, but we unfortunately cannot guide every potential applicant through the process.
+
 2. **Become a user**
 
     A great way to get started in the community of our open-source tools is to experience them as a user. Try to install and use our tools, experiment with the code, and report any issues you find. This will help you understand the tools better and will give you a better idea of what you can contribute.
