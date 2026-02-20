@@ -63,7 +63,7 @@ These tips are largely based on the [OpenAstronomy guidelines](https://openastro
 
 ## Application template
 
-In our [GSoC repository](https://github.com/neuroinformatics-unit/gsoc) you will find our application template - please use it to structure your proposal.
+Please use our [application template](2026/application_template) to structure your proposal. Applications not following this template will not be considered.
 
 
 ## References
