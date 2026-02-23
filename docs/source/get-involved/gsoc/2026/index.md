@@ -38,7 +38,7 @@ BrainGlobe's tools are housed in many different GitHub repositories and are bund
 - standardising terminology across repositories and functions
 - standardising the use of positional and keyword arguments across repositories and functions
 - automating the creation of API reference documentation on the BrainGlobe website
-- replacing `tox` with `uv` in all of BrainGlobe's Continous Integration workflows
+- replacing `tox` with `uv` in all of BrainGlobe's Continuous Integration workflows
 - improving the process of publishing BrainGlobe releases on `conda-forge`
     - add setuptools to conda recipes
             move to https://conda-forge.org/blog/2025/02/27/conda-forge-v1-recipe-support/
