@@ -1,7 +1,7 @@
 # GSoC NIU Contributor Application Guidelines
 
 ## General tips
-These tips are largely based on the [OpenAstronomy guidelines](https://openastronomy.org/gsoc/student_guidelines.html), with adaptations for the NIU.
+These tips are largely based on the [OpenAstronomy guidelines](https://openastronomy.org/gsoc/contributor_guidelines.html), with adaptations for the NIU.
 
 1. **Get in touch with the community**
 
