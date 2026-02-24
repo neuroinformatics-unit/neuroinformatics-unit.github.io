@@ -27,7 +27,7 @@ As part of your application to GSoC, you will need to submit a project proposal.
 You may also want to checkout other useful application guides, such as:
 - The [GSoC Contributor Guide: writing a proposal](https://google.github.io/gsocguides/student/writing-a-proposal), 
 - The [Python Software Foundation guide](https://python-gsoc.org/), 
-- The [OpenAstronomy](https://openastronomy.org/gsoc/student_guidelines.html) one, or 
+- The [OpenAstronomy](https://openastronomy.org/gsoc/contributor_guidelines.html) one, or 
 - The [INCF](https://www.incf.org/recommendations-gsoc-contributors) one,
 
 all of which we are closely following. Applicants are given about 2 weeks to complete their applications. For further details see the [GSoC Contributor Guide](https://google.github.io/gsocguides/student/writing-a-proposal).
