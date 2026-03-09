@@ -1,5 +1,19 @@
 # Get involved
 
+::: {admonition} We're hiring!
+:class: note
+
+Are you a neuroscientist with great coding skills, or a software engineer interested in the brain?
+
+We are recruiting for a research software engineer to help us build pipelines to process weeks of neural and behavioural recordings from freely moving animals.
+
+The post will be based in the Neuroinformatics Unit, working with the Mrsic-Flogel, Branco and Behrens labs at the [Sainsbury Wellcome Centre](https://www.sainsburywellcome.org/).
+
+Start ASAP, funded until Sept 2028 in the first instance. Salary £54-62k.
+
+More details: https://bit.ly/rse-2026a
+:::
+
 ## Contributing to Neuroinformatics Unit projects
 We always welcome contributions to all of our software, whether from experienced developers, or researchers looking 
 to make their first open-source contribution. 
