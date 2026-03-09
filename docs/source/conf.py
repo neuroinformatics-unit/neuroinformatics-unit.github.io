@@ -88,6 +88,7 @@ linkcheck_ignore = [
     "https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.14460",
     "https://onlinelibrary.wiley.com/doi/full/10.1111/eth.12739",  # trajR
     "https://github.com/SuperElastix/elastix/releases/download/5.2.0/elastix-5.2.0-manual.pdf",
+    "https://geekfeminism.fandom.com/wiki/Conference_anti-harassment/Responding_to_reports",
 ]
 linkcheck_request_headers = {
     "https://github.com": {
@@ -184,7 +185,7 @@ html_theme_options = {
     "analytics": {
         "google_analytics_id": "G-6260TGM7TY",
     },
-     "announcement": "Would you like a paid internship with the NIU this summer? We're taking part in <a href='https://neuroinformatics.dev/get-involved/gsoc/index.html'>Google Summer of Code</a>!",
+     "announcement": "We're hiring research software engineers. See <a href='https://neuroinformatics.dev/get-involved/index.html'>Get Involved</a> for more details!",
 }
 
 html_sidebars = {
