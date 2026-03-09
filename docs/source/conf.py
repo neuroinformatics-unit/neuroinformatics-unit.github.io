@@ -88,6 +88,7 @@ linkcheck_ignore = [
     "https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.14460",
     "https://onlinelibrary.wiley.com/doi/full/10.1111/eth.12739",  # trajR
     "https://github.com/SuperElastix/elastix/releases/download/5.2.0/elastix-5.2.0-manual.pdf",
+    "https://geekfeminism.fandom.com/wiki/Conference_anti-harassment/Responding_to_reports",
 ]
 linkcheck_request_headers = {
     "https://github.com": {
