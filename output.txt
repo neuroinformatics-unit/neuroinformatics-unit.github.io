@@ -1,7 +1,6 @@
 blog/datashuttle_gsoc2025.md:103: [redirected permanently] http://github.com/search?q=is%3Apr+reviewed-by%3Acs7-shrey+repo%3Aneuroinformatics-unit%2Fdatashuttle+created%3A2025-04-01..2025-09-01&amp;type=pullrequests&amp;p=1 to https://github.com/search?q=is%3Apr+reviewed-by%3Acs7-shrey+repo%3Aneuroinformatics-unit%2Fdatashuttle+created%3A2025-04-01..2025-09-01&amp;type=pullrequests&amp;p=1
-blog/datashuttle_gsoc2025.md:147: [redirected permanently] https://cloud.google.com/iam/docs/service-account-overview to https://docs.cloud.google.com/iam/docs/service-account-overview
 get-involved/languages_frameworks.md:25: [redirected permanently] https://beta.ruff.rs/docs/ to https://docs.astral.sh/ruff/
-get-involved/index.md:14: [redirected permanently] https://bit.ly/rse-2026a to https://www.ucl.ac.uk/work-at-ucl/search-ucl-jobs/details?jobId=42380&jobTitle=Senior+Research+Software+Engineer
+blog/datashuttle_gsoc2025.md:147: [redirected permanently] https://cloud.google.com/iam/docs/service-account-overview to https://docs.cloud.google.com/iam/docs/service-account-overview
 blog/perspective_osw2025.md:28: [redirected permanently] https://dask.org/ to https://www.dask.org/
 open-software-summer-school/2026/animals-in-motion.md:38: [redirected permanently] https://deeplabcut.org/ to http://www.mackenziemathislab.org/deeplabcut
 get-involved/languages_frameworks.md:19: [redirected with Found] https://docs.pytest.org to https://docs.pytest.org/en/stable/
@@ -17,5 +16,5 @@ get-involved/gsoc/2025/projects/movement.md:46: [redirected permanently] https:/
 blog/neuroblueprint.md:95: [redirected permanently] https://www.nwb.org/ to https://nwb.org/
 about.md:7: [redirected permanently] https://www.ucl.ac.uk/gatsby/gatsby-computational-neuroscience-unit to https://www.ucl.ac.uk/life-sciences/gatsby
 publications.md:73: [redirected with See Other] https://youtu.be/GXBQsqqZZTg?si=0bt5Q_lGY8GXw6dx to https://www.youtube.com/watch?si=0bt5Q_lGY8GXw6dx&v=GXBQsqqZZTg&feature=youtu.be
-publications.md:68: [redirected with See Other] https://youtu.be/yER8ynNdJcE?si=9_9eTJv--0GZMntn to https://www.youtube.com/watch?si=9_9eTJv--0GZMntn&v=yER8ynNdJcE&feature=youtu.be
 publications.md:78: [redirected with See Other] https://youtu.be/ck-2vNR7qwo?si=awOA9sEw7xRl9-Nf to https://www.youtube.com/watch?si=awOA9sEw7xRl9-Nf&v=ck-2vNR7qwo&feature=youtu.be
+publications.md:68: [redirected with See Other] https://youtu.be/yER8ynNdJcE?si=9_9eTJv--0GZMntn to https://www.youtube.com/watch?si=9_9eTJv--0GZMntn&v=yER8ynNdJcE&feature=youtu.be
