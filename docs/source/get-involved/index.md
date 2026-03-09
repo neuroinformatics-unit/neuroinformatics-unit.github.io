@@ -9,9 +9,9 @@ We are recruiting for a research software engineer to help us build pipelines to
 
 The post will be based in the Neuroinformatics Unit, working with the Mrsic-Flogel, Branco and Behrens labs at the [Sainsbury Wellcome Centre](https://www.sainsburywellcome.org/).
 
-Start ASAP, funded until Sept 2028 in the first instance. Salary £54-62k.
+Start ASAP, funded until Sept 2028 in the first instance. Salary £54-64k.
 
-More details: https://bit.ly/rse-2026a
+More details [here](https://www.ucl.ac.uk/work-at-ucl/search-ucl-jobs/details?jobId=42380&jobTitle=Senior+Research+Software+Engineer).
 :::
 
 ## Contributing to Neuroinformatics Unit projects
