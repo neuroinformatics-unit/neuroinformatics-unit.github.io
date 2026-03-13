@@ -15,7 +15,7 @@ The post will be based in the Neuroinformatics Unit, working with the Mrsic-Flog
 
 ## [Senior Research Software Engineer (Multiphoton Microscopy)](https://www.ucl.ac.uk/work-at-ucl/search-ucl-jobs/details?jobId=42596&jobTitle=Senior+Research+Software+Engineer+%28Multiphoton+Microscopy%29)
 
-We're looking for a research software engineer to build pipelines to process, align and analyse data from benchtop and minaturised two-photon microscopes.
+We're looking for a research software engineer to build pipelines to process, align and analyse data from benchtop and miniaturised two-photon microscopes.
 
 This is a joint post, between the Neuroinformatics Unit and the [Advanced Microscopy Facility](https://swcmicroscopy.com/), working with the Mrsic-Flogel, Hofer and Behrens labs. More details [here](https://www.ucl.ac.uk/work-at-ucl/search-ucl-jobs/details?jobId=42596&jobTitle=Senior+Research+Software+Engineer+%28Multiphoton+Microscopy%29).
 
