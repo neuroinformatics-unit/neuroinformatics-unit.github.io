@@ -3,7 +3,7 @@
 ::: {admonition} We're hiring!
 :class: note
 
-Are you a neuroscientist with great coding skills, or a software engineer or image analyst interested in the brain? We're hiring three research software engineers at the [Sainsbury Wellcome Centre](https://www.sainsburywellcome.org/) to help develop tools to advance neuroscience.
+Are you a neuroscientist with great coding skills, or a software engineer/image analyst interested in the brain? We're hiring three research software engineers at the [Sainsbury Wellcome Centre](https://www.sainsburywellcome.org/) to help develop tools to advance neuroscience.
 
 **All positions start ASAP, funded until Sept 2028 in the first instance. Salary £54-64k.**
 
