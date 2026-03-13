@@ -3,15 +3,28 @@
 ::: {admonition} We're hiring!
 :class: note
 
-Are you a neuroscientist with great coding skills, or a software engineer interested in the brain?
+Are you a neuroscientist with great coding skills, or a software engineer or image analyst interested in the brain? We're hiring three research software engineers at the [Sainsbury Wellcome Centre](https://www.sainsburywellcome.org/) to help develop tools to advance neuroscience.
 
-We are recruiting for a research software engineer to help us build pipelines to process weeks of neural and behavioural recordings from freely moving animals.
+**All positions start ASAP, funded until Sept 2028 in the first instance. Salary £54-64k.**
 
-The post will be based in the Neuroinformatics Unit, working with the Mrsic-Flogel, Branco and Behrens labs at the [Sainsbury Wellcome Centre](https://www.sainsburywellcome.org/).
+## [Senior Research Software Engineer (Neural and Behavioural Data)](https://www.ucl.ac.uk/work-at-ucl/search-ucl-jobs/details?jobId=42380&jobTitle=Senior+Research+Software+Engineer)
 
-Start ASAP, funded until Sept 2028 in the first instance. Salary £54-64k.
+We're looking for a research software engineer to build pipelines to process weeks of neural and behavioural recordings from freely moving animals.
 
-More details [here](https://www.ucl.ac.uk/work-at-ucl/search-ucl-jobs/details?jobId=42380&jobTitle=Senior+Research+Software+Engineer).
+The post will be based in the Neuroinformatics Unit, working with the Mrsic-Flogel, Branco and Behrens labs. More details [here](https://www.ucl.ac.uk/work-at-ucl/search-ucl-jobs/details?jobId=42380&jobTitle=Senior+Research+Software+Engineer).
+
+## [Senior Research Software Engineer (Multiphoton Microscopy)](https://www.ucl.ac.uk/work-at-ucl/search-ucl-jobs/details?jobId=42596&jobTitle=Senior+Research+Software+Engineer+%28Multiphoton+Microscopy%29)
+
+We're looking for a research software engineer to build pipelines to process, align and analyse data from benchtop and minaturised two-photon microscopes.
+
+This is a joint post, between the Neuroinformatics Unit and the [Advanced Microscopy Facility](https://swcmicroscopy.com/), working with the Mrsic-Flogel, Hofer and Behrens labs. More details [here](https://www.ucl.ac.uk/work-at-ucl/search-ucl-jobs/details?jobId=42596&jobTitle=Senior+Research+Software+Engineer+%28Multiphoton+Microscopy%29).
+
+## [Senior Research Software Engineer (Omics)](https://www.ucl.ac.uk/work-at-ucl/search-ucl-jobs/details?jobId=42595&jobTitle=Senior+Research+Software+Engineer+%28Omics%29)
+
+We're looking for a research software engineer to build robust and easy to use software tools for merging in-vivo imaging functional data with ex-vivo transcriptomics data.
+
+This is a joint post, between the Neuroinformatics Unit and the [Advanced Microscopy Facility](https://swcmicroscopy.com/), working with the Mrsic-Flogel, Hofer, Stephenson-Jones and Behrens labs. More details [here](https://www.ucl.ac.uk/work-at-ucl/search-ucl-jobs/details?jobId=42595&jobTitle=Senior+Research+Software+Engineer+%28Omics%29).
+
 :::
 
 ## Contributing to Neuroinformatics Unit projects
