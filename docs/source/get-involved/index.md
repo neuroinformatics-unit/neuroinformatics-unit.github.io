@@ -7,7 +7,7 @@ Are you a neuroscientist with great coding skills, or a software engineer/image 
 
 **All positions start ASAP, funded until Sept 2028 in the first instance. Salary £54-64k. Deadline April 12th.**
 
-## [Senior Research Software Engineer (Neural and Behavioural Data)](https://www.ucl.ac.uk/work-at-ucl/search-ucl-jobs/details?jobId=42380&jobTitle=Senior+Research+Software+Engineer)
+## [Senior Research Software Engineer (Neural and Behavioural Data)](https://www.ucl.ac.uk/work-at-ucl/search-ucl-jobs/details?jobId=42641&jobTitle=Senior+Research+Software+Engineer)
 
 We're looking for a research software engineer to build pipelines to process weeks of neural and behavioural recordings from freely moving animals.
 
