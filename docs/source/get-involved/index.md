@@ -11,7 +11,7 @@ Are you a neuroscientist with great coding skills, or a software engineer/image 
 
 We're looking for a research software engineer to build pipelines to process weeks of neural and behavioural recordings from freely moving animals.
 
-The post will be based in the Neuroinformatics Unit, working with the Mrsic-Flogel, Branco and Behrens labs. More details [here](https://www.ucl.ac.uk/work-at-ucl/search-ucl-jobs/details?jobId=42380&jobTitle=Senior+Research+Software+Engineer).
+The post will be based in the Neuroinformatics Unit, working with the Mrsic-Flogel, Branco and Behrens labs. More details [here](https://www.ucl.ac.uk/work-at-ucl/search-ucl-jobs/details?jobId=42641&jobTitle=Senior+Research+Software+Engineer).
 
 ## [Senior Research Software Engineer (Multiphoton Microscopy)](https://www.ucl.ac.uk/work-at-ucl/search-ucl-jobs/details?jobId=42596&jobTitle=Senior+Research+Software+Engineer+%28Multiphoton+Microscopy%29)
 
