@@ -5,7 +5,7 @@
 
 Are you a neuroscientist with great coding skills, or a software engineer/image analyst interested in the brain? We're hiring three research software engineers at the [Sainsbury Wellcome Centre](https://www.sainsburywellcome.org/) to help develop tools to advance neuroscience.
 
-**All positions start ASAP, funded until Sept 2028 in the first instance. Salary £54-64k.**
+**All positions start ASAP, funded until Sept 2028 in the first instance. Salary £54-64k. Deadline April 12th.**
 
 ## [Senior Research Software Engineer (Neural and Behavioural Data)](https://www.ucl.ac.uk/work-at-ucl/search-ucl-jobs/details?jobId=42380&jobTitle=Senior+Research+Software+Engineer)
 
