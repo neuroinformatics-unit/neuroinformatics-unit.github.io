@@ -15,6 +15,6 @@ get-involved/gsoc/2025/projects/brainglobe.md:225: [redirected with Found] https
 get-involved/gsoc/2025/projects/movement.md:46: [redirected permanently] https://www.kalmanfilter.net/default.aspx to https://kalmanfilter.net/
 blog/neuroblueprint.md:95: [redirected permanently] https://www.nwb.org/ to https://nwb.org/
 about.md:7: [redirected permanently] https://www.ucl.ac.uk/gatsby/gatsby-computational-neuroscience-unit to https://www.ucl.ac.uk/life-sciences/gatsby
-publications.md:73: [redirected with See Other] https://youtu.be/GXBQsqqZZTg?si=0bt5Q_lGY8GXw6dx to https://www.youtube.com/watch?si=0bt5Q_lGY8GXw6dx&v=GXBQsqqZZTg&feature=youtu.be
 publications.md:78: [redirected with See Other] https://youtu.be/ck-2vNR7qwo?si=awOA9sEw7xRl9-Nf to https://www.youtube.com/watch?si=awOA9sEw7xRl9-Nf&v=ck-2vNR7qwo&feature=youtu.be
+publications.md:73: [redirected with See Other] https://youtu.be/GXBQsqqZZTg?si=0bt5Q_lGY8GXw6dx to https://www.youtube.com/watch?si=0bt5Q_lGY8GXw6dx&v=GXBQsqqZZTg&feature=youtu.be
 publications.md:68: [redirected with See Other] https://youtu.be/yER8ynNdJcE?si=9_9eTJv--0GZMntn to https://www.youtube.com/watch?si=9_9eTJv--0GZMntn&v=yER8ynNdJcE&feature=youtu.be
