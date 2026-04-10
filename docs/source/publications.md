@@ -54,6 +54,11 @@ Claudi, F., Petrucco, L., **Tyson, A. L.**, Branco, T., Margrie, T. W., Portugue
 ::::{grid} 1 1 1 1
 :gutter: 3
 
+:::{grid-item-card} movement: a Python toolbox for analysing motion tracking data
+:link: https://www.youtube.com/watch?v=RUDhXB1ZZIg
+Niko Sirmpilatze, The Behaviour Forum virtual workshop, April 2026
+:::
+
 :::{grid-item-card} Trusted by design: set up your research software for community adoption
 :link: https://fosdem.org/2026/schedule/event/VPJH8F-trusted-by-design/
 Niko Sirmpilatze, FOSDEM, February 2026
