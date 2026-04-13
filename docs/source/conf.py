@@ -184,8 +184,7 @@ html_theme_options = {
     "footer_end": ["footer_end"],
     "analytics": {
         "google_analytics_id": "G-6260TGM7TY",
-    },
-     "announcement": "We're hiring research software engineers. See <a href='https://neuroinformatics.dev/get-involved/index.html'>Get Involved</a> for more details!",
+    }
 }
 
 html_sidebars = {
