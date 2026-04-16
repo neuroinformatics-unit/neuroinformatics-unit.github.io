@@ -77,6 +77,19 @@ Visiting Research Fellow
 Masters Student (with Dean lab)
 :::
 
+:::{grid-item-card} Amirreza Bahramani
+:img-top: _static/amirreza_bahramani.jpg
+:link: https://github.com/bahramani
+
+Neuroanatomy Data Scientist
+:::
+
+:::{grid-item-card} Jung Woo Kim
+:img-top: _static/jung_woo_kim.jpg
+:link: https://github.com/kjungwoo5
+
+Neuroanatomy Data Scientist
+:::
 ::::
 
 
