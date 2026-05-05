@@ -63,7 +63,7 @@ test different pipeline configurations.
 ::::{grid} 1 1 1 1
 :::{grid-item-card} {fas}`sun;sd-text-primary` photon-mosaic
 :link: https://github.com/photon-mosaic
-`photon-mosaic` is a collaborative project that aims to standardise multiphoton image analysis in neuroscience. Development is currently led by the [Neuroinformatics Unit](https://github.com/neuroinformatics-unit), the [Allen Institute for Neural Dynamics](https://github.com/AllenNeuralDynamics) and the [International Brain Lab](https://www.internationalbrainlab.com/).
+`photon-mosaic` is a collaborative project that aims to standardise multiphoton image analysis in neuroscience. Development is currently led by the [Neuroinformatics Unit](https://github.com/neuroinformatics-unit), the [Allen Institute for Neural Dynamics](https://github.com/AllenNeuralDynamics) and the [International Brain Laboratory](https://www.internationalbrainlab.com/).
 :::
 ::::
 
