@@ -7,6 +7,11 @@
 :gutter: 3
 
 :::{grid-item-card}
+:link: https://doi.org/10.5281/zenodo.19945701
+**Felder, A.**, Chapuis, G., **Tatarnikov, I., Sirmpilatze, N., Tyson, A.** (2026). Mapping the state of neuroscientific software - a vision for collaboration beyond single institutes or labs (1.0). *Zenodo*, doi.org/10.5281/zenodo.19945701
+:::
+
+:::{grid-item-card}
 :link: https://doi.org/10.48550/arXiv.2505.16882
 Duporge, I., **Minano, S., Sirmpilatze, N., Tatarnikov, I.**, Wolf, S., **Tyson, A. L.**, Rubenstein, D. (2025) "Tracking the Flight: Exploring a Computational Framework for Analyzing Escape Responses in Plains Zebra (Equus quagga)" *arXiv* 2505.16882, doi.org/10.48550/arXiv.2505.16882
 :::
