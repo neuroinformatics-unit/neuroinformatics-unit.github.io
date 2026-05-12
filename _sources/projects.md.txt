@@ -62,10 +62,8 @@ test different pipeline configurations.
 ## Optophysiology
 ::::{grid} 1 1 1 1
 :::{grid-item-card} {fas}`sun;sd-text-primary` photon-mosaic
-:link: https://photon-mosaic.neuroinformatics.dev/
-photon-mosaic simplifies the analysis of multi-photon calcium imaging data by integrating algorithms from tools like Suite2p and CaImAn into a modular pipeline. Researchers can evaluate, compare, and combine methods for each processing step, such as registration or source extraction, and explore metrics to identify the best fit for their datasets.
-
-With support for local or cluster-based parallelization, photon-mosaic provides visualization tools, reports, and guides to streamline decision-making and enhance reproducibility.
+:link: https://github.com/photon-mosaic
+`photon-mosaic` is a collaborative project that aims to standardise multiphoton image analysis in neuroscience. Development is currently led by the [Neuroinformatics Unit](https://github.com/neuroinformatics-unit), the [Allen Institute for Neural Dynamics](https://github.com/AllenNeuralDynamics) and the [International Brain Laboratory](https://www.internationalbrainlab.com/).
 :::
 ::::
 
