@@ -7,6 +7,11 @@
 :gutter: 3
 
 :::{grid-item-card}
+:link: https://doi.org/10.1016/j.cub.2026.03.034
+**Sirmpilatze, N., Felder, A.**, Abdulazhanova, D., Schwigon, L., **Tatarnikov, I.**, Haase, K., Musielak, I., Kobylkov, D., Margrie, T. W., Mouritsen, H., Heyers, D., **Tyson, A. L.**, Weiler, S. (2026) "An open-source three-dimensional digital brain atlas of a migratory bird, the Eurasian blackcap" *Current Biology* 2025.03.04.641293, doi.org/10.1016/j.cub.2026.03.034
+:::
+
+:::{grid-item-card}
 :link: https://doi.org/10.5281/zenodo.19945701
 **Felder, A.**, Chapuis, G., **Tatarnikov, I., Sirmpilatze, N., Tyson, A.** (2026). Mapping the state of neuroscientific software - a vision for collaboration beyond single institutes or labs (1.0). *Zenodo*, doi.org/10.5281/zenodo.19945701
 :::
@@ -14,11 +19,6 @@
 :::{grid-item-card}
 :link: https://doi.org/10.48550/arXiv.2505.16882
 Duporge, I., **Minano, S., Sirmpilatze, N., Tatarnikov, I.**, Wolf, S., **Tyson, A. L.**, Rubenstein, D. (2025) "Tracking the Flight: Exploring a Computational Framework for Analyzing Escape Responses in Plains Zebra (Equus quagga)" *arXiv* 2505.16882, doi.org/10.48550/arXiv.2505.16882
-:::
-
-:::{grid-item-card}
-:link: https://doi.org/10.1101/2025.03.04.641293
-**Sirmpilatze, N., Felder, A.**, Abdulazhanova, D., Schwigon, L., Haase, K., Musielak, I., Margrie, T. W., Mouritsen, H., Heyers, D., **Tyson, A. L.**, Weiler, S. (2025) "Mapping the magnetoreceptive brain: A 3D digital atlas of the migratory bird Eurasian blackcap (Sylvia atricapilla)" *bioRxiv* 2025.03.04.641293, doi.org/10.1101/2025.03.04.641293
 :::
 
 :::{grid-item-card}
@@ -97,6 +97,38 @@ Adam Tyson, UCL Neuropixels course, October 2023
 :::{grid-item-card} BrainGlobe: a Python ecosystem for computational (neuro)anatomy
 :link: https://www.youtube.com/watch?v=Ndsssf_gHns
 Adam Tyson, World Wide Series | Open Neuroscience, May 2021
+:::
+
+::::
+
+## Mentions in the media
+
+::::{grid} 1 1 1 1
+:gutter: 3
+
+:::{grid-item-card} Scientists map migratory bird brain
+:link: https://ucl.ac.uk/news/2026/apr/scientists-map-migratory-bird-brain
+UCL News, April 2026
+:::
+:::{grid-item-card} Scientists map the blackcap bird brain, opening a new era of 3D digital atlases
+:link: https://www.sainsburywellcome.org/research-news/scientists-map-blackcap-bird-brain-opening-new-era-3d-digital-atlases
+Sainsbury Wellcome Centre, April 2026
+:::
+:::{grid-item-card} The Neuro – Irv and Helga Cooper Foundation Open Science Prizes: Meet the winners of an exceptional edition
+:link: https://www.mcgill.ca/neuro/article/neuro-irv-and-helga-cooper-foundation-open-science-prizes-meet-winners-exceptional-edition
+The Neuro (Montreal Neurological Institute-Hospital), October 2025
+:::
+:::{grid-item-card} The BrainGlobe Initiative wins 2025 International Prize
+:link: https://www.sainsburywellcome.org/web/research-news/brainglobe-initiative-wins-2025-international-prize
+Sainsbury Wellcome Centre, October 2025
+:::
+:::{grid-item-card} Mapping the migratory bird brain
+:link: https://www.sainsburywellcome.org/web/blog/mapping-migratory-bird-brain
+Sainsbury Wellcome Centre, March 2025
+:::
+:::{grid-item-card} BrainGlobe Initiative celebrates open-source software award
+:link: https://www.sainsburywellcome.org/web/blog/brainglobe-initiative-celebrates-open-source-software-award
+Sainsbury Wellcome Centre, October 2024
 :::
 
 ::::
