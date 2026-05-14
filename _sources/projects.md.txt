@@ -42,6 +42,16 @@ ethology is a Python package which aims to facilitate the application of a wide 
 :::
 ::::
 
+::::{grid} 1 1 1 1
+:::{grid-item-card} {fas}`diagram-project;sd-text-primary` PoseInterface
+:link: https://poseinterface.neuroinformatics.dev
+PoseInterface exists to advance pose estimation and point tracking applications in animal behaviour videos. 
+The project aims to provide benchmark datasets, baseline models trained on those datasets, 
+as well as tools for running and comparing pose estimation and tracking methods. 
+Development is currently led by the Neuroinformatics Unit, the Allen Institute for Neural Dynamics and the International Brain Laboratory.
+:::
+::::
+
 (projects-electrophysiology)=
 ## Electrophysiology
 ::::{grid} 1 1 1 1
