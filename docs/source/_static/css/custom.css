@@ -72,3 +72,21 @@ html[data-theme=dark] .bd-main img {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+.blog-post-author {
+  border-left: 3px solid var(--pst-color-primary);
+  color: var(--pst-color-text-muted);
+  font-size: 1.12rem;
+  line-height: 1.5;
+  margin-top: -0.2rem;
+  margin-bottom: 2rem;
+  padding-left: 0.8rem;
+}
+
+.blog-post-author a {
+  font-weight: 600;
+}
+
+.blog-post-author .line:nth-child(2) {
+  font-size: 1rem;
+}
