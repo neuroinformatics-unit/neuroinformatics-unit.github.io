@@ -65,6 +65,15 @@ SpikeWrap is built upon SpikeInterface, abstracting away the implementation deta
 test different pipeline configurations.
 
 :::
+
+:::{grid-item-card} {fas}`bolt;sd-text-primary` driftplots
+:link: https://driftplots.neuroinformatics.dev
+
+driftplots is a Python package for plotting interactive and customisable drift maps from Kilosort output 
+or SpikeInterface's `SortingAnalyzer`. It is particularly useful for checking probe alignment
+across recording sessions, before unit matching or after data concatenation.
+
+:::
 ::::
 
 
