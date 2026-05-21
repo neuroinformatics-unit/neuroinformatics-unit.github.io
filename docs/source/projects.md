@@ -102,7 +102,7 @@ This standardisation makes data-sharing and collaboration much simpler, and allo
 can operate on predictable folder structures.
 :::
 
-:::{grid-item-card} {fas}`database;sd-text-primary` DataShuttle
+:::{grid-item-card} {fas}`usb;sd-text-primary` DataShuttle
 :link: https://datashuttle.neuroinformatics.dev
 DataShuttle is a tool for automated generation of project folders formatted to the NeuroBlueprint specification. 
 It also allows these folders to be easily synchronised between computers.
