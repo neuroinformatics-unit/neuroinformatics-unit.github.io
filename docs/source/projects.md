@@ -113,7 +113,7 @@ This standardisation makes data-sharing and collaboration much simpler, and allo
 can operate on predictable folder structures.
 :::
 
-:::{grid-item-card} {fas}`database;sd-text-primary` DataShuttle
+:::{grid-item-card} {fas}`right-left;sd-text-primary` DataShuttle
 :link: https://datashuttle.neuroinformatics.dev
 DataShuttle is a tool for automated generation of project folders formatted to the NeuroBlueprint specification. 
 It also allows these folders to be easily synchronised between computers.
@@ -132,7 +132,7 @@ Projects built using this template contain pre-set configurations for code quali
 automated testing (pytest, both locally and through GitHub Actions), versioning and release on PyPI.
 :::
 
-:::{grid-item-card} {fas}`code;sd-text-primary` Actions
+:::{grid-item-card} {fas}`robot;sd-text-primary` Actions
 :link: https://github.com/neuroinformatics-unit/actions
 The actions repository hosts reliable, maintained and versioned GitHub Actions
 workflows for common tasks such as linting, testing, and releasing Python projects to PyPI.
@@ -154,7 +154,7 @@ We build data analysis tools for long term physiology and behavioural recordings
 :link: https://github.com/SainsburyWellcomeCentre/NeuralPlayground
 We have helped productionise NeuralPlayground, a framework for comparing hippocampal and entorhinal cortex models.
 :::
-:::{grid-item-card} {fas}`bolt;sd-text-primary` SpikeInterface
+:::{grid-item-card} {fas}`bolt-lightning;sd-text-primary` SpikeInterface
 :link: https://spikeinterface.readthedocs.io/en/latest/
 As part of our work building pipelines for extracellular electrophysiology data, we contribute to SpikeInterface.
 :::
