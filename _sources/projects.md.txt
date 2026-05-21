@@ -67,6 +67,17 @@ test different pipeline configurations.
 :::
 ::::
 
+::::{grid} 1 1 1 1
+:::{grid-item-card} {fas}`wave-square;sd-text-primary` driftplots
+:link: https://driftplots.neuroinformatics.dev
+
+driftplots is a Python package for plotting interactive and customisable drift maps from Kilosort output 
+or SpikeInterface's `SortingAnalyzer`. It is particularly useful for checking probe alignment
+across recording sessions, before unit matching or after data concatenation.
+
+:::
+::::
+
 
 (projects-optophysiology)=
 ## Optophysiology
