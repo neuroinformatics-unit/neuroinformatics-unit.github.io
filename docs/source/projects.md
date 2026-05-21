@@ -121,7 +121,7 @@ Projects built using this template contain pre-set configurations for code quali
 automated testing (pytest, both locally and through GitHub Actions), versioning and release on PyPI.
 :::
 
-:::{grid-item-card} {fas}`code;sd-text-primary` Actions
+:::{grid-item-card} {fas}`github;sd-text-primary` Actions
 :link: https://github.com/neuroinformatics-unit/actions
 The actions repository hosts reliable, maintained and versioned GitHub Actions
 workflows for common tasks such as linting, testing, and releasing Python projects to PyPI.
