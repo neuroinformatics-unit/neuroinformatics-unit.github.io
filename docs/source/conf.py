@@ -187,13 +187,23 @@ html_theme_options = {
     }
 }
 
+# Show ABlog's "postcard" (date, author, category, etc.) in the sidebar of blog
+# post pages, see https://ablog.readthedocs.io/en/latest/manual/templates-themes.html
+# Note: this replaces the default site nav sidebar on blog pages only.
 html_sidebars = {
     "blog/index": [
-        # Ablog sidebars (https://ablog.readthedocs.io/en/stable/manual/ablog-configuration-options.html#sidebars)
-        "ablog/recentposts.html"
-    ],  # 'ablog/archives.html << we may want to use archives when we have more posts.
-    "**": [],
+        "ablog/authors.html",
+        "ablog/archives.html",
+    ],
+    "blog/**": [
+        "ablog/postcard.html",
+        "ablog/recentposts.html",
+    ],
 }
+
+# The PyData theme bundles FontAwesome, so let ABlog render its postcard icons
+# (calendar, user, ...) instead of plain-text "Author:"/"Location:" labels.
+fontawesome_included = True
 
 
 redirects = {
