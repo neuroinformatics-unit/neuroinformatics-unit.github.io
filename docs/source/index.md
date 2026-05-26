@@ -32,7 +32,7 @@ to advance research in the two research centres and make new algorithms and tool
 :::
 
 :::{grid-item-card} {fas}`sun;sd-text-primary` Optophysiology
-:img-top: _static/blank_card.png
+:img-top: _static/optophysiology_card.png
 :link: projects-optophysiology
 :link-type: ref
 :::
