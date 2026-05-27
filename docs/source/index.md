@@ -31,6 +31,12 @@ to advance research in the two research centres and make new algorithms and tool
 :link-type: ref
 :::
 
+:::{grid-item-card} {fas}`sun;sd-text-primary` Optophysiology
+:img-top: _static/optophysiology_card.png
+:link: projects-optophysiology
+:link-type: ref
+:::
+
 :::{grid-item-card} {fas}`database;sd-text-primary` Data Management
 :img-top: _static/data-management_card.png
 :link: projects-data-management
