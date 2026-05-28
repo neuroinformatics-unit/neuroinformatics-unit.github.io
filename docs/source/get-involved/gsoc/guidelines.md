@@ -63,7 +63,7 @@ These tips are largely based on the [OpenAstronomy guidelines](https://openastro
 
 ## Application template
 
-Please use our [application template](2026/application_template) to structure your proposal. Applications not following this template will not be considered.
+Please use our [application template](application_template.md) to structure your proposal. Applications not following this template will not be considered.
 
 
 ## References

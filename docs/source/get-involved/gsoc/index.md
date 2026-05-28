@@ -8,10 +8,7 @@ The Neuroinformatics Unit (NIU) takes part in GSoC to offer paid experience work
 
 ::: {admonition} GSoC 2026
 :class: note
-We are taking part in GSoC again in 2026. Our [2026 project ideas list](2026/index) is now live, but we also want to hear 
-project ideas from you! In 2026 we are particularly interested in:
-- Making our software more maintainable and reducing technical debt.
-- Making our tools more accessible to scientists. We are keen to help scientists who don't normally contribute to open-source get involved.
+Applications for GSoC 2026 are now closed. Details about our participation in future years of this program will be posted here and on our social media.
 :::
 
 ## How does GSoC work?
@@ -45,14 +42,13 @@ For clarity, please always use your full name when getting a [Zulip](https://neu
 :maxdepth: 1
 
 guidelines
-2026/index
-2026/application_template
+application_template
 ```
 
 ## Previous years
 
 ```{toctree}
 :maxdepth: 1
-
+2026/index
 2025/index
 ```
