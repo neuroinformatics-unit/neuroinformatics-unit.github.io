@@ -2,7 +2,7 @@
 
 ::: {admonition} AI policy
 :class: warning
-Before submitting an application, please see our [AI policy](../../ai_policy). AI tools are great to help with spelling 
+Before submitting an application, please see our [AI policy](../ai_policy). AI tools are great to help with spelling 
 and grammar, but in these applications we want to hear what you think. We will not accept any applications in which any 
 substantial chunk (i.e. whole sentences) are created with AI.
 :::
