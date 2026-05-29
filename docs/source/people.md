@@ -90,6 +90,27 @@ Neuroanatomy Data Scientist
 
 Neuroanatomy Data Scientist
 :::
+
+:::{grid-item-card} Anna Teruel
+:img-top: _static/anna_teruel.jpg
+:link: https://github.com/anna-teruel
+
+Google Summer of Code 2026
+:::
+
+:::{grid-item-card} Soumya Snigdha Kundu
+:img-top: _static/soumya_snigdha_kundu.webp
+:link: https://github.com/aymuos15
+
+Google Summer of Code 2026
+:::
+
+:::{grid-item-card} Varun Singh
+:img-top: _static/varun_singh.png
+:link: https://github.com/AlgoFoe
+
+Google Summer of Code 2026
+:::
 ::::
 
 
