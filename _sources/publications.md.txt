@@ -7,6 +7,11 @@
 :gutter: 3
 
 :::{grid-item-card}
+:link: https://doi.org/10.21105/joss.09642
+**Ziminski, J. J., Sirmpilatze, N.**, Peri, B. D., Singh, S., Keshavarzi, S., **Tyson, A. L.** (2026) "datashuttle: automated data management for experimental neuroscience" *Journal of Open Source Software* 11(122), 9642, doi.org/10.21105/joss.09642
+:::
+
+:::{grid-item-card}
 :link: https://doi.org/10.1016/j.cub.2026.03.034
 **Sirmpilatze, N., Felder, A.**, Abdulazhanova, D., Schwigon, L., **Tatarnikov, I.**, Haase, K., Musielak, I., Kobylkov, D., Margrie, T. W., Mouritsen, H., Heyers, D., **Tyson, A. L.**, Weiler, S. (2026) "An open-source three-dimensional digital brain atlas of a migratory bird, the Eurasian blackcap" *Current Biology* 2025.03.04.641293, doi.org/10.1016/j.cub.2026.03.034
 :::
@@ -44,12 +49,12 @@ Domine, C. C. J., Carrasco-Davis, R., Hollingsworth L., **Sirmpilatze, N., Tyson
 
 :::{grid-item-card}
 :link: https://doi.org/10.7554/eLife.65751
-Claudi, F., **Tyson, A. L.**, Petrucco, L., Margrie, T.W., Portugues, R., Branco, T. (2021) "Visualizing anatomically registered data with Brainrender" *eLife* 2021;10:e65751 doi.org/10.7554/eLife.65751
+Claudi, F., **Tyson, A. L.**, Petrucco, L., Margrie, T.W., Portugues, R., Branco, T. (2021) "Visualizing anatomically registered data with Brainrender" *eLife* 2021;10:e65751, doi.org/10.7554/eLife.65751
 :::
 
 :::{grid-item-card}
 :link: https://doi.org/10.21105/joss.02668
-Claudi, F., Petrucco, L., **Tyson, A. L.**, Branco, T., Margrie, T. W., Portugues, R. (2020) "BrainGlobe Atlas API: a common interface for neuroanatomical atlases" *Journal of Open Source Software* 5(54), 2668 doi.org/10.21105/joss.02668
+Claudi, F., Petrucco, L., **Tyson, A. L.**, Branco, T., Margrie, T. W., Portugues, R. (2020) "BrainGlobe Atlas API: a common interface for neuroanatomical atlases" *Journal of Open Source Software* 5(54), 2668, doi.org/10.21105/joss.02668
 :::
 
 ::::
