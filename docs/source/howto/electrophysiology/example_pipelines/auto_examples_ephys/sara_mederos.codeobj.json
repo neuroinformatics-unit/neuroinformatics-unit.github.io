@@ -1,0 +1,119 @@
+{
+ "Path": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pathlib",
+   "module_short": "pathlib",
+   "name": "Path"
+  }
+ ],
+ "bandpass_filter": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "spikeinterface.preprocessing",
+   "module_short": "spikeinterface.preprocessing",
+   "name": "bandpass_filter"
+  }
+ ],
+ "common_reference": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "spikeinterface.preprocessing",
+   "module_short": "spikeinterface.preprocessing",
+   "name": "common_reference"
+  }
+ ],
+ "compute_quality_metrics": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "spikeinterface.qualitymetrics",
+   "module_short": "spikeinterface.qualitymetrics",
+   "name": "compute_quality_metrics"
+  }
+ ],
+ "curation.remove_excess_spikes": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "spikeinterface.curation",
+   "module_short": "spikeinterface.curation",
+   "name": "remove_excess_spikes"
+  }
+ ],
+ "extract_waveforms": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "spikeinterface",
+   "module_short": "spikeinterface",
+   "name": "extract_waveforms"
+  }
+ ],
+ "np.unique": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "unique"
+  }
+ ],
+ "phase_shift": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "spikeinterface.preprocessing",
+   "module_short": "spikeinterface.preprocessing",
+   "name": "phase_shift"
+  }
+ ],
+ "plot_probe": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "probeinterface.plotting",
+   "module_short": "probeinterface.plotting",
+   "name": "plot_probe"
+  }
+ ],
+ "plot_timeseries": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "spikeinterface.widgets",
+   "module_short": "spikeinterface.widgets",
+   "name": "plot_timeseries"
+  }
+ ],
+ "plt.show": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.pyplot",
+   "module_short": "matplotlib.pyplot",
+   "name": "show"
+  }
+ ],
+ "read_openephys": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "spikeinterface.extractors",
+   "module_short": "spikeinterface.extractors",
+   "name": "read_openephys"
+  }
+ ],
+ "run_sorter": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "spikeinterface.sorters",
+   "module_short": "spikeinterface.sorters",
+   "name": "run_sorter"
+  }
+ ]
+}
