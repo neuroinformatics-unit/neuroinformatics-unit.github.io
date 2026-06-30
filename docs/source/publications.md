@@ -111,6 +111,11 @@ Adam Tyson, World Wide Series | Open Neuroscience, May 2021
 ::::{grid} 1 1 1 1
 :gutter: 3
 
+:::{grid-item-card} Dr Adam Tyson receives RMS Award for Life Sciences
+:link: https://www.rms.org.uk/resource/dr-adam-tyson-receives-rms-award-for-life-sciences.html
+Royal Microscopical society, May 2026
+:::
+
 :::{grid-item-card} Scientists map migratory bird brain
 :link: https://ucl.ac.uk/news/2026/apr/scientists-map-migratory-bird-brain
 UCL News, April 2026
