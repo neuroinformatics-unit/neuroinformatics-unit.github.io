@@ -9,7 +9,7 @@ Multiple probes (Cambridge Neurotech)
 Dammy Onih
 (`Akrami lab <https://www.sainsburywellcome.org/web/groups/akrami-lab>`__)
 is running a multi-session paradigm with two
-`Cambridge Neurotech <https://www.cambridgeneurotech.com/neural-probes>`__
+`Cambridge Neurotech <https://www.cambridgeneurotech.com>`__
 probes. In this multi-session task, mice learn a statistical learning paradigm to a
 reward-associated auditory stimulus, recording from the hippocampus.
 The pipeline uses SpikeInterface for preprocessing,
