@@ -63,7 +63,7 @@ one operating system.
   allow for discussion.
 - Please ensure that the title of your PR clearly explains its purpose. The "why" is more important than the "how"
   (which should be clear from the code and the PR description). We do not use any standards such as 
-[Conventional Commits](https://www.conventionalcommits.org) so PR titles should not include this metadata.
+  [Conventional Commits](https://www.conventionalcommits.org) so PR titles should not include this metadata.
 - One approval of a PR is enough for it to be merged.
 - Unless someone approves the PR with optional comments, the PR can be immediately merged by the approving reviewer.
 - Please merge via "Squash and Merge" on GitHub to maintain a clean commit history.
