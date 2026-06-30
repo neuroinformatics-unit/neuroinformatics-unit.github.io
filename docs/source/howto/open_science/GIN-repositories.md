@@ -395,7 +395,7 @@ Indeed, when we `gin download` a repository from the GIN server, we get a local 
 
 ## References
 
-- https://movement.neuroinformatics.dev/community/contributing.html#adding-new-data
+- https://movement.neuroinformatics.dev/latest/community/contributing.html#sample-data
 - https://gin.g-node.org/G-Node/info/wiki#how-do-i-start
 - https://gin-howto.readthedocs.io/en/latest/gin-repositories.html
 - On GIN and its relation to `git-annex` (very high-level): https://gin.g-node.org/G-Node/Info/wiki/GIN+Advantages+Structure

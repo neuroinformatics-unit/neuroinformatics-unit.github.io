@@ -102,6 +102,8 @@ linkcheck_ignore = [
     "https://joinup.ec.europa.eu/collection/eupl/solution/joinup-licensing-assistant/jla-compatibility-checker",
     "http://ccdb.ucsd.edu/home",
     "https://opensource.org/licenses/BSD-3-Clause",
+    "https://pubmed.ncbi.nlm.nih.gov",
+
 ]
 linkcheck_request_headers = {
     "https://github.com": {
