@@ -23,7 +23,7 @@ is a member of the
 `International Brain Laboratory
 (IBL) <https://www.internationalbrainlab.com/>`_
 running the
-`IBL's standardised behavioural task <https://elifesciences.org/articles/63711>`_
+`IBL's standardised behavioural task <https://doi.org/10.7554/eLife.63711>`_
 with acute Neuropixels 1.0 recordings. Details of the
 `analysis pipeline code <https://github.com/int-brain-lab/ibl-neuropixel>`__
 on the IBL data management system can be found
