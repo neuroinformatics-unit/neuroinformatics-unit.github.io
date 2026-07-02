@@ -126,7 +126,7 @@ Initialising the GIN local repository (with `gin create` or `gin init`) will cre
 
      If the set of files in the `gin upload` command includes files that have been changed locally but have not been committed, they will be automatically committed when uploading.
 
-     After running `gin upload`, the data will be uploaded to the GIN server and it will be possible to retrieve it later from there. However, notice the upload command sends all changes made in the directory to the GIN server, including deletions, renames, etc. Therefore, if you delete files from the directory on your computer and perform a `gin upload`, the file will be removed from the server as well. Such changes can be synchronized by simply running `git upload` (i.e., without specifying any files). See further details in the [GIN docs](https://gin.g-node.org/G-Node/Info/wiki/GIN+CLI+Usage+Tutorial#basic-workflow-only-using-gin).
+     After running `gin upload`, the data will be uploaded to the GIN server and it will be possible to retrieve it later from there. However, notice the upload command sends all changes made in the directory to the GIN server, including deletions, renames, etc. Therefore, if you delete files from the directory on your computer and perform a `gin upload`, the file will be removed from the server as well. Such changes can be synchronized by simply running `gin upload` (i.e., without specifying any files). See further details in the [GIN docs](https://gin.g-node.org/G-Node/Info/wiki/GIN+CLI+Usage+Tutorial#basic-workflow-only-using-gin).
 
 4. **Consider whether to lock the data**
 
