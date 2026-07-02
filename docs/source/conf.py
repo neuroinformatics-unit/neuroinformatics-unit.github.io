@@ -75,10 +75,10 @@ templates_path = ["_templates"]
 linkcheck_anchors_ignore_for_url = [
     "https://neuroinformatics.zulipchat.com/",
     "https://cocodataset.org/",
-    "https://gin.g-node.org/G-Node/Info/wiki",
-    "https://gin.g-node.org/G-Node/info/wiki",  # ignore both spellings
 ]
 linkcheck_ignore = [
+    "https://gin.g-node.org/",  # GIN is often slow/unreachable and times out
+    "https://www.cambridgeneurotech.com",  # rejects link checker requests (HTTP 415)
     "https://opensource.org",
     "https://www.incf.org/recommendations-gsoc-contributors",
     "https://www.incf.org/sites/default/files/files/INCF_GSoC_2022_Application_template.pdf",
