@@ -267,20 +267,10 @@ ffmpeg -r 30 -f image2 -s 1024x576 -start_number 11384 -i /Users/sofia/swc/proje
 There's a common point of confusion: when extracting frames to image files, FFMPEG defaults to starting output filenames at 1 (e.g., frame0001.png), but internally the frame numbers in filters still use 0-based indexing. You can override this with -start_number 0.
 
 
-## Further reading
-- [Wikipedia: Video codec](https://en.wikipedia.org/wiki/Video_codec)
-- Liu, H., Liu, W., Chi, Z., Wang, Y., Yu, Y., Chen, J., & Tang, J. (2022). Fast human pose estimation in compressed videos. IEEE Transactions on Multimedia, 25, 1390-1400.
-- Mathis, A., & Warren, R. (2018). On the inference speed and video-compression robustness of DeepLabCut. [BioRxiv, 457242](https://www.biorxiv.org/content/10.1101/457242v1).
-- [Loopbio blog: An Introduction to Video Compression](http://blog.loopbio.com/video-io-1-introduction.html)
+## References
 - [FFMPEG's H.264 guide](https://trac.ffmpeg.org/wiki/Encode/H.264])
 - [FFMPEG'S Frame accuracy when seeking](https://fftrac-bg.ffmpeg.org/wiki/Seeking)
 - [FFMPEG's CRF guide](https://trac.ffmpeg.org/wiki/Encode/H.264#a1.ChooseaCRFvalue)
-- [Understanding rate control modes](https://slhck.info/video/2017/03/01/rate-control.html)
-- [What is CRF](https://slhck.info/video/2017/02/24/crf-guide.html)
-- [Workshop on digital video](https://github.com/leandromoreira/digital_video_introduction)
-- [Video Codecs 101 (video)](https://commons.wikimedia.org/wiki/File:Video_Codecs_101.webm)
-- [AWS Blogs: GOPs explained](https://aws.amazon.com/blogs/media/part-1-back-to-basics-gops-explained/)
-
 
 - [Main options](https://ffmpeg.org/ffmpeg.html#Main-options)
 - [Video options](https://ffmpeg.org/ffmpeg.html#Video-Options)
