@@ -1,125 +1,8 @@
-# Useful `ffmpeg` commands for working with video data
-
+# Video encoding primer and common `ffmpeg` workflows
 
 `ffmpeg` is a very powerful tool to work with video data, but has a few gotchas that can be tricky. Below you can find some recommendations for common workflows and the rationale behind them.
 
-
-## A minimal primer on video encoding
-We often have the mental model of videos being a sequence of standalone images. However, digital videos are typically encoded as video streams, whose structure is very different from a sequence of standalone frames. To understand better the differences, we need to clarify some concepts.
-
-We only give a brief and simplified overview here, but if you would like further details [this blogpost from Loopbio](http://blog.loopbio.com/video-io-1-introduction.html#:~:text=A%20concise%20primer%20on%20video%20compression) is a recommended read (as well as the references at the end of the post).
-
-<!-- ### Encoding and decoding
-Encoding is the process of converting raw video into a compressed bitstream following a specific standard (e.g., H.264). Decoding is the reverse process: interpreting a bitstream to reconstruct the pixel data for each frame. In this post, we will use encoding and compression to refer to the same concept, even though strictly speaking encoding refers to a change of format only, without necessarily a reduction in file size. However in the context of video data, both concepts largely overlap.
-
-A clear example of why we encode videos is provided in the [Loopbio blogpost](http://blog.loopbio.com/video-io-1-introduction.html):
-> When stored digitally, an uncompressed video needs `width * height * colordepth * framerate * duration` bits. How much is that? As an example, one early video that a client uploaded to loopy had a resolution of 1920x1080, 24 bits color depth and a fast framerate of 120fps. If uncompressed, this video would need 5 971 968 000 bits per second (this is know as bitrate). In other words, a minute of such video would use up around 42GB, or in other words, had we stored these videos raw, we could only have been able to keep around 100 minutes. Our client has around 145 hours of beautiful fish schools footage recorded under the Red See, so there is no way that would work.
->
-> Obviously no one uses raw video when storing or transmitting digital video. Our client had around 145 hours of footage, but it was taking only slightly less than 7TB (instead of 2835TB!). This is so because the videos were compressed. -->
-
-### Codecs, encoders and decoders
-A video codec is software (or hardware) that compresses (encodes) and decompresses (decodes) digital video (source: Wikipedia). The encoder converts the raw video stream into a compressed binary-encoded bitstream following a specific standard (e.g., H.264). The decoder does the opposite operation: from the bitstream it restores the pixel content of each frame for playback.
-
-:::{note}
-In this post, we will use encoding and compression to refer to the same concept, even though strictly speaking encoding refers to a change of format only, without necessarily a reduction in file size. However in the context of video data, both concepts largely overlap. Similarly, we will use decoding and decompression as synonyms.
-:::
-
-How does the encoding process compress the size of the video file? It does so by taking advantage of spatial redundancies (i.e. regions of a single frame with a lot or repetition), temporal redundancies (i.e. consecutive frames tend to look very much alike) and the human visual perception particularities (for example, we can distinguish better between bright and dark than between shades of colors). This allows encoders to make for smaller video files while still keeping good visual quality. (TODO: paraphrase this section).
-
-The encoding process necessarily implies some loss of the original video quality, since we are approximating the raw pixel values using a compressed representation. Importantly, encoding is always a tradeoff between video quality, file size and speed, of which we can only have two out of the three. As stated in [this presentation by Werner Robitza](https://slhck.info/ffmpeg-encoding-course/#/32), that means that:
-* If we want a high-quality video that can be encoded quickly, the compressed video will necessarily be large
-* If we want a high-quality video with smaller file size, we will necessarily have a slower encoding of the data
-* If we want a small file size and fast encoding, its quality will be lower
-
-The encoding process is slower than the decoding process, and thus the main "bottleneck". This is because the encoder needs to solve a complex optimisation problem that determines aspects such as how to partition the frame into blocks, the predictions mode to use or how to allocate bits across the video stream. The decoder instead is designed to be fast, it simply implements the optimal instructions computed by the encoder. (TODO: find a nice reference for this)
-
-For scientific applications, retaining video quality is often the most important requirement, but a reasonable file size is also desirable. We usually also care less about the speed of encoding.
-
-Below you can find a short video with the basics of video encoding:
-
-<iframe width="190" height="119" frameborder="0" loading="lazy" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; web-share" allowfullscreen src="https://commons.wikimedia.org/wiki/File:Video_Codecs_101.webm?embedplayer=true"></iframe>
-
-### Group of pictures (GoP) and types of frames
-A group of pictures is the basic unit in a compressed video. The encoding and decoding of a group of pictures is independent of the rest of frames: that is, to obtain the full pixel values for all frames in a group of pictures, we only need the information held in that set of frames, and no other frames outside that group are required. In H.264, a group of pictures is made up of 12 frames (TODO: double check).
-
-A GoP is made up two types of frames, which differ by the way the are encoded:
-* intra frames, or **I-frames**, are encoded as a regular standalone image; to decode an I-frame we do not need information from any other frames. These frames are also called **keyframes**.
-* inter frames are not encoded as a regular standalone image. Instead, decoding their pixel content requires decoding the data from other frames. If only data from previous frames is required, the inter frames are called predicted frames, or **P-frames**. If data from both previous and future frames is required, the inter frames are also called bi-predictive or **B-frames**,
-
-
-### Motion vector and residual maps
-So if not saved as standalone images, how are inter frames represented? Let's focus on the simpler case of P-frames. Rather than saving all their pixel values, P-frames are encoded in a more compact representation, made of two parts:
-- a motion vector map, and
-- a residual map.
-
-The motion vector map $M$ is the vector field that for each block of pixels in frame `t-1` holds the vector pointing to the most similar block of pixels in frame `t`. The similarity between blocks of pixels is determined via a block matching algorithm. The residual map $R$ contains the difference in pixel values $I$ between matched blocks of pixels in frame `t-1` and in frame `t`. As a result, we can decode the pixel values in frame `t` as:
-
-$$
-\mathbf{I}^{t}(x, y) = \mathbf{I}^{t-1}\left[(x, y) - \mathbf{M}^{t}(x, y)\right] + \mathbf{R}^{t}(x, y),
-$$
-
-where $x,y$ are the coordinates in image space of a specific pixel value.
-
-The basic idea is that if the motion vector estimation is good, the residual map will be quite sparse and therefore the representation will be more compact than holding the full pixel values of frame `t`.
-
-:::{tip}
-You can actually visualise the motion vector map in FFMPEG as described in [this presentation by Werner Robitza](https://slhck.info/ffmpeg-encoding-course/#/51).
-:::
-
-NOTE: this section could be a collapsible
-
-### Fast random access
-Fast random access is a common desirable characteristic of a compressed video, that refers to how quickly you can decode a specific frame. This is relevant, for example, for a seamless experience when scrolling through the timeline of a video.
-
-How is a random frame decoded? With codecs like H.264 in its normal mode (which use keyframes and interframes), to decode frame 1247 the decoder would need to go to the nearest keyframe first (maybe frame 1200) and then decode all 47 frames in between.
-
-This may be slow in some cases, which is why some codecs can be set to "all-intra", meaning all frames are forced to be keyframes. If all frames are essentially standalone images, decoding any of them is fast. However, the file size will increase considerably.
-
-
-### Frame accurate seeking
-
-Frame-accurate seeking is another commonly desired quality when working with a video. It means you can reliably and repeatably land on exactly the frame you want (e.g. frame 1247, not "somewhere near frame 1247"). This is relevant, for example, when visualising labelled data overlaid on a video. The labels defined in frame 1247 should match the image data for that frame, but if frames are not reliably seekable, the video player may be showing a different underlying frame and the labels will seem "out of sync". It may also be an issue when extracting frames for labelling: the user may select specific frame numbers to extract from the video, but they may actually extract frames somewhere near but not precisely at those indices.
-
-To understand this issue further, we first need to explain what a video container is. A **container** is the file format that wraps around the actual video and audio data. It contains the compressed streams (produced by the codec) and additional metadata required to play the video back properly, such as frame rate, resolution or codec info.
-
-<!-- The component that writes the container is called **muxer** and the process of **muxing** (from multiplexing, taking separate streams (video, audio, subtitles) and combining them into a single container file with a proper index and metadata) -->
-
-A fundamental part of this metadata is the **index**, which maps timestamps to byte positions in the file, and marks which frames are keyframes. If this index is incomplete, corrupt or imprecise (for example, because the recording was interrupted due to power loss), the video player (or another tool relying on the index to work) might land in the wrong spot in the video. Some containers handle this better than others. The combination of MP4 container with an H.264 codec is a combination with very mature and reliable indexing (TODO: paraphrase).
-
-However, even if the index is correct and the container puts you at exactly the right byte in the file for the requested frame, if that byte corresponds to a B-frame, you can't decode it without first decoding the frames it depends on. Some players or tools cut corners here to achieve fast seeking at the expense of accuracy, and simply seek to the nearest keyframe and call it close enough (this is called "lazy seek"). This leads to frames not being accurately seekable, since the player may return the nearest keyframe rather than the exact frame requested (TODO: paraphrase).
-
-For the case of `ffmpeg` commands, this is further complicated because the seeking behaviour and its corresponding accuracy guarantees vary depending on the *order in which the seeking-related arguments* are passed to the command. See [Extracting a clip from a video](target-extracting-clip-from-video) for a specific example.
-
-One way to eliminate this corner-cutting behaviour of some players and tools is to use "all-intra" encoding, which forces all frames to be intraframes or keyframes. However, this comes at the cost of larger file size. Reducing the GOP size is an alternative, but note that this would not eliminate the issue if the video player does lazy seeking, it would just reduce the error. With the default GOP of 250 frames, a lazy seek could land up to 249 frames away from where you asked. With a GOP of 10 frames, the worst case is 9 frames off.
-
-In conclusion, both an imprecise index, or a video player / tool that silently prioritises fast seeking vs accuracy, may lead to frames not being reliably seekable. We can try to minimise these issues by ensuring that we use a mature container and codec combination that produces a reliable index, and by being aware that this corner-cutting behaviour may occur in specific tools or video players. If this becomes a real issue, we can force the encoder to set all frames as keyframes, at the expense of a significantly larger file size.
-
-<!-- But: if your goal is just to ensure a reliable index for frame extraction, remuxing is sufficient and much faster than re-encoding. Re-encoding only makes sense if you also want to change the codec, adjust quality, shrink the GOP, or switch to all-intra — the things we discussed earlier that address the seeking speed problem rather than the index reliability problem. -->
-
-
-### Constant Rate Factor (CRF)
-The Constant Rate Factor is a type of rate control mode. A **rate control mode** is an algorithm that is part of an encoder, and determines how many bits will be used for each frame. This in turn determines the file size and how quality is distributed.
-
-In science, we usually care more for good quality videos rather than a very small file size, so CRF is often a good rate control mode to use because it instructs the encoder to aim for a certain consistent visual quality across all frames. That is, CRF assigns varying bits per frame such that every frame looks roughly equally good to our eyes. In practice this means a simple static shot (like a talking head against a plain background) gets very few bits assigned because it's easy to compress well (there is a lot of spatial redundancy in the plain background), while a complex high-motion scene (like confetti flying everywhere) would need more bits per frame to maintain the same perceived quality.  For further details on rate control mode, we recommend the post by Werner Robitza [Understanding Rate Control Modes](https://slhck.info/video/2017/03/01/rate-control.html).
-
-:::{note}
-An alternative approach would be something like CBR (Constant Bit Rate), where every second of video gets the same number of bits regardless of complexity. That's useful for streaming where you need predictable bandwidth, but it wastes bits on easy scenes and starves hard scenes. (TODO: paraphrase)
-:::
-
-If you are using FFMPEG, the CRF value will range from 0 to 51, where 0 is lossless, 23 is the default and 51 is the worst quality. Subjectively, the values between 17-28 are considered close to visually lossless. For further details, please check [FFMPEG's CRF guide](https://trac.ffmpeg.org/wiki/Encode/H.264#a1.ChooseaCRFvalue).
-
-
-
-
-### Presentation timestamp (PTS)
-* PTS: the start time of the frame
-
-The encoder assigns PTS values to each frame based on the frame rate and time base, but it has some freedom in how it does this — different encoders (libx264, libx265, etc.) and different container muxers can make slightly different choices about rounding and spacing. Once written to the file, PyAV just reads whatever values the encoder stored.
-
-* Why PTS is always an integer:
-It's how video containers work at the format level — PTS is stored as an int64 in the container, representing a count of time base units. The time base (a Fraction) is the scaling factor to convert it to seconds. So actual time = pts * time_base, where pts is always a raw integer counter.
-
-
+We recommend reading [A primer on video encoding](video-primer.md) first to understand the key concepts discussed below.
 
 ## Recommended re-encoding command
 For all the rest: recommended to re-encode video first
@@ -331,6 +214,7 @@ iio.imwrite(output_path, img)
 
 The one caveat with PTS comparison: it assumes frames have uniformly spaced PTS values (constant frame rate). For variable frame rate videos this could break.
 
+
 (target-extracting-clip-from-video)=
 ## Extracting a clip from a video
 * Recommended to always check at the end if the total number of frames in the output clip is what you expect! (See section "Counting frames in a video")
@@ -384,6 +268,7 @@ There's a common point of confusion: when extracting frames to image files, F
 
 
 ## Further reading
+- [Wikipedia: Video codec](https://en.wikipedia.org/wiki/Video_codec)
 - Liu, H., Liu, W., Chi, Z., Wang, Y., Yu, Y., Chen, J., & Tang, J. (2022). Fast human pose estimation in compressed videos. IEEE Transactions on Multimedia, 25, 1390-1400.
 - Mathis, A., & Warren, R. (2018). On the inference speed and video-compression robustness of DeepLabCut. [BioRxiv, 457242](https://www.biorxiv.org/content/10.1101/457242v1).
 - [Loopbio blog: An Introduction to Video Compression](http://blog.loopbio.com/video-io-1-introduction.html)
@@ -394,6 +279,7 @@ There's a common point of confusion: when extracting frames to image files, F
 - [What is CRF](https://slhck.info/video/2017/02/24/crf-guide.html)
 - [Workshop on digital video](https://github.com/leandromoreira/digital_video_introduction)
 - [Video Codecs 101 (video)](https://commons.wikimedia.org/wiki/File:Video_Codecs_101.webm)
+- [AWS Blogs: GOPs explained](https://aws.amazon.com/blogs/media/part-1-back-to-basics-gops-explained/)
 
 
 - [Main options](https://ffmpeg.org/ffmpeg.html#Main-options)
