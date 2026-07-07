@@ -182,7 +182,7 @@ For the case of `ffmpeg` commands, the seeking behaviour (lazy or not) and its c
 - [Wikipedia: Video codec](https://en.wikipedia.org/wiki/Video_codec)
 - [Loopbio blog: An Introduction to Video Compression](http://blog.loopbio.com/video-io-1-introduction.html)
 - [FFMPEG's H.264 guide](https://trac.ffmpeg.org/wiki/Encode/H.264])
-- [FFMPEG'S Frame accuracy when seeking](https://fftrac-bg.ffmpeg.org/wiki/Seeking)
+- [FFMPEG'S Frame accuracy when seeking](https://trac.ffmpeg.org/wiki/Seeking)
 - [FFMPEG's CRF guide](https://trac.ffmpeg.org/wiki/Encode/H.264#a1.ChooseaCRFvalue)
 - [Understanding rate control modes](https://slhck.info/video/2017/03/01/rate-control.html)
 - [What is CRF](https://slhck.info/video/2017/02/24/crf-guide.html)
