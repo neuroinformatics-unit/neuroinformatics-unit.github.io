@@ -1,8 +1,10 @@
-# Video encoding primer and common `ffmpeg` workflows
+# Common `ffmpeg` workflows
 
 `ffmpeg` is a very powerful tool to work with video data, but has a few gotchas that can be tricky. Below you can find some recommendations for common workflows and the rationale behind them.
 
 We recommend reading [A primer on video encoding](video-primer.md) first to understand the key concepts discussed below.
+
+We assume constant frame rate cases. We also use `ffprobe`.
 
 ## Recommended re-encoding command
 For all the rest: recommended to re-encode video first
@@ -15,14 +17,14 @@ ffmpeg -y \
 -pix_fmt yuv420p \
 -preset superfast \
 -crf 23 \
--vstats \ # dump video coding stats to vstats_HHMMSS.log file
--fps_mode passthrough \ # to pass timestamps unchanged, relevant if variable frame rate
+-vstats \ # optional: to dump video coding stats to vstats_HHMMSS.log file
+-fps_mode passthrough \ # optional: to pass timestamps unchanged, without frame duplication or dropping
 output_video.mp4
 ```
 
-- `-y` : overwrite without asking
+- `-y` : overwrite an existing file with the same name without asking. Use with caution. 
 - `-c`: codec (encoder if applied to input or decoder if applied to output)
-- `-c:v _nameofcodec_` --> specified the codec applied to the video (v) stream. If you use `copy` as name, the stream is not re-encoded
+- `-c:v <name-ofocodec>`: specifies the codec applied to the video (`v`) stream. If you pass ``-c:v copy`, the stream is not re-encoded
 	- alternatively `-vcodec`
 - `-pix_fmt`: this is mostly for videos to play [in Quicktime and most others](https://trac.ffmpeg.org/wiki/Encode/H.264#Encodingfordumbplayers). These players only support the YUV planar color space with 4:2:0 chroma subsampling for H.264 video.
 - `-preset`
@@ -30,8 +32,8 @@ output_video.mp4
 
 
 If you find the video takes long to decode random frames when scrolling through its timeline, and are willing to accept larger file sizes:
-- reduce size of GOP:  More frequent I-frames means larger files but faster seeking. -g 250 (default). -g 10 (would maybe x2 file size) or -g 30 ((one keyframe per second at 30fps)) might be good enough-try
-- all intra version (~ 6x file size): set -g to 1 or use -intra
+- reduce size of GOP:  More frequent I-frames means larger files but faster seeking. `-g 250` (default), `-g 10` (would maybe x2 file size) or `-g 30` ((one keyframe per second at 30fps)) might be good enough.
+- all intra version (~ 6x file size): set `-g 1` or use `-intra`
 
 
 
@@ -51,7 +53,11 @@ Note that we use `nb_read_frames` rather than `nb_frames`; the latter is faster 
 ## Check fps of a video
 
 ```bash
-ffprobe -v error -select_streams v:0 -show_entries stream=r_frame_rate -of csv=p=0 <path-to-video>
+ffprobe -v error \
+-select_streams v:0 \
+-show_entries stream=r_frame_rate \
+-of csv=p=0 \  # output as .csv without headers
+<path-to-video>
 ```
 
 ## Extracting frames by index from video as image files
@@ -220,16 +226,16 @@ The one caveat with PTS comparison: it assumes frames have uniformly spaced PTS 
 * Recommended to always check at the end if the total number of frames in the output clip is what you expect! (See section "Counting frames in a video")
 
 * Input seeking
-- in theory for ffmpeg > 2.1 and without stream `copy` it is frame accurate
-- but:
-> Input-side seeking (-ss before -i): FFmpeg jumps to the nearest preceding keyframe using the container index, then decodes forward to your target timestamp. This is fast because it skips demuxing and decoding the bulk of the stream. The decoded frame at your target timestamp is accurate. The only "inaccuracy" is that the output stream may begin at the keyframe rather than your exact timestamp — relevant when trimming, not when extracting a frame.
+  - in theory for ffmpeg > 2.1 and without stream `copy` it is frame accurate
+  - but:
+  > Input-side seeking (-ss before -i): FFmpeg jumps to the nearest preceding keyframe using the container index, then decodes forward to your target timestamp. This is fast because it skips demuxing and decoding the bulk of the stream. The decoded frame at your target timestamp is accurate. The only "inaccuracy" is that the output stream may begin at the keyframe rather than your exact timestamp — relevant when trimming, not when extracting a frame.
+
+* Stream copy: if there is stream `copy` there is no frame-accuracy, because the stream that is passed to the `input` and `output` gates is not decoded into frames. Even if used with "output" syntax.
 
 
 * Output seeking
 - Slower but more reliable (see [crabs script](https://github.com/SainsburyWellcomeCentre/crabs-exploration/blob/6dd8df17642d0250674c62083057abce03c64fff/crabs/utils/extract_loop_clips.py#L188))
 
-
-* Stream copy: if there is stream `copy` there is no frame-accuracy, because the stream that is passed to the `input` and `output` gates is not decoded into frames. Even if used with "output" syntax.
 
 * In seeking: how does ffmpeg decide if a frame is in or out?
 frame_PTS: the start time of the frame (PRESENTATION TIMESTAMP = PTS)
@@ -243,7 +249,6 @@ So if the stream that goes thru the "output gate" is in groups of pictures (e.g.
 
 Note: [Syntax to express time duration in ffmpeg commands](https://ffmpeg.org/ffmpeg-utils.html#time-duration-syntax)
 
-Alternative: via sleap-io (although note that sleap-io does not re-encode)
 
 > the difference between input and output seeking is on where the output stream starts and how much decoding work is done to get there
 
@@ -269,7 +274,7 @@ There's a common point of confusion: when extracting frames to image files, F
 
 ## References
 - [FFMPEG's H.264 guide](https://trac.ffmpeg.org/wiki/Encode/H.264])
-- [FFMPEG'S Frame accuracy when seeking](https://fftrac-bg.ffmpeg.org/wiki/Seeking)
+- [FFMPEG'S Frame accuracy when seeking](https://trac.ffmpeg.org/wiki/Seeking)
 - [FFMPEG's CRF guide](https://trac.ffmpeg.org/wiki/Encode/H.264#a1.ChooseaCRFvalue)
 
 - [Main options](https://ffmpeg.org/ffmpeg.html#Main-options)
