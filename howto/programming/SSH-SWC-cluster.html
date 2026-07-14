@@ -1,0 +1,1097 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Set up SSH for the SWC HPC cluster &#8212; NIU</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=fd6457a4" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=43278677" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../../_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
+
+    <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+    <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../_static/sg-tags.js?v=d80f6fa4"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('consent', 'default', {
+                    'ad_storage': 'denied',
+                    'ad_user_data': 'denied',
+                    'ad_personalization': 'denied',
+                    'analytics_storage': 'denied'
+                });
+            </script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-6260TGM7TY"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-6260TGM7TY');
+            </script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'howto/programming/SSH-SWC-cluster';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="canonical" href="https://neuroinformatics.dev/howto/programming/SSH-SWC-cluster.html" />
+    <link rel="icon" href="../../_static/logo_light.png"/>
+    <link rel="author" title="About these documents" href="../../about.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="SSH into an unmanaged machine using VSCode" href="SSH-vscode.html" />
+    <link rel="prev" title="SLURM arguments primer" href="SLURM-arguments.html" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../../_static/searchtools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../searchindex.js"></script>
+     
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo_light.png" class="logo__image only-light" alt=""/>
+    <img src="../../_static/logo_dark.png" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">NIU</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../about.html">
+    About us
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../people.html">
+    People
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../projects.html">
+    Projects
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../publications.html">
+    Publications & Media
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../blog/index.html">
+    Blog
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" current active">
+  <a class="nav-link dropdown-item nav-internal" href="../index.html">
+    HowTo
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../get-involved/index.html">
+    Get involved
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../resources/index.html">
+    Resources
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../open-software-summer-school/index.html">
+    Open Software Summer School
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../gsoc-2025-datashuttle.html">
+    <no title>
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/neuroinformatics-unit/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/company/neuroinformatics-unit" title="LinkedIn" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i><span class="visually-hidden">LinkedIn</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://mastodon.online/@neuroinformatics" title="Mastodon" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-mastodon fa-lg" aria-hidden="true"></i><span class="visually-hidden">Mastodon</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://bsky.app/profile/neuroinformatics.dev" title="Bluesky" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-bluesky fa-lg" aria-hidden="true"></i><span class="visually-hidden">Bluesky</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://neuroinformatics.zulipchat.com/" title="Zulip (chat)" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-comments fa-lg" aria-hidden="true"></i><span class="visually-hidden">Zulip (chat)</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../about.html">
+    About us
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../people.html">
+    People
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../projects.html">
+    Projects
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../publications.html">
+    Publications & Media
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../blog/index.html">
+    Blog
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    HowTo
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../get-involved/index.html">
+    Get involved
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../resources/index.html">
+    Resources
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../open-software-summer-school/index.html">
+    Open Software Summer School
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../gsoc-2025-datashuttle.html">
+    <no title>
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/neuroinformatics-unit/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/company/neuroinformatics-unit" title="LinkedIn" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i><span class="visually-hidden">LinkedIn</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://mastodon.online/@neuroinformatics" title="Mastodon" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-mastodon fa-lg" aria-hidden="true"></i><span class="visually-hidden">Mastodon</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://bsky.app/profile/neuroinformatics.dev" title="Bluesky" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-bluesky fa-lg" aria-hidden="true"></i><span class="visually-hidden">Bluesky</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://neuroinformatics.zulipchat.com/" title="Zulip (chat)" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-comments fa-lg" aria-hidden="true"></i><span class="visually-hidden">Zulip (chat)</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item pst-sidebar-collapse"><button id="pst-collapse-sidebar-button" aria-expanded="true" aria-controls="pst-primary-sidebar">
+  <svg class="pst-icon" role="img" aria-hidden="true" focusable="false" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <path fill="currentColor" d="M3 15.5C2.36232 15.5 1.74874 15.2564 1.28478 14.8189C0.820828 14.3815 0.541576 13.7832 0.504167 13.1467L0.5 13L0.5 3C0.499965 2.36232 0.743605 1.74874 1.18107 1.28478C1.61854 0.820828 2.21676 0.541576 2.85333 0.504167L3 0.5L13 0.5C13.6377 0.499965 14.2513 0.743605 14.7152 1.18107C15.1792 1.61854 15.4584 2.21676 15.4958 2.85333L15.5 3L15.5 13C15.5 13.6377 15.2564 14.2513 14.8189 14.7152C14.3815 15.1792 13.7832 15.4584 13.1467 15.4958L13 15.5L3 15.5ZM3 13.8333L10.5 13.8333L10.5 2.16667L3 2.16667C2.79589 2.16669 2.59889 2.24163 2.44636 2.37726C2.29383 2.5129 2.19638 2.69979 2.1725 2.9025L2.16667 3L2.16667 13C2.16669 13.2041 2.24163 13.4011 2.37726 13.5536C2.5129 13.7062 2.69979 13.8036 2.9025 13.8275L3 13.8333ZM6.65583 10.325L6.5775 10.2558L4.91083 8.58917C4.76735 8.44567 4.68116 8.25476 4.66843 8.05223C4.65569 7.84971 4.71729 7.6495 4.84167 7.48917L4.91083 7.41083L6.5775 5.74417C6.72747 5.59471 6.9287 5.50794 7.14032 5.50148C7.35194 5.49502 7.55809 5.56935 7.7169 5.70937C7.8757 5.8494 7.97525 6.04463 7.99533 6.25539C8.01541 6.46616 7.95451 6.67667 7.825 6.84417L7.75583 6.9225L6.67917 8L7.75583 9.0775C7.89931 9.22099 7.98551 9.41191 7.99824 9.61443C8.01097 9.81695 7.94938 10.0172 7.825 10.1775L7.75583 10.2558C7.61234 10.3993 7.42142 10.4855 7.2189 10.4982C7.01638 10.511 6.81617 10.4494 6.65583 10.325Z"/>
+  </svg>
+  <span class="pst-collapse-sidebar-label">Collapse Sidebar</span>
+  <span class="pst-expand-sidebar-label">Expand Sidebar</span>
+</button></div>
+        <div class="sidebar-primary-item">
+
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../data_analysis/index.html">Data Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../electrophysiology/index.html">Electrophysiology</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../electrophysiology/resources.html">Resources</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../electrophysiology/example_pipelines/index.html">Examples</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../electrophysiology/example_pipelines/auto_examples_ephys/index.html">Python Pipelines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../electrophysiology/example_pipelines/matlab_examples.html">Matlab Pipelines</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="../electrophysiology/community.html">Community</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_analysis/HPC-module-SLEAP.html">Use SLEAP on the SWC HPC cluster</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Programming</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="SLURM-arguments.html">SLURM arguments primer</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Set up SSH for the SWC HPC cluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SSH-vscode.html">SSH into an unmanaged machine using VSCode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vscode-with-slurm-job.html">Using VSCode with interactive SLURM jobs on the SWC HPC cluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Mount-ceph-ubuntu.html">Mount ceph storage on Ubuntu permanently</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Mount-ceph-ubuntu-temp.html">Mount ceph storage on Ubuntu temporarily</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Cookiecutter-cruft.html">Update cookiecutter-generated files with cruft</a></li>
+<li class="toctree-l2"><a class="reference internal" href="port-fowarding.html">Accessing HTTP servers running on the HPC with port forwarding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../open_science/index.html">Open Science</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../open_science/Licensing.html">Software licensing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../open_science/Data-sharing.html">Data Sharing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../open_science/GIN-repositories.html">Create a GIN repository for your dataset</a></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">HowTo</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Programming</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Set up SSH for the SWC HPC cluster</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                   <section class="tex2jax_ignore mathjax_ignore" id="set-up-ssh-for-the-swc-hpc-cluster">
+<span id="ssh-cluster-target"></span><h1>Set up SSH for the SWC HPC cluster<a class="headerlink" href="#set-up-ssh-for-the-swc-hpc-cluster" title="Link to this heading">#</a></h1>
+<p>This guide explains how to connect to the SWC’s HPC cluster via SSH from
+any personal computer.</p>
+<p>If you have access to a desktop managed by the SWC’s IT team
+the connection is much more straightforward than described here
+(see the <a class="reference internal" href="#ssh-managed-target"><span class="std std-ref">note on managed desktops</span></a>).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Some links within this document point to the
+<a class="reference external" href="https://liveuclac.sharepoint.com/sites/SWCIntranet">SWC internal wiki</a>,
+which is only accessible from within the SWC network.
+We recommend opening these links in a new tab.</p>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header sd-bg-info sd-bg-text-info">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-info" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg></span><span class="sd-summary-text">Interpreting code blocks</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Shell commands will be shown in code blocks like this
+(with the <code class="docutils literal notranslate"><span class="pre">$</span></code> sign indicating the shell prompt):</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello world!&quot;</span>
+</pre></div>
+</div>
+<p class="sd-card-text">Similarly, Python code blocks will appear with the <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code> sign indicating the
+Python interpreter prompt:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello world!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="sd-card-text">The expected outputs of both Shell and Python commands will be shown without
+any prompt:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Hello world!</span>
+</pre></div>
+</div>
+</div>
+</details><section id="abbreviations">
+<h2>Abbreviations<a class="headerlink" href="#abbreviations" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Acronym</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://en.wikipedia.org/wiki/Secure_Shell">SSH</a></p></td>
+<td><p>Secure (Socket) Shell protocol</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.sainsburywellcome.org/web/">SWC</a></p></td>
+<td><p>Sainsbury Wellcome Centre</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://en.wikipedia.org/wiki/High-performance_computing">HPC</a></p></td>
+<td><p>High Performance Computing</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://en.wikipedia.org/wiki/Information_technology">IT</a></p></td>
+<td><p>Information Technology</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://slurm.schedmd.com/">SLURM</a></p></td>
+<td><p>Simple Linux Utility for Resource Management</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://en.wikipedia.org/wiki/Integrated_development_environment">IDE</a></p></td>
+<td><p>Integrated Development Environment</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://en.wikipedia.org/wiki/Graphical_user_interface">GUI</a></p></td>
+<td><p>Graphical User Interface</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>You have an SWC account and know your username and password.</p></li>
+<li><p>You have read the <a class="reference external" href="https://liveuclac.sharepoint.com/sites/SSC/SitePages/SSC-High-Performance-Computing-147954090.aspx">SWC wiki’s section on High Performance Computing (HPC)</a>, especially the <a class="reference external" href="https://liveuclac.sharepoint.com/sites/SSC/SitePages/SSC-Logging-into-the-Cluster-194972967.aspx">Logging into the Cluster page</a>.</p></li>
+<li><p>You know the basics of using the command line, i.e. using the terminal to navigate the file system and run commands.</p></li>
+<li><p>You have an SSH client installed on your computer. This is usually pre-installed on Linux and macOS. SSH is also available on Windows (since Windows 10), however some steps will differ. If you are a Windows user, read the note below before proceeding.</p></li>
+</ul>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header sd-bg-info sd-bg-text-info">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-info" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg></span><span class="sd-summary-text">Note for Windows users</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">You have two options on how to proceed:</p>
+<ol class="arabic">
+<li><p class="sd-card-text">Install <a class="reference external" href="https://gitforwindows.org/">Git Bash</a>, which emulates a Linux terminal on Windows and includes tools that are not available on Windows by default, such as <code class="docutils literal notranslate"><span class="pre">nano</span></code>, and <code class="docutils literal notranslate"><span class="pre">ssh-copy-id</span></code>. This is the recommended option, as it will allow you to follow along with all commands in this guide, as they are presented. Just assume that all commands are run in Git Bash.</p></li>
+<li><p class="sd-card-text">If you are using Windows 10 or newer, you can follow this guide (except for the section on <a class="reference internal" href="#ssh-keys"><span class="std std-ref">SSH keys</span></a>) using native Windows functionalities as described here.</p>
+<p class="sd-card-text">To <a class="reference internal" href="#log-into-the-cluster"><span class="std std-ref">Log into the cluster</span></a>, you can use the same commands as in the guide below, but typed in the Windows <code class="docutils literal notranslate"><span class="pre">cmd</span></code>:</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">cmd</span><a class="headerlink" href="#id1" title="Link to this code">#</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ssh &lt;SWC-USERNAME&gt;@ssh.swc.ucl.ac.uk</span>
+<span class="go">ssh hpc-gw2</span>
+</pre></div>
+</div>
+</div>
+<p class="sd-card-text">The <a class="reference internal" href="#ssh-config-file"><span class="std std-ref">SSH config file</span></a> section can be followed using the file browser and Notepad, instead of the terminal and <code class="docutils literal notranslate"><span class="pre">nano</span></code>.
+Create the <code class="docutils literal notranslate"><span class="pre">.ssh</span></code> folder in you home directory, i.e. <code class="docutils literal notranslate"><span class="pre">C:\Users\&lt;USERNAME&gt;\.ssh</span></code>,
+if it does not already exist (don’t forget the <code class="docutils literal notranslate"><span class="pre">.</span></code> at the start of <code class="docutils literal notranslate"><span class="pre">.ssh</span></code>).</p>
+<p class="sd-card-text">You may create and edit the <code class="docutils literal notranslate"><span class="pre">config</span></code> file with Notepad but beware that the file must not have an extension.
+To create a file without an extension in Windows, you need to make the file extensions visible
+(click ‘View’ in the file browser and check the box ‘File name extensions’).
+The <code class="docutils literal notranslate"><span class="pre">config</span></code> file contents should be the same as in the guide below.</p>
+<p class="sd-card-text">In day-to-day use, you can use the <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">swc-gateway</span></code> and <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">swc-bastion</span></code> commands natively in Windows <code class="docutils literal notranslate"><span class="pre">cmd</span></code>,
+provided that you have defined those aliases in your <code class="docutils literal notranslate"><span class="pre">config</span></code> file, as this guide describes.</p>
+</li>
+</ol>
+</div>
+</details></section>
+<section id="log-into-the-cluster">
+<h2>Log into the cluster<a class="headerlink" href="#log-into-the-cluster" title="Link to this heading">#</a></h2>
+<p>Run the following commands on the terminal, typing your <code class="docutils literal notranslate"><span class="pre">&lt;SWC-PASSWORD&gt;</span></code> both times when prompted
+(your password will not be displayed on the screen):</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>ssh<span class="w"> </span>&lt;SWC-USERNAME&gt;@ssh.swc.ucl.ac.uk
+<span class="gp">$ </span>ssh<span class="w"> </span>hpc-gw2
+</pre></div>
+</div>
+<p>You have now successfully logged into the cluster 🎉. You may stop reading here, but…</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you want to learn more about why we had to SSH twice, read the <a class="reference internal" href="#why-do-we-ssh-twice"><span class="std std-ref">next section</span></a>.</p>
+<p>If you want to make you life easier, you can set yourself up with an <a class="reference internal" href="#ssh-config-file"><span class="std std-ref">SSH config file</span></a>
+and some <a class="reference internal" href="#ssh-keys"><span class="std std-ref">SSH keys</span></a>.</p>
+</div>
+</section>
+<section id="why-do-we-ssh-twice">
+<h2>Why do we SSH twice?<a class="headerlink" href="#why-do-we-ssh-twice" title="Link to this heading">#</a></h2>
+<p>We first need to distinguish the different types of nodes on the SWC HPC system:</p>
+<ul class="simple">
+<li><p>the <em>bastion</em> node (or <em>login node</em>) - <code class="docutils literal notranslate"><span class="pre">ssh.swc.ucl.ac.uk</span></code>. This serves as a single entry point to the cluster from external networks. By funneling all external SSH connections through this node, it’s easier to monitor, log, and control access, reducing the attack surface. The <em>bastion</em> node has very little processing power. It can be used to submit and monitor SLURM jobs, but it shouldn’t be used for anything else.</p></li>
+<li><p>the <em>gateway</em> node - <code class="docutils literal notranslate"><span class="pre">hpc-gw2</span></code>. This is a more powerful machine and can be used for light processing, such as editing your scripts, creating and copying files etc. However don’t use it for anything computationally intensive, since this node’s resources are shared across all users.</p></li>
+<li><p>the <em>compute</em> nodes - <code class="docutils literal notranslate"><span class="pre">enc1-node10</span></code>, <code class="docutils literal notranslate"><span class="pre">gpu-sr670-21</span></code>, etc. These are the machinces that actually run the jobs we submit, either interactively via <code class="docutils literal notranslate"><span class="pre">srun</span></code> or via batch scripts submitted with <code class="docutils literal notranslate"><span class="pre">sbatch</span></code>.</p></li>
+</ul>
+<p><img alt="" src="../../_images/ssh_flowchart_unmanaged.png" /></p>
+<p>Your home directory, as well as the locations where filesystems like <code class="docutils literal notranslate"><span class="pre">ceph</span></code> are mounted, are shared across all of the nodes.</p>
+<p>The first <code class="docutils literal notranslate"><span class="pre">ssh</span></code> command - <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">&lt;SWC-USERNAME&gt;&#64;ssh.swc.ucl.ac.uk</span></code> only takes you to the <em>bastion</em> node. A second command - <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">hpc-gw2</span></code> - is needed to reach the <em>gateway</em> node.</p>
+<p>Similarly, if you are on the <em>gateway</em> node, typing <code class="docutils literal notranslate"><span class="pre">logout</span></code> once will only get you one layer outo the <em>bastion</em> node. You need to type <code class="docutils literal notranslate"><span class="pre">logout</span></code> again to exit the <em>bastion</em> node and return to your local machine.</p>
+<p>The <em>compute</em> nodes should only be accessed via the SLURM <code class="docutils literal notranslate"><span class="pre">srun</span></code> or <code class="docutils literal notranslate"><span class="pre">sbatch</span></code> commands. This can be done from either the <em>bastion</em> or the <em>gateway</em> nodes. If you are running an interactive job on one of the <em>compute</em> nodes, you can terminate it by typing <code class="docutils literal notranslate"><span class="pre">exit</span></code>. This will return you to the node from which you entered.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header sd-bg-warning sd-bg-text-warning">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-alert" viewBox="0 0 16 16" aria-hidden="true"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg></span><span class="sd-summary-text">Be mindful of node usage</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Avoid running heavy computations on the <em>bastion</em> or <em>gateway</em> nodes, as
+they are meant for light tasks like text editing or job submissions to SLURM.</p>
+<p class="sd-card-text">For quick tasks that may burden these nodes,
+request an interactive session on a <em>compute</em> node using the <code class="docutils literal notranslate"><span class="pre">srun</span></code> command.
+Here’s an example for creating a new conda environment:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>srun<span class="w"> </span>-p<span class="w"> </span>cpu<span class="w"> </span>-n<span class="w"> </span><span class="m">4</span><span class="w"> </span>--mem<span class="w"> </span>8G<span class="w"> </span>--pty<span class="w"> </span>bash<span class="w"> </span>-i
+<span class="gp">$ </span>module<span class="w"> </span>load<span class="w"> </span>miniconda
+<span class="gp">$ </span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>myenv<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.10
+</pre></div>
+</div>
+<p class="sd-card-text">The first command requests 4 cores and 8GB of memory on a node of the <code class="docutils literal notranslate"><span class="pre">cpu</span></code>
+partition, meant for jobs that do not require GPUs.
+Depending on your needs and node availability, you may need to request
+a different partition. See the <a class="reference internal" href="SLURM-arguments.html#slurm-arguments-target"><span class="std std-ref">SLURM arguments primer</span></a>
+for more information.</p>
+<p class="sd-card-text">The <code class="docutils literal notranslate"><span class="pre">--pty</span> <span class="pre">bash</span> <span class="pre">-i</span></code> part specifies
+an interactive bash shell. The following two commands are run in this shell,
+on the assigned <em>compute</em> node.</p>
+<p class="sd-card-text">Type <code class="docutils literal notranslate"><span class="pre">exit</span></code> to leave the interactive session when finished.
+Avoid keeping sessions open when not in use.</p>
+</div>
+</details></section>
+<section id="note-on-managed-desktops">
+<span id="ssh-managed-target"></span><h2>Note on managed desktops<a class="headerlink" href="#note-on-managed-desktops" title="Link to this heading">#</a></h2>
+<p>The SWC’s IT team offers managed desktop computers equipped with either
+a Windows or a Linux image. These machines are already part of the SWC’s
+trusted network domain, meaning you can access the HPC cluster without
+having to go through the <em>bastion</em> node.</p>
+<ul class="simple">
+<li><p>If you are using a <a class="reference external" href="https://liveuclac.sharepoint.com/sites/SSC/SitePages/SSC-SWC-Desktops-147956857.aspx">managed Windows desktop</a>,
+you can SSH directly into the <em>gateway</em> node with <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">hpc-gw2</span></code> from the
+Windows <code class="docutils literal notranslate"><span class="pre">cmd</span></code> or PowerShell.
+You may use that node to prepare your scripts and submit SLURM jobs.</p></li>
+<li><p>If you are using a <a class="reference external" href="https://liveuclac.sharepoint.com/sites/SSC/SitePages/SSC-Managed-Linux-Desktop-69502751.aspx">managed Linux desktop</a>,
+you can even bypass the <em>gateway</em> node. In fact, you may directly submit SLURM jobs
+from your terminal, without having to SSH at all. That’s because managed Linux desktops
+use the same platform as the HPC nodes
+and are already equipped with the SLURM job scheduler.</p></li>
+</ul>
+<p>A modified version of the flowchart found above, including managed desktops:</p>
+<p><img alt="" src="../../_images/ssh_flowchart_full.png" /></p>
+</section>
+<section id="ssh-config-file">
+<h2>SSH config file<a class="headerlink" href="#ssh-config-file" title="Link to this heading">#</a></h2>
+<p>If you are frequently accessing the cluster from an unmanaged machine,
+you may find yourself typing the same SSH commands over and over again.
+You can make your life easier by editing the SSH config file.
+This is a text file that lives in your home directory and contains
+a list of aliases for SSH connections.</p>
+<p>On your local PC/Laptop, navigate to the <code class="docutils literal notranslate"><span class="pre">.ssh</span></code> folder in your user’s home <code class="docutils literal notranslate"><span class="pre">~</span></code> directory:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>~/.ssh
+</pre></div>
+</div>
+<p>List the files in this directory:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>ls<span class="w"> </span>-1
+<span class="go">authorized_keys</span>
+<span class="go">config</span>
+<span class="go">known_hosts</span>
+</pre></div>
+</div>
+<p>Some of these files may not exist yet. Next we will open the <code class="docutils literal notranslate"><span class="pre">config</span></code> file
+using the terminal text editor <code class="docutils literal notranslate"><span class="pre">nano</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>nano<span class="w"> </span>config
+</pre></div>
+</div>
+<p>If the file doesn’t exist yet, it will be created.
+Add the following lines to the file:</p>
+<div class="literal-block-wrapper docutils container" id="config-content">
+<div class="code-block-caption"><span class="caption-text">config</span><a class="headerlink" href="#config-content" title="Link to this code">#</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Specify our intermediate jump host, aka the bastion node</span>
+Host<span class="w"> </span>swc-bastion
+<span class="w">    </span>HostName<span class="w"> </span>ssh.swc.ucl.ac.uk
+<span class="w">    </span>User<span class="w"> </span>&lt;SWC-USERNAME&gt;
+
+<span class="c1"># Specify how to get to the gateway node by jumping through the bastion node</span>
+<span class="c1"># The gateway hostname is specified as the jump-host would see it</span>
+Host<span class="w"> </span>swc-gateway
+<span class="w">    </span>HostName<span class="w"> </span>hpc-gw2
+<span class="w">    </span>User<span class="w"> </span>&lt;SWC-USERNAME&gt;
+<span class="w">    </span>ProxyJump<span class="w"> </span>swc-bastion
+</pre></div>
+</div>
+</div>
+<p>Save the file by pressing <code class="docutils literal notranslate"><span class="pre">Ctrl+O</span></code>, then <code class="docutils literal notranslate"><span class="pre">Enter</span></code>.
+Exit the <code class="docutils literal notranslate"><span class="pre">nano</span></code> editor by pressing <code class="docutils literal notranslate"><span class="pre">Ctrl+X</span></code>.</p>
+<p>From now on, you can directly SSH into the <em>gateway</em> node by typing:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>ssh<span class="w"> </span>swc-gateway
+</pre></div>
+</div>
+<p>You can also use the same syntax to SSH into the <em>bastion</em> node:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>ssh<span class="w"> </span>swc-bastion
+</pre></div>
+</div>
+<p>In both cases, typing the <code class="docutils literal notranslate"><span class="pre">logout</span></code> command once will return you to your local machine.</p>
+</section>
+<section id="ssh-keys">
+<h2>SSH keys<a class="headerlink" href="#ssh-keys" title="Link to this heading">#</a></h2>
+<p>If you are bored of typing your password every time you SSH into the cluster,
+you can set up authentication via SSH keys. You will have to do some work
+upfront, but it will save you tons of time in the long run. Plus, it’s more secure.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header sd-bg-info sd-bg-text-info">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-info" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg></span><span class="sd-summary-text">How does SSH key authentication work?</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">You generate a pair of keys locally - a public and a private one -
+and then copy the public key to the remote machine.
+When you try to SSH into the remote machine, the SSH client on your local machine
+will use the private key to generate a signature, which the SSH server on the
+remote machine will verify using the public key. If the signature is valid,
+you will be granted access.</p>
+<p class="sd-card-text">There are several cryptographic algorithms that can be used to generate the keys.
+They can be selected using the <code class="docutils literal notranslate"><span class="pre">-t</span></code> argument of the <code class="docutils literal notranslate"><span class="pre">ssh-keygen</span></code> command.
+In the following example, we use <code class="docutils literal notranslate"><span class="pre">ed25519</span></code>, as it strikes a good balance between
+security and speed for most use cases.</p>
+</div>
+</details><p>To generate a pair of SSH keys, run the following command on your local machine:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519
+</pre></div>
+</div>
+<p>You will be prompted to enter a file path for the key. You may accept the
+default - <code class="docutils literal notranslate"><span class="pre">~/.ssh/id_ed25519</span></code> - or choose another path/name.</p>
+<p>Next, you will be prompted to enter a passphrase.
+This is an extra layer of security, but you can leave it blank if you want.</p>
+<p>There are now two new files in the <code class="docutils literal notranslate"><span class="pre">.ssh</span></code> directory:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>~/.ssh
+<span class="gp">$ </span>ls<span class="w"> </span>-1
+<span class="go">authorized_keys</span>
+<span class="go">config</span>
+<span class="hll"><span class="go">id_ed25519</span>
+</span><span class="hll"><span class="go">id_ed25519.pub</span>
+</span><span class="go">known_hosts</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">id_ed25519</span></code> file is your private key and <strong>it should never be shared with anyone</strong>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">id_ed25519.pub</span></code> file is your public key.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>In most cases, you don’t need to explicitly specify the location of the private key
+in your <code class="docutils literal notranslate"><span class="pre">~/.ssh/config</span></code> file because SSH will automatically look for the default key names
+(like <code class="docutils literal notranslate"><span class="pre">id_rsa</span></code>, <code class="docutils literal notranslate"><span class="pre">id_ed25519</span></code>, etc.) in the <code class="docutils literal notranslate"><span class="pre">~/.ssh</span></code> directory.</p>
+<p>However, if you’re using a non-default name or location for your private key,
+or if you have multiple keys and want to specify which one to use for a particular host,
+then you can add the <code class="docutils literal notranslate"><span class="pre">IdentityFile</span></code> directive in your <code class="docutils literal notranslate"><span class="pre">~/.ssh/config</span></code> to
+point to the private key.</p>
+<p>For example, if you have a private key with a custom name <code class="docutils literal notranslate"><span class="pre">&lt;MY-SPECIAL-KEY&gt;</span></code>
+in the <code class="docutils literal notranslate"><span class="pre">~/.ssh</span></code> directory, you can add the following lines to your <code class="docutils literal notranslate"><span class="pre">~/.ssh/config</span></code> file:</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">config</span><a class="headerlink" href="#id2" title="Link to this code">#</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Specify our intermediate jump host, aka the bastion node</span>
+Host<span class="w"> </span>swc-bastion
+<span class="w">    </span>HostName<span class="w"> </span>ssh.swc.ucl.ac.uk
+<span class="w">    </span>User<span class="w"> </span>&lt;SWC-USERNAME&gt;
+<span class="hll"><span class="w">    </span>IdentityFile<span class="w"> </span>~/.ssh/&lt;MY-SPECIAL-KEY&gt;
+</span>
+<span class="c1"># Specify how to get to the gateway node by jumping through the bastion node</span>
+<span class="c1"># The gateway hostname is specified as the jump-host would see it</span>
+Host<span class="w"> </span>swc-gateway
+<span class="w">    </span>HostName<span class="w"> </span>hpc-gw2
+<span class="w">    </span>User<span class="w"> </span>&lt;SWC-USERNAME&gt;
+<span class="w">    </span>ProxyJump<span class="w"> </span>swc-bastion
+<span class="hll"><span class="w">    </span>IdentityFile<span class="w"> </span>~/.ssh/&lt;MY-SPECIAL-KEY&gt;
+</span></pre></div>
+</div>
+</div>
+</div>
+<p>Next, let’s copy the public key you just generated to the remote machines.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>ssh-copy-id<span class="w"> </span>-i<span class="w"> </span>id_ed25519.pub<span class="w"> </span>swc-gateway
+</pre></div>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header sd-bg-info sd-bg-text-info">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-info" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg></span><span class="sd-summary-text">Explain the above command</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The <code class="docutils literal notranslate"><span class="pre">ssh-copy-id</span></code> command uses the configuration we previously set up
+in the <code class="docutils literal notranslate"><span class="pre">config</span></code> file to figure out how to reach the remote machine.</p>
+<p class="sd-card-text">It copies the specified public key to your home directory on the target machine (in this case <code class="docutils literal notranslate"><span class="pre">swc-gateway</span></code>) and adds it to the <code class="docutils literal notranslate"><span class="pre">.ssh/authorized_keys</span></code> file there.</p>
+<p class="sd-card-text">Since your SWC home directory is shared across all HPC nodes, the public
+key will be available on all of them. That’s why you only need to run the above command once, with either <code class="docutils literal notranslate"><span class="pre">swc-bastion</span></code> or <code class="docutils literal notranslate"><span class="pre">swc-gateway</span></code> as the target.</p>
+</div>
+</details><p>🎉 Congrats! You can now directly SSH into the <em>gateway</em> node without typing your password:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>ssh<span class="w"> </span>swc-gateway
+</pre></div>
+</div>
+<p>In case you want to SSH into the <em>bastion</em> node, you can do so by typing:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>ssh<span class="w"> </span>swc-bastion
+</pre></div>
+</div>
+</section>
+</section>
+
+<div class="section ablog__blog_comments">
+   
+</div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="SLURM-arguments.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">SLURM arguments primer</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="SSH-vscode.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">SSH into an unmanaged machine using VSCode</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#abbreviations">Abbreviations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#log-into-the-cluster">Log into the cluster</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-do-we-ssh-twice">Why do we SSH twice?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#note-on-managed-desktops">Note on managed desktops</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ssh-config-file">SSH config file</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ssh-keys">SSH keys</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item"><p class="sphinx-version">
+    Created using <a href="https://sphinx-doc.org/">Sphinx</a> 9.1.0.
+    <br/>
+    </p>
+    <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a>
+    0.20.0.
+    </p>
+    </div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><div class="things-in-a-row">
+    <a href="https://www.sainsburywellcome.org/web/">
+        <img src="../../_static/light-logo-swc.png" alt="Sponsors" class="only-light img-sponsor"/>
+        <img src="../../_static/dark-logo-swc.png" alt="Sponsors" class="only-dark img-sponsor"/>
+    </a>
+    <a href="https://www.ucl.ac.uk/gatsby/gatsby-computational-neuroscience-unit">
+        <img src="../../_static/light-logo-gatsby.png" alt="Sponsors" class="only-light img-sponsor"/>
+        <img src="../../_static/dark-logo-gatsby.png" alt="Sponsors" class="only-dark img-sponsor"/>
+    </a>
+    <a href="https://www.ucl.ac.uk/">
+        <img src="../../_static/light-logo-ucl.png" alt="Sponsors" class="only-light img-sponsor"/>
+        <img src="../../_static/dark-logo-ucl.png" alt="Sponsors" class="only-dark img-sponsor"/>
+    </a>
+</div></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

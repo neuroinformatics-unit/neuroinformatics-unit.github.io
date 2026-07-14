@@ -1,0 +1,1420 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Use SLEAP on the SWC HPC cluster &#8212; NIU</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=fd6457a4" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=43278677" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../../_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
+
+    <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+    <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../_static/sg-tags.js?v=d80f6fa4"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('consent', 'default', {
+                    'ad_storage': 'denied',
+                    'ad_user_data': 'denied',
+                    'ad_personalization': 'denied',
+                    'analytics_storage': 'denied'
+                });
+            </script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-6260TGM7TY"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-6260TGM7TY');
+            </script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'howto/data_analysis/HPC-module-SLEAP';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="canonical" href="https://neuroinformatics.dev/howto/data_analysis/HPC-module-SLEAP.html" />
+    <link rel="icon" href="../../_static/logo_light.png"/>
+    <link rel="author" title="About these documents" href="../../about.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Programming" href="../programming/index.html" />
+    <link rel="prev" title="Community" href="../electrophysiology/community.html" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../../_static/searchtools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../searchindex.js"></script>
+     
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo_light.png" class="logo__image only-light" alt=""/>
+    <img src="../../_static/logo_dark.png" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">NIU</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../about.html">
+    About us
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../people.html">
+    People
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../projects.html">
+    Projects
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../publications.html">
+    Publications & Media
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../blog/index.html">
+    Blog
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" current active">
+  <a class="nav-link dropdown-item nav-internal" href="../index.html">
+    HowTo
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../get-involved/index.html">
+    Get involved
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../resources/index.html">
+    Resources
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../open-software-summer-school/index.html">
+    Open Software Summer School
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../gsoc-2025-datashuttle.html">
+    <no title>
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/neuroinformatics-unit/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/company/neuroinformatics-unit" title="LinkedIn" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i><span class="visually-hidden">LinkedIn</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://mastodon.online/@neuroinformatics" title="Mastodon" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-mastodon fa-lg" aria-hidden="true"></i><span class="visually-hidden">Mastodon</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://bsky.app/profile/neuroinformatics.dev" title="Bluesky" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-bluesky fa-lg" aria-hidden="true"></i><span class="visually-hidden">Bluesky</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://neuroinformatics.zulipchat.com/" title="Zulip (chat)" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-comments fa-lg" aria-hidden="true"></i><span class="visually-hidden">Zulip (chat)</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../about.html">
+    About us
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../people.html">
+    People
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../projects.html">
+    Projects
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../publications.html">
+    Publications & Media
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../blog/index.html">
+    Blog
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    HowTo
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../get-involved/index.html">
+    Get involved
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../resources/index.html">
+    Resources
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../open-software-summer-school/index.html">
+    Open Software Summer School
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../gsoc-2025-datashuttle.html">
+    <no title>
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/neuroinformatics-unit/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/company/neuroinformatics-unit" title="LinkedIn" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i><span class="visually-hidden">LinkedIn</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://mastodon.online/@neuroinformatics" title="Mastodon" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-mastodon fa-lg" aria-hidden="true"></i><span class="visually-hidden">Mastodon</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://bsky.app/profile/neuroinformatics.dev" title="Bluesky" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-bluesky fa-lg" aria-hidden="true"></i><span class="visually-hidden">Bluesky</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://neuroinformatics.zulipchat.com/" title="Zulip (chat)" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-comments fa-lg" aria-hidden="true"></i><span class="visually-hidden">Zulip (chat)</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item pst-sidebar-collapse"><button id="pst-collapse-sidebar-button" aria-expanded="true" aria-controls="pst-primary-sidebar">
+  <svg class="pst-icon" role="img" aria-hidden="true" focusable="false" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <path fill="currentColor" d="M3 15.5C2.36232 15.5 1.74874 15.2564 1.28478 14.8189C0.820828 14.3815 0.541576 13.7832 0.504167 13.1467L0.5 13L0.5 3C0.499965 2.36232 0.743605 1.74874 1.18107 1.28478C1.61854 0.820828 2.21676 0.541576 2.85333 0.504167L3 0.5L13 0.5C13.6377 0.499965 14.2513 0.743605 14.7152 1.18107C15.1792 1.61854 15.4584 2.21676 15.4958 2.85333L15.5 3L15.5 13C15.5 13.6377 15.2564 14.2513 14.8189 14.7152C14.3815 15.1792 13.7832 15.4584 13.1467 15.4958L13 15.5L3 15.5ZM3 13.8333L10.5 13.8333L10.5 2.16667L3 2.16667C2.79589 2.16669 2.59889 2.24163 2.44636 2.37726C2.29383 2.5129 2.19638 2.69979 2.1725 2.9025L2.16667 3L2.16667 13C2.16669 13.2041 2.24163 13.4011 2.37726 13.5536C2.5129 13.7062 2.69979 13.8036 2.9025 13.8275L3 13.8333ZM6.65583 10.325L6.5775 10.2558L4.91083 8.58917C4.76735 8.44567 4.68116 8.25476 4.66843 8.05223C4.65569 7.84971 4.71729 7.6495 4.84167 7.48917L4.91083 7.41083L6.5775 5.74417C6.72747 5.59471 6.9287 5.50794 7.14032 5.50148C7.35194 5.49502 7.55809 5.56935 7.7169 5.70937C7.8757 5.8494 7.97525 6.04463 7.99533 6.25539C8.01541 6.46616 7.95451 6.67667 7.825 6.84417L7.75583 6.9225L6.67917 8L7.75583 9.0775C7.89931 9.22099 7.98551 9.41191 7.99824 9.61443C8.01097 9.81695 7.94938 10.0172 7.825 10.1775L7.75583 10.2558C7.61234 10.3993 7.42142 10.4855 7.2189 10.4982C7.01638 10.511 6.81617 10.4494 6.65583 10.325Z"/>
+  </svg>
+  <span class="pst-collapse-sidebar-label">Collapse Sidebar</span>
+  <span class="pst-expand-sidebar-label">Expand Sidebar</span>
+</button></div>
+        <div class="sidebar-primary-item">
+
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Data Analysis</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../electrophysiology/index.html">Electrophysiology</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../electrophysiology/resources.html">Resources</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../electrophysiology/example_pipelines/index.html">Examples</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../electrophysiology/example_pipelines/auto_examples_ephys/index.html">Python Pipelines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../electrophysiology/example_pipelines/matlab_examples.html">Matlab Pipelines</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="../electrophysiology/community.html">Community</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Use SLEAP on the SWC HPC cluster</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../programming/index.html">Programming</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../programming/SLURM-arguments.html">SLURM arguments primer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programming/SSH-SWC-cluster.html">Set up SSH for the SWC HPC cluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programming/SSH-vscode.html">SSH into an unmanaged machine using VSCode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programming/vscode-with-slurm-job.html">Using VSCode with interactive SLURM jobs on the SWC HPC cluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programming/Mount-ceph-ubuntu.html">Mount ceph storage on Ubuntu permanently</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programming/Mount-ceph-ubuntu-temp.html">Mount ceph storage on Ubuntu temporarily</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programming/Cookiecutter-cruft.html">Update cookiecutter-generated files with cruft</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programming/port-fowarding.html">Accessing HTTP servers running on the HPC with port forwarding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programming/Troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../open_science/index.html">Open Science</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../open_science/Licensing.html">Software licensing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../open_science/Data-sharing.html">Data Sharing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../open_science/GIN-repositories.html">Create a GIN repository for your dataset</a></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">HowTo</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Data Analysis</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Use SLEAP on the SWC HPC cluster</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                   <section class="tex2jax_ignore mathjax_ignore" id="use-sleap-on-the-swc-hpc-cluster">
+<h1>Use SLEAP on the SWC HPC cluster<a class="headerlink" href="#use-sleap-on-the-swc-hpc-cluster" title="Link to this heading">#</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Some links within this document point to the
+<a class="reference external" href="https://liveuclac.sharepoint.com/sites/SWCIntranet">SWC internal wiki</a>,
+which is only accessible from within the SWC network.
+We recommend opening these links in a new tab.</p>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header sd-bg-info sd-bg-text-info">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-info" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg></span><span class="sd-summary-text">Interpreting code blocks</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Shell commands will be shown in code blocks like this
+(with the <code class="docutils literal notranslate"><span class="pre">$</span></code> sign indicating the shell prompt):</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello world!&quot;</span>
+</pre></div>
+</div>
+<p class="sd-card-text">Similarly, Python code blocks will appear with the <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code> sign indicating the
+Python interpreter prompt:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello world!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="sd-card-text">The expected outputs of both Shell and Python commands will be shown without
+any prompt:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Hello world!</span>
+</pre></div>
+</div>
+</div>
+</details><section id="abbreviations">
+<h2>Abbreviations<a class="headerlink" href="#abbreviations" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Acronym</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://sleap.ai/">SLEAP</a></p></td>
+<td><p>Social LEAP Estimates Animal Poses</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.sainsburywellcome.org/web/">SWC</a></p></td>
+<td><p>Sainsbury Wellcome Centre</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://en.wikipedia.org/wiki/High-performance_computing">HPC</a></p></td>
+<td><p>High Performance Computing</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://en.wikipedia.org/wiki/Information_technology">IT</a></p></td>
+<td><p>Information Technology</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://en.wikipedia.org/wiki/Graphical_user_interface">GUI</a></p></td>
+<td><p>Graphical User Interface</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://slurm.schedmd.com/">SLURM</a></p></td>
+<td><p>Simple Linux Utility for Resource Management</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">#</a></h2>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header sd-bg-info sd-bg-text-info">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-info" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg></span><span class="sd-summary-text">Note on managed Linux desktops</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">SWC’s IT team offers managed Linux desktops with direct access to SLURM, the HPC modules, and the SWC filesystem. If you have one, you can skip the prerequisite steps: open a terminal, run <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">SLEAP</span></code>, and use SLEAP directly (including <code class="docutils literal notranslate"><span class="pre">sleap</span> <span class="pre">label</span></code> for the GUI).</p>
+<p class="sd-card-text">You may still want to offload GPU-intensive work to an HPC node (e.g. for more powerful GPUs or parallel jobs). In that case, read the sections on <a class="reference internal" href="#sleap-training"><span class="std std-ref">model training</span></a> and <a class="reference internal" href="#sleap-inference"><span class="std std-ref">inference</span></a>.</p>
+</div>
+</details><section id="access-to-the-hpc-cluster">
+<span id="id1"></span><h3>Access to the HPC cluster<a class="headerlink" href="#access-to-the-hpc-cluster" title="Link to this heading">#</a></h3>
+<p>Verify that you can access HPC gateway node (typing your <code class="docutils literal notranslate"><span class="pre">&lt;SWC-PASSWORD&gt;</span></code> both times when prompted):</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>ssh<span class="w"> </span>&lt;SWC-USERNAME&gt;@ssh.swc.ucl.ac.uk
+<span class="gp">$ </span>ssh<span class="w"> </span>hpc-gw2
+</pre></div>
+</div>
+<p>To learn more about accessing the HPC via SSH, see the <a class="reference internal" href="../programming/SSH-SWC-cluster.html#ssh-cluster-target"><span class="std std-ref">relevant how-to guide</span></a>.</p>
+</section>
+<section id="access-to-the-sleap-module">
+<h3>Access to the SLEAP module<a class="headerlink" href="#access-to-the-sleap-module" title="Link to this heading">#</a></h3>
+<p>Once you are on the HPC gateway node, you can list the available SLEAP modules:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>module<span class="w"> </span>avail<span class="w"> </span>SLEAP
+<span class="go">----------------------- /ceph/apps/ubuntu-24/modulefiles-----------------------</span>
+<span class="go">   ...  SLEAP/2025-09-30    SLEAP/2026-05-08 (D)</span>
+
+<span class="go">  Where:</span>
+<span class="go">   D:  Default Module</span>
+<span class="go">...</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">SLEAP/2026-05-08</span></code> corresponds to <a class="reference external" href="https://docs.sleap.ai/v1.6.3/">SLEAP v1.6.3</a> (PyTorch backend) — this is the recommended module for all new projects, and what this guide documents.</p></li>
+<li><p>Older modules use the <a class="reference external" href="https://legacy.sleap.ai/">legacy TensorFlow backend</a>. Use these only if you need compatibility with an existing project.</p></li>
+<li><p>Modules dated before <code class="docutils literal notranslate"><span class="pre">2025-09-30</span></code> were built for an older Ubuntu base and are no longer recommended.</p></li>
+</ul>
+<p>To load the recommended PyTorch-based version (the default):</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>module<span class="w"> </span>load<span class="w"> </span>SLEAP
+</pre></div>
+</div>
+<p>To load an older TensorFlow-based version (e.g. <code class="docutils literal notranslate"><span class="pre">SLEAP/2025-09-30</span></code>, which is SLEAP v1.3.4), specify its full name:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>module<span class="w"> </span>load<span class="w"> </span>SLEAP/2025-09-30
+</pre></div>
+</div>
+<p>To view the modules that are currently loaded:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>module<span class="w"> </span>list
+<span class="go">Currently Loaded Modules:</span>
+<span class="go">...   15) SLEAP/2026-05-08</span>
+</pre></div>
+</div>
+<p>If you have troubles with loading the SLEAP module,
+see the <a class="reference internal" href="#troubleshooting"><span class="std std-ref">Troubleshooting</span></a> section.</p>
+</section>
+<section id="install-sleap-on-your-local-pc-laptop">
+<h3>Install SLEAP on your local PC/laptop<a class="headerlink" href="#install-sleap-on-your-local-pc-laptop" title="Link to this heading">#</a></h3>
+<p>While you can delegate the GPU-intensive work to the HPC cluster,
+you will need to use the SLEAP GUI for some steps, such as labelling frames.
+Thus, you also need to install SLEAP on your local PC/laptop.</p>
+<p>We recommend following the official <a class="reference external" href="https://docs.sleap.ai/latest/installation/">SLEAP installation guide</a>.
+To avoid compatibility issues, make sure your local SLEAP version matches the module you plan to use on the cluster.
+The guide also includes a <a class="reference external" href="https://docs.sleap.ai/latest/installation/#version-compatibility">version compatibility table</a> showing which versions of <code class="docutils literal notranslate"><span class="pre">sleap</span></code>, <code class="docutils literal notranslate"><span class="pre">sleap-io</span></code>, and <code class="docutils literal notranslate"><span class="pre">sleap-nn</span></code> belong together—use this when installing a specific version or updating pinned packages.</p>
+<p>For example, to match the current default module (<code class="docutils literal notranslate"><span class="pre">SLEAP/2026-05-08</span></code>, SLEAP v1.6.3), you can install the corresponding versions locally with:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">uv tool install --python 3.13 &quot;sleap[nn]==1.6.3&quot; --with &quot;sleap-io==0.7.0&quot; --with &quot;sleap-nn==0.2.0&quot; --torch-backend auto</span>
+</pre></div>
+</div>
+</section>
+<section id="mount-the-swc-filesystem-on-your-local-pc-laptop">
+<h3>Mount the SWC filesystem on your local PC/laptop<a class="headerlink" href="#mount-the-swc-filesystem-on-your-local-pc-laptop" title="Link to this heading">#</a></h3>
+<p>The rest of this guide assumes that you have mounted the SWC filesystem on your local PC/laptop.
+If you have not done so, please follow the relevant instructions on the
+<a class="reference external" href="https://liveuclac.sharepoint.com/sites/SSC/SitePages/SSC-SWC-Storage-Platform-Overview-198905992.aspx">SWC internal wiki</a>.</p>
+<p>We will also assume that the data you are working with are stored in a <code class="docutils literal notranslate"><span class="pre">ceph</span></code>
+directory to which you have access to. In the rest of this guide, we will use the path
+<code class="docutils literal notranslate"><span class="pre">/ceph/scratch/neuroinformatics-dropoff/SLEAP_HPC_test_data</span></code> which contains a SLEAP project
+for test purposes. You should replace this with the path to your own data.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header sd-bg-warning sd-bg-text-warning">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-alert-fill" viewBox="0 0 16 16" aria-hidden="true"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575ZM8 5a.75.75 0 0 0-.75.75v2.5a.75.75 0 0 0 1.5 0v-2.5A.75.75 0 0 0 8 5Zm1 6a1 1 0 1 0-2 0 1 1 0 0 0 2 0Z"></path></svg></span><span class="sd-summary-text">Data storage location matters</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The cluster has fast access to data stored on the <code class="docutils literal notranslate"><span class="pre">ceph</span></code> filesystem, so if your
+data is stored elsewhere, make sure to transfer it to <code class="docutils literal notranslate"><span class="pre">ceph</span></code> before running the job.
+You can use tools such as <a class="reference external" href="https://linux.die.net/man/1/rsync"><code class="docutils literal notranslate"><span class="pre">rsync</span></code></a>
+to copy data from your local machine to <code class="docutils literal notranslate"><span class="pre">ceph</span></code> via an ssh connection. For example:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>rsync<span class="w"> </span>-avz<span class="w"> </span>&lt;LOCAL-DIR&gt;<span class="w"> </span>&lt;SWC-USERNAME&gt;@ssh.swc.ucl.ac.uk:/ceph/scratch/neuroinformatics-dropoff/SLEAP_HPC_test_data
+</pre></div>
+</div>
+</div>
+</details></section>
+</section>
+<section id="model-training">
+<span id="sleap-training"></span><h2>Model training<a class="headerlink" href="#model-training" title="Link to this heading">#</a></h2>
+<p>This will consist of two parts: <a class="reference internal" href="#prepare-the-training-job"><span class="std std-ref">preparing a training job</span></a>
+(on your local SLEAP installation) and <a class="reference internal" href="#run-the-training-job"><span class="std std-ref">running a training job</span></a>
+(on the HPC cluster’s SLEAP module). Some evaluation metrics for the trained models
+can be <a class="reference internal" href="#model-evaluation"><span class="std std-ref">viewed via the SLEAP GUI</span></a> on your local SLEAP installation.</p>
+<section id="prepare-the-training-job">
+<span id="id2"></span><h3>Prepare the training job<a class="headerlink" href="#prepare-the-training-job" title="Link to this heading">#</a></h3>
+<p>Follow the <a class="reference external" href="https://docs.sleap.ai/latest/tutorial/overview/">SLEAP tutorial</a> till
+the end of the section on <a class="reference external" href="https://docs.sleap.ai/latest/tutorial/initial-labeling/">Initial Labelling</a>.
+Ensure that the project file (e.g. <code class="docutils literal notranslate"><span class="pre">labels.v002.slp</span></code>) is saved in the mounted SWC filesystem
+(as opposed to your local filesystem).</p>
+<p>Next, read the <a class="reference external" href="https://docs.sleap.ai/latest/tutorial/training-a-model/">Training a model</a> section
+of the tutorial, but <strong>do not hit the <code class="docutils literal notranslate"><span class="pre">Run</span></code> button</strong> in the SLEAP GUI just yet
+(that would run the training job on your local machine, which is not what we want).
+Instead, follow the instructions in the <a class="reference external" href="https://docs.sleap.ai/latest/guides/running-sleap-remotely/">Running SLEAP remotely</a> guide,
+i.e. <em>Predict</em> -&gt; <em>Run Training…</em> -&gt; <em>Export Training Job Package…</em>.</p>
+<ul class="simple">
+<li><p>For selecting the right configuration parameters, see the <a class="reference external" href="https://nn.sleap.ai/latest/reference/models/">Model Configuration</a> guide.</p></li>
+<li><p>Set the <em>Inference Target</em> parameter to <em>Nothing</em>. Remote training and inference (prediction) are easiest to run separately on the HPC Cluster.</p></li>
+<li><p>Make sure to save the exported training job package (e.g. <code class="docutils literal notranslate"><span class="pre">labels.v002.slp.training_job.zip</span></code>) in the mounted SWC filesystem, for example, in the same directory as the project file.</p></li>
+<li><p>Unzip the training job package. This will create a folder with the same name (minus the <code class="docutils literal notranslate"><span class="pre">.zip</span></code> extension). This folder contains everything needed to run the training job on the HPC cluster: YAML configuration files and a packaged labels file (<code class="docutils literal notranslate"><span class="pre">.pkg.slp</span></code>).</p></li>
+</ul>
+</section>
+<section id="run-the-training-job">
+<span id="id3"></span><h3>Run the training job<a class="headerlink" href="#run-the-training-job" title="Link to this heading">#</a></h3>
+<p>Login to the HPC cluster as described above.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>ssh<span class="w"> </span>&lt;SWC-USERNAME&gt;@ssh.swc.ucl.ac.uk
+<span class="gp">$ </span>ssh<span class="w"> </span>hpc-gw2
+</pre></div>
+</div>
+<p>Navigate to the training job folder (replace with your own path) and list its contents:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>/ceph/scratch/neuroinformatics-dropoff/SLEAP_HPC_test_data
+<span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>labels.v002.slp.training_job
+<span class="gp">$ </span>ls<span class="w"> </span>-1
+<span class="go">centered_instance.yaml</span>
+<span class="go">centroid.yaml</span>
+<span class="go">inference-script.sh</span>
+<span class="go">jobs.yaml</span>
+<span class="go">labels.v002.pkg.slp</span>
+<span class="go">train-script.sh</span>
+</pre></div>
+</div>
+<p>The YAML configuration files specify the model architecture, training hyperparameters,
+and data pipeline settings for each model. You can inspect them with
+<code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">centroid.yaml</span></code> or open them in a text editor.</p>
+<p>The precise files will depend on the model configuration you chose in SLEAP.
+Here we see two config files, one for the ‘centroid’ and another for
+the ‘centered_instance’ model. That’s because in this example we have chosen
+the <a class="reference external" href="https://nn.sleap.ai/latest/reference/models/#top-down">‘Top-Down</a>’ configuration, which consists of two neural networks - the first
+for isolating the animal instances (by finding their centroids) and the second
+for predicting all the body parts per instance.</p>
+<p><img alt="Top-Down model configuration" src="https://nn.sleap.ai/latest/assets/images/topdown_approach.jpg" /></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header sd-bg-info sd-bg-text-info">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-info" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg></span><span class="sd-summary-text">More on ‘Top-Down’ vs ‘Bottom-Up’ models</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Although the ‘Top-Down’ configuration was designed with multiple animals in mind,
+it can also be used for single-animal videos,
+where the animal occupies a relatively small portion of the frame - see
+<a class="reference external" href="https://nn.sleap.ai/latest/reference/models/">Model Configuration</a> for more info.</p>
+</div>
+</details><p>SLEAP also generates a <code class="docutils literal notranslate"><span class="pre">train-script.sh</span></code> file in the training job folder.
+You can inspect it with <code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">train-script.sh</span></code> to see the training commands it contains.
+These are useful as a reference, but be cautious about copying them verbatim.
+They may point to folders on the machine that exported the training package,
+rather than on the cluster. They may also include a <code class="docutils literal notranslate"><span class="pre">trainer_config.run_name=...</span></code>
+setting whose value contains an <code class="docutils literal notranslate"><span class="pre">=</span></code> sign. This makes SLEAP stop with an error like
+<code class="docutils literal notranslate"><span class="pre">mismatched</span> <span class="pre">input</span> <span class="pre">'='</span> <span class="pre">expecting</span></code>. Instead, we’ll write the <code class="docutils literal notranslate"><span class="pre">sleap</span> <span class="pre">train</span></code> commands from
+scratch in the next step, letting SLEAP name each training run automatically.</p>
+<p>Next you need to create a SLURM batch script, which will schedule the training job
+on the HPC cluster. Create a new file called <code class="docutils literal notranslate"><span class="pre">train-slurm.sh</span></code> inside the training job
+folder (the same folder that holds the config files), because the training commands
+below use paths relative to that folder. You can create it in the terminal with
+<code class="docutils literal notranslate"><span class="pre">nano</span></code>/<code class="docutils literal notranslate"><span class="pre">vim</span></code>, or write it in a text editor on your local machine and copy it in.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>nano<span class="w"> </span>train-slurm.sh
+</pre></div>
+</div>
+<p>An example is provided below, followed by explanations.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="ch">#!/bin/bash</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="c1">#SBATCH -J slp_train # job name</span>
+<span class="linenos"> 4</span><span class="c1">#SBATCH -p gpu # partition (queue)</span>
+<span class="linenos"> 5</span><span class="c1">#SBATCH -N 1   # number of nodes</span>
+<span class="linenos"> 6</span><span class="c1">#SBATCH --mem 32G # memory pool for all cores</span>
+<span class="linenos"> 7</span><span class="c1">#SBATCH --ntasks-per-node=1 # one process per node</span>
+<span class="linenos"> 8</span><span class="c1">#SBATCH --cpus-per-task=8   # CPU cores available to the process</span>
+<span class="linenos"> 9</span><span class="c1">#SBATCH -t 0-06:00 # time (D-HH:MM)</span>
+<span class="linenos">10</span><span class="c1">#SBATCH --gres gpu:a100:1 # request 1 GPU of a given type (see dropdown below)</span>
+<span class="linenos">11</span><span class="c1">#SBATCH -o slurm.%x.%N.%j.out # STDOUT</span>
+<span class="linenos">12</span><span class="c1">#SBATCH -e slurm.%x.%N.%j.err # STDERR</span>
+<span class="linenos">13</span><span class="c1">#SBATCH --mail-type=ALL</span>
+<span class="linenos">14</span><span class="c1">#SBATCH --mail-user=user@domain.com</span>
+<span class="linenos">15</span>
+<span class="linenos">16</span><span class="c1"># Print GPU info</span>
+<span class="linenos">17</span>nvidia-smi
+<span class="linenos">18</span>
+<span class="linenos">19</span><span class="c1"># Load the SLEAP module</span>
+<span class="linenos">20</span>module<span class="w"> </span>load<span class="w"> </span>SLEAP
+<span class="linenos">21</span>
+<span class="linenos">22</span><span class="c1"># Run the training for each model</span>
+<span class="linenos">23</span>sleap<span class="w"> </span>train<span class="w"> </span>--config-name<span class="w"> </span>centroid.yaml<span class="w"> </span>--config-dir<span class="w"> </span>.<span class="w"> </span>trainer_config.ckpt_dir<span class="o">=</span><span class="s1">&#39;models&#39;</span>
+<span class="linenos">24</span>sleap<span class="w"> </span>train<span class="w"> </span>--config-name<span class="w"> </span>centered_instance.yaml<span class="w"> </span>--config-dir<span class="w"> </span>.<span class="w"> </span>trainer_config.ckpt_dir<span class="o">=</span><span class="s1">&#39;models&#39;</span>
+</pre></div>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header sd-bg-info sd-bg-text-info">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-info" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg></span><span class="sd-summary-text">Explanation of the batch script</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<ul>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">#SBATCH</span></code> lines are SLURM directives specifying the resources needed for the job.
+See our <a class="reference internal" href="../programming/SLURM-arguments.html#slurm-arguments-target"><span class="std std-ref">SLURM primer</span></a> and the <a class="reference external" href="https://slurm.schedmd.com/sbatch.html">SLURM documentation</a> for details.</p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">--ntasks-per-node=1</span></code> tells SLURM to launch one process per node. PyTorch Lightning
+(which SLEAP uses internally) requires this form rather than <code class="docutils literal notranslate"><span class="pre">--ntasks</span></code> or <code class="docutils literal notranslate"><span class="pre">-n</span></code>;
+Lightning then manages GPU parallelism within that single process.
+<code class="docutils literal notranslate"><span class="pre">--cpus-per-task=8</span></code> allocates CPU cores to that process for data loading and preprocessing.</p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">--gres</span> <span class="pre">gpu:a100:1</span></code> requests 1 GPU of type A100. To request any available GPU, use <code class="docutils literal notranslate"><span class="pre">--gres</span> <span class="pre">gpu:1</span></code>.
+Inspect available GPU types by listing the nodes in the <code class="docutils literal notranslate"><span class="pre">gpu</span></code> and <code class="docutils literal notranslate"><span class="pre">gpu_lowp</span></code> partitions:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sinfo<span class="w"> </span>-p<span class="w"> </span>gpu,gpu_lowp<span class="w"> </span>-o<span class="w"> </span><span class="s2">&quot;%N %G&quot;</span><span class="w"> </span>--noheader
+</pre></div>
+</div>
+<p class="sd-card-text">Look for the string between <code class="docutils literal notranslate"><span class="pre">gpu:</span></code> and the next <code class="docutils literal notranslate"><span class="pre">:</span></code> (e.g. <code class="docutils literal notranslate"><span class="pre">a100</span></code>, <code class="docutils literal notranslate"><span class="pre">l40s</span></code>).
+Avoid GPUs with CUDA compute capability below 7.5 (unsupported by PyTorch ≥ 2.5);
+at the time of writing, only <code class="docutils literal notranslate"><span class="pre">p5000</span></code> cards are incompatible.
+See the <a class="reference external" href="https://liveuclac.sharepoint.com/sites/SSC/SitePages/SSC-CPU-and-GPU-Platform-architecture-165449857.aspx">SWC wiki</a>
+and the <a class="reference external" href="https://developer.nvidia.com/cuda/gpus">NVIDIA CUDA GPUs page</a> for compute capabilities.</p>
+</li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">SLEAP</span></code> loads the latest SLEAP module and its dependencies.
+PyTorch bundles its own CUDA runtime, so no separate <code class="docutils literal notranslate"><span class="pre">cuda</span></code> module is needed.</p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">--config-dir</span> <span class="pre">.</span></code> and <code class="docutils literal notranslate"><span class="pre">trainer_config.ckpt_dir='models'</span></code> use paths relative to the
+training job folder, so submit the script from within that folder (see below).</p></li>
+<li><p class="sd-card-text">Each <code class="docutils literal notranslate"><span class="pre">sleap</span> <span class="pre">train</span></code> call trains one model: <code class="docutils literal notranslate"><span class="pre">--config-name</span></code> selects the YAML file,
+<code class="docutils literal notranslate"><span class="pre">--config-dir</span> <span class="pre">.</span></code> points to the current folder containing it, and
+<code class="docutils literal notranslate"><span class="pre">trainer_config.ckpt_dir='models'</span></code> saves the trained model into a <code class="docutils literal notranslate"><span class="pre">models/</span></code>
+subfolder of the training job folder.</p></li>
+</ul>
+</div>
+</details><p>Using a legacy (TensorFlow) module instead? See <a class="reference internal" href="#legacy-modules"><span class="std std-ref">Legacy (TensorFlow) modules</span></a> for the equivalent training commands.</p>
+<p>Now submit the batch script from within the training job folder, so that the
+relative paths in the script resolve correctly:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>/ceph/scratch/neuroinformatics-dropoff/SLEAP_HPC_test_data/labels.v002.slp.training_job
+<span class="gp">$ </span>sbatch<span class="w"> </span>train-slurm.sh
+<span class="go">Submitted batch job 3445652</span>
+</pre></div>
+</div>
+<p>You may monitor the progress of the job in various ways:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+squeue</label><div class="sd-tab-content docutils">
+<p>View the status of the queued/running jobs with <a class="reference external" href="https://slurm.schedmd.com/squeue.html"><code class="docutils literal notranslate"><span class="pre">squeue</span></code></a>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>squeue<span class="w"> </span>--me
+<span class="go">JOBID    PARTITION  NAME     USER      ST  TIME   NODES  NODELIST(REASON)</span>
+<span class="go">3445652  gpu        slp_train sirmpila  R   23:11  1      gpu-sr670-20</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
+sacct</label><div class="sd-tab-content docutils">
+<p>View status of running/completed jobs with <a class="reference external" href="https://slurm.schedmd.com/sacct.html"><code class="docutils literal notranslate"><span class="pre">sacct</span></code></a>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sacct
+<span class="go">JobID           JobName  Partition    Account  AllocCPUS      State ExitCode</span>
+<span class="go">------------ ---------- ---------- ---------- ---------- ---------- --------</span>
+<span class="go">3445652      slp_train        gpu     swc-ac          2  COMPLETED      0:0</span>
+<span class="go">3445652.bat+      batch                swc-ac          2  COMPLETED      0:0</span>
+</pre></div>
+</div>
+<p>Run <code class="docutils literal notranslate"><span class="pre">sacct</span></code> with some more helpful arguments.
+For example, you can view jobs from the last 24 hours, displaying the time
+elapsed and the peak memory usage in KB (MaxRSS):</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sacct<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--starttime<span class="w"> </span><span class="k">$(</span>date<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;24 hours ago&#39;</span><span class="w"> </span>+%Y-%m-%dT%H:%M:%S<span class="k">)</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--endtime<span class="w"> </span><span class="k">$(</span>date<span class="w"> </span>+%Y-%m-%dT%H:%M:%S<span class="k">)</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--format<span class="o">=</span>JobID,JobName,Partition,State,Start,Elapsed,MaxRSS
+
+<span class="go">JobID           JobName  Partition      State               Start    Elapsed     MaxRSS</span>
+<span class="go">------------ ---------- ---------- ---------- ------------------- ---------- ----------</span>
+<span class="go">4043595       slp_infer        gpu     FAILED 2023-10-10T18:14:31   00:00:35</span>
+<span class="go">4043595.bat+      batch                FAILED 2023-10-10T18:14:31   00:00:35    271104K</span>
+<span class="go">4043603       slp_infer        gpu     FAILED 2023-10-10T18:27:32   00:01:37</span>
+<span class="go">4043603.bat+      batch                FAILED 2023-10-10T18:27:32   00:01:37    423476K</span>
+<span class="go">4043611       slp_infer        gpu    PENDING             Unknown   00:00:00</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-2">
+view the logs</label><div class="sd-tab-content docutils">
+<p>View the contents of standard output and error
+(the node name and job ID will differ in each case):</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>cat<span class="w"> </span>slurm.gpu-sr670-20.3445652.out
+<span class="gp">$ </span>cat<span class="w"> </span>slurm.gpu-sr670-20.3445652.err
+</pre></div>
+</div>
+</div>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header sd-bg-warning sd-bg-text-warning">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-alert-fill" viewBox="0 0 16 16" aria-hidden="true"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575ZM8 5a.75.75 0 0 0-.75.75v2.5a.75.75 0 0 0 1.5 0v-2.5A.75.75 0 0 0 8 5Zm1 6a1 1 0 1 0-2 0 1 1 0 0 0 2 0Z"></path></svg></span><span class="sd-summary-text">Out-of-memory (OOM) errors</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">If you encounter out-of-memory errors, keep in mind that there are two main sources of memory usage:</p>
+<ul class="simple">
+<li><p class="sd-card-text">CPU memory (RAM), specified via the <code class="docutils literal notranslate"><span class="pre">--mem</span></code> argument in the SLURM batch script. This is the memory used by the Python process running the training job and is shared among all the CPU cores.</p></li>
+<li><p class="sd-card-text">GPU memory, this is the memory used by the GPU card(s) and depends on the GPU card type you requested via the <code class="docutils literal notranslate"><span class="pre">--gres</span> <span class="pre">gpu:1</span></code> argument in the SLURM batch script. To increase it, you can request a specific GPU card type with more GPU memory (e.g. <code class="docutils literal notranslate"><span class="pre">--gres</span> <span class="pre">gpu:a100:1</span></code>). The SWC wiki provides a <a class="reference external" href="https://liveuclac.sharepoint.com/sites/SSC/SitePages/SSC-CPU-and-GPU-Platform-architecture-165449857.aspx">list of all GPU card types and their specifications</a>.</p></li>
+<li><p class="sd-card-text">If requesting more memory doesn’t help, you can try reducing the size of your SLEAP models. You may tweak the model backbone architecture, or play with <em>Input scaling</em>, <em>Max stride</em> and <em>Batch size</em>. See SLEAP’s <a class="reference external" href="https://docs.sleap.ai/">documentation</a> and <a class="reference external" href="https://github.com/talmolab/sleap/discussions">discussion forum</a> for more details.</p></li>
+</ul>
+</div>
+</details></section>
+</section>
+<section id="model-evaluation">
+<span id="id4"></span><h2>Model evaluation<a class="headerlink" href="#model-evaluation" title="Link to this heading">#</a></h2>
+<p>Upon successful completion of the training job, a <code class="docutils literal notranslate"><span class="pre">models</span></code> folder will have
+been created inside the training job folder (as set by <code class="docutils literal notranslate"><span class="pre">trainer_config.ckpt_dir='models'</span></code>).
+It contains one subfolder per training run.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>/ceph/scratch/neuroinformatics-dropoff/SLEAP_HPC_test_data/labels.v002.slp.training_job
+<span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>models
+<span class="gp">$ </span>ls<span class="w"> </span>-1
+<span class="go">&#39;260512_151547.centroid.n=46&#39;</span>
+<span class="go">&#39;260512_151547.centered_instance.n=46&#39;</span>
+</pre></div>
+</div>
+<p>Each subfolder holds the trained model files (e.g. <code class="docutils literal notranslate"><span class="pre">best.ckpt</span></code>),
+their configurations (<code class="docutils literal notranslate"><span class="pre">training_config.yaml</span></code>) and some evaluation metrics.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span><span class="s1">&#39;260512_151547.centroid.n=46&#39;</span>
+<span class="gp">$ </span>ls<span class="w"> </span>-1
+<span class="go">best.ckpt</span>
+<span class="go">initial_config.yaml</span>
+<span class="go">labels_gt.train.0.slp</span>
+<span class="go">labels_gt.val.0.slp</span>
+<span class="go">labels_pr.train.0.slp</span>
+<span class="go">labels_pr.val.0.slp</span>
+<span class="go">metrics.train.0.npz</span>
+<span class="go">metrics.val.0.npz</span>
+<span class="go">training_config.yaml</span>
+<span class="go">training_log.csv</span>
+</pre></div>
+</div>
+<p>The SLEAP GUI on your local machine can be used to quickly evaluate the trained models.</p>
+<ul class="simple">
+<li><p>Select <em>Predict</em> -&gt; <em>Evaluation Metrics for Trained Models…</em></p></li>
+<li><p>Click on <em>Add Trained Models(s)</em> and select the folder containing the model(s) you want to evaluate.</p></li>
+<li><p>You can view the basic metrics on the shown table or you can also view a more detailed report (including plots) by clicking <em>View Metrics</em>.</p></li>
+</ul>
+<p>For more detailed evaluation metrics, you can refer to <a class="reference external" href="https://docs.sleap.ai/latest/notebooks/Model_evaluation/">SLEAP’s model evaluation notebook</a>.</p>
+</section>
+<section id="model-inference">
+<span id="sleap-inference"></span><h2>Model inference<a class="headerlink" href="#model-inference" title="Link to this heading">#</a></h2>
+<p>By inference, we mean using a trained model to predict the labels on new frames/videos.
+SLEAP provides the <code class="docutils literal notranslate"><span class="pre">sleap</span> <span class="pre">track</span></code> command line utility for running inference
+on a single video or a folder of videos.
+See the <a class="reference external" href="https://docs.sleap.ai/latest/guides/running-sleap-remotely/#remote-inference">remote inference guide</a> for more details.</p>
+<p>Create a new file called <code class="docutils literal notranslate"><span class="pre">infer-slurm.sh</span></code>. Because this script uses absolute paths
+(see below), you can keep it anywhere you like.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>nano<span class="w"> </span>infer-slurm.sh
+</pre></div>
+</div>
+<p>An example is provided below.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="ch">#!/bin/bash</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="c1">#SBATCH -J slp_infer # job name</span>
+<span class="linenos"> 4</span><span class="c1">#SBATCH -p gpu # partition</span>
+<span class="linenos"> 5</span><span class="c1">#SBATCH -N 1   # number of nodes</span>
+<span class="linenos"> 6</span><span class="c1">#SBATCH --mem 64G # memory pool for all cores</span>
+<span class="linenos"> 7</span><span class="c1">#SBATCH --ntasks-per-node=1 # one process per node</span>
+<span class="linenos"> 8</span><span class="c1">#SBATCH --cpus-per-task=16  # CPU cores available to the process</span>
+<span class="linenos"> 9</span><span class="c1">#SBATCH -t 0-02:00 # time (D-HH:MM)</span>
+<span class="linenos">10</span><span class="c1">#SBATCH --gres gpu:a100:1 # request 1 GPU of a given type</span>
+<span class="linenos">11</span><span class="c1">#SBATCH -o slurm.%x.%N.%j.out # write STDOUT</span>
+<span class="linenos">12</span><span class="c1">#SBATCH -e slurm.%x.%N.%j.err # write STDERR</span>
+<span class="linenos">13</span><span class="c1">#SBATCH --mail-type=ALL</span>
+<span class="linenos">14</span><span class="c1">#SBATCH --mail-user=user@domain.com</span>
+<span class="linenos">15</span>
+<span class="linenos">16</span><span class="c1"># Print GPU info</span>
+<span class="linenos">17</span>nvidia-smi
+<span class="linenos">18</span>
+<span class="linenos">19</span><span class="c1"># Load the SLEAP module</span>
+<span class="linenos">20</span>module<span class="w"> </span>load<span class="w"> </span>SLEAP
+<span class="linenos">21</span>
+<span class="linenos">22</span><span class="c1"># Define directory for SLEAP project</span>
+<span class="linenos">23</span><span class="nv">SLP_DIR</span><span class="o">=</span>/ceph/scratch/neuroinformatics-dropoff/SLEAP_HPC_test_data
+<span class="linenos">24</span>
+<span class="linenos">25</span><span class="c1"># Make a directory to store the predictions (if it doesn&#39;t exist already)</span>
+<span class="linenos">26</span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="nv">$SLP_DIR</span>/predictions
+<span class="linenos">27</span>
+<span class="linenos">28</span><span class="c1"># Run the inference command</span>
+<span class="linenos">29</span>sleap<span class="w"> </span>track<span class="w"> </span><span class="se">\</span>
+<span class="linenos">30</span><span class="w">    </span>-i<span class="w"> </span><span class="nv">$SLP_DIR</span>/mice.mp4<span class="w"> </span><span class="se">\</span>
+<span class="linenos">31</span><span class="w">    </span>-m<span class="w"> </span><span class="nv">$SLP_DIR</span>/labels.v002.slp.training_job/models/260512_151547.centroid.n<span class="o">=</span><span class="m">46</span><span class="w"> </span><span class="se">\</span>
+<span class="linenos">32</span><span class="w">    </span>-m<span class="w"> </span><span class="nv">$SLP_DIR</span>/labels.v002.slp.training_job/models/260512_151547.centered_instance.n<span class="o">=</span><span class="m">46</span><span class="w"> </span><span class="se">\</span>
+<span class="linenos">33</span><span class="w">    </span>-d<span class="w"> </span>auto<span class="w"> </span><span class="se">\</span>
+<span class="linenos">34</span><span class="w">    </span>-b<span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="se">\</span>
+<span class="linenos">35</span><span class="w">    </span>--tracking<span class="w"> </span><span class="se">\</span>
+<span class="linenos">36</span><span class="w">    </span>-o<span class="w"> </span><span class="nv">$SLP_DIR</span>/predictions/labels.v002.predictions.slp
+</pre></div>
+</div>
+<p>The script mirrors the training one, with a few differences:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--cpus-per-task</span></code> and <code class="docutils literal notranslate"><span class="pre">--mem</span></code> are higher; tune these to your specific job, ideally after a scaled-down trial run.</p></li>
+<li><p>The time limit <code class="docutils literal notranslate"><span class="pre">-t</span></code> is lower, since inference is typically faster than training (depends on video length and number of models).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sleap</span> <span class="pre">train</span></code> is replaced by a single <code class="docutils literal notranslate"><span class="pre">sleap</span> <span class="pre">track</span></code> call (split across lines with <code class="docutils literal notranslate"><span class="pre">\</span></code> for readability).</p></li>
+<li><p>Paths are absolute (built from <code class="docutils literal notranslate"><span class="pre">$SLP_DIR</span></code>) rather than relative to the training job folder.</p></li>
+</ul>
+<p>In the <code class="docutils literal notranslate"><span class="pre">sleap</span> <span class="pre">track</span></code> call, <code class="docutils literal notranslate"><span class="pre">-i</span></code> is the input video to run inference on (replace this
+with the path to your own video), each <code class="docutils literal notranslate"><span class="pre">-m</span></code> points to a trained model from the training
+step, and <code class="docutils literal notranslate"><span class="pre">-o</span></code> is the output file where the predictions will be saved.</p>
+<p>Using a legacy (TensorFlow) module instead? See <a class="reference internal" href="#legacy-modules"><span class="std std-ref">Legacy (TensorFlow) modules</span></a> for the equivalent inference commands.</p>
+<p>You can submit and monitor the inference job in the same way as the training job.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sbatch<span class="w"> </span>infer-slurm.sh
+<span class="gp">$ </span>squeue<span class="w"> </span>--me
+</pre></div>
+</div>
+<p>Upon completion, a <code class="docutils literal notranslate"><span class="pre">labels.v002.predictions.slp</span></code> file will have been created in the <code class="docutils literal notranslate"><span class="pre">predictions</span></code> directory.</p>
+<p>You can use the SLEAP GUI on your local machine to load and view the predictions:
+<em>File</em> -&gt; <em>Open Project…</em> -&gt; select the <code class="docutils literal notranslate"><span class="pre">labels.v002.predictions.slp</span></code> file.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The SLEAP CLI commands <code class="docutils literal notranslate"><span class="pre">sleap</span> <span class="pre">train</span></code> and <code class="docutils literal notranslate"><span class="pre">sleap</span> <span class="pre">track</span></code> are aliases for
+<code class="docutils literal notranslate"><span class="pre">sleap-nn</span> <span class="pre">train</span></code> and <code class="docutils literal notranslate"><span class="pre">sleap-nn</span> <span class="pre">track</span></code> respectively; the two forms work
+interchangeably. For a full list of arguments, run <code class="docutils literal notranslate"><span class="pre">&lt;command&gt;</span> <span class="pre">--help</span></code>
+(with the SLEAP module loaded) or consult the SLEAP-NN documentation on
+<a class="reference external" href="https://nn.sleap.ai/latest/guides/training/">training</a>,
+<a class="reference external" href="https://nn.sleap.ai/latest/guides/inference/">inference</a> and
+<a class="reference external" href="https://nn.sleap.ai/latest/guides/tracking/">tracking</a>.</p>
+</div>
+</section>
+<section id="the-training-inference-cycle">
+<h2>The training-inference cycle<a class="headerlink" href="#the-training-inference-cycle" title="Link to this heading">#</a></h2>
+<p>Now that you have some predictions, you can keep improving your models by repeating
+the training-inference cycle.</p>
+<p>This predictions file has the same format as a standard SLEAP project file,
+and you can use the GUI (on your local machine) to manually correct the predictions
+or merge them into an existing SLEAP project.</p>
+<p>For example, you can:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.sleap.ai/latest/tutorial/correcting-predictions/">Manually correct</a> some of the predictions</p></li>
+<li><p>Merge corrected labels into the initial training set (<em>File</em> -&gt; <em>Merge into Project…</em>).</p></li>
+<li><p>Save the merged training set under a new name, e.g. <code class="docutils literal notranslate"><span class="pre">labels.v003.slp</span></code></p></li>
+<li><p>Export a new training job <code class="docutils literal notranslate"><span class="pre">labels.v003.slp.training_job</span></code> (you may reuse the training configurations from before)</p></li>
+<li><p>Repeat the training-inference cycle until satisfied</p></li>
+</ul>
+</section>
+<section id="troubleshooting">
+<span id="id5"></span><h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading">#</a></h2>
+<section id="problems-with-the-sleap-module">
+<h3>Problems with the SLEAP module<a class="headerlink" href="#problems-with-the-sleap-module" title="Link to this heading">#</a></h3>
+<p>In this section, we will describe how to test that the SLEAP module is loaded
+correctly for you and that it can use the available GPUs.</p>
+<p>Login to the HPC cluster as described <a class="reference internal" href="#access-to-the-hpc-cluster"><span class="std std-ref">above</span></a>.</p>
+<p>Start an interactive job on a GPU node. This step is necessary, because we need
+to test the module’s access to the GPU.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>srun<span class="w"> </span>-p<span class="w"> </span>gpu<span class="w"> </span>--gres<span class="o">=</span>gpu:1<span class="w"> </span>--pty<span class="w"> </span>bash<span class="w"> </span>-i
+</pre></div>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header sd-bg-info sd-bg-text-info">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-info" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg></span><span class="sd-summary-text">Explain the above command</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<ul class="simple">
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">-p</span> <span class="pre">gpu</span></code> requests a node from the ‘gpu’ partition (queue)</p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">--gres=gpu:1</span></code> requests 1 GPU of any kind. Use <code class="docutils literal notranslate"><span class="pre">--gres=gpu:&lt;type&gt;:1</span></code> to request a specific GPU type (e.g. <code class="docutils literal notranslate"><span class="pre">--gres=gpu:a100:1</span></code>).</p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">--pty</span></code> is short for ‘pseudo-terminal’</p></li>
+<li><p class="sd-card-text">The <code class="docutils literal notranslate"><span class="pre">-i</span></code> stands for ‘interactive’</p></li>
+</ul>
+<p class="sd-card-text">Taken together, the above command will start an interactive bash terminal session
+on a node of the ‘gpu’ partition, equipped with 1 GPU card.</p>
+</div>
+</details><p>First, let’s verify that you are indeed on a node equipped with a functional
+GPU, by typing <code class="docutils literal notranslate"><span class="pre">nvidia-smi</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>nvidia-smi
+<span class="go">Tue May 12 17:02:17 2026</span>
+<span class="go">+-----------------------------------------------------------------------------------------+</span>
+<span class="go">| NVIDIA-SMI 580.95.05              Driver Version: 580.95.05      CUDA Version: 13.0     |</span>
+<span class="go">+-----------------------------------------+------------------------+----------------------+</span>
+<span class="go">| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |</span>
+<span class="go">| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |</span>
+<span class="go">|                                         |                        |               MIG M. |</span>
+<span class="go">|=========================================+========================+======================|</span>
+<span class="go">|   0  Quadro RTX 5000                On  |   00000000:37:00.0 Off |                  Off |</span>
+<span class="go">| 33%   27C    P8             11W /  230W |       1MiB /  16384MiB |      0%      Default |</span>
+<span class="go">|                                         |                        |                  N/A |</span>
+<span class="go">+-----------------------------------------+------------------------+----------------------+</span>
+
+<span class="go">+-----------------------------------------------------------------------------------------+</span>
+<span class="go">| Processes:                                                                              |</span>
+<span class="go">|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |</span>
+<span class="go">|        ID   ID                                                               Usage      |</span>
+<span class="go">|=========================================================================================|</span>
+<span class="go">|  No running processes found                                                             |</span>
+<span class="go">+-----------------------------------------------------------------------------------------+</span>
+</pre></div>
+</div>
+<p>Your output should look similar to the above. You will be able to see the GPU
+name, temperature, memory usage, etc. If you see an error message instead,
+(even though you are on a GPU node) please contact the SWC Scientific Computing team.</p>
+<p>Next, load the SLEAP module.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>module<span class="w"> </span>load<span class="w"> </span>SLEAP
+</pre></div>
+</div>
+<p>Verify that SLEAP is correctly installed and can access the GPU by running
+the built-in diagnostic command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>sleap<span class="w"> </span>doctor
+</pre></div>
+</div>
+<p>This prints system information, package versions, and confirms whether a GPU
+was detected. Look for the <code class="docutils literal notranslate"><span class="pre">[GPU</span> <span class="pre">/</span> <span class="pre">CUDA]</span></code> section.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header sd-bg-info sd-bg-text-info">
+<span class="sd-summary-icon"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-info" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg></span><span class="sd-summary-text">Verify manually via the Python interpreter</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">If <code class="docutils literal notranslate"><span class="pre">sleap</span> <span class="pre">doctor</span></code> fails, you can also verify manually by starting a
+Python interpreter and running the following commands:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python
+</pre></div>
+</div>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">sleap</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">get_device_name</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="go">&#39;Quadro RTX 5000&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">exit</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details><p>When done, exit the GPU node:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span><span class="nb">exit</span>
+</pre></div>
+</div>
+<p>To completely exit the HPC cluster, you will need to type <code class="docutils literal notranslate"><span class="pre">exit</span></code> or
+<code class="docutils literal notranslate"><span class="pre">logout</span></code> until you are back to the terminal prompt of your local machine.
+See <a class="reference internal" href="../programming/SSH-SWC-cluster.html"><span class="std std-doc">Set up SSH for the SWC HPC cluster</span></a>
+for more information.</p>
+<p>Using a legacy (TensorFlow) module instead?
+See <a class="reference internal" href="#legacy-modules"><span class="std std-ref">Legacy (TensorFlow) modules</span></a> for the equivalent verification steps.</p>
+<p>If you encounter troubles with using the SLEAP module, contact
+Niko Sirmpilatze of the SWC <a class="reference external" href="https://neuroinformatics.dev/">Neuroinformatics Unit</a>.</p>
+</section>
+</section>
+<section id="legacy-tensorflow-modules">
+<span id="legacy-modules"></span><h2>Legacy (TensorFlow) modules<a class="headerlink" href="#legacy-tensorflow-modules" title="Link to this heading">#</a></h2>
+<p>If you are using a legacy SLEAP module (≤ 1.4.1, TensorFlow backend), the
+CLI uses <code class="docutils literal notranslate"><span class="pre">sleap-train</span></code> and <code class="docutils literal notranslate"><span class="pre">sleap-track</span></code> with JSON config files instead of
+the YAML-based <code class="docutils literal notranslate"><span class="pre">sleap</span> <span class="pre">train</span></code> / <code class="docutils literal notranslate"><span class="pre">sleap</span> <span class="pre">track</span></code> shown above. See the
+<a class="reference external" href="https://legacy.sleap.ai/">legacy SLEAP documentation</a> for full details;
+the equivalents for the steps in this guide are below.</p>
+<section id="training">
+<h3>Training<a class="headerlink" href="#training" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sleap-train<span class="w"> </span>centroid.json<span class="w"> </span>labels.v002.pkg.slp
+sleap-train<span class="w"> </span>centered_instance.json<span class="w"> </span>labels.v002.pkg.slp
+</pre></div>
+</div>
+<p>The exported training job package from legacy SLEAP also includes a
+<code class="docutils literal notranslate"><span class="pre">train-script.sh</span></code> containing these commands, so you can run
+<code class="docutils literal notranslate"><span class="pre">./train-script.sh</span></code> from the SLURM script. See the legacy
+<a class="reference external" href="https://legacy.sleap.ai/guides/remote.html#remote-training">remote training guide</a>
+and <a class="reference external" href="https://legacy.sleap.ai/guides/cli.html">CLI reference</a>.</p>
+</section>
+<section id="inference">
+<h3>Inference<a class="headerlink" href="#inference" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sleap-track<span class="w"> </span>video.mp4<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-m<span class="w"> </span>models/centroid/training_config.json<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-m<span class="w"> </span>models/centered_instance/training_config.json<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--gpu<span class="w"> </span>auto<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--tracking.tracker<span class="w"> </span>simple<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--tracking.similarity<span class="w"> </span>centroid<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-o<span class="w"> </span>predictions.slp
+</pre></div>
+</div>
+</section>
+<section id="verifying-the-module">
+<h3>Verifying the module<a class="headerlink" href="#verifying-the-module" title="Link to this heading">#</a></h3>
+<p>The verification steps in the <a class="reference internal" href="#troubleshooting"><span class="std std-ref">Troubleshooting</span></a> section
+use TensorFlow instead of PyTorch:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">sleap</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sleap</span><span class="o">.</span><span class="n">versions</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sleap</span><span class="o">.</span><span class="n">system_summary</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">tensorflow</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">tf</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">list_physical_devices</span><span class="p">(</span><span class="s1">&#39;GPU&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span><span class="o">.</span><span class="n">constant</span><span class="p">(</span><span class="s2">&quot;Hello world!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For details, see the <a class="reference external" href="https://legacy.sleap.ai/installation.html#testing-that-things-are-working">legacy SLEAP installation guide</a>.</p>
+</section>
+</section>
+</section>
+
+<div class="section ablog__blog_comments">
+   
+</div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../electrophysiology/community.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Community</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../programming/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Programming</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#abbreviations">Abbreviations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#access-to-the-hpc-cluster">Access to the HPC cluster</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#access-to-the-sleap-module">Access to the SLEAP module</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-sleap-on-your-local-pc-laptop">Install SLEAP on your local PC/laptop</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mount-the-swc-filesystem-on-your-local-pc-laptop">Mount the SWC filesystem on your local PC/laptop</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-training">Model training</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-the-training-job">Prepare the training job</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-the-training-job">Run the training job</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-evaluation">Model evaluation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-inference">Model inference</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-training-inference-cycle">The training-inference cycle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting">Troubleshooting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-with-the-sleap-module">Problems with the SLEAP module</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#legacy-tensorflow-modules">Legacy (TensorFlow) modules</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#training">Training</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inference">Inference</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#verifying-the-module">Verifying the module</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item"><p class="sphinx-version">
+    Created using <a href="https://sphinx-doc.org/">Sphinx</a> 9.1.0.
+    <br/>
+    </p>
+    <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a>
+    0.20.0.
+    </p>
+    </div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><div class="things-in-a-row">
+    <a href="https://www.sainsburywellcome.org/web/">
+        <img src="../../_static/light-logo-swc.png" alt="Sponsors" class="only-light img-sponsor"/>
+        <img src="../../_static/dark-logo-swc.png" alt="Sponsors" class="only-dark img-sponsor"/>
+    </a>
+    <a href="https://www.ucl.ac.uk/gatsby/gatsby-computational-neuroscience-unit">
+        <img src="../../_static/light-logo-gatsby.png" alt="Sponsors" class="only-light img-sponsor"/>
+        <img src="../../_static/dark-logo-gatsby.png" alt="Sponsors" class="only-dark img-sponsor"/>
+    </a>
+    <a href="https://www.ucl.ac.uk/">
+        <img src="../../_static/light-logo-ucl.png" alt="Sponsors" class="only-light img-sponsor"/>
+        <img src="../../_static/dark-logo-ucl.png" alt="Sponsors" class="only-dark img-sponsor"/>
+    </a>
+</div></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

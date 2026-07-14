@@ -1,0 +1,1173 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Create a GIN repository for your dataset &#8212; NIU</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=fd6457a4" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=43278677" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../../_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
+
+    <script src="../../_static/documentation_options.js?v=d45e8c67"></script>
+    <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../_static/sg-tags.js?v=d80f6fa4"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('consent', 'default', {
+                    'ad_storage': 'denied',
+                    'ad_user_data': 'denied',
+                    'ad_personalization': 'denied',
+                    'analytics_storage': 'denied'
+                });
+            </script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-6260TGM7TY"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-6260TGM7TY');
+            </script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'howto/open_science/GIN-repositories';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="canonical" href="https://neuroinformatics.dev/howto/open_science/GIN-repositories.html" />
+    <link rel="icon" href="../../_static/logo_light.png"/>
+    <link rel="author" title="About these documents" href="../../about.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Get involved" href="../../get-involved/index.html" />
+    <link rel="prev" title="Data Sharing" href="Data-sharing.html" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="../../_static/searchtools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../searchindex.js"></script>
+     
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo_light.png" class="logo__image only-light" alt=""/>
+    <img src="../../_static/logo_dark.png" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">NIU</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../about.html">
+    About us
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../people.html">
+    People
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../projects.html">
+    Projects
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../publications.html">
+    Publications & Media
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../blog/index.html">
+    Blog
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" current active">
+  <a class="nav-link dropdown-item nav-internal" href="../index.html">
+    HowTo
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../get-involved/index.html">
+    Get involved
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../resources/index.html">
+    Resources
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../open-software-summer-school/index.html">
+    Open Software Summer School
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../gsoc-2025-datashuttle.html">
+    <no title>
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/neuroinformatics-unit/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/company/neuroinformatics-unit" title="LinkedIn" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i><span class="visually-hidden">LinkedIn</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://mastodon.online/@neuroinformatics" title="Mastodon" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-mastodon fa-lg" aria-hidden="true"></i><span class="visually-hidden">Mastodon</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://bsky.app/profile/neuroinformatics.dev" title="Bluesky" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-bluesky fa-lg" aria-hidden="true"></i><span class="visually-hidden">Bluesky</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://neuroinformatics.zulipchat.com/" title="Zulip (chat)" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-comments fa-lg" aria-hidden="true"></i><span class="visually-hidden">Zulip (chat)</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../about.html">
+    About us
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../people.html">
+    People
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../projects.html">
+    Projects
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../publications.html">
+    Publications & Media
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../blog/index.html">
+    Blog
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    HowTo
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../get-involved/index.html">
+    Get involved
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../resources/index.html">
+    Resources
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../open-software-summer-school/index.html">
+    Open Software Summer School
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../gsoc-2025-datashuttle.html">
+    <no title>
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/neuroinformatics-unit/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/company/neuroinformatics-unit" title="LinkedIn" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i><span class="visually-hidden">LinkedIn</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://mastodon.online/@neuroinformatics" title="Mastodon" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-mastodon fa-lg" aria-hidden="true"></i><span class="visually-hidden">Mastodon</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://bsky.app/profile/neuroinformatics.dev" title="Bluesky" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-bluesky fa-lg" aria-hidden="true"></i><span class="visually-hidden">Bluesky</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://neuroinformatics.zulipchat.com/" title="Zulip (chat)" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-comments fa-lg" aria-hidden="true"></i><span class="visually-hidden">Zulip (chat)</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item pst-sidebar-collapse"><button id="pst-collapse-sidebar-button" aria-expanded="true" aria-controls="pst-primary-sidebar">
+  <svg class="pst-icon" role="img" aria-hidden="true" focusable="false" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <path fill="currentColor" d="M3 15.5C2.36232 15.5 1.74874 15.2564 1.28478 14.8189C0.820828 14.3815 0.541576 13.7832 0.504167 13.1467L0.5 13L0.5 3C0.499965 2.36232 0.743605 1.74874 1.18107 1.28478C1.61854 0.820828 2.21676 0.541576 2.85333 0.504167L3 0.5L13 0.5C13.6377 0.499965 14.2513 0.743605 14.7152 1.18107C15.1792 1.61854 15.4584 2.21676 15.4958 2.85333L15.5 3L15.5 13C15.5 13.6377 15.2564 14.2513 14.8189 14.7152C14.3815 15.1792 13.7832 15.4584 13.1467 15.4958L13 15.5L3 15.5ZM3 13.8333L10.5 13.8333L10.5 2.16667L3 2.16667C2.79589 2.16669 2.59889 2.24163 2.44636 2.37726C2.29383 2.5129 2.19638 2.69979 2.1725 2.9025L2.16667 3L2.16667 13C2.16669 13.2041 2.24163 13.4011 2.37726 13.5536C2.5129 13.7062 2.69979 13.8036 2.9025 13.8275L3 13.8333ZM6.65583 10.325L6.5775 10.2558L4.91083 8.58917C4.76735 8.44567 4.68116 8.25476 4.66843 8.05223C4.65569 7.84971 4.71729 7.6495 4.84167 7.48917L4.91083 7.41083L6.5775 5.74417C6.72747 5.59471 6.9287 5.50794 7.14032 5.50148C7.35194 5.49502 7.55809 5.56935 7.7169 5.70937C7.8757 5.8494 7.97525 6.04463 7.99533 6.25539C8.01541 6.46616 7.95451 6.67667 7.825 6.84417L7.75583 6.9225L6.67917 8L7.75583 9.0775C7.89931 9.22099 7.98551 9.41191 7.99824 9.61443C8.01097 9.81695 7.94938 10.0172 7.825 10.1775L7.75583 10.2558C7.61234 10.3993 7.42142 10.4855 7.2189 10.4982C7.01638 10.511 6.81617 10.4494 6.65583 10.325Z"/>
+  </svg>
+  <span class="pst-collapse-sidebar-label">Collapse Sidebar</span>
+  <span class="pst-expand-sidebar-label">Expand Sidebar</span>
+</button></div>
+        <div class="sidebar-primary-item">
+
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../data_analysis/index.html">Data Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../electrophysiology/index.html">Electrophysiology</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../electrophysiology/resources.html">Resources</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../electrophysiology/example_pipelines/index.html">Examples</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../electrophysiology/example_pipelines/auto_examples_ephys/index.html">Python Pipelines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../electrophysiology/example_pipelines/matlab_examples.html">Matlab Pipelines</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="../electrophysiology/community.html">Community</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_analysis/HPC-module-SLEAP.html">Use SLEAP on the SWC HPC cluster</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../programming/index.html">Programming</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../programming/SLURM-arguments.html">SLURM arguments primer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programming/SSH-SWC-cluster.html">Set up SSH for the SWC HPC cluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programming/SSH-vscode.html">SSH into an unmanaged machine using VSCode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programming/vscode-with-slurm-job.html">Using VSCode with interactive SLURM jobs on the SWC HPC cluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programming/Mount-ceph-ubuntu.html">Mount ceph storage on Ubuntu permanently</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programming/Mount-ceph-ubuntu-temp.html">Mount ceph storage on Ubuntu temporarily</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programming/Cookiecutter-cruft.html">Update cookiecutter-generated files with cruft</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programming/port-fowarding.html">Accessing HTTP servers running on the HPC with port forwarding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../programming/Troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Open Science</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Licensing.html">Software licensing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Data-sharing.html">Data Sharing</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Create a GIN repository for your dataset</a></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">HowTo</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Open Science</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Create a GIN repository for your dataset</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                   <section class="tex2jax_ignore mathjax_ignore" id="create-a-gin-repository-for-your-dataset">
+<span id="target-create-gin-repo"></span><h1>Create a GIN repository for your dataset<a class="headerlink" href="#create-a-gin-repository-for-your-dataset" title="Link to this heading">#</a></h1>
+<p><a class="reference external" href="https://gin.g-node.org/G-Node/Info/wiki">GIN</a> (hosted by the German Neuroinformatics Node) is a free and open data management system designed for neuroscientific data.</p>
+<p>It is web-accessible, based on <a class="reference external" href="https://git-scm.com/"><code class="docutils literal notranslate"><span class="pre">git</span></code></a> and <a class="reference external" href="https://git-annex.branchable.com/"><code class="docutils literal notranslate"><span class="pre">git-annex</span></code></a>, and allows you to keep your data in sync, backed up and easily accessible.</p>
+<p>Below we explain the main user workflows in GIN.</p>
+<section id="preparatory-steps-do-only-once">
+<h2>Preparatory steps - do only once<a class="headerlink" href="#preparatory-steps-do-only-once" title="Link to this heading">#</a></h2>
+<p>We need to do these steps only the first time we use GIN’s command-line interface (CLI) on our machine.</p>
+<ol class="arabic">
+<li><p>Create <a class="reference external" href="https://gin.g-node.org/user/sign_up">a GIN account</a>.</p></li>
+<li><p><a class="reference external" href="https://gin.g-node.org/G-Node/Info/wiki/GIN+CLI+Setup#setup-gin-client">Download GIN CLI</a> and set it up by running:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ gin login
+</pre></div>
+</div>
+<p>You will be prompted for your GIN username and password.</p>
+</li>
+<li><p>Confirm that everything is working properly by typing:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ gin --version
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="create-a-gin-repository">
+<h2>Create a GIN repository<a class="headerlink" href="#create-a-gin-repository" title="Link to this heading">#</a></h2>
+<p>To create a local and a remote GIN repository, follow these steps:</p>
+<ol class="arabic">
+<li><p><strong>Log in to the GIN server</strong></p>
+<p>Before running any <code class="docutils literal notranslate"><span class="pre">gin</span></code> commands, make sure you are logged in to your account by running:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ gin login
+</pre></div>
+</div>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>In Unix-like systems (Ubuntu, MacOS), you may need <code class="docutils literal notranslate"><span class="pre">sudo</span></code> permissions for some of the following <code class="docutils literal notranslate"><span class="pre">gin</span></code> commands. If so, remember to prepend all commands with <code class="docutils literal notranslate"><span class="pre">sudo</span></code>.</p>
+</div>
+<ol class="arabic" start="2">
+<li><p><strong>Initialise a GIN repository</strong></p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+In a new directory</label><div class="sd-tab-content docutils">
+<ul>
+<li><p>Create a new GIN repository locally and on the GIN server:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ gin create &lt;repository-name&gt;
+</pre></div>
+</div>
+<p>This will create a repository called <code class="docutils literal notranslate"><span class="pre">&lt;repository-name&gt;</span></code> on the GIN server under your user account, and a directory with the same name in the current working directory.</p>
+<details><summary> <b> OR alternatively: </b> </summary>
+<p>Create a repository in the GIN server <a class="reference external" href="https://gin.g-node.org/repo/create">from the browser</a>, and clone (retrieve) it to your local workspace:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ gin get &lt;username&gt;/&lt;remote-repository-name&gt;
+</pre></div>
+</div>
+</details>
+</li>
+<li><p>Next, move or copy files to the newly created directory to add data to the local GIN repository.</p></li>
+</ul>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
+In an existing directory</label><div class="sd-tab-content docutils">
+<ul>
+<li><p>Move to the relevant directory using <code class="docutils literal notranslate"><span class="pre">cd</span></code>.</p></li>
+<li><p>Create a new repository on the GIN server and locally in the current working directory:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ gin create --here &lt;repository-name&gt;
+</pre></div>
+</div>
+<p>This will create a repository named <code class="docutils literal notranslate"><span class="pre">&lt;repository-name&gt;</span></code> on the GIN server under your user account and link it to the current working directory.</p>
+<details><summary> <b> OR alternatively: </b> </summary>
+<ul>
+<li><p>Initialise the current working directory as a GIN repository:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ gin init
+</pre></div>
+</div>
+</li>
+<li><p>Add a remote:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ gin add-remote &lt;remote-name&gt; &lt;remote-repository-location&gt;
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">&lt;remote-name&gt;</span></code> is the name you want to give to the remote (e.g. <code class="docutils literal notranslate"><span class="pre">origin</span></code>) and <code class="docutils literal notranslate"><span class="pre">&lt;remote-repository-location&gt;</span></code> is the location of the data store, which should be in the form of alias:path or server:path (e.g. <code class="docutils literal notranslate"><span class="pre">gin:&lt;username&gt;/&lt;remote-repository-name&gt;</span></code>).</p>
+</li>
+<li><p>If the remote GIN repository doesn’t exist, you will be prompted to either create it, add simply the remote address, or abort.</p></li>
+</ul>
+</details>
+</li>
+</ul>
+</div>
+</div>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Initialising the GIN local repository (with <code class="docutils literal notranslate"><span class="pre">gin</span> <span class="pre">create</span></code> or <code class="docutils literal notranslate"><span class="pre">gin</span> <span class="pre">init</span></code>) will create a hidden <code class="docutils literal notranslate"><span class="pre">.git</span></code> directory under the local repository directory. The local repository excluding this <code class="docutils literal notranslate"><span class="pre">.git</span></code> folder is what we will later call the <em>working directory</em>.</p>
+</div>
+<ol class="arabic" start="3">
+<li><p><strong>Add files to the GIN remote repository</strong></p>
+<p>It is good practice to keep a record of the changes in the repository through commit messages. To keep a useful and clean commit history, it is also recommended to make small commits by selecting a subset of the files.</p>
+<ul>
+<li><p>To add a record of the current state of a local repository, run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ gin commit --message &lt;message&gt; &lt;filename&gt;
+</pre></div>
+</div>
+<p>You can replace the <code class="docutils literal notranslate"><span class="pre">&lt;filename&gt;</span></code> above by an expression with a wildcard (e.g., <code class="docutils literal notranslate"><span class="pre">*.png</span></code> to include all png files). It can also be a list of files separated by whitespaces. A <code class="docutils literal notranslate"><span class="pre">&lt;filename&gt;</span></code> equal to <code class="docutils literal notranslate"><span class="pre">.</span></code> will include all files with changes. See the full syntax for <code class="docutils literal notranslate"><span class="pre">gin</span> <span class="pre">commit</span></code> <a class="reference external" href="https://gin.g-node.org/G-Node/Info/wiki/GIN+CLI+Help#record-changes-in-local-repository">here</a>.</p>
+</li>
+<li><p>To upload all local changes to the remote GIN repository, run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ gin upload &lt;filename&gt;
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;filename&gt;</span></code> accepts the same inputs as in <code class="docutils literal notranslate"><span class="pre">gin</span> <span class="pre">commit</span></code>. You can run an upload command after a few commits (so not necessarily after every commit).</p>
+<p>You can use the flag <code class="docutils literal notranslate"><span class="pre">--to</span> <span class="pre">&lt;remote-name&gt;</span></code> to upload the changes to a specific remote. To show the remotes accessible to your GIN account, run <code class="docutils literal notranslate"><span class="pre">gin</span> <span class="pre">remotes</span></code>. See the full syntax for <code class="docutils literal notranslate"><span class="pre">gin</span> <span class="pre">upload</span></code> <a class="reference external" href="https://gin.g-node.org/G-Node/Info/wiki/GIN+CLI+Help#upload-local-changes-to-a-remote-repository">here</a>.</p>
+<p>If the set of files in the <code class="docutils literal notranslate"><span class="pre">gin</span> <span class="pre">upload</span></code> command includes files that have been changed locally but have not been committed, they will be automatically committed when uploading.</p>
+<p>After running <code class="docutils literal notranslate"><span class="pre">gin</span> <span class="pre">upload</span></code>, the data will be uploaded to the GIN server and it will be possible to retrieve it later from there. However, notice the upload command sends all changes made in the directory to the GIN server, including deletions, renames, etc. Therefore, if you delete files from the directory on your computer and perform a <code class="docutils literal notranslate"><span class="pre">gin</span> <span class="pre">upload</span></code>, the file will be removed from the server as well. Such changes can be synchronized by simply running <code class="docutils literal notranslate"><span class="pre">gin</span> <span class="pre">upload</span></code> (i.e., without specifying any files). See further details in the <a class="reference external" href="https://gin.g-node.org/G-Node/Info/wiki/GIN+CLI+Usage+Tutorial#basic-workflow-only-using-gin">GIN docs</a>.</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Consider whether to lock the data</strong></p>
+<p>You may want to lock the data to save space locally or to prevent editing in the future — see the section on <a class="reference internal" href="#file-locking"><span class="std std-ref">File locking</span></a> for further details.</p>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<ul class="simple">
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">gin</span> <span class="pre">ls</span></code> to check on the current status of the GIN repository (if your are familiar with <code class="docutils literal notranslate"><span class="pre">git</span></code>, is is somewhat equivalent to <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code>). The file status acronyms used in the output are described <a class="reference external" href="https://gin.g-node.org/G-Node/Info/wiki/GIN+CLI+Help#list-the-sync-status-of-files-in-the-local-repository">here</a>.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">gin</span> <span class="pre">sync</span></code> to sync the changes bi-directionally between the local and the remote GIN repository.</p></li>
+<li><p>If the output from <code class="docutils literal notranslate"><span class="pre">gin</span> <span class="pre">ls</span></code> doesn’t look right (e.g., files already uploaded to the GIN server appear under <code class="docutils literal notranslate"><span class="pre">Locally</span> <span class="pre">modified</span> <span class="pre">(unsaved)</span></code>), try running <code class="docutils literal notranslate"><span class="pre">gin</span> <span class="pre">sync</span></code> and check the status again.</p></li>
+<li><p>To logout from the GIN CLI session in the terminal, run <code class="docutils literal notranslate"><span class="pre">gin</span> <span class="pre">logout</span></code>.</p></li>
+</ul>
+</div>
+<section id="is-this-repository-public-or-private">
+<h3>Is this repository public or private?<a class="headerlink" href="#is-this-repository-public-or-private" title="Link to this heading">#</a></h3>
+<p>By default, all newly-created GIN repos are private.</p>
+<p>To make a GIN repository public:</p>
+<ol class="arabic simple">
+<li><p>Go to the homepage of the remote repository. You can see the URLs for the repositories you have access to by running <code class="docutils literal notranslate"><span class="pre">gin</span> <span class="pre">repos</span> <span class="pre">--all</span></code>.</p></li>
+<li><p>Click on <em>Settings</em> (top right).</p></li>
+<li><p>Unselect the <em>Private</em> checkbox under the <em>Basic settings</em> section.</p></li>
+</ol>
+<a class="bg-primary reference internal image-reference" href="../../_images/gin-privacy-settings.png"><img alt="../../_images/gin-privacy-settings.png" class="align-center bg-primary" src="../../_images/gin-privacy-settings.png" style="width: 600px;" />
+</a>
+</section>
+</section>
+<section id="download-a-gin-dataset">
+<h2>Download a GIN dataset<a class="headerlink" href="#download-a-gin-dataset" title="Link to this heading">#</a></h2>
+<p>To download a dataset from the GIN server to a local machine, follow these steps:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-2">
+If the local repository doesn’t exist</label><div class="sd-tab-content docutils">
+<ol class="arabic">
+<li><p>If the repository does not exist locally, clone it from the GIN remote server:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ gin get &lt;remote-repository-location&gt;
+</pre></div>
+</div>
+<p>This command will clone to repository to the current working directory, and download the large files in your dataset as lightweight placeholders.</p>
+</li>
+<li><p>To download the content of the placeholder files, run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ gin download --content
+</pre></div>
+</div>
+<p>If the large files in the dataset are <strong><em>locked</em></strong>, this command will download the content to the git annex subdirectory, and turn the placeholder files in the working directory into symlinks that point to the content.</p>
+<p>If the files are <strong><em>unlocked</em></strong>, this command will replace the placeholder files in the working directory with the full-content files and <strong>also</strong> download the content to the git annex locally.</p>
+<p>See the section on <a class="reference internal" href="#file-locking"><span class="std std-ref">File locking</span></a> for further details.</p>
+</li>
+</ol>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-3">
+If the local repository repository exists</label><div class="sd-tab-content docutils">
+<ol class="arabic">
+<li><p>If the repository already exists locally, we only need to download any changes from the remote. To do this, run from the GIN local repository:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ gin download
+</pre></div>
+</div>
+<p>This command will create new files that were added remotely, delete files that were removed, and update files that were changed. By default, new files are added as empty placeholders.</p>
+<p>To retrieve the content of all files in the repository, run the download command with the optional <code class="docutils literal notranslate"><span class="pre">--content</span></code> flag. See the <a class="reference external" href="https://gin.g-node.org/G-Node/Info/wiki/GIN+CLI+Help#download-all-new-information-from-a-remote-repository">GIN docs</a> for further details.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The content of individual files can be retrieved using:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ gin get-content &lt;filename&gt;
+</pre></div>
+</div>
+<p>and removed with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ gin remove-content &lt;filename&gt;
+</pre></div>
+</div>
+</div>
+</section>
+<section id="update-a-gin-dataset">
+<h2>Update a GIN dataset<a class="headerlink" href="#update-a-gin-dataset" title="Link to this heading">#</a></h2>
+<p>To update a dataset hosted in GIN:</p>
+<ol class="arabic">
+<li><p>First clone the repository locally by running:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ gin get &lt;remote-repository-location&gt;
+</pre></div>
+</div>
+<p>To see the <code class="docutils literal notranslate"><span class="pre">&lt;remote-repository-location&gt;</span></code>s accessible from your GIN account, run <code class="docutils literal notranslate"><span class="pre">gin</span> <span class="pre">repos</span> <span class="pre">--all</span></code>.</p>
+</li>
+<li><p>Copy or move the required files to the local repository and log the changes with a commit:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ gin commit -m &lt;message&gt; &lt;filename&gt;
+</pre></div>
+</div>
+</li>
+<li><p>Upload the committed changes to the GIN server:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ gin upload &lt;filename&gt;
+</pre></div>
+</div>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<ul>
+<li><p>To <a class="reference external" href="https://gin.g-node.org/G-Node/Info/wiki/FAQ+Troubleshooting#how-to-unannex-files">unannex a file</a>, that is, to remove a file from the GIN tracking before uploading:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ gin git annex unannex [path/filename]
+</pre></div>
+</div>
+</li>
+<li><p>To stop tracking an existing directory as a GIN repository, delete the <code class="docutils literal notranslate"><span class="pre">.git</span></code> directory.</p>
+<ul class="simple">
+<li><p>If in the directory we want to stop tracking the files are locked, remember to unlock them before deleting the <code class="docutils literal notranslate"><span class="pre">.git</span></code> directory! Otherwise we may not be able to delete the <code class="docutils literal notranslate"><span class="pre">.git/annex</span></code> content.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="file-locking">
+<h2>File locking<a class="headerlink" href="#file-locking" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://gin.g-node.org/G-Node/Info/wiki/GIN+CLI+Usage+Tutorial#file-locking">File locking</a> is an important part of GIN repositories. Below are the main ideas behind this.</p>
+<p>Files in a GIN repository can be <strong><em>locked</em></strong> or <strong><em>unlocked</em></strong>. The lock state relates to the nature of the placeholder files we get in the working directory when we clone the remote repository via <code class="docutils literal notranslate"><span class="pre">gin</span> <span class="pre">get</span> <span class="pre">&lt;remote-repository-location&gt;</span></code>:</p>
+<ul class="simple">
+<li><p><strong>on Unix-like systems</strong> (MacOS, Ubuntu):</p>
+<ul>
+<li><p>if a file is <strong><em>locked</em></strong>, its corresponding placeholder file will be a <strong><em>symlink</em></strong>. These symlinks point to the annexed content (under <code class="docutils literal notranslate"><span class="pre">.git/annex/objects</span></code>). We can open the files in the working directory (using the symlinks) but we can’t modify them.</p></li>
+<li><p>If a file is <strong><em>unlocked</em></strong>, the placeholder file in the working directory is an <strong><em>ASCII text file</em></strong> with a path. The path is approximately where the content of the file will be downloaded to when we request it.</p></li>
+</ul>
+</li>
+<li><p><strong>on Windows</strong>:</p>
+<ul>
+<li><p>if a file is <strong><em>locked</em></strong>, the placeholder file is a <strong><em>plain text file</em></strong> with a path pointing to the content in the git annex (but see caution below!).</p></li>
+<li><p>If a file is <strong><em>unlocked</em></strong>, the behaviour is the same as in Unix-like systems.</p></li>
+</ul>
+</li>
+</ul>
+<p>The lock state of a file is <strong><em>persistent</em></strong>. This means that if we clone a GIN (remote) repository whose files are unlocked, we lock them in the local copy, and then upload the local repository to the GIN server, the next time someone clones the GIN repository the files they fetch will be locked.</p>
+<p>Unlocked files can be edited. If the data is unlocked and the full content of the dataset is downloaded locally, the file in the working directory has content, and so does its copy under git annex.</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Note that if we download the contents of unlocked files locally, the disk usage of the files checked into the repo doubles, because the content exists both in the working directory and under the git annex. But in exchange users can modify and revert files to previous commits.</p>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>We have observed that it is possible to unintentionally overwrite locked files on Windows. Please be careful and double-check the output of <code class="docutils literal notranslate"><span class="pre">gin</span> <span class="pre">ls</span></code> before uploading. You may also want to read <a class="reference external" href="https://gin.g-node.org/G-Node/Info/wiki/Some+Notes+On+Git+Annex">about <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> on Windows</a> if you are considering using <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> directly.</p>
+</div>
+<p>Locked files cannot be edited. For example, if we open a locked image with Preview in MacOS and try to edit it, we will be asked if we wish to unlock the file. However, even if we do unlock it, we won’t be able to save any changes because we don’t have writing permissions.</p>
+<p>Files need to be committed before locking. We can switch the locking state for one or more files with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ gin lock &lt;filename&gt;
+</pre></div>
+</div>
+<p>and</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ gin unlock &lt;filename&gt;
+</pre></div>
+</div>
+<p>After changing the locking state, remember to record the new state with a <code class="docutils literal notranslate"><span class="pre">gin</span> <span class="pre">commit</span></code>!</p>
+<p><strong>Recommendations from the GIN docs on when to lock / unlock data:</strong></p>
+<ul class="simple">
+<li><p>Keep files <strong><em>unlocked</em></strong> if the workflow requires editing large files and keeping snapshots of the progress. But keep in mind this will increase storage use with every commit of a file.</p></li>
+<li><p>Keep files <strong><em>locked</em></strong> if using the repository’s main goal is long term storage as an archive, if files are only to be read, and if the filesystem supports symlinks. This will save extra storage of keeping two copies of the same file.</p></li>
+</ul>
+</section>
+<section id="download-a-gin-dataset-with-python">
+<h2>Download a GIN dataset with Python<a class="headerlink" href="#download-a-gin-dataset-with-python" title="Link to this heading">#</a></h2>
+<p>We recommend <a class="reference external" href="https://www.fatiando.org/pooch/latest/index.html">pooch</a> to programmatically download a dataset from a GIN repository’s URL. <code class="docutils literal notranslate"><span class="pre">pooch</span></code> is easy to use and has some nice
+functionalities like caching the downloaded data, verifying cryptographic hashes or unzipping files upon download.</p>
+<p>Here is a simple example of how to download a dataset from a GIN repository using <code class="docutils literal notranslate"><span class="pre">pooch</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pooch</span>
+
+<span class="n">filepath</span> <span class="o">=</span> <span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span>
+    <span class="n">url</span><span class="o">=</span><span class="s2">&quot;https://gin.g-node.org/&lt;username&gt;/&lt;repository&gt;/raw/main/&lt;file&gt;&quot;</span><span class="p">,</span>
+    <span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">path</span><span class="o">=</span><span class="s2">&quot;/home/&lt;user&gt;/downloads&quot;</span><span class="p">,</span> <span class="c1"># this is where the file will be saved</span>
+    <span class="n">progressbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>A common mistake is to use the URL of the GIN repository’s webpage instead of the URL of the raw file.</p>
+<p>The URL of the raw file will have <code class="docutils literal notranslate"><span class="pre">/raw/</span></code> in its path. For example, the URL of the raw file <code class="docutils literal notranslate"><span class="pre">image.png</span></code> in the repository <code class="docutils literal notranslate"><span class="pre">my-repo</span></code> under the user <code class="docutils literal notranslate"><span class="pre">my-user</span></code> should be <code class="docutils literal notranslate"><span class="pre">https://gin.g-node.org/my-user/my-repo/raw/main/image.png</span></code>.</p>
+<p>The easiest way to get the raw URL of a file is to:</p>
+<ol class="arabic simple">
+<li><p>Navigate to the specific file in the GIN repository,</p></li>
+<li><p>Copy the URL at the search bar of the browser, and</p></li>
+<li><p>Replace <code class="docutils literal notranslate"><span class="pre">src</span></code> by <code class="docutils literal notranslate"><span class="pre">raw</span></code> in the copied URL.</p></li>
+</ol>
+<p>With videos and images, you can often get the raw URL of a file directly by right-clicking on the file in the GIN repository and opening it in a new tab. The URL in the new tab should be the raw URL.</p>
+</div>
+</section>
+<section id="some-under-the-hood-details">
+<h2>Some under-the-hood details<a class="headerlink" href="#some-under-the-hood-details" title="Link to this heading">#</a></h2>
+<p>GIN is a wrapper around <a class="reference external" href="https://git-annex.branchable.com/">git-annex</a>. The high-level idea behind git-annex is:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span></code> is designed to track small text files, and doesn’t cope well with large binary files.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git-annex</span></code> bypasses this by using git only to track the names and metadata (hashes) of these large binary files, but not their content.</p></li>
+</ul>
+<p>The content of these large binary files is only retrieved on demand.</p>
+<p>Indeed, when we <code class="docutils literal notranslate"><span class="pre">gin</span> <span class="pre">download</span></code> a repository from the GIN server, we get a local “copy” (clone) of the dataset in our machine, but this is not strictly a copy. This is because the large binary files that make up this dataset will only be downloaded as placeholders.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">How? Case for an unlocked dataset</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<ul>
+<li><p class="sd-card-text">If the dataset is unlocked, these placeholder files have the same filenames (and paths) as the corresponding original files, but are instead simply ASCII text files. If we open these placeholder files, we see they contain a path. This path is where the actual content of the corresponding file will be downloaded to, when we request it.</p></li>
+<li><p class="sd-card-text">For example, if the placeholder ASCII text file with name <code class="docutils literal notranslate"><span class="pre">image.png</span></code> points to this path:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">annex</span><span class="o">/</span><span class="n">objects</span><span class="o">/</span><span class="n">MD5</span><span class="o">-</span><span class="n">s15081575</span><span class="o">--</span><span class="n">f0a21c00672ab7ed0733951a652d4b49</span>
+</pre></div>
+</div>
+<p class="sd-card-text">And when we specifically request for this file’s content with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gin</span> <span class="n">get</span><span class="o">-</span><span class="n">content</span> <span class="n">image</span><span class="o">.</span><span class="n">png</span>
+</pre></div>
+</div>
+<p class="sd-card-text">the actual png file is downloaded to:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">.</span><span class="n">git</span><span class="o">/</span><span class="n">annex</span><span class="o">/</span><span class="n">objects</span><span class="o">/</span><span class="n">Xq</span><span class="o">/</span><span class="mi">7</span><span class="n">G</span><span class="o">/</span><span class="n">MD5</span><span class="o">-</span><span class="n">s15081575</span><span class="o">--</span><span class="n">f0a21c00672ab7ed0733951a652d4b49</span><span class="o">/</span><span class="n">MD5</span><span class="o">-</span><span class="n">s15081575</span><span class="o">--</span><span class="n">f0a21c00672ab7ed0733951a652d4b49</span>
+</pre></div>
+</div>
+<p class="sd-card-text">Notice that the path in the ASCII file and the actual path are somewhat different (the actual path contains some additional directories under <code class="docutils literal notranslate"><span class="pre">objects</span></code>).</p>
+<p class="sd-card-text">We can actually verify this file is the actual image by opening it with an image viewer (e.g. Preview in MacOS):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">open</span> <span class="o">-</span><span class="n">a</span> <span class="n">Preview</span> <span class="o">.</span><span class="n">git</span><span class="o">/</span><span class="n">annex</span><span class="o">/</span><span class="n">objects</span><span class="o">/</span><span class="n">Xq</span><span class="o">/</span><span class="mi">7</span><span class="n">G</span><span class="o">/</span><span class="n">MD5</span><span class="o">-</span><span class="n">s15081575</span><span class="o">--</span><span class="n">f0a21c00672ab7ed0733951a652d4b49</span><span class="o">/</span><span class="n">MD5</span><span class="o">-</span><span class="n">s15081575</span><span class="o">--</span><span class="n">f0a21c00672ab7ed0733951a652d4b49</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">How? Case for a locked dataset</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<ul class="simple">
+<li><p class="sd-card-text">If the dataset is locked and no content has been downloaded, the symlinks in the working directory will be broken (since there is no data in the git annex to retrieve).</p></li>
+<li><p class="sd-card-text">To get the actual content in the git annex, we need to run <code class="docutils literal notranslate"><span class="pre">gin</span> <span class="pre">download</span> <span class="pre">--content</span></code>. This will fetch the content from the GIN server. After this, the symlinks in the working directory should work.</p></li>
+</ul>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">How? Case for a new (or updated) local repository</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<ul class="simple">
+<li><p class="sd-card-text">If we want to create (or update) a GIN repository, we would initialise (or clone) it locally, add files and commit the changes.</p></li>
+<li><p class="sd-card-text">When committing, the data is “copied” from the working directory to the git annex. You can verify this by checking the size of the <code class="docutils literal notranslate"><span class="pre">.git</span></code> folder before and after running <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code>.</p></li>
+<li><p class="sd-card-text">When we lock the data with <code class="docutils literal notranslate"><span class="pre">gin</span> <span class="pre">lock</span> <span class="pre">&lt;path-to-data&gt;</span></code>, the files in the working directory are replaced with symlinks to the git annex content.</p></li>
+<li><p class="sd-card-text">If after locking the data we commit the state change and upload the changes to the GIN server., the files will stay locked for any future retrievals of the repository.</p></li>
+</ul>
+</div>
+</details><!-- ## Other useful tips
+
+- To [unannex a file](https://gin.g-node.org/G-Node/Info/wiki/FAQ+Troubleshooting#how-to-unannex-files), that is, to remove a file from the GIN tracking before uploading:
+
+  ```
+  $ gin git annex unannex [path/filename]
+  ```
+
+- To stop tracking the GIN repo locally, delete the `.git` directory.
+
+  :::{note}
+  If in the GIN repo the files are locked, remember to unlock them before removing the `.git` directory! Otherwise we won't be able to delete the `.git/annex` content.
+  :::
+
+- To delete a GIN repository but keep the git repo:
+
+  1. Delete the repository in the GIN server via the browser.
+  2. Delete the GIN local repository with `git annex uninit`.
+    - This command removes relevant bits in `.git/annex` and `.git/objects`, but some pre-commits may need to be edited by hand (see this [SO post](https://stackoverflow.com/questions/24447047/remove-git-annex-repository-from-file-tree)). -->
+</section>
+<section id="useful-gin-resources">
+<h2>Useful GIN resources<a class="headerlink" href="#useful-gin-resources" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://gin.g-node.org/G-Node/Info/wiki/GIN+CLI+Usage+Tutorial">GIN CLI usage tutorial</a>: includes a description of common workflows.</p></li>
+<li><p><a class="reference external" href="https://gin.g-node.org/G-Node/Info/wiki/GIN+CLI+Recipes">GIN CLI recipes</a>.</p></li>
+<li><p><a class="reference external" href="https://gin.g-node.org/G-Node/Info/wiki/GIN+CLI+Help">GIN CLI commands cheatsheet</a>.</p></li>
+<li><p><a class="reference external" href="https://gin.g-node.org/G-Node/Info/wiki/FAQ%20Troubleshooting">GIN troubleshooting</a>.</p></li>
+</ul>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://movement.neuroinformatics.dev/latest/community/contributing.html#sample-data">https://movement.neuroinformatics.dev/latest/community/contributing.html#sample-data</a></p></li>
+<li><p><a class="reference external" href="https://gin.g-node.org/G-Node/info/wiki#how-do-i-start">https://gin.g-node.org/G-Node/info/wiki#how-do-i-start</a></p></li>
+<li><p><a class="reference external" href="https://gin-howto.readthedocs.io/en/latest/gin-repositories.html">https://gin-howto.readthedocs.io/en/latest/gin-repositories.html</a></p></li>
+<li><p>On GIN and its relation to <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> (very high-level): <a class="reference external" href="https://gin.g-node.org/G-Node/Info/wiki/GIN+Advantages+Structure">https://gin.g-node.org/G-Node/Info/wiki/GIN+Advantages+Structure</a></p></li>
+</ul>
+</section>
+</section>
+
+<div class="section ablog__blog_comments">
+   
+</div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Data-sharing.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Data Sharing</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../get-involved/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Get involved</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparatory-steps-do-only-once">Preparatory steps - do only once</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-gin-repository">Create a GIN repository</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#is-this-repository-public-or-private">Is this repository public or private?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download-a-gin-dataset">Download a GIN dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#update-a-gin-dataset">Update a GIN dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#file-locking">File locking</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download-a-gin-dataset-with-python">Download a GIN dataset with Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-under-the-hood-details">Some under-the-hood details</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-gin-resources">Useful GIN resources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item"><p class="sphinx-version">
+    Created using <a href="https://sphinx-doc.org/">Sphinx</a> 9.1.0.
+    <br/>
+    </p>
+    <p class="theme-version">
+    Built with the
+    <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a>
+    0.20.0.
+    </p>
+    </div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><div class="things-in-a-row">
+    <a href="https://www.sainsburywellcome.org/web/">
+        <img src="../../_static/light-logo-swc.png" alt="Sponsors" class="only-light img-sponsor"/>
+        <img src="../../_static/dark-logo-swc.png" alt="Sponsors" class="only-dark img-sponsor"/>
+    </a>
+    <a href="https://www.ucl.ac.uk/gatsby/gatsby-computational-neuroscience-unit">
+        <img src="../../_static/light-logo-gatsby.png" alt="Sponsors" class="only-light img-sponsor"/>
+        <img src="../../_static/dark-logo-gatsby.png" alt="Sponsors" class="only-dark img-sponsor"/>
+    </a>
+    <a href="https://www.ucl.ac.uk/">
+        <img src="../../_static/light-logo-ucl.png" alt="Sponsors" class="only-light img-sponsor"/>
+        <img src="../../_static/dark-logo-ucl.png" alt="Sponsors" class="only-dark img-sponsor"/>
+    </a>
+</div></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

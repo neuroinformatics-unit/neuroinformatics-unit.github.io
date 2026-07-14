@@ -66,6 +66,7 @@ people
 projects
 publications
 blog/index
+howto/index
 get-involved/index
 resources/index
 open-software-summer-school/index
