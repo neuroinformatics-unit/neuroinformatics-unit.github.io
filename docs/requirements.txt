@@ -9,3 +9,6 @@ ablog>=0.11.13
 sphinx-sitemap
 sphinx-icon
 sphinx-reredirects
+matplotlib
+sphinx-copybutton
+sphinx-gallery
