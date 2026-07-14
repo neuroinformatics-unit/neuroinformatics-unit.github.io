@@ -83,7 +83,7 @@ across recording sessions, before unit matching or after data concatenation.
 ## Optophysiology
 ::::{grid} 1 1 1 1
 :::{grid-item-card} {fas}`sun;sd-text-primary` photon-mosaic
-:link: https://github.com/photon-mosaic
+:link: https://photon-mosaic.org
 `photon-mosaic` is a collaborative project that aims to standardise multiphoton image analysis in neuroscience. Development is currently led by the Neuroinformatics Unit, the Allen Institute for Neural Dynamics and the International Brain Laboratory.
 :::
 ::::
