@@ -3,7 +3,7 @@ blog/datashuttle_gsoc2025.md:103: [redirected permanently] http://github.com/sea
 get-involved/languages_frameworks.md:25: [redirected permanently] https://beta.ruff.rs/docs/ to https://docs.astral.sh/ruff/
 blog/datashuttle_gsoc2025.md:147: [redirected permanently] https://cloud.google.com/iam/docs/service-account-overview to https://docs.cloud.google.com/iam/docs/service-account-overview
 blog/perspective_osw2025.md:28: [redirected permanently] https://dask.org/ to https://www.dask.org/
-open-software-summer-school/2026/animals-in-motion.md:38: [redirected permanently] https://deeplabcut.org/ to http://www.mackenziemathislab.org/deeplabcut
+open-software-summer-school/2026/animals-in-motion.md:38: [redirected permanently] https://deeplabcut.org/ to http://mlabofai.org/deeplabcut
 get-involved/languages_frameworks.md:19: [redirected with Found] https://docs.pytest.org to https://docs.pytest.org/en/stable/
 howto/open_science/Data-sharing.md:65: [redirected permanently] https://ebrains.eu/service/share-data to https://ebrains.eu/data-tools-services/data-knowledge/share-data
 open-software-summer-school/2026/application_questions.md:3: [redirected with Found] https://forms.gle/S4jWFdQktkRxfHBo9 to https://docs.google.com/forms/d/e/1FAIpQLSeqfkuc0bV9nSbh_lqM8eS5eFGl66cxSrExetPYIt9Y03HrJw/closedform
@@ -11,19 +11,23 @@ get-involved/gsoc/2025/projects/movement.md:47: [redirected permanently] https:/
 blog/worms_osw25.md:124: [redirected permanently] https://github.com/pwetterauer/WormNotebooks.git to https://github.com/pwetterauer/WormNotebooks
 get-involved/languages_frameworks.md:36: [redirected permanently] https://github.com/pypa/setuptools_scm to https://github.com/pypa/setuptools-scm
 blog/trusted-by-design_part3.md:90: [redirected permanently] https://gitlab.com to https://about.gitlab.com/
+get-involved/languages_frameworks.md:64: [redirected permanently] https://howto.neuroinformatics.dev/open_science/Licensing.html to https://neuroinformatics.dev/howto/index.html
 howto/electrophysiology/example_pipelines/auto_examples_ephys/index.rst:23: [redirected permanently] https://int-brain-lab.github.io/iblenv/index.html to https://docs.internationalbrainlab.org/index.html
+howto/electrophysiology/resources.md:26: [redirected with Found] https://iopscience.iop.org/article/10.1088/2516-1091/ac6b96/meta to https://validate.perfdrive.com/fb803c746e9148689b3984a31fccd902/?ssa=3f92a74e-c7f2-47ba-a9ae-76357fe0526b&ssb=98537251143&ssc=https%3A%2F%2Fiopscience.iop.org%2Farticle%2F10.1088%2F2516-1091%2Fac6b96%2Fmeta&ssi=f3bd12a8-cnvj-4e88-97d5-d442b41ce2fa&ssk=botmanager_support@radware.com&ssm=47462529657763612105197340078741&ssn=a09d910291cf6fe2dc3a3c2afbba843aed54ab067015-a6f4-4b76-ad3f4f&sso=f5fdae60-e4d6245236ee36fc084654bf5fb6d53f1e20f5f684649a15&ssp=43918113371784569611178450946923548&ssq=97363684237444548657742374990382076349817&ssr=NzQuMjM1LjE0Mi4xNg==&sst=Mozilla/5.0%20(X11;%20Linux%20x86_64;%20rv:100.0)%20Gecko/20100101%20Firefox/100.0%20Sphinx/9.1.0&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDBhYjA2NzAxNS1hNmY0LTRiNzYtYWU2MC1lNGQ2MjQ1MjM2ZWUxLTE3ODQ1NDIzNzQ3NTAwLTAwNDA2YjkyMzFlNTU0YzU4NWQxMCIsInV6bXgiOiI3ZjkwMDAxMGFiMThlYS1lNDVjLTRmZmEtYjQ5OS1mNTMyNTQ5MjAxOTIxLTE3ODQ1NDIzNzQ3NTAwLWZlNTk4YWIwMTkyY2I3ZTExMCIsInJkIjoiaW9wLm9yZyJ9
 howto/programming/vscode-with-slurm-job.md:63: [redirected with Found] https://learn.microsoft.com/azure/developer/dev-tunnels/overview to https://learn.microsoft.com/en-us/azure/developer/dev-tunnels/overview
 open-software-summer-school/2025/index.md:9: [redirected with Found] https://maps.app.goo.gl/CzWFFjXJZwX87aMj6 to https://www.google.com/maps/place/Sainsbury+Wellcome+Centre/@51.521174,-0.138121,15z/data=!4m6!3m5!1s0x48761b290cd61e55:0xff71d53b61728860!8m2!3d51.5211738!4d-0.1381206!16s%2Fg%2F11c60mbymm?entry=tts&g_ep=EgoyMDI1MDIxOC4wIPu8ASoASAFQAw%3D%3D
-get-involved/gsoc/2025/projects/brainglobe.md:224: [redirected with Found] https://openminds-documentation.readthedocs.io/en/v3.0/shared/getting_started.html to https://openminds.docs.om-i.org/en/v3.0/shared/getting_started.html
 get-involved/gsoc/2025/projects/brainglobe.md:225: [redirected with Found] https://openminds-documentation.readthedocs.io/en/v3.0/schema_specifications/SANDS/atlas/brainAtlas.html to https://openminds.docs.om-i.org/en/v3.0/schema_specifications/SANDS/atlas/brainAtlas.html
+get-involved/gsoc/2025/projects/brainglobe.md:224: [redirected with Found] https://openminds-documentation.readthedocs.io/en/v3.0/shared/getting_started.html to https://openminds.docs.om-i.org/en/v3.0/shared/getting_started.html
 howto/programming/Troubleshooting.md:16: [redirected with Found] https://support.github.com/contact?tags=rr-forks&subject=Detach%20Fork&flow=detach_fork to https://support.github.com/request/landing
 howto/open_science/Licensing.md:21: [redirected permanently] https://tldrlegal.com/ to https://www.tldrlegal.com/
 publications.md:120: [redirected permanently] https://ucl.ac.uk/news/2026/apr/scientists-map-migratory-bird-brain to https://www.ucl.ac.uk/news/2026/apr/scientists-map-migratory-bird-brain
 get-involved/gsoc/2025/projects/movement.md:46: [redirected permanently] https://www.kalmanfilter.net/default.aspx to https://kalmanfilter.net/
+get-involved/gsoc/2025/index.md:19: [redirected permanently] https://www.mackenziemathislab.org/deeplabcut to https://mlabofai.org/deeplabcut
 howto/electrophysiology/resources.md:28: [redirected permanently] https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4674014/ to https://pmc.ncbi.nlm.nih.gov/articles/PMC4674014/
 howto/electrophysiology/resources.md:78: [redirected permanently] https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5244825/ to https://pmc.ncbi.nlm.nih.gov/articles/PMC5244825/
+blog/trusted-by-design_part1.md:45: [redirected permanently] https://www.mackenziemathislab.org/deeplabcut/ to https://mlabofai.org/deeplabcut/
 blog/neuroblueprint.md:95: [redirected permanently] https://www.nwb.org/ to https://nwb.org/
 about.md:7: [redirected permanently] https://www.ucl.ac.uk/gatsby/gatsby-computational-neuroscience-unit to https://www.ucl.ac.uk/life-sciences/gatsby
 publications.md:88: [redirected with See Other] https://youtu.be/GXBQsqqZZTg?si=0bt5Q_lGY8GXw6dx to https://www.youtube.com/watch?si=0bt5Q_lGY8GXw6dx&v=GXBQsqqZZTg&feature=youtu.be
-publications.md:93: [redirected with See Other] https://youtu.be/ck-2vNR7qwo?si=awOA9sEw7xRl9-Nf to https://www.youtube.com/watch?si=awOA9sEw7xRl9-Nf&v=ck-2vNR7qwo&feature=youtu.be
 publications.md:83: [redirected with See Other] https://youtu.be/yER8ynNdJcE?si=9_9eTJv--0GZMntn to https://www.youtube.com/watch?si=9_9eTJv--0GZMntn&v=yER8ynNdJcE&feature=youtu.be
+publications.md:93: [redirected with See Other] https://youtu.be/ck-2vNR7qwo?si=awOA9sEw7xRl9-Nf to https://www.youtube.com/watch?si=awOA9sEw7xRl9-Nf&v=ck-2vNR7qwo&feature=youtu.be
