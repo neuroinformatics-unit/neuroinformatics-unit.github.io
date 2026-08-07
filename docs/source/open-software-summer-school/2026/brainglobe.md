@@ -62,3 +62,31 @@ It's a great chance to get feedback on your data and learn from others.
 If you don't have your own data, we will provide example datasets for you to work with.
 
 We expect that participant-led ideas emerging from this track may inspire collaborative projects during the __Collaboration Days__ on Thursday and Friday.
+
+### Set-up
+
+To get your computer ready, make sure you have the following:
+
+- [Bash shell](https://carpentries.github.io/workshop-template/install_instructions/#shell)
+- [Git](https://carpentries.github.io/workshop-template/install_instructions/#git) and a [GitHub account](https://github.com/signup)
+  - *Windows users*: Installing the Bash shell via Git for Windows also installs Git, so you only need to create a GitHub account.
+- [Miniforge](https://conda-forge.org/download/)
+- [uv](https://docs.astral.sh/uv/getting-started/installation/#standalone-installer)
+
+You'll also need a code editor (IDE) configured for Python.
+If you already have one you're comfortable with, feel free to use it. Otherwise, we recommend:
+
+- [Visual Studio Code](https://code.visualstudio.com/) with the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+
+:::{note}
+Run the commands below using the Bash shell.
+:::
+
+Create a conda environment (or equivalent environment manager you are comfortable with) named `brainglobe` with Python 3.13 :
+
+```bash
+conda create -n brainglobe python=3.13
+```
+
+If you encounter problems setting-up, please get in touch on [the Zulip chat](https://neuroinformatics.zulipchat.com/#narrow/channel/542225-Open-Software-Summer-School) and arrive at the venue 30 minutes early on Monday, so someone can help you.
+
