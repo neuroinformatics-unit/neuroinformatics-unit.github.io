@@ -10,7 +10,7 @@
 
 ## Introduction
 
-Hi, I'm [Soumya](https://github.com/aymuos15). I was the [Neuroinformatics Unit](https://github.com/neuroinformatics-unit) GSoC intern for the 2026 summer term, and I worked on broadening the range of inputs [`cellfinder`](https://github.com/brainglobe/cellfinder) accepts, in both channel count and dimensionality.
+Hi, I'm [Soumya](https://github.com/aymuos15). I was one of the [Neuroinformatics Unit](https://github.com/neuroinformatics-unit) GSoC interns for the 2026 summer term, and I worked on broadening the range of inputs [`cellfinder`](https://github.com/brainglobe/cellfinder) accepts, in both channel count and dimensionality.
 
 **Project**: BrainGlobe: expand `cellfinder` input support to 2.5D and single-channel data <br>
 **Mentors**: [Igor Tatarnikov](https://github.com/IgorTatarnikov), [Alessandro Felder](https://github.com/alessandrofelder), [Adam Tyson](https://github.com/adamltyson)
@@ -27,7 +27,7 @@ It is not free, though. As the [feature request](https://github.com/brainglobe/c
 
 ### What changed
 
-The model builder now takes its channel count from the data instead of assuming two, so `background_array` can be `None` all the way from the public API to the classifier. With no background given, `cellfinder` switches to a single-channel model automatically, and a channel mismatch raises a clear error. Every pre-trained model `cellfinder` ships expects two channels, so this path also needed retraining.
+The model builder now takes its channel count from the data instead of assuming two, so `background_array` can be `None` all the way from the public API to the classifier. With no background given, `cellfinder` switches to a single-channel model automatically, and a channel mismatch raises a clear error. Every pre-trained model `cellfinder` shipped expected two channels, so this path also needed retraining.
 
 The same support runs through the napari plugin, so detection, curation and training all work from a signal channel alone. Curation writes only the signal cubes and notes the missing background in the training YAML, so training your own single-channel model needs no extra configuration.
 
