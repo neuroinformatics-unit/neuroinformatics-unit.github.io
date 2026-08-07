@@ -70,7 +70,7 @@ Fixing recall pins both models to the same 5016 cells found and 50 missed, so th
 
 This is unfinished work. Warm-start fine-tuning recovers roughly 40% of the gap and a top-hat variant around 28%, while distillation does nothing and hard-negative mining hurts. Faking the background with a blurred signal fails badly: real background is anti-correlated with signal at a cell, a blurred copy is not. A learned signal-to-background predictor is worth trying next.
 
-None of this makes single-channel a bad option. If you have no background channel it is now a supported path rather than an impossible one, and knowing what it costs is what lets you decide whether the second acquisition is worth it.
+A performance drop from two channels was always expected. However, now, if you only have one channel, `cellfinder` runs. We have an explicit offering for it.
 
 ---
 
