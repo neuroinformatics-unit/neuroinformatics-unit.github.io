@@ -103,7 +103,8 @@ linkcheck_ignore = [
     "http://ccdb.ucsd.edu/home",
     "https://opensource.org/licenses/BSD-3-Clause",
     "https://pubmed.ncbi.nlm.nih.gov",
-    "https://github.com/signup"
+    "https://github.com/signup",
+    "https://ffmpeg.org"
 
 ]
 linkcheck_request_headers = {
