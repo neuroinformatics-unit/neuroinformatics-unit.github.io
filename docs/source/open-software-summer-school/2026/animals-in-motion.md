@@ -17,7 +17,6 @@ This course is designed for researchers and students who have collected — or p
 :::
 
 
-
 ## Course overview
 
 ```{figure} /_static/osw_images/animals-in-motion-2026_overview.png
@@ -32,12 +31,12 @@ While icons of mice are used for illustration, the course content should be appl
 
 | Time | Theme | Description |
 | --- | --- | --- |
-| Monday<br>morning | Introduction and key concepts | A big-picture overview of analysis workflows and tools for animal behaviour, followed by a primer on deep learning for computer vision. |
-| Monday<br>afternoon | Symposium | Participants present their work and network with other participants. |
-| Tuesday<br>morning | Pose estimation | A practical tutorial on [SLEAP](https://sleap.ai/)—a popular software library for animal pose estimation and tracking. You will learn how to annotate video frames, train deep learning models, and generate motion tracks from new videos. |
-| Tuesday<br>afternoon | Motion quantification | A practical introduction to [movement](https://movement.neuroinformatics.dev)—a Python package for cleaning, visualising, and analysing motion tracks produced by [SLEAP](https://sleap.ai/), [DeepLabCut](https://deeplabcut.org/) and similar tools. |
-| Wednesday<br>morning | Case studies | A hands-on tutorial on applying markerless motion tracking and quantification to real-world case studies through coding exercises. |
-| Wednesday<br>afternoon | Behaviour segmentation | A primer on decomposing continuous motion into discrete actions, followed by a practical tutorial on a supervised behaviour segmentation tool. |
+| Monday<br>10am-1pm | Introduction and key concepts | A big-picture overview of analysis workflows and tools for animal behaviour, followed by a primer on deep learning for computer vision. |
+| Monday<br>2pm-5pm | Symposium | Participants present their work and network with other participants. |
+| Tuesday<br>10am-1pm | Pose estimation | A practical tutorial on [SLEAP](https://sleap.ai/)—a popular software library for animal pose estimation and tracking. You will learn how to annotate video frames, train deep learning models, and generate motion tracks from new videos. |
+| Tuesday<br>2pm-5pm | Motion quantification | A practical introduction to [movement](https://movement.neuroinformatics.dev)—a Python package for cleaning, visualising, and analysing motion tracks produced by [SLEAP](https://sleap.ai/), [DeepLabCut](https://deeplabcut.org/) and similar tools. |
+| Wednesday<br>10am-1pm | Behaviour segmentation | A primer on decomposing continuous motion into discrete actions. You will learn how to annotate behaviours with [BORIS](https://www.boris.unito.it) and train a supervised behaviour classifier with [scikit-learn](https://scikit-learn.org/stable/index.html). |
+| Wednesday<br>2pm-5pm | Case studies | Real-world case studies (including coding exercises) applying markerless motion tracking and quantification. |
 
 
 ### Collaboration days (Thursday - Friday)
@@ -82,7 +81,7 @@ See the [software prerequisites](https://animals-in-motion.neuroinformatics.dev/
 If you're new to Python, we recommend signing up for our [asynchronous preparatory course](target-preparatory-month), which runs during the month leading up to the summer school.
 
 ### Data
-We will provide some example datasets for you to use during the workshop.
+We will provide some example datasets for you to use during the workshop—see the [data prerequisites](https://animals-in-motion.neuroinformatics.dev/dev/prerequisites.html) section of the course handbook for details.
 You will be asked to download these prior to the event.
 In addition, we encourage you to bring your own data.
 This could include video recordings of animal behaviour and/or motion tracks you've already generated.

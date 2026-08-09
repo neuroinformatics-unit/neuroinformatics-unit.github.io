@@ -19,12 +19,12 @@ This course is designed for researchers and students interested in learning abou
 
 | Time | Theme | Description |
 | --- | --- | --- |
-| Monday<br>morning | Introduction and key libraries | Introductory lecture on key concepts; examples of large array data, research enabled, and computational challenges; introduction to [`zarr`](https://zarr.dev/) and [`dask`](https://www.dask.org/). |
-| Monday<br>afternoon | Symposium | Participants present their work and network with other participants. |
-| Tuesday<br>morning | Large image data with OME | Introduce the [OME-Zarr specification](https://ngff.openmicroscopy.org/) (following the [OME-Zarr textbook](https://ome-zarr-book.readthedocs.io/)); hands-on tutorial to convert, process, and write large imaging datasets. |
-| Tuesday<br>afternoon | Parallel processing | Deeper look at `dask` and its parallelisation functionality in practice. |
-| Wednesday<br>morning | Compression | Introduction to compression algorithms, their use in neuroscience, and trade-offs to consider. |
-| Wednesday<br>afternoon | Visualisation | Hands-on tutorial in interactive large data visualisation in collaboration with [HoloViz](https://holoviz.org/). |
+| Monday<br>10am-1pm | Introduction and key libraries | Introductory lecture on key concepts; examples of large array data, research enabled, and computational challenges; introduction to [`zarr`](https://zarr.dev/) and [`dask`](https://www.dask.org/). |
+| Monday<br>2pm-5pm | Symposium | Participants present their work and network with other participants. |
+| Tuesday<br>10am-1pm | Large image data with OME | Introduce the [OME-Zarr specification](https://ngff.openmicroscopy.org/) (following the [OME-Zarr textbook](https://ome-zarr-book.readthedocs.io/)); hands-on tutorial to convert, process, and write large imaging datasets. |
+| Tuesday<br>2pm-5pm | Parallel processing | Deeper look at `dask` and its parallelisation functionality in practice. |
+| Wednesday<br>10am-1pm | Compression | Introduction to compression algorithms, their use in neuroscience, and trade-offs to consider. |
+| Wednesday<br>2pm-5pm | Visualisation | Hands-on tutorial in interactive large data visualisation in collaboration with [HoloViz](https://holoviz.org/). |
 
 ### Collaboration days (Thursday - Friday)
 
