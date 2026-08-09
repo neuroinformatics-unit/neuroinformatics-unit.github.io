@@ -653,27 +653,27 @@ It is aimed at those interested in learning about open-source tools for analysin
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>Monday<br>morning</p></td>
+<tr class="row-even"><td><p>Monday<br>10am-1pm</p></td>
 <td><p>Introduction and key concepts</p></td>
 <td><p>A high level overview of the BrainGlobe ecosystem of computational neuroanatomy tools, and what they enable, followed by an introduction to basic image analysis using <a class="reference external" href="https://napari.org/stable/"><code class="docutils literal notranslate"><span class="pre">napari</span></code></a>.</p></td>
 </tr>
-<tr class="row-odd"><td><p>Monday<br>afternoon</p></td>
+<tr class="row-odd"><td><p>Monday<br>2pm-5pm</p></td>
 <td><p>Symposium</p></td>
 <td><p>Participants present their work and network with other participants.</p></td>
 </tr>
-<tr class="row-even"><td><p>Tuesday<br>morning</p></td>
+<tr class="row-even"><td><p>Tuesday<br>10am-1pm</p></td>
 <td><p>Working in a common coordinate space</p></td>
 <td><p>A primer on brain atlases, common coordinate spaces and image registration.</p></td>
 </tr>
-<tr class="row-odd"><td><p>Tuesday<br>afternoon</p></td>
+<tr class="row-odd"><td><p>Tuesday<br>2pm-5pm</p></td>
 <td><p>Registration and segmentation</p></td>
 <td><p>Hands-on tutorials for using <a class="reference external" href="https://github.com/brainglobe/brainreg"><code class="docutils literal notranslate"><span class="pre">brainreg</span></code></a> to map data to a BrainGlobe atlas and using <a class="reference external" href="https://github.com/brainglobe/brainglobe-segmentation"><code class="docutils literal notranslate"><span class="pre">brainglobe-segmentation</span></code></a> to segment structures in whole brain microscopy images.</p></td>
 </tr>
-<tr class="row-even"><td><p>Wednesday<br>morning</p></td>
+<tr class="row-even"><td><p>Wednesday<br>10am-1pm</p></td>
 <td><p>Cell detection</p></td>
 <td><p>Hands-on tutorials for detecting cells in large 3D images with <a class="reference external" href="https://github.com/brainglobe/cellfinder"><code class="docutils literal notranslate"><span class="pre">cellfinder</span></code></a> and mapping them to atlas space.</p></td>
 </tr>
-<tr class="row-odd"><td><p>Wednesday<br>afternoon</p></td>
+<tr class="row-odd"><td><p>Wednesday<br>2pm-5pm</p></td>
 <td><p>Visualisation and scripting</p></td>
 <td><p>A walk through of visualising data in atlas space with <a class="reference external" href="https://github.com/brainglobe/brainrender"><code class="docutils literal notranslate"><span class="pre">brainrender</span></code></a> and <a class="reference external" href="https://github.com/brainglobe/brainrender-napari"><code class="docutils literal notranslate"><span class="pre">brainrender-napari</span></code></a> followed by an introduction to interatcting with the BrainGlobe ecosystem via scripting and the command line.</p></td>
 </tr>
@@ -725,6 +725,34 @@ will equip you with all the skills needed to make the most of this course.</p>
 It’s a great chance to get feedback on your data and learn from others.
 If you don’t have your own data, we will provide example datasets for you to work with.</p>
 <p>We expect that participant-led ideas emerging from this track may inspire collaborative projects during the <strong>Collaboration Days</strong> on Thursday and Friday.</p>
+</section>
+<section id="set-up">
+<h3>Set-up<a class="headerlink" href="#set-up" title="Link to this heading">#</a></h3>
+<p>To get your computer ready, make sure you have the following:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://carpentries.github.io/workshop-template/install_instructions/#shell">Bash shell</a></p></li>
+<li><p><a class="reference external" href="https://carpentries.github.io/workshop-template/install_instructions/#git">Git</a> and a <a class="reference external" href="https://github.com/signup">GitHub account</a></p>
+<ul>
+<li><p><em>Windows users</em>: Installing the Bash shell via Git for Windows also installs Git, so you only need to create a GitHub account.</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://conda-forge.org/download/">Miniforge</a></p></li>
+<li><p><a class="reference external" href="https://docs.astral.sh/uv/getting-started/installation/#standalone-installer">uv</a></p></li>
+</ul>
+<p>You’ll also need a code editor (IDE) configured for Python.
+If you already have one you’re comfortable with, feel free to use it. Otherwise, we recommend:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://code.visualstudio.com/">Visual Studio Code</a> with the <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">Python extension</a></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Run the commands below using the Bash shell.</p>
+</div>
+<p>Create a conda environment (or equivalent environment manager you are comfortable with) named <code class="docutils literal notranslate"><span class="pre">brainglobe</span></code> with Python 3.13 :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>brainglobe<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.13
+</pre></div>
+</div>
+<p>If you encounter problems setting-up, please get in touch on <a class="reference external" href="https://neuroinformatics.zulipchat.com/#narrow/channel/542225-Open-Software-Summer-School">the Zulip chat</a> and arrive at the venue 30 minutes early on Monday, so someone can help you.</p>
 </section>
 </section>
 </section>
@@ -789,6 +817,7 @@ If you don’t have your own data, we will provide example datasets for you to w
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware">Hardware</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-knowledge">Python knowledge</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-up">Set-up</a></li>
 </ul>
 </li>
 </ul>

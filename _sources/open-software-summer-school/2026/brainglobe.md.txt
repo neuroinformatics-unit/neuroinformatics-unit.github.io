@@ -20,12 +20,12 @@ It is aimed at those interested in learning about open-source tools for analysin
 
 | Time                   | Theme                                | Description                                                                                                                                                                                                                                                                                                  |
 |------------------------|--------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Monday<br>morning      | Introduction and key concepts        | A high level overview of the BrainGlobe ecosystem of computational neuroanatomy tools, and what they enable, followed by an introduction to basic image analysis using [`napari`](https://napari.org/stable/).                                                                                               |
-| Monday<br>afternoon    | Symposium                            | Participants present their work and network with other participants.                                                                                                                                                                                                                                         |
-| Tuesday<br>morning     | Working in a common coordinate space | A primer on brain atlases, common coordinate spaces and image registration.                                                                                                                                                                                                                                  |
-| Tuesday<br>afternoon   | Registration and segmentation        | Hands-on tutorials for using [`brainreg`](https://github.com/brainglobe/brainreg) to map data to a BrainGlobe atlas and using [`brainglobe-segmentation`](https://github.com/brainglobe/brainglobe-segmentation) to segment structures in whole brain microscopy images.                                     |
-| Wednesday<br>morning   | Cell detection                       | Hands-on tutorials for detecting cells in large 3D images with [`cellfinder`](https://github.com/brainglobe/cellfinder) and mapping them to atlas space.                                                                                                                                                     |
-| Wednesday<br>afternoon | Visualisation and scripting          | A walk through of visualising data in atlas space with [`brainrender`](https://github.com/brainglobe/brainrender) and [`brainrender-napari`](https://github.com/brainglobe/brainrender-napari) followed by an introduction to interatcting with the BrainGlobe ecosystem via scripting and the command line. |
+| Monday<br>10am-1pm      | Introduction and key concepts        | A high level overview of the BrainGlobe ecosystem of computational neuroanatomy tools, and what they enable, followed by an introduction to basic image analysis using [`napari`](https://napari.org/stable/).                                                                                               |
+| Monday<br>2pm-5pm    | Symposium                            | Participants present their work and network with other participants.                                                                                                                                                                                                                                         |
+| Tuesday<br>10am-1pm     | Working in a common coordinate space | A primer on brain atlases, common coordinate spaces and image registration.                                                                                                                                                                                                                                  |
+| Tuesday<br>2pm-5pm   | Registration and segmentation        | Hands-on tutorials for using [`brainreg`](https://github.com/brainglobe/brainreg) to map data to a BrainGlobe atlas and using [`brainglobe-segmentation`](https://github.com/brainglobe/brainglobe-segmentation) to segment structures in whole brain microscopy images.                                     |
+| Wednesday<br>10am-1pm   | Cell detection                       | Hands-on tutorials for detecting cells in large 3D images with [`cellfinder`](https://github.com/brainglobe/cellfinder) and mapping them to atlas space.                                                                                                                                                     |
+| Wednesday<br>2pm-5pm | Visualisation and scripting          | A walk through of visualising data in atlas space with [`brainrender`](https://github.com/brainglobe/brainrender) and [`brainrender-napari`](https://github.com/brainglobe/brainrender-napari) followed by an introduction to interatcting with the BrainGlobe ecosystem via scripting and the command line. |
 
 ### Collaboration days (Thursday - Friday)
 
@@ -62,3 +62,31 @@ It's a great chance to get feedback on your data and learn from others.
 If you don't have your own data, we will provide example datasets for you to work with.
 
 We expect that participant-led ideas emerging from this track may inspire collaborative projects during the __Collaboration Days__ on Thursday and Friday.
+
+### Set-up
+
+To get your computer ready, make sure you have the following:
+
+- [Bash shell](https://carpentries.github.io/workshop-template/install_instructions/#shell)
+- [Git](https://carpentries.github.io/workshop-template/install_instructions/#git) and a [GitHub account](https://github.com/signup)
+  - *Windows users*: Installing the Bash shell via Git for Windows also installs Git, so you only need to create a GitHub account.
+- [Miniforge](https://conda-forge.org/download/)
+- [uv](https://docs.astral.sh/uv/getting-started/installation/#standalone-installer)
+
+You'll also need a code editor (IDE) configured for Python.
+If you already have one you're comfortable with, feel free to use it. Otherwise, we recommend:
+
+- [Visual Studio Code](https://code.visualstudio.com/) with the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+
+:::{note}
+Run the commands below using the Bash shell.
+:::
+
+Create a conda environment (or equivalent environment manager you are comfortable with) named `brainglobe` with Python 3.13 :
+
+```bash
+conda create -n brainglobe python=3.13
+```
+
+If you encounter problems setting-up, please get in touch on [the Zulip chat](https://neuroinformatics.zulipchat.com/#narrow/channel/542225-Open-Software-Summer-School) and arrive at the venue 30 minutes early on Monday, so someone can help you.
+
