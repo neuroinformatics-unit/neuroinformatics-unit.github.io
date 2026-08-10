@@ -74,6 +74,7 @@ To get your computer ready, make sure you have the following:
   - *Windows users*: Installing the Bash shell via Git for Windows also installs Git, so you only need to create a GitHub account.
 - [Miniforge](https://conda-forge.org/download/)
 - [uv](https://docs.astral.sh/uv/getting-started/installation/#standalone-installer)
+- [pixi](https://pixi.prefix.dev/latest/installation/)
 
 You'll also need a code editor (IDE) configured for Python.
 If you already have one you're comfortable with, feel free to use it. Otherwise, we recommend:
