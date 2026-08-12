@@ -70,12 +70,13 @@ Senior Research Software Engineer (with Branco & Margrie labs)
 Visiting Research Fellow
 :::
 
-:::{grid-item-card} Saarah Hussain
-:img-top: _static/saarah_hussain.jpg
-:link: https://github.com/saarah815
+:::{grid-item-card} Chris Halcrow
+:img-top: _static/chris_halcrow.jpg
+:link: https://github.com/chrishalcrow
 
-Masters Student (with Dean lab)
+Senior Research Software Engineer
 :::
+
 
 :::{grid-item-card} Amirreza Bahramani
 :img-top: _static/amirreza_bahramani.jpg
@@ -129,7 +130,7 @@ Senior Research Fellow
 
 ## Former members
 - [Shrey Singh (Google Summer of Code 2025)](https://github.com/cs7-shrey)
-- [Saarah Hussain (Google Summer of Code 2025)](https://github.com/saarah815)
+- [Saarah Hussain (Google Summer of Code 2025 & Masters Student 2025)](https://github.com/saarah815)
 - [Kaixiang Shuai (Masters Student 2025)](https://github.com/Skxsmy)
 - Michaella Beeney (In2Research 2025)
 - [Yousuf-Adial Ansari (In2Research 2024)](https://github.com/yousuf-adialwa20)
