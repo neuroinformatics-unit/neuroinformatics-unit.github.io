@@ -105,7 +105,7 @@ linkcheck_ignore = [
     "https://pubmed.ncbi.nlm.nih.gov",
     "https://github.com/signup",
     "https://ffmpeg.org",
-    r'https://www\.fastplotlib\.org/.*' # temp: fastplotlib docs are not available 13/08/2026
+    "https://www.fastplotlib.org/_gallery/index.html" # temp: fastplotlib docs are not available 13/08/2026
 
 ]
 linkcheck_request_headers = {
