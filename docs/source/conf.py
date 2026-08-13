@@ -104,7 +104,8 @@ linkcheck_ignore = [
     "https://opensource.org/licenses/BSD-3-Clause",
     "https://pubmed.ncbi.nlm.nih.gov",
     "https://github.com/signup",
-    "https://ffmpeg.org"
+    "https://ffmpeg.org",
+    r'https://www\.fastplotlib\.org/.*' # temp: fastplotlib docs are not available 13/08/2026
 
 ]
 linkcheck_request_headers = {
