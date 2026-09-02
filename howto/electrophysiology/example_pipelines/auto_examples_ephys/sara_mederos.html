@@ -27,8 +27,8 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../../_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
-<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+  <link href="../../../../_static/styles/theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=cb8930eaaf36d9849b67" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sg_gallery.css?v=fd6457a4" />
@@ -40,10 +40,10 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
   
   <!-- So that users can add custom icons -->
-  <script defer src="../../../../_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../../_static/scripts/fontawesome.js?digest=cb8930eaaf36d9849b67"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
-<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67" />
 
     <script src="../../../../_static/documentation_options.js?v=d45e8c67"></script>
     <script src="../../../../_static/doctools.js?v=fd6eb6e6"></script>
@@ -688,16 +688,16 @@ can be found below.</p>
 
 
 <span class="n">data_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span>
-    <span class="sa">r</span><span class="s2">&quot;/ceph/.../100323/2023-10-03_18-57-09/Record Node 101/experiment1&quot;</span>
+    <span class="sa">r</span><span class="s2">"/ceph/.../100323/2023-10-03_18-57-09/Record Node 101/experiment1"</span>
 <span class="p">)</span>
 <span class="n">output_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span>
-    <span class="sa">r</span><span class="s2">&quot;/ceph/.../derivatives/100323/&quot;</span>
+    <span class="sa">r</span><span class="s2">"/ceph/.../derivatives/100323/"</span>
 <span class="p">)</span>
 
 <span class="n">show_probe</span> <span class="o">=</span> <span class="kc">False</span>
 <span class="n">show_preprocessing</span> <span class="o">=</span> <span class="kc">True</span>
 
-<span class="c1"># This reads OpenEphys &#39;Binary&#39; format. It determines the</span>
+<span class="c1"># This reads OpenEphys 'Binary' format. It determines the</span>
 <span class="c1"># probe using probeinterface.read_openephys, which reads `settings.xml`</span>
 <span class="c1"># and requires the NP_PROBE field is filled.</span>
 <span class="n">raw_recording</span> <span class="o">=</span> <span class="n">read_openephys</span><span class="p">(</span><span class="n">data_path</span><span class="p">)</span>
@@ -712,17 +712,17 @@ can be found below.</p>
 <span class="n">filtered_recording</span> <span class="o">=</span> <span class="n">bandpass_filter</span><span class="p">(</span><span class="n">shifted_recording</span><span class="p">,</span> <span class="n">freq_min</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">freq_max</span><span class="o">=</span><span class="mi">6000</span><span class="p">)</span>
 
 <span class="c1"># Perform median average filter by shank</span>
-<span class="n">channel_group</span> <span class="o">=</span> <span class="n">filtered_recording</span><span class="o">.</span><span class="n">get_property</span><span class="p">(</span><span class="s2">&quot;group&quot;</span><span class="p">)</span>
+<span class="n">channel_group</span> <span class="o">=</span> <span class="n">filtered_recording</span><span class="o">.</span><span class="n">get_property</span><span class="p">(</span><span class="s2">"group"</span><span class="p">)</span>
 <span class="n">split_channel_ids</span> <span class="o">=</span> <span class="p">[</span>
     <span class="n">filtered_recording</span><span class="o">.</span><span class="n">get_channel_ids</span><span class="p">()[</span><span class="n">channel_group</span> <span class="o">==</span> <span class="n">idx</span><span class="p">]</span>
     <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">channel_group</span><span class="p">)</span>
 <span class="p">]</span>
 <span class="n">preprocessed_recording</span> <span class="o">=</span> <span class="n">common_reference</span><span class="p">(</span>
-    <span class="n">filtered_recording</span><span class="p">,</span> <span class="n">reference</span><span class="o">=</span><span class="s2">&quot;global&quot;</span><span class="p">,</span> <span class="n">operator</span><span class="o">=</span><span class="s2">&quot;median&quot;</span><span class="p">,</span> <span class="n">groups</span><span class="o">=</span><span class="n">split_channel_ids</span>
+    <span class="n">filtered_recording</span><span class="p">,</span> <span class="n">reference</span><span class="o">=</span><span class="s2">"global"</span><span class="p">,</span> <span class="n">operator</span><span class="o">=</span><span class="s2">"median"</span><span class="p">,</span> <span class="n">groups</span><span class="o">=</span><span class="n">split_channel_ids</span>
 <span class="p">)</span>
 
 <span class="k">if</span> <span class="n">show_preprocessing</span><span class="p">:</span>
-    <span class="n">recs_grouped_by_shank</span> <span class="o">=</span> <span class="n">preprocessed_recording</span><span class="o">.</span><span class="n">split_by</span><span class="p">(</span><span class="s2">&quot;group&quot;</span><span class="p">)</span>
+    <span class="n">recs_grouped_by_shank</span> <span class="o">=</span> <span class="n">preprocessed_recording</span><span class="o">.</span><span class="n">split_by</span><span class="p">(</span><span class="s2">"group"</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">rec</span> <span class="ow">in</span> <span class="n">recs_grouped_by_shank</span><span class="p">:</span>
         <span class="n">plot_timeseries</span><span class="p">(</span>
             <span class="n">preprocessed_recording</span><span class="p">,</span>
@@ -730,16 +730,16 @@ can be found below.</p>
             <span class="n">time_range</span><span class="o">=</span><span class="p">(</span><span class="mi">3499</span><span class="p">,</span> <span class="mi">3500</span><span class="p">),</span>
             <span class="n">return_scaled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
             <span class="n">show_channel_ids</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-            <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;map&quot;</span><span class="p">,</span>
+            <span class="n">mode</span><span class="o">=</span><span class="s2">"map"</span><span class="p">,</span>
         <span class="p">)</span>
         <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
 <span class="c1"># Run the sorting</span>
 <span class="n">sorting</span> <span class="o">=</span> <span class="n">run_sorter</span><span class="p">(</span>
-    <span class="s2">&quot;kilosort3&quot;</span><span class="p">,</span>
+    <span class="s2">"kilosort3"</span><span class="p">,</span>
     <span class="n">preprocessed_recording</span><span class="p">,</span>
     <span class="n">singularity_image</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="n">output_folder</span><span class="o">=</span><span class="p">(</span><span class="n">output_path</span> <span class="o">/</span> <span class="s2">&quot;sorting&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">as_posix</span><span class="p">(),</span>
+    <span class="n">output_folder</span><span class="o">=</span><span class="p">(</span><span class="n">output_path</span> <span class="o">/</span> <span class="s2">"sorting"</span><span class="p">)</span><span class="o">.</span><span class="n">as_posix</span><span class="p">(),</span>
     <span class="n">car</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="n">freq_min</span><span class="o">=</span><span class="mi">150</span><span class="p">,</span>
 <span class="p">)</span>
@@ -757,19 +757,19 @@ can be found below.</p>
 <span class="n">waveforms</span> <span class="o">=</span> <span class="n">extract_waveforms</span><span class="p">(</span>
     <span class="n">preprocessed_recording</span><span class="p">,</span>
     <span class="n">sorting</span><span class="p">,</span>
-    <span class="n">folder</span><span class="o">=</span><span class="p">(</span><span class="n">output_path</span> <span class="o">/</span> <span class="s2">&quot;postprocessing&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">as_posix</span><span class="p">(),</span>
+    <span class="n">folder</span><span class="o">=</span><span class="p">(</span><span class="n">output_path</span> <span class="o">/</span> <span class="s2">"postprocessing"</span><span class="p">)</span><span class="o">.</span><span class="n">as_posix</span><span class="p">(),</span>
     <span class="n">ms_before</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
     <span class="n">ms_after</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
     <span class="n">max_spikes_per_unit</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span>
     <span class="n">return_scaled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">sparse</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="n">peak_sign</span><span class="o">=</span><span class="s2">&quot;neg&quot;</span><span class="p">,</span>
-    <span class="n">method</span><span class="o">=</span><span class="s2">&quot;radius&quot;</span><span class="p">,</span>
+    <span class="n">peak_sign</span><span class="o">=</span><span class="s2">"neg"</span><span class="p">,</span>
+    <span class="n">method</span><span class="o">=</span><span class="s2">"radius"</span><span class="p">,</span>
     <span class="n">radius_um</span><span class="o">=</span><span class="mi">75</span><span class="p">,</span>
 <span class="p">)</span>
 
 <span class="n">quality_metrics</span> <span class="o">=</span> <span class="n">compute_quality_metrics</span><span class="p">(</span><span class="n">waveforms</span><span class="p">)</span>
-<span class="n">quality_metrics</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">output_path</span> <span class="o">/</span> <span class="s2">&quot;postprocessing&quot;</span><span class="p">)</span>
+<span class="n">quality_metrics</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">output_path</span> <span class="o">/</span> <span class="s2">"postprocessing"</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-howto-electrophysiology-example-pipelines-auto-examples-ephys-sara-mederos-py">
@@ -835,8 +835,8 @@ can be found below.</p>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
-<script defer src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../../../../_static/scripts/bootstrap.js?digest=cb8930eaaf36d9849b67"></script>
+<script defer src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=cb8930eaaf36d9849b67"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -850,7 +850,7 @@ can be found below.</p>
     <p class="theme-version">
     Built with the
     <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a>
-    0.20.0.
+    0.21.0.
     </p>
     </div>
       
