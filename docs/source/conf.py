@@ -104,8 +104,8 @@ linkcheck_ignore = [
     "https://opensource.org/licenses/BSD-3-Clause",
     "https://pubmed.ncbi.nlm.nih.gov",
     "https://github.com/signup",
-    "https://ffmpeg.org"
-
+    "https://ffmpeg.org",
+    "https://neuropixelsgroup.slack.com",
 ]
 linkcheck_request_headers = {
     "https://github.com": {
