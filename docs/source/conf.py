@@ -106,6 +106,9 @@ linkcheck_ignore = [
     "https://github.com/signup",
     "https://ffmpeg.org",
     "https://neuropixelsgroup.slack.com",
+    "https://slurm.schedmd.com/",
+    "https:/zenodo.org/",
+    r"https?://(?:[^/]+\.)?wikipedia\.org/.*",
 ]
 linkcheck_request_headers = {
     "https://github.com": {
