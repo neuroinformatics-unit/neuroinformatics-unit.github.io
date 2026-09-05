@@ -53,12 +53,14 @@ The final two days are dedicated to collaboration. We will join forces with part
 * **Presentation:** teams will have the opportunity to share their progress and outcomes on the final afternoon.
 
 
-::: {admonition} Course handbook
+::: {admonition} Course materials
 :class: note
 
-All course materials will be made available as part of the online handbook at <https://animals-in-motion.neuroinformatics.dev> and remain accessible afterwards.
+All course materials are published in the online handbook at <https://animals-in-motion.neuroinformatics.dev>
+and remain accessible after the event.
 
-Feel free to look through the handbook to get a sense of its contents, but keep in mind that updates will be made before the 2026 event.
+The source code for the course materials is publicly hosted at
+<https://github.com/neuroinformatics-unit/course-animals-in-motion>.
 
 :::
 

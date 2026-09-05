@@ -79,6 +79,16 @@ The final two days are dedicated to collaboration. We will join forces with part
     * *Prototype an idea:* experiment with a new analysis or method.
 * **Presentation:** teams will have the opportunity to share their progress and outcomes on the final afternoon.
 
+::: {admonition} Course materials
+:class: note
+
+The course notebooks and tutorials are hosted on GitHub at
+<https://github.com/neuroinformatics-unit/course-spikeinterface-2026>.
+
+The [SpikeInterface documentation](https://spikeinterface.readthedocs.io) serves as the primary reference throughout the course and remains freely accessible.
+
+:::
+
 ## Confirmed Instructors
 
 * [Joseph Ziminski](https://github.com/JoeZiminski)

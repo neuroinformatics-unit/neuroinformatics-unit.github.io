@@ -39,6 +39,14 @@ The final two days are dedicated to collaboration. We will join forces with part
     * *Prototype an idea:* experiment with a new analysis or method.
 * **Presentation:** teams will have the opportunity to share their progress and outcomes on the final afternoon.
 
+::: {admonition} Course materials
+:class: note
+
+The slides and source materials for this course are publicly available at
+<https://github.com/neuroinformatics-unit/slides-large-array-data-osss-2026>.
+
+:::
+
 ## Confirmed Instructors
 - [Alessandro Felder](https://github.com/alessandrofelder)
 - [Igor Tatarnikov](https://github.com/IgorTatarnikov)
