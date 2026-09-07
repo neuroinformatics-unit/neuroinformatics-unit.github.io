@@ -47,22 +47,20 @@ In napari, you leave the background image unselected.
 
 I used the same ResNet-50 architecture and training dataset as the standard two-channel model, but dropped the background channel during training to create our first single-channel model. I then uploaded it to the [Hugging Face Hub](https://huggingface.co/brainglobe/cellfinder_single_channel_default), marking the start of our transition to hosting models there. It downloads automatically on first use, just like the existing models.
 
-I then compared our results against the two-channel model to understand the trade-offs it would have.
+I then compared our results against the two-channel model to understand the trade-offs it would have. Early tests on data from a different microscope produced more false positives: objects incorrectly identified as cells. I tested both models on the same set of 10,756 image cubes, containing 5,066 cells and 5,690 non-cell objects, and varied the proportion of cells in the training data to see how it affected their performance.
 
-- Early use on data from a different microscope threw up more false-positive cells than expected.
-- So: cross-validation of single- versus two-channel over three stratified folds, against one frozen test set of 10,756 cubes, 5066 cells and 5690 non-cells.
-- Plus a sweep skewing the class balance of the training data, to separate "not enough data" from "weaker input".
-- At a fixed threshold the two models look nearly identical, but that is an artefact: they sit at different points on their curves.
-- The comparison that shows the difference is at a matched operating point, here a recall of 0.99.
+Each model assigns a score to a candidate cell, and a threshold determines whether it is counted as a cell. Using the same threshold for both models does not necessarily give a fair comparison. Instead, I adjusted their thresholds so that both found 99% of the real cells, then measured how often they incorrectly counted non-cell objects as cells.
 
-| Training set | Threshold 1-ch | Threshold 2-ch | FP rate 1-ch (%) | FP rate 2-ch (%) |
-|---|---|---|---|---|
-| Balanced (47% cell) | 0.406 ± 0.018 | 0.495 ± 0.069 | 4.46 ± 0.23 | 3.58 ± 0.04 |
-| Skew 60% cell | 0.270 ± 0.046 | 0.599 ± 0.075 | 5.09 ± 0.32 | 3.83 ± 0.06 |
-| Skew 70% cell | 0.298 ± 0.082 | 0.663 ± 0.053 | 5.65 ± 0.39 | 4.18 ± 0.09 |
-| Skew 80% cell | 0.222 ± 0.044 | 0.760 ± 0.093 | 5.08 ± 0.21 | 4.05 ± 0.16 |
+The single-channel model made more false-positive errors in every training setup. With the original training balance, it incorrectly classified around 4.5% of non-cell objects, compared with 3.6% for the two-channel model. Increasing the proportion of cells in the training data did not close this gap.
 
-Fixing recall pins both models to the same 5016 cells found and 50 missed, so the whole difference lands in false positives: 254 against 204 on balanced data, 321 against 238 at 70% skew. Those 50 to 80 extra spurious cells never show up in an accuracy score. The thresholds diverge too, and more so with skew, so tune the threshold per model rather than leaving it at the default.
+| Cells in the training data | Non-cell objects counted as cells: single-channel | Two-channel |
+|---|---:|---:|
+| 47% (original balance) | 4.46% | 3.58% |
+| 60% | 5.09% | 3.83% |
+| 70% | 5.65% | 4.18% |
+| 80% | 5.08% | 4.05% |
+
+*Values are averages across three training runs.*
 
 ### Closing the gap
 
