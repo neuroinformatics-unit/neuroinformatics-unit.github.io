@@ -10,7 +10,7 @@
 
 ## Introduction
 
-Hi, I'm [Soumya](https://github.com/aymuos15). I was one of the [Neuroinformatics Unit](https://github.com/neuroinformatics-unit) GSoC interns for the 2026 summer term, and I worked on broadening the range of inputs [`cellfinder`](https://github.com/brainglobe/cellfinder) accepts, in both channel count and dimensionality.
+Hi, I'm [Soumya](https://github.com/aymuos15). I was one of the [Neuroinformatics Unit](https://github.com/neuroinformatics-unit) [Google Summer of Code](https://summerofcode.withgoogle.com/) (GSoC) interns for the 2026 summer term, and I worked on broadening the range of inputs [`cellfinder`](https://github.com/brainglobe/cellfinder) accepts, in both channel count and dimensionality.
 
 **Project**: BrainGlobe: expand `cellfinder` input support to 2.5D and single-channel data <br>
 **Mentors**: [Igor Tatarnikov](https://github.com/IgorTatarnikov), [Alessandro Felder](https://github.com/alessandrofelder), [Adam Tyson](https://github.com/adamltyson)
