@@ -76,7 +76,9 @@ A big reason I applied for this project is how closely it sits to my PhD work, a
 
 Working with a larger group was the other half of it. Seeing how research gets translated into software people can rely on, through review, tests and carefully chosen defaults, was the most useful thing I took from the summer.
 
-Single-channel support was one of three deliverables, and I am carrying on with the other two: extending the classifier to two-dimensional and 2.5D input so that brain slices are as well supported as whole volumes, and standardising the axis conventions underneath that make any change to dimensionality error-prone. Both are already under way, and I am looking forward to seeing them land.
+I also really enjoyed the opportunity to present this work at the [NIU Open Software Summer School](https://neuroinformatics.dev/slides-osss-intro/#/friday-approximate) and hear some very interesting feedback from the participants.
+
+Single-channel support was one of three deliverables, and I am carrying on with the other two: extending the classifier to two-dimensional and 2.5D input so that brain slices are as well supported as whole volumes, and standardising the axis conventions underneath that make any change to dimensionality error-prone. Both are already under way, incorporating the additional feedback gathered at the summer school, and I am looking forward to seeing them land.
 
 ---
 
