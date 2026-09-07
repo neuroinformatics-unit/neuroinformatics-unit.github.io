@@ -21,7 +21,7 @@ Hi, I'm [Soumya](https://github.com/aymuos15). I was one of the [Neuroinformatic
 
 `cellfinder` is BrainGlobe's tool for detecting and classifying cells in whole-brain microscopy volumes. By default, two channels are expected by `cellfinder`. This stems from a finding in the original `cellfinder` paper ([Tyson et al., 2021](https://doi.org/10.1371/journal.pcbi.1009074)), where the second channel lets the network learn the difference between neuron-based signals, only present in the primary signal channel, and other non-neuronal sources of fluorescence, potentially present in both channels.
 
-It is not free, though. As the [feature request](https://github.com/brainglobe/cellfinder/issues/352) behind this work put it, it is not always practical to double the data collected, and for some fluorophores a channel with only autofluorescence can be hard to obtain at all, which leaves it carrying little information while still costing a full acquisition. Making the background optional was the deliverable I want to talk about here.
+However, collecting a second channel doubles the data volume, and for some fluorophores it is difficult to obtain a channel containing only autofluorescence. These limitations are what originally motivated the [request for single-channel support](https://github.com/brainglobe/cellfinder/issues/352). Making this background channel optional was a major part of my project.
 
 ### What changed
 
