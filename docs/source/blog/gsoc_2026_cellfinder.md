@@ -45,7 +45,7 @@ In napari, you leave the background image unselected.
 
 ### How well does it work
 
-I trained a single-channel ResNet-50 on the same serial two-photon dataset used for the existing model and published it on the [Hugging Face Hub](https://huggingface.co/brainglobe/cellfinder_single_channel_default), so it downloads on first use like the others.
+I trained a single-channel ResNet-50 on the same serial two-photon dataset used for the existing model and published it on the [Hugging Face Hub](https://huggingface.co/brainglobe/cellfinder_single_channel_default), so it downloads automatically on first use like the others.
 
 Headline accuracy figures flatter it, so it is worth being precise about the cost.
 
