@@ -45,9 +45,9 @@ In napari, you leave the background image unselected.
 
 ### How well does it work
 
-I trained a single-channel ResNet-50 on the same serial two-photon dataset used for the existing model and published it on the [Hugging Face Hub](https://huggingface.co/brainglobe/cellfinder_single_channel_default), so it downloads automatically on first use like the others.
+I used the same ResNet-50 architecture and training dataset as the standard two-channel model, but dropped the background channel during training to create our first single-channel model. I then uploaded it to the [Hugging Face Hub](https://huggingface.co/brainglobe/cellfinder_single_channel_default), marking the start of our transition to hosting models there. It downloads automatically on first use, just like the existing models.
 
-Headline accuracy figures flatter it, so it is worth being precise about the cost.
+I then compared our results against the two-channel model to understand the trade-offs it would have.
 
 - Early use on data from a different microscope threw up more false-positive cells than expected.
 - So: cross-validation of single- versus two-channel over three stratified folds, against one frozen test set of 10,756 cubes, 5066 cells and 5690 non-cells.
