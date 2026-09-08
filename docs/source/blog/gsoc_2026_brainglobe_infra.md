@@ -38,7 +38,7 @@ The first inconsistency was small on the surface, but surprisingly visible: READ
 
 Making that reliable meant handling quite a few details that are easy to overlook. Documentation URLs had to be inferred from PyPI metadata, package availability on conda-forge and napari hub had to be detected, DOIs containing hyphens needed to be escaped correctly for shields.io, and repositories without trove license classifiers needed a different way of identifying their license. Once those cases were accounted for, the same process could be applied consistently across the organisation. The result is a small but useful improvement: anyone browsing BrainGlobe repositories can now understand their documentation, testing, and distribution status at a glance.
 
-```{image} cellfinder_badge_diff.png
+```{image} /_static/blog_images/brainglobe_infra_gsoc2026/cellfinder_badge_diff.png
 :alt: Badge section before and after standardisation
 :align: center
 :width: 80%
@@ -54,7 +54,7 @@ Badges were only one visible difference between repositories. A much more substa
 
 The rollout also brought up an unexpected issue. A change in [`cellfinder`](https://github.com/brainglobe/cellfinder/pull/642) caused the headless napari tests to fail because the Xvfb wrapper was no longer being set up correctly. I had to dig into how `GITHUB_ENV` persists between steps and how headless displays are configured in CI to understand why the new workflow behaved differently. This eventually led to a bug report in [`xvfbwrapper`](https://github.com/cgoldberg/xvfbwrapper/pull/75).
 
-```{image} (cellfinder_tox_to_uv_diff.png)
+```{image} /_static/blog_images/brainglobe_infra_gsoc2026/cellfinder_tox_to_uv_diff.png
 :alt: tox versus uv workflow
 :align: center
 :width: 80%
@@ -73,7 +73,7 @@ This gives contributors a much more predictable experience across BrainGlobe. Th
 
 Documentation was another place where small inconsistencies could have a disproportionate effect on users. BrainGlobe's documentation site generates API references directly from package docstrings using Sphinx and `autodoc`, but `brainrender` was not yet part of that pipeline. Integrating it brings its API reference into the same automated documentation system used by the other packages, keeping the published reference much closer to the actual source code.
 
-```{image} brainrender_docs_api_ref.png
+```{image} /_static/blog_images/brainglobe_infra_gsoc2026/brainrender_docs_api_ref.png
 :alt: Auto-generated brainrender API reference page
 :align: center
 :width: 80%
