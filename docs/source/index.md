@@ -71,5 +71,6 @@ get-involved/index
 resources/index
 open-software-summer-school/index
 gsoc-2025-datashuttle
+gsoc-2026-overall-brainglobe
 gsoc-2026-movement
 ```
