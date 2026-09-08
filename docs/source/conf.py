@@ -105,7 +105,13 @@ linkcheck_ignore = [
     "https://pubmed.ncbi.nlm.nih.gov",
     "https://github.com/signup",
     "https://ffmpeg.org",
+    "https://www.fastplotlib.org/_gallery/index.html", # temp: fastplotlib docs are not available 13/08/2026
+    "https://www.mcgill.ca/neuro/article/neuro-irv-and-helga-cooper-foundation-open-science-prizes-meet-winners-exceptional-edition", # HTTP 403 Forbidden: doesn't allow automatic link checkers
+    "https://www.mcgill.ca/neuro/open-science/open-science-awards-and-prizes/neuro-irv-and-helga-cooper-foundation-open-science-prizes", # HTTP 403 Forbidden: doesn't allow automatic link checkers
     "https://neuropixelsgroup.slack.com",
+    "https://slurm.schedmd.com/",
+    "https:/zenodo.org/",
+    r"https?://(?:[^/]+\.)?wikipedia\.org/.*",
 ]
 linkcheck_request_headers = {
     "https://github.com": {
