@@ -47,7 +47,7 @@ In napari, you leave the background image unselected.
 
 I used the same ResNet-50 architecture and training dataset as the standard two-channel model, but dropped the background channel during training to create our first single-channel model. I then uploaded it to the [Hugging Face Hub](https://huggingface.co/brainglobe/cellfinder_single_channel_default), marking the start of our transition to hosting models there. It downloads automatically on first use, just like the existing models.
 
-I then compared our results against the two-channel model to understand the trade-offs it would have. Early tests on data from a different microscope produced more false positives: objects incorrectly identified as cells. I tested both models on the same set of 10,756 image cubes, containing 5,066 cells and 5,690 non-cell objects, and varied the proportion of cells in the training data to see how it affected their performance.
+I then compared our results against the two-channel model to understand the trade-offs it would have. Early tests on data from a different microscope produced more false positives: objects incorrectly identified as cells. I tested both models on the same set of 10,756 image cubes, containing 5,066 cells and 5,690 non-cell objects, and varied the proportion of cells in the training data to see how it affected the models' performance.
 
 Each model assigns a score to a candidate cell, and a threshold determines whether it is counted as a cell. Using the same threshold for both models does not necessarily give a fair comparison. Instead, I adjusted their thresholds so that both found 99% of the real cells, then measured how often they incorrectly counted non-cell objects as cells.
 
