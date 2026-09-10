@@ -25,7 +25,7 @@ However, collecting a second channel doubles the data volume, and for some fluor
 
 ### What changed
 
-The `build_model()` function creates the neural network used to classify candidate cells. The input shape passed to it now reflects the number of channels in the data, allowing the network to accept a signal channel alone. With no background given, `cellfinder` switches to a single-channel model automatically, and a channel mismatch raises a clear error. Every pre-trained model `cellfinder` shipped expected two channels, so this path also needed retraining.
+The `build_model()` function creates the neural network used to classify candidate cells. The input shape passed to it now reflects the number of channels in the data, allowing the network to accept a signal channel alone. With no background given, `cellfinder` switches to a newly trained single-channel default model automatically, and a channel mismatch raises a clear error. Previously, every pre-trained model `cellfinder` shipped expected two channels.
 
 The same support runs through the napari plugin, so detection, curation and training all work from a signal channel alone. Curation writes only the signal cubes and notes the missing background in the training YAML, so training your own single-channel model needs no extra configuration.
 
