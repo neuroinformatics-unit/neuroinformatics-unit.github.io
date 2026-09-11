@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>GSoC 2025: brainglobe-registration &#8212; NIU</title>
+    <title>GSoC 2026: single-channel support in cellfinder &#8212; NIU</title>
   
   
   
@@ -68,9 +68,9 @@
                 gtag('js', new Date());
                 gtag('config', 'G-6260TGM7TY');
             </script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'blog/gsoc_2025_brainglobe_registration';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'blog/gsoc_2026_cellfinder';</script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
-    <link rel="canonical" href="https://neuroinformatics.dev/blog/gsoc_2025_brainglobe_registration.html" />
+    <link rel="canonical" href="https://neuroinformatics.dev/blog/gsoc_2026_cellfinder.html" />
     <link rel="icon" href="../_static/logo_light.png"/>
     <link rel="author" title="About these documents" href="../about.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -580,7 +580,7 @@
      
     <i class="fa fa-calendar"></i>
     
-    <span>15 September 2025</span>
+    <span>07 August 2026</span>
     
   </h2>
   <ul>
@@ -593,7 +593,7 @@
       
     </span>
      
-    <a href="author/saarah-hussain.html">Saarah Hussain</a>
+    <a href="author/soumya-snigdha-kundu.html">Soumya Snigdha Kundu</a>
       
   </li>
    
@@ -656,12 +656,6 @@
     </li>
     
     <li>
-      <a href="gsoc_2026_cellfinder.html">
-        07 August - GSoC 2026: single-channel support in cellfinder
-      </a>
-    </li>
-    
-    <li>
       <a href="trusted-by-design_part3.html">
         11 February - Trusted by design (part 3): embrace radically open communication
       </a>
@@ -670,6 +664,12 @@
     <li>
       <a href="trusted-by-design_part2.html">
         04 February - Trusted by design (part 2): release early, release often
+      </a>
+    </li>
+    
+    <li>
+      <a href="trusted-by-design_part1.html">
+        28 January - Trusted by design (part 1): define your software’s mission and scope
       </a>
     </li>
     
@@ -713,7 +713,7 @@
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">GSoC 2025: brainglobe-registration</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">GSoC 2026: single-channel support in cellfinder</span></li>
   </ul>
 </nav>
 </div>
@@ -729,73 +729,93 @@
                 
 <div id="searchbox"></div>
                 <article class="bd-article">
-                   <section class="tex2jax_ignore mathjax_ignore" id="gsoc-2025-brainglobe-registration">
-<h1>GSoC 2025: brainglobe-registration<a class="headerlink" href="#gsoc-2025-brainglobe-registration" title="Link to this heading">#</a></h1>
+                   <section class="tex2jax_ignore mathjax_ignore" id="gsoc-2026-single-channel-support-in-cellfinder">
+<h1>GSoC 2026: single-channel support in cellfinder<a class="headerlink" href="#gsoc-2026-single-channel-support-in-cellfinder" title="Link to this heading">#</a></h1>
 <section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
-<p>Hi, I’m <a class="reference external" href="https://github.com/saarah815">Saarah</a>. The intersection of healthcare and software development has
-always been important to me, which is why spending my summer with the
-<a class="reference external" href="https://github.com/neuroinformatics-unit">Neuroinformatics Unit</a>
-has been the perfect opportunity to bring together the work I love.</p>
-<p><strong>Project</strong>: <a class="reference external" href="https://summerofcode.withgoogle.com/programs/2025/projects/7Xk4Fl7t">BrainGlobe: Automating Region Selection in brainglobe-registration</a> <br>
+<p>Hi, I’m <a class="reference external" href="https://github.com/aymuos15">Soumya</a>. I was one of the <a class="reference external" href="https://github.com/neuroinformatics-unit">Neuroinformatics Unit</a> <a class="reference external" href="https://summerofcode.withgoogle.com/">Google Summer of Code</a> (GSoC) interns for the 2026 summer term, and I worked on broadening the range of inputs <a class="reference external" href="https://github.com/brainglobe/cellfinder"><code class="docutils literal notranslate"><span class="pre">cellfinder</span></code></a> accepts, in both channel count and dimensionality.</p>
+<p><strong>Project</strong>: BrainGlobe: expand <code class="docutils literal notranslate"><span class="pre">cellfinder</span></code> input support to 2.5D and single-channel data <br>
 <strong>Mentors</strong>: <a class="reference external" href="https://github.com/IgorTatarnikov">Igor Tatarnikov</a>, <a class="reference external" href="https://github.com/alessandrofelder">Alessandro Felder</a>, <a class="reference external" href="https://github.com/adamltyson">Adam Tyson</a></p>
 </section>
 <hr class="docutils" />
 <section id="project-overview">
 <h2>Project Overview<a class="headerlink" href="#project-overview" title="Link to this heading">#</a></h2>
-<p>Over the summer, I worked on extending the
-<a class="reference external" href="https://github.com/brainglobe/brainglobe-registration"><code class="docutils literal notranslate"><span class="pre">brainglobe-registration</span></code></a>
-plugin, focusing on making atlas alignment more accessible and less
-error-prone for users without a neuroscience background.</p>
-<p>Thus far, choosing the correct atlas slice and orientation has been a manual
-task – requiring users to scroll through volumes, make rough visual
-judgements, and enter rotation values by hand. My project aimed to automate
-this step, using
-<a class="reference external" href="https://github.com/bayesian-optimization/BayesianOptimization"><code class="docutils literal notranslate"><span class="pre">BayesianOptimization</span></code></a>
-to identify the best matching slice and orientation parameters directly
-from the data.</p>
-<p>The result is a new <strong>Automatic Slice Detection widget</strong> in the plugin, which
-not only handles single 2D images but can also align slabs of consecutive
-slices.</p>
-<p><img alt="img_1.png" src="../_images/slice_detection_widget.png" /></p>
-<p>The optimiser identifies the atlas slice and rotation parameters that best
-match the moving image, and then updates the Napari widget accordingly:</p>
-<p><img alt="img.png" src="../_images/post_slice_detection_screenshot.png" /></p>
-<p>For slabs, the optimiser matches the first and last slices and then
-interpolates alignment parameters across the stack, so that users can align
-larger volumes in one go. I have also written detailed
-<a class="reference external" href="https://github.com/brainglobe/brainglobe.github.io/pull/362/files?short_path=61a3e19">documentation</a>
-outlining exactly how to use these features.</p>
-<p>In addition to the core project requirements, I also worked on enhancing the
-project following discussions with my mentors. A key part of this work was
-building <strong>clear and informative logging</strong> – every optimisation step logs
-the parameters tested, its similarity score, the corresponding rotated slice
-image, and the rotation parameters. This makes the process more transparent
-and provides a useful record for reproducibility.</p>
-<p>Working on this project has been a valuable experience in bridging methods
-from optimisation and image analysis with practical neuroscience workflows.
-I particularly enjoyed balancing algorithmic design with UX considerations,
-such as keeping the interface intuitive while still exposing enough
-flexibility for advanced use.</p>
-<p>Collaborating with the NIU team also gave me a deeper appreciation of the
-importance of open, well-documented tools in neuroinformatics, and the work
-that goes into making them robust and user-friendly.</p>
-<p>Looking back, the most rewarding part was seeing the tool go from concept to
-a usable feature that I hope will save researchers time and difficulty in
-their workflows. Contributing to the BrainGlobe ecosystem has been a greatly
-rewarding opportunity, and I am incredibly excited to see how these tools
-continue to evolve in the future.</p>
+<p><code class="docutils literal notranslate"><span class="pre">cellfinder</span></code> is BrainGlobe’s tool for detecting and classifying cells in whole-brain microscopy volumes. By default, two channels are expected by <code class="docutils literal notranslate"><span class="pre">cellfinder</span></code>. This stems from a finding in the original <code class="docutils literal notranslate"><span class="pre">cellfinder</span></code> paper (<a class="reference external" href="https://doi.org/10.1371/journal.pcbi.1009074">Tyson et al., 2021</a>), where the second channel lets the network learn the difference between neuron-based signals, only present in the primary signal channel, and other non-neuronal sources of fluorescence, potentially present in both channels.</p>
+<p>However, collecting a second channel doubles the data volume, and for some fluorophores it is difficult to obtain a channel containing only autofluorescence. These limitations are what originally motivated the <a class="reference external" href="https://github.com/brainglobe/cellfinder/issues/352">request for single-channel support</a>. Making this background channel optional was a major part of my project.</p>
+<section id="what-changed">
+<h3>What changed<a class="headerlink" href="#what-changed" title="Link to this heading">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">build_model()</span></code> function creates the neural network used to classify candidate cells. The input shape passed to it now reflects the number of channels in the data, allowing the network to accept a signal channel alone. With no background given, <code class="docutils literal notranslate"><span class="pre">cellfinder</span></code> switches to a newly trained single-channel default model automatically, and a channel mismatch raises a clear error. Previously, every pre-trained model <code class="docutils literal notranslate"><span class="pre">cellfinder</span></code> shipped expected two channels.</p>
+<p>The same support runs through the napari plugin, so detection, curation and training all work from a signal channel alone. Curation writes only the signal cubes and notes the missing background in the training YAML, so training your own single-channel model needs no extra configuration.</p>
+<p>From Python, it is one argument:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">cellfinder.core.main</span><span class="w"> </span><span class="kn">import</span> <span class="n">main</span>
+
+<span class="n">cells</span> <span class="o">=</span> <span class="n">main</span><span class="p">(</span>
+    <span class="n">signal_array</span><span class="o">=</span><span class="n">signal</span><span class="p">,</span>
+    <span class="n">background_array</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">voxel_sizes</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>In napari, you leave the background image unselected.</p>
+</section>
+<section id="how-well-does-it-work">
+<h3>How well does it work<a class="headerlink" href="#how-well-does-it-work" title="Link to this heading">#</a></h3>
+<p>I used the same ResNet-50 architecture and training dataset as the standard two-channel model, but dropped the background channel during training to create our first single-channel model. I then uploaded it to the <a class="reference external" href="https://huggingface.co/brainglobe/cellfinder_single_channel_default">Hugging Face Hub</a>, marking the start of our transition to hosting models there. It downloads automatically on first use, just like the existing models.</p>
+<p>I then compared our results against the two-channel model to understand the trade-offs it would have. Early tests on data from a different microscope produced more false positives: objects incorrectly identified as cells. I tested both models on the same set of 10,756 image cubes, containing 5,066 cells and 5,690 non-cell objects, and varied the proportion of cells in the training data to see how it affected the models’ performance.</p>
+<p>Each model assigns a score to a candidate cell, and a threshold determines whether it is counted as a cell. Using the same threshold for both models does not necessarily give a fair comparison. Instead, I adjusted their thresholds so that both found 99% of the real cells, then measured how often they incorrectly counted non-cell objects as cells.</p>
+<p>The single-channel model made more false-positive errors in every training setup. With the original training balance, it incorrectly classified around 4.5% of non-cell objects, compared with 3.6% for the two-channel model. Increasing the proportion of cells in the training data did not close this gap.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Cells in the training data</p></th>
+<th class="head text-right"><p>Non-cell objects counted as cells: single-channel</p></th>
+<th class="head text-right"><p>Two-channel</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>47% (original balance)</p></td>
+<td class="text-right"><p>4.46%</p></td>
+<td class="text-right"><p>3.58%</p></td>
+</tr>
+<tr class="row-odd"><td><p>60%</p></td>
+<td class="text-right"><p>5.09%</p></td>
+<td class="text-right"><p>3.83%</p></td>
+</tr>
+<tr class="row-even"><td><p>70%</p></td>
+<td class="text-right"><p>5.65%</p></td>
+<td class="text-right"><p>4.18%</p></td>
+</tr>
+<tr class="row-odd"><td><p>80%</p></td>
+<td class="text-right"><p>5.08%</p></td>
+<td class="text-right"><p>4.05%</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><em>Values are averages across three training runs.</em></p>
+</section>
+<section id="closing-the-gap">
+<h3>Closing the gap<a class="headerlink" href="#closing-the-gap" title="Link to this heading">#</a></h3>
+<p>I tried a few strategies to improve the default single-channel model’s performance. <a class="reference external" href="https://arxiv.org/abs/1910.08475">Warm-start fine-tuning</a> recovers roughly 40% of the gap and a <a class="reference external" href="https://en.wikipedia.org/wiki/Top-hat_transform">top-hat</a> variant around 28%, while <a class="reference external" href="https://arxiv.org/abs/1503.02531">knowledge distillation</a> does nothing and <a class="reference external" href="https://arxiv.org/abs/1604.03540">hard-negative mining</a> hurts. Substituting a blurred copy of the signal for the missing background also proved unsuccessful, since a real background channel is anti-correlated with the signal at a cell, with a mean background-to-signal intensity ratio of 0.05 at a true cell against 2.00 at a true non-cell, whereas a blurred copy is positively correlated by construction.</p>
+<p>A performance drop from two channels was always expected. However, now, if you only have one channel, you can know use <code class="docutils literal notranslate"><span class="pre">cellfinder</span></code>.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="reflections">
+<h2>Reflections<a class="headerlink" href="#reflections" title="Link to this heading">#</a></h2>
+<p>A big reason I applied for this project is how closely it sits to my PhD work, and it was genuinely interesting to take the techniques I use there and apply them over here, on a different problem and a different kind of data.</p>
+<p>Working with a larger group was the other half of it. Seeing how research gets translated into software people can rely on, through review, tests and carefully chosen defaults, was the most useful thing I took from the summer.</p>
+<p>I also really enjoyed the opportunity to present this work at the <a class="reference external" href="https://neuroinformatics.dev/slides-osss-intro/#/friday-approximate">NIU Open Software Summer School</a> and hear some very interesting feedback from the participants.</p>
+<p>Single-channel support was one of three deliverables, and I am carrying on with the other two: extending the classifier to two-dimensional and 2.5D input so that brain slices are as well supported as whole volumes, and standardising the axis conventions underneath that make any change to dimensionality error-prone. Both are already under way, incorporating the additional feedback gathered at the summer school, and I am looking forward to seeing them land.</p>
 </section>
 <hr class="docutils" />
 <section id="repositories">
 <h2>Repositories<a class="headerlink" href="#repositories" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p><a class="reference external" href="https://github.com/brainglobe/brainglobe-registration"><code class="docutils literal notranslate"><span class="pre">brainglobe-registration</span></code></a></p></li>
-<li><p><a class="reference external" href="https://github.com/neuroinformatics-unit/fancylog"><code class="docutils literal notranslate"><span class="pre">fancylog</span></code></a></p></li>
+<li><p><a class="reference external" href="https://github.com/brainglobe/cellfinder"><code class="docutils literal notranslate"><span class="pre">cellfinder</span></code></a></p></li>
 <li><p><a class="reference external" href="https://github.com/brainglobe/brainglobe.github.io/"><code class="docutils literal notranslate"><span class="pre">brainglobe.github.io</span></code></a></p></li>
 </ul>
 <hr class="docutils" />
-<p><em>Thank you to my mentors and the incredible team at NIU for all of their support and guidance!</em></p>
+<p><em>Thank you to my mentors and the whole team at NIU and BrainGlobe for their patience, their reviews, and their guidance throughout the summer!</em></p>
 </section>
 </section>
 
@@ -804,19 +824,19 @@ continue to evolve in the future.</p>
 <div class="section ablog__prev-next">
   <span class="ablog__prev">
      
-    <a href="datashuttle_gsoc2025.html">
+    <a href="trusted-by-design_part3.html">
       
       <i class="fa fa-arrow-circle-left"></i>
       
-      <span>Add Google Drive and AWS to datashuttle - Final GSoC Report</span>
+      <span>Trusted by design (part 3): embrace radically open communication</span>
     </a>
     
   </span>
   <span class="ablog__spacer">&nbsp;</span>
   <span class="ablog__next">
      
-    <a href="worms_osw25.html">
-      <span>Exploring automatic ways of extracting a pose estimation skeleton for C. elegans</span>
+    <a href="gsoc_2026_brainglobe_infra.html">
+      <span>GSoC 2026: Miscellaneous maintenance work on BrainGlobe overall infrastructure</span>
       
       <i class="fa fa-arrow-circle-right"></i>
       
@@ -856,7 +876,13 @@ continue to evolve in the future.</p>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-overview">Project Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-overview">Project Overview</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-changed">What changed</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-well-does-it-work">How well does it work</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#closing-the-gap">Closing the gap</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reflections">Reflections</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#repositories">Repositories</a></li>
 </ul>
   </nav></div>
