@@ -83,6 +83,7 @@ linkcheck_ignore = [
     "https://www.incf.org/recommendations-gsoc-contributors",
     "https://www.incf.org/sites/default/files/files/INCF_GSoC_2022_Application_template.pdf",
     "https://neuroinformatics.dev/slides-templates-atlases/#/on-templates-and-atlases",
+    "https://neuroinformatics.dev/slides-osss-intro/#/friday-approximate",
     "https://errantscience.com/",
     "https://in2scienceuk.org/our-programmes/in2research/",
     "https://www.biorxiv.org/content/10.1101/2025.03.30.645770v1",
@@ -235,6 +236,7 @@ fontawesome_included = True
 
 redirects = {
     'open-software-week/index.html': '/open-software-summer-school/index.html',
+    'gsoc-2026-cellfinder.html': '/blog/gsoc_2026_cellfinder.html',
 }
 
 # Hide the "Show Source" button
