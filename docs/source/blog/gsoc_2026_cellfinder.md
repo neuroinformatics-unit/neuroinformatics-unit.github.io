@@ -64,7 +64,7 @@ The single-channel model made more false-positive errors in every training setup
 
 ### Closing the gap
 
-I tried a few strategies to improve the default single-channel model's performance. Warm-start fine-tuning recovers roughly 40% of the gap and a top-hat variant around 28%, while distillation does nothing and hard-negative mining hurts. Substituting a blurred copy of the signal for the missing background also proved unsuccessful, since a real background channel is anti-correlated with the signal at a cell, with a mean background-to-signal intensity ratio of 0.05 at a true cell against 2.00 at a true non-cell, whereas a blurred copy is positively correlated by construction.
+I tried a few strategies to improve the default single-channel model's performance. [Warm-start fine-tuning](https://arxiv.org/abs/1910.08475) recovers roughly 40% of the gap and a [top-hat](https://en.wikipedia.org/wiki/Top-hat_transform) variant around 28%, while [knowledge distillation](https://arxiv.org/abs/1503.02531) does nothing and [hard-negative mining](https://arxiv.org/abs/1604.03540) hurts. Substituting a blurred copy of the signal for the missing background also proved unsuccessful, since a real background channel is anti-correlated with the signal at a cell, with a mean background-to-signal intensity ratio of 0.05 at a true cell against 2.00 at a true non-cell, whereas a blurred copy is positively correlated by construction.
 
 A performance drop from two channels was always expected. However, now, if you only have one channel, you can know use `cellfinder`.
 
