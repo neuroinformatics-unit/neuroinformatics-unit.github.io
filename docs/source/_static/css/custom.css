@@ -72,3 +72,42 @@ html[data-theme=dark] .bd-main img {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+/* Sidebar Switcher Styling */
+.niu-sb-dd {
+    margin: 10px 15px;
+}
+.niu-sb-dd .btn-group {
+    width: 100%;
+}
+.niu-sb-dd-value {
+    flex-grow: 1;
+    text-align: left;
+    font-weight: 600;
+    background-color: var(--pst-color-surface);
+    border: 1px solid var(--pst-color-border);
+    color: var(--pst-color-text-base);
+}
+.niu-sb-dd .dropdown-toggle {
+    background-color: var(--pst-color-surface);
+    border: 1px solid var(--pst-color-border);
+    color: var(--pst-color-text-base);
+}
+.niu-sb-dd .dropdown-menu {
+    width: 100%;
+    background-color: var(--pst-color-surface);
+}
+.niu-sb-dd .dropdown-item {
+    color: var(--pst-color-text-base);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.niu-sb-dd .dropdown-item:hover {
+    background-color: var(--pst-color-surface-hover);
+}
+.niu-icon {
+    font-size: 0.8em;
+    margin-left: 8px;
+    opacity: 0.7;
+}
