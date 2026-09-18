@@ -1,5 +1,5 @@
 :blogpost: true
-:date: August 26, 2026
+:date: September 8, 2026
 :author: Varun Singh
 :location: India
 :category: Blog
