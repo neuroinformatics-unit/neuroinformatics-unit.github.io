@@ -1,4 +1,4 @@
-# Open Software Summer School
+# Open Software Summer School 2026
 
 
 We are excited to announce the second **NIU Open Software Summer School**, taking
