@@ -2,14 +2,15 @@
 
 
 We are excited to announce the third **NIU Open Software Summer School**, taking
-place in **August 2027** at the [Sainsbury Wellcome Centre](https://maps.app.goo.gl/CzWFFjXJZwX87aMj6) 
+place on **August 9-20 2027** at the [Sainsbury Wellcome Centre](https://maps.app.goo.gl/CzWFFjXJZwX87aMj6)
 in **London, UK**. This event will bring together researchers, developers, and users of open-source software for some hands-on training, community-building and hacking.
 
 [The 2025 event](2025/index) (known as Open Software Week) brought together 44 attendees from 12 countries to learn 
 about open-source approaches for handling large images, processing microscopy data and analysing video behavioural data. 
 
-[The 2026 event](2026/index) expanded to two weeks, adding a new *Extracellular Electrophysiology* track, 
-additional satellite events, guest lectures and opportunities for researchers to present their own work. It was attended by 51 attendees from 16 countries. 
+[The 2026 event](2026/index) expanded to two weeks, adding a new *Extracellular Electrophysiology* track alongside
+additional satellite events, guest lectures and opportunities for researchers to present their own work.
+It welcomed 51 attendees from 16 countries. 
 
 :::{admonition} Applications will open in early December 2026
 :class: info
@@ -38,7 +39,7 @@ The schedule is being finalised, but will largely mirror the schedule of [the 20
 ## Feedback from previous summer schools
 
 ![](/_static/osw_images/OSSS_2026.jpg)
-**Participants (having a great time) after the Collaboration Days in 2026** 
+**Participants (having a great time) after presenting their collaborative work in 2026** 
 
 ### Selected quotes from 2026 attendees
 
