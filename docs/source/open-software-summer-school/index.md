@@ -26,7 +26,7 @@ Alternatively, please <a href="mailto:adam.tyson@ucl.ac.uk ?subject=Open Softwar
 
 ## Schedule
 
-The schedule is being finalised, but will largely mirror the schedule of [the 2026 event](2026/index#schedule).
+The schedule is being finalised, but will largely mirror the schedule of [the 2026 event](target-2026-osss-schedule).
 
 ## Key Dates
 
@@ -70,7 +70,6 @@ The schedule is being finalised, but will largely mirror the schedule of [the 20
 :caption: Index
 :hidden:
 
-2026/application_questions
 funding
 2025/index
 2026/index

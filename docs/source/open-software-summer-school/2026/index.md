@@ -5,7 +5,7 @@ We are excited to announce the second **NIU Open Software Summer School**, takin
 place in **August 2026** at the [Sainsbury Wellcome Centre](https://maps.app.goo.gl/CzWFFjXJZwX87aMj6) 
 in **London, UK**. This event will bring together researchers, developers, and users of open-source software for some hands-on training, community-building and hacking.
 
-[The 2025 event](2025/index) (known as Open Software Week) brought together 44 attendees from 12 countries to learn 
+[The 2025 event](../2025/index) (known as Open Software Week) brought together 44 attendees from 12 countries to learn 
 about open-source approaches for handling large images, processing microscopy data and analysing video behavioural data. 
 In 2026, we will return, with an expanded two-week program adding a new *Extracellular Electrophysiology* track, 
 additional satellite events, guest lectures and opportunities for researchers to present their own work. 
@@ -16,6 +16,7 @@ If you have any questions, please ask on our [Zulip chat](https://neuroinformati
 Alternatively, please <a href="mailto:adam.tyson@ucl.ac.uk ?subject=Open Software Summer School">email Adam Tyson</a>.
 :::
 
+(target-2026-osss-schedule)=
 ## Schedule
 ![](/_static/osw_images/OSSS_2026_schedule.png)
 
@@ -105,7 +106,7 @@ Fees include all materials needed, and lunch/refreshments each day.
 ### Financial Assistance
 A number of fee waivers will be available to applicants who would not otherwise be able to attend the summer school. 
 A limited number of travel stipends will also be available, but we encourage applicants to apply for 
-[independent travel funding](funding).
+[independent travel funding](../funding).
 
 
 ## Feedback from previous summer schools
@@ -134,11 +135,9 @@ The Open Software Summer School is supported by the [Sainsbury Wellcome Centre](
 :caption: Index
 :hidden:
 
-2026/application_questions
-funding
-2025/index
-2026/animals-in-motion
-2026/large-data
-2026/brainglobe
-2026/extracellular-electrophysiology
+application_questions
+animals-in-motion
+large-data
+brainglobe
+extracellular-electrophysiology
 ```
