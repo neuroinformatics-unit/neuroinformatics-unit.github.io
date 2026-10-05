@@ -9,7 +9,7 @@ in **London, UK**. This event will bring together researchers, developers, and u
 about open-source approaches for handling large images, processing microscopy data and analysing video behavioural data. 
 
 [The 2026 event](2026/index) expanded to two weeks, adding a new *Extracellular Electrophysiology* track, 
-additional satellite events, guest lectures and opportunities for researchers to present their own work. 
+additional satellite events, guest lectures and opportunities for researchers to present their own work. It was attended by 51 attendees from 16 countries. 
 
 :::{admonition} Applications will open in early December 2026
 :class: info
@@ -37,8 +37,8 @@ The schedule is being finalised, but will largely mirror the schedule of [the 20
 
 ## Feedback from previous summer schools
 
-![](/_static/osw_images/OSW_2025.jpg)
-**Participants (having a great time) at the hackathon in 2025**
+![](/_static/osw_images/OSSS_2026.jpg)
+**Participants (having a great time) after the Collaboration Days in 2026** 
 
 ### Selected quotes from 2026 attendees
 
