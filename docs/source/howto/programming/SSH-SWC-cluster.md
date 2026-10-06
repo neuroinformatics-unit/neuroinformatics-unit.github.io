@@ -61,7 +61,7 @@ If you are physically **at SWC** using a **wired network connection** (i.e., not
 connected using the **SWC VPN**, you can directly connect to the cluster's *gateway* node (`hpc-gw2`).
 
 ```{code-block} console
-$ ssh <SWC-USERNAME>@hpc-gw2
+$ ssh <SWC-USERNAME>@hpc-gw2.hpc.swc.ucl.ac.uk
 ```
 
 In any other scenario, you are **not within the SWC network**; you must first connect to a secure access point (called the *bastion* node) before you can reach the cluster's *gateway* node (`hpc-gw2`).
