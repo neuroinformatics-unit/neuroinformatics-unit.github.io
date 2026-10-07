@@ -52,8 +52,8 @@ You have two options on how to proceed:
 
 ## Log into the cluster
 
-Run the following commands on the terminal, typing your `<SWC-PASSWORD>` when prompted.
-Note that the password will not be displayed on the screen as you type.
+Run the following commands on the terminal, replacing `<SWC-USERNAME>` with the username assigned to you by SWC's IT.
+Type the corresponding `<SWC-PASSWORD>` when prompted, but note that it will not be displayed on the screen as you type.
 
 If you are physically **at SWC** on a **wired network connection** (i.e., not eduroam),
 or connected via the **SWC VPN**, you can directly connect to the cluster's *gateway* node (`hpc-gw2`).
