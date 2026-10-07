@@ -81,8 +81,8 @@ To always know which node you're on, check your terminal prompt
 (`<SWC-USERNAME>@<HOSTNAME>`) or run `hostname`.
 :::
 
-To return to the computer you came from, simply type `logout`.
-You can think of `logout` as undoing the last `ssh` command you ran.
+To return to the computer you came from, simply type `exit`.
+You can think of `exit` as undoing the last `ssh` command you ran.
 
 :::{admonition} Further reading
 :class: tip
@@ -209,7 +209,7 @@ You can also use the same syntax to SSH into the *bastion* node:
 ```{code-block} console
 $ ssh swc-bastion
 ```
-In both cases, typing the `logout` command once will return you to your local machine.
+In both cases, typing the `exit` command once will return you to your local machine.
 
 ## SSH keys
 If you are bored of typing your password every time you SSH into the cluster,
