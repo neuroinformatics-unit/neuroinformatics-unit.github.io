@@ -294,32 +294,29 @@ Host swc-gateway
 ```
 :::
 
-Next, let's copy the public key you just generated to the remote machines.
+Next, let's copy the public key you just generated to the remote machine.
+After that, you will be able to directly SSH into the *gateway* node
+by typing `ssh swc-gateway`, without having to enter your password 🎉!
 
 ```{code-block} console
 $ ssh-copy-id -i ~/.ssh/id_ed25519.pub swc-gateway
 ```
 
-:::{dropdown} Explain the above command
-:color: info
-:icon: info
-The `ssh-copy-id` command uses the configuration we previously set up
-in the `config` file to figure out how to reach the remote machine.
-
-It copies the specified public key to your home directory on the target machine (in this case `swc-gateway`) and adds it to the `.ssh/authorized_keys` file there.
-
-Since your SWC home directory is shared across all HPC nodes, the public
-key will be available on all of them.
-
-If you are within the SWC network and haven't set up the aliases in your SSH config file, you can
-copy the key by directly specifying the SSH address of the *gateway* node:
+If you are **within the SWC network** and haven't set up the aliases in your SSH config file,
+you can copy the key by specifying the SSH address of the *gateway* node:
 
 ```{code-block} console
 $ ssh-copy-id -i ~/.ssh/id_ed25519.pub <SWC-USERNAME>@hpc-gw2.hpc.swc.ucl.ac.uk
 ```
-:::
 
-🎉 Congrats! You can now directly SSH into the *gateway* node without typing your password:
-```{code-block} console
-$ ssh swc-gateway
-```
+:::{dropdown} Explain the above commands
+:color: info
+:icon: info
+The `ssh-copy-id` command copies the specified public key to your home directory
+on the target machine and adds it to the `.ssh/authorized_keys` file there.
+The target machine can be specified either by an alias defined in your SSH config file
+(e.g. `swc-gateway`) or by its SSH address (e.g. `hpc-gw2.hpc.swc.ucl.ac.uk`).
+
+Since your SWC home directory is shared across all HPC nodes, the public
+key will be available on all of them.
+:::
