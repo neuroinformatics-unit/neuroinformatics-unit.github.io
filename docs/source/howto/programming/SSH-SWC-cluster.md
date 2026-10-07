@@ -100,7 +100,7 @@ Let's distinguish the different types of nodes on the SWC HPC system.
 | Node Type | SSH Address | Hostname | Role |
 | :--- | :--- | :--- | :--- |
 | *Bastion* | `ssh.swc.ucl.ac.uk` | `sgw2` | **Secure entry point**: if you find yourself here, just type `ssh hpc-gw2` to reach the *gateway* node. |
-| *Gateway* | `hpc-gw2` (from the *bastion*) or `hpc-gw2.hpc.swc.ucl.ac.uk` | `hpc-gw2` | **Staging area**: use it only for script editing and job submission. |
+| *Gateway* | `hpc-gw2` (from the *bastion*) or `hpc-gw2.hpc.swc.ucl.ac.uk` | `hpc-gw2` | **Staging area**: use it only for filesystem navigation, editing scripts with a terminal-based editor (e.g. `nano` or `vim`), and job submission. |
 | *Compute* | assigned by SLURM via `srun` or `sbatch` | `enc1-node10`, `gpu-sr670-21`, etc. | **Workhorses** that run the actual computations submitted via `srun` or `sbatch`. |
 
 ![Flowchart of the routes from your computer to the bastion, gateway and compute nodes](../../_static/howto/ssh_flowchart_primary.png)
@@ -113,7 +113,8 @@ The *compute* nodes should only be accessed via the SLURM `srun` or `sbatch` com
 :color: warning
 :icon: alert
 
-Avoid running any computations on the *bastion* or *gateway* nodes, as these are shared across all users of the HPC cluster. It's always safer to request dedicated *compute* resources, which will be yours for the duration of your job.
+Avoid running any computations on the *bastion* or *gateway* nodes, as these are shared across all users of the HPC cluster.
+It's always safer to request dedicated *compute* resources, which will be yours for the duration of your job.
 
 For example, this is how you request an interactive session on a *compute* node to create a new conda environment:
 
