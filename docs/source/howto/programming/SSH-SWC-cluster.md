@@ -103,7 +103,14 @@ Let's distinguish the different types of nodes on the SWC HPC system.
 | *Gateway* | `hpc-gw2` (from the *bastion*) or `hpc-gw2.hpc.swc.ucl.ac.uk` | `hpc-gw2` | **Staging area**: use it only for filesystem navigation, editing scripts with a terminal-based editor (e.g. `nano` or `vim`), and job submission. |
 | *Compute* | assigned by SLURM via `srun` or `sbatch` | `enc1-node10`, `gpu-sr670-21`, etc. | **Workhorses** that run the actual computations submitted via `srun` or `sbatch`. |
 
-![Flowchart of the routes from your computer to the bastion, gateway and compute nodes](../../_static/howto/ssh_flowchart_primary.png)
+```{image} ../../_static/howto/ssh_flowchart_light.png
+:alt: Flowchart of the routes from your computer to the bastion, gateway and compute nodes
+:class: only-light
+```
+```{image} ../../_static/howto/ssh_flowchart_dark.png
+:alt: Flowchart of the routes from your computer to the bastion, gateway and compute nodes
+:class: only-dark
+```
 
 Your home directory, as well as the locations where filesystems like `ceph` are mounted, are shared across all of the nodes.
 
