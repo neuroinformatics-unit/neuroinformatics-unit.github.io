@@ -139,7 +139,7 @@ a Windows or a Linux image. These machines are already part of the SWC's
 trusted network domain, meaning you can easily access the HPC cluster.
 
 - If you are using a [managed Windows desktop](https://liveuclac.sharepoint.com/sites/SSC/SitePages/SSC-SWC-Desktops-147956857.aspx),
-you can SSH directly into the *gateway* node with `ssh hpc-gw2` from the
+you can SSH directly into the *gateway* node from the
 Windows `cmd` or PowerShell. You may use that node to prepare your scripts and submit SLURM jobs.
 - If you are using a [managed Linux desktop](https://liveuclac.sharepoint.com/sites/SSC/SitePages/SSC-Managed-Linux-Desktop-69502751.aspx),
 you can even bypass the *gateway* node. In fact, you may directly submit SLURM jobs
