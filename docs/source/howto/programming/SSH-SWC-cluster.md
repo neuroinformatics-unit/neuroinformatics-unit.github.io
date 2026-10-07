@@ -23,7 +23,7 @@ any personal computer.
 
 ## Prerequisites
 - You have an SWC account and know your username and password.
-- You have read the [SWC wiki's section on High Performance Computing (HPC)](https://liveuclac.sharepoint.com/sites/SSC/SitePages/SSC-High-Performance-Computing-147954090.aspx), especially the [Logging into the Cluster page](https://liveuclac.sharepoint.com/sites/SSC/SitePages/SSC-Logging-into-the-Cluster-194972967.aspx).
+- You have read the [SWC wiki's section on High Performance Computing (HPC)](https://liveuclac.sharepoint.com/sites/SSC/SitePages/SSC-High-Performance-Computing-147954090.aspx), especially the [Logging into the Cluster page](https://liveuclac.sharepoint.com/sites/SSC/SitePages/SSC-Logging-into-the-Cluster-194972967.aspx). This guides duplicates some of the information there, but also provides additional details and instructions.
 - You know the basics of using the command line, i.e. using the terminal to navigate the file system and run commands.
 - You have an SSH client installed on your computer. This is usually pre-installed on Linux and macOS. SSH is also available on Windows (since Windows 10), however some steps will differ. If you are a Windows user, read the note below before proceeding.
 
@@ -62,22 +62,35 @@ connected using the **SWC VPN**, you can directly connect to the cluster's *gate
 
 ```{code-block} console
 $ ssh <SWC-USERNAME>@hpc-gw2.hpc.swc.ucl.ac.uk
+<SWC-USERNAME>@hpc-gw2:~$
 ```
 
-In any other scenario, you are **not within the SWC network**; you must first connect to a secure access point (called the *bastion* node) before you can reach the cluster's *gateway* node (`hpc-gw2`).
+In any other scenario, you are **not within the SWC network**;
+you must first connect to a secure access point—called the *bastion*
+node (`sgw2`)—before you can proceed the cluster's *gateway* node (`hpc-gw2`).
 
 ```{code-block} console
 $ ssh <SWC-USERNAME>@ssh.swc.ucl.ac.uk
-$ ssh hpc-gw2
+<SWC-USERNAME>@sgw2:~$ ssh hpc-gw2
+<SWC-USERNAME>@hpc-gw2:~$
 ```
 
-To return to the computer you came from, simply type `logout`. You can think of `logout` as undoing the last `ssh` command you ran.
+:::{admonition} SSH addresses vs hostnames
 
-:::{admonition} You may stop reading here, but...
+The address you SSH *to* isn't always the hostname you land *on*. Notice above that
+the *bastion* node's address and hostname differ (`ssh.swc.ucl.ac.uk` vs `sgw2`).
+To always know which node you're on, check your terminal prompt
+(`<SWC-USERNAME>@<HOSTNAME>`) or run `hostname`.
+:::
 
-If you want to learn more about the various types of HPC nodes (*bastion / gateway / compute*), read the [next section](#types-of-hpc-nodes).
+To return to the computer you came from, simply type `logout`.
+You can think of `logout` as undoing the last `ssh` command you ran.
 
-If you want to make you life easier, you can set yourself up with an [SSH config file](#ssh-config-file)
+:::{admonition} Further reading
+:class: tip
+
+- If you want to learn more about the various types of HPC nodes (*bastion / gateway / compute*), read the [next section](#types-of-hpc-nodes).
+- If you want to make you life easier, you can set yourself up with an [SSH config file](#ssh-config-file)
 and some [SSH keys](#ssh-keys).
 :::
 
@@ -87,13 +100,13 @@ and some [SSH keys](#ssh-keys).
 A *node* is simply a computer that is part of the cluster.
 Let's distinguish the different types of nodes on the SWC HPC system.
 
-| Node Type | Hostname | Analogy / Role | Use cases |
+| Node Type | SSH Address | Hostname | Role |
 | :--- | :--- | :--- | :--- |
-| *Bastion* | `ssh.swc.ucl.ac.uk` | Secure entry point | **Strictly pass-through.** Do not run any computations or file operations. If you find yourself here, just type `ssh hpc-gw2` to reach the *gateway* node. |
-| *Gateway* | `hpc-gw2` | Staging Area | **Light-weight tasks only** (script editing, file management, job submission). Do not run computations. |
-| *Compute* | `enc1-node10`, `gpu-sr670-21`, etc. | Workhorses | **Run the actual computations** submitted via `srun` or `sbatch`. |
+| *Bastion* | `ssh.swc.ucl.ac.uk` | `sgw2` | **Secure entry point**: if you find yourself here, just type `ssh hpc-gw2` to reach the *gateway* node. |
+| *Gateway* | `hpc-gw2` (from the *bastion*) or `hpc-gw2.hpc.swc.ucl.ac.uk` | `hpc-gw2` | **Staging Area**: use it only for script editing and job submission. |
+| *Compute* | assigned by SLURM via `srun` or `sbatch` | `enc1-node10`, `gpu-sr670-21`, etc. | **Workhorses** that run the actual computations submitted via `srun` or `sbatch`. |
 
-![](../../_static/howto/ssh_flowchart_unmanaged.png)
+![](../../_static/howto/ssh_flowchart_primary.png)
 
 Your home directory, as well as the locations where filesystems like `ceph` are mounted, are shared across all of the nodes.
 
@@ -103,29 +116,22 @@ The *compute* nodes should only be accessed via the SLURM `srun` or `sbatch` com
 :color: warning
 :icon: alert
 
-Avoid running heavy computations on the *bastion* or *gateway* nodes, as these are shared across all users of the HPC cluster.
+Avoid running any computations on the *bastion* or *gateway* nodes, as these are shared across all users of the HPC cluster. It's always safer to request dedicated *compute* resources, which will be yours for the duration of your job.
 
-It's always safer to request dedicated *compute* resources, which will be yours for the duration of your job.
-
-For example, this is how you can request an an interactive session on a *compute* node to create a new conda environment:
+For example, this is how you request an interactive session on a *compute* node to create a new conda environment:
 
 ```{code-block} console
 $ srun -p cpu -n 4 --mem 8G --pty bash -i
 $ module load miniconda
-$ conda create -n myenv python=3.10
+$ conda create -n myenv python=3.13
 ```
 
-The first command requests 4 cores and 8GB of memory on a node of the `cpu`
-partition, meant for jobs that do not require GPUs.
-Depending on your needs and node availability, you may need to request
-a different partition. See the [SLURM arguments primer](slurm-arguments-target)
-for more information.
-
+The first command requests 4 cores and 8GB of memory on a node of the `cpu` partition.
 The `--pty bash -i` part specifies an interactive bash shell.
+See the [SLURM arguments primer](slurm-arguments-target) for more information.
 The following two commands are run in this shell, on the assigned *compute* node.
 
-Type `exit` to leave the interactive session when finished.
-Avoid keeping sessions open when not in use.
+Type `exit` to leave the interactive session as soon as finished.
 :::
 
 (target-managed-desktops)=
@@ -143,10 +149,6 @@ you can even bypass the *gateway* node. In fact, you may directly submit SLURM j
 from your terminal, without having to SSH at all. That's because managed Linux desktops
 use the same platform as the HPC nodes
 and are already equipped with the SLURM job scheduler.
-
-A modified version of the flowchart found above, including managed desktops:
-
-![](../../_static/howto/ssh_flowchart_full.png)
 
 
 ## SSH config file
