@@ -18,29 +18,27 @@ any personal computer.
 | [HPC](https://en.wikipedia.org/wiki/High-performance_computing)         | High Performance Computing                   |
 | [IT](https://en.wikipedia.org/wiki/Information_technology)              | Information Technology                       |
 | [SLURM](https://slurm.schedmd.com/)                                     | Simple Linux Utility for Resource Management |
-| [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment) | Integrated Development Environment           |
-| [GUI](https://en.wikipedia.org/wiki/Graphical_user_interface)           | Graphical User Interface                     |
 
 ## Prerequisites
 - You have an SWC account and know your username and password.
-- You have read the [SWC wiki's section on High Performance Computing (HPC)](https://liveuclac.sharepoint.com/sites/SSC/SitePages/SSC-High-Performance-Computing-147954090.aspx), especially the [Logging into the Cluster page](https://liveuclac.sharepoint.com/sites/SSC/SitePages/SSC-Logging-into-the-Cluster-194972967.aspx). This guides duplicates some of the information there, but also provides additional details and instructions.
+- You have read the [SWC wiki's section on High Performance Computing (HPC)](https://liveuclac.sharepoint.com/sites/SSC/SitePages/SSC-High-Performance-Computing-147954090.aspx), especially the [Logging into the Cluster page](https://liveuclac.sharepoint.com/sites/SSC/SitePages/SSC-Logging-into-the-Cluster-194972967.aspx). This guide duplicates some of the information there, but also provides additional details and instructions.
 - You know the basics of using the command line, i.e. using the terminal to navigate the file system and run commands.
 - You have an SSH client installed on your computer. This is usually pre-installed on Linux and macOS. SSH is also available on Windows (since Windows 10), however some steps will differ. If you are a Windows user, read the note below before proceeding.
 
-::: {dropdown} Note for Windows users
+:::{dropdown} Note for Windows users
 :color: info
 :icon: info
 
 You have two options on how to proceed:
 
-1. Install [Git Bash](https://gitforwindows.org/), which emulates a Linux terminal on Windows and includes tools that are not available on Windows by default, such as `nano`, and `ssh-copy-id`. This is the recommended option, as it will allow you to follow along with all commands in this guide, as they are presented. Just assume that all commands are run in Git Bash.
+1. Install [Git Bash](https://gitforwindows.org/), which emulates a Linux terminal on Windows and includes tools that are not available on Windows by default, such as `nano` and `ssh-copy-id`. This is the recommended option, as it will allow you to follow along with all commands in this guide, as they are presented. Just assume that all commands are run in Git Bash.
 
 2. If you are using Windows 10 or newer, you can follow this guide (except for the section on [SSH keys](#ssh-keys)) using native Windows functionalities as described here.
 
     To [Log into the cluster](#log-into-the-cluster), you can use the same commands as in the guide below, but typed in the Windows `cmd` or PowerShell.
 
     The [SSH config file](#ssh-config-file) section can be followed using the file browser and Notepad, instead of the terminal and `nano`.
-    Create the `.ssh` folder in you home directory, i.e. `C:\Users\<USERNAME>\.ssh`,
+    Create the `.ssh` folder in your home directory, i.e. `C:\Users\<USERNAME>\.ssh`,
     if it does not already exist (don't forget the `.` at the start of `.ssh`).
 
     You may create and edit the `config` file with Notepad but beware that the file must not have an extension.
@@ -57,8 +55,8 @@ You have two options on how to proceed:
 Run the following commands on the terminal, typing your `<SWC-PASSWORD>` when prompted.
 Note that the password will not be displayed on the screen as you type.
 
-If you are physically **at SWC** using a **wired network connection** (i.e., not eduroam)—or
-connected using the **SWC VPN**, you can directly connect to the cluster's *gateway* node (`hpc-gw2`).
+If you are physically **at SWC** on a **wired network connection** (i.e., not eduroam),
+or connected via the **SWC VPN**, you can directly connect to the cluster's *gateway* node (`hpc-gw2`).
 
 ```{code-block} console
 $ ssh <SWC-USERNAME>@hpc-gw2.hpc.swc.ucl.ac.uk
@@ -67,7 +65,7 @@ $ ssh <SWC-USERNAME>@hpc-gw2.hpc.swc.ucl.ac.uk
 
 In any other scenario, you are **not within the SWC network**;
 you must first connect to a secure access point—called the *bastion*
-node (`sgw2`)—before you can proceed the cluster's *gateway* node (`hpc-gw2`).
+node (`sgw2`)—before you can proceed to the cluster's *gateway* node (`hpc-gw2`).
 
 ```{code-block} console
 $ ssh <SWC-USERNAME>@ssh.swc.ucl.ac.uk
@@ -90,10 +88,9 @@ You can think of `logout` as undoing the last `ssh` command you ran.
 :class: tip
 
 - If you want to learn more about the various types of HPC nodes (*bastion / gateway / compute*), read the [next section](#types-of-hpc-nodes).
-- If you want to make you life easier, you can set yourself up with an [SSH config file](#ssh-config-file)
-and some [SSH keys](#ssh-keys).
+- If you want to make your life easier, you can set yourself up with an [SSH config file](#ssh-config-file)
+  and some [SSH keys](#ssh-keys).
 :::
-
 
 ## Types of HPC nodes
 
@@ -103,10 +100,10 @@ Let's distinguish the different types of nodes on the SWC HPC system.
 | Node Type | SSH Address | Hostname | Role |
 | :--- | :--- | :--- | :--- |
 | *Bastion* | `ssh.swc.ucl.ac.uk` | `sgw2` | **Secure entry point**: if you find yourself here, just type `ssh hpc-gw2` to reach the *gateway* node. |
-| *Gateway* | `hpc-gw2` (from the *bastion*) or `hpc-gw2.hpc.swc.ucl.ac.uk` | `hpc-gw2` | **Staging Area**: use it only for script editing and job submission. |
+| *Gateway* | `hpc-gw2` (from the *bastion*) or `hpc-gw2.hpc.swc.ucl.ac.uk` | `hpc-gw2` | **Staging area**: use it only for script editing and job submission. |
 | *Compute* | assigned by SLURM via `srun` or `sbatch` | `enc1-node10`, `gpu-sr670-21`, etc. | **Workhorses** that run the actual computations submitted via `srun` or `sbatch`. |
 
-![](../../_static/howto/ssh_flowchart_primary.png)
+![Flowchart of the routes from your computer to the bastion, gateway and compute nodes](../../_static/howto/ssh_flowchart_primary.png)
 
 Your home directory, as well as the locations where filesystems like `ceph` are mounted, are shared across all of the nodes.
 
@@ -131,7 +128,7 @@ The `--pty bash -i` part specifies an interactive bash shell.
 See the [SLURM arguments primer](slurm-arguments-target) for more information.
 The following two commands are run in this shell, on the assigned *compute* node.
 
-Type `exit` to leave the interactive session as soon as finished.
+Type `exit` to leave the interactive session as soon as you're finished.
 :::
 
 (target-managed-desktops)=
@@ -150,15 +147,14 @@ from your terminal, without having to SSH at all. That's because managed Linux d
 use the same platform as the HPC nodes
 and are already equipped with the SLURM job scheduler.
 
-
 ## SSH config file
-If you are frequently accessing the cluster from outside the SWC network,
+If you are frequently accessing the cluster,
 you may find yourself typing the same SSH commands over and over again.
 You can make your life easier by editing the SSH config file.
 This is a text file that lives in your home directory and contains
 a list of aliases for SSH connections.
 
-::: {note}
+:::{note}
 The config below is for connecting **from outside the SWC network** via the *bastion* node;
 if you are within the network, you don't need it and can use the direct address
 shown in [Log into the cluster](#log-into-the-cluster).
@@ -219,7 +215,7 @@ If you are bored of typing your password every time you SSH into the cluster,
 you can set up authentication via SSH keys. You will have to do some work
 upfront, but it will save you tons of time in the long run. Plus, it's more secure.
 
-::: {dropdown} How does SSH key authentication work?
+:::{dropdown} How does SSH key authentication work?
 :color: info
 :icon: info
 You generate a pair of keys locally—a public and a private one—
@@ -249,6 +245,7 @@ This is an extra layer of security, but you can leave it blank if you want.
 There are now two new files in the `.ssh` directory:
 ```{code-block} console
 :emphasize-lines: 5,6
+
 $ cd ~/.ssh
 $ ls -1
 authorized_keys
@@ -276,7 +273,6 @@ point to the private key.
 For example, if you have a private key with a custom name `<MY-SPECIAL-KEY>`
 in the `~/.ssh` directory, you can add the following lines to your `~/.ssh/config` file:
 
-
 ```{code-block} bash
 :caption: config
 :emphasize-lines: 5,13
@@ -300,10 +296,10 @@ Host swc-gateway
 Next, let's copy the public key you just generated to the remote machines.
 
 ```{code-block} console
-$ ssh-copy-id -i id_ed25519.pub swc-gateway
+$ ssh-copy-id -i ~/.ssh/id_ed25519.pub swc-gateway
 ```
 
-::: {dropdown} Explain the above command
+:::{dropdown} Explain the above command
 :color: info
 :icon: info
 The `ssh-copy-id` command uses the configuration we previously set up
@@ -314,14 +310,13 @@ It copies the specified public key to your home directory on the target machine 
 Since your SWC home directory is shared across all HPC nodes, the public
 key will be available on all of them. That's why you only need to run the above command once.
 
-If you are within the SWC network and haven't set up aliases SSH config file, you can
+If you are within the SWC network and haven't set up the aliases in your SSH config file, you can
 copy the key by directly specifying the SSH address of the *gateway* node:
 
 ```{code-block} console
-$ ssh-copy-id -i id_ed25519.pub <SWC-USERNAME>@hpc-gw2.hpc.swc.ucl.ac.uk
+$ ssh-copy-id -i ~/.ssh/id_ed25519.pub <SWC-USERNAME>@hpc-gw2.hpc.swc.ucl.ac.uk
 ```
 :::
-
 
 🎉 Congrats! You can now directly SSH into the *gateway* node without typing your password:
 ```{code-block} console
