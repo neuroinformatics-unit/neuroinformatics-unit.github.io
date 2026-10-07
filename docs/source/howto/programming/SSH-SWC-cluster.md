@@ -308,7 +308,7 @@ in the `config` file to figure out how to reach the remote machine.
 It copies the specified public key to your home directory on the target machine (in this case `swc-gateway`) and adds it to the `.ssh/authorized_keys` file there.
 
 Since your SWC home directory is shared across all HPC nodes, the public
-key will be available on all of them. That's why you only need to run the above command once.
+key will be available on all of them.
 
 If you are within the SWC network and haven't set up the aliases in your SSH config file, you can
 copy the key by directly specifying the SSH address of the *gateway* node:
