@@ -158,6 +158,12 @@ You can make your life easier by editing the SSH config file.
 This is a text file that lives in your home directory and contains
 a list of aliases for SSH connections.
 
+::: {note}
+The config below is for connecting **from outside the SWC network** via the *bastion* node;
+if you are within the network, you don't need it and can use the direct address
+shown in [Log into the cluster](#log-into-the-cluster).
+:::
+
 On your local PC/Laptop, navigate to the `.ssh` folder in your user's home `~` directory:
 ```{code-block} console
 $ cd ~/.ssh
@@ -235,7 +241,7 @@ $ ssh-keygen -t ed25519
 ```
 
 You will be prompted to enter a file path for the key. You may accept the
-default - `~/.ssh/id_ed25519` - or choose another path/name.
+default (`~/.ssh/id_ed25519`) or choose another path/name.
 
 Next, you will be prompted to enter a passphrase.
 This is an extra layer of security, but you can leave it blank if you want.
@@ -307,6 +313,13 @@ It copies the specified public key to your home directory on the target machine 
 
 Since your SWC home directory is shared across all HPC nodes, the public
 key will be available on all of them. That's why you only need to run the above command once.
+
+If you are within the SWC network and haven't set up aliases SSH config file, you can
+copy the key by directly specifying the SSH address of the *gateway* node:
+
+```{code-block} console
+$ ssh-copy-id -i id_ed25519.pub <SWC-USERNAME>@hpc-gw2.hpc.swc.ucl.ac.uk
+```
 :::
 
 
