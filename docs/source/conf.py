@@ -219,15 +219,52 @@ html_theme_options = {
 # post pages, see https://ablog.readthedocs.io/en/latest/manual/templates-themes.html
 # Note: this replaces the default site nav sidebar on blog pages only.
 html_sidebars = {
+    "**": [
+        "niu-sidebar-dropdown.html",
+        "sidebar-nav-bs",
+    ],
     "blog/index": [
+        "niu-sidebar-dropdown.html",
         "ablog/authors.html",
         "ablog/archives.html",
     ],
     "blog/**": [
+        "niu-sidebar-dropdown.html",
         "ablog/postcard.html",
         "ablog/recentposts.html",
     ],
 }
+
+niu_sidebar_dropdown = {
+    'dropdown_value': {
+        'href': 'https://neuroinformatics.dev/',
+        'text': 'NIU Tools',
+    },
+    'projects': {
+        'brainglobe': {
+            'text': 'BrainGlobe',
+            'url': 'https://brainglobe.info/',
+            'title': 'BrainGlobe: Interoperable tools for computational neuroanatomy.',
+        },
+        'datashuttle': {
+            'text': 'DataShuttle',
+            'url': 'https://datashuttle.neuroinformatics.dev/',
+            'title': 'DataShuttle: Data transfer and validation.',
+        },
+        'movement': {
+            'text': 'Movement',
+            'url': 'https://movement.neuroinformatics.dev/',
+            'title': 'Movement: Tools for analysing behavioural videos.',
+        },
+    },
+    'others': {}
+}
+
+def add_niu_sidebar_dropdown_context(app, pagename, templatename, context, doctree, *args) -> None:
+    context['niu_sidebar_dropdown'] = niu_sidebar_dropdown
+
+def setup(app):
+    app.connect("html-page-context", add_niu_sidebar_dropdown_context)
 
 # The PyData theme bundles FontAwesome, so let ABlog render its postcard icons
 # (calendar, user, ...) instead of plain-text "Author:"/"Location:" labels.
