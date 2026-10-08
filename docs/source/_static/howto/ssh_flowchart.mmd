@@ -1,0 +1,39 @@
+---
+config:
+  theme: neutral # or dark
+  themeVariables:
+    fontFamily: arial
+    fontSize: 18px
+---
+flowchart LR
+    classDef safe stroke-width:3px;
+    classDef unsafe stroke:#d95f02,stroke-width:3px;
+    classDef emphasis color:#03A062,stroke:#03A062,stroke-width:3px;
+
+    external("💻<br> Personal<br> Computer") -->|ssh| bastion(("Bastion Node<br> sgw2"))
+
+    subgraph trusted["SWC Network Domain"]
+
+        internal("💻<br> Personal<br> Computer") -->|ssh| gateway(("Gateway Node<br> hpc-gw2"))
+        bastion --> |ssh| gateway
+        gateway --> |srun<br> sbatch| slurm{"SLURM 🚦"}
+
+        subgraph compute["Compute Nodes"]
+        node1(("Node 1"))
+        node2(("Node 2"))
+        node3(("Node 3"))
+        end
+
+        slurm --> node1
+        slurm --> node2
+        slurm --> node3
+
+    end
+
+    class bastion emphasis
+    class gateway emphasis
+    class external unsafe
+    class internal safe
+    class node1 safe
+    class node2 safe
+    class node3 safe
