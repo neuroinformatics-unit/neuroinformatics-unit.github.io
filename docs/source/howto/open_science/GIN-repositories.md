@@ -1,7 +1,7 @@
 (target-create-gin-repo)=
 # Create a GIN repository for your dataset
 
-[GIN](https://gin.g-node.org/G-Node/Info/wiki) (hosted by the German Neuroinformatics Node) is a free and open data management system designed for neuroscientific data.
+[GIN](https://gin.swc.ucl.ac.uk/) (hosted by the Sainsbury Wellcome Centre) is a free and open data management system designed for neuroscientific data.
 
 It is web-accessible, based on [`git`](https://git-scm.com/) and [`git-annex`](https://git-annex.branchable.com/), and allows you to keep your data in sync, backed up and easily accessible.
 
@@ -12,10 +12,10 @@ Below we explain the main user workflows in GIN.
 
 We need to do these steps only the first time we use GIN's command-line interface (CLI) on our machine.
 
-1. Create [a GIN account](https://gin.g-node.org/user/sign_up).
+1. Create [a GIN account](https://gin.swc.ucl.ac.uk/user/sign_up).
 2. [Download GIN CLI](https://gin.g-node.org/G-Node/Info/wiki/GIN+CLI+Setup#setup-gin-client) and set it up by running:
    ```
-   $ gin login
+   $ gin login --server https://gin.swc.ucl.ac.uk
    ```
    You will be prompted for your GIN username and password.
 3. Confirm that everything is working properly by typing:
@@ -32,7 +32,7 @@ To create a local and a remote GIN repository, follow these steps:
    Before running any `gin` commands, make sure you are logged in to your account by running:
 
    ```
-   $ gin login
+   $ gin login --server https://gin.swc.ucl.ac.uk
    ```
 
 :::{tip}
@@ -54,7 +54,7 @@ In Unix-like systems (Ubuntu, MacOS), you may need `sudo` permissions for some o
 
       <details><summary> <b> OR alternatively: </b> </summary>
 
-      Create a repository in the GIN server [from the browser](https://gin.g-node.org/repo/create), and clone (retrieve) it to your local workspace:
+      Create a repository in the GIN server [from the browser](https://gin.swc.ucl.ac.uk/repo/create), and clone (retrieve) it to your local workspace:
 
       ```
       $ gin get <username>/<remote-repository-name>
@@ -295,7 +295,7 @@ Here is a simple example of how to download a dataset from a GIN repository usin
 import pooch
 
 filepath = pooch.retrieve(
-    url="https://gin.g-node.org/<username>/<repository>/raw/main/<file>",
+    url="https://gin.swc.ucl.ac.uk/<username>/<repository>/raw/main/<file>",
     known_hash=None,
     path="/home/<user>/downloads", # this is where the file will be saved
     progressbar=True,
@@ -305,7 +305,7 @@ filepath = pooch.retrieve(
 :::{tip}
 A common mistake is to use the URL of the GIN repository's webpage instead of the URL of the raw file.
 
-The URL of the raw file will have `/raw/` in its path. For example, the URL of the raw file `image.png` in the repository `my-repo` under the user `my-user` should be `https://gin.g-node.org/my-user/my-repo/raw/main/image.png`.
+The URL of the raw file will have `/raw/` in its path. For example, the URL of the raw file `image.png` in the repository `my-repo` under the user `my-user` should be `https://gin.swc.ucl.ac.uk/my-user/my-repo/raw/main/image.png`.
 
 The easiest way to get the raw URL of a file is to:
 1. Navigate to the specific file in the GIN repository,

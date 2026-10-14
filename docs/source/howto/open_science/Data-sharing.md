@@ -35,7 +35,7 @@ There are [many repositories](repo-table) that will accept the types of data gen
 Use the existing [SWC section of the UCL FigShare instance](https://rdr.ucl.ac.uk/The_Sainsbury_Wellcome_Centre). This is easy to use, and is supported centrally by UCL
 
 **For larger datasets:**
-Create a GIN repository, ideally within the [SWC organisation](https://gin.g-node.org/SainsburyWellcomeCentre). GIN uses Git and provides a versioning system, making it particularly well suited for ongoing research projects.
+Create a GIN repository, ideally within the [SWC organisation](https://gin.swc.ucl.ac.uk/SainsburyWellcomeCentre). GIN uses Git and provides a versioning system, making it particularly well suited for ongoing research projects.
 
 **Specific modalities:**
 In some cases, there may be a modality or field-specific repository that would be best suited for the data (or mandated by the publisher), some examples include:
@@ -61,7 +61,7 @@ If you have any technical questions about sharing data or code, please contact a
 | figshare                           | https://rdr.ucl.ac.uk/The_Sainsbury_Wellcome_Centre | Anything                                                                                              |
 | Zenodo                             | https://zenodo.org/                                 | Anything                                                                                              |
 | Dryad                              | https://datadryad.org                               | Anything                                                                                              |
-| GIN (German Neuroinformatics Node) | https://gin.g-node.org/                             | Neuroscience                                                                                          |
+| GIN (SWC)                          | https://gin.swc.ucl.ac.uk/                          | Neuroscience                                                                                          |
 | EBRAINS                            | https://ebrains.eu/service/share-data               | Neuroscience                                                                                          |
 | Open Source Brain                  | https://www.v2.opensourcebrain.org/                 | Any neuroscience data (data must be hosted elsewhere)                                                 |
 | Brain Image Library                | http://www.brainimagelibrary.org/                   | Large brain image datasets                                                                            |

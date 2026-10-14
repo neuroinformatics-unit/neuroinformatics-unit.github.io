@@ -78,6 +78,7 @@ linkcheck_anchors_ignore_for_url = [
 ]
 linkcheck_ignore = [
     "https://gin.g-node.org/",  # GIN is often slow/unreachable and times out
+    "https://gin.swc.ucl.ac.uk/",
     "https://www.cambridgeneurotech.com",  # rejects link checker requests (HTTP 415)
     "https://opensource.org",
     "https://www.incf.org/recommendations-gsoc-contributors",
