@@ -7,6 +7,11 @@
 :gutter: 3
 
 :::{grid-item-card}
+:link: https://doi.org/10.64898/2026.10.04.756554
+Zhang, L., Lam, B. Y. K., Saeedi, A., Webb, L., **Felder, A., Sirmpilatze, N., Tyson, A. L.**, Hamauei, B., Shirdhankar, R., Wolf-Kuemmeth, S., Grijseels, D., Amini, N., Begall, S., Malkemper, P. (2026) "Absence of the Earth's magnetic field activates stress-related brain circuits in a mammal" *bioRxiv*, doi.org/10.64898/2026.10.04.756554
+:::
+
+:::{grid-item-card}
 :link: https://doi.org/10.21105/joss.09642
 **Ziminski, J. J., Sirmpilatze, N.**, Peri, B. D., Singh, S., Keshavarzi, S., **Tyson, A. L.** (2026) "datashuttle: automated data management for experimental neuroscience" *Journal of Open Source Software* 11(122), 9642, doi.org/10.21105/joss.09642
 :::
