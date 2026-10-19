@@ -77,13 +77,6 @@ Visiting Research Fellow
 Senior Research Software Engineer
 :::
 
-:::{grid-item-card} Joanne Sheppard
-:img-top: _static/joanne_sheppard.jpg
-:link: https://github.com/joannercsheppard
-
-Senior Research Software Engineer
-:::
-
 
 :::{grid-item-card} Amirreza Bahramani
 :img-top: _static/amirreza_bahramani.jpg
@@ -120,6 +113,12 @@ Google Summer of Code 2026
 Google Summer of Code 2026
 :::
 
+:::{grid-item-card} Joanne Sheppard
+:img-top: _static/joanne_sheppard.jpg
+:link: https://github.com/joannercsheppard
+
+Google Summer of Code 2026
+:::
 ::::
 
 
