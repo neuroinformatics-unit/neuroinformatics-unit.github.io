@@ -34,7 +34,7 @@ These tips were originally based on the [OpenAstronomy guidelines](https://opena
     - Contributing to existing issues, e.g. by carrying out research to understand the best way to tackle an issue
     - Reviewing existing PRs
 
-    In all cases, please think very hard about how you wish to contribute. Unfortunately, due to AI, many contributions can appear to be spam. A single, small, well-thought-out contribution that addresses a real need is far better than many superficial contributions. We want to see what specific skills you would bring to the project, not just that you can feed an issue into an LLM!
+    In all cases, please think very hard about how you wish to contribute. Unfortunately, many unsolicited contributions can appear to be spam. A single, small, well-thought-out contribution that addresses a real need is far better than many superficial contributions. We want to see what specific skills you would bring to the project, not just that you can feed an issue into an LLM!
 
     ::: {admonition} Contributions
     :class: warning
