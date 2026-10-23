@@ -8,7 +8,7 @@ substantial chunk (i.e. whole sentences) are created with AI.
 :::
 
 
-Please use the following template to submit your application to the NIU GSoC 2026 program, and to discuss your proposal with the community.
+Please use the following template to submit your application to the NIU GSoC program, and to discuss your proposal with the community.
 
 The more closely you follow this template, the easier it will be for us to review your application! Please include clear headings for all the different sections.
 
@@ -30,9 +30,11 @@ Please include the following information:
 - **Zulip username**
 - **Location & time-zone**
 - **Personal website / project portfolio** (optional)
-- **Code contribution**
+- **Community contribution**
 
-  Please link a pull request, ideally submitted to your chosen project or one of the NIU tools. Applications without a code contribution won't be considered. It must be publicly visible and represent your own work, although you may have help from other developers in the community to further improve it. It must be meaningful code contribution (i.e. not just fixing a minor spelling mistake). While AI tools (such as Copilot etc) can be a very useful, contributions mostly created by AI are unlikely to be useful, and will not be accepted. You can link more than one pull request if desired.
+    Please briefly describe how you have contributed to the NIU software, developer or user communities. This could be a pull request, code review, some research you have undertaken etc.
+    Make sure to include a publicly accessible link.
+    While AI tools can be very useful, contributions mostly created by AI are unlikely to be useful, and will not be accepted. You can link more than one contribution if desired. **N.B. Applications without a community contribution won't be considered.**
 
 ## Project proposal
 _Length: max 1 page_
