@@ -54,7 +54,7 @@ As this is a hands-on workshop, you will need to bring your own laptop. Any fair
 
 ### Python knowledge
 The only prerequisite is a basic knowledge of programming in Python, and the scientific Python ecosystem. For those without
-this background, the [preparatory month](https://neuroinformatics.dev/open-software-summer-school/2026/index.html#preparatory-month) 
+this background, the [preparatory month](target-preparatory-month) 
 will equip you with all the skills needed to make the most of this course. 
 
 ### Data

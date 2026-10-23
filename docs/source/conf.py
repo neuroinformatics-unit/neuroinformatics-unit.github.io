@@ -113,6 +113,8 @@ linkcheck_ignore = [
     "https://slurm.schedmd.com/",
     "https:/zenodo.org/",
     r"https?://(?:[^/]+\.)?wikipedia\.org/.*",
+    "https://bifonds.de/",  # domain currently parked with a self-signed certificate
+    "https://neurophysics.ucsd.edu/",  # times out from GitHub Actions
 ]
 linkcheck_request_headers = {
     "https://github.com": {
