@@ -92,7 +92,7 @@ The final two days are dedicated to collaboration. We will join forces with part
 ## Prerequisites
 
 The only prerequisite is a basic knowledge of programming in Python, and the scientific Python ecosystem. 
-For those without this background, the [preparatory month](https://neuroinformatics.dev/open-software-summer-school/index.html#preparatory-month) 
+For those without this background, the [preparatory month](target-preparatory-month) 
 will equip you with all the skills needed to make the most of this course. 
 
 ### Hardware

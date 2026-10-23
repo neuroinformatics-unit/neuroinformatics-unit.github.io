@@ -1,7 +1,7 @@
 # GSoC NIU Contributor Application Guidelines
 
 ## General tips
-These tips are largely based on the [OpenAstronomy guidelines](https://openastronomy.org/gsoc/contributor_guidelines.html), with adaptations for the NIU.
+These tips were originally based on the [OpenAstronomy guidelines](https://openastronomy.org/gsoc/contributor_guidelines.html).
 
 1. **Get in touch with the community**
 
@@ -17,57 +17,43 @@ These tips are largely based on the [OpenAstronomy guidelines](https://openastro
 
     A good starting point as a user could be `movement`'s [gallery of examples](https://movement.neuroinformatics.dev/latest/examples/index.html) or [BrainGlobe's tutorials](https://brainglobe.info/tutorials/index.html).
 
-3. **Get ready to be a developer**
-
-    Create a [GitHub](https://github.com/) account and learn how to use [git](https://git-scm.com/) - the version control system used by most open-source projects. 
+3. **Contribute to the community**
     
-    If you are not familiar with either, there are many resources available online to help you get started. Some nice ones are:
+    A key part of applying to GSoC is to get involved with the community, to show that you understand how the projects work, and that you would be able to contribute effectively during GSoC.
+    In previous years, this would usually take the form of Pull Requests (PRs), to address open issues within NIU repositories. In the age of LLMs, writing code is no longer the bottleneck (and we struggle to review every PR we have!).
 
-    - [Software carpentry's Version Control with Git](https://swcarpentry.github.io/git-novice/)
-    - [GitHub skills courses](https://skills.github.com/) - especially the first day and first week series.
-    - [git visualisation tool](https://cfinnberg.github.io/visualizing-git/)
-    - [Oh my git!](https://ohmygit.org/) an open-source game about Git.
-    - [Julia Evan's How Git Works! zine](https://jvns.ca/blog/2024/04/25/new-zine--how-git-works-/)
+    PRs are still a great way to demonstrate your understanding of a project and show off your skills! If you want to contribute in this way, please make sure to:
 
-   
-4. **Get started with open-source development**
+    - Get familiar with Git and GitHub (e.g. with the [Software carpentry's Version Control with Git course](https://swcarpentry.github.io/git-novice/) and the [GitHub skills courses](https://skills.github.com/))
+    - Read about how open source contributions work with the [First contributions project](https://github.com/firstcontributions/first-contributions) and this GitHub blog post: [New to open source? Here’s everything you need to get started](https://github.blog/open-source/new-to-open-source-heres-everything-you-need-to-get-started/)
+    - Read the contributing guidelines of the specific project you are interested in, e.g. `movement`'s [How to Contribute guide](https://movement.neuroinformatics.dev/latest/community/contributing.html#target-contributing). The NIU also publishes some general [development guidelines](https://neuroinformatics.dev/get-involved/languages_frameworks.html).
+    - Read our [policy on AI contributions](../ai_policy)
 
-    Check the GitHub issues for the projects you are interested in. Sometimes issues are labeled as "good first issue" or "help wanted". These are usually easier to solve and are a good way to get started with the project. Otherwise, have a look and see if there are any issues you can help with!
+    However, there are many other ways you can contribute, such as:
+    - Raising issues to describe bugs within our tools (the more detailed the better)
+    - Contributing to existing issues, e.g. by carrying out research to understand the best way to tackle an issue
+    - Reviewing existing PRs
 
-    You will need to submit a pull request (ideally to one of the NIU or BrainGlobe projects) as part of your application. It does not have to be accepted - the goal is to show that you know how git, GitHub, pull requests and code reviews work. This also allows mentors to evaluate your application based on a real code contribution. If you have previously contributed to an NIU or other open source project, you can point to those pull requests in your application too. If you are a new
-   contributor, please also see our [policy on AI contributions](../ai_policy)
+    In all cases, please think very hard about how you wish to contribute. Unfortunately, many unsolicited contributions can appear to be spam. A single, small, well-thought-out contribution that addresses a real need is far better than many superficial contributions. We want to see what specific skills you would bring to the project, not just that you can feed an issue into an LLM!
 
-    If you are new to open source software or would like a refresher, these are some nice resources to check:
+    ::: {admonition} Contributions
+    :class: warning
+    However you contribute, please make only one contribution (PR, new issue etc.) until you have received feedback from a core NIU member. This helps make sure you're on the right track, and gives us time to review everything properly. Making many contributions without waiting for feedback won't strengthen your application, and may be treated as spam.
+    :::
 
-    - The [First contributions project](https://github.com/firstcontributions/first-contributions)
-    - The GitHub blog post: [New to open source? Here’s everything you need to get started](https://github.blog/open-source/new-to-open-source-heres-everything-you-need-to-get-started/)
+4. **Prepare your application**
 
-    Before contributing to a project, make sure you read through their contributing guidelines. These will give you an idea of the required steps, and what is expected of you. An example is `movement`'s [How to Contribute guide](https://movement.neuroinformatics.dev/latest/community/contributing.html#target-contributing). The NIU also publishes some general [development guidelines](https://neuroinformatics.dev/get-involved/languages_frameworks.html).
+    Make sure you carefully read through the [GSoC guidelines](https://google.github.io/gsocguides/student/writing-a-proposal) (and these guidelines!) when preparing your application. 
 
-
-5. **Prepare your application**
-
-    Make sure you carefully read through the [GSoC guidelines](https://google.github.io/gsocguides//student/writing-a-proposal) (and these guidelines!) when preparing your application. 
-
-    Select one of the projects from our project list and prepare a plan on how to tackle it, and the time you will need to complete it. Or if you have an idea that is not covered by the project list, feel free to pitch it to us. Use our [application template](#application-template) to structure your proposal and don't be shy to ask for feedback from the community.
+    Select one of the projects from our project list and prepare a plan on how to tackle it, and the time you will need to complete it. Or if you have an idea that is not covered by the project list, feel free to pitch it to us. Use our [application template](application_template) to structure your proposal and don't be shy to ask for feedback from the community. **N.B. Applications not following this template will not be considered.**
 
     Include specific examples in your application to support your skills - these will help reviewers build a better picture of you. These could be things like "Qualified in final round of XXXX" or "Participated in XXXX hackathon".
 
 
-6. **Submit your application**
+5. **Submit your application**
 
     Remember to submit your application before the deadline!
     
     Please do not send any applications directly to the NIU team, they won't be considered - all applications must go through [Google's application system](https://summerofcode.withgoogle.com/)
-    
-
-## Application template
-
-Please use our [application template](application_template.md) to structure your proposal. Applications not following this template will not be considered.
 
 
-## References
-- [GSoC Contributor guide: writing a proposal](https://google.github.io/gsocguides/student/writing-a-proposal)
-- [INCF Application template 2022](https://www.incf.org/sites/default/files/files/INCF_GSoC_2022_Application_template.pdf)
-- [OpenAstronomy Application template](https://github.com/OpenAstronomy/openastronomy.github.io/wiki/Contributor-Application-template)
-- [Python Software Foundation Application template](https://github.com/python-gsoc/python-gsoc.github.io/blob/main/ApplicationTemplate.md)

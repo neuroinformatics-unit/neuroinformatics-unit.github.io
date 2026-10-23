@@ -6,9 +6,9 @@ Initially focused on university students, since 2022 the program has expanded to
 
 The Neuroinformatics Unit (NIU) takes part in GSoC to offer paid experience working on open-source neuroscience and machine learning tools. The computational neuroanatomy project, [BrainGlobe](https://brainglobe.info/) is also included within the NIU for GSoC.
 
-::: {admonition} GSoC 2026
+::: {admonition} GSoC 2027
 :class: note
-Applications for GSoC 2026 are now closed. Details about our participation in future years of this program will be posted here and on our social media.
+We expect to take part in GSoC 2027, although this is not yet confirmed. Details about our participation will be posted here and on our social media.
 :::
 
 ## How does GSoC work?
@@ -19,21 +19,16 @@ To learn more about the program, we recommend reading the [GSoC FAQs](https://de
 
 ## Apply to GSoC with NIU
 
-As part of your application to GSoC, you will need to submit a project proposal. To help you with this, we provide some [NIU guidelines](guidelines) on how to write a successful proposal to work with us. 
+As part of your application to GSoC, you will need to submit a project proposal. To help you with this, we provide some [NIU guidelines](guidelines) on how to write a successful proposal to work with us. You may also want to check out the [GSoC Contributor Guide: writing a proposal](https://google.github.io/gsocguides/student/writing-a-proposal).
+Applicants are given about 2 weeks to complete their applications.
 
-You may also want to checkout other useful application guides, such as:
-- The [GSoC Contributor Guide: writing a proposal](https://google.github.io/gsocguides/student/writing-a-proposal), 
-- The [Python Software Foundation guide](https://python-gsoc.org/), 
-- The [OpenAstronomy](https://openastronomy.org/gsoc/contributor_guidelines.html) one, or 
-- The [INCF](https://www.incf.org/recommendations-gsoc-contributors) one,
+If you are interested in working with the NIU for GSoC, feel free to get in touch on our [GSoC Zulip channel](https://neuroinformatics.zulipchat.com/#narrow/channel/487898-Google-Summer-of-Code) with any questions. 
+Please reach out in public channels, rather than via DMs or personal conversations - communicating in the open is a big part of open source! 
+However, if you have any concerns you wish to discuss privately (such as accessibility), please contact one of the organisation admins.
 
-all of which we are closely following. Applicants are given about 2 weeks to complete their applications. For further details see the [GSoC Contributor Guide](https://google.github.io/gsocguides/student/writing-a-proposal).
+For clarity, please always use your full name when getting a [Zulip](https://neuroinformatics.zulipchat.com/) account, when registering for the program, and when submitting your project plan.
 
-If you are interested in working with the NIU for GSoC, feel free to get in touch on our [GSoc Zulip channel](https://neuroinformatics.zulipchat.com/#narrow/channel/487898-Google-Summer-of-Code) with any questions. Please reach out in public channels, rather than via DMs or personal conversations - communicating in the open is a big part of open source! However, if you have any concerns you wish to discuss privately (such as accessibility), please contact one of the organisation admins.
-
-For clarity, please always use your full name when getting a [Zulip](https://neuroinformatics.zulipchat.com/) account, when registering for the program, and when submitting your project plan. 
-
-
+Please also check existing threads in case your question has already been asked. We typically receive more questions than we can answer in a timely fashion!
 
 
 ## Further details
