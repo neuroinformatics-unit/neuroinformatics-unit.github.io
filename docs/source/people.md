@@ -2,7 +2,7 @@
 
 # People
 
-## Current members:
+## Current members
 
 ::::{grid} 1 1 2 4
 :gutter: 3
