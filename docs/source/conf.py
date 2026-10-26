@@ -166,7 +166,7 @@ html_css_files = [
 
 html_favicon = "_static/logo_light.png"
 
-# Cutomize the theme
+# Customize the theme
 html_theme_options = {
     "icon_links": [
         {
@@ -239,6 +239,7 @@ fontawesome_included = True
 redirects = {
     'open-software-week/index.html': '/open-software-summer-school/index.html',
     'gsoc-2026-cellfinder.html': '/blog/gsoc_2026_cellfinder.html',
+    'howto/programming/port-fowarding.html': '/howto/programming/port-forwarding.html',
 }
 
 # Hide the "Show Source" button
