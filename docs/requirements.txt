@@ -12,3 +12,4 @@ sphinx-reredirects
 matplotlib
 sphinx-copybutton
 sphinx-gallery
+pre-commit
