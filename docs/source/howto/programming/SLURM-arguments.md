@@ -45,7 +45,7 @@ e.g. the lines that start with `#SBATCH` in the following example:
 ...
 ```
 This guide provides only a brief overview of the most important SLURM arguments,
-to demysify the above directives and help you get started with SLURM.
+to demystify the above directives and help you get started with SLURM.
 For a more detailed description see the [SLURM documentation](https://slurm.schedmd.com/sbatch.html).
 
 ##  Commonly used arguments
