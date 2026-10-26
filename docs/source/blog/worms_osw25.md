@@ -149,7 +149,7 @@ a pose estimation skeleton.
 The next step after obtaining segmentation masks is to extract a skeleton from them. For this, we used the 
 [`skeletonize` function from the `skimage` library](https://scikit-image.org/docs/stable/auto_examples/edges/plot_skeleton.html). This function takes a masked image as input in the format of a two-dimensional array and returns a skeletonised version of the image.
 
-The process of skeletionsation by using the `skimage` library is an iterative one, with several cycles of removing the outermost pixels of the object until only a one-pixel wide representation of the object remains. The function works by iteratively removing pixels from the boundaries of the object while preserving its connectivity and overall structure. The algorithm continues this process until no more pixels can be removed without breaking the connectivity of the object.
+The process of skeletonisation by using the `skimage` library is an iterative one, with several cycles of removing the outermost pixels of the object until only a one-pixel wide representation of the object remains. The function works by iteratively removing pixels from the boundaries of the object while preserving its connectivity and overall structure. The algorithm continues this process until no more pixels can be removed without breaking the connectivity of the object.
 
 As an example, let's look at the following image of a worm mask and its skeletonised version:
 

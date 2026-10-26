@@ -1,5 +1,5 @@
 # SSH into an unmanaged machine using VSCode
-> **_Example Usecase:_**  When working from home, connect from you local Mac to the SWC office Linux machine
+> **_Example use case:_**  When working from home, connect from your local Mac to the SWC office Linux machine
 
 In your local machine `cd` and ` open .ssh/config` and append the following configurations:
 ```

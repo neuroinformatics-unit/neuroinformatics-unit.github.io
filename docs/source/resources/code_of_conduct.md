@@ -57,7 +57,7 @@ Try to get as much of the incident in written form (email or via messaging) by t
 * The circumstances surrounding the incident
 * Other people involved in the incident
 
-Prepare an initial response to the incident. This initial response is very important: it will have wide-ranging consequences for the person reporting the incident, how safe others may feel to report other incidents and the general atmosphere and level of engagement of the event. Below are dos/dont’s around the initial response to an incident.
+Prepare an initial response to the incident. This initial response is very important: it will have wide-ranging consequences for the person reporting the incident, how safe others may feel to report other incidents and the general atmosphere and level of engagement of the event. Below are dos/don’ts around the initial response to an incident.
 
 Depending on the severity/details of the incident, please follow these guidelines:
 * If there is any general threat to attendees or the safety of anyone including workshop staff is in doubt, advise them to contact the local police. 
