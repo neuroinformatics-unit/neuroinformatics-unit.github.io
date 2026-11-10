@@ -14,6 +14,6 @@ vscode-with-slurm-job
 Mount-ceph-ubuntu
 Mount-ceph-ubuntu-temp
 Cookiecutter-cruft
-port-fowarding
+port-forwarding
 Troubleshooting
 ```

@@ -185,7 +185,7 @@ To download a dataset from the GIN server to a local machine, follow these steps
    See the section on [File locking](#file-locking) for further details.
 :::
 
-:::{tab-item} If the local repository repository exists
+:::{tab-item} If the local repository exists
 
 1. If the repository already exists locally, we only need to download any changes from the remote. To do this, run from the GIN local repository:
 

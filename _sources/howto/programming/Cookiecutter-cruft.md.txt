@@ -18,7 +18,7 @@ I have found that if you enter the correct link to your package's repo in `githu
 
 After you have answered all cookiecutter's questions, `cruft` will prompt you to specify the commit hash, i.e. the older version of cookiecutter you had used to generate the repo. For now, we have to do this manually by searching the history. Example commit hash: `9daec12bffbc32da6a252605c5e67c90028fefc0`. We need to do this because `cruft` will compare your repo with the template, and will only update the files that have changed since the commit hash you specify.
 
-After you have entered the commit hash, `cruft` will create a `.cruft.json` file in your repo containing the URL to the cookicutter, the commit hash, and your responses to cookiecutter's prompts. Please track the changes to this file with git.
+After you have entered the commit hash, `cruft` will create a `.cruft.json` file in your repo containing the URL to the cookiecutter, the commit hash, and your responses to cookiecutter's prompts. Please track the changes to this file with git.
 
 ## Apply updates: `cruft diff` & `cruft update`
 Now that `.cruft.json` exists, we can run `cruft diff` to see the changes between your repo and the template. At this point, you could manually apply the subset of the changes you want.

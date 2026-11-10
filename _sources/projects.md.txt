@@ -146,7 +146,7 @@ We also contribute to a number of other software projects lead by others.
 :gutter: 3
 
 :::{grid-item-card} {fas}`clock;sd-text-primary` Aeon
-:link: https://sainsburywellcomecentre.github.io/aeon_docs/
+:link: https://aeon.swc.ucl.ac.uk/
 We build data analysis tools for long term physiology and behavioural recordings as part of the Aeon project.
 :::
 

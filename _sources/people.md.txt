@@ -2,7 +2,7 @@
 
 # People
 
-## Current members:
+## Current members
 
 ::::{grid} 1 1 2 4
 :gutter: 3
@@ -82,6 +82,14 @@ Senior Research Software Engineer
 :link: https://github.com/joannercsheppard
 
 Senior Research Software Engineer
+:::
+
+
+:::{grid-item-card} James Tyrrell
+:img-top: _static/james_tyrrell.jpg
+:link: https://github.com/j-tyr
+
+Senior Research Software Engineer (with SWC AMF)
 :::
 
 :::{grid-item-card} Amirreza Bahramani
