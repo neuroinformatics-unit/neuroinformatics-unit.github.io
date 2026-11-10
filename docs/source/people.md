@@ -84,6 +84,14 @@ Senior Research Software Engineer
 Senior Research Software Engineer
 :::
 
+
+:::{grid-item-card} James Tyrrell
+:img-top: _static/james_tyrrell.jpg
+:link: https://github.com/j-tyr
+
+Senior Research Software Engineer (with SWC AMF)
+:::
+
 :::{grid-item-card} Amirreza Bahramani
 :img-top: _static/amirreza_bahramani.jpg
 :link: https://github.com/bahramani
