@@ -115,6 +115,7 @@ linkcheck_ignore = [
     r"https?://(?:[^/]+\.)?wikipedia\.org/.*",
     "https://bifonds.de/",  # domain currently parked with a self-signed certificate
     "https://neurophysics.ucsd.edu/",  # times out from GitHub Actions
+    "https://modeldb.science/",
 ]
 linkcheck_request_headers = {
     "https://github.com": {
@@ -240,6 +241,7 @@ redirects = {
     'open-software-week/index.html': '/open-software-summer-school/index.html',
     'gsoc-2026-cellfinder.html': '/blog/gsoc_2026_cellfinder.html',
     'howto/programming/port-fowarding.html': '/howto/programming/port-forwarding.html',
+    'get-involved/mentoring.html': '/get-involved/index.html',
 }
 
 # Hide the "Show Source" button
