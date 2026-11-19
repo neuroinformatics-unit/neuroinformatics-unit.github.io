@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=6a604523" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=43278677" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
   
@@ -48,7 +48,7 @@
     <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../_static/sg-tags.js?v=d80f6fa4"></script>
-    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script data-sd-tabs-storage-prefix="sphinx-design-tab-id-" src="../../_static/design-tabs.js?v=fcb327ea"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -680,8 +680,8 @@
                 
 <div id="searchbox"></div>
                 <article class="bd-article">
-                   <section class="tex2jax_ignore mathjax_ignore" id="mount-ceph-storage-on-ubuntu-permanently">
-<span id="target-mount-ceph-ubuntu-perm"></span><h1>Mount ceph storage on Ubuntu permanently<a class="headerlink" href="#mount-ceph-storage-on-ubuntu-permanently" title="Link to this heading">#</a></h1>
+                   <section class="tex2jax_ignore mathjax_ignore" id="target-mount-ceph-ubuntu-perm">
+<span id="mount-ceph-storage-on-ubuntu-permanently"></span><h1>Mount ceph storage on Ubuntu permanently<a class="headerlink" href="#target-mount-ceph-ubuntu-perm" title="Link to this heading">#</a></h1>
 <p>In this example, we will <strong>permanently</strong> mount the <code class="docutils literal notranslate"><span class="pre">neuroinformatics</span></code> partition of <code class="docutils literal notranslate"><span class="pre">ceph</span></code>. The same procedure can be used to mount other partitions, such as those belonging to particular labs or projects.</p>
 <p>To mount a partition of <code class="docutils literal notranslate"><span class="pre">ceph</span></code> only temporarily, see <a class="reference internal" href="Mount-ceph-ubuntu-temp.html#target-mount-ceph-ubuntu-temp"><span class="std std-ref">Mount ceph storage on Ubuntu temporarily</span></a>.</p>
 <p>The following instructions have been tested on <strong>Ubuntu 20.04 LTS</strong>.</p>
@@ -695,7 +695,7 @@
 <section id="steps">
 <h2>Steps<a class="headerlink" href="#steps" title="Link to this heading">#</a></h2>
 <section id="store-your-swc-credentials">
-<h3>1. Store your SWC credentials<a class="headerlink" href="#store-your-swc-credentials" title="Link to this heading">#</a></h3>
+<span id="1-store-your-swc-credentials"></span><h3>1. Store your SWC credentials<a class="headerlink" href="#store-your-swc-credentials" title="Link to this heading">#</a></h3>
 <p>First, create a file to store your SWC login credentials and save it in your home directory.
 You can do that on the terminal via <code class="docutils literal notranslate"><span class="pre">nano</span> <span class="pre">~/.smb_swc</span></code>.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">.smb_swc</span></code> file contents should look like this:</p>
@@ -718,14 +718,14 @@ However, if someone gets access to your machine with your user logged in, they w
 </div>
 </section>
 <section id="create-a-mount-point">
-<h3>2. Create a mount point<a class="headerlink" href="#create-a-mount-point" title="Link to this heading">#</a></h3>
+<span id="2-create-a-mount-point"></span><h3>2. Create a mount point<a class="headerlink" href="#create-a-mount-point" title="Link to this heading">#</a></h3>
 <p>Create a directory to mount the storage to. Sensible places to do this on Ubuntu would be in <code class="docutils literal notranslate"><span class="pre">/mnt</span></code> or <code class="docutils literal notranslate"><span class="pre">/media</span></code>. In the example below, we will use <code class="docutils literal notranslate"><span class="pre">/media/ceph-neuroinformatics</span></code>.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>mkdir<span class="w"> </span>/media/ceph-neuroinformatics
 </pre></div>
 </div>
 </section>
 <section id="edit-the-fstab-file">
-<h3>3. Edit the fstab file<a class="headerlink" href="#edit-the-fstab-file" title="Link to this heading">#</a></h3>
+<span id="3-edit-the-fstab-file"></span><h3>3. Edit the fstab file<a class="headerlink" href="#edit-the-fstab-file" title="Link to this heading">#</a></h3>
 <p>This will allow you to mount the storage automatically on boot. Before editing the file, make a backup of it, just in case.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>cp<span class="w"> </span>/etc/fstab<span class="w"> </span>/etc/fstab.bak
 </pre></div>
@@ -746,12 +746,12 @@ However, if someone gets access to your machine with your user logged in, they w
 <p>Save the file and exit.</p>
 </section>
 <section id="mount-the-storage">
-<h3>4. Mount the storage<a class="headerlink" href="#mount-the-storage" title="Link to this heading">#</a></h3>
+<span id="4-mount-the-storage"></span><h3>4. Mount the storage<a class="headerlink" href="#mount-the-storage" title="Link to this heading">#</a></h3>
 <p>You can now mount the storage by running <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">mount</span> <span class="pre">-a</span></code>. If you get an error, check the <code class="docutils literal notranslate"><span class="pre">fstab</span></code> file for typos. If you get no error, you should be able to see the mounted storage by running <code class="docutils literal notranslate"><span class="pre">df</span> <span class="pre">-h</span></code>.</p>
 <p>The next time you reboot your machine, the storage should be mounted automatically.</p>
 </section>
 <section id="unmount-the-storage">
-<h3>5. Unmount the storage<a class="headerlink" href="#unmount-the-storage" title="Link to this heading">#</a></h3>
+<span id="5-unmount-the-storage"></span><h3>5. Unmount the storage<a class="headerlink" href="#unmount-the-storage" title="Link to this heading">#</a></h3>
 <p>To unmount the storage, run <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">umount</span> <span class="pre">/media/ceph-neuroinformatics</span></code> (or whatever your mount point is).</p>
 <p>To permanently unmount the storage, remove the lines you added to the <code class="docutils literal notranslate"><span class="pre">fstab</span></code> file and run <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">mount</span> <span class="pre">-a</span></code> again.</p>
 <div class="admonition warning">

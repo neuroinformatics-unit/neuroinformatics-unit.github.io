@@ -2,7 +2,7 @@
 # Track: Animals in Motion
 
 Machine learning methods for motion tracking have transformed a wide range of scientific disciplines—from neuroscience and biomechanics to conservation and ethology.
-Tools such as [DeepLabCut](https://www.mackenziemathislab.org/deeplabcut/) and [SLEAP](https://sleap.ai/) enable researchers to track animal movements in video recordings with impressive accuracy, without the need for physical markers.
+Tools such as [DeepLabCut](https://mlabofai.org/deeplabcut) and [SLEAP](https://sleap.ai/) enable researchers to track animal movements in video recordings with impressive accuracy, without the need for physical markers.
 
 However, the variety of available tools can be overwhelming.
 It's often unclear which tool is best suited to a given application, or how to get started.
@@ -24,7 +24,7 @@ We'll also cover key concepts and terminology, and provide an overview of the mo
 
 __Tuesday afternoon:__
 We'll continue with a hands-on tutorial on using [SLEAP](https://sleap.ai/)—a popular software library for animal pose estimation and tracking.
-The typical workflow, from annotating body parts to training a model and generating predictions, is common to most pose estimation tools, including [DeepLabCut](https://www.mackenziemathislab.org/deeplabcut/).
+The typical workflow, from annotating body parts to training a model and generating predictions, is common to most pose estimation tools, including [DeepLabCut](https://mlabofai.org/deeplabcut).
 
 __Wednesday:__
 The second day will be dedicated to a practical tutorial on [movement](https://movement.neuroinformatics.dev)—a Python toolbox for analysing animal body movements across space and time.

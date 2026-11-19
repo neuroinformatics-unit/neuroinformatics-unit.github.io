@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=6a604523" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=43278677" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
   
@@ -48,7 +48,7 @@
     <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../_static/sg-tags.js?v=d80f6fa4"></script>
-    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script data-sd-tabs-storage-prefix="sphinx-design-tab-id-" src="../../_static/design-tabs.js?v=fcb327ea"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -667,7 +667,7 @@
                    <section class="tex2jax_ignore mathjax_ignore" id="track-animals-in-motion">
 <span id="id1"></span><h1>Track: Animals in Motion<a class="headerlink" href="#track-animals-in-motion" title="Link to this heading">#</a></h1>
 <p>Machine learning methods for motion tracking have transformed a wide range of scientific disciplines—from neuroscience and biomechanics to conservation and ethology.
-Tools such as <a class="reference external" href="https://www.mackenziemathislab.org/deeplabcut/">DeepLabCut</a> and <a class="reference external" href="https://sleap.ai/">SLEAP</a> enable researchers to track animal movements in video recordings with impressive accuracy, without the need for physical markers.</p>
+Tools such as <a class="reference external" href="https://mlabofai.org/deeplabcut">DeepLabCut</a> and <a class="reference external" href="https://sleap.ai/">SLEAP</a> enable researchers to track animal movements in video recordings with impressive accuracy, without the need for physical markers.</p>
 <p>However, the variety of available tools can be overwhelming.
 It’s often unclear which tool is best suited to a given application, or how to get started.
 Moreover, generating motion tracks is only the first step:
@@ -684,7 +684,7 @@ We’ll start with a primer on Computer Vision approaches for detecting and trac
 We’ll also cover key concepts and terminology, and provide an overview of the most widely used tools.</p>
 <p><strong>Tuesday afternoon:</strong>
 We’ll continue with a hands-on tutorial on using <a class="reference external" href="https://sleap.ai/">SLEAP</a>—a popular software library for animal pose estimation and tracking.
-The typical workflow, from annotating body parts to training a model and generating predictions, is common to most pose estimation tools, including <a class="reference external" href="https://www.mackenziemathislab.org/deeplabcut/">DeepLabCut</a>.</p>
+The typical workflow, from annotating body parts to training a model and generating predictions, is common to most pose estimation tools, including <a class="reference external" href="https://mlabofai.org/deeplabcut">DeepLabCut</a>.</p>
 <p><strong>Wednesday:</strong>
 The second day will be dedicated to a practical tutorial on <a class="reference external" href="https://movement.neuroinformatics.dev">movement</a>—a Python toolbox for analysing animal body movements across space and time.
 You’ll learn how to load, clean, visualise, and quantify motion tracks, and apply this knowledge to specific use cases through computational exercises.</p>
@@ -702,8 +702,8 @@ You’ll learn how to load, clean, visualise, and quantify motion tracks, and ap
 <li><p><a class="reference external" href="https://github.com/lochhh">Chang Huan Lo</a></p></li>
 </ul>
 </section>
-<section id="prerequisites">
-<span id="target-animals-in-motion-prerequisites"></span><h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">#</a></h2>
+<section id="target-animals-in-motion-prerequisites">
+<span id="prerequisites"></span><h2>Prerequisites<a class="headerlink" href="#target-animals-in-motion-prerequisites" title="Link to this heading">#</a></h2>
 <section id="hardware">
 <h3>Hardware<a class="headerlink" href="#hardware" title="Link to this heading">#</a></h3>
 <p>This is a hands-on course, so please bring your own <strong>laptop</strong> and <strong>charger</strong>.
@@ -717,8 +717,8 @@ A dedicated <strong>GPU is not required</strong>, though it may speed up some co
 the following specialised software:</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-0">
-SLEAP</label><div class="sd-tab-content docutils">
+<label aria-controls="sd-tab-item-0-content" class="sd-tab-label" for="sd-tab-item-0">
+SLEAP</label><div class="sd-tab-content docutils" id="sd-tab-item-0-content">
 <p>Please install <a class="reference external" href="https://sleap.ai/">SLEAP</a> following the <a class="reference external" href="https://sleap.ai/installation.html">official installation instructions</a>.</p>
 <p>For this workshop, use <strong>SLEAP version 1.3.4</strong>. Be sure to replace the default version number (e.g. 1.4.1) in the instructions with 1.3.4.</p>
 <p>This should create a <code class="docutils literal notranslate"><span class="pre">conda</span></code> environment named <code class="docutils literal notranslate"><span class="pre">sleap</span></code> with the necessary dependencies. You can verify the installation by running:</p>
@@ -729,8 +729,8 @@ sleap-label
 <p>This should launch the SLEAP graphical user interface (GUI).</p>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-1">
-movement</label><div class="sd-tab-content docutils">
+<label aria-controls="sd-tab-item-1-content" class="sd-tab-label" for="sd-tab-item-1">
+movement</label><div class="sd-tab-content docutils" id="sd-tab-item-1-content">
 <p>You will also need a separate <code class="docutils literal notranslate"><span class="pre">conda</span></code> environment to use for interactive coding exercises.
 This environment will include the <a class="reference external" href="https://movement.neuroinformatics.dev/latest/">movement</a> and <a class="reference external" href="https://jupyter.org/">jupyter</a> packages.</p>
 <p>We recommend cloning the workshop’s GitHub repository and creating the environment using the provided <code class="docutils literal notranslate"><span class="pre">environment.yaml</span></code> file:</p>
@@ -825,7 +825,7 @@ before the workshop starts (they are a few GB in size).</p>
     <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#course-overview">Course overview</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructors">Instructors</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#target-animals-in-motion-prerequisites">Prerequisites</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware">Hardware</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#software">Software</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-knowledge">Python knowledge</a></li>

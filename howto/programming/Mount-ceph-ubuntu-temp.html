@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=6a604523" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=43278677" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
   
@@ -48,7 +48,7 @@
     <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../_static/sg-tags.js?v=d80f6fa4"></script>
-    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script data-sd-tabs-storage-prefix="sphinx-design-tab-id-" src="../../_static/design-tabs.js?v=fcb327ea"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -680,8 +680,8 @@
                 
 <div id="searchbox"></div>
                 <article class="bd-article">
-                   <section class="tex2jax_ignore mathjax_ignore" id="mount-ceph-storage-on-ubuntu-temporarily">
-<span id="target-mount-ceph-ubuntu-temp"></span><h1>Mount ceph storage on Ubuntu temporarily<a class="headerlink" href="#mount-ceph-storage-on-ubuntu-temporarily" title="Link to this heading">#</a></h1>
+                   <section class="tex2jax_ignore mathjax_ignore" id="target-mount-ceph-ubuntu-temp">
+<span id="mount-ceph-storage-on-ubuntu-temporarily"></span><h1>Mount ceph storage on Ubuntu temporarily<a class="headerlink" href="#target-mount-ceph-ubuntu-temp" title="Link to this heading">#</a></h1>
 <p>In this example, we will <strong>temporarily</strong> mount a partition of <code class="docutils literal notranslate"><span class="pre">ceph</span></code> in an Ubuntu machine. The mounting is temporary because it will only remain until the next reboot. To mount a partition of <code class="docutils literal notranslate"><span class="pre">ceph</span></code> permanently, see <a class="reference internal" href="Mount-ceph-ubuntu.html#target-mount-ceph-ubuntu-perm"><span class="std std-ref">Mount ceph storage on Ubuntu permanently</span></a>.</p>
 <section id="prerequisites">
 <h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">#</a></h2>
@@ -693,14 +693,14 @@
 <section id="steps">
 <h2>Steps<a class="headerlink" href="#steps" title="Link to this heading">#</a></h2>
 <section id="create-a-mount-point">
-<h3>1. Create a mount point<a class="headerlink" href="#create-a-mount-point" title="Link to this heading">#</a></h3>
+<span id="1-create-a-mount-point"></span><h3>1. Create a mount point<a class="headerlink" href="#create-a-mount-point" title="Link to this heading">#</a></h3>
 <p>Create a directory to mount the storage to. Sensible places to do this on Ubuntu would be in <code class="docutils literal notranslate"><span class="pre">/mnt</span></code> or <code class="docutils literal notranslate"><span class="pre">/media</span></code>. In the example below, we will use <code class="docutils literal notranslate"><span class="pre">/mnt/ceph-neuroinformatics</span></code>.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>mkdir<span class="w"> </span>/mnt/ceph-neuroinformatics
 </pre></div>
 </div>
 </section>
 <section id="mount-the-ceph-partition">
-<h3>2. Mount the <code class="docutils literal notranslate"><span class="pre">ceph</span></code> partition<a class="headerlink" href="#mount-the-ceph-partition" title="Link to this heading">#</a></h3>
+<span id="2-mount-the-ceph-partition"></span><h3>2. Mount the <code class="docutils literal notranslate"><span class="pre">ceph</span></code> partition<a class="headerlink" href="#mount-the-ceph-partition" title="Link to this heading">#</a></h3>
 <p>To mount the desired partition on the directory we just created, run the <code class="docutils literal notranslate"><span class="pre">mount</span></code> command with the appropriate options. In our example, this would be:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>mount<span class="w"> </span>-t<span class="w"> </span>cifs<span class="w"> </span>-o<span class="w"> </span><span class="nv">user</span><span class="o">=</span>&lt;SWC-USERNAME&gt;,domain<span class="o">=</span>AD.SWC.UCL.AC.UK<span class="w"> </span>//ceph-gw02.hpc.swc.ucl.ac.uk/neuroinformatics<span class="w"> </span>/mnt/ceph-neuroinformatics
 </pre></div>
@@ -718,7 +718,7 @@
 <p>If the command is executed without errors you will be prompted for your SWC password.</p>
 </section>
 <section id="check-the-partition-is-mounted-correctly">
-<h3>3. Check the partition is mounted correctly<a class="headerlink" href="#check-the-partition-is-mounted-correctly" title="Link to this heading">#</a></h3>
+<span id="3-check-the-partition-is-mounted-correctly"></span><h3>3. Check the partition is mounted correctly<a class="headerlink" href="#check-the-partition-is-mounted-correctly" title="Link to this heading">#</a></h3>
 <p>It should show up in the list of mounting points when running <code class="docutils literal notranslate"><span class="pre">df</span> <span class="pre">-h</span></code></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -726,7 +726,7 @@
 </div>
 </section>
 <section id="to-unmount-the-storage">
-<h3>4. To unmount the storage<a class="headerlink" href="#to-unmount-the-storage" title="Link to this heading">#</a></h3>
+<span id="4-to-unmount-the-storage"></span><h3>4. To unmount the storage<a class="headerlink" href="#to-unmount-the-storage" title="Link to this heading">#</a></h3>
 <p>Run the following command</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>umount<span class="w"> </span>/mnt/ceph-neuroinformatics
 </pre></div>

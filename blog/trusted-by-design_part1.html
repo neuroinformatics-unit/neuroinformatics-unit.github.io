@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=6a604523" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=43278677" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
   
@@ -48,7 +48,7 @@
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/sg-tags.js?v=d80f6fa4"></script>
-    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script data-sd-tabs-storage-prefix="sphinx-design-tab-id-" src="../_static/design-tabs.js?v=fcb327ea"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -729,8 +729,8 @@
                 
 <div id="searchbox"></div>
                 <article class="bd-article">
-                   <section class="tex2jax_ignore mathjax_ignore" id="trusted-by-design-part-1-define-your-softwares-mission-and-scope">
-<span id="target-trusted-by-design-part1"></span><h1>Trusted by design (part 1): define your software’s mission and scope<a class="headerlink" href="#trusted-by-design-part-1-define-your-softwares-mission-and-scope" title="Link to this heading">#</a></h1>
+                   <section class="tex2jax_ignore mathjax_ignore" id="target-trusted-by-design-part1">
+<span id="trusted-by-design-part-1-define-your-softwares-mission-and-scope"></span><h1>Trusted by design (part 1): define your software’s mission and scope<a class="headerlink" href="#target-trusted-by-design-part1" title="Link to this heading">#</a></h1>
 <p><em>No project exists in a vacuum. Open-source software is a vast web of inter-connected and inter-dependent tools. When creating a new tool, your number one job is to carve out its place in the web consciously, openly and from the outset. How can you approach that?</em></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -773,10 +773,10 @@ You may have heard lots of advice on doing that effectively in a research contex
 </ul>
 </section>
 <section id="case-study-movement">
-<h2>Case study:  <em>movement</em><a class="headerlink" href="#case-study-movement" title="Link to this heading">#</a></h2>
+<span id="case-study--movement"></span><h2>Case study:  <em>movement</em><a class="headerlink" href="#case-study-movement" title="Link to this heading">#</a></h2>
 <p>When I started developing  <a class="reference external" href="https://movement.neuroinformatics.dev/">movement</a>, my colleagues and I consciously chose to write a ‘software abstract’ before we began the work. We did that by first mapping out our neighbourhood—open-source tools for analysing animal behaviour. This meant doing lots of research upfront: googling, reading papers, browsing GitHub, and also talking to many researchers working in this field. We tried to condense our findings into a set of common workflows and broke them down into tasks. We zeroed in on tasks that were arduous and under-served by existing tools—the potential gaps to address.</p>
 <p>Next, we asked whether these gaps merited being addressed by a standalone package or by contributing to existing projects. We also asked ourselves if we were the right people to address each gap.</p>
-<p>Through this process we concluded that the deep learning revolution of the last decade had already trickled down into user-friendly open-source packages. Tools such as <a class="reference external" href="https://www.mackenziemathislab.org/deeplabcut/">DeepLabCut</a> and <a class="reference external" href="https://sleap.ai">SLEAP</a> enabled researchers to track animal movements in videos accurately, cheaply, and at scale. This welcome development had moved the analysis bottleneck downstream of motion tracking: turning this swell of data into quantitative descriptions of behaviour. Researchers would often use the same behavioural metrics across projects and disciplines. But these were typically implemented as fragile, in-house scripts that were seldom maintained beyond a project’s conclusion. We saw an opportunity for a general-purpose Python toolbox that would ingest motion tracking data from existing frameworks and provide validated and documented implementations for various common behavioural metrics.</p>
+<p>Through this process we concluded that the deep learning revolution of the last decade had already trickled down into user-friendly open-source packages. Tools such as <a class="reference external" href="https://mlabofai.org/deeplabcut">DeepLabCut</a> and <a class="reference external" href="https://sleap.ai">SLEAP</a> enabled researchers to track animal movements in videos accurately, cheaply, and at scale. This welcome development had moved the analysis bottleneck downstream of motion tracking: turning this swell of data into quantitative descriptions of behaviour. Researchers would often use the same behavioural metrics across projects and disciplines. But these were typically implemented as fragile, in-house scripts that were seldom maintained beyond a project’s conclusion. We saw an opportunity for a general-purpose Python toolbox that would ingest motion tracking data from existing frameworks and provide validated and documented implementations for various common behavioural metrics.</p>
 <figure class="align-center" id="id1">
 <img alt="../_images/gap_after_tracking.png" class="only-light" src="../_images/gap_after_tracking.png" />
 <figcaption>

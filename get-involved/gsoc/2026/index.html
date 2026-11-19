@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=6a604523" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css?v=43278677" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
   
@@ -48,7 +48,7 @@
     <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../../_static/sg-tags.js?v=d80f6fa4"></script>
-    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script data-sd-tabs-storage-prefix="sphinx-design-tab-id-" src="../../../_static/design-tabs.js?v=fcb327ea"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -589,7 +589,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../../development_guidelines.html">General development guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../languages_frameworks.html">Development guidelines for specific languages and frameworks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../ai_policy.html">NIU policy on contributions using AI</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../mentoring.html">Mentored open-source contributions</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Google Summer of Code</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../guidelines.html">GSoC NIU Contributor Application Guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../application_template.html">Application template</a></li>
@@ -701,18 +700,18 @@ In 2026 we are particularly interested in:</p>
 <p class="sd-card-text">BrainGlobe’s tools are housed in many different GitHub repositories and are bundled together as a BrainGlobe meta-package. While this works reasonably well, there are a number of improvements to the general infrastructure that need implementing to make the BrainGlobe ecosystem more self-consistent and more modern.</p>
 <p class="rubric" id="deliverables">Deliverables</p>
 <ul class="simple">
-<li><p class="sd-card-text">exposing the API from different tools under a simplified API at the meta-package level.</p></li>
-<li><p class="sd-card-text">standardising terminology across repositories and functions</p></li>
-<li><p class="sd-card-text">standardising the use of positional and keyword arguments across repositories and functions</p></li>
-<li><p class="sd-card-text">automating the creation of API reference documentation on the BrainGlobe website</p></li>
-<li><p class="sd-card-text">replacing <code class="docutils literal notranslate"><span class="pre">tox</span></code> with <code class="docutils literal notranslate"><span class="pre">uv</span></code> in all of BrainGlobe’s Continuous Integration workflows</p></li>
-<li><p class="sd-card-text">improving the process of publishing BrainGlobe releases on <code class="docutils literal notranslate"><span class="pre">conda-forge</span></code></p>
+<li><p>exposing the API from different tools under a simplified API at the meta-package level.</p></li>
+<li><p>standardising terminology across repositories and functions</p></li>
+<li><p>standardising the use of positional and keyword arguments across repositories and functions</p></li>
+<li><p>automating the creation of API reference documentation on the BrainGlobe website</p></li>
+<li><p>replacing <code class="docutils literal notranslate"><span class="pre">tox</span></code> with <code class="docutils literal notranslate"><span class="pre">uv</span></code> in all of BrainGlobe’s Continuous Integration workflows</p></li>
+<li><p>improving the process of publishing BrainGlobe releases on <code class="docutils literal notranslate"><span class="pre">conda-forge</span></code></p>
 <ul>
-<li><p class="sd-card-text">add setuptools to conda recipes
+<li><p>add setuptools to conda recipes
 move to <a class="reference external" href="https://conda-forge.org/blog/2025/02/27/conda-forge-v1-recipe-support/">https://conda-forge.org/blog/2025/02/27/conda-forge-v1-recipe-support/</a></p></li>
 </ul>
 </li>
-<li><p class="sd-card-text">standardising badge order</p></li>
+<li><p>standardising badge order</p></li>
 </ul>
 <p class="rubric" id="duration">Duration</p>
 <p class="sd-card-text">Large (~350 hours)</p>
@@ -733,11 +732,11 @@ move to <a class="reference external" href="https://conda-forge.org/blog/2025/02
 <p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">brainglobe-heatmap</span></code> is BrainGlobe’s tool to generate heatmap plots of atlases in 2 and 3D. It relies heavily on BrainGlobe’s meshes, which can cause small imprecisions in visualising data. In 2D it also can fail to slice the meshes along a plane correctly. This could be improved by moving the heatmap functions to relies on the atlas annotations instead of the meshes. There are a number of additional refactoring improvements that could be done to <code class="docutils literal notranslate"><span class="pre">brainglobe-heatmap</span></code>.</p>
 <p class="sd-card-text"><strong>Deliverables</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text">Refactor 2D plotting functionality to use atlas annotations instead of meshes</p></li>
-<li><p class="sd-card-text">Tests for new functionality</p></li>
-<li><p class="sd-card-text">Ensure any refactored functionality has docstrings</p></li>
-<li><p class="sd-card-text">A blog on the <a class="reference external" href="https://brainglobe.info/blog/">BrainGlobe website</a> about the work done</p></li>
-<li><p class="sd-card-text">(Stretch goal) - further improvements to <code class="docutils literal notranslate"><span class="pre">brainglobe-heatmaps</span></code></p></li>
+<li><p>Refactor 2D plotting functionality to use atlas annotations instead of meshes</p></li>
+<li><p>Tests for new functionality</p></li>
+<li><p>Ensure any refactored functionality has docstrings</p></li>
+<li><p>A blog on the <a class="reference external" href="https://brainglobe.info/blog/">BrainGlobe website</a> about the work done</p></li>
+<li><p>(Stretch goal) - further improvements to <code class="docutils literal notranslate"><span class="pre">brainglobe-heatmaps</span></code></p></li>
 </ul>
 <p class="sd-card-text"><strong>Duration</strong>
 Small (~90 hours)</p>
@@ -747,15 +746,15 @@ Small (~90 hours)</p>
 <p class="sd-card-text">Fluency with Python</p>
 <p class="sd-card-text"><strong>Nice-to-haves</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text">Experience with <a class="reference external" href="https://docs.pytest.org/en/stable/">pytest</a>.</p></li>
-<li><p class="sd-card-text">Experience with visualisation libraries, in particular <a class="reference external" href="https://matplotlib.org/">matplotlib</a> and/or <a class="reference external" href="https://vedo.embl.es/">vedo</a></p></li>
-<li><p class="sd-card-text">Experience with neuroanatomy</p></li>
+<li><p>Experience with <a class="reference external" href="https://docs.pytest.org/en/stable/">pytest</a>.</p></li>
+<li><p>Experience with visualisation libraries, in particular <a class="reference external" href="https://matplotlib.org/">matplotlib</a> and/or <a class="reference external" href="https://vedo.embl.es/">vedo</a></p></li>
+<li><p>Experience with neuroanatomy</p></li>
 </ul>
 <p class="sd-card-text"><strong>Potential mentors</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text"><a class="reference external" href="https://github.com/alessandrofelder">&#64;alessandrofelder</a></p></li>
-<li><p class="sd-card-text"><a class="reference external" href="https://github.com/adamltyson">&#64;adamltyson</a></p></li>
-<li><p class="sd-card-text"><a class="reference external" href="https://github.com/IgorTatarnikov">&#64;IgorTatarnikov</a></p></li>
+<li><p><a class="reference external" href="https://github.com/alessandrofelder">&#64;alessandrofelder</a></p></li>
+<li><p><a class="reference external" href="https://github.com/adamltyson">&#64;adamltyson</a></p></li>
+<li><p><a class="reference external" href="https://github.com/IgorTatarnikov">&#64;IgorTatarnikov</a></p></li>
 </ul>
 <p class="sd-card-text"><strong>Further reading</strong>
 <code class="docutils literal notranslate"><span class="pre">brainglobe-heatmap</span></code> issue <a class="reference external" href="https://github.com/brainglobe/brainglobe-heatmap/issues/103">#103</a> nicely demonstrates the problem and a potential solution approach.</p>
@@ -766,12 +765,12 @@ Small (~90 hours)</p>
 <p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">brainrender-napari</span></code> allows BrainGlobe users to download and visualise a variety of neuroanatomical atlases through a graphical user interface. As BrainGlobe supports more and more atlases, we’d like to make it more convenient for users to find the atlas they are interested in, and visualise it in more custom ways.</p>
 <p class="sd-card-text"><strong>Deliverables</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text">Add sorting functionality to <code class="docutils literal notranslate"><span class="pre">brainrender-napari</span></code> tables</p></li>
-<li><p class="sd-card-text">Allow users to filter atlas tables by species</p></li>
-<li><p class="sd-card-text">Add functionality to visualise the atlas annotation with preset colours</p></li>
-<li><p class="sd-card-text">Any added functionality will require extensive tests and documentation</p></li>
-<li><p class="sd-card-text">A blog on the <a class="reference external" href="https://brainglobe.info/blog/">BrainGlobe website</a> about the work done</p></li>
-<li><p class="sd-card-text">(Stretch) add functionality to allow users to set the colours of meshes</p></li>
+<li><p>Add sorting functionality to <code class="docutils literal notranslate"><span class="pre">brainrender-napari</span></code> tables</p></li>
+<li><p>Allow users to filter atlas tables by species</p></li>
+<li><p>Add functionality to visualise the atlas annotation with preset colours</p></li>
+<li><p>Any added functionality will require extensive tests and documentation</p></li>
+<li><p>A blog on the <a class="reference external" href="https://brainglobe.info/blog/">BrainGlobe website</a> about the work done</p></li>
+<li><p>(Stretch) add functionality to allow users to set the colours of meshes</p></li>
 </ul>
 <p class="sd-card-text"><strong>Duration</strong>
 Large (~350 hours)</p>
@@ -781,19 +780,19 @@ Large (~350 hours)</p>
 <p class="sd-card-text">Fluency with Python</p>
 <p class="sd-card-text"><strong>Nice-to-haves</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text">Experience with <a class="reference external" href="https://docs.pytest.org/en/stable/">pytest</a>.</p></li>
-<li><p class="sd-card-text">Experience with graphical user face libraries, in particular <a class="reference external" href="https://napari.org/stable/">napari</a> and/or <a class="reference external" href="https://www.qt.io/">Qt</a></p></li>
+<li><p>Experience with <a class="reference external" href="https://docs.pytest.org/en/stable/">pytest</a>.</p></li>
+<li><p>Experience with graphical user face libraries, in particular <a class="reference external" href="https://napari.org/stable/">napari</a> and/or <a class="reference external" href="https://www.qt.io/">Qt</a></p></li>
 </ul>
 <p class="sd-card-text"><strong>Potential mentors</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text"><a class="reference external" href="https://github.com/alessandrofelder">&#64;alessandrofelder</a></p></li>
-<li><p class="sd-card-text"><a class="reference external" href="https://github.com/adamltyson">&#64;adamltyson</a></p></li>
-<li><p class="sd-card-text"><a class="reference external" href="https://github.com/IgorTatarnikov">&#64;IgorTatarnikov</a></p></li>
+<li><p><a class="reference external" href="https://github.com/alessandrofelder">&#64;alessandrofelder</a></p></li>
+<li><p><a class="reference external" href="https://github.com/adamltyson">&#64;adamltyson</a></p></li>
+<li><p><a class="reference external" href="https://github.com/IgorTatarnikov">&#64;IgorTatarnikov</a></p></li>
 </ul>
 <p class="sd-card-text"><strong>Further reading</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text">Further details can be found in <code class="docutils literal notranslate"><span class="pre">brainrender-napari</span></code> issues <a class="reference external" href="https://github.com/brainglobe/brainrender-napari/issues/22">#22</a>, <a class="reference external" href="https://github.com/brainglobe/brainrender-napari/issues/46">#46</a>,<a class="reference external" href="https://github.com/brainglobe/brainrender-napari/issues/154">#154</a>, and <a class="reference external" href="https://github.com/brainglobe/brainrender-napari/issues/218">#218</a></p></li>
-<li><p class="sd-card-text">Initial familiarisation with <code class="docutils literal notranslate"><span class="pre">brainrender-napari</span></code>’s current features may happen by working through the <a class="reference external" href="https://brainglobe.info/tutorials/manage-atlases-in-GUI.html">atlas downloading tutorial</a> and the <a class="reference external" href="https://brainglobe.info/tutorials/visualise-atlas-napari.html">atlas visualisation tutorial</a></p></li>
+<li><p>Further details can be found in <code class="docutils literal notranslate"><span class="pre">brainrender-napari</span></code> issues <a class="reference external" href="https://github.com/brainglobe/brainrender-napari/issues/22">#22</a>, <a class="reference external" href="https://github.com/brainglobe/brainrender-napari/issues/46">#46</a>,<a class="reference external" href="https://github.com/brainglobe/brainrender-napari/issues/154">#154</a>, and <a class="reference external" href="https://github.com/brainglobe/brainrender-napari/issues/218">#218</a></p></li>
+<li><p>Initial familiarisation with <code class="docutils literal notranslate"><span class="pre">brainrender-napari</span></code>’s current features may happen by working through the <a class="reference external" href="https://brainglobe.info/tutorials/manage-atlases-in-GUI.html">atlas downloading tutorial</a> and the <a class="reference external" href="https://brainglobe.info/tutorials/visualise-atlas-napari.html">atlas visualisation tutorial</a></p></li>
 </ul>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -802,10 +801,10 @@ Large (~350 hours)</p>
 <p class="sd-card-text">BrainGlobe’s <code class="docutils literal notranslate"><span class="pre">cellfinder</span></code> tool allows researchers to detect fluorescent cells in whole-brain microscopy images. It requires whole-brain images of both a signal and a background channels as input, which not many researchers have. We’d like to expand the types of inputs <code class="docutils literal notranslate"><span class="pre">cellfinder</span></code> support to include brain slices (essentially 2D data) and single channel inputs (no background channel).</p>
 <p class="sd-card-text"><strong>Deliverables</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text">Add functionality supporting 2.5-dimensional data</p></li>
-<li><p class="sd-card-text">Add functionality to support single-channel data</p></li>
-<li><p class="sd-card-text">Any added functionality will require extensive tests and documentation</p></li>
-<li><p class="sd-card-text">A blog on the <a class="reference external" href="https://brainglobe.info/blog/">BrainGlobe website</a> about the work done</p></li>
+<li><p>Add functionality supporting 2.5-dimensional data</p></li>
+<li><p>Add functionality to support single-channel data</p></li>
+<li><p>Any added functionality will require extensive tests and documentation</p></li>
+<li><p>A blog on the <a class="reference external" href="https://brainglobe.info/blog/">BrainGlobe website</a> about the work done</p></li>
 </ul>
 <p class="sd-card-text"><strong>Duration</strong>
 Large (~350 hours)</p>
@@ -815,26 +814,26 @@ Large (~350 hours)</p>
 <p class="sd-card-text">Fluency with Python and <a class="reference external" href="https://numpy.org/">NumPy</a></p>
 <p class="sd-card-text"><strong>Nice-to-haves</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text">Experience with <a class="reference external" href="https://docs.pytest.org/en/stable/">pytest</a>.</p></li>
-<li><p class="sd-card-text">Experience working with image data</p></li>
-<li><p class="sd-card-text">Experience working with large data, e.g. using <a class="reference external" href="https://pytorch.org/"><code class="docutils literal notranslate"><span class="pre">pytorch</span></code></a> and/or <a class="reference external" href="https://www.dask.org/"><code class="docutils literal notranslate"><span class="pre">dask</span></code></a></p></li>
+<li><p>Experience with <a class="reference external" href="https://docs.pytest.org/en/stable/">pytest</a>.</p></li>
+<li><p>Experience working with image data</p></li>
+<li><p>Experience working with large data, e.g. using <a class="reference external" href="https://pytorch.org/"><code class="docutils literal notranslate"><span class="pre">pytorch</span></code></a> and/or <a class="reference external" href="https://www.dask.org/"><code class="docutils literal notranslate"><span class="pre">dask</span></code></a></p></li>
 </ul>
 <p class="sd-card-text"><strong>Potential mentors</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text"><a class="reference external" href="https://github.com/alessandrofelder">&#64;alessandrofelder</a></p></li>
-<li><p class="sd-card-text"><a class="reference external" href="https://github.com/adamltyson">&#64;adamltyson</a></p></li>
-<li><p class="sd-card-text"><a class="reference external" href="https://github.com/IgorTatarnikov">&#64;IgorTatarnikov</a></p></li>
+<li><p><a class="reference external" href="https://github.com/alessandrofelder">&#64;alessandrofelder</a></p></li>
+<li><p><a class="reference external" href="https://github.com/adamltyson">&#64;adamltyson</a></p></li>
+<li><p><a class="reference external" href="https://github.com/IgorTatarnikov">&#64;IgorTatarnikov</a></p></li>
 </ul>
 <p class="sd-card-text"><strong>Further reading</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text">Further details can be found in <code class="docutils literal notranslate"><span class="pre">cellfinder</span></code> issues <a class="reference external" href="https://github.com/brainglobe/cellfinder/issues/298">#298</a> and <a class="reference external" href="https://github.com/brainglobe/cellfinder/issues/352">#352</a></p></li>
-<li><p class="sd-card-text">The current <code class="docutils literal notranslate"><span class="pre">cellfinder</span></code> functionality can be explored by working through the <a class="reference external" href="https://brainglobe.info/tutorials/cellfinder-detection.html">3D cell detection tutorial</a></p></li>
+<li><p>Further details can be found in <code class="docutils literal notranslate"><span class="pre">cellfinder</span></code> issues <a class="reference external" href="https://github.com/brainglobe/cellfinder/issues/298">#298</a> and <a class="reference external" href="https://github.com/brainglobe/cellfinder/issues/352">#352</a></p></li>
+<li><p>The current <code class="docutils literal notranslate"><span class="pre">cellfinder</span></code> functionality can be explored by working through the <a class="reference external" href="https://brainglobe.info/tutorials/cellfinder-detection.html">3D cell detection tutorial</a></p></li>
 </ul>
 </div>
 </details></section>
 <section id="movement">
 <h2>Movement<a class="headerlink" href="#movement" title="Link to this heading">#</a></h2>
-<p>Markerless pose estimation tools based on deep learning, such as <a class="reference external" href="https://www.mackenziemathislab.org/deeplabcut">DeepLabCut</a> and <a class="reference external" href="https://sleap.ai/">SLEAP</a>, have revolutionised the study of animal behaviour. However, there is currently no user-friendly, general-purpose approach for processing and analysing the trajectories generated by these popular tools. To fill this gap, we’re developing <a class="reference external" href="https://movement.neuroinformatics.dev/latest/"><code class="docutils literal notranslate"><span class="pre">movement</span></code></a>, an open-source Python package that provides a unified data analysis interface across pose estimation frameworks.</p>
+<p>Markerless pose estimation tools based on deep learning, such as <a class="reference external" href="https://mlabofai.org/deeplabcut">DeepLabCut</a> and <a class="reference external" href="https://sleap.ai/">SLEAP</a>, have revolutionised the study of animal behaviour. However, there is currently no user-friendly, general-purpose approach for processing and analysing the trajectories generated by these popular tools. To fill this gap, we’re developing <a class="reference external" href="https://movement.neuroinformatics.dev/latest/"><code class="docutils literal notranslate"><span class="pre">movement</span></code></a>, an open-source Python package that provides a unified data analysis interface across pose estimation frameworks.</p>
 <p>Our working language is English, but our mentors for these projects also speak Spanish and Mandarin.</p>
 <!-- ------------------------------ -->
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -842,19 +841,19 @@ Large (~350 hours)</p>
 <span class="sd-summary-text"><span class="fas fa-video sd-text-primary"></span> Adding I/O support for formats used in human motion tracking</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">The <code class="docutils literal notranslate"><span class="pre">movement</span></code> package currently supports a variety of pose estimation formats commonly used in animal behaviour research. With this project, we would like to expand our support to file formats more commonly used in human pose estimation, such as:</p>
 <ul class="simple">
-<li><p class="sd-card-text"><a class="reference external" href="https://cocodataset.org/#format-data:~:text=2.-,Keypoint%20Detection,-A%20keypoint%20annotation">COCO</a></p></li>
-<li><p class="sd-card-text">Motion capture data formats (such as <a class="reference external" href="https://research.cs.wisc.edu/graphics/Courses/cs-838-1999/Jeff/BVH.html">bvh</a>, <a class="reference external" href="https://www.c3d.org/">c3d</a>,)</p></li>
-<li><p class="sd-card-text"><a class="reference external" href="https://bids.neuroimaging.io/">motion-BIDS</a></p></li>
-<li><p class="sd-card-text"><a class="reference external" href="https://mmpose.readthedocs.io/en/latest/">MMPose</a></p></li>
-<li><p class="sd-card-text"><a class="reference external" href="https://freemocap.org/">FreeMocap</a></p></li>
+<li><p><a class="reference external" href="https://cocodataset.org/#format-data:~:text=2.-,Keypoint%20Detection,-A%20keypoint%20annotation">COCO</a></p></li>
+<li><p>Motion capture data formats (such as <a class="reference external" href="https://research.cs.wisc.edu/graphics/Courses/cs-838-1999/Jeff/BVH.html">bvh</a>, <a class="reference external" href="https://www.c3d.org/">c3d</a>,)</p></li>
+<li><p><a class="reference external" href="https://bids.neuroimaging.io/">motion-BIDS</a></p></li>
+<li><p><a class="reference external" href="https://mmpose.readthedocs.io/en/latest/">MMPose</a></p></li>
+<li><p><a class="reference external" href="https://freemocap.org/">FreeMocap</a></p></li>
 </ul>
 <p class="sd-card-text"><strong>Deliverables</strong></p>
 <!-- Goals, or expected status after Community Bonding Period, Start of Coding, End of Coding. Stretch goals? -->
 <ul class="simple">
-<li><p class="sd-card-text">Functionality to load at least 3 popular file formats for human motion tracking, such as MMPose output files, COCO keypoint data, motion capture formats or motionBIDS.</p></li>
-<li><p class="sd-card-text">Tests to cover any added functionality.</p></li>
-<li><p class="sd-card-text">Documentation for the new functionality.</p></li>
-<li><p class="sd-card-text">Example use-cases in the <code class="docutils literal notranslate"><span class="pre">movement</span></code> <a class="reference external" href="https://movement.neuroinformatics.dev/latest/examples/index.html">gallery</a>.</p></li>
+<li><p>Functionality to load at least 3 popular file formats for human motion tracking, such as MMPose output files, COCO keypoint data, motion capture formats or motionBIDS.</p></li>
+<li><p>Tests to cover any added functionality.</p></li>
+<li><p>Documentation for the new functionality.</p></li>
+<li><p>Example use-cases in the <code class="docutils literal notranslate"><span class="pre">movement</span></code> <a class="reference external" href="https://movement.neuroinformatics.dev/latest/examples/index.html">gallery</a>.</p></li>
 </ul>
 <p class="sd-card-text"><strong>Duration</strong></p>
 <!-- Small (~90 hours), Medium (~175 hours) or Large (~350 hours)  -->
@@ -868,24 +867,24 @@ Large (~350 hours)</p>
 <p class="sd-card-text"><strong>Nice-to-haves</strong></p>
 <!-- What skills are nice to have to complete this project? -->
 <ul class="simple">
-<li><p class="sd-card-text">Experience with <a class="reference external" href="https://docs.xarray.dev/en/stable/index.html">xarray</a> and <a class="reference external" href="https://docs.pytest.org/en/stable/">pytest</a>.</p></li>
-<li><p class="sd-card-text">Familiarity with pose estimation frameworks and their usual workflow.</p></li>
-<li><p class="sd-card-text">Familiarity with any of the human pose estimation formats mentioned above.</p></li>
+<li><p>Experience with <a class="reference external" href="https://docs.xarray.dev/en/stable/index.html">xarray</a> and <a class="reference external" href="https://docs.pytest.org/en/stable/">pytest</a>.</p></li>
+<li><p>Familiarity with pose estimation frameworks and their usual workflow.</p></li>
+<li><p>Familiarity with any of the human pose estimation formats mentioned above.</p></li>
 </ul>
 <p class="sd-card-text"><strong>Potential mentors</strong></p>
 <!-- List of potential mentors for this project -->
 <ul class="simple">
-<li><p class="sd-card-text"><a class="reference external" href="https://github.com/niksirbi">&#64;niksirbi</a></p></li>
-<li><p class="sd-card-text"><a class="reference external" href="https://github.com/lochhh">&#64;lochhh</a></p></li>
+<li><p><a class="reference external" href="https://github.com/niksirbi">&#64;niksirbi</a></p></li>
+<li><p><a class="reference external" href="https://github.com/lochhh">&#64;lochhh</a></p></li>
 </ul>
 <p class="sd-card-text"><strong>Further reading</strong></p>
 <!-- Links to more detailed descriptions and related materials for each project. They might even include actual use cases -->
 <ul class="simple">
-<li><p class="sd-card-text">Further details are available in the following <code class="docutils literal notranslate"><span class="pre">movement</span></code> issues: <a class="reference external" href="https://github.com/neuroinformatics-unit/movement/issues/175">#175</a>, <a class="reference external" href="https://github.com/neuroinformatics-unit/movement/issues/299">#299</a>, <a class="reference external" href="https://github.com/neuroinformatics-unit/movement/issues/581">#581</a></p></li>
-<li><p class="sd-card-text"><a class="reference external" href="https://cocodataset.org/#format-data">COCO dataset data format</a></p></li>
-<li><p class="sd-card-text"><a class="reference external" href="https://io.sleap.ai/latest/">sleap-io documentation</a></p></li>
-<li><p class="sd-card-text"><a class="reference external" href="https://movement.neuroinformatics.dev/latest/examples/load_freemocap_data.html">movement FreeMocap example</a></p></li>
-<li><p class="sd-card-text"><a class="reference external" href="https://freemocap.org/">FreeMocap documentation</a></p></li>
+<li><p>Further details are available in the following <code class="docutils literal notranslate"><span class="pre">movement</span></code> issues: <a class="reference external" href="https://github.com/neuroinformatics-unit/movement/issues/175">#175</a>, <a class="reference external" href="https://github.com/neuroinformatics-unit/movement/issues/299">#299</a>, <a class="reference external" href="https://github.com/neuroinformatics-unit/movement/issues/581">#581</a></p></li>
+<li><p><a class="reference external" href="https://cocodataset.org/#format-data">COCO dataset data format</a></p></li>
+<li><p><a class="reference external" href="https://io.sleap.ai/latest/">sleap-io documentation</a></p></li>
+<li><p><a class="reference external" href="https://movement.neuroinformatics.dev/latest/examples/load_freemocap_data.html">movement FreeMocap example</a></p></li>
+<li><p><a class="reference external" href="https://freemocap.org/">FreeMocap documentation</a></p></li>
 </ul>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -893,17 +892,17 @@ Large (~350 hours)</p>
 <span class="sd-summary-text"><span class="fas fa-video sd-text-primary"></span> Adding I/O support for popular animal tracking software</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">The <code class="docutils literal notranslate"><span class="pre">movement</span></code> package currently supports a variety of pose estimation formats commonly used in animal behaviour research. With this project, we would like to expand our support to other file formats used in the field, such as:</p>
 <ul class="simple">
-<li><p class="sd-card-text"><a class="reference external" href="https://idtracker.ai/latest/">idtracker</a></p></li>
-<li><p class="sd-card-text">point trackers, such as <a class="reference external" href="https://github.com/facebookresearch/co-tracker">cotracker3</a></p></li>
-<li><p class="sd-card-text"><a class="reference external" href="https://bonsai-rx.org/docs/index.html">Bonsai’s</a> centroid tracker</p></li>
-<li><p class="sd-card-text"><a class="reference external" href="https://trex.run/docs/">TRex’s</a> pose and bounding box outputs</p></li>
+<li><p><a class="reference external" href="https://idtracker.ai/latest/">idtracker</a></p></li>
+<li><p>point trackers, such as <a class="reference external" href="https://github.com/facebookresearch/co-tracker">cotracker3</a></p></li>
+<li><p><a class="reference external" href="https://bonsai-rx.org/docs/index.html">Bonsai’s</a> centroid tracker</p></li>
+<li><p><a class="reference external" href="https://trex.run/docs/">TRex’s</a> pose and bounding box outputs</p></li>
 </ul>
 <p class="sd-card-text"><strong>Deliverables</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text">Functionality to load 2-3 of the file formats mentioned above.</p></li>
-<li><p class="sd-card-text">Tests to cover any added functionality.</p></li>
-<li><p class="sd-card-text">Documentation for the new functionality.</p></li>
-<li><p class="sd-card-text">Example use-cases in the <code class="docutils literal notranslate"><span class="pre">movement</span></code> <a class="reference external" href="https://movement.neuroinformatics.dev/latest/examples/index.html">gallery</a>.</p></li>
+<li><p>Functionality to load 2-3 of the file formats mentioned above.</p></li>
+<li><p>Tests to cover any added functionality.</p></li>
+<li><p>Documentation for the new functionality.</p></li>
+<li><p>Example use-cases in the <code class="docutils literal notranslate"><span class="pre">movement</span></code> <a class="reference external" href="https://movement.neuroinformatics.dev/latest/examples/index.html">gallery</a>.</p></li>
 </ul>
 <p class="sd-card-text"><strong>Duration</strong></p>
 <p class="sd-card-text">Large (~350 hours)</p>
@@ -913,14 +912,14 @@ Large (~350 hours)</p>
 <p class="sd-card-text">Fluency with Python, <a class="reference external" href="https://numpy.org/">NumPy</a> and/or <a class="reference external" href="https://pandas.pydata.org/docs/index.html">pandas</a>.</p>
 <p class="sd-card-text"><strong>Nice-to-haves</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text">Experience with <a class="reference external" href="https://docs.xarray.dev/en/stable/index.html">xarray</a> and <a class="reference external" href="https://docs.pytest.org/en/stable/">pytest</a>.</p></li>
-<li><p class="sd-card-text">Familiarity with pose estimation frameworks and their usual workflow.</p></li>
-<li><p class="sd-card-text">Familiarity with any of the software packages mentioned above.</p></li>
+<li><p>Experience with <a class="reference external" href="https://docs.xarray.dev/en/stable/index.html">xarray</a> and <a class="reference external" href="https://docs.pytest.org/en/stable/">pytest</a>.</p></li>
+<li><p>Familiarity with pose estimation frameworks and their usual workflow.</p></li>
+<li><p>Familiarity with any of the software packages mentioned above.</p></li>
 </ul>
 <p class="sd-card-text"><strong>Potential mentors</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text"><a class="reference external" href="https://github.com/niksirbi">&#64;niksirbi</a></p></li>
-<li><p class="sd-card-text"><a class="reference external" href="https://github.com/sfmig">&#64;sfmig</a></p></li>
+<li><p><a class="reference external" href="https://github.com/niksirbi">&#64;niksirbi</a></p></li>
+<li><p><a class="reference external" href="https://github.com/sfmig">&#64;sfmig</a></p></li>
 </ul>
 <p class="sd-card-text"><strong>Further reading</strong></p>
 <p class="sd-card-text">Further details are available in the following <code class="docutils literal notranslate"><span class="pre">movement</span></code> issues: <a class="reference external" href="https://github.com/neuroinformatics-unit/movement/issues/348">#348</a>, <a class="reference external" href="https://github.com/neuroinformatics-unit/movement/issues/599">#599</a></p>
@@ -931,10 +930,10 @@ Large (~350 hours)</p>
 <p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">movement</span></code> has initially focused on pose estimation data, but the <a class="reference external" href="https://movement.neuroinformatics.dev/latest/community/mission-scope.html">long term goal</a> of the package is to support all animal tracking data formats that are relevant to animal behaviour research. With tools like <a class="reference external" href="https://github.com/facebookresearch/sam2">SAM</a> or <a class="reference external" href="https://octron-tracking.github.io/OCTRON-docs/">OCTRON</a> that track segmentation masks in videos, adding support for such data would be a valuable extension of <code class="docutils literal notranslate"><span class="pre">movement</span></code>’s input capabilities. In this project, we would like to explore how segmentation‑based tracking data can be integrated into the <code class="docutils literal notranslate"><span class="pre">movement</span></code> framework and design a user-friendly workflow for doing so.</p>
 <p class="sd-card-text"><strong>Deliverables</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text">Support for at least one of the file formats output by a popular segmentation and tracking software package.</p></li>
-<li><p class="sd-card-text">Tests to cover any added functionality.</p></li>
-<li><p class="sd-card-text">Documentation for the new functionality.</p></li>
-<li><p class="sd-card-text">Example use-cases in the <code class="docutils literal notranslate"><span class="pre">movement</span></code> <a class="reference external" href="https://movement.neuroinformatics.dev/latest/examples/index.html">gallery</a>.</p></li>
+<li><p>Support for at least one of the file formats output by a popular segmentation and tracking software package.</p></li>
+<li><p>Tests to cover any added functionality.</p></li>
+<li><p>Documentation for the new functionality.</p></li>
+<li><p>Example use-cases in the <code class="docutils literal notranslate"><span class="pre">movement</span></code> <a class="reference external" href="https://movement.neuroinformatics.dev/latest/examples/index.html">gallery</a>.</p></li>
 </ul>
 <p class="sd-card-text"><strong>Duration</strong></p>
 <p class="sd-card-text">Large (~350 hours)</p>
@@ -944,21 +943,21 @@ Large (~350 hours)</p>
 <p class="sd-card-text">Fluency with Python, <a class="reference external" href="https://numpy.org/">NumPy</a> and/or <a class="reference external" href="https://pandas.pydata.org/docs/index.html">pandas</a>.</p>
 <p class="sd-card-text"><strong>Nice-to-haves</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text">Experience with <a class="reference external" href="https://docs.xarray.dev/en/stable/index.html">xarray</a> and <a class="reference external" href="https://docs.pytest.org/en/stable/">pytest</a>.</p></li>
-<li><p class="sd-card-text">Familiarity with segmentation models (such as <a class="reference external" href="https://github.com/facebookresearch/sam2">SAM2</a>, <a class="reference external" href="https://github.com/facebookresearch/sam3">SAM3</a> or <a class="reference external" href="https://docs.ultralytics.com/tasks/segment/">Ultralytics Instance segmentation with YOLO</a>) and their usual workflow.</p></li>
-<li><p class="sd-card-text">Familiarity with software packages for instance segmentation applied to biology or animal behaviour research, such as <a class="reference external" href="https://octron-tracking.github.io/OCTRON-docs/">OCTRON</a> or <a class="reference external" href="https://guiwitz.github.io/napari-convpaint/book/Landing.html">convpaint</a></p></li>
+<li><p>Experience with <a class="reference external" href="https://docs.xarray.dev/en/stable/index.html">xarray</a> and <a class="reference external" href="https://docs.pytest.org/en/stable/">pytest</a>.</p></li>
+<li><p>Familiarity with segmentation models (such as <a class="reference external" href="https://github.com/facebookresearch/sam2">SAM2</a>, <a class="reference external" href="https://github.com/facebookresearch/sam3">SAM3</a> or <a class="reference external" href="https://docs.ultralytics.com/tasks/segment/">Ultralytics Instance segmentation with YOLO</a>) and their usual workflow.</p></li>
+<li><p>Familiarity with software packages for instance segmentation applied to biology or animal behaviour research, such as <a class="reference external" href="https://octron-tracking.github.io/OCTRON-docs/">OCTRON</a> or <a class="reference external" href="https://guiwitz.github.io/napari-convpaint/book/Landing.html">convpaint</a></p></li>
 </ul>
 <p class="sd-card-text"><strong>Potential mentors</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text"><a class="reference external" href="https://github.com/sfmig">&#64;sfmig</a></p></li>
-<li><p class="sd-card-text"><a class="reference external" href="https://github.com/niksirbi">&#64;niksirbi</a></p></li>
+<li><p><a class="reference external" href="https://github.com/sfmig">&#64;sfmig</a></p></li>
+<li><p><a class="reference external" href="https://github.com/niksirbi">&#64;niksirbi</a></p></li>
 </ul>
 <p class="sd-card-text"><strong>Further reading</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text">Further details are available in the following <code class="docutils literal notranslate"><span class="pre">movement</span></code> issue: <a class="reference external" href="https://github.com/neuroinformatics-unit/movement/issues/301">#301</a></p></li>
-<li><p class="sd-card-text"><a class="reference external" href="https://octron-tracking.github.io/OCTRON-docs/">OCTRON documentation</a></p></li>
-<li><p class="sd-card-text"><a class="reference external" href="https://github.com/facebookresearch/sam2">SAM2</a> and <a class="reference external" href="https://github.com/facebookresearch/sam3">SAM3</a> codebases and documentation</p></li>
-<li><p class="sd-card-text"><a class="reference external" href="https://docs.ultralytics.com/tasks/segment/">Ultralytics Instance segmentation with YOLO</a></p></li>
+<li><p>Further details are available in the following <code class="docutils literal notranslate"><span class="pre">movement</span></code> issue: <a class="reference external" href="https://github.com/neuroinformatics-unit/movement/issues/301">#301</a></p></li>
+<li><p><a class="reference external" href="https://octron-tracking.github.io/OCTRON-docs/">OCTRON documentation</a></p></li>
+<li><p><a class="reference external" href="https://github.com/facebookresearch/sam2">SAM2</a> and <a class="reference external" href="https://github.com/facebookresearch/sam3">SAM3</a> codebases and documentation</p></li>
+<li><p><a class="reference external" href="https://docs.ultralytics.com/tasks/segment/">Ultralytics Instance segmentation with YOLO</a></p></li>
 </ul>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -967,10 +966,10 @@ Large (~350 hours)</p>
 <p class="sd-card-text">Quantitative characterisation of the trajectories of moving animals is an important component of many behavioural and ecological studies, and also falls within scope for <code class="docutils literal notranslate"><span class="pre">movement</span></code>. We would like to enable our users to perform statistical characterisation of trajectories through a variety of well-defined metrics such as straightness index, tortuosity, and sinuosity. Functions for computing these metrics could be implemented in a standalone module under <a class="reference external" href="https://github.com/neuroinformatics-unit/movement/tree/main/movement/kinematics"><code class="docutils literal notranslate"><span class="pre">movement.kinematics</span></code></a>.</p>
 <p class="sd-card-text"><strong>Deliverables</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text">Functions for computing at least 3 metrics of trajectory complexity</p></li>
-<li><p class="sd-card-text">Tests to cover any added functionality.</p></li>
-<li><p class="sd-card-text">Documentation for the new functionality.</p></li>
-<li><p class="sd-card-text">Example use-cases in the <code class="docutils literal notranslate"><span class="pre">movement</span></code> <a class="reference external" href="https://movement.neuroinformatics.dev/latest/examples/index.html">gallery</a>.</p></li>
+<li><p>Functions for computing at least 3 metrics of trajectory complexity</p></li>
+<li><p>Tests to cover any added functionality.</p></li>
+<li><p>Documentation for the new functionality.</p></li>
+<li><p>Example use-cases in the <code class="docutils literal notranslate"><span class="pre">movement</span></code> <a class="reference external" href="https://movement.neuroinformatics.dev/latest/examples/index.html">gallery</a>.</p></li>
 </ul>
 <p class="sd-card-text"><strong>Duration</strong></p>
 <p class="sd-card-text">Medium (~175 hours)</p>
@@ -978,23 +977,23 @@ Large (~350 hours)</p>
 <p class="sd-card-text">This project is well suited for an intermediate contributor to open source, with a background in research.</p>
 <p class="sd-card-text"><strong>Required skills</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text">Fluency with Python, <a class="reference external" href="https://numpy.org/">NumPy</a> and/or <a class="reference external" href="https://pandas.pydata.org/docs/index.html">pandas</a>.</p></li>
-<li><p class="sd-card-text">Research experience in any scientific field.</p></li>
+<li><p>Fluency with Python, <a class="reference external" href="https://numpy.org/">NumPy</a> and/or <a class="reference external" href="https://pandas.pydata.org/docs/index.html">pandas</a>.</p></li>
+<li><p>Research experience in any scientific field.</p></li>
 </ul>
 <p class="sd-card-text"><strong>Nice-to-haves</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text">Experience with <a class="reference external" href="https://docs.xarray.dev/en/stable/index.html">xarray</a> and <a class="reference external" href="https://docs.pytest.org/en/stable/">pytest</a>.</p></li>
-<li><p class="sd-card-text">Research experience in a relevant field: e.g. ethology, neuroscience, behavioural ecology, conservation.</p></li>
+<li><p>Experience with <a class="reference external" href="https://docs.xarray.dev/en/stable/index.html">xarray</a> and <a class="reference external" href="https://docs.pytest.org/en/stable/">pytest</a>.</p></li>
+<li><p>Research experience in a relevant field: e.g. ethology, neuroscience, behavioural ecology, conservation.</p></li>
 </ul>
 <p class="sd-card-text"><strong>Potential mentors</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text"><a class="reference external" href="https://github.com/niksirbi">&#64;niksirbi</a></p></li>
-<li><p class="sd-card-text"><a class="reference external" href="https://github.com/sfmig">&#64;sfmig</a></p></li>
+<li><p><a class="reference external" href="https://github.com/niksirbi">&#64;niksirbi</a></p></li>
+<li><p><a class="reference external" href="https://github.com/sfmig">&#64;sfmig</a></p></li>
 </ul>
 <p class="sd-card-text"><strong>Further reading</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text">The <a class="reference external" href="https://cran.rstudio.com/web/packages/trajr/vignettes/trajr-vignette.html"><code class="docutils literal notranslate"><span class="pre">trajr</span></code> R package</a> and its associated <a class="reference external" href="https://onlinelibrary.wiley.com/doi/full/10.1111/eth.12739">paper</a></p></li>
-<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">movement</span></code> issues <a class="reference external" href="https://github.com/neuroinformatics-unit/movement/issues/406">#406</a> and <a class="reference external" href="https://github.com/neuroinformatics-unit/movement/issues/517">#517</a></p></li>
+<li><p>The <a class="reference external" href="https://cran.rstudio.com/web/packages/trajr/vignettes/trajr-vignette.html"><code class="docutils literal notranslate"><span class="pre">trajr</span></code> R package</a> and its associated <a class="reference external" href="https://onlinelibrary.wiley.com/doi/full/10.1111/eth.12739">paper</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">movement</span></code> issues <a class="reference external" href="https://github.com/neuroinformatics-unit/movement/issues/406">#406</a> and <a class="reference external" href="https://github.com/neuroinformatics-unit/movement/issues/517">#517</a></p></li>
 </ul>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
@@ -1003,11 +1002,11 @@ Large (~350 hours)</p>
 <p class="sd-card-text">Understanding how individuals coordinate their movements within a group is a central question in behavioural ecology, ethology, and neuroscience. Since <code class="docutils literal notranslate"><span class="pre">movement</span></code> already supports multi-individual tracking data, it is well positioned to enable users to quantify collective behaviour through established metrics such as group polarisation (alignment of heading directions), and nearest-neighbour distances. We would like to implement functions for computing collective behaviour metrics in a dedicated module.</p>
 <p class="sd-card-text"><strong>Deliverables</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text">A detailed GitHub issue describing suitable metrics to add.</p></li>
-<li><p class="sd-card-text">Functions for computing at least 2 metrics of collective behaviour</p></li>
-<li><p class="sd-card-text">Tests to cover any added functionality.</p></li>
-<li><p class="sd-card-text">Documentation for the new functionality.</p></li>
-<li><p class="sd-card-text">Example use-cases in the <code class="docutils literal notranslate"><span class="pre">movement</span></code> <a class="reference external" href="https://movement.neuroinformatics.dev/latest/examples/index.html">gallery</a>.</p></li>
+<li><p>A detailed GitHub issue describing suitable metrics to add.</p></li>
+<li><p>Functions for computing at least 2 metrics of collective behaviour</p></li>
+<li><p>Tests to cover any added functionality.</p></li>
+<li><p>Documentation for the new functionality.</p></li>
+<li><p>Example use-cases in the <code class="docutils literal notranslate"><span class="pre">movement</span></code> <a class="reference external" href="https://movement.neuroinformatics.dev/latest/examples/index.html">gallery</a>.</p></li>
 </ul>
 <p class="sd-card-text"><strong>Duration</strong></p>
 <p class="sd-card-text">Medium (~175 hours)</p>
@@ -1015,23 +1014,23 @@ Large (~350 hours)</p>
 <p class="sd-card-text">This project is well suited for an intermediate contributor to open source, with a background in research.</p>
 <p class="sd-card-text"><strong>Required skills</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text">Fluency with Python, <a class="reference external" href="https://numpy.org/">NumPy</a> and/or <a class="reference external" href="https://pandas.pydata.org/docs/index.html">pandas</a>.</p></li>
-<li><p class="sd-card-text">Research experience in any scientific field.</p></li>
+<li><p>Fluency with Python, <a class="reference external" href="https://numpy.org/">NumPy</a> and/or <a class="reference external" href="https://pandas.pydata.org/docs/index.html">pandas</a>.</p></li>
+<li><p>Research experience in any scientific field.</p></li>
 </ul>
 <p class="sd-card-text"><strong>Nice-to-haves</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text">Experience with <a class="reference external" href="https://docs.xarray.dev/en/stable/index.html">xarray</a> and <a class="reference external" href="https://docs.pytest.org/en/stable/">pytest</a>.</p></li>
-<li><p class="sd-card-text">Research experience in a relevant field: e.g. ethology, neuroscience, behavioural ecology, conservation.</p></li>
+<li><p>Experience with <a class="reference external" href="https://docs.xarray.dev/en/stable/index.html">xarray</a> and <a class="reference external" href="https://docs.pytest.org/en/stable/">pytest</a>.</p></li>
+<li><p>Research experience in a relevant field: e.g. ethology, neuroscience, behavioural ecology, conservation.</p></li>
 </ul>
 <p class="sd-card-text"><strong>Potential mentors</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text"><a class="reference external" href="https://github.com/niksirbi">&#64;niksirbi</a></p></li>
-<li><p class="sd-card-text"><a class="reference external" href="https://github.com/lochhh">&#64;lochhh</a></p></li>
+<li><p><a class="reference external" href="https://github.com/niksirbi">&#64;niksirbi</a></p></li>
+<li><p><a class="reference external" href="https://github.com/lochhh">&#64;lochhh</a></p></li>
 </ul>
 <p class="sd-card-text"><strong>Further reading</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text">The <a class="reference external" href="https://swarm-lab.github.io/swaRm/reference/swaRm-package.html"><code class="docutils literal notranslate"><span class="pre">swaRm</span></code> R package</a> and its associated <a class="reference external" href="https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.14460">paper</a></p></li>
-<li><p class="sd-card-text">An <a class="reference external" href="https://github.com/neuroinformatics-unit/zebras-stitching/blob/main/notebooks/03_notebook_compute_behaviour_metrics.py">example script</a> for computing behaviour metrics for a herd of zebras. See also the corresponding <a class="reference external" href="https://arxiv.org/abs/2505.16882">preprint</a>.</p></li>
+<li><p>The <a class="reference external" href="https://swarm-lab.github.io/swaRm/reference/swaRm-package.html"><code class="docutils literal notranslate"><span class="pre">swaRm</span></code> R package</a> and its associated <a class="reference external" href="https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.14460">paper</a></p></li>
+<li><p>An <a class="reference external" href="https://github.com/neuroinformatics-unit/zebras-stitching/blob/main/notebooks/03_notebook_compute_behaviour_metrics.py">example script</a> for computing behaviour metrics for a herd of zebras. See also the corresponding <a class="reference external" href="https://arxiv.org/abs/2505.16882">preprint</a>.</p></li>
 </ul>
 </div>
 </details></section>
@@ -1046,11 +1045,11 @@ Large (~350 hours)</p>
 <p class="sd-card-text"><strong>Deliverables</strong></p>
 <!-- Goals, or expected status after Community Bonding Period, Start of Coding, End of Coding. Stretch goals? -->
 <ul class="simple">
-<li><p class="sd-card-text">Support for mask annotation datasets in <code class="docutils literal notranslate"><span class="pre">ethology</span></code> (following the current bounding box annotations dataset).</p></li>
-<li><p class="sd-card-text">Support for defining bounding box annotations in <code class="docutils literal notranslate"><span class="pre">napari</span></code>: drawing, exporting to file (e.g. JSON COCO format and as <code class="docutils literal notranslate"><span class="pre">ethology</span></code> dataset netCDF) and loading from file.</p></li>
-<li><p class="sd-card-text">Support for defining mask annotations in <code class="docutils literal notranslate"><span class="pre">napari</span></code>: drawing, exporting to file (e.g. JSON COCO format and as <code class="docutils literal notranslate"><span class="pre">ethology</span></code> dataset netCDF) and loading from file.</p></li>
-<li><p class="sd-card-text">Example use-cases in the <code class="docutils literal notranslate"><span class="pre">ethology</span></code> <a class="reference external" href="https://ethology.neuroinformatics.dev/latest/examples/index.html">gallery</a>.</p></li>
-<li><p class="sd-card-text">(Optional) Support for defining keypoint annotations in <code class="docutils literal notranslate"><span class="pre">napari</span></code></p></li>
+<li><p>Support for mask annotation datasets in <code class="docutils literal notranslate"><span class="pre">ethology</span></code> (following the current bounding box annotations dataset).</p></li>
+<li><p>Support for defining bounding box annotations in <code class="docutils literal notranslate"><span class="pre">napari</span></code>: drawing, exporting to file (e.g. JSON COCO format and as <code class="docutils literal notranslate"><span class="pre">ethology</span></code> dataset netCDF) and loading from file.</p></li>
+<li><p>Support for defining mask annotations in <code class="docutils literal notranslate"><span class="pre">napari</span></code>: drawing, exporting to file (e.g. JSON COCO format and as <code class="docutils literal notranslate"><span class="pre">ethology</span></code> dataset netCDF) and loading from file.</p></li>
+<li><p>Example use-cases in the <code class="docutils literal notranslate"><span class="pre">ethology</span></code> <a class="reference external" href="https://ethology.neuroinformatics.dev/latest/examples/index.html">gallery</a>.</p></li>
+<li><p>(Optional) Support for defining keypoint annotations in <code class="docutils literal notranslate"><span class="pre">napari</span></code></p></li>
 </ul>
 <p class="sd-card-text"><strong>Duration</strong></p>
 <!-- Small (~90 hours), Medium (~175 hours) or Large (~350 hours)  -->
@@ -1067,14 +1066,14 @@ Large (~350 hours)</p>
 <p class="sd-card-text"><strong>Potential mentors</strong></p>
 <!-- List of potential mentors for this project -->
 <ul class="simple">
-<li><p class="sd-card-text"><a class="reference external" href="https://github.com/sfmig">&#64;sfmig</a></p></li>
-<li><p class="sd-card-text"><a class="reference external" href="https://github.com/niksirbi">&#64;niksirbi</a></p></li>
-<li><p class="sd-card-text"><a class="reference external" href="https://github.com/lochhh">&#64;lochhh</a></p></li>
+<li><p><a class="reference external" href="https://github.com/sfmig">&#64;sfmig</a></p></li>
+<li><p><a class="reference external" href="https://github.com/niksirbi">&#64;niksirbi</a></p></li>
+<li><p><a class="reference external" href="https://github.com/lochhh">&#64;lochhh</a></p></li>
 </ul>
 <p class="sd-card-text"><strong>Further reading</strong></p>
 <!-- Links to more detailed descriptions and related materials for each project. They might even include actual use cases -->
 <ul class="simple">
-<li><p class="sd-card-text"><a class="reference external" href="https://ethology.neuroinformatics.dev/latest/examples/index.html"><code class="docutils literal notranslate"><span class="pre">ethology</span></code> examples</a>, to get familiar with the structure of the annotations dataset.</p></li>
+<li><p><a class="reference external" href="https://ethology.neuroinformatics.dev/latest/examples/index.html"><code class="docutils literal notranslate"><span class="pre">ethology</span></code> examples</a>, to get familiar with the structure of the annotations dataset.</p></li>
 </ul>
 </div>
 </details></section>

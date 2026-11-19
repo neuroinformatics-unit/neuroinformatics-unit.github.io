@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../../../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=6a604523" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css?v=43278677" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
   
@@ -48,7 +48,7 @@
     <script src="../../../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../../../_static/sg-tags.js?v=d80f6fa4"></script>
-    <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script data-sd-tabs-storage-prefix="sphinx-design-tab-id-" src="../../../../_static/design-tabs.js?v=fcb327ea"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -585,7 +585,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../development_guidelines.html">General development guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../languages_frameworks.html">Development guidelines for specific languages and frameworks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../ai_policy.html">NIU policy on contributions using AI</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../mentoring.html">Mentored open-source contributions</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../../index.html">Google Summer of Code</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../guidelines.html">GSoC NIU Contributor Application Guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../application_template.html">Application template</a></li>
@@ -688,10 +687,10 @@ Under the hood <code class="docutils literal notranslate"><span class="pre">data
 <p class="sd-card-text"><strong>Deliverables</strong></p>
 <!-- Goals, or expected status after Community Bonding Period, Start of Coding, End of Coding. Stretch goals? -->
 <ul class="simple">
-<li><p class="sd-card-text">Extend <code class="docutils literal notranslate"><span class="pre">datashuttle</span></code> functionality to permit transfer between a local filesystem and Google Drive or AWS. This will involve exposing new functionality within the Python API as well as the terminal user interface.</p></li>
-<li><p class="sd-card-text">Tests to cover any added functionality.</p></li>
-<li><p class="sd-card-text">Documentation for the new functionality.</p></li>
-<li><p class="sd-card-text"><strong>Duration</strong></p></li>
+<li><p>Extend <code class="docutils literal notranslate"><span class="pre">datashuttle</span></code> functionality to permit transfer between a local filesystem and Google Drive or AWS. This will involve exposing new functionality within the Python API as well as the terminal user interface.</p></li>
+<li><p>Tests to cover any added functionality.</p></li>
+<li><p>Documentation for the new functionality.</p></li>
+<li><p><strong>Duration</strong></p></li>
 </ul>
 <!-- Small (~90 hours), Medium (~175 hours) or Large (~350 hours)  -->
 <p class="sd-card-text">Medium (~175 hours)</p>
@@ -704,7 +703,7 @@ Experience with Python</p>
 Experience with network data transfers (e.g. rsync, rclone, Google Drive, AWS)</p>
 <p class="sd-card-text"><strong>Potential mentors</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text"><a class="reference external" href="https://github.com/JoeZiminski">&#64;JoeZiminski</a></p></li>
+<li><p><a class="reference external" href="https://github.com/JoeZiminski">&#64;JoeZiminski</a></p></li>
 </ul>
 <p class="sd-card-text"><strong>Further reading</strong></p>
 <!-- The best pages include links to more detailed descriptions and related materials for each project. They might even include actual use cases! -->
@@ -723,11 +722,11 @@ but no standard way to proceed.</p>
 <p class="sd-card-text"><strong>Deliverables</strong></p>
 <!-- Goals, or expected status after Community Bonding Period, Start of Coding, End of Coding. Stretch goals? -->
 <ul class="simple">
-<li><p class="sd-card-text">Research approaches for cross-platform distribution of a <code class="docutils literal notranslate"><span class="pre">datashuttle</span></code> executable</p></li>
-<li><p class="sd-card-text">Assess how robust and maintainable these are</p></li>
-<li><p class="sd-card-text">Implement the best approach for <code class="docutils literal notranslate"><span class="pre">datashuttle</span></code></p></li>
-<li><p class="sd-card-text">Document and test in our GitHub CI</p></li>
-<li><p class="sd-card-text"><strong>Duration</strong></p></li>
+<li><p>Research approaches for cross-platform distribution of a <code class="docutils literal notranslate"><span class="pre">datashuttle</span></code> executable</p></li>
+<li><p>Assess how robust and maintainable these are</p></li>
+<li><p>Implement the best approach for <code class="docutils literal notranslate"><span class="pre">datashuttle</span></code></p></li>
+<li><p>Document and test in our GitHub CI</p></li>
+<li><p><strong>Duration</strong></p></li>
 </ul>
 <!-- Small (~90 hours), Medium (~175 hours) or Large (~350 hours)  -->
 <p class="sd-card-text">Large (~350 hours)</p>
@@ -743,7 +742,7 @@ Experience with Python</p>
 Experience with created executable Python distributions (e.g. with PyInstaller).</p>
 <p class="sd-card-text"><strong>Potential mentors</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text"><a class="reference external" href="https://github.com/JoeZiminski">&#64;JoeZiminski</a>.</p></li>
+<li><p><a class="reference external" href="https://github.com/JoeZiminski">&#64;JoeZiminski</a>.</p></li>
 </ul>
 <p class="sd-card-text"><strong>Further reading</strong></p>
 <!-- The best pages include links to more detailed descriptions and related materials for each project. They might even include actual use cases! -->

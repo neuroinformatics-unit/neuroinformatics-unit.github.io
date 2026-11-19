@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=6a604523" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=43278677" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
   
@@ -48,7 +48,7 @@
     <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../_static/sg-tags.js?v=d80f6fa4"></script>
-    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script data-sd-tabs-storage-prefix="sphinx-design-tab-id-" src="../../_static/design-tabs.js?v=fcb327ea"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -680,13 +680,13 @@
                 
 <div id="searchbox"></div>
                 <article class="bd-article">
-                   <section class="tex2jax_ignore mathjax_ignore" id="create-a-gin-repository-for-your-dataset">
-<span id="target-create-gin-repo"></span><h1>Create a GIN repository for your dataset<a class="headerlink" href="#create-a-gin-repository-for-your-dataset" title="Link to this heading">#</a></h1>
+                   <section class="tex2jax_ignore mathjax_ignore" id="target-create-gin-repo">
+<span id="create-a-gin-repository-for-your-dataset"></span><h1>Create a GIN repository for your dataset<a class="headerlink" href="#target-create-gin-repo" title="Link to this heading">#</a></h1>
 <p><a class="reference external" href="https://gin.g-node.org/G-Node/Info/wiki">GIN</a> (hosted by the German Neuroinformatics Node) is a free and open data management system designed for neuroscientific data.</p>
 <p>It is web-accessible, based on <a class="reference external" href="https://git-scm.com/"><code class="docutils literal notranslate"><span class="pre">git</span></code></a> and <a class="reference external" href="https://git-annex.branchable.com/"><code class="docutils literal notranslate"><span class="pre">git-annex</span></code></a>, and allows you to keep your data in sync, backed up and easily accessible.</p>
 <p>Below we explain the main user workflows in GIN.</p>
 <section id="preparatory-steps-do-only-once">
-<h2>Preparatory steps - do only once<a class="headerlink" href="#preparatory-steps-do-only-once" title="Link to this heading">#</a></h2>
+<span id="preparatory-steps---do-only-once"></span><h2>Preparatory steps - do only once<a class="headerlink" href="#preparatory-steps-do-only-once" title="Link to this heading">#</a></h2>
 <p>We need to do these steps only the first time we use GIN’s command-line interface (CLI) on our machine.</p>
 <ol class="arabic">
 <li><p>Create <a class="reference external" href="https://gin.g-node.org/user/sign_up">a GIN account</a>.</p></li>
@@ -722,8 +722,8 @@
 <li><p><strong>Initialise a GIN repository</strong></p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-0">
-In a new directory</label><div class="sd-tab-content docutils">
+<label aria-controls="sd-tab-item-0-content" class="sd-tab-label" for="sd-tab-item-0">
+In a new directory</label><div class="sd-tab-content docutils" id="sd-tab-item-0-content">
 <ul>
 <li><p>Create a new GIN repository locally and on the GIN server:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ gin create &lt;repository-name&gt;
@@ -741,8 +741,8 @@ In a new directory</label><div class="sd-tab-content docutils">
 </ul>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-1">
-In an existing directory</label><div class="sd-tab-content docutils">
+<label aria-controls="sd-tab-item-1-content" class="sd-tab-label" for="sd-tab-item-1">
+In an existing directory</label><div class="sd-tab-content docutils" id="sd-tab-item-1-content">
 <ul>
 <li><p>Move to the relevant directory using <code class="docutils literal notranslate"><span class="pre">cd</span></code>.</p></li>
 <li><p>Create a new repository on the GIN server and locally in the current working directory:</p>
@@ -828,8 +828,8 @@ In an existing directory</label><div class="sd-tab-content docutils">
 <p>To download a dataset from the GIN server to a local machine, follow these steps:</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-2">
-If the local repository doesn’t exist</label><div class="sd-tab-content docutils">
+<label aria-controls="sd-tab-item-2-content" class="sd-tab-label" for="sd-tab-item-2">
+If the local repository doesn’t exist</label><div class="sd-tab-content docutils" id="sd-tab-item-2-content">
 <ol class="arabic">
 <li><p>If the repository does not exist locally, clone it from the GIN remote server:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ gin get &lt;remote-repository-location&gt;
@@ -848,8 +848,8 @@ If the local repository doesn’t exist</label><div class="sd-tab-content docuti
 </ol>
 </div>
 <input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-3">
-If the local repository exists</label><div class="sd-tab-content docutils">
+<label aria-controls="sd-tab-item-3-content" class="sd-tab-label" for="sd-tab-item-3">
+If the local repository exists</label><div class="sd-tab-content docutils" id="sd-tab-item-3-content">
 <ol class="arabic">
 <li><p>If the repository already exists locally, we only need to download any changes from the remote. To do this, run from the GIN local repository:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ gin download
@@ -995,21 +995,21 @@ functionalities like caching the downloaded data, verifying cryptographic hashes
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">How? Case for an unlocked dataset</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <ul>
-<li><p class="sd-card-text">If the dataset is unlocked, these placeholder files have the same filenames (and paths) as the corresponding original files, but are instead simply ASCII text files. If we open these placeholder files, we see they contain a path. This path is where the actual content of the corresponding file will be downloaded to, when we request it.</p></li>
-<li><p class="sd-card-text">For example, if the placeholder ASCII text file with name <code class="docutils literal notranslate"><span class="pre">image.png</span></code> points to this path:</p>
+<li><p>If the dataset is unlocked, these placeholder files have the same filenames (and paths) as the corresponding original files, but are instead simply ASCII text files. If we open these placeholder files, we see they contain a path. This path is where the actual content of the corresponding file will be downloaded to, when we request it.</p></li>
+<li><p>For example, if the placeholder ASCII text file with name <code class="docutils literal notranslate"><span class="pre">image.png</span></code> points to this path:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">annex</span><span class="o">/</span><span class="n">objects</span><span class="o">/</span><span class="n">MD5</span><span class="o">-</span><span class="n">s15081575</span><span class="o">--</span><span class="n">f0a21c00672ab7ed0733951a652d4b49</span>
 </pre></div>
 </div>
-<p class="sd-card-text">And when we specifically request for this file’s content with:</p>
+<p>And when we specifically request for this file’s content with:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gin</span> <span class="n">get</span><span class="o">-</span><span class="n">content</span> <span class="n">image</span><span class="o">.</span><span class="n">png</span>
 </pre></div>
 </div>
-<p class="sd-card-text">the actual png file is downloaded to:</p>
+<p>the actual png file is downloaded to:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">.</span><span class="n">git</span><span class="o">/</span><span class="n">annex</span><span class="o">/</span><span class="n">objects</span><span class="o">/</span><span class="n">Xq</span><span class="o">/</span><span class="mi">7</span><span class="n">G</span><span class="o">/</span><span class="n">MD5</span><span class="o">-</span><span class="n">s15081575</span><span class="o">--</span><span class="n">f0a21c00672ab7ed0733951a652d4b49</span><span class="o">/</span><span class="n">MD5</span><span class="o">-</span><span class="n">s15081575</span><span class="o">--</span><span class="n">f0a21c00672ab7ed0733951a652d4b49</span>
 </pre></div>
 </div>
-<p class="sd-card-text">Notice that the path in the ASCII file and the actual path are somewhat different (the actual path contains some additional directories under <code class="docutils literal notranslate"><span class="pre">objects</span></code>).</p>
-<p class="sd-card-text">We can actually verify this file is the actual image by opening it with an image viewer (e.g. Preview in MacOS):</p>
+<p>Notice that the path in the ASCII file and the actual path are somewhat different (the actual path contains some additional directories under <code class="docutils literal notranslate"><span class="pre">objects</span></code>).</p>
+<p>We can actually verify this file is the actual image by opening it with an image viewer (e.g. Preview in MacOS):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">open</span> <span class="o">-</span><span class="n">a</span> <span class="n">Preview</span> <span class="o">.</span><span class="n">git</span><span class="o">/</span><span class="n">annex</span><span class="o">/</span><span class="n">objects</span><span class="o">/</span><span class="n">Xq</span><span class="o">/</span><span class="mi">7</span><span class="n">G</span><span class="o">/</span><span class="n">MD5</span><span class="o">-</span><span class="n">s15081575</span><span class="o">--</span><span class="n">f0a21c00672ab7ed0733951a652d4b49</span><span class="o">/</span><span class="n">MD5</span><span class="o">-</span><span class="n">s15081575</span><span class="o">--</span><span class="n">f0a21c00672ab7ed0733951a652d4b49</span>
 </pre></div>
 </div>
@@ -1020,18 +1020,18 @@ functionalities like caching the downloaded data, verifying cryptographic hashes
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">How? Case for a locked dataset</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <ul class="simple">
-<li><p class="sd-card-text">If the dataset is locked and no content has been downloaded, the symlinks in the working directory will be broken (since there is no data in the git annex to retrieve).</p></li>
-<li><p class="sd-card-text">To get the actual content in the git annex, we need to run <code class="docutils literal notranslate"><span class="pre">gin</span> <span class="pre">download</span> <span class="pre">--content</span></code>. This will fetch the content from the GIN server. After this, the symlinks in the working directory should work.</p></li>
+<li><p>If the dataset is locked and no content has been downloaded, the symlinks in the working directory will be broken (since there is no data in the git annex to retrieve).</p></li>
+<li><p>To get the actual content in the git annex, we need to run <code class="docutils literal notranslate"><span class="pre">gin</span> <span class="pre">download</span> <span class="pre">--content</span></code>. This will fetch the content from the GIN server. After this, the symlinks in the working directory should work.</p></li>
 </ul>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">How? Case for a new (or updated) local repository</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <ul class="simple">
-<li><p class="sd-card-text">If we want to create (or update) a GIN repository, we would initialise (or clone) it locally, add files and commit the changes.</p></li>
-<li><p class="sd-card-text">When committing, the data is “copied” from the working directory to the git annex. You can verify this by checking the size of the <code class="docutils literal notranslate"><span class="pre">.git</span></code> folder before and after running <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code>.</p></li>
-<li><p class="sd-card-text">When we lock the data with <code class="docutils literal notranslate"><span class="pre">gin</span> <span class="pre">lock</span> <span class="pre">&lt;path-to-data&gt;</span></code>, the files in the working directory are replaced with symlinks to the git annex content.</p></li>
-<li><p class="sd-card-text">If after locking the data we commit the state change and upload the changes to the GIN server., the files will stay locked for any future retrievals of the repository.</p></li>
+<li><p>If we want to create (or update) a GIN repository, we would initialise (or clone) it locally, add files and commit the changes.</p></li>
+<li><p>When committing, the data is “copied” from the working directory to the git annex. You can verify this by checking the size of the <code class="docutils literal notranslate"><span class="pre">.git</span></code> folder before and after running <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code>.</p></li>
+<li><p>When we lock the data with <code class="docutils literal notranslate"><span class="pre">gin</span> <span class="pre">lock</span> <span class="pre">&lt;path-to-data&gt;</span></code>, the files in the working directory are replaced with symlinks to the git annex content.</p></li>
+<li><p>If after locking the data we commit the state change and upload the changes to the GIN server., the files will stay locked for any future retrievals of the repository.</p></li>
 </ul>
 </div>
 </details><!-- ## Other useful tips

@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../../../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=6a604523" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css?v=43278677" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
   
@@ -48,7 +48,7 @@
     <script src="../../../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../../../_static/sg-tags.js?v=d80f6fa4"></script>
-    <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script data-sd-tabs-storage-prefix="sphinx-design-tab-id-" src="../../../../_static/design-tabs.js?v=fcb327ea"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -585,7 +585,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../development_guidelines.html">General development guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../languages_frameworks.html">Development guidelines for specific languages and frameworks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../ai_policy.html">NIU policy on contributions using AI</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../mentoring.html">Mentored open-source contributions</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../../index.html">Google Summer of Code</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../guidelines.html">GSoC NIU Contributor Application Guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../application_template.html">Application template</a></li>
@@ -684,11 +683,11 @@
 <p class="sd-card-text"><strong>Deliverables</strong></p>
 <!-- Goals, or expected status after Community Bonding Period, Start of Coding, End of Coding. Stretch goals? -->
 <ul class="simple">
-<li><p class="sd-card-text">A Python implementation of a Kalman filter for smoothing position, velocity and acceleration timeseries.</p></li>
-<li><p class="sd-card-text">A Python implementation of a Kalman filter for fixing identity switches in multi-animal tracking data (stretch goal).</p></li>
-<li><p class="sd-card-text">Tests to cover any added functionality.</p></li>
-<li><p class="sd-card-text">Documentation for the new functionality.</p></li>
-<li><p class="sd-card-text">An example use case in the <code class="docutils literal notranslate"><span class="pre">movement</span></code> <a class="reference external" href="https://movement.neuroinformatics.dev/latest/examples/index.html">gallery</a>.</p></li>
+<li><p>A Python implementation of a Kalman filter for smoothing position, velocity and acceleration timeseries.</p></li>
+<li><p>A Python implementation of a Kalman filter for fixing identity switches in multi-animal tracking data (stretch goal).</p></li>
+<li><p>Tests to cover any added functionality.</p></li>
+<li><p>Documentation for the new functionality.</p></li>
+<li><p>An example use case in the <code class="docutils literal notranslate"><span class="pre">movement</span></code> <a class="reference external" href="https://movement.neuroinformatics.dev/latest/examples/index.html">gallery</a>.</p></li>
 </ul>
 <p class="sd-card-text"><strong>Duration</strong></p>
 <!-- Small (~90 hours), Medium (~175 hours) or Large (~350 hours)  -->
@@ -700,23 +699,23 @@
 <p class="sd-card-text">Experience with Python, <a class="reference external" href="https://numpy.org/doc/stable/index.html">NumPy</a> and/or <a class="reference external" href="https://pandas.pydata.org/docs/index.html">pandas</a>.</p>
 <p class="sd-card-text"><strong>Nice-to-haves</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text">Experience with <a class="reference external" href="https://docs.xarray.dev/en/stable/index.html">xarray</a> and <a class="reference external" href="https://docs.pytest.org/en/stable/">pytest</a>.</p></li>
-<li><p class="sd-card-text">Familiarity with pose estimation frameworks and their usual workflow (<a class="reference external" href="https://www.mackenziemathislab.org/deeplabcut">DeepLabCut</a>, <a class="reference external" href="https://sleap.ai/">SLEAP</a>, <a class="reference external" href="https://idtracker.ai/latest/">idtracker</a>…)</p></li>
-<li><p class="sd-card-text">Experience or interest in digital signal processing methods, linear dynamical systems or state space modelling.</p></li>
+<li><p>Experience with <a class="reference external" href="https://docs.xarray.dev/en/stable/index.html">xarray</a> and <a class="reference external" href="https://docs.pytest.org/en/stable/">pytest</a>.</p></li>
+<li><p>Familiarity with pose estimation frameworks and their usual workflow (<a class="reference external" href="https://mlabofai.org/deeplabcut">DeepLabCut</a>, <a class="reference external" href="https://sleap.ai/">SLEAP</a>, <a class="reference external" href="https://idtracker.ai/latest/">idtracker</a>…)</p></li>
+<li><p>Experience or interest in digital signal processing methods, linear dynamical systems or state space modelling.</p></li>
 </ul>
 <p class="sd-card-text"><strong>Potential mentors</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text"><a class="reference external" href="https://github.com/niksirbi">&#64;niksirbi</a></p></li>
-<li><p class="sd-card-text"><a class="reference external" href="https://github.com/sfmig">&#64;sfmig</a></p></li>
+<li><p><a class="reference external" href="https://github.com/niksirbi">&#64;niksirbi</a></p></li>
+<li><p><a class="reference external" href="https://github.com/sfmig">&#64;sfmig</a></p></li>
 </ul>
 <p class="sd-card-text"><strong>Further reading</strong></p>
 <!-- The best pages include links to more detailed descriptions and related materials for each project. They might even include actual use cases! -->
 <ul class="simple">
-<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">movement</span></code> <a class="reference external" href="https://movement.neuroinformatics.dev/latest/community/mission-scope.html#target-mission">mission and scope</a>, <a class="reference external" href="https://movement.neuroinformatics.dev/latest/community/roadmaps.html#target-roadmaps">roadmap</a> and <a class="reference external" href="https://movement.neuroinformatics.dev/latest/community/contributing.html#target-contributing">contributing guide</a>.</p></li>
-<li><p class="sd-card-text"><a class="reference external" href="https://www.kalmanfilter.net/default.aspx">KalmanFilter.NET tutorial</a>.</p></li>
-<li><p class="sd-card-text">An <a class="reference external" href="https://github.com/joacorapela/lds_python">example implementation</a> in Python using linear dynamical systems for tracking.</p></li>
-<li><p class="sd-card-text">Python implementations of Kalman filters, such as <a class="reference external" href="https://github.com/pykalman/pykalman">pykalman</a></p></li>
-<li><p class="sd-card-text">State-space models packages with support for Kalman filters, such as <a class="reference external" href="https://movement.neuroinformatics.dev/latest/examples/index.html">dynamax</a>, or time series analysis packages such as <a class="reference external" href="https://unit8co.github.io/darts/index.html">darts</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">movement</span></code> <a class="reference external" href="https://movement.neuroinformatics.dev/latest/community/mission-scope.html#target-mission">mission and scope</a>, <a class="reference external" href="https://movement.neuroinformatics.dev/latest/community/roadmaps.html#target-roadmaps">roadmap</a> and <a class="reference external" href="https://movement.neuroinformatics.dev/latest/community/contributing.html#target-contributing">contributing guide</a>.</p></li>
+<li><p><a class="reference external" href="https://www.kalmanfilter.net/default.aspx">KalmanFilter.NET tutorial</a>.</p></li>
+<li><p>An <a class="reference external" href="https://github.com/joacorapela/lds_python">example implementation</a> in Python using linear dynamical systems for tracking.</p></li>
+<li><p>Python implementations of Kalman filters, such as <a class="reference external" href="https://github.com/pykalman/pykalman">pykalman</a></p></li>
+<li><p>State-space models packages with support for Kalman filters, such as <a class="reference external" href="https://movement.neuroinformatics.dev/latest/examples/index.html">dynamax</a>, or time series analysis packages such as <a class="reference external" href="https://unit8co.github.io/darts/index.html">darts</a>.</p></li>
 </ul>
 </div>
 </details><!-- ------------------------------ -->
@@ -726,17 +725,17 @@
 <p class="sd-card-text">A common issue with most popular pose estimation frameworks used in animal behaviour research is that often they produce inaccurate results that are difficult to detect without manual inspection. For example, for a few frames, the bodypart of an animal may be incorrectly located in a position far from the rest of the bodyparts, leading to a “jerky” and unrealistic trajectory.</p>
 <p class="sd-card-text">The goal of this project is to add functionality to easily detect such outlier keypoints, so that users can perform quality control on the predicted keypoints and remove or correct erroneous or implausible ones. Following the ideas implemented in the <a class="reference external" href="https://github.com/paninski-lab/lightning-pose">LightningPose</a> framework, we would like to implement outlier detection methods based on the heuristics below:</p>
 <ul class="simple">
-<li><p class="sd-card-text"><em>temporal smoothness</em>: often we can assume that the changes in position from frame <code class="docutils literal notranslate"><span class="pre">f</span></code> to frame <code class="docutils literal notranslate"><span class="pre">f+1</span></code> should be smooth. For example, if the animal is moving in a straight line, the position of the mean keypoint should not change abruptly. This is not always the case, for example eye or head movements, may be saccadic, but it does cover a large number of cases.</p></li>
-<li><p class="sd-card-text"><em>pose plausibility</em>: the position of the keypoints should be plausible given they represent bodyparts in an animal. For example, if the animal is walking, the position of the keypoints should be consistent with the animal’s body shape and the expected range of motion of the joints. One way to implement this constraint could be following LigthningPose’s approach, which derives “plausibility” using principal component analysis - i.e. a pose is flagged as implausible if it lies outside a certain low-dimensional subspace.</p></li>
-<li><p class="sd-card-text"><em>multi-view consistency</em>: given two or more views of the same animal (e.g. using two cameras, or a camera and a mirror showing a different view), the two views of the same keypoint must be consistent in 3D. This means they should be “projectable” to some 3D subspace (computed for example with principal components analysis), because the true position of that keypoint is a single point in 3D.</p></li>
+<li><p><em>temporal smoothness</em>: often we can assume that the changes in position from frame <code class="docutils literal notranslate"><span class="pre">f</span></code> to frame <code class="docutils literal notranslate"><span class="pre">f+1</span></code> should be smooth. For example, if the animal is moving in a straight line, the position of the mean keypoint should not change abruptly. This is not always the case, for example eye or head movements, may be saccadic, but it does cover a large number of cases.</p></li>
+<li><p><em>pose plausibility</em>: the position of the keypoints should be plausible given they represent bodyparts in an animal. For example, if the animal is walking, the position of the keypoints should be consistent with the animal’s body shape and the expected range of motion of the joints. One way to implement this constraint could be following LigthningPose’s approach, which derives “plausibility” using principal component analysis - i.e. a pose is flagged as implausible if it lies outside a certain low-dimensional subspace.</p></li>
+<li><p><em>multi-view consistency</em>: given two or more views of the same animal (e.g. using two cameras, or a camera and a mirror showing a different view), the two views of the same keypoint must be consistent in 3D. This means they should be “projectable” to some 3D subspace (computed for example with principal components analysis), because the true position of that keypoint is a single point in 3D.</p></li>
 </ul>
 <p class="sd-card-text"><strong>Deliverables</strong></p>
 <!-- Goals, or expected status after Community Bonding Period, Start of Coding, End of Coding. Stretch goals? -->
 <ul class="simple">
-<li><p class="sd-card-text">Implementing an outlier detection module, with methods for temporal smoothness, pose plausibility and multi-view consistency.</p></li>
-<li><p class="sd-card-text">Tests to cover any added functionality.</p></li>
-<li><p class="sd-card-text">Documentation for the new functionality.</p></li>
-<li><p class="sd-card-text">An example use case in the <code class="docutils literal notranslate"><span class="pre">movement</span></code> <a class="reference external" href="https://movement.neuroinformatics.dev/latest/examples/index.html">gallery</a>.</p></li>
+<li><p>Implementing an outlier detection module, with methods for temporal smoothness, pose plausibility and multi-view consistency.</p></li>
+<li><p>Tests to cover any added functionality.</p></li>
+<li><p>Documentation for the new functionality.</p></li>
+<li><p>An example use case in the <code class="docutils literal notranslate"><span class="pre">movement</span></code> <a class="reference external" href="https://movement.neuroinformatics.dev/latest/examples/index.html">gallery</a>.</p></li>
 </ul>
 <p class="sd-card-text"><strong>Duration</strong></p>
 <!-- Small (~90 hours), Medium (~175 hours) or Large (~350 hours)  -->
@@ -748,20 +747,20 @@
 <p class="sd-card-text">Experience with Python, <a class="reference external" href="https://numpy.org/doc/stable/index.html">NumPy</a> and/or <a class="reference external" href="https://pandas.pydata.org/docs/index.html">pandas</a>.</p>
 <p class="sd-card-text"><strong>Nice-to-haves</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text">Experience with <a class="reference external" href="https://docs.xarray.dev/en/stable/index.html">xarray</a> and <a class="reference external" href="https://docs.pytest.org/en/stable/">pytest</a>.</p></li>
-<li><p class="sd-card-text">Familiarity with pose estimation frameworks and their usual workflow (see for example <a class="reference external" href="https://www.mackenziemathislab.org/deeplabcut">DeepLabCut</a>, <a class="reference external" href="https://sleap.ai/">SLEAP</a> or <a class="reference external" href="https://idtracker.ai/latest/">idtracker</a>).</p></li>
-<li><p class="sd-card-text">Experience or interest in digital signal processing methods, linear dynamical systems or state space modelling.</p></li>
+<li><p>Experience with <a class="reference external" href="https://docs.xarray.dev/en/stable/index.html">xarray</a> and <a class="reference external" href="https://docs.pytest.org/en/stable/">pytest</a>.</p></li>
+<li><p>Familiarity with pose estimation frameworks and their usual workflow (see for example <a class="reference external" href="https://mlabofai.org/deeplabcut">DeepLabCut</a>, <a class="reference external" href="https://sleap.ai/">SLEAP</a> or <a class="reference external" href="https://idtracker.ai/latest/">idtracker</a>).</p></li>
+<li><p>Experience or interest in digital signal processing methods, linear dynamical systems or state space modelling.</p></li>
 </ul>
 <p class="sd-card-text"><strong>Potential mentors</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text"><a class="reference external" href="https://github.com/niksirbi">&#64;niksirbi</a></p></li>
-<li><p class="sd-card-text"><a class="reference external" href="https://github.com/sfmig">&#64;sfmig</a></p></li>
+<li><p><a class="reference external" href="https://github.com/niksirbi">&#64;niksirbi</a></p></li>
+<li><p><a class="reference external" href="https://github.com/sfmig">&#64;sfmig</a></p></li>
 </ul>
 <p class="sd-card-text"><strong>Further reading</strong></p>
 <!-- The best pages include links to more detailed descriptions and related materials for each project. They might even include actual use cases! -->
 <ul class="simple">
-<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">movement</span></code> <a class="reference external" href="https://movement.neuroinformatics.dev/latest/community/mission-scope.html#target-mission">mission and scope</a>, <a class="reference external" href="https://movement.neuroinformatics.dev/latest/community/roadmaps.html#target-roadmaps">roadmap</a> and <a class="reference external" href="https://movement.neuroinformatics.dev/latest/community/contributing.html#target-contributing">contributing guide</a>.</p></li>
-<li><p class="sd-card-text">LightningPose <a class="reference external" href="https://www.nature.com/articles/s41592-024-02319-1">paper</a> and <a class="reference external" href="https://github.com/paninski-lab/lightning-pose/blob/main/lightning_pose/losses/losses.py">codebase</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">movement</span></code> <a class="reference external" href="https://movement.neuroinformatics.dev/latest/community/mission-scope.html#target-mission">mission and scope</a>, <a class="reference external" href="https://movement.neuroinformatics.dev/latest/community/roadmaps.html#target-roadmaps">roadmap</a> and <a class="reference external" href="https://movement.neuroinformatics.dev/latest/community/contributing.html#target-contributing">contributing guide</a>.</p></li>
+<li><p>LightningPose <a class="reference external" href="https://www.nature.com/articles/s41592-024-02319-1">paper</a> and <a class="reference external" href="https://github.com/paninski-lab/lightning-pose/blob/main/lightning_pose/losses/losses.py">codebase</a></p></li>
 </ul>
 </div>
 </details><!-- ------------------------------ -->
@@ -776,10 +775,10 @@
 <p class="sd-card-text"><strong>Deliverables</strong></p>
 <!-- Goals, or expected status after Community Bonding Period, Start of Coding, End of Coding. Stretch goals? -->
 <ul class="simple">
-<li><p class="sd-card-text">A Python implementation of a method to calibrate the confidence scores provided by at least one of the pose estimation frameworks supported in <code class="docutils literal notranslate"><span class="pre">movement</span></code> (DeepLabCut, SLEAP, LightningPose, anipose).</p></li>
-<li><p class="sd-card-text">Tests to cover any added functionality.</p></li>
-<li><p class="sd-card-text">Documentation for the new functionality.</p></li>
-<li><p class="sd-card-text">An example use case in the <code class="docutils literal notranslate"><span class="pre">movement</span></code> <a class="reference external" href="https://movement.neuroinformatics.dev/latest/examples/index.html">gallery</a>.</p></li>
+<li><p>A Python implementation of a method to calibrate the confidence scores provided by at least one of the pose estimation frameworks supported in <code class="docutils literal notranslate"><span class="pre">movement</span></code> (DeepLabCut, SLEAP, LightningPose, anipose).</p></li>
+<li><p>Tests to cover any added functionality.</p></li>
+<li><p>Documentation for the new functionality.</p></li>
+<li><p>An example use case in the <code class="docutils literal notranslate"><span class="pre">movement</span></code> <a class="reference external" href="https://movement.neuroinformatics.dev/latest/examples/index.html">gallery</a>.</p></li>
 </ul>
 <p class="sd-card-text"><strong>Duration</strong></p>
 <!-- Small (~90 hours), Medium (~175 hours) or Large (~350 hours)  -->
@@ -791,21 +790,21 @@
 <p class="sd-card-text">Experience with Python, <a class="reference external" href="https://numpy.org/doc/stable/index.html">NumPy</a> and/or <a class="reference external" href="https://pandas.pydata.org/docs/index.html">pandas</a>.</p>
 <p class="sd-card-text"><strong>Nice-to-haves</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text">Experience with <a class="reference external" href="https://docs.xarray.dev/en/stable/index.html">xarray</a>, <a class="reference external" href="https://docs.pytest.org/en/stable/">pytest</a> or <a class="reference external" href="https://napari.org/stable/">napari</a>.</p></li>
-<li><p class="sd-card-text">Familiarity with pose estimation frameworks and their usual workflow (see for example <a class="reference external" href="https://www.mackenziemathislab.org/deeplabcut">DeepLabCut</a>, <a class="reference external" href="https://sleap.ai/">SLEAP</a> or <a class="reference external" href="https://idtracker.ai/latest/">idtracker</a>).</p></li>
-<li><p class="sd-card-text">Experience with supervised machine learning methods and probability calibration.</p></li>
+<li><p>Experience with <a class="reference external" href="https://docs.xarray.dev/en/stable/index.html">xarray</a>, <a class="reference external" href="https://docs.pytest.org/en/stable/">pytest</a> or <a class="reference external" href="https://napari.org/stable/">napari</a>.</p></li>
+<li><p>Familiarity with pose estimation frameworks and their usual workflow (see for example <a class="reference external" href="https://mlabofai.org/deeplabcut">DeepLabCut</a>, <a class="reference external" href="https://sleap.ai/">SLEAP</a> or <a class="reference external" href="https://idtracker.ai/latest/">idtracker</a>).</p></li>
+<li><p>Experience with supervised machine learning methods and probability calibration.</p></li>
 </ul>
 <p class="sd-card-text"><strong>Potential mentors</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text"><a class="reference external" href="https://github.com/niksirbi">&#64;niksirbi</a></p></li>
-<li><p class="sd-card-text"><a class="reference external" href="https://github.com/sfmig">&#64;sfmig</a></p></li>
+<li><p><a class="reference external" href="https://github.com/niksirbi">&#64;niksirbi</a></p></li>
+<li><p><a class="reference external" href="https://github.com/sfmig">&#64;sfmig</a></p></li>
 </ul>
 <p class="sd-card-text"><strong>Further reading</strong></p>
 <!-- The best pages include links to more detailed descriptions and related materials for each project. They might even include actual use cases! -->
 <p class="sd-card-text">There are nice explanations of the calibration issue for the case of classification (but note that in pose estimation we solve a regression problem, not a classification one):</p>
 <ul class="simple">
-<li><p class="sd-card-text"><a class="reference external" href="https://geoffpleiss.com/blog/nn_calibration.html">Calibrating Neural Networks</a></p></li>
-<li><p class="sd-card-text"><a class="reference external" href="https://scikit-learn.org/stable/modules/calibration.html">Scikit-learn: probability calibration</a></p></li>
+<li><p><a class="reference external" href="https://geoffpleiss.com/blog/nn_calibration.html">Calibrating Neural Networks</a></p></li>
+<li><p><a class="reference external" href="https://scikit-learn.org/stable/modules/calibration.html">Scikit-learn: probability calibration</a></p></li>
 </ul>
 </div>
 </details><!-- ------------------------------ -->
@@ -819,10 +818,10 @@
 <!-- Goals, or expected status after Community Bonding Period, Start of Coding, End of Coding. Stretch goals? -->
 <p class="sd-card-text">A good prototype for a web-based GUI for <code class="docutils literal notranslate"><span class="pre">movement</span></code> would include the following features:</p>
 <ul class="simple">
-<li><p class="sd-card-text">Data loading functionality: ability to load a file containing keypoint or bounding boxes trajectories in the formats supported by <code class="docutils literal notranslate"><span class="pre">movement</span></code>.</p></li>
-<li><p class="sd-card-text">Video visualisation: ability to overlay the imported trajectories on top of the associated video, and go through them frame by frame.</p></li>
-<li><p class="sd-card-text">Data exploration: ability to filter, sort and visualise the trajectories in different ways. For example, the user may want to only visualise the trajectories of a single animal, or only the trajectories of a subset of keypoints.</p></li>
-<li><p class="sd-card-text">Exporting functionality: ability to export the data visualisation as a video or as a set of images.</p></li>
+<li><p>Data loading functionality: ability to load a file containing keypoint or bounding boxes trajectories in the formats supported by <code class="docutils literal notranslate"><span class="pre">movement</span></code>.</p></li>
+<li><p>Video visualisation: ability to overlay the imported trajectories on top of the associated video, and go through them frame by frame.</p></li>
+<li><p>Data exploration: ability to filter, sort and visualise the trajectories in different ways. For example, the user may want to only visualise the trajectories of a single animal, or only the trajectories of a subset of keypoints.</p></li>
+<li><p>Exporting functionality: ability to export the data visualisation as a video or as a set of images.</p></li>
 </ul>
 <p class="sd-card-text"><strong>Duration</strong></p>
 <!-- Small (~90 hours), Medium (~175 hours) or Large (~350 hours)  -->
@@ -834,20 +833,20 @@
 <p class="sd-card-text">Experience with Python, <a class="reference external" href="https://numpy.org/doc/stable/index.html">NumPy</a> and/or <a class="reference external" href="https://pandas.pydata.org/docs/index.html">pandas</a>.</p>
 <p class="sd-card-text"><strong>Nice-to-haves</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text">Experience with <a class="reference external" href="https://docs.xarray.dev/en/stable/index.html">xarray</a> and <a class="reference external" href="https://docs.pytest.org/en/stable/">pytest</a>.</p></li>
-<li><p class="sd-card-text">Familiarity with pose estimation frameworks and their manual annotation workflow (see for example <a class="reference external" href="https://www.mackenziemathislab.org/deeplabcut">DeepLabCut</a>or <a class="reference external" href="https://sleap.ai/">SLEAP</a>).</p></li>
-<li><p class="sd-card-text">Experience developing data web apps in Python, with tools such as <a class="reference external" href="https://dash.plotly.com/">Dash Plotly</a> or <a class="reference external" href="https://github.com/fastplotlib/fastplotlib">fastplotlib</a>.</p></li>
-<li><p class="sd-card-text">Interest in data visualisation.</p></li>
+<li><p>Experience with <a class="reference external" href="https://docs.xarray.dev/en/stable/index.html">xarray</a> and <a class="reference external" href="https://docs.pytest.org/en/stable/">pytest</a>.</p></li>
+<li><p>Familiarity with pose estimation frameworks and their manual annotation workflow (see for example <a class="reference external" href="https://mlabofai.org/deeplabcut">DeepLabCut</a> or <a class="reference external" href="https://sleap.ai/">SLEAP</a>).</p></li>
+<li><p>Experience developing data web apps in Python, with tools such as <a class="reference external" href="https://dash.plotly.com/">Dash Plotly</a> or <a class="reference external" href="https://github.com/fastplotlib/fastplotlib">fastplotlib</a>.</p></li>
+<li><p>Interest in data visualisation.</p></li>
 </ul>
 <p class="sd-card-text"><strong>Potential mentors</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text"><a class="reference external" href="https://github.com/niksirbi">&#64;niksirbi</a></p></li>
-<li><p class="sd-card-text"><a class="reference external" href="https://github.com/sfmig">&#64;sfmig</a></p></li>
+<li><p><a class="reference external" href="https://github.com/niksirbi">&#64;niksirbi</a></p></li>
+<li><p><a class="reference external" href="https://github.com/sfmig">&#64;sfmig</a></p></li>
 </ul>
 <p class="sd-card-text"><strong>Further reading</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text"><a class="reference external" href="https://dash.plotly.com/tutorial">dash-plotly tutorials</a> and documentation, especially the sections “Dash fundamentals” and “Dash callbacks”.</p></li>
-<li><p class="sd-card-text"><a class="reference external" href="https://www.fastplotlib.org/_gallery/index.html">fastplotlib examples</a> and documentation.</p></li>
+<li><p><a class="reference external" href="https://dash.plotly.com/tutorial">dash-plotly tutorials</a> and documentation, especially the sections “Dash fundamentals” and “Dash callbacks”.</p></li>
+<li><p><a class="reference external" href="https://www.fastplotlib.org/_gallery/index.html">fastplotlib examples</a> and documentation.</p></li>
 </ul>
 </div>
 </details><!-- ------------------------------ -->
@@ -859,11 +858,11 @@
 <p class="sd-card-text"><strong>Deliverables</strong></p>
 <!-- Goals, or expected status after Community Bonding Period, Start of Coding, End of Coding. Stretch goals? -->
 <ul class="simple">
-<li><p class="sd-card-text">A user-friendly <a class="reference external" href="https://napari.org/stable/">napari</a> widget that acts as a front-end to <code class="docutils literal notranslate"><span class="pre">movement</span></code>’s filtering module. We would like to support at least the following methods: filter by confidence, median filter and the SavGol filter. The user should be able to adjust the parameters of each filter and preview the results in real-time.</p></li>
-<li><p class="sd-card-text">A set of widgets that allow users to select filters, adjust their parameters, and preview the results.</p></li>
-<li><p class="sd-card-text">Tests to cover any added functionality.</p></li>
-<li><p class="sd-card-text">Documentation for the new functionality.</p></li>
-<li><p class="sd-card-text">A short video tutorial demoing the widget’s use (stretch goal).</p></li>
+<li><p>A user-friendly <a class="reference external" href="https://napari.org/stable/">napari</a> widget that acts as a front-end to <code class="docutils literal notranslate"><span class="pre">movement</span></code>’s filtering module. We would like to support at least the following methods: filter by confidence, median filter and the SavGol filter. The user should be able to adjust the parameters of each filter and preview the results in real-time.</p></li>
+<li><p>A set of widgets that allow users to select filters, adjust their parameters, and preview the results.</p></li>
+<li><p>Tests to cover any added functionality.</p></li>
+<li><p>Documentation for the new functionality.</p></li>
+<li><p>A short video tutorial demoing the widget’s use (stretch goal).</p></li>
 </ul>
 <p class="sd-card-text"><strong>Duration</strong></p>
 <!-- Small (~90 hours), Medium (~175 hours) or Large (~350 hours)  -->
@@ -875,20 +874,20 @@
 <p class="sd-card-text">Experience with Python, <a class="reference external" href="https://numpy.org/doc/stable/index.html">NumPy</a> and/or <a class="reference external" href="https://pandas.pydata.org/docs/index.html">pandas</a>.</p>
 <p class="sd-card-text"><strong>Nice-to-haves</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text">Experience developing or using <a class="reference external" href="https://napari.org/">napari</a> plugins.</p></li>
-<li><p class="sd-card-text">Interest in data visualisation.</p></li>
-<li><p class="sd-card-text">Experience with digital signal processing methods or time series analysis.</p></li>
-<li><p class="sd-card-text">Familiarity with pose estimation frameworks and their usual workflow (<a class="reference external" href="https://www.mackenziemathislab.org/deeplabcut">DeepLabCut</a>, <a class="reference external" href="https://sleap.ai/">SLEAP</a>, <a class="reference external" href="https://idtracker.ai/latest/">idtracker</a>).</p></li>
+<li><p>Experience developing or using <a class="reference external" href="https://napari.org/">napari</a> plugins.</p></li>
+<li><p>Interest in data visualisation.</p></li>
+<li><p>Experience with digital signal processing methods or time series analysis.</p></li>
+<li><p>Familiarity with pose estimation frameworks and their usual workflow (<a class="reference external" href="https://mlabofai.org/deeplabcut">DeepLabCut</a>, <a class="reference external" href="https://sleap.ai/">SLEAP</a>, <a class="reference external" href="https://idtracker.ai/latest/">idtracker</a>).</p></li>
 </ul>
 <p class="sd-card-text"><strong>Potential mentors</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text"><a class="reference external" href="https://github.com/niksirbi">&#64;niksirbi</a></p></li>
-<li><p class="sd-card-text"><a class="reference external" href="https://github.com/sfmig">&#64;sfmig</a></p></li>
+<li><p><a class="reference external" href="https://github.com/niksirbi">&#64;niksirbi</a></p></li>
+<li><p><a class="reference external" href="https://github.com/sfmig">&#64;sfmig</a></p></li>
 </ul>
 <p class="sd-card-text"><strong>Further reading</strong></p>
 <ul class="simple">
-<li><p class="sd-card-text"><a class="reference external" href="https://napari.org/stable/tutorials/index.html">napari usage tutorials</a> and <a class="reference external" href="https://napari.org/stable/developers/contributing/index.html">contributing guide</a>.</p></li>
-<li><p class="sd-card-text"><a class="reference external" href="https://napari.org/stable/plugins/index.html">napari Plugin documentation</a>, particularly the section on <a class="reference external" href="https://napari.org/stable/plugins/building_a_plugin/index.html">Building a plugin</a>.</p></li>
+<li><p><a class="reference external" href="https://napari.org/stable/tutorials/index.html">napari usage tutorials</a> and <a class="reference external" href="https://napari.org/stable/developers/contributing/index.html">contributing guide</a>.</p></li>
+<li><p><a class="reference external" href="https://napari.org/stable/plugins/index.html">napari Plugin documentation</a>, particularly the section on <a class="reference external" href="https://napari.org/stable/plugins/building_a_plugin/index.html">Building a plugin</a>.</p></li>
 </ul>
 </div>
 </details></section>

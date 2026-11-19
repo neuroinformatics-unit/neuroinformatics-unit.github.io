@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=6a604523" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=43278677" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
   
@@ -48,7 +48,7 @@
     <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../_static/sg-tags.js?v=d80f6fa4"></script>
-    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script data-sd-tabs-storage-prefix="sphinx-design-tab-id-" src="../../_static/design-tabs.js?v=fcb327ea"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -692,7 +692,7 @@
 <section id="step-by-step-instructions">
 <h2>Step-by-step Instructions<a class="headerlink" href="#step-by-step-instructions" title="Link to this heading">#</a></h2>
 <section id="connect-to-the-cluster-and-request-an-interactive-job">
-<h3>1. Connect to the cluster and request an interactive job<a class="headerlink" href="#connect-to-the-cluster-and-request-an-interactive-job" title="Link to this heading">#</a></h3>
+<span id="1-connect-to-the-cluster-and-request-an-interactive-job"></span><h3>1. Connect to the cluster and request an interactive job<a class="headerlink" href="#connect-to-the-cluster-and-request-an-interactive-job" title="Link to this heading">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>&lt;SWC-USERNAME&gt;@ssh.swc.ucl.ac.uk
 ssh<span class="w"> </span>hpc-gw2
 </pre></div>
@@ -705,7 +705,7 @@ ssh<span class="w"> </span>hpc-gw2
 </section>
 <hr class="docutils" />
 <section id="set-up-and-launch-jupyter-lab">
-<h3>2. Set up and launch Jupyter Lab<a class="headerlink" href="#set-up-and-launch-jupyter-lab" title="Link to this heading">#</a></h3>
+<span id="2-set-up-and-launch-jupyter-lab"></span><h3>2. Set up and launch Jupyter Lab<a class="headerlink" href="#set-up-and-launch-jupyter-lab" title="Link to this heading">#</a></h3>
 <p>On the assigned node, activate your environment and navigate to your project folder:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>my_env
 <span class="nb">cd</span><span class="w"> </span>/path/to/your/project
@@ -729,7 +729,7 @@ ssh<span class="w"> </span>hpc-gw2
 </section>
 <hr class="docutils" />
 <section id="forward-the-port-from-the-compute-node-to-your-local-machine">
-<h3>3. Forward the port from the compute node to your local machine<a class="headerlink" href="#forward-the-port-from-the-compute-node-to-your-local-machine" title="Link to this heading">#</a></h3>
+<span id="3-forward-the-port-from-the-compute-node-to-your-local-machine"></span><h3>3. Forward the port from the compute node to your local machine<a class="headerlink" href="#forward-the-port-from-the-compute-node-to-your-local-machine" title="Link to this heading">#</a></h3>
 <p>On <strong>your local machine</strong>, open a separate terminal and run:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>-N<span class="w"> </span>&lt;SWC-USERNAME&gt;@&lt;node-name&gt;<span class="w"> </span>-J<span class="w"> </span>&lt;SWC-USERNAME&gt;@ssh.swc.ucl.ac.uk,&lt;SWC-USERNAME&gt;@hpc-gw2<span class="w"> </span>-L<span class="w"> </span><span class="m">8082</span>:localhost:8082
 </pre></div>

@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=6a604523" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=43278677" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
   
@@ -48,7 +48,7 @@
     <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../_static/sg-tags.js?v=d80f6fa4"></script>
-    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script data-sd-tabs-storage-prefix="sphinx-design-tab-id-" src="../../_static/design-tabs.js?v=fcb327ea"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -700,7 +700,7 @@
 <p>After you have entered the commit hash, <code class="docutils literal notranslate"><span class="pre">cruft</span></code> will create a <code class="docutils literal notranslate"><span class="pre">.cruft.json</span></code> file in your repo containing the URL to the cookiecutter, the commit hash, and your responses to cookiecutter’s prompts. Please track the changes to this file with git.</p>
 </section>
 <section id="apply-updates-cruft-diff-cruft-update">
-<h2>Apply updates: <code class="docutils literal notranslate"><span class="pre">cruft</span> <span class="pre">diff</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">cruft</span> <span class="pre">update</span></code><a class="headerlink" href="#apply-updates-cruft-diff-cruft-update" title="Link to this heading">#</a></h2>
+<span id="apply-updates-cruft-diff--cruft-update"></span><h2>Apply updates: <code class="docutils literal notranslate"><span class="pre">cruft</span> <span class="pre">diff</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">cruft</span> <span class="pre">update</span></code><a class="headerlink" href="#apply-updates-cruft-diff-cruft-update" title="Link to this heading">#</a></h2>
 <p>Now that <code class="docutils literal notranslate"><span class="pre">.cruft.json</span></code> exists, we can run <code class="docutils literal notranslate"><span class="pre">cruft</span> <span class="pre">diff</span></code> to see the changes between your repo and the template. At this point, you could manually apply the subset of the changes you want.</p>
 <p>You can also ask <code class="docutils literal notranslate"><span class="pre">cruft</span></code> to apply the changes for you by running <code class="docutils literal notranslate"><span class="pre">cruft</span> <span class="pre">update</span></code>. You will be prompted to confirm the changes with <code class="docutils literal notranslate"><span class="pre">y</span></code> before they are applied. You can also press <code class="docutils literal notranslate"><span class="pre">v</span></code> to see the changes before confirming.</p>
 <div class="admonition note">

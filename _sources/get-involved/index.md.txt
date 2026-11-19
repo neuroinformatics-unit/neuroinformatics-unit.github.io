@@ -13,9 +13,7 @@ For this reason we have written some documents to outline the processes we use, 
 These include our [general development guidelines](development_guidelines) and 
 [guidelines for specific languages and frameworks](languages_frameworks).
 
-We are also happy to guide new contributors through the process. For more details please see 
-[our documentation about mentored open source contributions](mentoring)
-and our [policy on AI contributions](ai_policy).
+Please also read our [policy on AI contributions](ai_policy).
 
 ## Internships
 We offer a number of paid internships each year, through established programs such as 
@@ -35,6 +33,5 @@ please <a href="mailto:adam.tyson@ucl.ac.uk ?subject=Fellowship">email Adam Tyso
 development_guidelines
 languages_frameworks
 ai_policy
-mentoring
 gsoc/index
 ```

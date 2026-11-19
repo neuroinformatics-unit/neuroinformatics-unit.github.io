@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=6a604523" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=43278677" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
   
@@ -48,7 +48,7 @@
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/sg-tags.js?v=d80f6fa4"></script>
-    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script data-sd-tabs-storage-prefix="sphinx-design-tab-id-" src="../_static/design-tabs.js?v=fcb327ea"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -767,7 +767,7 @@
 <h2>How to Use <code class="docutils literal notranslate"><span class="pre">derotation</span></code><a class="headerlink" href="#how-to-use-derotation" title="Link to this heading">#</a></h2>
 <p>The package can be used in two primary ways, offering a trade-off between granular control and automation.</p>
 <section id="low-level-core-function">
-<h3>1. Low-Level Core Function<a class="headerlink" href="#low-level-core-function" title="Link to this heading">#</a></h3>
+<span id="1-low-level-core-function"></span><h3>1. Low-Level Core Function<a class="headerlink" href="#low-level-core-function" title="Link to this heading">#</a></h3>
 <p>For direct control, users can call the <code class="docutils literal notranslate"><span class="pre">derotate_an_image_array_line_by_line</span></code> function. This requires two main inputs:</p>
 <ul class="simple">
 <li><p>The raw multiphoton movie (as a NumPy array).</p></li>
@@ -779,7 +779,7 @@
 </div>
 </section>
 <section id="high-level-pipelines">
-<h3>2. High-Level Pipelines<a class="headerlink" href="#high-level-pipelines" title="Link to this heading">#</a></h3>
+<span id="2-high-level-pipelines"></span><h3>2. High-Level Pipelines<a class="headerlink" href="#high-level-pipelines" title="Link to this heading">#</a></h3>
 <p>For an end-to-end workflow, <code class="docutils literal notranslate"><span class="pre">derotation</span></code> provides two pre-built pipeline classes that automate the entire process from raw data to a corrected movie file.</p>
 <ul class="simple">
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">FullPipeline</span></code></strong>: Designed for experiments with randomized rotations. It automatically parses analog signals, interpolates angles, uses Bayesian optimization to find the center of rotation, and performs the derotation.</p></li>
@@ -827,7 +827,7 @@
 </section>
 <hr class="docutils" />
 <section id="data-source-funding">
-<h2>Data Source &amp; Funding<a class="headerlink" href="#data-source-funding" title="Link to this heading">#</a></h2>
+<span id="data-source--funding"></span><h2>Data Source &amp; Funding<a class="headerlink" href="#data-source-funding" title="Link to this heading">#</a></h2>
 <p>All microscopy data presented here as examples have been acquired with a 3-photon microscope by <a class="reference external" href="https://github.com/simonweiler">Simon Weiler</a> in the <a class="reference external" href="https://www.sainsburywellcome.org/web/groups/margrie-lab">Margrie Lab</a>.</p>
 <p>This project was sponsored by the <a class="reference external" href="https://www.sainsburywellcome.org/web/groups/margrie-lab">Margrie Lab</a> in the <a class="reference external" href="https://www.sainsburywellcome.org/web/">Sainsbury Wellcome Centre for Neural Circuits and Behaviour</a> at University College London.</p>
 </section>
