@@ -33,7 +33,7 @@ Experience with Python, [NumPy](https://numpy.org/doc/stable/index.html) and/or 
 
 **Nice-to-haves**
 - Experience with [xarray](https://docs.xarray.dev/en/stable/index.html) and [pytest](https://docs.pytest.org/en/stable/).
-- Familiarity with pose estimation frameworks and their usual workflow ([DeepLabCut](https://www.mackenziemathislab.org/deeplabcut), [SLEAP](https://sleap.ai/), [idtracker](https://idtracker.ai/latest/)...)
+- Familiarity with pose estimation frameworks and their usual workflow ([DeepLabCut](https://mlabofai.org/deeplabcut), [SLEAP](https://sleap.ai/), [idtracker](https://idtracker.ai/latest/)...)
 - Experience or interest in digital signal processing methods, linear dynamical systems or state space modelling.
 
 **Potential mentors**
@@ -82,7 +82,7 @@ Experience with Python, [NumPy](https://numpy.org/doc/stable/index.html) and/or 
 
 **Nice-to-haves**
 - Experience with [xarray](https://docs.xarray.dev/en/stable/index.html) and [pytest](https://docs.pytest.org/en/stable/).
-- Familiarity with pose estimation frameworks and their usual workflow (see for example [DeepLabCut](https://www.mackenziemathislab.org/deeplabcut), [SLEAP](https://sleap.ai/) or [idtracker](https://idtracker.ai/latest/)).
+- Familiarity with pose estimation frameworks and their usual workflow (see for example [DeepLabCut](https://mlabofai.org/deeplabcut), [SLEAP](https://sleap.ai/) or [idtracker](https://idtracker.ai/latest/)).
 - Experience or interest in digital signal processing methods, linear dynamical systems or state space modelling.
 
 
@@ -132,7 +132,7 @@ Experience with Python, [NumPy](https://numpy.org/doc/stable/index.html) and/or 
 
 **Nice-to-haves**
 - Experience with [xarray](https://docs.xarray.dev/en/stable/index.html), [pytest](https://docs.pytest.org/en/stable/) or [napari](https://napari.org/stable/).
-- Familiarity with pose estimation frameworks and their usual workflow (see for example [DeepLabCut](https://www.mackenziemathislab.org/deeplabcut), [SLEAP](https://sleap.ai/) or [idtracker](https://idtracker.ai/latest/)).
+- Familiarity with pose estimation frameworks and their usual workflow (see for example [DeepLabCut](https://mlabofai.org/deeplabcut), [SLEAP](https://sleap.ai/) or [idtracker](https://idtracker.ai/latest/)).
 - Experience with supervised machine learning methods and probability calibration.
 
 **Potential mentors**
@@ -179,7 +179,7 @@ Experience with Python, [NumPy](https://numpy.org/doc/stable/index.html) and/or 
 
 **Nice-to-haves**
 - Experience with [xarray](https://docs.xarray.dev/en/stable/index.html) and [pytest](https://docs.pytest.org/en/stable/).
-- Familiarity with pose estimation frameworks and their manual annotation workflow (see for example [DeepLabCut](https://www.mackenziemathislab.org/deeplabcut)or [SLEAP](https://sleap.ai/)).
+- Familiarity with pose estimation frameworks and their manual annotation workflow (see for example [DeepLabCut](https://mlabofai.org/deeplabcut)or [SLEAP](https://sleap.ai/)).
 - Experience developing data web apps in Python, with tools such as [Dash Plotly](https://dash.plotly.com/) or [fastplotlib](https://github.com/fastplotlib/fastplotlib).
 - Interest in data visualisation.
 
@@ -227,7 +227,7 @@ Experience with Python, [NumPy](https://numpy.org/doc/stable/index.html) and/or 
 - Experience developing or using [napari](https://napari.org/) plugins.
 - Interest in data visualisation.
 - Experience with digital signal processing methods or time series analysis.
-- Familiarity with pose estimation frameworks and their usual workflow ([DeepLabCut](https://www.mackenziemathislab.org/deeplabcut), [SLEAP](https://sleap.ai/), [idtracker](https://idtracker.ai/latest/)).
+- Familiarity with pose estimation frameworks and their usual workflow ([DeepLabCut](https://mlabofai.org/deeplabcut), [SLEAP](https://sleap.ai/), [idtracker](https://idtracker.ai/latest/)).
 
 **Potential mentors**
 - [@niksirbi](https://github.com/niksirbi)
