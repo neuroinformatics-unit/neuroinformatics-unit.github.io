@@ -2,7 +2,7 @@
 # Track: Animals in Motion
 
 Machine learning methods for motion tracking have transformed a wide range of scientific disciplines—from neuroscience and biomechanics to conservation and ethology.
-Tools such as [DeepLabCut](https://mlabofai.org/deeplabcut.html) and [SLEAP](https://sleap.ai/) enable researchers to track animal movements in video recordings with impressive accuracy, without the need for physical markers.
+Tools such as [DeepLabCut](https://mlabofai.org/deeplabcut) and [SLEAP](https://sleap.ai/) enable researchers to track animal movements in video recordings with impressive accuracy, without the need for physical markers.
 
 However, the variety of available tools can be overwhelming.
 It's often unclear which tool is best suited to a given application, or how to get started.

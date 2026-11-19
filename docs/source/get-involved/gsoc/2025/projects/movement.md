@@ -179,7 +179,7 @@ Experience with Python, [NumPy](https://numpy.org/doc/stable/index.html) and/or 
 
 **Nice-to-haves**
 - Experience with [xarray](https://docs.xarray.dev/en/stable/index.html) and [pytest](https://docs.pytest.org/en/stable/).
-- Familiarity with pose estimation frameworks and their manual annotation workflow (see for example [DeepLabCut](https://mlabofai.org/deeplabcut)or [SLEAP](https://sleap.ai/)).
+- Familiarity with pose estimation frameworks and their manual annotation workflow (see for example [DeepLabCut](https://mlabofai.org/deeplabcut) or [SLEAP](https://sleap.ai/)).
 - Experience developing data web apps in Python, with tools such as [Dash Plotly](https://dash.plotly.com/) or [fastplotlib](https://github.com/fastplotlib/fastplotlib).
 - Interest in data visualisation.
 
