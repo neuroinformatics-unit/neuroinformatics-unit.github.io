@@ -77,13 +77,13 @@ You may register for week 1, week 2 or both. However, you can only register for 
 
 ## Key Dates
 
-| Date         | Event |
-|--------------| --- |
-| December 2026 | Applications open |
-| February 31st 2027 | Applications close |
-| March 2027   | Applicants are notified of acceptance |
-| July 2027    | Optional preparatory month begins |
-| August 9-13 2027 | Week 1: *Animals in Motion* & *Large Array Data* |
+| Date              | Event |
+|-------------------| --- |
+| December 2026     | Applications open |
+| January 31st 2027 | Applications close |
+| March 2027        | Applicants are notified of acceptance |
+| July 2027         | Optional preparatory month begins |
+| August 9-13 2027  | Week 1: *Animals in Motion* & *Large Array Data* |
 | August 16-20 2027 | Week 2: *BrainGlobe* & *Extracellular Electrophysiology* |
 
 
