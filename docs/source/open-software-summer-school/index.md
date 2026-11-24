@@ -107,8 +107,8 @@ commitment for four weeks prior to the summer school**
 Fees include all materials needed, and lunch/refreshments each day.
 
 ### Financial Assistance
-A number of fee waivers will be available to applicants who would not otherwise be able to attend the summer school. 
-A limited number of travel stipends will also be available, but we encourage applicants to apply for 
+A small number of fee waivers will be available to applicants who would not otherwise be able to attend the summer school. 
+A very limited number of travel stipends will also be available, but we encourage applicants to apply for 
 [independent travel funding](funding).
 
 
