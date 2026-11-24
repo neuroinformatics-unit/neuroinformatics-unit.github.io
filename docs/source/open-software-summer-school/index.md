@@ -12,17 +12,10 @@ about open-source approaches for handling large images, processing microscopy da
 additional satellite events, guest lectures and opportunities for researchers to present their own work.
 It welcomed 51 attendees from 16 countries. 
 
-:::{admonition} Applications will open in early December 2026
+:::{admonition} Applications are now open!
 :class: info
-Once applications open, please apply using [this form](https://forms.gle/FSFNQ8tLL1yQGW3x5).
+Please apply using [this form](https://forms.gle/FSFNQ8tLL1yQGW3x5).
 You can see the [application questions](2027/application_questions) in advance to prepare your answers.
-
-Please follow our socials for announcements.
-
-- [Zulip](https://neuroinformatics.zulipchat.com)
-- [LinkedIn](https://www.linkedin.com/company/neuroinformatics-unit)
-- [Mastodon](https://mastodon.online/@neuroinformatics)
-- [Bluesky](https://bsky.app/profile/neuroinformatics.dev)
 
 If you have any questions, please ask on our [Zulip chat](https://neuroinformatics.zulipchat.com/#narrow/channel/542225-Open-Software-Summer-School). 
 Alternatively, please <a href="mailto:adam.tyson@ucl.ac.uk ?subject=Open Software Summer School">email Adam Tyson</a>.
@@ -30,9 +23,6 @@ Alternatively, please <a href="mailto:adam.tyson@ucl.ac.uk ?subject=Open Softwar
 
 (target-2027-osss-schedule)=
 ## Schedule
-
-The schedule is being finalised, but will largely mirror the schedule of [the 2026 event](target-2026-osss-schedule).
-
 
 There are four tracks targeted to different audiences.
 We encourage you to read each track's description and choose the one(s) that best fits your interests. 
@@ -87,14 +77,14 @@ You may register for week 1, week 2 or both. However, you can only register for 
 
 ## Key Dates
 
-| Date               | Event |
-|--------------------| --- |
-| December 2026      | Applications open |
-| February 2027 (TBC) | Applications close |
-| March 2027 (TBC)   | Applicants are notified of acceptance |
-| July 2027          | Optional preparatory month begins |
-| August 9-13 2027   | Week 1: *Animals in Motion* & *Large Array Data* |
-| August 16-20 2027  | Week 2: *BrainGlobe* & *Extracellular Electrophysiology* |
+| Date         | Event |
+|--------------| --- |
+| December 2026 | Applications open |
+| February 31st 2027 | Applications close |
+| March 2027   | Applicants are notified of acceptance |
+| July 2027    | Optional preparatory month begins |
+| August 9-13 2027 | Week 1: *Animals in Motion* & *Large Array Data* |
+| August 16-20 2027 | Week 2: *BrainGlobe* & *Extracellular Electrophysiology* |
 
 
 ## Symposium
@@ -152,7 +142,7 @@ A limited number of travel stipends will also be available, but we encourage app
 
 ## Funding
 
-The Open Software Summer School is supported by the [Sainsbury Wellcome Centre](https://www.sainsburywellcome.org/), [AIBIO-UK](https://aibio.ac.uk/), the [Society of Research Software Engineering](https://society-rse.org/) and [The Neuro – Irv and Helga Cooper Foundation Open Science Prize](https://www.mcgill.ca/neuro/open-science/open-science-awards-and-prizes/neuro-irv-and-helga-cooper-foundation-open-science-prizes).
+The Open Software Summer School is supported by the [Sainsbury Wellcome Centre](https://www.sainsburywellcome.org/) and [The Neuro – Irv and Helga Cooper Foundation Open Science Prize](https://www.mcgill.ca/neuro/open-science/open-science-awards-and-prizes/neuro-irv-and-helga-cooper-foundation-open-science-prizes).
 
 
 ```{toctree}
