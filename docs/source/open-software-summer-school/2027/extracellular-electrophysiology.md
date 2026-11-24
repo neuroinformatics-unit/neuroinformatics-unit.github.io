@@ -8,8 +8,7 @@ including preprocessing, sorting and quality control.
 
 We will use [SpikeInterface](https://github.com/SpikeInterface/spikeinterface) 
 to implement the pipeline, with manual curation in the [SpikeInterface GUI](https://github.com/SpikeInterface/spikeinterface-gui). 
-We will explore modern toolkits for sorting quality assessment ([Bombcell](https://github.com/Julie-Fabre/bombcell)), 
-unit matching ([UnitMatch](https://github.com/EnnyvanBeest/UnitMatch)) and downstream analysis ([pynapple](https://github.com/pynapple-org/pynapple)).
+We will explore modern toolkits for preprocessing, spike sorting and downstream analysis ([pynapple](https://github.com/pynapple-org/pynapple)).
 
 ::: {admonition} Target audience
 :class: note
@@ -36,8 +35,7 @@ common median referencing), sorting (e.g. [kilosort4](https://github.com/MouseLa
 **Preprocessing**
 
 We will extend the initial, simple pipeline by exploring:
-* Advanced preprocessing methods ([IBL tools](https://github.com/int-brain-lab/ibl-neuropixel)
-for assessing raw data quality, [DREDGE](https://github.com/evarol/dredge) motion correction)
+* Advanced preprocessing methods (e.g. [IBL white paper](https://figshare.com/articles/online_resource/Spike_sorting_pipeline_for_the_International_Brain_Laboratory/19705522)), including for for assessing raw data quality
 * The theory behind the applied preprocessing steps
 * Concatenating recordings for multi-session studies
 
@@ -85,7 +83,6 @@ The final two days are dedicated to collaboration. We will join forces with part
 * [Chris Halcrow](https://github.com/chrishalcrow) 
 * [Wolf de Wulf](https://github.com/wulfdewolf) 
 * [Alessio Buccino](https://github.com/alejoe91)
-* [Samuel Garcia](https://github.com/samuelgarcia) 
 * [Olivier Winter](https://github.com/oliche) 
 
 
