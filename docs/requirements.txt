@@ -1,7 +1,7 @@
 sphinx
 pydata-sphinx-theme
 myst-parser
-sphinx-design
+sphinx-design>=0.8.0
 numpydoc
 nbsphinx
 linkify-it-py
