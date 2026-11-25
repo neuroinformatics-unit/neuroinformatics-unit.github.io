@@ -10,6 +10,17 @@ Please apply using [this form](https://forms.gle/FSFNQ8tLL1yQGW3x5) by **January
 You can see the [application questions](2027/application_questions) in advance to prepare your answers.
 :::
 
+Key dates:
+
+| Date              | Event |
+|-------------------| --- |
+| December 2026     | Applications open |
+| January 31st 2027 | Applications close |
+| March 2027        | Applicants are notified of acceptance |
+| July 2027         | Optional preparatory month begins |
+| August 9-20 2027  | Summer school (Week 1: August 9-13, Week 2: August 16-20) |
+
+
 (target-2027-osss-schedule)=
 ## School structure
 
@@ -78,7 +89,7 @@ Using open source tools to process and analyse large extracellular electrophysio
 
 (target-collaboration-days-2027)=
 ## Collaboration days
-The final two days of each week (Thursday - Friday) are dedicated to collaboration. Participants from both tracks held that week will join forces to work together on participant-led projects.
+The final two days of each week (*Thursday - Friday*) are dedicated to collaboration. Participants from both tracks held that week will join forces to work together on participant-led projects.
 
 You will self-organise into small teams to tackle projects hands-on, and on the final afternoon each team will have the opportunity to share their progress and outcomes. **Coding is not a requirement**; any idea that benefits from collaboration with other attendees is welcome. Potential project ideas include, but are not limited to:
 
@@ -96,16 +107,6 @@ materials and exercises will be shared with participants, and OSSS instructors w
 
 **This preparatory course is mandatory for those without Python experience, and requires a minimum of four hours per week
 commitment for four weeks prior to the summer school.**
-
-## Key Dates
-
-| Date              | Event |
-|-------------------| --- |
-| December 2026     | Applications open |
-| January 31st 2027 | Applications close |
-| March 2027        | Applicants are notified of acceptance |
-| July 2027         | Optional preparatory month begins |
-| August 9-20 2027  | Summer school (Week 1: August 9-13, Week 2: August 16-20) |
 
 ## Fees and financial support
 - **Academic or self funding**: £450 per week
