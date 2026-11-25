@@ -43,7 +43,6 @@ The final two days are dedicated to collaboration. We will join forces with part
 - [Alessandro Felder](https://github.com/alessandrofelder)
 - [Igor Tatarnikov](https://github.com/IgorTatarnikov)
 - [Kimberly Meechan](https://github.com/K-Meech)
-- [James A. Bednar](https://github.com/jbednar)
 
 
 (target-large-array-data-prerequisites-2027)=
