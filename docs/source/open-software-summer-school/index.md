@@ -1,31 +1,21 @@
 # Open Software Summer School
 
-
 We are excited to announce the third **NIU Open Software Summer School**, taking
-place on **August 9-20 2027** at the [Sainsbury Wellcome Centre](https://maps.app.goo.gl/CzWFFjXJZwX87aMj6) 
+place on **August 9-20 2027** at the [Sainsbury Wellcome Centre](https://maps.app.goo.gl/CzWFFjXJZwX87aMj6)
 in **London, UK**. This event will bring together researchers, developers, and users of open-source software for some hands-on training, community-building and hacking.
-
-[The 2025 event](2025/index) (known as Open Software Week) brought together 44 attendees from 12 countries to learn 
-about open-source approaches for handling large images, processing microscopy data and analysing video behavioural data. 
-
-[The 2026 event](2026/index) expanded to two weeks, adding a new *Extracellular Electrophysiology* track alongside
-additional satellite events, guest lectures and opportunities for researchers to present their own work.
-It welcomed 51 attendees from 16 countries. 
 
 :::{admonition} Applications are now open!
 :class: info
-Please apply using [this form](https://forms.gle/FSFNQ8tLL1yQGW3x5).
+Please apply using [this form](https://forms.gle/FSFNQ8tLL1yQGW3x5) by **January 31st 2027**.
 You can see the [application questions](2027/application_questions) in advance to prepare your answers.
-
-If you have any questions, please ask on our [Zulip chat](https://neuroinformatics.zulipchat.com/#narrow/channel/542225-Open-Software-Summer-School). 
-Alternatively, please <a href="mailto:adam.tyson@ucl.ac.uk ?subject=Open Software Summer School">email Adam Tyson</a>.
 :::
 
 (target-2027-osss-schedule)=
-## Schedule
+## Tracks
 
-There are four tracks targeted to different audiences.
-We encourage you to read each track's description and choose the one(s) that best fits your interests. 
+There are four tracks targeted to different audiences, two in each week.
+We encourage you to read each track's description and choose the one(s) that best fit your interests.
+**You may register for week 1, week 2 or both, but only for one track per week.**
 
 :::: {grid} 1 1 2 2
 :gutter: 4
@@ -70,13 +60,18 @@ Using open source tools to process and analyse large extracellular electrophysio
 
 ::::
 
-:::{admonition} Registration
-:class: info
-You may register for week 1, week 2 or both. However, you can only register for one track per week, i.e:
+(target-preparatory-month-2027)=
+## Do I need to know Python?
+All four tracks require a basic knowledge of scientific Python programming. If you don't have this background, that's
+totally fine, we will be running an asynchronous preparatory course in the month before the summer school. Training
+materials and exercises will be shared with participants, and OSSS instructors will be available to answer any questions.
 
-- **Week 1**: either *Animals in Motion* or *Large Array Data*.
-- **Week 2**: either *BrainGlobe* or *Extracellular Electrophysiology*.
-:::
+**This preparatory course is mandatory for those without Python experience, and requires a minimum of four hours per week
+commitment for four weeks prior to the summer school.**
+
+## Symposium
+On the first day of each track (Monday afternoon), there will be a symposium, shared with participants of the other track held that week.
+All attendees will be expected to present a poster describing their past, present or planned work.
 
 ## Key Dates
 
@@ -86,39 +81,34 @@ You may register for week 1, week 2 or both. However, you can only register for 
 | January 31st 2027 | Applications close |
 | March 2027        | Applicants are notified of acceptance |
 | July 2027         | Optional preparatory month begins |
-| August 9-13 2027  | Week 1: *Animals in Motion* & *Large Array Data* |
-| August 16-20 2027 | Week 2: *BrainGlobe* & *Extracellular Electrophysiology* |
+| August 9-20 2027  | Summer school (Week 1: August 9-13, Week 2: August 16-20) |
 
-
-## Symposium
-On the first day of each track (Monday afternoon), there will be a symposium, shared with participants of the other track held that week. 
-All attendees will be expected to present a poster describing their past, present or planned work. 
-
-(target-preparatory-month-2027)=
-## Preparatory month
-All four tracks require a basic knowledge of scientific Python programming. If you don't have this background, that's 
-totally fine, we will be running an asynchronous preparatory course in the month before the summer school. Training 
-materials and exercises will be shared with participants, and OSSS instructors will be available to answer any questions.
-
-**This preparatory course is mandatory for those without Python experience, and requires a minimum of four hours per week 
-commitment for four weeks prior to the summer school**
-
-## Fees
+## Fees and financial support
 - **Academic or self funding**: £450 per week
 - **Industry**: £900 per week
 
 Fees include all materials needed, and lunch/refreshments each day.
 
-### Financial Assistance
-A small number of fee waivers will be available to applicants who would not otherwise be able to attend the summer school. 
-A very limited number of travel stipends will also be available, but we encourage applicants to apply for 
+A small number of fee waivers will be available to applicants who would not otherwise be able to attend the summer school.
+A very limited number of travel stipends will also be available, but we encourage applicants to apply for
 [independent travel funding](funding).
 
+## Past editions
 
-## Feedback from previous summer schools
+[The 2025 event](2025/index) (known as Open Software Week) brought together 44 attendees from 12 countries to learn
+about open-source approaches for handling large images, processing microscopy data and analysing video behavioural data.
 
-![](/_static/osw_images/OSSS_2026.jpg)
-**Participants (having a great time) after presenting their collaborative work in 2026** 
+[The 2026 event](2026/index) expanded to two weeks, adding a new *Extracellular Electrophysiology* track alongside
+additional satellite events, guest lectures and opportunities for researchers to present their own work.
+It welcomed 51 attendees from 16 countries.
+
+
+```{figure} /_static/osw_images/OSSS_2026.jpg
+:alt: A photo of participants (having a great time) after presenting their collaborative work in 2026.
+
+**Participants (having a great time) after presenting their collaborative work in 2026.**
+
+```
 
 ### Selected quotes from 2026 attendees
 
@@ -143,7 +133,11 @@ A very limited number of travel stipends will also be available, but we encourag
 
 > Atmosphere was very friendly and down to earth.
 
-## Funding
+## Questions?
+Please ask on our [Zulip chat](https://neuroinformatics.zulipchat.com/#narrow/channel/542225-Open-Software-Summer-School),
+or <a href="mailto:adam.tyson@ucl.ac.uk ?subject=Open Software Summer School">email Adam Tyson</a>.
+
+## Supported by
 
 The Open Software Summer School is supported by the [Sainsbury Wellcome Centre](https://www.sainsburywellcome.org/) and [The Neuro – Irv and Helga Cooper Foundation Open Science Prize](https://www.mcgill.ca/neuro/open-science/open-science-awards-and-prizes/neuro-irv-and-helga-cooper-foundation-open-science-prizes).
 
