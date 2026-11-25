@@ -11,9 +11,25 @@ You can see the [application questions](2027/application_questions) in advance t
 :::
 
 (target-2027-osss-schedule)=
+## School structure
+
+The summer school runs over two weeks, with two parallel [tracks](target-tracks-2027)
+targeted to different audiences each week. Both weeks follow the same rhythm:
+
+- From *Monday to Wednesday*, each track runs its own core workshop, with hands-on training on relevant methods and open-source tools.
+- On *Monday afternoon*, participants from both tracks come together for a **Welcome Symposium**. All attendees are expected to present a poster describing their past, present or planned work.
+- The week ends with two [collaboration days](target-collaboration-days-2027) on *Thursday and Friday*, where participants work together on projects.
+- Some *weekday evenings* will feature guest lectures, career panels, and social events—to be announced closer to the event.
+
+```{figure} /_static/osw_images/OSSS_2027_schedule_rough.png
+:alt: A timetable of the two weeks. In each week, the two tracks run in parallel from Monday to Wednesday, with a welcome symposium on Monday afternoon and collaboration days on Thursday and Friday. Evening events are to be decided.
+
+**Rough schedule of the 2027 summer school.**
+```
+
+(target-tracks-2027)=
 ## Tracks
 
-There are four tracks targeted to different audiences, two in each week.
 We encourage you to read each track's description and choose the one(s) that best fit your interests.
 **You may register for week 1, week 2 or both, but only for one track per week.**
 
@@ -60,19 +76,6 @@ Using open source tools to process and analyse large extracellular electrophysio
 
 ::::
 
-(target-preparatory-month-2027)=
-## Do I need to know Python?
-All four tracks require a basic knowledge of scientific Python programming. If you don't have this background, that's
-totally fine, we will be running an asynchronous preparatory course in the month before the summer school. Training
-materials and exercises will be shared with participants, and OSSS instructors will be available to answer any questions.
-
-**This preparatory course is mandatory for those without Python experience, and requires a minimum of four hours per week
-commitment for four weeks prior to the summer school.**
-
-## Symposium
-On the first day of each track (Monday afternoon), there will be a symposium, shared with participants of the other track held that week.
-All attendees will be expected to present a poster describing their past, present or planned work.
-
 (target-collaboration-days-2027)=
 ## Collaboration days
 The final two days of each week (Thursday - Friday) are dedicated to collaboration. Participants from both tracks held that week will join forces to work together on participant-led projects.
@@ -84,6 +87,15 @@ You will self-organise into small teams to tackle projects hands-on, and on the 
 * *Make a contribution:* submit a pull request to an open-source repository.
 * *Collaborative writing:* draft a white paper, blog post, or documentation together.
 * *Prototype an idea:* experiment with a new analysis or method.
+
+(target-preparatory-month-2027)=
+## Do I need to know Python?
+All four tracks require a basic knowledge of scientific Python programming. If you don't have this background, that's
+totally fine, we will be running an asynchronous preparatory course in the month before the summer school. Training
+materials and exercises will be shared with participants, and OSSS instructors will be available to answer any questions.
+
+**This preparatory course is mandatory for those without Python experience, and requires a minimum of four hours per week
+commitment for four weeks prior to the summer school.**
 
 ## Key Dates
 
