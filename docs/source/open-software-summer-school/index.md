@@ -110,28 +110,57 @@ It welcomed 51 attendees from 16 countries.
 
 ```
 
-### Selected quotes from 2026 attendees
+### What past attendees said
 
-> The environment is truly encouraging to work on your project and to learn new things!
+:::: {grid} 1 1 2 3
+:gutter: 3
 
-> The best thing was to talk to other people about our challenges and find solutions together.
+:::{grid-item-card}
 
-> Fantastic content! Very accessible and explained in a great manner.
+{fas}`quote-left;sd-text-muted` *It has honestly been the best thing I have done in my PhD.*
+:::
 
-> Genuinely, I think I benefitted a lot from relieving the daunting feeling of working with large arrays [...] I think this course was, at base level, great for just breaking this barrier.
+:::{grid-item-card}
 
-> It has honestly been the best thing I have done in my PhD. 
+{fas}`quote-left;sd-text-muted` *[The best thing was] having access to and working alongside the developers who put together the software we were learning about.*
+:::
 
-### Selected quotes from 2025 attendees
-> Sparked a bit of a eureka moment after months of agonising over how to analyse my data!
+:::{grid-item-card}
 
-> Thank you again for organizing this amazing event
+{fas}`quote-left;sd-text-muted` *Sparked a bit of a eureka moment after months of agonising over how to analyse my data!*
+:::
 
-> My whole PhD feels doable now!
+:::{grid-item-card}
 
-> The heterogeneity of the attendees was truly enriching.
+{fas}`quote-left;sd-text-muted` *The best thing was to talk to other people about our challenges and find solutions together.*
+:::
 
-> Atmosphere was very friendly and down to earth.
+:::{grid-item-card}
+
+{fas}`quote-left;sd-text-muted` *Genuinely, I think I benefitted a lot from relieving the daunting feeling of working with large arrays [...] I think this course was, at base level, great for just breaking this barrier.*
+:::
+
+:::{grid-item-card}
+
+{fas}`quote-left;sd-text-muted` *My whole PhD feels doable now!*
+:::
+
+:::{grid-item-card}
+
+{fas}`quote-left;sd-text-muted` *Being the only lab member with a focus on in vivo electrophysiological data analysis, I found at the program a mentorship I much needed.*
+:::
+
+:::{grid-item-card}
+
+{fas}`quote-left;sd-text-muted` *The heterogeneity of the attendees was truly enriching.*
+:::
+
+:::{grid-item-card}
+
+{fas}`quote-left;sd-text-muted` *The exercises were the best part, actively participating [...] is really nice and helped me a lot understanding the concepts.*
+:::
+
+::::
 
 ## Questions?
 Please ask on our [Zulip chat](https://neuroinformatics.zulipchat.com/#narrow/channel/542225-Open-Software-Summer-School),
