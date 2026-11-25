@@ -39,20 +39,6 @@ While icons of mice are used for illustration, the course content should be appl
 | Wednesday<br>2pm-5pm | Case studies | Real-world case studies (including coding exercises) applying markerless motion tracking and quantification. |
 
 
-### Collaboration days (Thursday - Friday)
-
-The final two days are dedicated to collaboration. We will join forces with participants from the [Large Array Data](track-large-array-data-2027) track to work together on participant-led projects.
-
-* **Skill building:** we'll start with a practical workshop on **Git and GitHub** to equip everyone with the necessary skills for collaborative coding.
-* **Project-based work:** participants will self-organise into small teams to tackle projects hands-on. **Coding is not a requirement**; any idea that benefits from collaboration with other attendees is welcome. Potential project ideas include, but are not limited to:
-    * *Apply a tool:* use what you've learnt to analyse a new dataset (your own or a public one).
-    * *Give feedback:* report bugs and suggest features by raising issues on relevant open-source tools.
-    * *Make a contribution:* submit a pull request to an open-source repository.
-    * *Collaborative writing:* draft a white paper, blog post, or documentation together.
-    * *Prototype an idea:* experiment with a new analysis or method.
-* **Presentation:** teams will have the opportunity to share their progress and outcomes on the final afternoon.
-
-
 ::: {admonition} Course handbook
 :class: note
 
@@ -61,6 +47,10 @@ All course materials will be made available as part of the online handbook at <h
 Feel free to look through the handbook to get a sense of its contents, but keep in mind that updates will be made before the 2027 event.
 
 :::
+
+### Collaboration days (Thursday - Friday)
+
+The final two days are dedicated to collaboration. We will join forces with participants from the [Large Array Data](track-large-array-data-2027) track to work together on participant-led projects. See [Collaboration days](target-collaboration-days-2027) for details.
 
 ## Confirmed Instructors
 - [Niko Sirmpilatze](https://github.com/niksirbi)

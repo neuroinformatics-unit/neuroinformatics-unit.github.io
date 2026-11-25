@@ -27,25 +27,16 @@ It is aimed at those interested in learning about open-source tools for analysin
 | Wednesday<br>10am-1pm   | Cell detection                       | Hands-on tutorials for detecting cells in large 3D images with [`cellfinder`](https://github.com/brainglobe/cellfinder) and mapping them to atlas space.                                                                                                                                                     |
 | Wednesday<br>2pm-5pm | Visualisation and scripting          | A walk through of visualising data in atlas space with [`brainrender`](https://github.com/brainglobe/brainrender) and [`brainrender-napari`](https://github.com/brainglobe/brainrender-napari) followed by an introduction to interacting with the BrainGlobe ecosystem via scripting and the command line. |
 
-### Collaboration days (Thursday - Friday)
-
-The final two days are dedicated to collaboration. We will join forces with participants from the [Extracellular Electrophysiology](track-extracellular-ephys-2027) track to work together on participant-led projects.
-
-* **Skill building:** we'll start with a practical workshop on **Git and GitHub** to equip everyone with the necessary skills for collaborative coding.
-* **Project-based work:** participants will self-organise into small teams to tackle projects hands-on. **Coding is not a requirement**; any idea that benefits from collaboration with other attendees is welcome. Potential project ideas include, but are not limited to:
-    * *Apply a tool:* use what you've learnt to analyse a new dataset (your own or a public one).
-    * *Give feedback:* report bugs and suggest features by raising issues on relevant open-source tools.
-    * *Make a contribution:* submit a pull request to an open-source repository.
-    * *Collaborative writing:* draft a white paper, blog post, or documentation together.
-    * *Prototype an idea:* experiment with a new analysis or method.
-* **Presentation:** teams will have the opportunity to share their progress and outcomes on the final afternoon.
-
 ::: {admonition} Course slides
 :class: note
 
 The slides for the course can be found at <https://brainglobe.info/course-whole-brain-microscopy-analysis>
 
 :::
+
+### Collaboration days (Thursday - Friday)
+
+The final two days are dedicated to collaboration. We will join forces with participants from the [Extracellular Electrophysiology](track-extracellular-ephys-2027) track to work together on participant-led projects. See [Collaboration days](target-collaboration-days-2027) for details.
 
 ## Confirmed Instructors
 - [Alessandro Felder](https://github.com/alessandrofelder)

@@ -73,6 +73,18 @@ commitment for four weeks prior to the summer school.**
 On the first day of each track (Monday afternoon), there will be a symposium, shared with participants of the other track held that week.
 All attendees will be expected to present a poster describing their past, present or planned work.
 
+(target-collaboration-days-2027)=
+## Collaboration days
+The final two days of each week (Thursday - Friday) are dedicated to collaboration. Participants from both tracks held that week will join forces to work together on participant-led projects.
+
+You will self-organise into small teams to tackle projects hands-on, and on the final afternoon each team will have the opportunity to share their progress and outcomes. **Coding is not a requirement**; any idea that benefits from collaboration with other attendees is welcome. Potential project ideas include, but are not limited to:
+
+* *Apply a tool:* use what you've learnt to analyse a new dataset (your own or a public one).
+* *Give feedback:* report bugs and suggest features by raising issues on relevant open-source tools.
+* *Make a contribution:* submit a pull request to an open-source repository.
+* *Collaborative writing:* draft a white paper, blog post, or documentation together.
+* *Prototype an idea:* experiment with a new analysis or method.
+
 ## Key Dates
 
 | Date              | Event |
