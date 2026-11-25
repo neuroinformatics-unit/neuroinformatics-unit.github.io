@@ -24,7 +24,7 @@ This course is designed for researchers and students interested in learning abou
 | Tuesday<br>10am-1pm | Large image data with OME | Introduce the [OME-Zarr specification](https://ngff.openmicroscopy.org/) (following the [OME-Zarr textbook](https://ome-zarr-book.readthedocs.io/)); hands-on tutorial to convert, process, and write large imaging datasets. |
 | Tuesday<br>2pm-5pm | Parallel processing | Deeper look at `dask` and its parallelisation functionality in practice. |
 | Wednesday<br>10am-1pm | Compression | Introduction to compression algorithms, their use in neuroscience, and trade-offs to consider. |
-| Wednesday<br>2pm-5pm | Visualisation | Hands-on tutorial in interactive large data visualisation in collaboration with [HoloViz](https://holoviz.org/). |
+| Wednesday<br>2pm-5pm | Visualisation |  Visualisation of large data |
 
 ### Collaboration days (Thursday - Friday)
 
