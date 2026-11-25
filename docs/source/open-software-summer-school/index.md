@@ -27,31 +27,33 @@ Alternatively, please <a href="mailto:adam.tyson@ucl.ac.uk ?subject=Open Softwar
 There are four tracks targeted to different audiences.
 We encourage you to read each track's description and choose the one(s) that best fits your interests. 
 
-:::: {grid} 1 1 2 4
+:::: {grid} 1 1 2 2
+:gutter: 4
 
 :::{grid-item-card} {fas}`video;sd-text-secondary` Animals in Motion
 :img-top: /_static/osw_images/animals-in-motion-card.png
 :link: track-animals-in-motion-2027
 :link-type: ref
+:footer: {bdg-muted}`Week 1: August 9-13`
 
 Use open-source tools to track
 and analyse animal motion from video footage.
-
 :::
 
 :::{grid-item-card} {fas}`layer-group;sd-text-primary` Large Array Data
 :img-top: /_static/osw_images/big-imaging-data-card.png
 :link: track-large-array-data-2027
 :link-type: ref
+:footer: {bdg-muted}`Week 1: August 9-13`
 
-Learn about strategies and use open source tools to process large array data (e.g. imaging, videos, electrophysiology,...)
-
+Learn about strategies and use open source tools to process large array data (e.g. imaging, videos, electrophysiology, ...)
 :::
 
 :::{grid-item-card} {fas}`brain;sd-text-warning` BrainGlobe
 :img-top: /_static/osw_images/brainglobe-card.png
 :link: track-brainglobe-2027
 :link-type: ref
+:footer: {bdg-muted}`Week 2: August 16-20`
 
 Use the BrainGlobe ecosystem of computational neuroanatomy tools
 to analyse whole-brain microscopy datasets.
@@ -61,6 +63,7 @@ to analyse whole-brain microscopy datasets.
 :img-top: /_static/osw_images/ephys-card.png
 :link: track-extracellular-ephys-2027
 :link-type: ref
+:footer: {bdg-muted}`Week 2: August 16-20`
 
 Using open source tools to process and analyse large extracellular electrophysiology data (e.g. from silicon probes)
 :::
