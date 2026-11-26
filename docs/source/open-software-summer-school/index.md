@@ -124,6 +124,7 @@ A very limited number of travel stipends will also be available, but we encourag
 
 [The 2025 event](2025/index) (known as Open Software Week) brought together 44 attendees from 12 countries to learn
 about open-source approaches for handling large images, processing microscopy data and analysing video behavioural data.
+This [blog post](https://www.software.ac.uk/blog/greater-sum-its-parts-establishing-open-software-week-combining-our-ssi-fellowships) provides a summary of the event and explains how it came about.
 
 [The 2026 event](2026/index) expanded to two weeks, adding a new *Extracellular Electrophysiology* track alongside
 additional satellite events, guest lectures and opportunities for researchers to present their own work.
