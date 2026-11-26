@@ -106,15 +106,15 @@ All four tracks require a basic knowledge of scientific Python programming. If y
 totally fine, we will be running an asynchronous preparatory course in the month before the summer school. Training
 materials and exercises will be shared with participants, and OSSS instructors will be available to answer any questions.
 
-**This preparatory course is mandatory for those without Python experience, and requires a minimum of four hours per week
-commitment for four weeks prior to the summer school.**
+**This preparatory course is mandatory for those without Python experience and requires a commitment
+of at least four hours per week for the four weeks leading up to the summer school.**
 
 ## Fees and financial support
 - **Academic or self funding**: £450 per week
 - **Industry**: £900 per week
 
 Fees include all materials needed, and lunch/refreshments each day.
-They do not cover travel or accommodation, which are the responsibility of the participants.
+Travel and accommodation costs are not included and must be arranged and covered by participants.
 
 A small number of fee waivers will be available to applicants who would not otherwise be able to attend the summer school.
 A very limited number of travel stipends will also be available, but we encourage applicants to apply for
