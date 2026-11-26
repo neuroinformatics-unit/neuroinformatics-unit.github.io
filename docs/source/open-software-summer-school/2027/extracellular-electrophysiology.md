@@ -64,6 +64,15 @@ In the final session, we will focus on combining spike sorting outputs with beha
 for analysis. This will include time alignment between electrophysiology and behavioural
 events, and using [pynapple](https://github.com/pynapple-org/pynapple) to generate outputs (e.g. peristimulus time histograms).
 
+::: {admonition} Course handbook
+:class: note
+
+All course materials will be made available as part of the online handbook at <https://neuroinformatics.dev/course_ephys_osss/> and remain accessible afterwards.
+
+Feel free to look through the handbook to get a sense of its contents, but keep in mind that updates will be made before the 2027 event.
+
+:::
+
 ### Collaboration days (Thursday - Friday)
 
 The final two days are dedicated to collaboration. We will join forces with participants from the [BrainGlobe](track-brainglobe-2027) track to work together on participant-led projects. See [Collaboration days](target-collaboration-days-2027) for details.
