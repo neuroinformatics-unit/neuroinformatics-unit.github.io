@@ -18,7 +18,8 @@ Key dates:
 | January 31st 2027 | Applications close |
 | March 2027        | Applicants are notified of acceptance |
 | July 2027         | Optional preparatory month begins |
-| August 9-20 2027  | Summer school (Week 1: August 9-13, Week 2: August 16-20) |
+| August 9-13 2027  | Summer school, Week 1|
+| August 16-20 2027  | Summer school, Week 2 |
 
 
 (target-2027-osss-schedule)=
