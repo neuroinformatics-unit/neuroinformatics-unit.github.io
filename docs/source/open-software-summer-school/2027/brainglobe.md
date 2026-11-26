@@ -20,25 +20,12 @@ It is aimed at those interested in learning about open-source tools for analysin
 
 | Time                   | Theme                                | Description                                                                                                                                                                                                                                                                                                  |
 |------------------------|--------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Monday<br>10am-1pm      | Introduction and key concepts        | A high level overview of the BrainGlobe ecosystem of computational neuroanatomy tools, and what they enable, followed by an introduction to basic image analysis using [`napari`](https://napari.org/stable/).                                                                                               |
-| Monday<br>2pm-5pm    | Symposium                            | Participants present their work and network with other participants.                                                                                                                                                                                                                                         |
-| Tuesday<br>10am-1pm     | Working in a common coordinate space | A primer on brain atlases, common coordinate spaces and image registration.                                                                                                                                                                                                                                  |
-| Tuesday<br>2pm-5pm   | Registration and segmentation        | Hands-on tutorials for using [`brainreg`](https://github.com/brainglobe/brainreg) to map data to a BrainGlobe atlas and using [`brainglobe-segmentation`](https://github.com/brainglobe/brainglobe-segmentation) to segment structures in whole brain microscopy images.                                     |
-| Wednesday<br>10am-1pm   | Cell detection                       | Hands-on tutorials for detecting cells in large 3D images with [`cellfinder`](https://github.com/brainglobe/cellfinder) and mapping them to atlas space.                                                                                                                                                     |
-| Wednesday<br>2pm-5pm | Visualisation and scripting          | A walk through of visualising data in atlas space with [`brainrender`](https://github.com/brainglobe/brainrender) and [`brainrender-napari`](https://github.com/brainglobe/brainrender-napari) followed by an introduction to interacting with the BrainGlobe ecosystem via scripting and the command line. |
-
-### Collaboration days (Thursday - Friday)
-
-The final two days are dedicated to collaboration. We will join forces with participants from the [Extracellular Electrophysiology](track-extracellular-ephys-2027) track to work together on participant-led projects.
-
-* **Skill building:** we'll start with a practical workshop on **Git and GitHub** to equip everyone with the necessary skills for collaborative coding.
-* **Project-based work:** participants will self-organise into small teams to tackle projects hands-on. **Coding is not a requirement**; any idea that benefits from collaboration with other attendees is welcome. Potential project ideas include, but are not limited to:
-    * *Apply a tool:* use what you've learnt to analyse a new dataset (your own or a public one).
-    * *Give feedback:* report bugs and suggest features by raising issues on relevant open-source tools.
-    * *Make a contribution:* submit a pull request to an open-source repository.
-    * *Collaborative writing:* draft a white paper, blog post, or documentation together.
-    * *Prototype an idea:* experiment with a new analysis or method.
-* **Presentation:** teams will have the opportunity to share their progress and outcomes on the final afternoon.
+| Monday<br>Morning      | Introduction and key concepts        | A high level overview of the BrainGlobe ecosystem of computational neuroanatomy tools, and what they enable, followed by an introduction to basic image analysis using [`napari`](https://napari.org/stable/).                                                                                               |
+| Monday<br>Afternoon    | Symposium                            | Participants present their work and network with other participants.                                                                                                                                                                                                                                         |
+| Tuesday<br>Morning     | Working in a common coordinate space | A primer on brain atlases, common coordinate spaces and image registration.                                                                                                                                                                                                                                  |
+| Tuesday<br>Afternoon   | Registration and segmentation        | Hands-on tutorials for using [`brainreg`](https://github.com/brainglobe/brainreg) to map data to a BrainGlobe atlas and using [`brainglobe-segmentation`](https://github.com/brainglobe/brainglobe-segmentation) to segment structures in whole brain microscopy images.                                     |
+| Wednesday<br>Morning   | Cell detection                       | Hands-on tutorials for detecting cells in large 3D images with [`cellfinder`](https://github.com/brainglobe/cellfinder) and mapping them to atlas space.                                                                                                                                                     |
+| Wednesday<br>Afternoon | Visualisation and scripting          | A walk through of visualising data in atlas space with [`brainrender`](https://github.com/brainglobe/brainrender) and [`brainrender-napari`](https://github.com/brainglobe/brainrender-napari) followed by an introduction to interacting with the BrainGlobe ecosystem via scripting and the command line. |
 
 ::: {admonition} Course slides
 :class: note
@@ -46,6 +33,10 @@ The final two days are dedicated to collaboration. We will join forces with part
 The slides for the course can be found at <https://brainglobe.info/course-whole-brain-microscopy-analysis>
 
 :::
+
+### Collaboration days (Thursday - Friday)
+
+The final two days are dedicated to collaboration. We will join forces with participants from the [Extracellular Electrophysiology](track-extracellular-ephys-2027) track to work together on participant-led projects. See [Collaboration days](target-collaboration-days-2027) for details.
 
 ## Confirmed Instructors
 - [Alessandro Felder](https://github.com/alessandrofelder)
