@@ -19,7 +19,7 @@ This course is designed for researchers and students who have collected — or p
 
 ## Course overview
 
-```{figure} /_static/osw_images/animals-in-motion-2026_overview.png
+```{figure} /_static/osw_images/animals-in-motion-2027_overview.png
 :alt: A schematic overview of topics covered in the Animals in Motion track.
 
 **A schematic overview of topics covered in the Animals in Motion** track.
