@@ -116,6 +116,7 @@ linkcheck_ignore = [
     "https://bifonds.de/",  # domain currently parked with a self-signed certificate
     "https://neurophysics.ucsd.edu/",  # times out from GitHub Actions
     "https://modeldb.science/",
+    r"https://iopscience\.iop\.org/.*",  # HTTP 403 Forbidden: doesn't allow automatic link checkers
 ]
 linkcheck_request_headers = {
     "https://github.com": {
