@@ -114,6 +114,7 @@ commitment for four weeks prior to the summer school.**
 - **Industry**: £900 per week
 
 Fees include all materials needed, and lunch/refreshments each day.
+They do not cover travel or accommodation, which are the responsibility of the participants.
 
 A small number of fee waivers will be available to applicants who would not otherwise be able to attend the summer school.
 A very limited number of travel stipends will also be available, but we encourage applicants to apply for
